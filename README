@@ -1,0 +1,3 @@
+
+This is a project that uses a analogic destiller machine, that machine got all old parts removed and got installed one 
+ESP32 that controlls all its functions, it has also one web server built-in to controll all the machine.
