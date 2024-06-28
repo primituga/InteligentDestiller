@@ -12,34 +12,58 @@ const String html_init = R"=====(
 <html>
 
 <head>
-
     <title>Distiller Machine</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link rel=\ "icon\" href=\ "data:,\">
+    <link rel="icon" href="data:,">
     <meta charset='utf-8'>
-    <meta http-equiv="refresh" content="5">
     <style>
-        html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
-         .button { background-color: #4C7AAE; border: none; border-radius: 15px; color: white; padding: 10px 10px;
-         text-decoration: none; font-size: 20px; margin: 2px; cursor: pointer;}
-         .button2 {background-color: #555555; border: none; border-radius: 15px; color: white; padding: 10px 10px;
-        	 text-decoration: none; font-size: 20px; margin: 2px; cursor: pointer;}
-        body {background-color:#191970; font-size:100%; color:#FFFFFF;}
-        #main {display: table; margin: auto;  padding: 30px 30px 30px 30px; }
-        #content { border: 2px solid blue; border-radius: 15px; padding: 10px 10px 10px 10px;}
-        h2 {text-align:center; margin: 10px 0px 10px 0px;}
-        p { text-align:center; margin: 5px 0px 10px 0px; font-size: 120%;}
-        #time_P { margin: 10px 0px 15px 0px;}
-        blc { display:inline-block; }
+        html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center; }
+        .button { background-color: #4C7AAE; border: none; border-radius: 15px; color: white; padding: 10px 10px; text-decoration: none; font-size: 20px; margin: 2px; cursor: pointer; }
+        .button2 { background-color: #555555; border: none; border-radius: 15px; color: white; padding: 10px 10px; text-decoration: none; font-size: 20px; margin: 2px; cursor: pointer; }
+        body { background-color: #191970; font-size: 100%; color: #FFFFFF; }
+        #main { display: table; margin: auto; padding: 30px 30px 30px 30px; }
+        #content { border: 2px solid blue; border-radius: 15px; padding: 10px 10px 10px 10px; }
+        h2 { text-align: center; margin: 10px 0px 10px 0px; }
+        p { text-align: center; margin: 5px 0px 10px 0px; font-size: 120%; }
+        #time_P { margin: 10px 0px 15px 0px; }
+        blc { display: inline-block; }
         @media,
         {
-        	blc  { display: inline; margin-right:10px; text-align:center;}
-        	blc2 { display: inline; margin-right:10px; line-height: 10px; text-align:center;}
-        	blc3 { display: inline; margin-left:10px; line-height: 10px; text-align:center;}
+            blc { display: inline; margin-right: 10px; text-align: center; }
+            blc2 { display: inline; margin-right: 10px; line-height: 10px; text-align: center; }
+            blc3 { display: inline; margin-left: 10px; line-height: 10px; text-align: center; }
         }
     </style>
-
+</head>
     )=====";
+
+const String scriptStart = R"=====(
+<script>
+function startAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Handle response here. E.g., update UI or display a message
+            console.log(this.responseText); // Log server response
+        }
+    };
+    xhttp.open("GET", "/start", true);
+    xhttp.send();
+}
+</script>
+
+
+)=====";
+
+
+
+
+
+
+
+
+
+
 
 const char html_header[] PROGMEM = R"rawliteral(
                             </head>

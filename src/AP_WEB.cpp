@@ -93,7 +93,7 @@ void ProcessWebPage(void)
 						/************************************************************************/
 
 						/*======== START BUTTON ============*/
-						if (header.indexOf("GET /start") >= 0)
+						/*if (header.indexOf("GET /start") >= 0)
 						{
 							BTN_Start = true;
 							setTimer(ON);
@@ -102,6 +102,18 @@ void ProcessWebPage(void)
 							client.print("</head>");
 						}
 						client.println("<div><blc><p><a href=\"/start\"><button class=\"button\">Start</button></a></p></blc>");
+*/
+
+						if (header.indexOf("GET /start") >= 0) {
+							BTN_Start = true;
+							setTimer(ON);
+							// Respond with a JSON object or a simple message
+							client.println("HTTP/1.1 200 OK");
+							client.println("Content-Type: application/json");
+							client.println(); // End of headers
+							client.println("{\"status\":\"started\"}"); // JSON response
+						}
+						client.print("<button class=\"button\" onclick=\"startAction()\">Start</button>");
 
 						/*======== STOP BUTTON ============*/
 						if (header.indexOf("GET /stop") >= 0)
@@ -126,20 +138,49 @@ void ProcessWebPage(void)
 						client.println("<blc><p><a href=\"/reset\"><button class=\"button\">Reset</button></a></p></blc></div>");
 
 						/*======== TIMER FUNCTION ============*/
+
 						client.print(html_circle_init);
 						client.print(html_Timer_init);
 						client.print(html_indicator_init);
 						if (timerStatus() == ON)
-							(client.print(html_Lime));
+						{
+							client.print(html_Lime);
+						}
 						else
-							(client.print(html_Black));
+						{
+							client.print(html_Black);
+						}
 						client.print(html_indicator_end);
 						client.print(html_Timer_end);
-						client.print(getTimerHour());
-						client.print(":");
-						client.print(getTimerMinute());
-						client.print(":");
-						client.print(getTimerSecound());
+						client.print("<span id=\"timer\">" + String(getTimerHour()) + ":" + String(getTimerMinute()) + ":" + String(getTimerSecound()) + "</span>");
+						client.print("<script>");
+						client.print("var timerStatus = " + String(timerStatus()) + ";"); // Get the timer status
+						client.print("var timerElement = document.getElementById('timer');");
+						client.print("var timerValue = timerElement.innerHTML.split(':');");
+						client.print("var hour = parseInt(timerValue[0]);");
+						client.print("var minute = parseInt(timerValue[1]);");
+						client.print("var second = parseInt(timerValue[2]);");
+						client.print("setInterval(function() {");
+						client.print("if (timerStatus == 1) {"); // Only update the timer if the status is ON
+						client.print("second--;");
+						client.print("if (second < 0) {");
+						client.print("second = 59;");
+						client.print("minute--;");
+						client.print("if (minute < 0) {");
+						client.print("minute = 59;");
+						client.print("hour--;");
+						client.print("if (hour < 0) {");
+						client.print("hour = 0;");
+						client.print("minute = 0;");
+						client.print("second = 0;");
+						client.print("}");
+						client.print("}");
+						client.print("}");
+						client.print("}");
+						client.print("timerElement.innerHTML = hour.toString().padStart(2, '0') + ':' + minute.toString().padStart(2, '0') + ':' + second.toString().padStart(2, '0');");
+						client.print("timerStatus = " + String(timerStatus()) + ";"); // Update the timer status
+						client.print("}, 1000);");
+						client.print("</script>");
 						client.print(html_circle_end);
 
 						client.print(html_new_line);
@@ -401,8 +442,8 @@ void ProcessWebPage(void)
 						client.print(html_Alarm_end);
 
 						//////////////////////////
+						client.print(scriptStart);
 						client.print(html_closing);
-
 						// The HTTP response ends with another blank line
 						client.println();
 						// Break out of the while loop
