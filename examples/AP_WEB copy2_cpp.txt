@@ -93,6 +93,17 @@ void ProcessWebPage(void)
 						/************************************************************************/
 
 						/*======== START BUTTON ============*/
+						/*if (header.indexOf("GET /start") >= 0)
+						{
+							BTN_Start = true;
+							setTimer(ON);
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
+						}
+						client.println("<div><blc><p><a href=\"/start\"><button class=\"button\">Start</button></a></p></blc>");
+*/
+
 						if (header.indexOf("GET /start") >= 0)
 						{
 							BTN_Start = true;
@@ -110,27 +121,22 @@ void ProcessWebPage(void)
 						{
 							BTN_Stop = true;
 							setTimer(OFF);
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"stoped\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"stopAction()\">Stop</button>");
+						client.println("<blc><p><a href=\"/stop\"><button class=\"button\">Stop</button></a></p></blc>");
 
 						/*======== RESET BUTTON ============*/
 						if (header.indexOf("GET /reset") >= 0)
 						{
 							BTN_Reset = true;
 							resetTimer();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"stoped\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.println("<button class=\"button\" onclick=\"resetAction()\">Reset</button>");
-						client.println("<p></p>");
+						client.println("<blc><p><a href=\"/reset\"><button class=\"button\">Reset</button></a></p></blc></div>");
 
 						/*======== TIMER FUNCTION ============*/
 
@@ -186,159 +192,136 @@ void ProcessWebPage(void)
 						/*======== +1 SECOUND  BUTTON ============*/
 						if (header.indexOf("GET /add1s") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_add1s = true;
 							add1s();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"add1sec\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"add1sAction()\">+ 1s</button>");
+						client.println("<blc><p><a href=\"/add1s\"><button class=\"button\">+ 1s</button></a></p></blc>");
 
 						/*======== +5 SECOUND  BUTTON ============*/
 						if (header.indexOf("GET /add5s") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_add5s = true;
 							add5s();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"add5sec\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"add5sAction()\">+ 5s</button>");
+						client.println("<blc><p><a href=\"/add5s\"><button class=\"button\">+ 5s</button></a></p></blc>");
 
 						/*======== +10 SECOUND  BUTTON ============*/
 						if (header.indexOf("GET /add10s") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_add10s = true;
 							add10s();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"add10sec\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"add10sAction()\">+ 10s</button>");
-
-						/*======== +1 MINUTE  BUTTON ============*/
-						if (header.indexOf("GET /add1m") >= 0)
-						{
-							BTN_Stop = true;
-							add1m();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"add1min\"}"); // JSON response
-						}
-						client.print("<button class=\"button\" onclick=\"add1mAction()\">+ 1m</button>");
-
-						/*======== +5 MINUTE  BUTTON ============*/
-						if (header.indexOf("GET /add5m") >= 0)
-						{
-							BTN_Stop = true;
-							add5m();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"add5min\"}"); // JSON response
-						}
-						client.print("<button class=\"button\" onclick=\"add5mAction()\">+ 5m</button>");
-
-						/*======== +10 MINUTE  BUTTON ============*/
-						if (header.indexOf("GET /add10m") >= 0)
-						{
-							BTN_Stop = true;
-							add10m();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"add10min\"}"); // JSON response
-						}
-						client.print("<button class=\"button\" onclick=\"add10mAction()\">+ 10m</button>");
-						client.println("<p></p>");
+						client.println("<blc><p><a href=\"/add10s\"><button class=\"button\">+ 10s</button></a></p></blc>");
 
 						/*======== -1 SECOUND  BUTTON ============*/
 						if (header.indexOf("GET /rem1s") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_rem1s = true;
 							rem1s();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"rem1sec\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"rem1sAction()\">- 1s</button>");
+						client.println("<blc><p><a href=\"/rem1s\"><button class=\"button\">- 1s</button></a></p></blc>");
 
 						/*======== -5 SECOUND  BUTTON ============*/
 						if (header.indexOf("GET /rem5s") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_rem5s = true;
 							rem5s();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"rem5sec\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"rem5sAction()\">- 5s</button>");
+						client.println("<blc><p><a href=\"/rem5s\"><button class=\"button\">- 5s</button></a></p></blc>");
 
 						/*======== -10 SECOUND  BUTTON ============*/
 						if (header.indexOf("GET /rem10s") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_rem10s = true;
 							rem10s();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"rem10sec\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"rem10sAction()\">- 10s</button>");
+						client.println("<blc><p><a href=\"/rem10s\"><button class=\"button\">- 10s</button></a></p></blc>");
+
+						client.print(html_new_line);
+
+						/*======== +1 MINUTE  BUTTON ============*/
+						if (header.indexOf("GET /add1m") >= 0)
+						{
+							BTN_add1m = true;
+							add1m();
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
+						}
+						client.println("<blc><p><a href=\"/add1m\"><button class=\"button\">+ 1m</button></a></p></blc>");
+
+						/*======== +5 MINUTE  BUTTON ============*/
+						if (header.indexOf("GET /add5m") >= 0)
+						{
+							BTN_add5m = true;
+							add5m();
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
+						}
+						client.println("<blc><p><a href=\"/add5m\"><button class=\"button\">+ 5m</button></a></p></blc>");
+
+						/*======== +10 MINUTE  BUTTON ============*/
+						if (header.indexOf("GET /add10m") >= 0)
+						{
+							BTN_add10m = true;
+							add10m();
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
+						}
+						client.println("<blc><p><a href=\"/add10m\"><button class=\"button\">+ 10m</button></a></p></blc>");
 
 						/*======== -1 MINUTE  BUTTON ============*/
 						if (header.indexOf("GET /rem1m") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_rem1m = true;
 							rem1m();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"rem1min\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"rem1mAction()\">- 1m</button>");
+						client.println("<blc><p><a href=\"/rem1m\"><button class=\"button\">- 1m</button></a></p></blc>");
 
 						/*======== -5 MINUTE  BUTTON ============*/
 						if (header.indexOf("GET /rem5m") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_rem5m = true;
 							rem5m();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"rem5min\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"rem5mAction()\">- 5m</button>");
+						client.println("<blc><p><a href=\"/rem5m\"><button class=\"button\">- 5m</button></a></p></blc>");
 
 						/*======== -10 MINUTE  BUTTON ============*/
 						if (header.indexOf("GET /rem10m") >= 0)
 						{
-							BTN_Stop = true;
+							BTN_rem10m = true;
 							rem10m();
-							// Respond with a JSON object or a simple message
-							client.println("HTTP/1.1 200 OK");
-							client.println("Content-Type: application/json");
-							client.println();							// End of headers
-							client.println("{\"status\":\"rem10min\"}"); // JSON response
+							client.print("<HEAD>");
+							client.print("<meta http-equiv=\"refresh\" content=\"0;url=/\">");
+							client.print("</head>");
 						}
-						client.print("<button class=\"button\" onclick=\"rem10mAction()\">- 10m</button>");
+						client.println("<blc><p><a href=\"/rem10m\"><button class=\"button\">- 10m</button></a></p></blc>");
 						client.print(html_line);
 
 						/************************************************************************/

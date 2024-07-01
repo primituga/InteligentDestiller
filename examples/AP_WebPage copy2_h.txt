@@ -45,7 +45,6 @@ function startAction() {
     xhttp.open("GET", "/start", true);
     xhttp.send();
 }
-
 function stopAction() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -54,160 +53,6 @@ function stopAction() {
         }
     };
     xhttp.open("GET", "/stop", true);
-    xhttp.send();
-}
-
-function resetAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/reset", true);
-    xhttp.send();
-}
-
-function add1sAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/add1s", true);
-    xhttp.send();
-}
-
-function add5sAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/add5s", true);
-    xhttp.send();
-}
-
-function add10sAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/add10s", true);
-    xhttp.send();
-}
-
-function add1mAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/add1m", true);
-    xhttp.send();
-}
-
-function add5mAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/add5m", true);
-    xhttp.send();
-}
-
-function add10mAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/add10m", true);
-    xhttp.send();
-}
-
-function rem1sAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/rem1s", true);
-    xhttp.send();
-}
-
-function rem5sAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/rem5s", true);
-    xhttp.send();
-}
-
-function rem10sAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/rem10s", true);
-    xhttp.send();
-}
-
-function rem1mAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/rem1m", true);
-    xhttp.send();
-}
-
-function rem5mAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/rem5m", true);
-    xhttp.send();
-}
-
-function rem10mAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/rem10m", true);
-    xhttp.send();
-}
-
-function auto() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/auto", true);
     xhttp.send();
 }
 
@@ -221,49 +66,7 @@ function pump() {
     xhttp.open("GET", "/pump", true);
     xhttp.send();
 }
-
-function DumpCondensor() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/DumpCondensor", true);
-    xhttp.send();
-}
-
-function resistor() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/resistor", true);
-    xhttp.send();
-}
-
-function waterIn() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText); // Log server response
-        }
-    };
-    xhttp.open("GET", "/waterIn", true);
-    xhttp.send();
-}
-
-function updateSliderTimer(element) {
-  var sliderValue = document.getElementById("timerSlider").value;
-  document.getElementById("timerValue").innerHTML = sliderValue;
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/slider?value="+sliderValue, true);
-  xhr.send();
-}
 </script>
-
 )=====";
 
 const char html_header[] PROGMEM = R"rawliteral(
@@ -271,9 +74,7 @@ const char html_header[] PROGMEM = R"rawliteral(
                             <body>
                             <div id='main'>
                             <h2>Distiller Machine</h2>
-                            <p><span id="timerValue">%TIMER%</span> s</p>
-                            <hr>
-                            )rawliteral";
+                            <hr>)rawliteral";
 
 // HTML STATUS Colors
 const char *html_Lime = "lime";
