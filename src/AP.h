@@ -9,5 +9,6 @@
 #include "MD.h"
 
 void destiler();
+void setuped();
 
 #endif

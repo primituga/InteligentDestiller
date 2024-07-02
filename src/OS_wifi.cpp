@@ -3,7 +3,7 @@
 
 char WIFI_SSID[eepromTextVariableSize] = "aaa";
 char WIFI_PASSWORD[eepromTextVariableSize] = "aaa";
-WiFiServer server(80);
+//AsyncWebServer server(80);
 
 void initWIFI()
 {
@@ -50,16 +50,16 @@ void initWIFI()
     wifiQuality(WiFi.RSSI());
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
-    server.begin();
   }
 }
-
+/*
 // Listen for incoming clients
 WiFiClient isClientAvailable()
 {
   WiFiClient client = server.available();
   return client;
 }
+*/
 
 // Disconnect wifi
 void stopWifi()

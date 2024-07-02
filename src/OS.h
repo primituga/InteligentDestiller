@@ -13,6 +13,15 @@
 //#include "NTPClient.h"
 #include "EEPROM.h"
 
+#ifdef ESP32
+  #include <WiFi.h>
+  #include <AsyncTCP.h>
+#else
+  #include <ESP8266WiFi.h>
+  #include <ESPAsyncTCP.h>
+#endif
+#include <ESPAsyncWebServer.h>
+
 #define DEBUG 1
 #define DEBUGlog 1
 
@@ -43,18 +52,18 @@
 #define PIN_SMIN 27    // Sensor de nivel agua minimo
 #define PIN_SMAX 14    // Sensor de nivel agua maximo
 #define PIN_SW_AUTO 32 // Botão  de modo auto
-#define PIN_SALARM 25 // Botão  de modo auto
+#define PIN_SALARM 25 // Botão  de modo alarme
 
 // OUTPUTS
 #define PIN_RAQ 23            // Resistencia aquecimento
-#define PIN_VALV_WATER_IN 19  // Valvula entrada agua fria
-#define PIN_VALV_WATER_OUT 21 // Valvula descarga vapor
 #define PIN_BMB 22            // Bomba agua
+#define PIN_VALV_WATER_OUT 21 // Valvula descarga vapor
+#define PIN_VALV_WATER_IN 19  // Valvula entrada agua fria
+#define PIN_IND_ALARM 18      // Indicador luminoso alarme
 #define PIN_IND_MIN 05        // Indicador luminoso de nivel agua minimo
 #define PIN_IND_MAX 04        // Indicador luminoso de nivel agua maximo
-#define PIN_IND_ALARM 18      // Indicador luminoso alarme
-#define PIN_IND_MAN  33       // Indicador luminoso modo manual
 #define PIN_IND_AUTO 15       // Indicador luminoso modo auto
+#define PIN_IND_MAN  33       // Indicador luminoso modo manual
 // #define PIN_IND_AUTO        BUILTIN_LED      //Indicador luminoso modo auto
 
 #define ON HIGH

@@ -27,6 +27,7 @@ void loop2(void *pvParameters)
 		{
 			initWIFI();
 			FLAG_INIT_WIFI = 1;
+			setuped();
 		}
 		else
 		{
