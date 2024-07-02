@@ -255,13 +255,6 @@ function waterIn() {
     xhttp.send();
 }
 
-function updateSliderTimer(element) {
-  var sliderValue = document.getElementById("timerSlider").value;
-  document.getElementById("timerValue").innerHTML = sliderValue;
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/slider?value="+sliderValue, true);
-  xhr.send();
-}
 </script>
 
 )=====";
@@ -271,7 +264,6 @@ const char html_header[] PROGMEM = R"rawliteral(
                             <body>
                             <div id='main'>
                             <h2>Distiller Machine</h2>
-                            <p><span id="timerValue">%TIMER%</span> s</p>
                             <hr>
                             )rawliteral";
 
@@ -354,7 +346,5 @@ const char *html_Water_Min_end = "</blc> ";
 // HTML FOOTER Alarm
 const char *html_Alarm_init = "<blc> ------------ Alarm ------------ ";
 const char *html_Alarm_end = "</blc> ";
-
-
 
 #endif /* WEBPAGE_H_ */

@@ -1,5 +1,3 @@
-
-
 /*! \file AP_WEB.cpp */
 
 #include "AP.h"			// Definitions
@@ -148,8 +146,7 @@ void ProcessWebPage(void)
 							client.print("black");
 						}
 						client.print(" ;\"> </blc> ");
-						client.print("</blc> ");
-						///////////////////
+
 						client.print("<span id=\"timer\">" + String(getTimerHour()) + ":" + String(getTimerMinute()) + ":" + String(getTimerSecound()) + "</span>");
 						client.print("<script>");
 						client.print("var timerStatus = " + String(timerStatus()) + ";"); // Get the timer status
@@ -179,8 +176,6 @@ void ProcessWebPage(void)
 						client.print("setInterval(updateTimer, 1000);"); // Call the updateTimer function every second
 						client.print("}");
 						client.print("</script>");
-						client.print("</blc>");
-
 						client.print(html_new_line);
 
 						/*======== +1 SECOUND  BUTTON ============*/
