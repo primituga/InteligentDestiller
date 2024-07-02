@@ -17,7 +17,7 @@
 <div class="card">
   <h3>Auto mode:<span id="autoMode">0</span></h3><br>
   <h3>Resistor:<span id="resistor">0</span></h3><br>
-  <button onclick="toggleAuto">Toggle Auto Mode</button>
+  <button class="button" onclick="toggleAutoMode()">Auto</button>
 </div>
 <script>
 
