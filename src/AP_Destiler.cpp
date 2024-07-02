@@ -40,6 +40,12 @@ void destiler()
             wifiQuality(WiFi.RSSI());
             sPrintStr("IP address: ");
             Serial.println(WiFi.localIP());
+            sPrintStr("timer ");
+            sPrintNbr(getTimerHour());
+            sPrintStr(":");
+            sPrintNbr(getTimerMinute());
+            sPrintStr(":");
+            sPrintLnNbr(getTimerSecound());
         }
     }
     
