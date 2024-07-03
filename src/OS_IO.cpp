@@ -7,10 +7,11 @@ bool ALARM_STATE;
 /************************************************************************/
 void initPinsInputs()
 {
-    pinMode(PIN_SMAX, INPUT);
-    pinMode(PIN_SMIN, INPUT);
-    pinMode(PIN_SW_AUTO, INPUT); // push sw
     pinMode(PIN_SW_MAN, INPUT);  // on/off sw
+    pinMode(PIN_SMIN, INPUT);
+    pinMode(PIN_SMAX, INPUT);
+    pinMode(PIN_SW_AUTO, INPUT); // push sw
+    pinMode(PIN_SALARM, INPUT);
 }
 
 /************************************************************************/
@@ -155,7 +156,8 @@ bool getPump()
 
 bool getAlarm()
 {
-    if (ALARM_STATE == ON)
+    //if (ALARM_STATE == ON )
+    if (digitalRead(PIN_SALARM) == ON)
     {
         return ON;
     }
@@ -200,7 +202,6 @@ void setIndMin(bool state)
         digitalWrite(PIN_IND_MIN, ON);
         if (DEBUG)
             sPrintLnStr("setIndMin ON");
-        sPrintLnNbr(getWaterMin());
         OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
@@ -222,11 +223,9 @@ void setIndAlarm(bool state)
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
 
-    if (state == ON && OLDSTATE == OFF)
+    if (state == ON)
     {
         ALARM_STATE = ON;
-        if (DEBUG)
-            sPrintLnStr("setIndAlarm ON");
         if (millis() - previousTimer > ALARM_TIME_ON)
         {
             digitalWrite(PIN_IND_ALARM, OFF);
@@ -236,20 +235,27 @@ void setIndAlarm(bool state)
         {
             digitalWrite(PIN_IND_ALARM, ON);
         }
-        OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         ALARM_STATE = OFF;
         digitalWrite(PIN_IND_ALARM, OFF);
+    }
+    
+//  Condition to debug
+    if (state == ON && OLDSTATE == OFF)
+    {
+        if (DEBUG)
+            sPrintLnStr("setIndAlarm ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
         if (DEBUG)
             sPrintLnStr("setIndAlarm OFF");
         OLDSTATE = state;
     }
-    else
-    {
-        OLDSTATE = state;
-    }
+////////////////////////////////////////////
 }
 
 void setIndMan(bool state)

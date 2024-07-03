@@ -1,3 +1,8 @@
+// This is the HTML webpage that will be served by the ESP32. 
+// It is stored in the PROGMEM memory of the ESP32.
+// The PROGMEM memory is a special memory that is used to store data that is not going to be changed during the execution of the program.
+// This is the case of the HTML webpage that is not going to be changed during the execution of the program.
+
 const char MAIN_page[] PROGMEM = R"=====(
 <!DOCTYPE html>
 <html>
@@ -7,7 +12,7 @@ const char MAIN_page[] PROGMEM = R"=====(
     <style>
       .card {
         max-width: 500px;
-        min-height: 850px;
+        min-height: 600px auto;
         background: #013220;
         padding: 5px;
         color: #FFF;
@@ -52,15 +57,19 @@ const char MAIN_page[] PROGMEM = R"=====(
         text-decoration: none;
         font-size: 20px;
         margin: 2px;
-        cursor: pointer;
+        cursor: default;
         font: bold 18pt Arial, Helvetica, sans-serif;
+      }
+
+      .hidden {
+        visibility: hidden;
+        display: none;
       }
 
       body {
         background-color: #191970;
         font-size: 100%;
         color: #FFFFFF;
-        <title>Intelligent Distiller</title><link rel="icon"href="img/test-tube.png">
       }
 
       #main {
@@ -75,9 +84,16 @@ const char MAIN_page[] PROGMEM = R"=====(
         padding: 10px 10px 10px 10px;
       }
 
-      h2 {
+      h3 {
         text-align: center;
-        margin: 10px 0px 10px 0px;
+        font-size: 120%;
+        margin: 10px 10px 10px 10px;
+      }
+
+      h5 {
+        text-align: center;
+        font-size: 100%;
+        margin: 1px 0px 0px 0px;
       }
 
       p {
@@ -90,7 +106,7 @@ const char MAIN_page[] PROGMEM = R"=====(
         margin: 10px 0px 15px 0px;
       }
 
-      blc {
+      blc_line {
         display: inline-block;
       }
 
@@ -124,6 +140,16 @@ const char MAIN_page[] PROGMEM = R"=====(
       <hr>
     </div>
     <div class="card">
+      <div id="WaterLVL">
+        <hr>
+        <br>
+        <button id="ButtonWaterMax" class="buttonWater">Water Max</button>
+        <button id="ButtonWaterMin" class="buttonWater">Water Min</button>
+        <button id="ButtonWaterAlarm" class="buttonWater">Water Alarm</button>
+        <br>
+        <br>
+        <hr>
+      </div>
       <h3>
         <span id="timerbuttons"></span>
       </h3>
@@ -132,7 +158,9 @@ const char MAIN_page[] PROGMEM = R"=====(
       <button id="ButtonStopTimer" class="button" onclick="stopTimer()">Stop</button>
       <button id="ButtonResetTimer" class="button" onclick="resetTimer()">Reset</button>
       <br>
-      <h3>Timer: <span id="timer">0</span>
+      <h3>
+        <blc_line id='content'>Timer: <span id="timer">0</span>
+        </blc_line>
       </h3>
       <br>
       <button id="ButtonAdd1s" class="button" onclick="add1s()">+1s</button>
@@ -160,76 +188,71 @@ const char MAIN_page[] PROGMEM = R"=====(
       <br>
       <hr>
       <br>
-      <button id="ButtonWaterMax" class="buttonWater">Water Max</button>
-      <button id="ButtonWaterMin" class="buttonWater">Water Min</button>
-      <button id="ButtonWaterAlarm" class="buttonWater">Water Alarm</button>
-      <br>
-      <hr>
-      <br>
-      <h3>Auto mode: <span id="autoMode">0</span>
-      </h3>
-      <h3>Resistor: <span id="resistor">0</span>
-      </h3>
-      <h3>Pump: <span id="pump">0</span>
-      </h3>
-      <h3>Water In: <span id="waterIn">0</span>
-      </h3>
-      <h3>Dump Water: <span id="dumpWater">0</span>
-      </h3>
-      <h3>Water Min: <span id="waterMin">0</span>
-      </h3>
-      <h3>Water Max: <span id="waterMax">0</span>
-      </h3>
-      <h3>Water Alarm: <span id="waterAlarm">0</span>
-      </h3>
+      <div id="IOs" class="hidden">
+        <h5>Auto mode: <span id="autoMode">0</span>
+        </h5>
+        <h5>Resistor: <span id="resistor">0</span>
+        </h5>
+        <h5>Pump: <span id="pump">0</span>
+        </h5>
+        <h5>Water In: <span id="waterIn">0</span>
+        </h5>
+        <h5>Dump Water: <span id="dumpWater">0</span>
+        </h5>
+        <h5>Water Min: <span id="waterMin">0</span>
+        </h5>
+        <h5>Water Max: <span id="waterMax">0</span>
+        </h5>
+        <h5>Water Alarm: <span id="waterAlarm">0</span>
+        </h5>
+      </div>
     </div>
     <script>
       setInterval(function() {
-        // Call a function repetatively with 1 Second interval
         getTimerData();
         getAutoData();
-        getResistorData();
-        getDumpWaterData();
-        getWaterInData();
-        getPumpData();
-        getWaterMinData();
-        getWaterMaxData();
-        getWaterAlarmData();
         if (document.getElementById("autoMode").innerHTML == "1") {
           document.getElementById("ButtonToggleAuto").style.border = "4px solid #00ff00";
         } else {
           document.getElementById("ButtonToggleAuto").style.border = "4px solid #000000";
         }
+        getResistorData();
         if (document.getElementById("resistor").innerHTML == "1") {
           document.getElementById("ButtonToggleResistor").style.border = "4px solid #00ff00";
         } else {
           document.getElementById("ButtonToggleResistor").style.border = "4px solid #000000";
         }
+        getPumpData();
         if (document.getElementById("pump").innerHTML == "1") {
           document.getElementById("ButtonTogglePump").style.border = "4px solid #00ff00";
         } else {
           document.getElementById("ButtonTogglePump").style.border = "4px solid #000000";
         }
+        getWaterInData();
         if (document.getElementById("waterIn").innerHTML == "1") {
           document.getElementById("ButtonToggleWaterIn").style.border = "4px solid #00ff00";
         } else {
           document.getElementById("ButtonToggleWaterIn").style.border = "4px solid #000000";
         }
+        getDumpWaterData();
         if (document.getElementById("dumpWater").innerHTML == "1") {
           document.getElementById("ButtonToggleDumpWater").style.border = "4px solid #00ff00";
         } else {
           document.getElementById("ButtonToggleDumpWater").style.border = "4px solid #000000";
         }
+        getWaterMaxData();
         if (document.getElementById("waterMax").innerHTML == "1") {
           document.getElementById("ButtonWaterMax").style.backgroundColor = "green";
         } else {
           document.getElementById("ButtonWaterMax").style.backgroundColor = "grey";
         }
+        getWaterMinData();
         if (document.getElementById("waterMin").innerHTML == "1") {
           document.getElementById("ButtonWaterMin").style.backgroundColor = "orange";
         } else {
           document.getElementById("ButtonWaterMin").style.backgroundColor = "grey";
         }
+        getWaterAlarmData();
         if (document.getElementById("waterAlarm").innerHTML == "1") {
           document.getElementById("ButtonWaterAlarm").style.backgroundColor = "red";
         } else {
@@ -556,4 +579,6 @@ const char MAIN_page[] PROGMEM = R"=====(
       }
     </script>
   </body>
-</html> )=====";
+
+</html>
+)=====";

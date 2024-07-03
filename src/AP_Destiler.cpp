@@ -5,11 +5,11 @@ void destiler()
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
 
-    if (DEBUGlog)
+    if (DEBUGlog)   // Print debug information
     {
         if (millis() - previousTimer > 5000)
         {
-            digitalWrite(PIN_IND_ALARM, OFF);
+            //digitalWrite(PIN_IND_ALARM, OFF);
             previousTimer = millis();
             sPrintLnStr("  ");
             sPrintStr("getWaterMax ");
@@ -50,52 +50,28 @@ void destiler()
     }
     
     ///////////////
-    if ((getWaterMax() || !getWaterMin() || !getWaterAlarm()) && getManualMode())
+
+    if (timerStatus() && getAutoMode() && !getWaterAlarm())
     {
-        setIndMax(ON);
-        setResistor(ON);
-        setPump(OFF);
-        //setValveWaterIn(ON);
-        //setValveWaterOut(ON);
+        workingMax();
     }
-    else
+    else if (!timerStatus())
     {
-        setIndMax(OFF);
+        workingIdle();
     }
-    ///////////////
-    if (getWaterMin())
+    
+    else if (!getWaterMin() && !getWaterAlarm() && getManualMode())
     {
-        setIndMin(ON);
-        setPump(ON);
-        //setValveWaterIn(ON);
-        //setValveWaterOut(ON);
+        workingMax();
     }
-    else
+    else if (getWaterMin())
     {
-        setIndMin(OFF);
+        workingMin();
     }
-    ///////////////
-    if (getWaterAlarm())
-    {
-        setIndAlarm(ON);
-        setResistor(OFF);
-        setPump(ON);
-        //setValveWaterIn(OFF);
-        //setValveWaterOut(OFF);
+    else if (getWaterAlarm()){
+        workingAlarm();
     }
-    else
-    {
-        setIndAlarm(OFF);
-    }
-    ///////////////
-    if (getManualMode())
-    {
-        setIndMan(ON);
-    }
-    else
-    {
-        setIndMan(OFF);
-    }
+
     ///////////////
     if (!getManualMode())
     {
@@ -104,5 +80,34 @@ void destiler()
     else
     {
         setAutoMode(OFF);
+    }
+
+/************************************************************************/
+/* INDICATORS BLOCK                                                     */
+/************************************************************************/
+    if (getWaterMax()){
+        setIndMax(ON);
+    } else {
+        setIndMax(OFF);
+    }
+
+    if (getWaterMin()){
+        setIndMin(ON);
+    } else {
+        setIndMin(OFF);
+    }
+
+
+    if (getWaterAlarm()){
+        setIndAlarm(ON);
+    } else {
+        setIndAlarm(OFF);
+    }
+
+
+    if (getManualMode()){
+        setIndMan(ON);
+    } else {
+        setIndMan(OFF);
     }
 }

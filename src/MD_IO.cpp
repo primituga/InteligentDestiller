@@ -126,3 +126,30 @@ void toggleResistor()
         setResistor(state);
     }
 }
+
+void workingMax(){
+    setResistor(ON);
+    setPump(OFF);
+    //setValveWaterIn(ON);
+    //setValveWaterOut(ON);
+}
+
+void workingMin(){
+    setPump(ON);
+    //setValveWaterIn(ON);
+    //setValveWaterOut(ON);
+
+}
+
+void workingAlarm(){
+    setResistor(OFF);
+    setPump(ON);
+    //setValveWaterIn(OFF);
+    //setValveWaterOut(OFF);
+}
+
+void workingIdle(){
+    setResistor(OFF);
+    setValveWaterIn(OFF);
+    setValveWaterOut(OFF);
+}

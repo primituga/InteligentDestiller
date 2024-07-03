@@ -6,53 +6,30 @@
 #ifndef _OS_h
 #define _OS_h
 
-//#include "WiFiUdp.h"
-//#include "WiFi.h"
+// #include "WiFiUdp.h"
+// #include "WiFi.h"
 #include <stdint.h>
 #include "WiFiManager.h"
-//#include "NTPClient.h"
+// #include "NTPClient.h"
 #include "EEPROM.h"
 
-#ifdef ESP32
-  #include <WiFi.h>
-  #include <AsyncTCP.h>
-#else
-  #include <ESP8266WiFi.h>
-  #include <ESPAsyncTCP.h>
-#endif
+#include <WiFi.h>
+#include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 
 #define DEBUG 1
-#define DEBUGlog 1
+#define DEBUGlog 0
 
 //////////////////////////////////////////////////////////////////////////
 // I/O Map Header
 //////////////////////////////////////////////////////////////////////////
-/*
-// INPUTS  -- Casa
-#define PIN_SW_MAN 15  // Interruptor  de modo manual
-#define PIN_SMIN 04    // Sensor de nivel agua minimo
-#define PIN_SMAX 05    // Sensor de nivel agua maximo
-#define PIN_SW_AUTO 18 // Botão  de modo auto
 
-// OUTPUTS
-#define PIN_RAQ 19            // Resistencia aquecimento
-#define PIN_VALV_WATER_IN 21  // Valvula entrada agua fria
-#define PIN_VALV_WATER_OUT 32 // Valvula descarga vapor
-#define PIN_BMB 33            // Bomba agua
-#define PIN_IND_MIN 25        // Indicador luminoso de nivel agua minimo
-#define PIN_IND_MAX 26        // Indicador luminoso de nivel agua maximo
-#define PIN_IND_ALARM 27      // Indicador luminoso alarme
-#define PIN_IND_MAN 14        // Indicador luminoso modo manual
-#define PIN_IND_AUTO 13       // Indicador luminoso modo auto
-// #define PIN_IND_AUTO        BUILTIN_LED      //Indicador luminoso modo auto
-*/
-// INPUTS  --- FabLab
+// INPUTS
 #define PIN_SW_MAN 26  // Interruptor  de modo manual
 #define PIN_SMIN 27    // Sensor de nivel agua minimo
 #define PIN_SMAX 14    // Sensor de nivel agua maximo
 #define PIN_SW_AUTO 32 // Botão  de modo auto
-#define PIN_SALARM 25 // Botão  de modo alarme
+#define PIN_SALARM 25  // Botão  de modo alarme
 
 // OUTPUTS
 #define PIN_RAQ 23            // Resistencia aquecimento
@@ -63,11 +40,10 @@
 #define PIN_IND_MIN 05        // Indicador luminoso de nivel agua minimo
 #define PIN_IND_MAX 04        // Indicador luminoso de nivel agua maximo
 #define PIN_IND_AUTO 15       // Indicador luminoso modo auto
-#define PIN_IND_MAN  33       // Indicador luminoso modo manual
-// #define PIN_IND_AUTO        BUILTIN_LED      //Indicador luminoso modo auto
+#define PIN_IND_MAN 33        // Indicador luminoso modo manual
 
-#define ON HIGH
-#define OFF LOW
+#define ON HIGH // Define ON as HIGH
+#define OFF LOW // Define OFF as LOW
 
 //////////////////////////////////////////////////////////////////////////
 // MAIN
@@ -142,13 +118,12 @@ byte getStatusFromEeprom();
 // WIFI Functions calls
 
 WiFiClient isClientAvailable();
-//extern WiFiUDP ntpUDP;
-//extern NTPClient timeClient;
-//extern bool wifi_Status;
+// extern WiFiUDP ntpUDP;
+// extern NTPClient timeClient;
+// extern bool wifi_Status;
 
 void initWIFI();
 void stopWifi();
-void initWIFI();
 void wifiQuality(int rssi);
 
 //////////////////////////////////////////////////////////////////////////

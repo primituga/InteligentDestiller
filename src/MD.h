@@ -15,5 +15,9 @@ void toggleValveWaterOut();
 void toggleResistor();
 void toggleAutoMode();
 void toggleAutoModeWEB();
+void workingMax();
+void workingMin();
+void workingAlarm();
+void workingIdle();
 
 #endif

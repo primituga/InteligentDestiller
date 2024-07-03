@@ -1,7 +1,7 @@
 /*! \file AP_WEB.cpp */
 
 #include "AP.h"			// Definitions
-#include "AP_WebPage_example.h" // WebPage HTML content
+#include "AP_Web.h" // WebPage HTML content
 
 WebServer server(80); // Create a webserver object that listens for HTTP request on port 80
 
@@ -17,11 +17,12 @@ void handleRoot() {
 //===============================================================
 void handleTimer() {  
   String timer = String(getTimerHour()) + "h :" + String(getTimerMinute()) + "m :" + String(getTimerSecound())+ "s";
-  server.send(200, "text/plain", timer); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", timer);  // Send response to client
 }
 
-
-
+//===============================================================
+// Timer Add/Remove Time
+//===============================================================
 void handleAdd1s() {
   add1s();
   String timerbuttons = " ";
@@ -116,70 +117,77 @@ void handleTimerReset() {
   server.send(200, "text/plain", timerbuttons); // Send response to client
 }
 
-//===============================================================
+//=======================================================================================
+// Handlers for Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax With Response
+//=======================================================================================
 void handleAuto() {
-  String autoMode = String(getAutoMode());
-  server.send(200, "text/plain", autoMode); //Send ADC value only to client ajax request
+  String autoMode = String(getAutoMode());    // Read auto mode status
+  server.send(200, "text/plain", autoMode);   // Send auto mode status to client
 }
 
 void handlePump() {
-  String pump = String(getPump());
-  server.send(200, "text/plain", pump); //Send ADC value only to client ajax request
+  String pump = String(getPump());            // Read pump status
+  server.send(200, "text/plain", pump);       // Send pump status to client
 }
 
 void handleDumpWater() {
   String dumpWater = String(getValv_Water_Out());
-  server.send(200, "text/plain", dumpWater); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", dumpWater); 
 }
 
 void handleResistor() {
   String resistor = String(getResistor());
-  server.send(200, "text/plain", resistor); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", resistor);
 }
 
 void handleWaterIn() { // Call handleWaterIn() function
   String waterIn = String(getValv_Water_In());
-  server.send(200, "text/plain", waterIn); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", waterIn);
 }
 
-void handleWaterMax() { // Call handleWaterIn() function
+void handleWaterMax() {   
   String waterMax = String(getWaterMax());
-  server.send(200, "text/plain", waterMax); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", waterMax);
 }
 
-void handleWaterMin() { // Call handleWaterIn() function
+void handleWaterMin() {   
   String waterMin = String(getWaterMin());
-  server.send(200, "text/plain", waterMin); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", waterMin); 
 }
 
-void handleWaterAlarm() { // Call handleWaterIn() function
+void handleWaterAlarm() {   
   String waterAlarm = String(getWaterAlarm());
-  server.send(200, "text/plain", waterAlarm); //Send ADC value only to client ajax request
+  server.send(200, "text/plain", waterAlarm); 
 }
+
+//=======================================================================================
+// Handlers for Toggle Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax
+//=======================================================================================
+
 
 void handleToggleAuto() {
-  toggleAutoModeWEB(); // Call the toggleAutoMode() function
+  toggleAutoModeWEB();  
   server.send(200, "text/plain", "Auto mode toggled"); // Send response to client
 }
 
 void handleTogglePump() {
-  togglePump(); // Call the toggleAutoMode() function
+  togglePump();   
   server.send(200, "text/plain", "Pump toggled"); // Send response to client
 }
 
 void handleToggleDumpWater() {
-  toggleValveWaterOut(); // Call the toggleAutoMode() function
+  toggleValveWaterOut();  
   server.send(200, "text/plain", "Dump Condensor toggled"); // Send response to client
 }
 
 void handleToggleWaterIn() {
-  toggleValveWaterIn(); // Call the toggleAutoMode() function
+  toggleValveWaterIn();   
   server.send(200, "text/plain", "Water In toggled"); // Send response to client
 }
 
 void handleToggleResistor() {
   sPrintLnStr("toggleResistor");
-  toggleResistor(); // Call the toggleAutoMode() function
+  toggleResistor();   
   server.send(200, "text/plain", "Resistor toggled"); // Send response to client
 }
 
