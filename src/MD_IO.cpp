@@ -130,22 +130,28 @@ void toggleResistor()
 void workingMax(){
     setResistor(ON);
     setPump(OFF);
-    //setValveWaterIn(ON);
-    //setValveWaterOut(ON);
+    setValveWaterIn(ON);
+    setValveWaterOut(ON);
+}
+
+void workingMaxMin(){
+    setResistor(ON);
+    setValveWaterIn(ON);
+    setValveWaterOut(ON);
 }
 
 void workingMin(){
     setPump(ON);
-    //setValveWaterIn(ON);
-    //setValveWaterOut(ON);
+    setValveWaterIn(ON);
+    setValveWaterOut(ON);
 
 }
 
 void workingAlarm(){
     setResistor(OFF);
     setPump(ON);
-    //setValveWaterIn(OFF);
-    //setValveWaterOut(OFF);
+    setValveWaterIn(OFF);
+    setValveWaterOut(OFF);
 }
 
 void workingIdle(){

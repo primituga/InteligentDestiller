@@ -25,6 +25,7 @@ void loop2(void *pvParameters)
 	{
 		if (FLAG_INIT_WIFI == 0)
 		{
+			sPrintLnStr("WIFI INIT....");
 			initWIFI();	// Initiate WIFI
 			FLAG_INIT_WIFI = WiFi.isConnected();	// Check if WIFI is connected
 			setupCalls();	// Initiate calls

@@ -5,11 +5,11 @@ void destiler()
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
 
-    if (DEBUGlog)   // Print debug information
+    if (DEBUGlog) // Print debug information
     {
         if (millis() - previousTimer > 5000)
         {
-            //digitalWrite(PIN_IND_ALARM, OFF);
+            // digitalWrite(PIN_IND_ALARM, OFF);
             previousTimer = millis();
             sPrintLnStr("  ");
             sPrintStr("getWaterMax ");
@@ -48,31 +48,76 @@ void destiler()
             sPrintLnNbr(getTimerSecound());
         }
     }
-    
-    ///////////////
 
-    if (timerStatus() && getAutoMode() && !getWaterAlarm())
+    if (!getManualMode()) // If manual mode is off
     {
-        workingMax();
+        if (getAutoMode() && timerStatus()) // If auto mode is on
+        {
+            if (getWaterMax()) // If water level is max
+            {
+                workingMax();
+            }
+            else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
+            {
+                workingMaxMin();
+                if (getWaterMin())
+                {
+                    workingMin();
+                }
+            }
+            else if (getWaterMin()) // If water level is min
+            {
+                workingMin();
+            }
+            else if (getWaterAlarm()) // If water level is alarm
+            {
+                workingAlarm();
+            }
+            else
+            {
+                workingIdle();
+            }
+        }
+        else
+        {
+            workingIdle();
+        }
     }
-    else if (!timerStatus())
+    else
     {
-        workingIdle();
-    }
-    
-    else if (!getWaterMin() && !getWaterAlarm() && getManualMode())
-    {
-        workingMax();
-    }
-    else if (getWaterMin())
-    {
-        workingMin();
-    }
-    else if (getWaterAlarm()){
-        workingAlarm();
+        if (getManualMode())
+        {
+            if (getWaterMax())
+            {
+                workingMax();
+            }
+            else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
+            {
+                workingMaxMin();
+                if (getWaterMin())
+                {
+                    workingMin();
+                }
+            }
+            else if (getWaterMin())
+            {
+                workingMin();
+            }
+            else if (getWaterAlarm())
+            {
+                workingAlarm();
+            }
+            else
+            {
+                workingIdle();
+            }
+        }
     }
 
-    ///////////////
+    if (!getAutoMode())
+        setTimer(OFF); // Stop Timer if AutoMode is OFF
+
+    ////////////////////////////////////////////////////////////////////////
     if (!getManualMode())
     {
         toggleAutoMode();
@@ -82,32 +127,42 @@ void destiler()
         setAutoMode(OFF);
     }
 
-/************************************************************************/
-/* INDICATORS BLOCK                                                     */
-/************************************************************************/
-    if (getWaterMax()){
+    /************************************************************************/
+    /* INDICATORS BLOCK                                                     */
+    /************************************************************************/
+    if (getWaterMax())
+    {
         setIndMax(ON);
-    } else {
+    }
+    else
+    {
         setIndMax(OFF);
     }
 
-    if (getWaterMin()){
+    if (getWaterMin())
+    {
         setIndMin(ON);
-    } else {
+    }
+    else
+    {
         setIndMin(OFF);
     }
 
-
-    if (getWaterAlarm()){
+    if (getWaterAlarm())
+    {
         setIndAlarm(ON);
-    } else {
+    }
+    else
+    {
         setIndAlarm(OFF);
     }
 
-
-    if (getManualMode()){
+    if (getManualMode())
+    {
         setIndMan(ON);
-    } else {
+    }
+    else
+    {
         setIndMan(OFF);
     }
 }

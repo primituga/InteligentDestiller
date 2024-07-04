@@ -19,5 +19,6 @@ void workingMax();
 void workingMin();
 void workingAlarm();
 void workingIdle();
+void workingMaxMin();
 
 #endif

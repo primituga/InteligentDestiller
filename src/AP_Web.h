@@ -4,11 +4,12 @@
 // This is the case of the HTML webpage that is not going to be changed during the execution of the program.
 
 const char MAIN_page[] PROGMEM = R"=====(
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Intelligent Distiller</title>
-    <link rel="icon" href="test-tube.png">
+    <link rel="icon" href="https://img.icons8.com/?size=80&id=65359&format=png">
     <style>
       .card {
         max-width: 500px;
@@ -96,10 +97,14 @@ const char MAIN_page[] PROGMEM = R"=====(
         margin: 1px 0px 0px 0px;
       }
 
-      p {
+      .header-logo {
+        margin: 10px 0px 0px 10px;
         text-align: center;
-        margin: 5px 0px 10px 0px;
-        font-size: 120%;
+        background-color: lightgrey;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        transform: translate(-50%, -50%);
       }
 
       #time_P {
@@ -135,6 +140,9 @@ const char MAIN_page[] PROGMEM = R"=====(
     </style>
   </head>
   <body>
+    <div class="header-logo">
+      <img align="left" alt="IPPortalegre" height="93" data-sticky-height="53" data-sticky-top="33" src="https://www.ipportalegre.pt/static/ippimages/LogoNovoPolitecnico.png">
+    </div>
     <div id='main'>
       <h2>Intelligent Distiller</h2>
       <hr>
@@ -259,6 +267,7 @@ const char MAIN_page[] PROGMEM = R"=====(
           document.getElementById("ButtonWaterAlarm").style.backgroundColor = "grey";
         }
       }, 1000); //1000 mSeconds update rate
+      
       function getTimerData() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -579,6 +588,5 @@ const char MAIN_page[] PROGMEM = R"=====(
       }
     </script>
   </body>
-
 </html>
 )=====";
