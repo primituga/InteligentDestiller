@@ -8,6 +8,7 @@
 
 #include "MD.h"
 
+// Function prototypes  
 void destiler();
 void setupCalls();
 

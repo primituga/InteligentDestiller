@@ -1,6 +1,6 @@
 #include "OS.h"
 
-void initMultiCore()
+void initMultiCore()    // Function to initiate the 2nd core
 {
     // Implements the 2nd core option to run 'loop2' function
     xTaskCreatePinnedToCore(

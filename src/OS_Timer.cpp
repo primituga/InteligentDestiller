@@ -1,6 +1,10 @@
 
 #include "OS.h"
 
+//****************************************************************************
+// Timer Functions
+//****************************************************************************
+
 bool flagTimer = OFF; // flag to timer status
 static unsigned long previousTimer = 0;
 

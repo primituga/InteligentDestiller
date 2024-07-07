@@ -1,54 +1,36 @@
 #include "MD.h"
 
-/*void toggleAutoMode()
+void toggleAutoMode()   // Toggle Auto Mode
 {
-    static bool currentState;
-    static bool lastState = ON;
-    static bool state = OFF;
-    currentState = getAutoModeSW();
+static int buttonState = 0; // current state of the button
+static int lastButtonState = 0; // previous state of the button
 
-    if (lastState == ON && currentState == OFF)
+static int currentButtonState = 0;  // current state of the button
+static unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
+static unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
+
+    currentButtonState = getAutoModeSW();   // read the state of the switch into a local variable
+
+    if (currentButtonState != lastButtonState)  // If the switch changed, due to noise or pressing
     {
-        state = !state;
-        toggleAutoModeWEB();
-        //setAutoMode(state);
-    }
-    lastState = currentState;
-}
-*/
-
-
-void toggleAutoMode()
-{
-static int buttonState = 0;
-static int lastButtonState = 0;
-
-static int currentButtonState = 0;
-static unsigned long lastDebounceTime = 0;
-static unsigned long debounceDelay = 50;
-
-    currentButtonState = getAutoModeSW();
-
-    if (currentButtonState != lastButtonState)
-    {
-        lastDebounceTime = millis();
+        lastDebounceTime = millis();    // reset the debouncing timer
     }
 
-    if ((millis() - lastDebounceTime) > debounceDelay)
+    if ((millis() - lastDebounceTime) > debounceDelay)  // if the switch value has been stable for a while
     {
-        if (currentButtonState != buttonState)
+        if (currentButtonState != buttonState)  // if the button state has changed
         {
-            buttonState = currentButtonState;
-            if (buttonState == OFF)
+            buttonState = currentButtonState;   // save the new state
+            if (buttonState == OFF) // if the button state is HIGH
             {
-                toggleAutoModeWEB();
+                toggleAutoModeWEB();    // Toggle Auto Mode
             }
         }
     }
-    lastButtonState = currentButtonState;
+    lastButtonState = currentButtonState;   // save the current state as the last state, for next time through the loop
 }
 
-void toggleAutoModeWEB()
+void toggleAutoModeWEB()    // Toggle Auto Mode
 {
     bool state = getAutoMode();
 
@@ -64,7 +46,7 @@ void toggleAutoModeWEB()
     }
 }
 
-void togglePump()
+void togglePump()   // Toggle Pump
 {
     bool state = getPump();
     if (state == OFF)
@@ -79,7 +61,7 @@ void togglePump()
     }
 }
 
-void toggleValveWaterIn()
+void toggleValveWaterIn()   // Toggle Valve Water In
 {
     bool state = getValv_Water_In();
 
@@ -95,7 +77,7 @@ void toggleValveWaterIn()
     }
 }
 
-void toggleValveWaterOut()
+void toggleValveWaterOut()  // Toggle Valve Water Out
 {
     bool state = getValv_Water_Out();
 
@@ -111,7 +93,7 @@ void toggleValveWaterOut()
     }
 }
 
-void toggleResistor()
+void toggleResistor()   // Toggle Resistor
 {
     bool state = getResistor();
 
@@ -127,27 +109,27 @@ void toggleResistor()
     }
 }
 
-void workingMax(){
+void workingMax(){  // Working state when water level is max
     setResistor(ON);
     setPump(OFF);
     setValveWaterIn(ON);
     setValveWaterOut(ON);
 }
 
-void workingMaxMin(){
+void workingMaxMin(){   // Working state when water level is between max and min
     setResistor(ON);
     setValveWaterIn(ON);
     setValveWaterOut(ON);
 }
 
-void workingMin(){
+void workingMin(){  // Working state when water level is min
     setPump(ON);
     setValveWaterIn(ON);
     setValveWaterOut(ON);
 
 }
 
-void workingAlarm(){
+void workingAlarm(){    // Working state when water level is alarm
     setResistor(OFF);
     setPump(ON);
     setValveWaterIn(OFF);

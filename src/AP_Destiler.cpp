@@ -4,6 +4,7 @@ void destiler()
 {
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
+    static bool IDDLE_FLAG = OFF;
 
     if (DEBUGlog) // Print debug information
     {
@@ -49,47 +50,57 @@ void destiler()
         }
     }
 
+    /************************************************************************/
+    /* WORKING BLOCK                                                        */
+    /************************************************************************/
     if (!getManualMode()) // If manual mode is off
     {
         if (getAutoMode() && timerStatus()) // If auto mode is on
         {
             if (getWaterMax()) // If water level is max
             {
-                workingMax();
+                workingMax(); // Working when water level is max
+                IDDLE_FLAG = OFF;
             }
             else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
             {
-                workingMaxMin();
+                workingMaxMin(); // Working within max and min water level
                 if (getWaterMin())
                 {
-                    workingMin();
+                    workingMin(); // Working when water level is min
+                    IDDLE_FLAG = OFF;
                 }
             }
             else if (getWaterMin()) // If water level is min
             {
                 workingMin();
+                IDDLE_FLAG = OFF;
             }
             else if (getWaterAlarm()) // If water level is alarm
             {
                 workingAlarm();
+                IDDLE_FLAG = OFF;
             }
-            else
+            else if (!IDDLE_FLAG)
             {
                 workingIdle();
+                IDDLE_FLAG = ON;
             }
         }
-        else
+        else if (!IDDLE_FLAG)
         {
             workingIdle();
+            IDDLE_FLAG = ON;
         }
     }
-    else
+    else // If manual mode is on
     {
         if (getManualMode())
         {
             if (getWaterMax())
             {
                 workingMax();
+                IDDLE_FLAG = OFF;
             }
             else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
             {
@@ -97,19 +108,23 @@ void destiler()
                 if (getWaterMin())
                 {
                     workingMin();
+                    IDDLE_FLAG = OFF;
                 }
             }
             else if (getWaterMin())
             {
                 workingMin();
+                IDDLE_FLAG = OFF;
             }
             else if (getWaterAlarm())
             {
                 workingAlarm();
+                IDDLE_FLAG = OFF;
             }
-            else
+            else if (!IDDLE_FLAG)
             {
                 workingIdle();
+                IDDLE_FLAG = ON;
             }
         }
     }

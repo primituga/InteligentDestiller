@@ -23,6 +23,20 @@ void initSerial()
 	sPrintLnStr(" ");
 }
 
+//************************************************************************
+// Serial Print Functions
+//************************************************************************
+
+void sPrint(char *abc)
+{
+	Serial.print(abc);
+}
+
+void sPrintLn(char *abc)
+{
+	Serial.println(abc);
+}
+
 void sPrintStr(String abc)
 {
 	Serial.print(abc);

@@ -1,6 +1,7 @@
 #include "AP.h"	
 
-void setup()
+// setup to run on 1st cpu core
+void setup()	
 {
 	initPinsInputs();	// Initiate all pins as inputs
 	initPinsOutputs();	// Initiate all pins as outputs

@@ -8,6 +8,7 @@
 
 #include "OS.h"
 
+// Function prototypes
 void ProcessWebPage(void);
 void togglePump();
 void toggleValveWaterIn();

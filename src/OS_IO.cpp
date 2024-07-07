@@ -33,7 +33,6 @@ void initPinsOutputs()
 /************************************************************************/
 /* GETS BLOCK                                                           */
 /************************************************************************/
-
 bool getWaterMax()
 {
     if (digitalRead(PIN_SMAX) == OFF)
@@ -255,7 +254,6 @@ void setIndAlarm(bool state)
             sPrintLnStr("setIndAlarm OFF");
         OLDSTATE = state;
     }
-////////////////////////////////////////////
 }
 
 void setIndMan(bool state)
