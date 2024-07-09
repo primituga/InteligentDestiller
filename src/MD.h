@@ -1,7 +1,7 @@
 
-//////////////////////////////////////////////////////////////////////////
+//********************************************************************************
 // MiddleWare Header
-//////////////////////////////////////////////////////////////////////////
+//********************************************************************************
 
 #ifndef _MD_h
 #define _MD_h
@@ -21,5 +21,8 @@ void workingMin();
 void workingAlarm();
 void workingIdle();
 void workingMaxMin();
+void waterManagement();
+void indicatorsManagement();
+void modeManagement();
 
 #endif

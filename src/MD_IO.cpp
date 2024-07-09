@@ -111,7 +111,6 @@ void toggleResistor()   // Toggle Resistor
 
 void workingMax(){  // Working state when water level is max
     setResistor(ON);
-    setPump(OFF);
     setValveWaterIn(ON);
     setValveWaterOut(ON);
 }
@@ -123,7 +122,6 @@ void workingMaxMin(){   // Working state when water level is between max and min
 }
 
 void workingMin(){  // Working state when water level is min
-    setPump(ON);
     setValveWaterIn(ON);
     setValveWaterOut(ON);
 
@@ -131,7 +129,6 @@ void workingMin(){  // Working state when water level is min
 
 void workingAlarm(){    // Working state when water level is alarm
     setResistor(OFF);
-    setPump(ON);
     setValveWaterIn(OFF);
     setValveWaterOut(OFF);
 }
@@ -140,4 +137,77 @@ void workingIdle(){
     setResistor(OFF);
     setValveWaterIn(OFF);
     setValveWaterOut(OFF);
+}
+
+void waterManagement(){
+    /************************************************************************/
+    /* WATER MANAGEMENT BLOCK                                               */
+    /************************************************************************/
+    if (getWaterMax())
+    {
+        setPump(OFF);
+    }
+    else if (getWaterMin())
+    {
+        setPump(ON);
+    }
+    else if (getWaterAlarm())
+    {
+        setPump(ON);
+    }
+}
+
+void indicatorsManagement(){
+    /************************************************************************/
+    /* INDICATORS BLOCK                                                     */
+    /************************************************************************/
+    if (getWaterMax())
+    {
+        setIndMax(ON);
+    }
+    else
+    {
+        setIndMax(OFF);
+    }
+
+    if (getWaterMin())
+    {
+        setIndMin(ON);
+    }
+    else
+    {
+        setIndMin(OFF);
+    }
+
+    if (getWaterAlarm())
+    {
+        setIndAlarm(ON);
+    }
+    else
+    {
+        setIndAlarm(OFF);
+    }
+
+    if (getManualMode())
+    {
+        setIndMan(ON);
+    }
+    else
+    {
+        setIndMan(OFF);
+    }
+}
+
+void modeManagement(){
+    /************************************************************************/
+    /* MACHINE MODE MANAGEMENT BLOCK                                        */
+    /************************************************************************/
+    if (!getManualMode())
+    {
+        toggleAutoMode();
+    }
+    else
+    {
+        setAutoMode(OFF);
+    }
 }

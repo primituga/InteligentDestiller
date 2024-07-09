@@ -1,10 +1,9 @@
-// This is the HTML webpage that will be served by the ESP32. 
+// This is the client side HTML webpage that will be served by the ESP32. 
 // It is stored in the PROGMEM memory of the ESP32.
 // The PROGMEM memory is a special memory that is used to store data that is not going to be changed during the execution of the program.
 // This is the case of the HTML webpage that is not going to be changed during the execution of the program.
 
 const char MAIN_page[] PROGMEM = R"=====(
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,103 +15,103 @@ const char MAIN_page[] PROGMEM = R"=====(
         min-height: 600px auto;
         background: #013220;
         padding: 5px;
-        color: #FFF;
+        color: #fff;
         margin: 0 auto;
-        box-shadow: 0px 0px 18px -4px rgba(255, 160, 0, 1);
+        box-shadow: 0 0 18px -4px rgba(255, 160, 0, 1)
       }
 
       html {
         font-family: Helvetica;
         display: inline-block;
-        margin: 0px auto;
-        text-align: center;
+        margin: 0 auto;
+        text-align: center
       }
 
       .button {
-        transition-duration: 0.4s;
-        background-color: #4C7AAE;
+        transition-duration: .4s;
+        background-color: #4c7aae;
         border: none;
         border-radius: 15px;
-        color: white;
+        color: #fff;
         padding: 10px 10px;
         text-decoration: none;
         font-size: 20px;
         margin: 2px;
-        cursor: pointer;
+        cursor: pointer
       }
 
       button.button:hover {
-        background-color: blue;
+        background-color: #00f
       }
 
       button.button:active {
-        background-color: red;
+        background-color: red
       }
 
       .buttonWater {
-        background-color: #000000;
+        background-color: #000;
         border: none;
         border-radius: 15px;
-        color: white;
+        color: #fff;
         padding: 10px 10px;
         text-decoration: none;
         font-size: 20px;
         margin: 2px;
         cursor: default;
-        font: bold 18pt Arial, Helvetica, sans-serif;
+        font: bold 18pt Arial, Helvetica, sans-serif
       }
 
       .hidden {
         visibility: hidden;
-        display: none;
+        display: none
       }
 
       body {
         background-color: #191970;
         font-size: 100%;
-        color: #FFFFFF;
+        color: #fff
       }
 
       #main {
         display: table;
         margin: auto;
-        padding: 30px 30px 30px 30px;
+        padding: 30px 30px 30px 30px
       }
 
       #content {
-        border: 2px solid blue;
+        border: 2px solid #00f;
         border-radius: 15px;
-        padding: 10px 10px 10px 10px;
+        padding: 10px 10px 10px 10px
       }
 
       h3 {
         text-align: center;
         font-size: 120%;
-        margin: 10px 10px 10px 10px;
+        margin: 10px 10px 10px 10px
       }
 
       h5 {
         text-align: center;
         font-size: 100%;
-        margin: 1px 0px 0px 0px;
+        margin: 1px 0 0 0
       }
 
       .header-logo {
-        margin: 10px 0px 0px 10px;
+        margin: 10px 0 0 10px;
         text-align: center;
-        background-color: lightgrey;
+        background-color: #d3d3d3;
         position: absolute;
-        top: 10%;
-        left: 15%;
-        transform: translate(-50%, -50%);
+        top: 45px;
+        left: 93px;
+        transform: translate(-50%, -50%)
       }
 
       #time_P {
-        margin: 10px 0px 15px 0px;
+        margin: 10px 0 15px 0
       }
 
       blc_line {
-        display: inline-block;
+        display: inline-block
       }
 
       @media,
@@ -120,21 +119,21 @@ const char MAIN_page[] PROGMEM = R"=====(
         blc {
           display: inline;
           margin-right: 10px;
-          text-align: center;
+          text-align: center
         }
 
         blc2 {
           display: inline;
           margin-right: 10px;
           line-height: 10px;
-          text-align: center;
+          text-align: center
         }
 
         blc3 {
           display: inline;
           margin-left: 10px;
           line-height: 10px;
-          text-align: center;
+          text-align: center
         }
       }
     </style>
@@ -143,11 +142,42 @@ const char MAIN_page[] PROGMEM = R"=====(
     <div class="header-logo">
       <img align="left" alt="IPPortalegre" height="93" data-sticky-height="53" data-sticky-top="33" src="https://www.ipportalegre.pt/static/ippimages/LogoNovoPolitecnico.png">
     </div>
-    <div id='main'>
+    <div id="main">
+      <br>
+      <br>
+      <br>
       <h2>Intelligent Distiller</h2>
       <hr>
     </div>
     <div class="card">
+      <table style="width:100%">
+        <tr>
+          <th>
+            <h5>Wifi SSID:</h5>
+          </th>
+          <th>
+            <h5>Wifi Quality:</h5>
+          </th>
+          <!--
+          <th><h5>Wifi TX Power:</h5></th><th><h5>Wifi IP:</h5></th>
+          -->
+        </tr>
+        <tr>
+          <td>
+            <h5>
+              <span id="wifiSSID">0</span>
+            </h5>
+          </td>
+          <td>
+            <h5>
+              <span id="wifiQuality">0</span>
+            </h5>
+          </td>
+          <!--
+          <td><h5><span id="wifiTX">0</span> dBm
+            </h5></td><td><h5><span id="wifiIP">0</span></h5></td>
+          -->
+      </table>
       <div id="WaterLVL">
         <hr>
         <br>
@@ -158,16 +188,13 @@ const char MAIN_page[] PROGMEM = R"=====(
         <br>
         <hr>
       </div>
-      <h3>
-        <span id="timerbuttons"></span>
-      </h3>
       <br>
       <button id="ButtonStartTimer" class="button" onclick="startTimer()">Start</button>
       <button id="ButtonStopTimer" class="button" onclick="stopTimer()">Stop</button>
       <button id="ButtonResetTimer" class="button" onclick="resetTimer()">Reset</button>
       <br>
       <h3>
-        <blc_line id='content'>Timer: <span id="timer">0</span>
+        <blc_line id="content">Timer: <span id="timer">0</span>
         </blc_line>
       </h3>
       <br>
@@ -214,39 +241,279 @@ const char MAIN_page[] PROGMEM = R"=====(
         <h5>Water Alarm: <span id="waterAlarm">0</span>
         </h5>
       </div>
+      <h5>
+        <span id="timerbuttons"></span>
+      </h5>
     </div>
     <script>
+      function getTimerData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timer").innerHTML = this.responseText)
+        }, t.open("GET", "readTimer", !0), t.send()
+      }
+
+      function startTimer() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "timerStart", !0), t.send()
+      }
+
+      function stopTimer() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "timerStop", !0), t.send()
+      }
+
+      function resetTimer() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "timerReset", !0), t.send()
+      }
+
+      function add1s() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "add1s", !0), t.send()
+      }
+
+      function add5s() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "add5s", !0), t.send()
+      }
+
+      function add10s() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "add10s", !0), t.send()
+      }
+
+      function add1m() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "add1m", !0), t.send()
+      }
+
+      function add5m() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "add5m", !0), t.send()
+      }
+
+      function add10m() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "add10m", !0), t.send()
+      }
+
+      function rem1s() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "rem1s", !0), t.send()
+      }
+
+      function rem5s() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "rem5s", !0), t.send()
+      }
+
+      function rem10s() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "rem10s", !0), t.send()
+      }
+
+      function rem1m() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "rem1m", !0), t.send()
+      }
+
+      function rem5m() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "rem5m", !0), t.send()
+      }
+
+      function rem10m() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "rem10m", !0), t.send()
+      }
+
+      function toggleDumpWater() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "toggleDumpWater", !0), t.send()
+      }
+
+      function toggleResistor() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "toggleResistor", !0), t.send()
+      }
+
+      function toggleAutoMode() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "toggleAuto", !0), t.send()
+      }
+
+      function togglePump() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "togglePump", !0), t.send()
+      }
+
+      function toggleWaterIn() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
+        }, t.open("GET", "toggleWaterIn", !0), t.send()
+      }
+
+      function getAutoData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("autoMode").innerHTML = this.responseText)
+        }, t.open("GET", "readAuto", !0), t.send()
+      }
+
+      function getResistorData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("resistor").innerHTML = this.responseText)
+        }, t.open("GET", "readResistor", !0), t.send()
+      }
+
+      function getDumpWaterData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("dumpWater").innerHTML = this.responseText)
+        }, t.open("GET", "readDumpWater", !0), t.send()
+      }
+
+      function getWaterInData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("waterIn").innerHTML = this.responseText)
+        }, t.open("GET", "readWaterIn", !0), t.send()
+      }
+
+      function getPumpData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("pump").innerHTML = this.responseText)
+        }, t.open("GET", "readPump", !0), t.send()
+      }
+
+      function getWaterMinData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("waterMin").innerHTML = this.responseText)
+        }, t.open("GET", "readWaterMin", !0), t.send()
+      }
+
+      function getWaterMaxData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("waterMax").innerHTML = this.responseText)
+        }, t.open("GET", "readWaterMax", !0), t.send()
+      }
+
+      function getWaterAlarmData() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("waterAlarm").innerHTML = this.responseText)
+        }, t.open("GET", "readWaterAlarm", !0), t.send()
+      }
+
+      function readWifiQuality() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("wifiQuality").innerHTML = this.responseText)
+        }, t.open("GET", "readWifiQuality", !0), t.send()
+      }
+
+      function readWifiSSID() {
+        var t = new XMLHttpRequest;
+        t.onreadystatechange = function() {
+          4 == this.readyState && 200 == this.status && (document.getElementById("wifiSSID").innerHTML = this.responseText)
+        }, t.open("GET", "readWifiSSID", !0), t.send()
+      }
+      /*
+            function readWifiTX() {
+              var t = new XMLHttpRequest;
+              t.onreadystatechange = function() {
+                4 == this.readyState && 200 == this.status && (document.getElementById("wifiTX").innerHTML = this.responseText)
+              }, t.open("GET", "readWifiTX", !0), t.send()
+            }
+
+            function readIP() {
+              var t = new XMLHttpRequest;
+              t.onreadystatechange = function() {
+                4 == this.readyState && 200 == this.status && (document.getElementById("IP").innerHTML = this.responseText)
+              }, t.open("GET", "readWifiIP", !0), t.send()
+            }
+            */
+      setInterval(function() {
+        readWifiSSID();
+        readWifiQuality();
+        //readWifiTX();
+        //readWifiIP();
+      }, 5000);
       setInterval(function() {
         getTimerData();
         getAutoData();
         if (document.getElementById("autoMode").innerHTML == "1") {
-          document.getElementById("ButtonToggleAuto").style.border = "4px solid #00ff00";
+          document.getElementById("ButtonToggleAuto").style.border = "5px solid #00ff00";
         } else {
-          document.getElementById("ButtonToggleAuto").style.border = "4px solid #000000";
+          document.getElementById("ButtonToggleAuto").style.border = "5px solid #000000";
         }
         getResistorData();
         if (document.getElementById("resistor").innerHTML == "1") {
-          document.getElementById("ButtonToggleResistor").style.border = "4px solid #00ff00";
+          document.getElementById("ButtonToggleResistor").style.border = "5px solid #00ff00";
         } else {
-          document.getElementById("ButtonToggleResistor").style.border = "4px solid #000000";
+          document.getElementById("ButtonToggleResistor").style.border = "5px solid #000000";
         }
         getPumpData();
         if (document.getElementById("pump").innerHTML == "1") {
-          document.getElementById("ButtonTogglePump").style.border = "4px solid #00ff00";
+          document.getElementById("ButtonTogglePump").style.border = "5px solid #00ff00";
         } else {
-          document.getElementById("ButtonTogglePump").style.border = "4px solid #000000";
+          document.getElementById("ButtonTogglePump").style.border = "5px solid #000000";
         }
         getWaterInData();
         if (document.getElementById("waterIn").innerHTML == "1") {
-          document.getElementById("ButtonToggleWaterIn").style.border = "4px solid #00ff00";
+          document.getElementById("ButtonToggleWaterIn").style.border = "5px solid #00ff00";
         } else {
-          document.getElementById("ButtonToggleWaterIn").style.border = "4px solid #000000";
+          document.getElementById("ButtonToggleWaterIn").style.border = "5px solid #000000";
         }
         getDumpWaterData();
         if (document.getElementById("dumpWater").innerHTML == "1") {
-          document.getElementById("ButtonToggleDumpWater").style.border = "4px solid #00ff00";
+          document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #00ff00";
         } else {
-          document.getElementById("ButtonToggleDumpWater").style.border = "4px solid #000000";
+          document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #000000";
         }
         getWaterMaxData();
         if (document.getElementById("waterMax").innerHTML == "1") {
@@ -267,325 +534,6 @@ const char MAIN_page[] PROGMEM = R"=====(
           document.getElementById("ButtonWaterAlarm").style.backgroundColor = "grey";
         }
       }, 1000); //1000 mSeconds update rate
-      
-      function getTimerData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timer").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readTimer", true);
-        xhttp.send();
-      }
-
-      function startTimer() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "timerStart", true);
-        xhttp.send();
-      }
-
-      function stopTimer() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "timerStop", true);
-        xhttp.send();
-      }
-
-      function resetTimer() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "timerReset", true);
-        xhttp.send();
-      }
-
-      function add1s() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "add1s", true);
-        xhttp.send();
-      }
-
-      function add5s() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "add5s", true);
-        xhttp.send();
-      }
-
-      function add10s() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "add10s", true);
-        xhttp.send();
-      }
-
-      function add1m() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "add1m", true);
-        xhttp.send();
-      }
-
-      function add5m() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "add5m", true);
-        xhttp.send();
-      }
-
-      function add10m() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "add10m", true);
-        xhttp.send();
-      }
-
-      function rem1s() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "rem1s", true);
-        xhttp.send();
-      }
-
-      function rem5s() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "rem5s", true);
-        xhttp.send();
-      }
-
-      function rem10s() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "rem10s", true);
-        xhttp.send();
-      }
-
-      function rem1m() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "rem1m", true);
-        xhttp.send();
-      }
-
-      function rem5m() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "rem5m", true);
-        xhttp.send();
-      }
-
-      function rem10m() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timerbuttons").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "rem10m", true);
-        xhttp.send();
-      }
-
-      function toggleDumpWater() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("toggleDumpWater").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "toggleDumpWater", true);
-        xhttp.send();
-      }
-
-      function toggleResistor() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("toggleResistor").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "toggleResistor", true);
-        xhttp.send();
-      }
-
-      function toggleAutoMode() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("toggleAuto").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "toggleAuto", true);
-        xhttp.send();
-      }
-
-      function togglePump() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("togglePump").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "togglePump", true);
-        xhttp.send();
-      }
-
-      function toggleWaterIn() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("toggleWaterIn").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "toggleWaterIn", true);
-        xhttp.send();
-      }
-
-      function getAutoData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("autoMode").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readAuto", true);
-        xhttp.send();
-      }
-
-      function getResistorData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("resistor").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readResistor", true);
-        xhttp.send();
-      }
-
-      function getDumpWaterData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("dumpWater").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readDumpWater", true);
-        xhttp.send();
-      }
-
-      function getWaterInData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterIn").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readWaterIn", true);
-        xhttp.send();
-      }
-
-      function getPumpData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("pump").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readPump", true);
-        xhttp.send();
-      }
-
-      function getWaterMinData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterMin").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readWaterMin", true);
-        xhttp.send();
-      }
-
-      function getWaterMaxData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterMax").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readWaterMax", true);
-        xhttp.send();
-      }
-
-      function getWaterAlarmData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterAlarm").innerHTML = this.responseText;
-          }
-        };
-        xhttp.open("GET", "readWaterAlarm", true);
-        xhttp.send();
-      }
     </script>
   </body>
 </html>

@@ -2711,7 +2711,7 @@ void WiFiManager::setSaveConnect(bool connect) {
  */
 void WiFiManager::setDebugOutput(boolean debug) {
   _debug = debug;
-  if(_debug && _debugLevel == WM_DEBUG_DEV) debugPlatformInfo();
+  if(_debug && _debugLevel == WM_DEBUG_MAX) debugPlatformInfo();
   if(_debug && _debugLevel >= WM_DEBUG_NOTIFY)DEBUG_WM((__FlashStringHelper *)WM_VERSION_STR," D:"+String(_debugLevel));
 }
 

@@ -2,12 +2,12 @@
 
 void destiler()
 {
-    static unsigned long previousTimer = 0;
-    unsigned long currentTimer = millis();
     static bool IDDLE_FLAG = OFF;
 
     if (DEBUGlog) // Print debug information
     {
+        static unsigned long previousTimer = 0;
+        unsigned long currentTimer = millis();
         if (millis() - previousTimer > 5000)
         {
             // digitalWrite(PIN_IND_ALARM, OFF);
@@ -38,7 +38,7 @@ void destiler()
             sPrintStr("TxPower: ");
             sPrintNbr(WiFi.getTxPower());
             sPrintLnStr(" dBm");
-            wifiQuality(WiFi.RSSI());
+            sPrintLnStr(wifiQuality());
             sPrintStr("IP address: ");
             Serial.println(WiFi.localIP());
             sPrintStr("timer ");
@@ -50,9 +50,17 @@ void destiler()
         }
     }
 
+    waterManagement();  // Water Management
+    indicatorsManagement(); // Indicators Management
+    modeManagement();   // Mode Management
+
+    if (!getAutoMode())
+        setTimer(OFF); // Stop Timer if AutoMode is OFF
+
     /************************************************************************/
     /* WORKING BLOCK                                                        */
     /************************************************************************/
+
     if (!getManualMode()) // If manual mode is off
     {
         if (getAutoMode() && timerStatus()) // If auto mode is on
@@ -127,57 +135,5 @@ void destiler()
                 IDDLE_FLAG = ON;
             }
         }
-    }
-
-    if (!getAutoMode())
-        setTimer(OFF); // Stop Timer if AutoMode is OFF
-
-    ////////////////////////////////////////////////////////////////////////
-    if (!getManualMode())
-    {
-        toggleAutoMode();
-    }
-    else
-    {
-        setAutoMode(OFF);
-    }
-
-    /************************************************************************/
-    /* INDICATORS BLOCK                                                     */
-    /************************************************************************/
-    if (getWaterMax())
-    {
-        setIndMax(ON);
-    }
-    else
-    {
-        setIndMax(OFF);
-    }
-
-    if (getWaterMin())
-    {
-        setIndMin(ON);
-    }
-    else
-    {
-        setIndMin(OFF);
-    }
-
-    if (getWaterAlarm())
-    {
-        setIndAlarm(ON);
-    }
-    else
-    {
-        setIndAlarm(OFF);
-    }
-
-    if (getManualMode())
-    {
-        setIndMan(ON);
-    }
-    else
-    {
-        setIndMan(OFF);
     }
 }

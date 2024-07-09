@@ -3,52 +3,54 @@
 
 char WIFI_SSID[eepromTextVariableSize] = "aaa";
 char WIFI_PASSWORD[eepromTextVariableSize] = "aaa";
-//AsyncWebServer server(80);
+// AsyncWebServer server(80);
 
 void initWIFI()
 {
   /* run next line <saveSettingsToEEPPROM> on the first running     */
   /* or every time you want to save the default settings to eeprom  */
-  //saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD); 
+  // saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
 
   readSettingsFromEEPROM(WIFI_SSID, WIFI_PASSWORD); // read the SSID and Passsword from the EEPROM
 
   // WiFiManager, Local intialization. Once its business is done, there is no need to keep it around
-  WiFiManager wm;
+  WiFiManager wifiManager;
 
-  wm.setClass("invert");          //dark theme
-  wm.setConfigPortalTimeout(60);  //timeout to web server
-  wm.setConnectTimeout(20);       //timeout to connect
+  wifiManager.setClass("invert");         // dark theme
+  wifiManager.setConfigPortalTimeout(60); // timeout to web server
+  wifiManager.setConnectTimeout(20);      // timeout to connect
+  //wifiManager.setSTAStaticIPConfig(IPAddress(192,168,100,100), IPAddress(192,168,100,1), IPAddress(255,255,255,0)); // set static IP address for the ESP  
+  wifiManager.setDebugOutput(true);       // set to true to see debug output
 
-  //Create AP 
+  // Create AP
   bool res;
-  res = wm.autoConnect("DestilerAP");
+  res = wifiManager.autoConnect("DestilerAP");
 
   if (!res)
   {
     Serial.println("Failed to connect");
 
     // convert string to char ssid and password:
-    char *WIFI_SSID = new char[wm.getWiFiSSID().length() + 1];
-    strcpy(WIFI_SSID, wm.getWiFiSSID().c_str());
-    char *WIFI_PASSWORD = new char[wm.getWiFiPass().length() + 1];
-    strcpy(WIFI_PASSWORD, wm.getWiFiPass().c_str());
+    char *WIFI_SSID = new char[wifiManager.getWiFiSSID().length() + 1];
+    strcpy(WIFI_SSID, wifiManager.getWiFiSSID().c_str());
+    char *WIFI_PASSWORD = new char[wifiManager.getWiFiPass().length() + 1];
+    strcpy(WIFI_PASSWORD, wifiManager.getWiFiPass().c_str());
 
     saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
-    //ESP.restart();
+    // ESP.restart();
     delete[] WIFI_SSID;
     delete[] WIFI_PASSWORD;
   }
   else
   {
     // connected to wifi
-    Serial.print("Connected to: ");
+    Serial.print("====Connected to: ");
     Serial.println(WiFi.SSID());
-    Serial.print("TxPower: ");
+    Serial.print("====TxPower: ");
     Serial.print(WiFi.getTxPower());
     Serial.println(" dBm");
-    wifiQuality(WiFi.RSSI());
-    Serial.print("IP address: ");
+    Serial.println(wifiQuality());
+    Serial.print("====IP address: ");
     Serial.println(WiFi.localIP());
   }
 }
@@ -68,13 +70,9 @@ void stopWifi()
 }
 
 // print wifi connection quality
-void wifiQuality(int rssi)
+String wifiQuality()
 {
-  sPrintStr("RSSI: ");
-  sPrintNbr(rssi);
-  sPrintStr(" dBm");
-
-  rssi = -rssi;
+  int rssi = -WiFi.RSSI();
   int WiFiperct;
   if (rssi < 27)
   {
@@ -108,8 +106,5 @@ void wifiQuality(int rssi)
   {
     WiFiperct = 0;
   }
-
-  sPrintStr(" (");
-  sPrintNbr(WiFiperct);
-  sPrintLnStr(" %)");
+  return String("RSSI: " + String(-rssi) + " dBm" +" (" + WiFiperct + " %)");
 }
