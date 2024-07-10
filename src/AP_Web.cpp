@@ -20,6 +20,21 @@ void handleTimer() {
   server.send(200, "text/plain", timer);        // Send response to client
 }
 
+void handleHour() {  
+  String hour = String(getTimerHour());  // Read timer
+  server.send(200, "text/plain", hour);        // Send response to client
+}
+
+void handleMinute() {  
+  String minute = String(getTimerMinute());  // Read timer
+  server.send(200, "text/plain", minute);        // Send response to client
+}
+
+void handleSecound() {  
+  String secound = String(getTimerSecound());  // Read timer
+  server.send(200, "text/plain", secound);        // Send response to client
+}
+
 //************************************************************************************************
 // Handlers for Wifi Quality, SSID, TX and IP
 //************************************************************************************************
@@ -207,6 +222,9 @@ void setupCalls() {
   server.on("/", handleRoot);                             //Which routine to handle at root location. This is display page
   ///////
   server.on("/readTimer", handleTimer);                   // Call handleTimer() function
+  server.on("/readHour", handleHour);                     // Call handleHour() function
+  server.on("/readMinute", handleMinute);                 // Call handleMinute() function
+  server.on("/readSecound", handleSecound);               // Call handleSecound() function
   ///////
   server.on("/readWifiQuality", handleWifiQuality);       // Call handleWifiQuality() function
   server.on("/readWifiSSID", handleWifiSSID);             // Call handleWifiSSID() function

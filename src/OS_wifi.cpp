@@ -3,6 +3,7 @@
 
 char WIFI_SSID[eepromTextVariableSize] = "aaa";
 char WIFI_PASSWORD[eepromTextVariableSize] = "aaa";
+
 // AsyncWebServer server(80);
 
 void initWIFI()
@@ -19,8 +20,10 @@ void initWIFI()
   wifiManager.setClass("invert");         // dark theme
   wifiManager.setConfigPortalTimeout(60); // timeout to web server
   wifiManager.setConnectTimeout(20);      // timeout to connect
-  //wifiManager.setSTAStaticIPConfig(IPAddress(192,168,100,100), IPAddress(192,168,100,1), IPAddress(255,255,255,0)); // set static IP address for the ESP  
-  wifiManager.setDebugOutput(true);       // set to true to see debug output
+  // wifiManager.setSTAStaticIPConfig(IPAddress(192,168,100,100), IPAddress(192,168,100,1), IPAddress(255,255,255,0)); // set static IP address for the ESP
+  wifiManager.setDebugOutput(true); // set to true to see debug output
+  wifiManager.setHostname("ipp-destiler");
+  WiFi.setHostname("ipp-destiler");
 
   // Create AP
   bool res;
@@ -52,6 +55,9 @@ void initWIFI()
     Serial.println(wifiQuality());
     Serial.print("====IP address: ");
     Serial.println(WiFi.localIP());
+    Serial.println("====Hostname: " + String(WiFi.getHostname()));
+    Serial.println("====wmHostname: " + wifiManager.getWiFiHostname());
+
   }
 }
 /*
@@ -106,5 +112,5 @@ String wifiQuality()
   {
     WiFiperct = 0;
   }
-  return String("RSSI: " + String(-rssi) + " dBm" +" (" + WiFiperct + " %)");
+  return String("RSSI: " + String(-rssi) + " dBm" + " (" + WiFiperct + " %)");
 }
