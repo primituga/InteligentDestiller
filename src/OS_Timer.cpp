@@ -5,7 +5,7 @@
 // Timer Functions
 //****************************************************************************
 
-bool flagTimer = OFF; // flag to timer status
+bool flagTimerStatus = OFF; // flag to timer status
 static unsigned long previousTimer = 0;
 
 // function to control the timer in the web page
@@ -84,7 +84,7 @@ long webTimer(String op, int16_t amount)
 	if (currentTimer - previousTimer >= 1000)
 	{
 		previousTimer = currentTimer;
-		if (flagTimer == ON)
+		if (flagTimerStatus == ON)
 		{
 			rem1s();
 		}
@@ -99,9 +99,9 @@ long webTimer(String op, int16_t amount)
 }
 
 // function to return timer status
-bool timerStatus()
+bool getTimerStatus()
 {
-	if (flagTimer == ON)
+	if (flagTimerStatus == ON)
 		return ON;
 	else
 		return OFF;
@@ -129,9 +129,9 @@ int getTimerHour()
 void setTimer(bool stat)
 {
 	if (stat == ON)
-		flagTimer = ON;
+		flagTimerStatus = ON;
 	else
-		flagTimer = OFF;
+		flagTimerStatus = OFF;
 }
 
 void add1s()

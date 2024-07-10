@@ -1,6 +1,7 @@
 
-This is a project that uses a analogic destiller machine, that machine got all old parts removed and got installed one 
-ESP32 that controlls all its functions, it has also one web server built-in to controll all the machine.
+This is a project that uses a old analogic destiller machine, that machine got all old parts removed and got installed one 
+ESP32 that controlls all its functions, it have also one web server built-in to controll all the machine. 
+The machine have a water pump, a heater, a valve to control the water flow to cool the destiller coil
 
 Libs:
 #include <stdint.h>
@@ -12,3 +13,14 @@ Libs:
 
 Addicional board manager URL:
 https://dl.espressif.com/dl/package_esp32_index.json,https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+
+Board: ESP32 Dev Module  (ESP32-WROOM-32) 
+ESP32 Dev Module (38 pins) 
+Flash Frequency: 80MHz
+Flash Mode: QIO
+Upload Speed: 921600
+CPU Frequency: 240MHz (WiFi/BT)
+Flash Size: 4MB (32Mb)
+Partition Scheme: Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Core Debug Level: None
+PSRAM: Disabled

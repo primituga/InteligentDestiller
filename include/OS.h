@@ -10,48 +10,44 @@
 // Libraries
 //********************************************************************************
 
-// #Arduino Libraries
+// Arduino Libraries
 #include <stdint.h>
 
-// #Wifi Libraries
-//#include <WiFi.h>
+// Wifi Libraries
 #include "WiFiManager.h"
-// #include "WiFiUdp.h"
 #include "WiFi.h"
-// #include "NTPClient.h"
 
-// #EEPROM Libraries
+// EEPROM Libraries
 #include "EEPROM.h"
 
-// #Async Libraries
-#include <AsyncTCP.h>
-#include <ESPAsyncWebServer.h>
+// Async Libraries
+#include "AsyncTCP.h"
+#include "ESPAsyncWebServer.h"
 
 //********************************************************************************
 // Definitions
 //********************************************************************************
 
-// EEPROM Definitions
-#define accessPointLed 2
+// EEPROM Definitions 
 #define eepromTextVariableSize 33   // the max size of the ssid, password etc. 32+null terminated
-#define eepromBufferSize 200
+#define eepromBufferSize 200        // the size of the eeprom buffer
 
 // Debug Definitions
-#define DEBUG 1
-#define DEBUGlog 0
+#define DEBUG 1                     // Debug mode 
+#define DEBUGlog 0                  // Debug log mode 
 
 //********************************************************************************
 // I/O Map Header
 //********************************************************************************
 
-// INPUTS
+// Input Pins Definitions
 #define PIN_SW_MAN 26               // Interruptor  de modo manual
 #define PIN_SMIN 27                 // Sensor de nivel agua minimo
 #define PIN_SMAX 14                 // Sensor de nivel agua maximo
 #define PIN_SW_AUTO 32              // Botão  de modo auto
 #define PIN_SALARM 25               // Botão  de modo alarme
 
-// OUTPUTS
+// Output Pins Definitions 
 #define PIN_RAQ 23                  // Resistencia aquecimento
 #define PIN_BMB 22                  // Bomba agua
 #define PIN_VALV_WATER_OUT 21       // Valvula descarga vapor
@@ -62,6 +58,7 @@
 #define PIN_IND_AUTO 15             // Indicador luminoso modo auto
 #define PIN_IND_MAN 33              // Indicador luminoso modo manual
 
+// ON/OFF Definitions
 #define ON HIGH // Define ON as HIGH
 #define OFF LOW // Define OFF as LOW
 
@@ -132,13 +129,13 @@ byte getStatusFromEeprom();                             // Get status from EEPRO
 // WIFI Functions calls
 void initWIFI();                            // Inicia o wifi
 void stopWifi();                            // Desliga o wifi
-String wifiQuality();               // Retorna a qualidade do wifi
+String wifiQuality();                       // Retorna a qualidade do wifi 
 
 //********************************************************************************
 // TIMERS
 //********************************************************************************
 
-// Defining timers
+// Defining timers for the alarm indicator blinking
 #define ALARM_TIME_ON 600
 #define ALARM_TIME_OFF 200
 
@@ -147,7 +144,7 @@ long webTimer(String op, int16_t amount);   // Timer for web operations
 int getTimerSecound();                      // Get timer secound
 int getTimerMinute();                       // Get timer minute
 int getTimerHour();                         // Get timer hour
-bool timerStatus();                         // Get timer status
+bool getTimerStatus();                      // Get timer status
 void add1s();                               // Add 1 secound to timer
 void add5s();                               // Add 5 secounds to timer
 void add10s();                              // Add 10 secounds to timer

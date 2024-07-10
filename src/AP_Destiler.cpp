@@ -63,7 +63,7 @@ void destiler()
 
     if (!getManualMode()) // If manual mode is off
     {
-        if (getAutoMode() && timerStatus()) // If auto mode is on
+        if (getAutoMode() && getTimerStatus()) // If auto mode is on
         {
             if (getWaterMax()) // If water level is max
             {
