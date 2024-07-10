@@ -272,6 +272,13 @@ const char MAIN_page[] PROGMEM = R"=====(
       </div>
     </div>
     <script>
+/*************************************************************************/
+/*  Webpage Javascript                                                   */
+/*************************************************************************/
+
+//***********************************************************************
+//  show/hide IOsDiv when IOsButton is clicked                          *
+//***********************************************************************
       var button = document.getElementById('IOsButton');
       button.onclick = function() {
         var div = document.getElementById('IOsDiv');
@@ -281,7 +288,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           div.style.display = 'none';
         }
       };
-
+//***********************************************************************
+// Get timer data                                                       *
+//***********************************************************************
       function getTimerData() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -309,7 +318,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           4 == this.readyState && 200 == this.status && (document.getElementById("secound").innerHTML = this.responseText)
         }, t.open("GET", "readSecound", !0), t.send()
       }
-
+//***********************************************************************
+// Get for Start/Stop/Reset                                             *
+//***********************************************************************
       function startTimer() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -330,7 +341,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
         }, t.open("GET", "timerReset", !0), t.send()
       }
-
+//***********************************************************************
+// Get for Add time buttons                                             *
+//***********************************************************************
       function add1s() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -372,7 +385,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
         }, t.open("GET", "add10m", !0), t.send()
       }
-
+//***********************************************************************
+// Get for Remove time buttons                                          *
+//***********************************************************************
       function rem1s() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -414,7 +429,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           4 == this.readyState && 200 == this.status && (document.getElementById("timerbuttons").innerHTML = this.responseText)
         }, t.open("GET", "rem10m", !0), t.send()
       }
-
+//***********************************************************************
+// Get for toggable states                                              *
+//***********************************************************************
       function toggleDumpWater() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -456,7 +473,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           4 == this.readyState && 200 == this.status && (document.getElementById("autoMode").innerHTML = this.responseText)
         }, t.open("GET", "readAuto", !0), t.send()
       }
-
+//***********************************************************************
+// Get for I/Os                                                         *
+//***********************************************************************
       function getResistorData() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -505,7 +524,9 @@ const char MAIN_page[] PROGMEM = R"=====(
           4 == this.readyState && 200 == this.status && (document.getElementById("waterAlarm").innerHTML = this.responseText)
         }, t.open("GET", "readWaterAlarm", !0), t.send()
       }
-
+//***********************************************************************
+// Get for WiFi Data                                                    *
+//***********************************************************************
       function readWifiQuality() {
         var t = new XMLHttpRequest;
         t.onreadystatechange = function() {
@@ -534,18 +555,22 @@ const char MAIN_page[] PROGMEM = R"=====(
               }, t.open("GET", "readWifiIP", !0), t.send()
             }
             */
+// ********************************************************************************************************************************
+//                                                      Timers
+// ********************************************************************************************************************************
+/*************************************************************************/
+/* Timer for the wifi                                                     *
+/* ***********************************************************************/
       setInterval(function() {
         readWifiSSID();
         readWifiQuality();
         //readWifiTX();
         //readWifiIP();
       }, 5000);
+/*************************************************************************/
+/* Timer for EN/Disable buttons                                           *
+/* ***********************************************************************/
       setInterval(function() {
-        getTimerData();
-        getAutoData();
-        getTimerHour();
-        getTimerMin();
-        getTimerSec();
         if (document.getElementById("secound").innerHTML == "0" && document.getElementById("minute").innerHTML == "0" && document.getElementById("hour").innerHTML == "0") {
           document.getElementById("ButtonStartTimer").classList.remove("button");
           document.getElementById("ButtonStartTimer").classList.add("buttonDisabled");
@@ -598,57 +623,89 @@ const char MAIN_page[] PROGMEM = R"=====(
           document.getElementById("ButtonTogglePump").classList.add("button");
           document.getElementById("ButtonTogglePump").classList.remove("buttonDisabled");
         }
-        if (document.getElementById("autoMode").innerHTML == "1") {
-          document.getElementById("ButtonToggleAuto").style.border = "5px solid #00ff00";
+
+        if (document.getElementById("autoMode").innerHTML == "0") {
+          document.getElementById("ButtonStartTimer").classList.remove("button");
+          document.getElementById("ButtonStartTimer").classList.add("buttonDisabled");
+          document.getElementById("ButtonStopTimer").classList.remove("button");
+          document.getElementById("ButtonStopTimer").classList.add("buttonDisabled");
         } else {
-          document.getElementById("ButtonToggleAuto").style.border = "5px solid #000000";
+          document.getElementById("ButtonStartTimer").classList.add("button");
+          document.getElementById("ButtonStartTimer").classList.remove("buttonDisabled");
+          document.getElementById("ButtonStopTimer").classList.add("button");
+          document.getElementById("ButtonStopTimer").classList.remove("buttonDisabled");
         }
-        if (document.getElementById("autoMode").innerHTML == "1") {
-          document.getElementById("ButtonToggleAuto").style.border = "5px solid #00ff00";
-        } else {
-          document.getElementById("ButtonToggleAuto").style.border = "5px solid #000000";
-        }
+      }, 1000);
+/*************************************************************************/
+/* Timer to get data                                                      *
+/* ***********************************************************************/
+      setInterval(function() {
+        getTimerData();
+        getTimerHour();
+        getTimerMin();
+        getTimerSec();
+        getAutoData();
         getResistorData();
-        if (document.getElementById("resistor").innerHTML == "1") {
-          document.getElementById("ButtonToggleResistor").style.border = "5px solid #00ff00";
-        } else {
-          document.getElementById("ButtonToggleResistor").style.border = "5px solid #000000";
-        }
         getPumpData();
-        if (document.getElementById("pump").innerHTML == "1") {
-          document.getElementById("ButtonTogglePump").style.border = "5px solid #00ff00";
-        } else {
-          document.getElementById("ButtonTogglePump").style.border = "5px solid #000000";
-        }
         getWaterInData();
-        if (document.getElementById("waterIn").innerHTML == "1") {
-          document.getElementById("ButtonToggleWaterIn").style.border = "5px solid #00ff00";
-        } else {
-          document.getElementById("ButtonToggleWaterIn").style.border = "5px solid #000000";
-        }
         getDumpWaterData();
-        if (document.getElementById("dumpWater").innerHTML == "1") {
-          document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #00ff00";
-        } else {
-          document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #000000";
-        }
         getWaterMaxData();
+        getWaterMinData();
+        getWaterAlarmData();
+      }, 1000);
+/*************************************************************************/
+/* Timer to update water levels indicators                                *
+/* ***********************************************************************/
+      setInterval(function() {
         if (document.getElementById("waterMax").innerHTML == "1") {
           document.getElementById("ButtonWaterMax").style.backgroundColor = "green";
         } else {
           document.getElementById("ButtonWaterMax").style.backgroundColor = "grey";
         }
-        getWaterMinData();
         if (document.getElementById("waterMin").innerHTML == "1") {
           document.getElementById("ButtonWaterMin").style.backgroundColor = "orange";
         } else {
           document.getElementById("ButtonWaterMin").style.backgroundColor = "grey";
         }
-        getWaterAlarmData();
         if (document.getElementById("waterAlarm").innerHTML == "1") {
           document.getElementById("ButtonWaterAlarm").style.backgroundColor = "red";
         } else {
           document.getElementById("ButtonWaterAlarm").style.backgroundColor = "grey";
+        }
+      }, 1000);
+/*************************************************************************/
+/* Timer to update border buttons green or black                          *
+/* ***********************************************************************/
+      setInterval(function() {
+        if (document.getElementById("autoMode").innerHTML == "1") {
+          document.getElementById("ButtonToggleAuto").style.border = "5px solid #00ff00";
+        } else {
+          document.getElementById("ButtonToggleAuto").style.border = "5px solid #000000";
+        }
+        if (document.getElementById("autoMode").innerHTML == "1") {
+          document.getElementById("ButtonToggleAuto").style.border = "5px solid #00ff00";
+        } else {
+          document.getElementById("ButtonToggleAuto").style.border = "5px solid #000000";
+        }
+        if (document.getElementById("resistor").innerHTML == "1") {
+          document.getElementById("ButtonToggleResistor").style.border = "5px solid #00ff00";
+        } else {
+          document.getElementById("ButtonToggleResistor").style.border = "5px solid #000000";
+        }
+        if (document.getElementById("pump").innerHTML == "1") {
+          document.getElementById("ButtonTogglePump").style.border = "5px solid #00ff00";
+        } else {
+          document.getElementById("ButtonTogglePump").style.border = "5px solid #000000";
+        }
+        if (document.getElementById("waterIn").innerHTML == "1") {
+          document.getElementById("ButtonToggleWaterIn").style.border = "5px solid #00ff00";
+        } else {
+          document.getElementById("ButtonToggleWaterIn").style.border = "5px solid #000000";
+        }
+        if (document.getElementById("dumpWater").innerHTML == "1") {
+          document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #00ff00";
+        } else {
+          document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #000000";
         }
       }, 1000); //1000 mSeconds update rate
     </script>
