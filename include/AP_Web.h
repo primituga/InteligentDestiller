@@ -43,6 +43,7 @@ const char MAIN_page[] PROGMEM = R"=====(
 
       .buttonDisabled {
         disabled: true;
+        pointer-events: none;
         background-color: grey;
         cursor: not-allowed;
         border-radius: 15px;
