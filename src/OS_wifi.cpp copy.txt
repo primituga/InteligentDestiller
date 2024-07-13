@@ -1,0 +1,98 @@
+
+#include "OS.h"
+
+const char* wifi_network_ssid = "yourNetworkName";
+const char* wifi_network_password =  "yourNetworkPassword";
+ 
+const char *soft_ap_ssid = "Destiller-AP";
+const char *soft_ap_password = "Destiller-AP";
+ 
+void OnWiFiEvent(WiFiEvent_t event)
+{
+  switch (event) {
+ 
+    case SYSTEM_EVENT_STA_CONNECTED:
+      Serial.println("ESP32 Connected to WiFi Network");
+      break;
+    case SYSTEM_EVENT_AP_START:
+      Serial.println("ESP32 soft AP started");
+      break;
+    case SYSTEM_EVENT_AP_STACONNECTED:
+      Serial.println("Station connected to ESP32 soft AP");
+      break;
+    case SYSTEM_EVENT_AP_STADISCONNECTED:
+      Serial.println("Station disconnected from ESP32 soft AP");
+      break;
+    default: break;
+  }
+}
+ 
+ 
+void initWIFI() {
+ 
+  WiFi.onEvent(OnWiFiEvent);
+ 
+  WiFi.mode(WIFI_MODE_APSTA);
+ 
+  WiFi.softAP(soft_ap_ssid, soft_ap_password);
+  WiFi.begin("carmo2", "Segio19??.");
+
+
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.println("Connecting to WiFi..");
+}
+ 
+Serial.print("ESP32 IP as soft AP: ");
+Serial.println(WiFi.softAPIP());
+ 
+Serial.print("ESP32 IP on the WiFi network: ");
+Serial.println(WiFi.localIP());
+}
+
+// Disconnect wifi
+void stopWifi()
+{
+  WiFi.disconnect();
+}
+
+// print wifi connection quality
+String wifiQuality()
+{
+  int rssi = -WiFi.RSSI();
+  int WiFiperct;
+  if (rssi < 27)
+  {
+    WiFiperct = 100;
+  }
+  else if (rssi >= 27 && rssi < 33)
+  {
+    WiFiperct = 150 - (5 / 2.7) * rssi;
+  }
+  else if (rssi >= 33 && rssi < 36)
+  {
+    WiFiperct = 150 - (5 / 3) * rssi;
+  }
+  else if (rssi >= 36 && rssi < 40)
+  {
+    WiFiperct = 150 - (5 / 3.3) * rssi;
+  }
+  else if (rssi >= 40 && rssi < 80)
+  {
+    WiFiperct = 150 - (5 / 3.5) * rssi;
+  }
+  else if (rssi >= 80 && rssi < 90)
+  {
+    WiFiperct = 150 - (5 / 3.4) * rssi;
+  }
+  else if (rssi >= 90 && rssi < 99)
+  {
+    WiFiperct = 150 - (5 / 3.3) * rssi;
+  }
+  else
+  {
+    WiFiperct = 0;
+  }
+  return String("RSSI: " + String(-rssi) + " dBm" + " (" + WiFiperct + " %)");
+}

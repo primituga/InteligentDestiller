@@ -50,9 +50,9 @@ void destiler()
         }
     }
 
-    waterManagement();  // Water Management
+    waterManagement();      // Water Management
     indicatorsManagement(); // Indicators Management
-    modeManagement();   // Mode Management
+    modeManagement();       // Mode Management
 
     if (!getAutoMode())
         setTimer(OFF); // Stop Timer if AutoMode is OFF
@@ -134,6 +134,11 @@ void destiler()
                 workingIdle();
                 IDDLE_FLAG = ON;
             }
+        }
+        else
+        {
+            workingIdle();
+            IDDLE_FLAG = ON;
         }
     }
 }
