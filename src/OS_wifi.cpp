@@ -3,78 +3,112 @@
 
 char WIFI_SSID[eepromTextVariableSize] = "aaa";
 char WIFI_PASSWORD[eepromTextVariableSize] = "aaa";
-WiFiServer server(80);
+
+const char *soft_ap_ssid = "Destiller-AP";
+const char *soft_ap_password = "Destiller-AP";
+
+void OnWiFiEvent(WiFiEvent_t event)
+{
+  switch (event)
+  {
+
+  case SYSTEM_EVENT_STA_CONNECTED:
+    Serial.println("ESP32 Connected to WiFi Network");
+    break;
+  case SYSTEM_EVENT_AP_START:
+    Serial.println("ESP32 soft AP started");
+    break;
+  case SYSTEM_EVENT_AP_STACONNECTED:
+    Serial.println("Station connected to ESP32 soft AP");
+    break;
+  case SYSTEM_EVENT_AP_STADISCONNECTED:
+    Serial.println("Station disconnected from ESP32 soft AP");
+    break;
+  default:
+    break;
+  }
+}
+
+// AsyncWebServer server(80);
 
 void initWIFI()
 {
   /* run next line <saveSettingsToEEPPROM> on the first running     */
   /* or every time you want to save the default settings to eeprom  */
-  //saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD); 
+  // saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
 
   readSettingsFromEEPROM(WIFI_SSID, WIFI_PASSWORD); // read the SSID and Passsword from the EEPROM
 
   // WiFiManager, Local intialization. Once its business is done, there is no need to keep it around
-  WiFiManager wm;
+  WiFiManager wifiManager;
 
-  wm.setClass("invert");          //dark theme
-  wm.setConfigPortalTimeout(60);  //timeout to web server
-  wm.setConnectTimeout(20);       //timeout to connect
+  wifiManager.setClass("invert");         // dark theme
+  wifiManager.setConfigPortalTimeout(60); // timeout to web server
+  wifiManager.setConnectTimeout(20);      // timeout to connect
+  wifiManager.setDebugOutput(true);       // set to true to see debug output
+  wifiManager.setHostname("Destiler");    // set hostname
+  WiFi.setHostname("Destiler");           // set hostname
 
-  //Create AP 
+  // Create AP
   bool res;
-  res = wm.autoConnect("DestilerAP");
+  res = wifiManager.autoConnect("DestilerAP");
 
-  if (!res)
+  ///////////////////////////////////////////////////////////////////////////////////
+  WiFi.onEvent(OnWiFiEvent);  // Set event handler for WiFi events (connected, disconnected etc.)
+  WiFi.setAutoReconnect(true); // Enable auto reconnect
+// Set ESP32 to Station + Access Point mode (AP mode) to allow multiple connections to the ESP32 at the same time (up to 4 stations)
+  WiFi.mode(WIFI_MODE_APSTA); 
+
+  WiFi.softAP(soft_ap_ssid, soft_ap_password);  
+
+  // Set IP Address of the ESP32 Soft Access Point
+  WiFi.softAPConfig(IPAddress(192, 168, 100, 100), // AP IP
+                    IPAddress(192, 168, 100, 1),   // GW IP, which is the same
+                    IPAddress(255, 255, 255, 0));
+
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  ///////////////////////////////////////////////////////////////////////////////////
+
+  if (!res) // if not connected
   {
     Serial.println("Failed to connect");
 
     // convert string to char ssid and password:
-    char *WIFI_SSID = new char[wm.getWiFiSSID().length() + 1];
-    strcpy(WIFI_SSID, wm.getWiFiSSID().c_str());
-    char *WIFI_PASSWORD = new char[wm.getWiFiPass().length() + 1];
-    strcpy(WIFI_PASSWORD, wm.getWiFiPass().c_str());
+    char *WIFI_SSID = new char[wifiManager.getWiFiSSID().length() + 1]; 
+    strcpy(WIFI_SSID, wifiManager.getWiFiSSID().c_str()); 
+    char *WIFI_PASSWORD = new char[wifiManager.getWiFiPass().length() + 1];
+    strcpy(WIFI_PASSWORD, wifiManager.getWiFiPass().c_str());
 
     saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
-    //ESP.restart();
-    delete[] WIFI_SSID;
+    // ESP.restart();
+    // free memory
+    delete[] WIFI_SSID; 
     delete[] WIFI_PASSWORD;
   }
   else
   {
     // connected to wifi
-    Serial.print("Connected to: ");
+    Serial.print("====Connected to: ");
     Serial.println(WiFi.SSID());
-    Serial.print("TxPower: ");
+    Serial.print("====TxPower: ");
     Serial.print(WiFi.getTxPower());
     Serial.println(" dBm");
-    wifiQuality(WiFi.RSSI());
-    Serial.print("IP address: ");
+    Serial.println(wifiQuality());
+    Serial.println(" ");
+    Serial.println("Hostname: " + String(WiFi.getHostname()));
+    Serial.println("wmHostname: " + wifiManager.getWiFiHostname());
+    Serial.print("ESP32 IP as soft AP: ");
+    Serial.println(WiFi.softAPIP());
+    Serial.print("ESP32 IP on the WiFi network: ");
     Serial.println(WiFi.localIP());
-    server.begin();
   }
 }
 
-// Listen for incoming clients
-WiFiClient isClientAvailable()
-{
-  WiFiClient client = server.available();
-  return client;
-}
-
-// Disconnect wifi
-void stopWifi()
-{
-  WiFi.disconnect();
-}
-
 // print wifi connection quality
-void wifiQuality(int rssi)
+String wifiQuality()
 {
-  sPrintStr("RSSI: ");
-  sPrintNbr(rssi);
-  sPrintStr(" dBm");
-
-  rssi = -rssi;
+  int rssi = -WiFi.RSSI();
   int WiFiperct;
   if (rssi < 27)
   {
@@ -108,8 +142,5 @@ void wifiQuality(int rssi)
   {
     WiFiperct = 0;
   }
-
-  sPrintStr(" (");
-  sPrintNbr(WiFiperct);
-  sPrintLnStr(" %)");
+  return String("RSSI: " + String(-rssi) + " dBm" + " (" + WiFiperct + " %)");
 }

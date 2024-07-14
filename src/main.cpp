@@ -1,36 +1,51 @@
 #include "AP.h"
+#include <ESPmDNS.h>
 
+const char *host = "destiller";
+
+// setup to run on 1st cpu core
 void setup()
 {
-	initPinsInputs();
-	initPinsOutputs();
-	initSerial(); // Initiate serial link
-	initMultiCore();
+	initPinsInputs();  // Initiate all pins as inputs
+	initPinsOutputs(); // Initiate all pins as outputs
+	initSerial();	   // Initiate Serial communication
+	initMultiCore();   // Initiate MultiCore
+	initFS();		   // Initiate SPIFFS
 }
 
 // loop to run on 1st cpu core
-void loop(void)
+void loop(void) // Main loop
 {
-	destiler();
+	destiler(); // Destiler function to operate the machine
 }
 
 // loop to run on 2nd cpu core
 void loop2(void *pvParameters)
 {
-	//Created the 'FLAG_INIT_WIFI' to be able to operate the machine while 
-	//WIFI is init, this way, user can operate the machine manualy, no need 
-	//to wait for WIFI to init
-	static bool FLAG_INIT_WIFI = 0;
-	while (1)
+	// Created the 'FLAG_INIT_WIFI' to be able to operate the machine while
+	// WIFI is init, this way, user can operate the machine manualy, no need
+	// to wait for WIFI to init
+	while (1) // Main loop
 	{
-		if (FLAG_INIT_WIFI == 0)
+
+		if (WiFi.status() != WL_CONNECTED)
 		{
-			initWIFI();
-			FLAG_INIT_WIFI = 1;
+			sPrintLnStr("WIFI INIT....");
+			initWIFI(); // Initiate WIFI
+			if (!MDNS.begin(host))
+			{ // http://<hostname>.local
+				Serial.println("Error setting up MDNS responder!");
+				while (1)
+				{
+					delay(1000);
+				}
+			}
+			Serial.println("mDNS responder started");
+			setupCalls(); // Initiate calls
 		}
 		else
 		{
-			ProcessWebPage();
+			//ProcessWebPage(); // Process WebPage
 			webTimer("*", 0);
 		}
 	}

@@ -2,14 +2,15 @@
 
 void destiler()
 {
-    static unsigned long previousTimer = 0;
-    unsigned long currentTimer = millis();
+    static bool IDDLE_FLAG = OFF;
 
-    if (DEBUGlog)
+    if (DEBUGlog) // Print debug information
     {
+        static unsigned long previousTimer = 0;
+        unsigned long currentTimer = millis();
         if (millis() - previousTimer > 5000)
         {
-            digitalWrite(PIN_IND_ALARM, OFF);
+            // digitalWrite(PIN_IND_ALARM, OFF);
             previousTimer = millis();
             sPrintLnStr("  ");
             sPrintStr("getWaterMax ");
@@ -37,66 +38,107 @@ void destiler()
             sPrintStr("TxPower: ");
             sPrintNbr(WiFi.getTxPower());
             sPrintLnStr(" dBm");
-            wifiQuality(WiFi.RSSI());
+            sPrintLnStr(wifiQuality());
             sPrintStr("IP address: ");
             Serial.println(WiFi.localIP());
+            sPrintStr("timer ");
+            sPrintNbr(getTimerHour());
+            sPrintStr(":");
+            sPrintNbr(getTimerMinute());
+            sPrintStr(":");
+            sPrintLnNbr(getTimerSecound());
         }
     }
-    
-    ///////////////
-    if ((getWaterMax() || !getWaterMin() || !getWaterAlarm()) && getManualMode())
+
+    waterManagement();      // Water Management
+    indicatorsManagement(); // Indicators Management
+    modeManagement();       // Mode Management
+
+    if (!getAutoMode())
+        setTimer(OFF); // Stop Timer if AutoMode is OFF
+
+    /************************************************************************/
+    /* WORKING BLOCK                                                        */
+    /************************************************************************/
+
+    if (!getManualMode()) // If manual mode is off
     {
-        setIndMax(ON);
-        setResistor(ON);
-        setPump(OFF);
-        //setValveWaterIn(ON);
-        //setValveWaterOut(ON);
+        if (getAutoMode() && getTimerStatus()) // If auto mode is on
+        {
+            if (getWaterMax()) // If water level is max
+            {
+                workingMax(); // Working when water level is max
+                IDDLE_FLAG = OFF;
+            }
+            else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
+            {
+                workingMaxMin(); // Working within max and min water level
+                if (getWaterMin())
+                {
+                    workingMin(); // Working when water level is min
+                    IDDLE_FLAG = OFF;
+                }
+            }
+            else if (getWaterMin()) // If water level is min
+            {
+                workingMin();
+                IDDLE_FLAG = OFF;
+            }
+            else if (getWaterAlarm()) // If water level is alarm
+            {
+                workingAlarm();
+                IDDLE_FLAG = OFF;
+            }
+            else if (!IDDLE_FLAG)
+            {
+                workingIdle();
+                IDDLE_FLAG = ON;
+            }
+        }
+        else if (!IDDLE_FLAG)
+        {
+            workingIdle();
+            IDDLE_FLAG = ON;
+        }
     }
-    else
+    else // If manual mode is on
     {
-        setIndMax(OFF);
-    }
-    ///////////////
-    if (getWaterMin())
-    {
-        setIndMin(ON);
-        setPump(ON);
-        //setValveWaterIn(ON);
-        //setValveWaterOut(ON);
-    }
-    else
-    {
-        setIndMin(OFF);
-    }
-    ///////////////
-    if (getWaterAlarm())
-    {
-        setIndAlarm(ON);
-        setResistor(OFF);
-        setPump(ON);
-        //setValveWaterIn(OFF);
-        //setValveWaterOut(OFF);
-    }
-    else
-    {
-        setIndAlarm(OFF);
-    }
-    ///////////////
-    if (getManualMode())
-    {
-        setIndMan(ON);
-    }
-    else
-    {
-        setIndMan(OFF);
-    }
-    ///////////////
-    if (!getManualMode())
-    {
-        toggleAutoMode();
-    }
-    else
-    {
-        setAutoMode(OFF);
+        if (getManualMode())
+        {
+            if (getWaterMax())
+            {
+                workingMax();
+                IDDLE_FLAG = OFF;
+            }
+            else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
+            {
+                workingMaxMin();
+                if (getWaterMin())
+                {
+                    workingMin();
+                    IDDLE_FLAG = OFF;
+                }
+            }
+            else if (getWaterMin())
+            {
+                workingMin();
+                IDDLE_FLAG = OFF;
+            }
+            else if (getWaterAlarm())
+            {
+                workingAlarm();
+                IDDLE_FLAG = OFF;
+            }
+            else if (!IDDLE_FLAG)
+            {
+                workingIdle();
+                IDDLE_FLAG = ON;
+            }
+        }
+        else
+        {
+            workingIdle();
+            IDDLE_FLAG = ON;
+        }
     }
 }

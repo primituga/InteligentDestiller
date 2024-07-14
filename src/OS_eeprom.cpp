@@ -1,7 +1,7 @@
 #include "OS.h"
 
-//====================== EEPROM necessary functions ==============
 //================================================================
+//====================== EEPROM necessary functions ==============
 //================================================================
 
 void writeEEPROM(int startAdr, int length, char *writeString)
@@ -14,7 +14,7 @@ void writeEEPROM(int startAdr, int length, char *writeString)
     EEPROM.end();
 }
 
-//================================================================
+//========================================== readEEPROM
 void readEEPROM(int startAdr, int maxLength, char *dest)
 {
     EEPROM.begin(eepromBufferSize);
@@ -39,11 +39,12 @@ void readSettingsFromEEPROM(char *ssid_, char *pass_)
     readEEPROM(1 * eepromTextVariableSize, eepromTextVariableSize, ssid_);
     readEEPROM((2 * eepromTextVariableSize), eepromTextVariableSize, pass_);
 
-    if (DEBUG){
+    if (DEBUG)
+    {
         Serial.println("\n============ readSettingsFromEEPROM");
-        Serial.print("\n============ ssid=");
+        Serial.print("\n============ ssid= ");
         Serial.println(ssid_);
-        Serial.print("============ password=");
+        Serial.print("============ password= ");
         Serial.println(pass_);
     }
 }
@@ -56,7 +57,7 @@ void saveStatusToEeprom(byte value)
     EEPROM.commit();
     EEPROM.end();
 }
-//===================================================================
+//================================================================ getStatusFromEeprom
 byte getStatusFromEeprom()
 {
     EEPROM.begin(eepromBufferSize);
