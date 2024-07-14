@@ -11,7 +11,7 @@
 //********************************************************************************
 
 // Arduino Libraries
-#include <stdint.h>
+//#include <stdint.h>
 
 // Wifi Libraries
 #include "WiFiManager.h"
@@ -23,6 +23,10 @@
 // Async Libraries
 #include "AsyncTCP.h"
 #include "ESPAsyncWebServer.h"
+
+// LittleFS Libraries
+#include "LittleFS.h"
+#include "SPIFFS.h"
 
 //********************************************************************************
 // Definitions
@@ -71,6 +75,11 @@ void loop2(void *pvParameters);     // Main loop to run in core 1
 // Multicore
 //********************************************************************************
 void initMultiCore();
+
+//********************************************************************************
+// LittleFS
+//********************************************************************************
+void initFS();                      // Inicia o sistema de arquivos
 
 //********************************************************************************
 // I/O
@@ -128,7 +137,6 @@ byte getStatusFromEeprom();                             // Get status from EEPRO
 
 // WIFI Functions calls
 void initWIFI();                            // Inicia o wifi
-void stopWifi();                            // Desliga o wifi
 String wifiQuality();                       // Retorna a qualidade do wifi 
 
 //********************************************************************************

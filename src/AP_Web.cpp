@@ -1,275 +1,465 @@
 /*! \file AP_WEB.cpp */
 
-#include "AP.h"			// Definitions
+#include "AP.h"     // Definitions
 #include "AP_Web.h" // WebPage HTML content
 
-WebServer server(80); // Create a webserver object that listens for HTTP request on port 80
+AsyncWebServer server(80); // Create a webserver object that listens for HTTP request on port 80
 
-//********************************************************************************
-// This routine is executed when you open its IP in browser
-//********************************************************************************
-void handleRoot() {
-  String MAINPAGE = MAIN_page;                  //Read HTML contents
-  server.send(200, "text/html", MAINPAGE);      //Send web page
-}
+/****************************************************************************************
+ * Function Name: ProcessWebPage
+ * Description: Process WebPage
+ * Parameters: None
+ * Return Value: None
+ ****************************************************************************************/
+
+/////////////////////////////////////////////////////////////
 //********************************************************************************
 // Timer handlers
 //********************************************************************************
-void handleTimer() {  
-  String timer = String(getTimerHour()) + "h :" + String(getTimerMinute()) + "m :" + String(getTimerSecound())+ "s";  // Read timer
-  server.send(200, "text/plain", timer);        // Send response to client
+String handleTimer()
+{
+  String t = String(getTimerHour()) + "h :" + String(getTimerMinute()) + "m :" + String(getTimerSecound()) + "s"; // Read timer
+  return String(t);
 }
 
-void handleHour() {  
-  String hour = String(getTimerHour());  // Read timer
-  server.send(200, "text/plain", hour);        // Send response to client
+String handleHour()
+{
+  String hour = String(getTimerHour()); // Read timer
+  return String(hour);
 }
 
-void handleMinute() {  
-  String minute = String(getTimerMinute());  // Read timer
-  server.send(200, "text/plain", minute);        // Send response to client
+String handleMinute()
+{
+  String minute = String(getTimerMinute()); // Read timer
+  return String(minute);
 }
 
-void handleSecound() {  
-  String secound = String(getTimerSecound());  // Read timer
-  server.send(200, "text/plain", secound);        // Send response to client
+String handleSecound()
+{
+  String secound = String(getTimerSecound()); // Read timer
+  return String(secound);
 }
 
 //************************************************************************************************
 // Handlers for Wifi Quality, SSID, TX and IP
 //************************************************************************************************
-void handleWifiQuality() {
-  String _wifiQuality = wifiQuality(); 
-  server.send(200, "text/plain", _wifiQuality);
+String handleWifiQuality()
+{
+  String _wifiQuality = wifiQuality();
+  return String(_wifiQuality);
 }
 
-void handleWifiSSID() {
-  String _wifiSSID = WiFi.SSID(); 
-  server.send(200, "text/plain", _wifiSSID);
+String handleWifiSSID()
+{
+  String _wifiSSID = WiFi.SSID();
+  return String(_wifiSSID);
 }
 
-void handleWifiTX() {
-  String _wifiTX = String(WiFi.getTxPower() + " dBm"); 
-  server.send(200, "text/plain", _wifiTX);
+String handleWifiTX()
+{
+  String _wifiTX = String(WiFi.getTxPower() + " dBm");
+  return String(_wifiTX);
 }
 
-void handleWifiIP() {
-  String _wifiIP = String(WiFi.localIP().toString().c_str()); 
-  server.send(200, "text/plain", _wifiIP);
+String handleWifiIP()
+{
+  String _wifiIP = String(WiFi.localIP().toString().c_str());
+  return String(_wifiIP);
 }
 
 //********************************************************************************
 // Timer Add/Remove Time
 //********************************************************************************
-void handleAdd1s() {
-  add1s();                                      // Call add1s() function
-  server.send(200, "text/plain", "1 sec added"); // Send response to client
+String handleAdd1s()
+{
+  String t = "add1s";
+  add1s(); // Call add1s() function
+  return String(t);
 }
 
-void handleAdd5s() {
+String handleAdd5s()
+{
+  String t = "add15s";
   add5s();
-  server.send(200, "text/plain", "5 sec added"); // Send response to client
+  return String(t);
 }
 
-
-void handleAdd10s() {
+String handleAdd10s()
+{
+  String t = "add10s";
   add10s();
-  server.send(200, "text/plain", "10 sec added"); // Send response to client
+  return String(t);
 }
 
-void handleAdd1m() {
+String handleAdd1m()
+{
+  String t = "add1m";
   add1m();
-  server.send(200, "text/plain", "1 min added"); // Send response to client
+  return String(t);
 }
 
-void handleAdd5m() {
+String handleAdd5m()
+{
+  String t = "add5m";
   add5m();
-  server.send(200, "text/plain", "5 min added"); // Send response to client
+  return String(t);
 }
 
-void handlAadd10m() {
+String handlAadd10m()
+{
+  String t = "add10m";
   add10m();
-  server.send(200, "text/plain", "10 min added"); // Send response to client
+  return String(t);
 }
 
-void handleRem1s() {
+String handleRem1s()
+{
+  String t = "rem1s";
   rem1s();
-  server.send(200, "text/plain", "1 sec removed"); // Send response to client
+  return String(t);
 }
 
-void handlerem5s() {
+String handlerem5s()
+{
+  String t = "rem5s";
   rem5s();
-  server.send(200, "text/plain", "5 sec removed"); // Send response to client
+  return String(t);
 }
 
-void handlerem10s() {
+String handlerem10s()
+{
+  String t = "rem10s";
   rem10s();
-  server.send(200, "text/plain", "10 sec removed"); // Send response to client
+  return String(t);
 }
 
-void handlerem1m() {
+String handlerem1m()
+{
+  String t = "rem1m";
   rem1m();
-  server.send(200, "text/plain", "1 min removed"); // Send response to client
-} 
-
-void handlerem5m() {
-  rem5m();
-  server.send(200, "text/plain", "5 min removed"); // Send response to client
+  return String(t);
 }
 
-void handlerem10m() {
+String handlerem5m()
+{
+  String t = "rem5m";
+  rem5m();
+  return String(t);
+}
+
+String handlerem10m()
+{
+  String t = "rem10m";
   rem10m();
-  server.send(200, "text/plain", "10 min removed"); // Send response to client
+  return String(t);
 }
 
 //********************************************************************************
 // Timer Start/Stop/Reset
 //********************************************************************************
-void handleTimerStart() {
+String handleTimerStart()
+{
+  String t = "Timer Start";
   setTimer(ON);
-  server.send(200, "text/plain", "Start timer"); // Send response to client
+  return String(t);
 }
 
-void handleTimerStop() {
+String handleTimerStop()
+{
+  String t = "Timer Stop";
   setTimer(OFF);
-  server.send(200, "text/plain", "Stop timer"); // Send response to client
+  return String(t);
 }
 
-void handleTimerReset() {
+String handleTimerReset()
+{
+  String t = "Timer Reset";
   resetTimer();
-  server.send(200, "text/plain", "Reset timer"); // Send response to client
+  return String(t);
 }
 
 //************************************************************************************************
 // Handlers for Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax With Response
 //************************************************************************************************
-void handleAuto() {
-  String autoMode = String(getAutoMode());    // Read auto mode status
-  server.send(200, "text/plain", autoMode);   // Send auto mode status to client
+String handleAuto()
+{
+  String autoMode = String(getAutoMode()); // Read auto mode status
+  return String(autoMode);
 }
 
-void handlePump() {
-  String pump = String(getPump());            // Read pump status
-  server.send(200, "text/plain", pump);       // Send pump status to client
+String handlePump()
+{
+  String pump = String(getPump()); // Read pump status
+  return String(pump);
 }
 
-void handleDumpWater() {
+String handleDumpWater()
+{
   String dumpWater = String(getValv_Water_Out());
-  server.send(200, "text/plain", dumpWater); 
+  return String(dumpWater);
 }
 
-void handleResistor() {
+String handleResistor()
+{
   String resistor = String(getResistor());
-  server.send(200, "text/plain", resistor);
+  return String(resistor);
 }
 
-void handleWaterIn() { // Call handleWaterIn() function
+String handleWaterIn()
+{ // Call handleWaterIn() function
   String waterIn = String(getValv_Water_In());
-  server.send(200, "text/plain", waterIn);
+  return String(waterIn);
 }
 
-void handleWaterMax() {   
+String handleWaterMax()
+{
   String waterMax = String(getWaterMax());
-  server.send(200, "text/plain", waterMax);
+  return String(waterMax);
 }
 
-void handleWaterMin() {   
+String handleWaterMin()
+{
   String waterMin = String(getWaterMin());
-  server.send(200, "text/plain", waterMin); 
+  return String(waterMin);
 }
 
-void handleWaterAlarm() {   
+String handleWaterAlarm()
+{
   String waterAlarm = String(getWaterAlarm());
-  server.send(200, "text/plain", waterAlarm); 
+  return String(waterAlarm);
 }
 
 //********************************************************************************
 // Handlers for Toggle Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax
 //********************************************************************************
 
-
-void handleToggleAuto() {
-  toggleAutoModeWEB();  
-  server.send(200, "text/plain", "Auto mode toggled");    // Send response to client
+String handleToggleAuto()
+{
+  String t = "Auto mode toggled";
+  toggleAutoModeWEB();
+  return String(t);
 }
 
-void handleTogglePump() {
-  togglePump();   
-  server.send(200, "text/plain", "Pump toggled");         // Send response to client
+String handleTogglePump()
+{
+  String t = "Pump toggled";
+  togglePump();
+  return String(t);
 }
 
-void handleToggleDumpWater() {
-  toggleValveWaterOut();  
-  server.send(200, "text/plain", "Dump Condensor toggled"); // Send response to client
+String handleToggleDumpWater()
+{
+  String t = "Dump Condensor toggled";
+  toggleValveWaterOut();
+  return String(t);
 }
 
-void handleToggleWaterIn() {
-  toggleValveWaterIn();   
-  server.send(200, "text/plain", "Water In toggled");     // Send response to client
+String handleToggleWaterIn()
+{
+  String t = "Water In toggled";
+  toggleValveWaterIn();
+  return String(t);
 }
 
-void handleToggleResistor() {
-  sPrintLnStr("toggleResistor");
-  toggleResistor();   
-  server.send(200, "text/plain", "Resistor toggled");     // Send response to client
+String handleToggleResistor()
+{
+  String t = "Resistor toggled";
+  toggleResistor();
+  return String(t);
+}
+
+//////////////////////////////////////////////////////////////
+
+String processor(const String &var)
+{
+  // Serial.println(var);
+  if (var == "TIMER")
+  {
+    return handleTimer();
+  }
+  else if (var == "WATERMAX")
+  {
+    return String(handleWaterMax());
+  } // Read WaterMax
+  else if (var == "WATERMIN")
+  {
+    return String(handleWaterMin());
+  } // Read WaterMin
+  else if (var == "WATERALARM")
+  {
+    return String(handleWaterAlarm());
+  } // Read WaterAlarm
+  else if (var == "WIFIQUALITY")
+  {
+    return handleWifiQuality();
+  } // Read Wifi Quality
+  else if (var == "WIFISSID")
+  {
+    return handleWifiSSID();
+  } // Read Wifi SSID
+  else if (var == "WIFITX")
+  {
+    return handleWifiTX();
+  } // Read Wifi TX
+  else if (var == "WIFIIP")
+  {
+    return handleWifiIP();
+  } // Read Wifi IP
+  else if (var == "AUTO")
+  {
+    return handleAuto();
+  } // Read Auto
+  else if (var == "PUMP")
+  {
+    return handlePump();
+  } // Read Pump
+  else if (var == "DUMPWATER")
+  {
+    return handleDumpWater();
+  } // Read DumpWater
+  else if (var == "RESISTOR")
+  {
+    return handleResistor();
+  } // Read Resistor
+  else if (var == "WATERIN")
+  {
+    return handleWaterIn();
+  } // Read WaterIn
+  else if (var == "TIMERHOUR")
+  {
+    return handleHour();
+  } // Read Timer Hour
+  else if (var == "TIMERMINUTE")
+  {
+    return handleMinute();
+  } // Read Timer Minute
+  else if (var == "TIMERSECOUND")
+  {
+    return handleSecound();
+  } // Read Timer Secound
+
+  return String();
 }
 
 //********************************************************************************
 // Setup Calls
 //********************************************************************************
 
-void setupCalls() {
-  server.on("/", handleRoot);                             //Which routine to handle at root location. This is display page
-  ///////
-  server.on("/readTimer", handleTimer);                   // Call handleTimer() function
-  server.on("/readHour", handleHour);                     // Call handleHour() function
-  server.on("/readMinute", handleMinute);                 // Call handleMinute() function
-  server.on("/readSecound", handleSecound);               // Call handleSecound() function
-  ///////
-  server.on("/readWifiQuality", handleWifiQuality);       // Call handleWifiQuality() function
-  server.on("/readWifiSSID", handleWifiSSID);             // Call handleWifiSSID() function
-  server.on("/readWifiTX", handleWifiTX);                 // Call handleWifiTX() function
-  server.on("/readWifiIP", handleWifiIP);                 // Call handleWifiIP() function
-  ///////
-  server.on("/add1s", handleAdd1s);
-  server.on("/add5s", handleAdd5s);
-  server.on("/add10s", handleAdd10s);
-  server.on("/add1m", handleAdd1m);
-  server.on("/add5m", handleAdd5m);
-  server.on("/add10m", handlAadd10m);
-  ///////
-  server.on("/rem1s",  handleRem1s);
-  server.on("/rem5s",  handlerem5s);
-  server.on("/rem10s", handlerem10s);
-  server.on("/rem1m",  handlerem1m);
-  server.on("/rem5m",  handlerem5m);
-  server.on("/rem10m", handlerem10m); 
-  ///////
-  server.on("/timerStart", handleTimerStart);             // Call handleTimerStart() function
-  server.on("/timerStop", handleTimerStop);               // Call handleTimerStop() function
-  server.on("/timerReset", handleTimerReset);             // Call handleTimerReset() function
+void setupCalls()
+{
 
-  server.on("/readAuto", handleAuto);                     // Call handleAuto() function
-  server.on("/toggleAuto", handleToggleAuto);             // Call handleToggleAuto() function
-  server.on("/readPump", handlePump);                     // Call handlePump() function
-  server.on("/togglePump", handleTogglePump);             // Call handlePump() function
-  server.on("/readDumpWater", handleDumpWater);           // Call handleDumpCondensor() function
-  server.on("/toggleDumpWater", handleToggleDumpWater);   // Call handleDumpCondensor() function
-  server.on("/readWaterIn", handleWaterIn);               // Call handleWaterIn() function
-  server.on("/toggleWaterIn", handleToggleWaterIn);       // Call handleWaterIn() function
-  server.on("/readResistor", handleResistor);             // Call handleResistor() function
-  server.on("/toggleResistor", handleToggleResistor);     // Call handleResistor() function
-  server.on("/readWaterMax", handleWaterMax);             // Call handleDumpCondensor() function
-  server.on("/readWaterMin", handleWaterMin);             // Call handleDumpCondensor() function
-  server.on("/readWaterAlarm", handleWaterAlarm);         // Call handleDumpCondensor() function
-  server.begin();                                         // Start the HTTP server
+  // Route for root / web page
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/index.html", String(), false, processor); });
+
+  server.on("/readWaterMax", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWaterMax().c_str()); });
+
+  server.on("/readWaterMin", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWaterMin().c_str()); });
+
+  server.on("/readWaterAlarm", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWaterAlarm().c_str()); });
+
+  server.on("/readWifiQuality", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWifiQuality().c_str()); });
+
+  server.on("/readWifiSSID", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWifiSSID().c_str()); });
+
+  server.on("/readWifiTX", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWifiTX().c_str()); });
+
+  server.on("/readWifiIP", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWifiIP().c_str()); });
+
+  server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAuto().c_str()); });
+
+  server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlePump().c_str()); });
+
+  server.on("/readDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleDumpWater().c_str()); });
+
+  server.on("/readResistor", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleResistor().c_str()); });
+
+  server.on("/readWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWaterIn().c_str()); });
+
+  server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimer().c_str()); });
+
+  server.on("/readHour", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleHour().c_str()); });
+
+  server.on("/readMinute", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleMinute().c_str()); });
+
+  server.on("/readSecound", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleSecound().c_str()); });
+
+  server.on("/add1s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAdd1s().c_str()); });
+
+  server.on("/add5s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAdd5s().c_str()); });
+
+  server.on("/add10s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAdd10s().c_str()); });
+
+  server.on("/add1m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAdd1m().c_str()); });
+
+  server.on("/add5m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAdd5m().c_str()); });
+
+  server.on("/add10m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlAadd10m().c_str()); });
+
+  server.on("/rem1s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleRem1s().c_str()); });
+
+  server.on("/rem5s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlerem5s().c_str()); });
+
+  server.on("/rem10s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlerem10s().c_str()); });
+
+  server.on("/rem1m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlerem1m().c_str()); });
+
+  server.on("/rem5m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlerem5m().c_str()); });
+
+  server.on("/rem10m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlerem10m().c_str()); });
+
+  server.on("/toggleAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggleAuto().c_str()); });
+
+  server.on("/togglePump", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTogglePump().c_str()); });
+
+  server.on("/toggleDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggleDumpWater().c_str()); });
+
+  server.on("/toggleWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggleWaterIn().c_str()); });
+
+  server.on("/toggleResistor", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggleResistor().c_str()); });
+
+  server.on("/startTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerStart().c_str()); });
+
+  server.on("/stopTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerStop().c_str()); });
+
+  server.on("/resetTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerReset().c_str()); });
+
+  server.begin(); // Start the HTTP server
   Serial.println("HTTP server started");
-}
-
-//********************************************************************************
-// This routine is executed when you open its IP in browser
-//********************************************************************************
-void ProcessWebPage() { 
-  server.handleClient();                                  //Handle client requests
-  delay(1);                                               // Allow the web server to process the request
 }
