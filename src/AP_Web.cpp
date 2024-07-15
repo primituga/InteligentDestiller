@@ -1,6 +1,6 @@
 /*! \file AP_WEB.cpp */
 
-#include "AP.h"     // Definitions
+#include "AP.h" // Definitions
 
 AsyncWebServer server(80); // Create a webserver object that listens for HTTP request on port 80
 
@@ -267,7 +267,7 @@ String handleToggleResistor()
 //////////////////////////////////////////////////////////////
 // Function to handle the HTTP requests for the variables
 //////////////////////////////////////////////////////////////
-String processor(const String &var)   
+String processor(const String &var)
 {
   // Serial.println(var);
   if (var == "TIMER")
@@ -339,7 +339,7 @@ String processor(const String &var)
     return handleSecound();
   } // Read Timer Secound
 
-  return String();  // Return nothing
+  return String(); // Return nothing
 }
 
 //********************************************************************************
@@ -356,8 +356,8 @@ void setupCalls()
   server.on("/script.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/script.js", "text/javascript"); });
 
-  // server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
-  //           { request->send(SPIFFS, "/style.css", "text/css"); });
+  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/style.css", "text/css"); });
 
   //////////////////////////////////////////////////////////////
   // Route for images files
