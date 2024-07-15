@@ -1,5 +1,4 @@
 #include "AP.h"
-#include <ESPmDNS.h>
 
 const char *host = "destiller";
 
@@ -32,15 +31,6 @@ void loop2(void *pvParameters)
 		{
 			sPrintLnStr("WIFI INIT....");
 			initWIFI(); // Initiate WIFI
-			if (!MDNS.begin(host))
-			{ // http://<hostname>.local
-				Serial.println("Error setting up MDNS responder!");
-				while (1)
-				{
-					delay(1000);
-				}
-			}
-			Serial.println("mDNS responder started");
 			setupCalls(); // Initiate calls
 		}
 		else
