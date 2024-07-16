@@ -353,20 +353,59 @@ void setupCalls()
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/index.html", String(), false, processor); });
 
-  server.on("/script.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/script.js", "text/javascript"); });
+  server.on("/script_actions.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_actions.js", "text/javascript"); });
+
+  server.on("/script_get_Data.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_get_Data.js", "text/javascript"); });
+
+  server.on("/script_timers.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_timers.js", "text/javascript"); });
 
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/style.css", "text/css"); });
 
   //////////////////////////////////////////////////////////////
-  // Route for images files
+  // Route for image files
   //////////////////////////////////////////////////////////////
   server.on("/icon.png", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/icon.png", "image/png"); });
+            { request->send(SPIFFS, "/img/icon.png", "image/png"); });
 
   server.on("/estg_logo.png", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/estg_logo.png", "image/png"); });
+            { request->send(SPIFFS, "/img/estg_logo.png", "image/png"); });
+
+  server.on("/destiller.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/destiller.png", "image/png"); });
+
+  server.on("/BMB_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/BMB_ON.png", "image/png"); });
+
+  server.on("/BMB_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/BMB_OFF.png", "image/png"); });
+
+  server.on("/RAQ_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/RAQ_ON.png", "image/png"); });
+
+  server.on("/RAQ_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/RAQ_OFF.png", "image/png"); });
+
+  server.on("/Valve_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Valve_ON.png", "image/png"); });
+
+  server.on("/Valve_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Valve_OFF.png", "image/png"); });
+
+  server.on("/Auto_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Auto_ON.png", "image/png"); });
+
+  server.on("/Auto_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Auto_OFF.png", "image/png"); });
+
+  server.on("/Man_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Man_ON.png", "image/png"); });
+
+  server.on("/Man_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Man_OFF.png", "image/png"); });
 
   //////////////////////////////////////////////////////////////
   // Route for sensors Handlers

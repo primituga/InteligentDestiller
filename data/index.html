@@ -10,12 +10,18 @@
 <body>
     <div id="main">
         <div class="header-logo">
-            <img align="center" alt="IPPortalegre" height="93" data-sticky-height="53" data-sticky-top="33"
-                src="estg_logo.png">
+            <img alt="IPPortalegre" height="93" data-sticky-height="53" data-sticky-top="33" src="estg_logo.png">
             <br>
             <h1>Intelligent Distiller</h1>
             <hr>
         </div>
+    </div>
+    <div id="Destiller_img" class="Destiller_img">
+        <img id="Destiller_img" alt="Destiller_img" src="destiller.png">
+        <img id="BMB_img" alt="BMB_ON_img" src="BMB_ON.png" onclick="togglePump()" class="pump">
+        <img id="valve1_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleWaterIn()" class="valve1_off">
+        <img id="valve2_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleDumpWater()" class="valve2_off">
+        <img id="RAQ_img" alt="RAQ_ON_img" src="RAQ_ON.png" onclick="toggleResistor()" class="raq">
     </div>
     <div id="card" class="card">
         <table style="width:100%">
@@ -39,6 +45,7 @@
                     </h5>
                 </td>
         </table>
+
         <div id="WaterLVL">
             <hr>
             <br>
@@ -121,7 +128,9 @@
             </h5>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script_actions.js"></script>
+    <script src="script_get_Data.js"></script>
+    <script src="script_timers.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,27 @@
+html {
+    font-family: Helvetica;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center
+}
+
+body {
+    background-color: #191970;
+    color: #fff
+}
+
+#main {
+    display: table;
+    margin: auto;
+    padding: 30px 30px 30px 30px
+}
+
+#content {
+    border: 2px solid #00f;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px
+}
+
 .card {
     max-width: 500px;
     min-height: 600px auto;
@@ -8,11 +32,12 @@
     box-shadow: 0 0 18px -4px rgba(255, 160, 0, 1)
 }
 
-html {
-    font-family: Helvetica;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center
+.header-logo {
+    text-align: center;
+}
+
+blc_line {
+    display: inline-block
 }
 
 .button {
@@ -64,23 +89,6 @@ button.button:active {
     display: none
 }
 
-body {
-    background-color: #191970;
-    color: #fff
-}
-
-#main {
-    display: table;
-    margin: auto;
-    padding: 30px 30px 30px 30px
-}
-
-#content {
-    border: 2px solid #00f;
-    border-radius: 15px;
-    padding: 10px 10px 10px 10px
-}
-
 h3 {
     text-align: center;
     font-size: 120%;
@@ -93,28 +101,63 @@ h5 {
     margin: 1px 0 0 0
 }
 
-.header-logo {
+.Destiller_img{
+    position: absolute;
     text-align: center;
+    top: 25%;
+    left: 25%;
 }
 
-#time_P {
-    margin: 10px 0 15px 0
+.pump {
+    position: absolute;
+    text-align: center;
+    top: 470px;
+    left: 826px;
+    transform: translate(0%, -50%);
+    cursor:grab;
 }
 
-blc_line {
-    display: inline-block
+.valve1_on {
+    position: absolute;
+    text-align: center;
+    top: 597px;
+    left: 370px;
+    transform: translate(0%, -50%);
+    cursor:grab;
 }
 
-*/ blc2 {
-    display: inline;
-    margin-right: 10px;
-    line-height: 10px;
-    text-align: center
+.valve1_off {
+    position: absolute;
+    text-align: center;
+    top: 598px;
+    left: 356px;
+    transform: translate(0%, -50%);
+    cursor:grab;
 }
 
-blc3 {
-    display: inline;
-    margin-left: 10px;
-    line-height: 10px;
-    text-align: center
+.valve2_on {
+    position: absolute;
+    text-align: center;
+    top: 118px;
+    left: 470px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.valve2_off {
+    position: absolute;
+    text-align: center;
+    top: 117px;
+    left: 456px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.raq {
+    position: absolute;
+    text-align: center;
+    top: 440px;
+    left: 655px;
+    transform: translate(0%, -50%);
+    cursor:grab;
 }
