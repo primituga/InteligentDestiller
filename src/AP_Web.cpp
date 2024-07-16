@@ -1,18 +1,9 @@
 /*! \file AP_WEB.cpp */
 
-#include "AP.h"     // Definitions
-#include "AP_Web.h" // WebPage HTML content
+#include "AP.h" // Definitions
 
 AsyncWebServer server(80); // Create a webserver object that listens for HTTP request on port 80
 
-/****************************************************************************************
- * Function Name: ProcessWebPage
- * Description: Process WebPage
- * Parameters: None
- * Return Value: None
- ****************************************************************************************/
-
-/////////////////////////////////////////////////////////////
 //********************************************************************************
 // Timer handlers
 //********************************************************************************
@@ -183,13 +174,19 @@ String handleTimerReset()
 //************************************************************************************************
 String handleAuto()
 {
-  String autoMode = String(getAutoMode()); // Read auto mode status
+  String autoMode = String(getAutoMode());
   return String(autoMode);
+}
+
+String handleManual()
+{
+  String manualMode = String(getManualMode());
+  return String(manualMode);
 }
 
 String handlePump()
 {
-  String pump = String(getPump()); // Read pump status
+  String pump = String(getPump());
   return String(pump);
 }
 
@@ -206,7 +203,7 @@ String handleResistor()
 }
 
 String handleWaterIn()
-{ // Call handleWaterIn() function
+{
   String waterIn = String(getValv_Water_In());
   return String(waterIn);
 }
@@ -232,7 +229,6 @@ String handleWaterAlarm()
 //********************************************************************************
 // Handlers for Toggle Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax
 //********************************************************************************
-
 String handleToggleAuto()
 {
   String t = "Auto mode toggled";
@@ -269,14 +265,15 @@ String handleToggleResistor()
 }
 
 //////////////////////////////////////////////////////////////
-
+// Function to handle the HTTP requests for the variables
+//////////////////////////////////////////////////////////////
 String processor(const String &var)
 {
   // Serial.println(var);
   if (var == "TIMER")
   {
     return handleTimer();
-  }
+  } // Read Timer
   else if (var == "WATERMAX")
   {
     return String(handleWaterMax());
@@ -309,6 +306,10 @@ String processor(const String &var)
   {
     return handleAuto();
   } // Read Auto
+  else if (var == "MANUAL")
+  {
+    return handleManual();
+  } // Read Manual
   else if (var == "PUMP")
   {
     return handlePump();
@@ -338,20 +339,77 @@ String processor(const String &var)
     return handleSecound();
   } // Read Timer Secound
 
-  return String();
+  return String(); // Return nothing
 }
 
 //********************************************************************************
 // Setup Calls
 //********************************************************************************
-
 void setupCalls()
 {
-
-  // Route for root / web page
+  //////////////////////////////////////////////////////////////
+  // Route for root / web page, JS and CSS
+  //////////////////////////////////////////////////////////////
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/index.html", String(), false, processor); });
 
+  server.on("/script_actions.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_actions.js", "text/javascript"); });
+
+  server.on("/script_get_Data.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_get_Data.js", "text/javascript"); });
+
+  server.on("/script_timers.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_timers.js", "text/javascript"); });
+
+  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/style.css", "text/css"); });
+
+  //////////////////////////////////////////////////////////////
+  // Route for image files
+  //////////////////////////////////////////////////////////////
+  server.on("/icon.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/icon.png", "image/png"); });
+
+  server.on("/estg_logo.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/estg_logo.png", "image/png"); });
+
+  server.on("/destiller.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/destiller.png", "image/png"); });
+
+  server.on("/BMB_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/BMB_ON.png", "image/png"); });
+
+  server.on("/BMB_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/BMB_OFF.png", "image/png"); });
+
+  server.on("/RAQ_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/RAQ_ON.png", "image/png"); });
+
+  server.on("/RAQ_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/RAQ_OFF.png", "image/png"); });
+
+  server.on("/Valve_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Valve_ON.png", "image/png"); });
+
+  server.on("/Valve_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Valve_OFF.png", "image/png"); });
+
+  server.on("/Auto_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Auto_ON.png", "image/png"); });
+
+  server.on("/Auto_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Auto_OFF.png", "image/png"); });
+
+  server.on("/Man_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Man_ON.png", "image/png"); });
+
+  server.on("/Man_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/Man_OFF.png", "image/png"); });
+
+  //////////////////////////////////////////////////////////////
+  // Route for sensors Handlers
+  //////////////////////////////////////////////////////////////
   server.on("/readWaterMax", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleWaterMax().c_str()); });
 
@@ -361,6 +419,9 @@ void setupCalls()
   server.on("/readWaterAlarm", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleWaterAlarm().c_str()); });
 
+  //////////////////////////////////////////////////////////////
+  // Route for WiFi Handlers
+  //////////////////////////////////////////////////////////////
   server.on("/readWifiQuality", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleWifiQuality().c_str()); });
 
@@ -373,21 +434,9 @@ void setupCalls()
   server.on("/readWifiIP", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleWifiIP().c_str()); });
 
-  server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAuto().c_str()); });
-
-  server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlePump().c_str()); });
-
-  server.on("/readDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleDumpWater().c_str()); });
-
-  server.on("/readResistor", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleResistor().c_str()); });
-
-  server.on("/readWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleWaterIn().c_str()); });
-
+  //////////////////////////////////////////////////////////////
+  // Route for Timer Handlers
+  //////////////////////////////////////////////////////////////
   server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleTimer().c_str()); });
 
@@ -400,6 +449,21 @@ void setupCalls()
   server.on("/readSecound", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleSecound().c_str()); });
 
+  //////////////////////////////////////////////////////////////
+  // Route for Timer Start/Stop/Reset Handlers
+  //////////////////////////////////////////////////////////////
+  server.on("/startTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerStart().c_str()); });
+
+  server.on("/stopTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerStop().c_str()); });
+
+  server.on("/resetTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerReset().c_str()); });
+
+  //////////////////////////////////////////////////////////////
+  // Route for Add/Remove Time Handlers
+  //////////////////////////////////////////////////////////////
   server.on("/add1s", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleAdd1s().c_str()); });
 
@@ -436,9 +500,9 @@ void setupCalls()
   server.on("/rem10m", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handlerem10m().c_str()); });
 
-  server.on("/toggleAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleToggleAuto().c_str()); });
-
+  //////////////////////////////////////////////////////////////
+  // Route for Toggle Handlers
+  //////////////////////////////////////////////////////////////
   server.on("/togglePump", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleTogglePump().c_str()); });
 
@@ -451,14 +515,29 @@ void setupCalls()
   server.on("/toggleResistor", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleToggleResistor().c_str()); });
 
-  server.on("/startTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimerStart().c_str()); });
+  server.on("/toggleAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggleAuto().c_str()); });
 
-  server.on("/stopTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimerStop().c_str()); });
+  //////////////////////////////////////////////////////////////
+  // Route for Read Handlers
+  //////////////////////////////////////////////////////////////
+  server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleAuto().c_str()); });
 
-  server.on("/resetTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimerReset().c_str()); });
+  server.on("/readManualMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleManual().c_str()); });
+
+  server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handlePump().c_str()); });
+
+  server.on("/readDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleDumpWater().c_str()); });
+
+  server.on("/readResistor", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleResistor().c_str()); });
+
+  server.on("/readWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleWaterIn().c_str()); });
 
   server.begin(); // Start the HTTP server
   Serial.println("HTTP server started");

@@ -53,42 +53,46 @@ void initWIFI()
   bool res;
   res = wifiManager.autoConnect("DestilerAP");
 
-  ///////////////////////////////////////////////////////////////////////////////////
-  WiFi.onEvent(OnWiFiEvent);  // Set event handler for WiFi events (connected, disconnected etc.)
-  WiFi.setAutoReconnect(true); // Enable auto reconnect
-// Set ESP32 to Station + Access Point mode (AP mode) to allow multiple connections to the ESP32 at the same time (up to 4 stations)
-  WiFi.mode(WIFI_MODE_APSTA); 
-
-  WiFi.softAP(soft_ap_ssid, soft_ap_password);  
-
-  // Set IP Address of the ESP32 Soft Access Point
-  WiFi.softAPConfig(IPAddress(192, 168, 100, 100), // AP IP
-                    IPAddress(192, 168, 100, 1),   // GW IP, which is the same
-                    IPAddress(255, 255, 255, 0));
-
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-
-  ///////////////////////////////////////////////////////////////////////////////////
-
   if (!res) // if not connected
   {
     Serial.println("Failed to connect");
-
-    // convert string to char ssid and password:
-    char *WIFI_SSID = new char[wifiManager.getWiFiSSID().length() + 1]; 
-    strcpy(WIFI_SSID, wifiManager.getWiFiSSID().c_str()); 
-    char *WIFI_PASSWORD = new char[wifiManager.getWiFiPass().length() + 1];
-    strcpy(WIFI_PASSWORD, wifiManager.getWiFiPass().c_str());
-
-    saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
-    // ESP.restart();
-    // free memory
-    delete[] WIFI_SSID; 
-    delete[] WIFI_PASSWORD;
   }
   else
   {
-    // connected to wifi
+    ///////////////////////////////////////////////////////////////////////////////////
+    // connected to wifi and save the settings to EEPROM
+    ///////////////////////////////////////////////////////////////////////////////////
+    // convert string to char ssid and password:
+    char *WIFI_SSID = new char[wifiManager.getWiFiSSID().length() + 1];
+    strcpy(WIFI_SSID, wifiManager.getWiFiSSID().c_str());
+    char *WIFI_PASSWORD = new char[wifiManager.getWiFiPass().length() + 1];
+    strcpy(WIFI_PASSWORD, wifiManager.getWiFiPass().c_str());
+    saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // config the softAP 
+    ///////////////////////////////////////////////////////////////////////////////////
+    WiFi.onEvent(OnWiFiEvent);   // Set event handler for WiFi events (connected, disconnected etc.)
+    WiFi.setAutoReconnect(true); // Enable auto reconnect
+                                 // Set ESP32 to Station + Access Point mode (AP mode) to allow multiple connections to the ESP32 at the same time (up to 4 stations)
+    WiFi.mode(WIFI_MODE_APSTA);
+
+    WiFi.softAP(soft_ap_ssid, soft_ap_password);
+
+    // Set IP Address of the ESP32 Soft Access Point
+    WiFi.softAPConfig(IPAddress(192, 168, 100, 100), // AP IP
+                      IPAddress(192, 168, 100, 1),   // GW IP, which is the same
+                      IPAddress(255, 255, 255, 0));
+
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+    // ESP.restart();
+    // free memory
+    delete[] WIFI_SSID;
+    delete[] WIFI_PASSWORD;
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // connected to wifi and print the settings
+    ///////////////////////////////////////////////////////////////////////////////////
     Serial.print("====Connected to: ");
     Serial.println(WiFi.SSID());
     Serial.print("====TxPower: ");
