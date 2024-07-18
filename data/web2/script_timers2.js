@@ -9,43 +9,46 @@
 setInterval(function () {
     getWifiSSIDData();
     getWifiQualityData();
-}, 5000);
+}, 5245);
 
 /*************************************************************************/
 /* Timer to get data                                                      *
 /* ***********************************************************************/
 setInterval(function () {
     if (document.getElementById("autoMode").innerHTML == "1") {
-        getTimerData();
-    } 
-}, 500);
+        if (document.getElementById("timer").innerHTML != "0h :0m :0s") {
+            getTimerData();
+        }
+    }
+}, 1000);
 
 setInterval(function () {
     if (document.getElementById("autoMode").innerHTML == "1") {
-        getTimerHourData();
-        getTimerMinuteData();
-        getTimerSecoundData();
-    } 
-}, 1500);
+        if (document.getElementById("timer").innerHTML != "0h :0m :0s") {
+            getTimerHourData();
+            getTimerMinuteData();
+            getTimerSecoundData();
+        }
+    }
+}, 1012);
 
 setInterval(function () {
     getAutoModeData();
-    getManualModeData()
-
-}, 1000);
+    getManualModeData();
+}, 1453);
 
 setInterval(function () {
     getResistorData();
     getPumpData();
     getWaterInData();
     getDumpWaterData();
-}, 1500);
+}, 1359);
 
 setInterval(function () {
     getWaterMinData();
     getWaterAlarmData();
     getWaterMaxData();
-}, 1500);
+}, 1389);
 
 /*************************************************************************/
 /* Timer to update water levels indicators                                *
@@ -66,7 +69,7 @@ setInterval(function () {
     } else {
         document.getElementById("ButtonWaterAlarm").style.backgroundColor = "grey";
     }
-}, 1000); //1000 mSeconds update rate*/
+}, 1432); //1000 mSeconds update rate*/
 /*************************************************************************/
 /* Timer to update border buttons green or black                          *
 /* ***********************************************************************/
@@ -101,7 +104,7 @@ setInterval(function () {
     } else {
         document.getElementById("ButtonToggleDumpWater").style.border = "5px solid #000000";
     }
-}, 1000); //1000 mSeconds update rate*/
+}, 1365); //1000 mSeconds update rate*/
 
 /*************************************************************************/
 /* Timer for EN/Disable buttons                                           *
@@ -171,4 +174,4 @@ setInterval(function () {
         document.getElementById("ButtonStopTimer").classList.add("button");
         document.getElementById("ButtonStopTimer").classList.remove("buttonDisabled");
     }
-}, 1000);
+}, 1429);

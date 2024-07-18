@@ -9,35 +9,46 @@
 setInterval(function () {
     getWifiSSIDData();
     getWifiQualityData();
-}, 5000);
+}, 5245);
 
 /*************************************************************************/
 /* Timer to get data                                                      *
 /* ***********************************************************************/
 setInterval(function () {
     if (document.getElementById("autoMode").innerHTML == "1") {
-        getTimerData();
+        if (document.getElementById("timer").innerHTML != "0h :0m :0s") {
+            getTimerData();
+        }
     }
-}, 500);
+}, 1000);
+
+setInterval(function () {
+    if (document.getElementById("autoMode").innerHTML == "1") {
+        if (document.getElementById("timer").innerHTML != "0h :0m :0s") {
+            getTimerHourData();
+            getTimerMinuteData();
+            getTimerSecoundData();
+        }
+    }
+}, 1012);
 
 setInterval(function () {
     getAutoModeData();
-    getManualModeData()
-
-}, 1500);
+    getManualModeData();
+}, 1453);
 
 setInterval(function () {
     getResistorData();
     getPumpData();
     getWaterInData();
     getDumpWaterData();
-}, 1500);
+}, 1359);
 
 setInterval(function () {
     getWaterMinData();
     getWaterAlarmData();
     getWaterMaxData();
-}, 1500);
+}, 1389);
 
 /*************************************************************************/
 /* Timer to update water levels indicators                                *
@@ -84,4 +95,4 @@ setInterval(function () {
     if (document.getElementById("waterAlarm").innerHTML == "1" && document.getElementById("waterMin").innerHTML == "1") {
         document.getElementById("tank").src = "sAlarm.png";
     }
-}, 1500);
+}, 1423);

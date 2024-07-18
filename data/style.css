@@ -55,7 +55,6 @@ blc_line {
 }
 
 .buttonDisabled {
-    disabled: true;
     pointer-events: none;
     background-color: grey;
     cursor: not-allowed;
