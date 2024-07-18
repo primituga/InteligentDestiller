@@ -1,7 +1,5 @@
 #include "AP.h"
 
-const char *host = "destiller";
-
 // setup to run on 1st cpu core
 void setup()
 {
@@ -26,16 +24,15 @@ void loop2(void *pvParameters)
 	// to wait for WIFI to init
 	while (1) // Main loop
 	{
-
 		if (WiFi.status() != WL_CONNECTED)
 		{
 			sPrintLnStr("WIFI INIT....");
-			initWIFI(); // Initiate WIFI
+			initWIFI();	  // Initiate WIFI
 			setupCalls(); // Initiate calls
 		}
 		else
 		{
-			//ProcessWebPage(); // Process WebPage
+			// ProcessWebPage(); // Process WebPage
 			webTimer("*", 0);
 		}
 	}

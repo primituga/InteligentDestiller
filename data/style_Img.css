@@ -1,0 +1,69 @@
+.Destiller_img{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 25%;
+}
+
+.pump {
+    position: absolute;
+    text-align: center;
+    top: 470px;
+    left: 826px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.valve1_on {
+    position: absolute;
+    text-align: center;
+    top: 597px;
+    left: 370px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.valve1_off {
+    position: absolute;
+    text-align: center;
+    top: 598px;
+    left: 356px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.valve2_on {
+    position: absolute;
+    text-align: center;
+    top: 118px;
+    left: 470px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.valve2_off {
+    position: absolute;
+    text-align: center;
+    top: 117px;
+    left: 456px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.raq {
+    position: absolute;
+    text-align: center;
+    top: 440px;
+    left: 655px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.tank {
+    position: absolute;
+    text-align: center;
+    top: 440px;
+    left: 605px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}

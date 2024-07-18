@@ -365,6 +365,30 @@ void setupCalls()
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/style.css", "text/css"); });
 
+  server.on("/style_Img.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/style_Img.css", "text/css"); });
+  //////////////////////////////////////////////////////////////
+  // Route for web2 page, JS and CSS
+  //////////////////////////////////////////////////////////////
+
+  server.on("/index2.html", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web2/index2.html", String(), false, processor); });
+
+  /*server.on("/index2.html", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web2/index2.html", "text/css"); });
+*/
+  server.on("/script_actions2.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web2/script_actions2.js", "text/javascript"); });
+
+  server.on("/script_get_Data2.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web2/script_get_Data2.js", "text/javascript"); });
+
+  server.on("/script_timers2.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web2/script_timers2.js", "text/javascript"); });
+
+  server.on("/style2.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web2/style2.css", "text/css"); });
+
   //////////////////////////////////////////////////////////////
   // Route for image files
   //////////////////////////////////////////////////////////////
@@ -406,6 +430,15 @@ void setupCalls()
 
   server.on("/Man_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/img/Man_OFF.png", "image/png"); });
+
+  server.on("/sMin.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/sMin.png", "image/png"); });
+
+  server.on("/sMax.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/sMax.png", "image/png"); });
+
+  server.on("/sAlarm.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/sAlarm.png", "image/png"); });
 
   //////////////////////////////////////////////////////////////
   // Route for sensors Handlers
