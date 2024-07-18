@@ -5,11 +5,15 @@
     <title>Intelligent Distiller</title>
     <link rel="icon" type="image/x-icon" href="/icon.png">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/style_Img.css">
 </head>
 
 <body>
     <div id="main">
         <div class="header-logo">
+            <div>
+                <li><a href="/index2.html">graphics</a></li>
+            </div>
             <img alt="IPPortalegre" height="93" data-sticky-height="53" data-sticky-top="33" src="estg_logo.png">
             <br>
             <h1>Intelligent Distiller</h1>
@@ -21,111 +25,92 @@
         <img id="BMB_img" alt="BMB_ON_img" src="BMB_ON.png" onclick="togglePump()" class="pump">
         <img id="valve1_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleWaterIn()" class="valve1_off">
         <img id="valve2_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleDumpWater()" class="valve2_off">
+        <img id="tank" alt="Tank" src="sMax.png" class="tank">
         <img id="RAQ_img" alt="RAQ_ON_img" src="RAQ_ON.png" onclick="toggleResistor()" class="raq">
-    </div>
-    <div id="card" class="card">
-        <table style="width:100%">
-            <tr>
-                <th>
-                    <h5>Wifi SSID:</h5>
-                </th>
-                <th>
-                    <h5>Wifi Quality:</h5>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <h5>
-                        <span id="wifiSSID">0</span>
-                    </h5>
-                </td>
-                <td>
-                    <h5>
-                        <span id="wifiQuality">0</span>
-                    </h5>
-                </td>
-        </table>
 
-        <div id="WaterLVL">
+        <div id="card" class="card">
+            <table style="width:100%">
+                <tr>
+                    <th>
+                        <h5>Wifi SSID:</h5>
+                    </th>
+                    <th>
+                        <h5>Wifi Quality:</h5>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>
+                            <span id="wifiSSID">0</span>
+                        </h5>
+                    </td>
+                    <td>
+                        <h5>
+                            <span id="wifiQuality">0</span>
+                        </h5>
+                    </td>
+            </table>
+
+            <div id="TimerCounter">
+                <h3>
+                    <blc_line id="content">Timer: <span id="timer">0</span>
+                    </blc_line>
+                </h3>
+            </div>
+            <br>
+            <div id="TimerControl">
+                <button id="ButtonStartTimer" class="button" onclick="startTimer()">Start</button>
+                <button id="ButtonStopTimer" class="button" onclick="stopTimer()">Stop</button>
+                <button id="ButtonResetTimer" class="button" onclick="resetTimer()">Reset</button>
+                <br>
+            </div>
+            <br>
+            <div id="TimerAddRem">
+                <button id="ButtonAdd1s" class="button" onclick="add1s()">+1s</button>
+                <button id="ButtonAdd5s" class="button" onclick="add5s()">+5s</button>
+                <button id="ButtonAdd10s" class="button" onclick="add10s()">+10s</button>
+                <button id="ButtonAdd1m" class="button" onclick="add1m()">+1m</button>
+                <button id="ButtonAdd5m" class="button" onclick="add5m()">+5m</button>
+                <button id="ButtonAdd10m" class="button" onclick="add10m()">+10m</button>
+                <br>
+                <button id="ButtonRem1s" class="button" onclick="rem1s()">-1s</button>
+                <button id="ButtonRem5s" class="button" onclick="rem5s()">-5s</button>
+                <button id="ButtonRem10s" class="button" onclick="rem10s()">-10s</button>
+                <button id="ButtonRem1m" class="button" onclick="rem1m()">-1m</button>
+                <button id="ButtonRem5m" class="button" onclick="rem5m()">-5m</button>
+                <button id="ButtonRem10m" class="button" onclick="rem10m()">-10m</button>
+            </div>
+            <br>
             <hr>
-            <br>
-            <button id="ButtonWaterMax" class="buttonWater">Water Max</button>
-            <button id="ButtonWaterMin" class="buttonWater">Water Min</button>
-            <button id="ButtonWaterAlarm" class="buttonWater">Water Alarm</button>
-            <br>
-            <br>
-            <hr>
-        </div>
-        <br>
-        <div id="ManButtons">
-            <button id="ButtonToggleAuto" class="button" onclick="toggleAutoMode()">Auto</button>
-            <button id="ButtonTogglePump" class="button" onclick="togglePump()">Pump</button>
-            <button id="ButtonToggleWaterIn" class="button" onclick="toggleWaterIn()">Water In</button>
-            <br>
-            <button id="ButtonToggleResistor" class="button" onclick="toggleResistor()">Resistor</button>
-            <button id="ButtonToggleDumpWater" class="button" onclick="toggleDumpWater()">Dump Water</button>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div id="TimerCounter">
-            <h3>
-                <blc_line id="content">Timer: <span id="timer">0</span>
-                </blc_line>
-            </h3>
-        </div>
-        <br>
-        <div id="TimerControl">
-            <button id="ButtonStartTimer" class="button" onclick="startTimer()">Start</button>
-            <button id="ButtonStopTimer" class="button" onclick="stopTimer()">Stop</button>
-            <button id="ButtonResetTimer" class="button" onclick="resetTimer()">Reset</button>
-            <br>
-        </div>
-        <br>
-        <div id="TimerAddRem">
-            <button id="ButtonAdd1s" class="button" onclick="add1s()">+1s</button>
-            <button id="ButtonAdd5s" class="button" onclick="add5s()">+5s</button>
-            <button id="ButtonAdd10s" class="button" onclick="add10s()">+10s</button>
-            <button id="ButtonAdd1m" class="button" onclick="add1m()">+1m</button>
-            <button id="ButtonAdd5m" class="button" onclick="add5m()">+5m</button>
-            <button id="ButtonAdd10m" class="button" onclick="add10m()">+10m</button>
-            <br>
-            <button id="ButtonRem1s" class="button" onclick="rem1s()">-1s</button>
-            <button id="ButtonRem5s" class="button" onclick="rem5s()">-5s</button>
-            <button id="ButtonRem10s" class="button" onclick="rem10s()">-10s</button>
-            <button id="ButtonRem1m" class="button" onclick="rem1m()">-1m</button>
-            <button id="ButtonRem5m" class="button" onclick="rem5m()">-5m</button>
-            <button id="ButtonRem10m" class="button" onclick="rem10m()">-10m</button>
-        </div>
-        <br>
-        <hr>
-        <button id="IOsButton" class="button">More Data</button>
-        <div id="IOsDiv" class="hidden">
-            <br>
-            <h5>Auto mode: <span id="autoMode">-</span>
-            </h5>
-            <h5>Manual mode: <span id="manualMode">-</span>
-            </h5>
-            <h5>Resistor: <span id="resistor">-</span>
-            </h5>
-            <h5>Pump: <span id="pump">-</span>
-            </h5>
-            <h5>Water In: <span id="waterIn">-</span>
-            </h5>
-            <h5>Dump Water: <span id="dumpWater">-</span>
-            </h5>
-            <h5>Water Min: <span id="waterMin">-</span>
-            </h5>
-            <h5>Water Max: <span id="waterMax">-</span>
-            </h5>
-            <h5>Water Alarm: <span id="waterAlarm">-</span>
-            </h5>
-            <h5>Hour: <span id="hour">-</span>
-            </h5>
-            <h5>Minute: <span id="minute">-</span>
-            </h5>
-            <h5>Secound: <span id="secound">-</span>
-            </h5>
+            <button id="IOsButton" class="button">More Data</button>
+            <div id="IOsDiv" class="hidden">
+                <p>Auto mode: <var id="autoMode">this text</var></p>
+                <br>
+                <h5>Auto mode: <span id="autoMode">-</span>
+                </h5>
+                <h5>Manual mode: <span id="manualMode">-</span>
+                </h5>
+                <h5>Resistor: <span id="resistor">-</span>
+                </h5>
+                <h5>Pump: <span id="pump">-</span>
+                </h5>
+                <h5>Water In: <span id="waterIn">-</span>
+                </h5>
+                <h5>Dump Water: <span id="dumpWater">-</span>
+                </h5>
+                <h5>Water Min: <span id="waterMin">-</span>
+                </h5>
+                <h5>Water Max: <span id="waterMax">-</span>
+                </h5>
+                <h5>Water Alarm: <span id="waterAlarm">-</span>
+                </h5>
+                <h5>Hour: <span id="hour">-</span>
+                </h5>
+                <h5>Minute: <span id="minute">-</span>
+                </h5>
+                <h5>Secound: <span id="secound">-</span>
+                </h5>
+            </div>
         </div>
     </div>
     <script src="script_actions.js"></script>

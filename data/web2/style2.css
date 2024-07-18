@@ -23,7 +23,6 @@ body {
 }
 
 .card {
-    position: relative;
     max-width: 500px;
     min-height: 600px auto;
     background: #013220;
