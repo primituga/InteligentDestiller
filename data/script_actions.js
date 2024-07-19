@@ -41,11 +41,18 @@ function resetTimer() {
 }
 
 function updateStatus() {
+    getTimerData();
     getResistorData();
     getPumpData();
     getWaterInData();
     getDumpWaterData();
+}
+
+function onloadStatus() {
     getTimerData();
+    getTimerHourData();
+    getTimerMinuteData();
+    getTimerSecoundData();
 }
 
 //***********************************************************************

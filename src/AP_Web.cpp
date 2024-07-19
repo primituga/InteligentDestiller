@@ -348,10 +348,30 @@ String processor(const String &var)
 void setupCalls()
 {
   //////////////////////////////////////////////////////////////
-  // Route for root / web page, JS and CSS
+  // Route for root / and index_webButtons.html
   //////////////////////////////////////////////////////////////
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/index.html", String(), false, processor); });
+
+  server.on("/index_2.html", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web_2/index_2.html", String(), false, processor); });
+
+  //////////////////////////////////////////////////////////////
+  // Route for CSS files
+  //////////////////////////////////////////////////////////////
+
+  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/style.css", "text/css"); });
+
+  server.on("/style_2.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web_2/style2.css", "text/css"); });
+
+  server.on("/style_Img.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/style_Img.css", "text/css"); });
+
+  //////////////////////////////////////////////////////////////
+  // Route JS files
+  //////////////////////////////////////////////////////////////
 
   server.on("/script_actions.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/script_actions.js", "text/javascript"); });
@@ -362,32 +382,12 @@ void setupCalls()
   server.on("/script_timers.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/script_timers.js", "text/javascript"); });
 
-  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/style.css", "text/css"); });
+  server.on("/script_timers_Img.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/script_timers_Img.js", "text/javascript"); });
+  ///////
 
-  server.on("/style_Img.css", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/style_Img.css", "text/css"); });
-  //////////////////////////////////////////////////////////////
-  // Route for web2 page, JS and CSS
-  //////////////////////////////////////////////////////////////
-
-  server.on("/index2.html", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/index2.html", String(), false, processor); });
-
-  /*server.on("/index2.html", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/index2.html", "text/css"); });
-*/
-  server.on("/script_actions2.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/script_actions2.js", "text/javascript"); });
-
-  server.on("/script_get_Data2.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/script_get_Data2.js", "text/javascript"); });
-
-  server.on("/script_timers2.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/script_timers2.js", "text/javascript"); });
-
-  server.on("/style2.css", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/style2.css", "text/css"); });
+  server.on("/script_timers_2.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web_2/script_timers_2.js", "text/javascript"); });
 
   //////////////////////////////////////////////////////////////
   // Route for image files
@@ -397,6 +397,9 @@ void setupCalls()
 
   server.on("/estg_logo.png", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/img/estg_logo.png", "image/png"); });
+
+  server.on("/bg.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/bg.png", "image/png"); });
 
   server.on("/destiller.png", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/img/destiller.png", "image/png"); });

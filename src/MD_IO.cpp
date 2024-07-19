@@ -113,34 +113,34 @@ void workingMax()
 { // Working state when water level is max
     setResistor(ON);
     setValveWaterIn(ON);
-    setValveWaterOut(ON);
+    setValveWaterOut(OFF);
 }
 
 void workingMaxMin()
 { // Working state when water level is between max and min
     setResistor(ON);
     setValveWaterIn(ON);
-    setValveWaterOut(ON);
+    setValveWaterOut(OFF);
 }
 
 void workingMin()
 { // Working state when water level is min
     setValveWaterIn(ON);
-    setValveWaterOut(ON);
+    setValveWaterOut(OFF);
 }
 
 void workingAlarm()
 { // Working state when water level is alarm
     setResistor(OFF);
     setValveWaterIn(OFF);
-    setValveWaterOut(OFF);
+    setValveWaterOut(ON);
 }
 
 void workingIdle()
 {   // Working state when water level is idle
     setResistor(OFF);
     setValveWaterIn(OFF);
-    setValveWaterOut(OFF);
+    setValveWaterOut(ON);
 }
 
 void waterManagement()

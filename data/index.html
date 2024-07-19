@@ -8,12 +8,14 @@
     <link rel="stylesheet" type="text/css" href="/style_Img.css">
 </head>
 
-<body>
+<body onload="onloadStatus()">
+    <div class="topnav">
+        <a href="/index_2.html">Buttons View</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
     <div id="main">
         <div class="header-logo">
-            <div>
-                <li><a href="/index2.html">graphics</a></li>
-            </div>
             <img alt="IPPortalegre" height="93" data-sticky-height="53" data-sticky-top="33" src="estg_logo.png">
             <br>
             <h1>Intelligent Distiller</h1>
@@ -84,38 +86,26 @@
             <hr>
             <button id="IOsButton" class="button">More Data</button>
             <div id="IOsDiv" class="hidden">
-                <p>Auto mode: <var id="autoMode">this text</var></p>
                 <br>
-                <h5>Auto mode: <span id="autoMode">-</span>
-                </h5>
-                <h5>Manual mode: <span id="manualMode">-</span>
-                </h5>
-                <h5>Resistor: <span id="resistor">-</span>
-                </h5>
-                <h5>Pump: <span id="pump">-</span>
-                </h5>
-                <h5>Water In: <span id="waterIn">-</span>
-                </h5>
-                <h5>Dump Water: <span id="dumpWater">-</span>
-                </h5>
-                <h5>Water Min: <span id="waterMin">-</span>
-                </h5>
-                <h5>Water Max: <span id="waterMax">-</span>
-                </h5>
-                <h5>Water Alarm: <span id="waterAlarm">-</span>
-                </h5>
-                <h5>Hour: <span id="hour">-</span>
-                </h5>
-                <h5>Minute: <span id="minute">-</span>
-                </h5>
-                <h5>Secound: <span id="secound">-</span>
-                </h5>
+                <h5>Auto mode: <span id="autoMode">-</span> </h5>
+                <h5>Manual mode: <span id="manualMode">-</span> </h5>
+                <h5>Resistor: <span id="resistor">-</span> </h5>
+                <h5>Pump: <span id="pump">-</span> </h5>
+                <h5>Water In: <span id="waterIn">-</span> </h5>
+                <h5>Dump Water: <span id="dumpWater">-</span> </h5>
+                <h5>Water Min: <span id="waterMin">-</span> </h5>
+                <h5>Water Max: <span id="waterMax">-</span> </h5>
+                <h5>Water Alarm: <span id="waterAlarm">-</span> </h5>
+                <h5>Hour: <span id="hour">-</span> </h5>
+                <h5>Minute: <span id="minute">-</span> </h5>
+                <h5>Secound: <span id="secound">-</span> </h5>
             </div>
         </div>
     </div>
     <script src="script_actions.js"></script>
     <script src="script_get_Data.js"></script>
     <script src="script_timers.js"></script>
+    <script src="script_timers_Img.js"></script>
 </body>
 
 </html>
