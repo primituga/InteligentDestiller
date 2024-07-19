@@ -1,0 +1,16 @@
+.buttonWater {
+    background-color: #000;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 2px;
+    cursor: default;
+    font: bold 18pt Arial, Helvetica, sans-serif
+}
+
+.hidden {
+    display: none
+}
