@@ -44,6 +44,10 @@ body {
     color: black;
 }
 
+.hidden {
+    display: none
+}
+
 .card {
     position: relative;
     max-width: 500px;
@@ -54,14 +58,14 @@ body {
     padding: 5px;
     color: #fff;
     margin: 0 auto;
-    box-shadow: 0 0 18px -4px rgba(255, 160, 0, 1)
+    box-shadow: 0 0 18px -4px rgba(255, 160, 0, 1);
 }
 
 .header-logo {
     text-align: center;
 }
 
-blc_line {
+.blc_line {
     display: inline-block
 }
 
