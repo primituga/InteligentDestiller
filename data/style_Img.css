@@ -1,8 +1,13 @@
+.card {
+    float: right;
+    margin-left: 10px;
+}
+
 .Destiller_img{
     position: absolute;
     text-align: center;
     top: 32%;
-    left: 25%;
+    left: 10%;
 }
 
 .pump {

@@ -13,27 +13,27 @@ void setup()
 // loop to run on 1st cpu core
 void loop(void) // Main loop
 {
-	destiler(); // Destiler function to operate the machine
+	// Created the 'FLAG_INIT_WIFI' to be able to operate the machine while
+	// WIFI is init, this way, user can operate the machine manualy, no need
+	// to wait for WIFI to init
+	if (WiFi.status() != WL_CONNECTED)
+	{
+		sPrintLnStr("WIFI INIT....");
+		initWIFI();	  // Initiate WIFI
+		setupCalls(); // Initiate calls
+	}
+	else
+	{
+		// ProcessWebPage(); // Process WebPage
+		webTimer("*", 0);
+	}
 }
 
 // loop to run on 2nd cpu core
 void loop2(void *pvParameters)
 {
-	// Created the 'FLAG_INIT_WIFI' to be able to operate the machine while
-	// WIFI is init, this way, user can operate the machine manualy, no need
-	// to wait for WIFI to init
 	while (1) // Main loop
 	{
-		if (WiFi.status() != WL_CONNECTED)
-		{
-			sPrintLnStr("WIFI INIT....");
-			initWIFI();	  // Initiate WIFI
-			setupCalls(); // Initiate calls
-		}
-		else
-		{
-			// ProcessWebPage(); // Process WebPage
-			webTimer("*", 0);
-		}
+		destiler(); // Destiler function to operate the machine
 	}
 }
