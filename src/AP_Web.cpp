@@ -374,9 +374,6 @@ void setupCalls()
   server.on("/index2.html", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/web2/index2.html", String(), false, processor); });
 
-  /*server.on("/index2.html", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web2/index2.html", "text/css"); });
-*/
   server.on("/script_actions2.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/web2/script_actions2.js", "text/javascript"); });
 
@@ -397,6 +394,9 @@ void setupCalls()
 
   server.on("/estg_logo.png", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/img/estg_logo.png", "image/png"); });
+
+  server.on("/bg.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/bg.png", "image/png"); });
 
   server.on("/destiller.png", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/img/destiller.png", "image/png"); });

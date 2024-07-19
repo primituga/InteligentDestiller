@@ -6,8 +6,10 @@ html {
 }
 
 body {
-    background-color: #191970;
-    color: #fff
+    /*background-color: #191970;*/
+    color: #fff;
+    background-image: url("bg.png");
+    background-repeat: repeat;
 }
 
 #main {
@@ -22,11 +24,32 @@ body {
     padding: 10px 10px 10px 10px
 }
 
+.topnav {
+    overflow: hidden;
+    background-color: #272c30;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
 .card {
     position: relative;
     max-width: 500px;
     min-height: 600px auto;
-    background: #013220;
+    /*background: #013220;*/
+    background: #272c30;
+    color: #272c30;
     padding: 5px;
     color: #fff;
     margin: 0 auto;
