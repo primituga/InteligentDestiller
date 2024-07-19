@@ -53,6 +53,8 @@ function onloadStatus() {
     getTimerHourData();
     getTimerMinuteData();
     getTimerSecoundData();
+    getWifiSSIDData();
+    getWifiQualityData();
 }
 
 //***********************************************************************
