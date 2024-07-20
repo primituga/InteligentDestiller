@@ -162,7 +162,7 @@ void setupCalls()
   //////////////////////////////////////////////////////////////
   // Routes for handling toggle actions
   //////////////////////////////////////////////////////////////
-  server.on("/toggleAuto", HTTP_GET, [](AsyncWebServerRequest *request)
+  server.on("/toggleAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleToggle("auto").c_str()); });
 
   server.on("/togglePump", HTTP_GET, [](AsyncWebServerRequest *request)

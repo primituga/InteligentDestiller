@@ -13,14 +13,8 @@ void setup()
 // loop to run on 1st cpu core
 void loop(void) // Main loop
 {
-	// Created the 'FLAG_INIT_WIFI' to be able to operate the machine while
-	// WIFI is init, this way, user can operate the machine manualy, no need
-	// to wait for WIFI to init
-	if (WiFi.status() != WL_CONNECTED )
+	if (initWIFI())
 	{
-		initWIFI();	  // Initiate WIFI
-	}
-	else{
 		// ProcessWebPage(); // Process WebPage
 		webTimer("*", 0);
 	}

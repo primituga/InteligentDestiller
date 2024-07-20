@@ -37,7 +37,7 @@ String wifiQuality()
   {
     quality = 0;
   }
-  else if (rssi >= -50)
+  else if (rssi >= -5)
   {
     quality = 100;
   }
@@ -106,7 +106,7 @@ void connectToSoftAP()
   Serial.println(WiFi.softAPIP());
 }
 
-void initWIFI()
+bool initWIFI()
 {
   static bool WIFI_SOFTAP_FLAG = true;
 
@@ -115,6 +115,7 @@ void initWIFI()
     sPrintLnStr("WIFI INIT....");
     connectToWIFI(); // Initiate WiFi
     setupCalls();    // Initiate calls
+    return true;
   }
   else if (WIFI_SOFTAP_FLAG && WIFI_MODE_OPTIONS == 2)
   {
@@ -122,6 +123,7 @@ void initWIFI()
     connectToSoftAP(); // Initiate WiFi in AP mode only
     setupCalls();      // Initiate calls
     WIFI_SOFTAP_FLAG = false;
+    return true;
   }
   else if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 3)
   {
@@ -129,5 +131,8 @@ void initWIFI()
     connectToSoftAP(); // Initiate WiFi in AP mode
     connectToWIFI();   // Initiate WiFi
     setupCalls();      // Initiate calls
+    return true;
+  }else{
+    return false;
   }
 }
