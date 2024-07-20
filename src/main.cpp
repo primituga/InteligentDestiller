@@ -11,11 +11,14 @@ void setup()
 }
 
 // loop to run on 1st cpu core
-void loop(void) // Main loop
-{
+void loop(void)
+{ // Main loop
 	if (initWIFI())
 	{
-		// ProcessWebPage(); // Process WebPage
+		setupRoutes(); // Setup Routes
+	}
+	else
+	{
 		webTimer("*", 0);
 	}
 }

@@ -7,7 +7,7 @@ AsyncWebServer server(80); // Create a webserver object that listens for HTTP re
 //********************************************************************************
 // Setup Calls
 //********************************************************************************
-void setupCalls()
+void setupRoutes()
 {
   //////////////////////////////////////////////////////////////
   // Route for root / and index_webButtons.html

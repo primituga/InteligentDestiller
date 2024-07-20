@@ -114,14 +114,12 @@ bool initWIFI()
   {
     sPrintLnStr("WIFI INIT....");
     connectToWIFI(); // Initiate WiFi
-    setupCalls();    // Initiate calls
     return true;
   }
   else if (WIFI_SOFTAP_FLAG && WIFI_MODE_OPTIONS == 2)
   {
     sPrintLnStr("SoftAP INIT....");
     connectToSoftAP(); // Initiate WiFi in AP mode only
-    setupCalls();      // Initiate calls
     WIFI_SOFTAP_FLAG = false;
     return true;
   }
@@ -130,7 +128,6 @@ bool initWIFI()
     sPrintLnStr("WIFI INIT and SoftAP....");
     connectToSoftAP(); // Initiate WiFi in AP mode
     connectToWIFI();   // Initiate WiFi
-    setupCalls();      // Initiate calls
     return true;
   }else{
     return false;
