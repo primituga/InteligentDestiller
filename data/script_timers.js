@@ -58,7 +58,7 @@ window.addEventListener('load', (event) => {
         getWaterMinData();
         getWaterAlarmData();
         getWaterMaxData();
-    }, 1389);
+    }, 1864);
 });
 
 /*************************************************************************/
