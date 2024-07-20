@@ -25,6 +25,23 @@ body {
     padding: 10px 10px 10px 10px
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+td,th {
+    border: 1px solid #585858;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #20202069;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #272c30;
