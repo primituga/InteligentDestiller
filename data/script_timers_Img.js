@@ -42,11 +42,26 @@ window.addEventListener('load', (event) => {
         if (document.getElementById("waterMax").innerHTML == "1") {
             document.getElementById("tank").src = "sMax.png";
         }
+
         if (document.getElementById("waterMin").innerHTML == "1") {
             document.getElementById("tank").src = "sMin.png";
         }
+
         if (document.getElementById("waterAlarm").innerHTML == "1" && document.getElementById("waterMin").innerHTML == "1") {
             document.getElementById("tank").src = "sAlarm.png";
         }
+
+        if (document.getElementById("autoMode").innerHTML == "1") {
+            document.getElementById("button_Auto").src = "button_ON.png";
+        } else {
+            document.getElementById("button_Auto").src = "button_OFF.png";
+        }
+
+        if (document.getElementById("manualMode").innerHTML == "1") {
+            document.getElementById("button_Man").src = "button_ON.png";
+        } else {
+            document.getElementById("button_Man").src = "button_OFF.png";
+        }
+
     }, 1423);
 });

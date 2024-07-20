@@ -1,6 +1,6 @@
 .card {
     float: right;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .Destiller_img{
@@ -69,5 +69,22 @@
     text-align: center;
     top: 440px;
     left: 605px;
+    transform: translate(0%, -50%);
+}
+
+.button_Auto {
+    position: absolute;
+    text-align: center;
+    top: 108px;
+    left: 719px;
+    transform: translate(0%, -50%);
+    cursor:grab;
+}
+
+.button_Man {
+    position: absolute;
+    text-align: center;
+    top: 209px;
+    left: 719px;
     transform: translate(0%, -50%);
 }

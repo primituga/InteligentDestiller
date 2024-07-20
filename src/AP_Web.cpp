@@ -443,6 +443,12 @@ void setupCalls()
   server.on("/sAlarm.png", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/img/sAlarm.png", "image/png"); });
 
+  server.on("/button_ON.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/button_ON.png", "image/png"); });
+
+  server.on("/button_OFF.png", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/img/button_OFF.png", "image/png"); });
+
   //////////////////////////////////////////////////////////////
   // Route for sensors Handlers
   //////////////////////////////////////////////////////////////
