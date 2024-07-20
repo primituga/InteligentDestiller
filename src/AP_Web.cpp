@@ -9,336 +9,104 @@ AsyncWebServer server(80); // Create a webserver object that listens for HTTP re
 //********************************************************************************
 String handleTimer()
 {
-  String t = String(getTimerHour()) + "h :" + String(getTimerMinute()) + "m :" + String(getTimerSecound()) + "s"; // Read timer
-  return String(t);
+  return String(getTimerHour()) + "h :" + String(getTimerMinute()) + "m :" + String(getTimerSecound()) + "s";
 }
 
-String handleHour()
-{
-  String hour = String(getTimerHour()); // Read timer
-  return String(hour);
-}
-
-String handleMinute()
-{
-  String minute = String(getTimerMinute()); // Read timer
-  return String(minute);
-}
-
-String handleSecound()
-{
-  String secound = String(getTimerSecound()); // Read timer
-  return String(secound);
-}
+String handleHour() { return String(getTimerHour()); }
+String handleMinute() { return String(getTimerMinute()); }
+String handleSecound() { return String(getTimerSecound()); }
 
 //************************************************************************************************
 // Handlers for Wifi Quality, SSID, TX and IP
 //************************************************************************************************
-String handleWifiQuality()
-{
-  String _wifiQuality = wifiQuality();
-  return String(_wifiQuality);
-}
-
-String handleWifiSSID()
-{
-  String _wifiSSID = WiFi.SSID();
-  return String(_wifiSSID);
-}
-
-String handleWifiTX()
-{
-  String _wifiTX = String(WiFi.getTxPower() + " dBm");
-  return String(_wifiTX);
-}
-
-String handleWifiIP()
-{
-  String _wifiIP = String(WiFi.localIP().toString().c_str());
-  return String(_wifiIP);
-}
+String handleWifiQuality() { return wifiQuality(); }
+String handleWifiSSID() { return WiFi.SSID(); }
+String handleWifiTX() { return String(WiFi.getTxPower() + " dBm"); }
+String handleWifiIP() { return WiFi.localIP().toString(); }
 
 //********************************************************************************
 // Timer Add/Remove Time
 //********************************************************************************
-String handleAdd1s()
+String handleTimeAdjust(const String &adjustment)
 {
-  String t = "add1s";
-  add1s(); // Call add1s() function
-  return String(t);
-}
-
-String handleAdd5s()
-{
-  String t = "add15s";
-  add5s();
-  return String(t);
-}
-
-String handleAdd10s()
-{
-  String t = "add10s";
-  add10s();
-  return String(t);
-}
-
-String handleAdd1m()
-{
-  String t = "add1m";
-  add1m();
-  return String(t);
-}
-
-String handleAdd5m()
-{
-  String t = "add5m";
-  add5m();
-  return String(t);
-}
-
-String handlAadd10m()
-{
-  String t = "add10m";
-  add10m();
-  return String(t);
-}
-
-String handleRem1s()
-{
-  String t = "rem1s";
-  rem1s();
-  return String(t);
-}
-
-String handlerem5s()
-{
-  String t = "rem5s";
-  rem5s();
-  return String(t);
-}
-
-String handlerem10s()
-{
-  String t = "rem10s";
-  rem10s();
-  return String(t);
-}
-
-String handlerem1m()
-{
-  String t = "rem1m";
-  rem1m();
-  return String(t);
-}
-
-String handlerem5m()
-{
-  String t = "rem5m";
-  rem5m();
-  return String(t);
-}
-
-String handlerem10m()
-{
-  String t = "rem10m";
-  rem10m();
-  return String(t);
+  if (adjustment == "add1s") add1s();
+  else if (adjustment == "add5s") add5s();
+  else if (adjustment == "add10s") add10s();
+  else if (adjustment == "add1m") add1m();
+  else if (adjustment == "add5m") add5m();
+  else if (adjustment == "add10m") add10m();
+  else if (adjustment == "rem1s") rem1s();
+  else if (adjustment == "rem5s") rem5s();
+  else if (adjustment == "rem10s") rem10s();
+  else if (adjustment == "rem1m") rem1m();
+  else if (adjustment == "rem5m") rem5m();
+  else if (adjustment == "rem10m") rem10m();
+  return adjustment;
 }
 
 //********************************************************************************
 // Timer Start/Stop/Reset
 //********************************************************************************
-String handleTimerStart()
+String handleTimerControl(const String &control)
 {
-  String t = "Timer Start";
-  setTimer(ON);
-  return String(t);
-}
-
-String handleTimerStop()
-{
-  String t = "Timer Stop";
-  setTimer(OFF);
-  return String(t);
-}
-
-String handleTimerReset()
-{
-  String t = "Timer Reset";
-  resetTimer();
-  return String(t);
+  if (control == "start") setTimer(ON);
+  else if (control == "stop") setTimer(OFF);
+  else if (control == "reset") resetTimer();
+  return "Timer " + control;
 }
 
 //************************************************************************************************
 // Handlers for Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax With Response
 //************************************************************************************************
-String handleAuto()
+String handleState(const String &state)
 {
-  String autoMode = String(getAutoMode());
-  return String(autoMode);
-}
-
-String handleManual()
-{
-  String manualMode = String(getManualMode());
-  return String(manualMode);
-}
-
-String handlePump()
-{
-  String pump = String(getPump());
-  return String(pump);
-}
-
-String handleDumpWater()
-{
-  String dumpWater = String(getValv_Water_Out());
-  return String(dumpWater);
-}
-
-String handleResistor()
-{
-  String resistor = String(getResistor());
-  return String(resistor);
-}
-
-String handleWaterIn()
-{
-  String waterIn = String(getValv_Water_In());
-  return String(waterIn);
-}
-
-String handleWaterMax()
-{
-  String waterMax = String(getWaterMax());
-  return String(waterMax);
-}
-
-String handleWaterMin()
-{
-  String waterMin = String(getWaterMin());
-  return String(waterMin);
-}
-
-String handleWaterAlarm()
-{
-  String waterAlarm = String(getWaterAlarm());
-  return String(waterAlarm);
+  if (state == "auto") return String(getAutoMode());
+  else if (state == "manual") return String(getManualMode());
+  else if (state == "pump") return String(getPump());
+  else if (state == "dumpWater") return String(getValv_Water_Out());
+  else if (state == "resistor") return String(getResistor());
+  else if (state == "waterIn") return String(getValv_Water_In());
+  else if (state == "waterMax") return String(getWaterMax());
+  else if (state == "waterMin") return String(getWaterMin());
+  else if (state == "waterAlarm") return String(getWaterAlarm());
+  return String();
 }
 
 //********************************************************************************
 // Handlers for Toggle Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax
 //********************************************************************************
-String handleToggleAuto()
+String handleToggle(const String &toggle)
 {
-  String t = "Auto mode toggled";
-  toggleAutoModeWEB();
-  return String(t);
+  if (toggle == "auto") toggleAutoModeWEB();
+  else if (toggle == "pump") togglePump();
+  else if (toggle == "dumpWater") toggleValveWaterOut();
+  else if (toggle == "waterIn") toggleValveWaterIn();
+  else if (toggle == "resistor") toggleResistor();
+  return toggle + " toggled";
 }
 
-String handleTogglePump()
-{
-  String t = "Pump toggled";
-  togglePump();
-  return String(t);
-}
-
-String handleToggleDumpWater()
-{
-  String t = "Dump Condensor toggled";
-  toggleValveWaterOut();
-  return String(t);
-}
-
-String handleToggleWaterIn()
-{
-  String t = "Water In toggled";
-  toggleValveWaterIn();
-  return String(t);
-}
-
-String handleToggleResistor()
-{
-  String t = "Resistor toggled";
-  toggleResistor();
-  return String(t);
-}
-
-//////////////////////////////////////////////////////////////
+//********************************************************************************
 // Function to handle the HTTP requests for the variables
-//////////////////////////////////////////////////////////////
+//********************************************************************************
 String processor(const String &var)
 {
-  // Serial.println(var);
-  if (var == "TIMER")
-  {
-    return handleTimer();
-  } // Read Timer
-  else if (var == "WATERMAX")
-  {
-    return String(handleWaterMax());
-  } // Read WaterMax
-  else if (var == "WATERMIN")
-  {
-    return String(handleWaterMin());
-  } // Read WaterMin
-  else if (var == "WATERALARM")
-  {
-    return String(handleWaterAlarm());
-  } // Read WaterAlarm
-  else if (var == "WIFIQUALITY")
-  {
-    return handleWifiQuality();
-  } // Read Wifi Quality
-  else if (var == "WIFISSID")
-  {
-    return handleWifiSSID();
-  } // Read Wifi SSID
-  else if (var == "WIFITX")
-  {
-    return handleWifiTX();
-  } // Read Wifi TX
-  else if (var == "WIFIIP")
-  {
-    return handleWifiIP();
-  } // Read Wifi IP
-  else if (var == "AUTO")
-  {
-    return handleAuto();
-  } // Read Auto
-  else if (var == "MANUAL")
-  {
-    return handleManual();
-  } // Read Manual
-  else if (var == "PUMP")
-  {
-    return handlePump();
-  } // Read Pump
-  else if (var == "DUMPWATER")
-  {
-    return handleDumpWater();
-  } // Read DumpWater
-  else if (var == "RESISTOR")
-  {
-    return handleResistor();
-  } // Read Resistor
-  else if (var == "WATERIN")
-  {
-    return handleWaterIn();
-  } // Read WaterIn
-  else if (var == "TIMERHOUR")
-  {
-    return handleHour();
-  } // Read Timer Hour
-  else if (var == "TIMERMINUTE")
-  {
-    return handleMinute();
-  } // Read Timer Minute
-  else if (var == "TIMERSECOUND")
-  {
-    return handleSecound();
-  } // Read Timer Secound
-
+  if (var == "TIMER") return handleTimer();
+  if (var == "WATERMAX") return handleState("waterMax");
+  if (var == "WATERMIN") return handleState("waterMin");
+  if (var == "WATERALARM") return handleState("waterAlarm");
+  if (var == "AUTO") return handleState("auto");
+  if (var == "MANUAL") return handleState("manual");
+  if (var == "PUMP") return handleState("pump");
+  if (var == "DUMPWATER") return handleState("dumpWater");
+  if (var == "RESISTOR") return handleState("resistor");
+  if (var == "WATERIN") return handleState("waterIn");
+  if (var == "WIFIQUALITY") return handleWifiQuality();
+  if (var == "WIFISSID") return handleWifiSSID();
+  if (var == "WIFITX") return handleWifiTX();
+  if (var == "WIFIIP") return handleWifiIP();
+  if (var == "TIMERHOUR") return handleHour();
+  if (var == "TIMERMINUTE") return handleMinute();
+  if (var == "TIMERSECOUND") return handleSecound();
   return String(); // Return nothing
 }
 
@@ -359,7 +127,6 @@ void setupCalls()
   //////////////////////////////////////////////////////////////
   // Route for CSS files
   //////////////////////////////////////////////////////////////
-
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/style.css", "text/css"); });
 
@@ -372,7 +139,6 @@ void setupCalls()
   //////////////////////////////////////////////////////////////
   // Route JS files
   //////////////////////////////////////////////////////////////
-
   server.on("/script_actions.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/script_actions.js", "text/javascript"); });
 
@@ -384,7 +150,6 @@ void setupCalls()
 
   server.on("/script_timers_Img.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/script_timers_Img.js", "text/javascript"); });
-  ///////
 
   server.on("/script_timers_2.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/web_2/script_timers_2.js", "text/javascript"); });
@@ -450,16 +215,103 @@ void setupCalls()
             { request->send(SPIFFS, "/img/button_OFF.png", "image/png"); });
 
   //////////////////////////////////////////////////////////////
-  // Route for sensors Handlers
+  // Routes for handling time adjustments
   //////////////////////////////////////////////////////////////
+  server.on("/add1s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("add1s").c_str()); });
+
+  server.on("/add5s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("add5s").c_str()); });
+
+  server.on("/add10s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("add10s").c_str()); });
+
+  server.on("/add1m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("add1m").c_str()); });
+
+  server.on("/add5m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("add5m").c_str()); });
+
+  server.on("/add10m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("add10m").c_str()); });
+
+  server.on("/rem1s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("rem1s").c_str()); });
+
+  server.on("/rem5s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("rem5s").c_str()); });
+
+  server.on("/rem10s", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("rem10s").c_str()); });
+
+  server.on("/rem1m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("rem1m").c_str()); });
+
+  server.on("/rem5m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("rem5m").c_str()); });
+
+  server.on("/rem10m", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimeAdjust("rem10m").c_str()); });
+
+  //////////////////////////////////////////////////////////////
+  // Routes for handling timer control
+  //////////////////////////////////////////////////////////////
+  server.on("/startTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerControl("start").c_str()); });
+
+  server.on("/stopTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerControl("stop").c_str()); });
+
+  server.on("/resetTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimerControl("reset").c_str()); });
+
+  //////////////////////////////////////////////////////////////
+  // Routes for handling toggle actions
+  //////////////////////////////////////////////////////////////
+  server.on("/toggleAuto", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggle("auto").c_str()); });
+
+  server.on("/togglePump", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggle("pump").c_str()); });
+
+  server.on("/toggleDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggle("dumpWater").c_str()); });
+
+  server.on("/toggleWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggle("waterIn").c_str()); });
+
+  server.on("/toggleResistor", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggle("resistor").c_str()); });
+
+  //////////////////////////////////////////////////////////////
+  // Routes for handling state actions
+  //////////////////////////////////////////////////////////////
+  server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("auto").c_str()); });
+
+  server.on("/readManualMode", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("manual").c_str()); });
+
+  server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("pump").c_str()); });
+
+  server.on("/readDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("dumpWater").c_str()); });
+
+  server.on("/readResistor", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("resistor").c_str()); });
+
+  server.on("/readWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("waterIn").c_str()); });
+
   server.on("/readWaterMax", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleWaterMax().c_str()); });
+            { request->send_P(200, "text/plain", handleState("waterMax").c_str()); });
 
   server.on("/readWaterMin", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleWaterMin().c_str()); });
+            { request->send_P(200, "text/plain", handleState("waterMin").c_str()); });
 
   server.on("/readWaterAlarm", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleWaterAlarm().c_str()); });
+            { request->send_P(200, "text/plain", handleState("waterAlarm").c_str()); });
 
   //////////////////////////////////////////////////////////////
   // Route for WiFi Handlers
@@ -492,95 +344,7 @@ void setupCalls()
             { request->send_P(200, "text/plain", handleSecound().c_str()); });
 
   //////////////////////////////////////////////////////////////
-  // Route for Timer Start/Stop/Reset Handlers
+  // Start Server
   //////////////////////////////////////////////////////////////
-  server.on("/startTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimerStart().c_str()); });
-
-  server.on("/stopTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimerStop().c_str()); });
-
-  server.on("/resetTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimerReset().c_str()); });
-
-  //////////////////////////////////////////////////////////////
-  // Route for Add/Remove Time Handlers
-  //////////////////////////////////////////////////////////////
-  server.on("/add1s", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAdd1s().c_str()); });
-
-  server.on("/add5s", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAdd5s().c_str()); });
-
-  server.on("/add10s", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAdd10s().c_str()); });
-
-  server.on("/add1m", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAdd1m().c_str()); });
-
-  server.on("/add5m", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAdd5m().c_str()); });
-
-  server.on("/add10m", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlAadd10m().c_str()); });
-
-  server.on("/rem1s", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleRem1s().c_str()); });
-
-  server.on("/rem5s", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlerem5s().c_str()); });
-
-  server.on("/rem10s", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlerem10s().c_str()); });
-
-  server.on("/rem1m", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlerem1m().c_str()); });
-
-  server.on("/rem5m", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlerem5m().c_str()); });
-
-  server.on("/rem10m", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlerem10m().c_str()); });
-
-  //////////////////////////////////////////////////////////////
-  // Route for Toggle Handlers
-  //////////////////////////////////////////////////////////////
-  server.on("/togglePump", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTogglePump().c_str()); });
-
-  server.on("/toggleDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleToggleDumpWater().c_str()); });
-
-  server.on("/toggleWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleToggleWaterIn().c_str()); });
-
-  server.on("/toggleResistor", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleToggleResistor().c_str()); });
-
-  server.on("/toggleAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleToggleAuto().c_str()); });
-
-  //////////////////////////////////////////////////////////////
-  // Route for Read Handlers
-  //////////////////////////////////////////////////////////////
-  server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleAuto().c_str()); });
-
-  server.on("/readManualMode", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleManual().c_str()); });
-
-  server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handlePump().c_str()); });
-
-  server.on("/readDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleDumpWater().c_str()); });
-
-  server.on("/readResistor", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleResistor().c_str()); });
-
-  server.on("/readWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleWaterIn().c_str()); });
-
-  server.begin(); // Start the HTTP server
-  Serial.println("HTTP server started");
+  server.begin();
 }
