@@ -136,6 +136,7 @@ byte getStatusFromEeprom();                             // Get status from EEPRO
 //********************************************************************************
 
 // WIFI Functions calls
+#define WIFI_MODE_OPTIONS 1                 // 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
 void initWIFI();                            // Inicia o wifi
 String wifiQuality();                       // Retorna a qualidade do wifi 
 

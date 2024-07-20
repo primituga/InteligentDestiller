@@ -16,14 +16,11 @@ void loop(void) // Main loop
 	// Created the 'FLAG_INIT_WIFI' to be able to operate the machine while
 	// WIFI is init, this way, user can operate the machine manualy, no need
 	// to wait for WIFI to init
-	if (WiFi.status() != WL_CONNECTED)
+	if (WiFi.status() != WL_CONNECTED )
 	{
-		sPrintLnStr("WIFI INIT....");
 		initWIFI();	  // Initiate WIFI
-		setupCalls(); // Initiate calls
 	}
-	else
-	{
+	else{
 		// ProcessWebPage(); // Process WebPage
 		webTimer("*", 0);
 	}
