@@ -10,7 +10,7 @@ void initFS()
   // Initialize SPIFFS
   if (!SPIFFS.begin(true))
   {
-    Serial.println("An Error has occurred while mounting SPIFFS");
+    sPrintLnStr("An Error has occurred while mounting SPIFFS");
     return;
   }
 }

@@ -18,6 +18,9 @@ void setupRoutes()
   server.on("/index_2.html", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/web_2/index_2.html", String(), false, processor); });
 
+  server.on("/index_Abt.html", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web_Abt/index_Abt.html", String(), false, processor); });
+
   //////////////////////////////////////////////////////////////
   // Route for CSS files
   //////////////////////////////////////////////////////////////
@@ -25,7 +28,10 @@ void setupRoutes()
             { request->send(SPIFFS, "/style.css", "text/css"); });
 
   server.on("/style_2.css", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web_2/style2.css", "text/css"); });
+            { request->send(SPIFFS, "/web_2/style_2.css", "text/css"); });
+
+  server.on("/style_Abt.css", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web_Abt/style_Abt.css", "text/css"); });
 
   server.on("/style_Img.css", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/style_Img.css", "text/css"); });
@@ -47,6 +53,9 @@ void setupRoutes()
 
   server.on("/script_timers_2.js", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(SPIFFS, "/web_2/script_timers_2.js", "text/javascript"); });
+
+  server.on("/script_Abt.js", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send(SPIFFS, "/web_Abt/script_Abt.js", "text/javascript"); });
 
   //////////////////////////////////////////////////////////////
   // Route for image files

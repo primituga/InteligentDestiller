@@ -12,16 +12,16 @@ void OnWiFiEvent(WiFiEvent_t event)
   switch (event)
   {
   case SYSTEM_EVENT_STA_CONNECTED:
-    Serial.println("ESP32 Connected to WiFi Network");
+    sPrintLnStr("ESP32 Connected to WiFi Network");
     break;
   case SYSTEM_EVENT_AP_START:
-    Serial.println("ESP32 soft AP started");
+    sPrintLnStr("ESP32 soft AP started");
     break;
   case SYSTEM_EVENT_AP_STACONNECTED:
-    Serial.println("Station connected to ESP32 soft AP");
+    sPrintLnStr("Station connected to ESP32 soft AP");
     break;
   case SYSTEM_EVENT_AP_STADISCONNECTED:
-    Serial.println("Station disconnected from ESP32 soft AP");
+    sPrintLnStr("Station disconnected from ESP32 soft AP");
     break;
   default:
     break;
@@ -64,7 +64,7 @@ void connectToWIFI()
 
   if (!wifiManager.autoConnect("DestilerAP"))
   {
-    Serial.println("Failed to connect");
+    sPrintLnStr("Failed to connect");
     return;
   }
 
@@ -74,17 +74,17 @@ void connectToWIFI()
   // saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
 
   WiFi.begin(ssid.c_str(), password.c_str());
-
-  Serial.print("====Connected to: ");
-  Serial.println(WiFi.SSID());
-  Serial.print("====TxPower: ");
-  Serial.print(WiFi.getTxPower());
-  Serial.println(" dBm");
-  Serial.println(wifiQuality());
-  Serial.println("Hostname: " + String(WiFi.getHostname()));
-  Serial.println("wmHostname: " + wifiManager.getWiFiHostname());
-  Serial.print("ESP32 IP on the WiFi network: ");
-  Serial.println(WiFi.localIP());
+  delay(100);
+  sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));
+  sPrintLnStr("--wmHostname: " + wifiManager.getWiFiHostname());
+  //Serial.print("--ESP32 IP on the WiFi network: ");
+  //sPrintLnStr(WiFi.localIP().toString());
+  //Serial.print("--Connected to: ");
+  //Serial.println(WiFi.SSID());
+  sPrintStr("--TxPower: ");
+  sPrintStr(String(WiFi.getTxPower()));
+  sPrintLnStr(" dBm");
+  sPrintLnStr("--" + wifiQuality());
 }
 
 void connectToSoftAP()
@@ -101,9 +101,9 @@ void connectToSoftAP()
                     IPAddress(192, 168, 100, 1),   // Gateway IP
                     IPAddress(255, 255, 255, 0));  // Subnet Mask
 
-  Serial.println("Hostname: " + String(WiFi.getHostname()));
-  Serial.print("ESP32 IP as soft AP: ");
-  Serial.println(WiFi.softAPIP());
+  sPrintLnStr("Hostname: " + String(WiFi.getHostname()));
+  sPrintStr("ESP32 IP as soft AP: ");
+  sPrintLnStr(WiFi.softAPIP().toString());
 }
 
 bool initWIFI()
