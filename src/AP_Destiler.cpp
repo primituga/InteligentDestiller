@@ -61,7 +61,7 @@ void destiler()
     /* WORKING BLOCK                                                        */
     /************************************************************************/
 
-    if (!getManualMode()) // If manual mode is off
+    /*if (!getManualMode()) // If manual mode is off
     {
         if (getAutoMode() && getTimerStatus()) // If auto mode is on
         {
@@ -140,5 +140,5 @@ void destiler()
             workingIdle();
             IDDLE_FLAG = ON;
         }
-    }
+    }*/
 }

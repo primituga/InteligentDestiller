@@ -7,120 +7,452 @@ bool ALARM_STATE;
 /************************************************************************/
 void initPinsInputs()
 {
-    const uint8_t inputPins[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM};
-    for (uint8_t pin : inputPins) {
-        pinMode(pin, INPUT);
-    }
+    pinMode(PIN_SW_MAN, INPUT); // on/off sw
+    pinMode(PIN_SMIN, INPUT);
+    pinMode(PIN_SMAX, INPUT);
+    pinMode(PIN_SW_AUTO, INPUT); // push sw
+    pinMode(PIN_SALARM, INPUT);
 }
 
 /************************************************************************/
-/* INIT OUTPUT PINS BLOCK                                               */
+/* INIT OUTUP PINS BLOCK                                                */
 /************************************************************************/
 void initPinsOutputs()
 {
-    const uint8_t outputPins[] = {
-        PIN_RAQ, PIN_VALV_WATER_IN, PIN_VALV_WATER_OUT, PIN_BMB,
-        PIN_IND_MIN, PIN_IND_MAX, PIN_IND_ALARM, PIN_IND_MAN, PIN_IND_AUTO
-    };
-    for (uint8_t pin : outputPins) {
-        pinMode(pin, OUTPUT);
-    }
+    pinMode(PIN_RAQ, OUTPUT);
+    pinMode(PIN_VALV_WATER_IN, OUTPUT);
+    pinMode(PIN_VALV_WATER_OUT, OUTPUT);
+    pinMode(PIN_BMB, OUTPUT);
+    pinMode(PIN_IND_MIN, OUTPUT);
+    pinMode(PIN_IND_MAX, OUTPUT);
+    pinMode(PIN_IND_ALARM, OUTPUT);
+    pinMode(PIN_IND_MAN, OUTPUT);
+    pinMode(PIN_IND_AUTO, OUTPUT);
 }
 
 /************************************************************************/
 /* GETS BLOCK                                                           */
 /************************************************************************/
-#define DEFINE_GETTER(name, pin, activeState) \
-bool name() { return digitalRead(pin) == activeState ? ON : OFF; }
+bool getWaterMax()
+{
+    if (digitalRead(PIN_SMAX) == OFF)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
 
-DEFINE_GETTER(getWaterMax, PIN_SMAX, OFF)
-DEFINE_GETTER(getWaterMin, PIN_SMIN, ON)
-DEFINE_GETTER(getWaterAlarm, PIN_SALARM, ON)
-DEFINE_GETTER(getAutoMode, PIN_IND_AUTO, ON)
-DEFINE_GETTER(getAutoModeSW, PIN_SW_AUTO, ON)
-DEFINE_GETTER(getManualMode, PIN_SW_MAN, ON)
-DEFINE_GETTER(getResistor, PIN_RAQ, ON)
-DEFINE_GETTER(getValv_Water_In, PIN_VALV_WATER_IN, ON)
-DEFINE_GETTER(getValv_Water_Out, PIN_VALV_WATER_OUT, ON)
-DEFINE_GETTER(getPump, PIN_BMB, ON)
-DEFINE_GETTER(getAlarm, PIN_SALARM, ON)
+bool getWaterMin()
+{
+    if (digitalRead(PIN_SMIN) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getWaterAlarm()
+{
+    if (digitalRead(PIN_SALARM) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getAutoMode()
+{
+    if (digitalRead(PIN_IND_AUTO) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getAutoModeSW()
+{
+    if (digitalRead(PIN_SW_AUTO) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getManualMode()
+{
+    if (digitalRead(PIN_SW_MAN) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getResistor()
+{
+    if (digitalRead(PIN_RAQ) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getValv_Water_In()
+{
+    if (digitalRead(PIN_VALV_WATER_IN) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getValv_Water_Out()
+{
+    if (digitalRead(PIN_VALV_WATER_OUT) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getPump()
+{
+    if (digitalRead(PIN_BMB) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
+
+bool getAlarm()
+{
+    // if (ALARM_STATE == ON )
+    if (digitalRead(PIN_SALARM) == ON)
+    {
+        return ON;
+    }
+    else
+    {
+        return OFF;
+    }
+}
 
 /************************************************************************/
 /* SETS BLOCK                                                           */
 /************************************************************************/
 
-void setPinState(uint8_t pin, bool state, bool& oldState, const char* debugMsg)
+bool deBouncing(bool _getInPutState, String _debugLog)
 {
-    if (state != oldState) {
-        digitalWrite(pin, state);
-        if (DEBUG) {
-            sPrintLnStr(debugMsg);
+    static int buttonState = 0;     // current state of the button
+    static int lastButtonState = 0; // previous state of the button
+
+    static int currentButtonState = 0;         // current state of the button
+    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
+
+    currentButtonState = _getInPutState; // read the state of the switch into a local variable
+
+    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
+    {
+        lastDebounceTime = millis(); // reset the debouncing timer
+    }
+    bool returnState;
+    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
+    {
+        if (currentButtonState != buttonState) // if the button state has changed
+        {
+            buttonState = currentButtonState; // save the new state
+            if (buttonState == OFF)           // if the button state is HIGH
+            {
+                if (DEBUG)
+                    sPrintStr(_debugLog + buttonState);
+                returnState = buttonState;
+            }
+            else
+            {
+                if (DEBUG)
+                    sPrintStr(_debugLog + buttonState);
+
+                returnState = buttonState;
+            }
         }
-        oldState = state;
+    }
+    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
+    Serial.println("deb" + returnState);
+    return returnState;
+}
+
+void setIndMax(bool state)
+{
+    static bool OLDSTATE;
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_IND_MAX, ON);
+        if (DEBUG)
+            sPrintLnStr("setIndMax ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_IND_MAX, OFF);
+        if (DEBUG)
+            sPrintLnStr("setIndMax OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
     }
 }
 
-void setIndMax(bool state) {
+void setIndMin(bool state)
+{
     static bool OLDSTATE;
-    setPinState(PIN_IND_MAX, state, OLDSTATE, state ? "setIndMax ON" : "setIndMax OFF");
-}
-
-void setIndMin(bool state) {
-    static bool OLDSTATE;
-    setPinState(PIN_IND_MIN, state, OLDSTATE, state ? "setIndMin ON" : "setIndMin OFF");
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_IND_MIN, ON);
+        if (DEBUG)
+            sPrintLnStr("setIndMin ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_IND_MIN, OFF);
+        if (DEBUG)
+            sPrintLnStr("setIndMin OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
+    }
 }
 
 void setIndAlarm(bool state)
 {
     static bool OLDSTATE;
     static unsigned long previousTimer = 0;
+    unsigned long currentTimer = millis();
 
-    if (state) {
+    if (state == ON)
+    {
         ALARM_STATE = ON;
-        unsigned long currentTimer = millis();
-        if (currentTimer - previousTimer > (digitalRead(PIN_IND_ALARM) ? ALARM_TIME_ON : ALARM_TIME_OFF)) {
-            digitalWrite(PIN_IND_ALARM, !digitalRead(PIN_IND_ALARM));
-            previousTimer = currentTimer;
+        if (millis() - previousTimer > ALARM_TIME_ON)
+        {
+            digitalWrite(PIN_IND_ALARM, OFF);
+            previousTimer = millis();
         }
-    } else if (OLDSTATE) {
+        else if (millis() - previousTimer > ALARM_TIME_OFF)
+        {
+            digitalWrite(PIN_IND_ALARM, ON);
+        }
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
         ALARM_STATE = OFF;
         digitalWrite(PIN_IND_ALARM, OFF);
     }
 
-    if (state != OLDSTATE) {
-        if (DEBUG) {
-            sPrintLnStr(state ? "setIndAlarm ON" : "setIndAlarm OFF");
-        }
+    //  Condition to debug
+    if (state == ON && OLDSTATE == OFF)
+    {
+        if (DEBUG)
+            sPrintLnStr("setIndAlarm ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        if (DEBUG)
+            sPrintLnStr("setIndAlarm OFF");
         OLDSTATE = state;
     }
 }
 
-void setIndMan(bool state) {
-    static bool OLDSTATE;
-    setPinState(PIN_IND_MAN, state, OLDSTATE, state ? "setIndMan ON" : "setIndMan OFF");
+void setIndMan(bool state)
+{
+    //Serial.println("set" );
+    //Serial.println( PIN_IND_MAN );
+    //Serial.println(deBouncing(getManualMode(), "setManMonde"));
+
+    //digitalWrite(PIN_IND_MAN, deBouncing(getManualMode(), "setIndMan "));
+    static int buttonState = 0;     // current state of the button
+    static int lastButtonState = 0; // previous state of the button
+
+    static int currentButtonState = 0;         // current state of the button
+    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
+
+    currentButtonState = getManualMode(); // read the state of the switch into a local variable
+
+    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
+    {
+        lastDebounceTime = millis(); // reset the debouncing timer
+    }
+
+    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
+    {
+        if (currentButtonState != buttonState) // if the button state has changed
+        {
+            buttonState = currentButtonState; // save the new state
+            if (buttonState == ON)            // if the button state is HIGH
+            {
+                if (DEBUG)
+                    sPrintLnStr("_setIndMan OFF");
+                digitalWrite(PIN_IND_MAN, OFF);
+                // setIndMan(OFF); // Toggle Auto Mode
+            }
+            else if (buttonState == OFF)
+            {
+                if (DEBUG)
+                    sPrintLnStr("_setIndMan ON");
+                digitalWrite(PIN_IND_MAN, ON);
+                // setIndMan(ON); // Toggle Auto Mode
+            }
+        }
+    }
+    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
 }
 
-void setAutoMode(bool state) {
+void setAutoMode(bool state)
+{
     static bool OLDSTATE;
-    setPinState(PIN_IND_AUTO, state, OLDSTATE, state ? "setAutoMode ON" : "setAutoMode OFF");
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_IND_AUTO, ON);
+        if (DEBUG)
+            sPrintLnStr("setAutoMode ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_IND_AUTO, OFF);
+        if (DEBUG)
+            sPrintLnStr("setAutoMode OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
+    }
 }
 
-void setPump(bool state) {
+void setPump(bool state)
+{
     static bool OLDSTATE;
-    setPinState(PIN_BMB, state, OLDSTATE, state ? "setPump ON" : "setPump OFF");
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_BMB, ON);
+        if (DEBUG)
+            sPrintLnStr("setPump ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_BMB, OFF);
+        if (DEBUG)
+            sPrintLnStr("setPump OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
+    }
 }
 
-void setValveWaterIn(bool state) {
+void setValveWaterIn(bool state)
+{
     static bool OLDSTATE;
-    setPinState(PIN_VALV_WATER_IN, state, OLDSTATE, state ? "setValveWaterIn ON" : "setValveWaterIn OFF");
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_VALV_WATER_IN, ON);
+        if (DEBUG)
+            sPrintLnStr("setValveWaterIn ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_VALV_WATER_IN, OFF);
+        if (DEBUG)
+            sPrintLnStr("setValveWaterIn OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
+    }
 }
 
-void setValveWaterOut(bool state) {
+void setValveWaterOut(bool state)
+{
     static bool OLDSTATE;
-    setPinState(PIN_VALV_WATER_OUT, state, OLDSTATE, state ? "setValveWaterOut ON" : "setValveWaterOut OFF");
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_VALV_WATER_OUT, ON);
+        if (DEBUG)
+            sPrintLnStr("setValveWaterOut ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_VALV_WATER_OUT, OFF);
+        if (DEBUG)
+            sPrintLnStr("setValveWaterOut OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
+    }
 }
 
-void setResistor(bool state) {
+void setResistor(bool state)
+{
     static bool OLDSTATE;
-    setPinState(PIN_RAQ, state, OLDSTATE, state ? "setResistor ON" : "setResistor OFF");
+    if (state == ON && OLDSTATE == OFF)
+    {
+        digitalWrite(PIN_RAQ, ON);
+        if (DEBUG)
+            sPrintLnStr("setResistor ON");
+        OLDSTATE = state;
+    }
+    else if (state == OFF && OLDSTATE == ON)
+    {
+        digitalWrite(PIN_RAQ, OFF);
+        if (DEBUG)
+            sPrintLnStr("setResistor OFF");
+        OLDSTATE = state;
+    }
+    else
+    {
+        OLDSTATE = state;
+    }
 }

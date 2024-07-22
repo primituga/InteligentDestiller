@@ -1,5 +1,7 @@
 #include "MD.h"
 
+
+
 void toggleAutoMode() // Toggle Auto Mode
 {
     static int buttonState = 0;     // current state of the button
@@ -44,6 +46,39 @@ void toggleAutoModeWEB() // Toggle Auto Mode
         state = !state;
         setAutoMode(state);
     }
+}
+
+void toggleManualMode() // Toggle Auto Mode
+{
+    static int buttonState = 0;     // current state of the button
+    static int lastButtonState = 0; // previous state of the button
+
+    static int currentButtonState = 0;         // current state of the button
+    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
+
+    currentButtonState = getManualMode(); // read the state of the switch into a local variable
+
+    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
+    {
+        lastDebounceTime = millis(); // reset the debouncing timer
+    }
+
+    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
+    {
+        if (currentButtonState != buttonState) // if the button state has changed
+        {
+            buttonState = currentButtonState; // save the new state
+            if (buttonState == OFF)           // if the button state is HIGH
+            {
+                setIndMan(OFF); // Toggle Auto Mode
+            }
+            else{
+                setIndMan(ON); // Toggle Auto Mode
+            }
+        }
+    }
+    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
 }
 
 void togglePump() // Toggle Pump
@@ -109,6 +144,10 @@ void toggleResistor() // Toggle Resistor
     }
 }
 
+/************************************************************************/
+/* DESTILLER STATE MANAGEMENT BLOCK                                     */
+/************************************************************************/
+
 void workingMax()
 { // Working state when water level is max
     setResistor(ON);
@@ -137,7 +176,7 @@ void workingAlarm()
 }
 
 void workingIdle()
-{   // Working state when water level is idle
+{ // Working state when water level is idle
     setResistor(OFF);
     setValveWaterIn(OFF);
     setValveWaterOut(ON);
@@ -171,7 +210,7 @@ void indicatorsManagement()
     {
         setIndMax(ON);
     }
-    else
+    else if (!getWaterMax())
     {
         setIndMax(OFF);
     }
@@ -180,7 +219,7 @@ void indicatorsManagement()
     {
         setIndMin(ON);
     }
-    else
+    else if (!getWaterMin())
     {
         setIndMin(OFF);
     }
@@ -189,7 +228,7 @@ void indicatorsManagement()
     {
         setIndAlarm(ON);
     }
-    else
+    else if (!getWaterAlarm())
     {
         setIndAlarm(OFF);
     }
@@ -198,7 +237,7 @@ void indicatorsManagement()
     {
         setIndMan(ON);
     }
-    else
+    else if (!getManualMode())
     {
         setIndMan(OFF);
     }
