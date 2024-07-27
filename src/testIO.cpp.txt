@@ -1,0 +1,140 @@
+#include "OS.h"
+
+#define PIN_SW_MAN 26  // Interruptor  de modo manual
+#define PIN_SMIN 27    // Sensor de nivel agua minimo
+#define PIN_SMAX 14    // Sensor de nivel agua maximo
+#define PIN_SW_AUTO 32 // Botão  de modo auto
+#define PIN_SALARM 25  // Botão  de modo alarme
+
+// Output Pins Definitions
+#define PIN_RAQ 23            // Resistencia aquecimento
+#define PIN_BMB 22            // Bomba agua
+#define PIN_VALV_WATER_OUT 21 // Valvula descarga vapor
+#define PIN_VALV_WATER_IN 19  // Valvula entrada agua fria
+#define PIN_IND_ALARM 18      // Indicador luminoso alarme
+#define PIN_IND_MIN 05        // Indicador luminoso de nivel agua minimo
+#define PIN_IND_MAX 04        // Indicador luminoso de nivel agua maximo
+#define PIN_IND_AUTO 15       // Indicador luminoso modo auto
+#define PIN_IND_MAN 33        // Indicador luminoso modo manual
+
+void setup()
+{
+    pinMode(PIN_SW_MAN, INPUT); // on/off sw
+    pinMode(PIN_SMIN, INPUT);
+    pinMode(PIN_SMAX, INPUT);
+    pinMode(PIN_SW_AUTO, INPUT); // push sw
+    pinMode(PIN_SALARM, INPUT);
+
+    pinMode(PIN_RAQ, OUTPUT);
+    pinMode(PIN_VALV_WATER_IN, OUTPUT);
+    pinMode(PIN_VALV_WATER_OUT, OUTPUT);
+    pinMode(PIN_BMB, OUTPUT);
+    pinMode(PIN_IND_MIN, OUTPUT);
+    pinMode(PIN_IND_MAX, OUTPUT);
+    pinMode(PIN_IND_ALARM, OUTPUT);
+    pinMode(PIN_IND_MAN, OUTPUT);
+    pinMode(PIN_IND_AUTO, OUTPUT);
+
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    static int oPIN_SW_MAN, oPIN_SMIN, oPIN_SMAX, oPIN_SW_AUTO, oPIN_SALARM;
+    // static int oPIN_RAQ, oPIN_BMB, oPIN_VALV_WATER_OUT, oPIN_VALV_WATER_IN, oPIN_IND_ALARM, oPIN_IND_MIN, oPIN_IND_MAX, oPIN_IND_AUTO, oPIN_IND_MAN;
+
+    int SW_AUTO = digitalRead(PIN_SW_AUTO);
+    int SW_MAN = digitalRead(PIN_SW_MAN);
+    int SMAX = digitalRead(PIN_SMAX);
+    int SMIN = digitalRead(PIN_SMIN);
+    int SALARM = digitalRead(PIN_SALARM);
+
+    if (SW_AUTO != oPIN_SW_AUTO)
+    {
+        Serial.print("PIN_SW_AUTO ");
+        Serial.println(SW_AUTO);
+        oPIN_SW_AUTO = SW_AUTO;
+    }
+
+    if (SW_MAN != oPIN_SW_MAN)
+    {
+        Serial.print("PIN_SW_MAN ");
+        Serial.println(SW_MAN);
+        oPIN_SW_MAN = SW_MAN;
+    }
+
+    if (SMAX != oPIN_SMAX)
+    {
+        Serial.print("PIN_SMAX ");
+        Serial.println(SMAX);
+        oPIN_SMAX = SMAX;
+    }
+
+    if (SMIN != oPIN_SMIN)
+    {
+        Serial.print("PIN_SMIN ");
+        Serial.println(SMIN);
+        oPIN_SMIN = SMIN;
+    }
+
+    if (SALARM != oPIN_SALARM)
+    {
+        Serial.print("PIN_SALARM ");
+        Serial.println(SALARM);
+        oPIN_SALARM = SALARM;
+    } /*
+     if (digitalRead(PIN_RAQ) != oPIN_RAQ)
+     {
+         Serial.print("PIN_RAQ ");
+         Serial.println(digitalRead(PIN_RAQ));
+         oPIN_RAQ = digitalRead(PIN_RAQ);
+     }
+     if (digitalRead(PIN_BMB) != oPIN_BMB)
+     {
+         Serial.print("PIN_BMB ");
+         Serial.println(digitalRead(PIN_BMB));
+         oPIN_BMB = digitalRead(PIN_BMB);
+     }
+     if (digitalRead(PIN_VALV_WATER_OUT) != oPIN_VALV_WATER_OUT)
+     {
+         Serial.print("PIN_VALV_WATER_OUT ");
+         Serial.println(digitalRead(PIN_VALV_WATER_OUT));
+         oPIN_VALV_WATER_OUT = digitalRead(PIN_VALV_WATER_OUT);
+     }
+     if (digitalRead(PIN_VALV_WATER_IN) != oPIN_VALV_WATER_IN)
+     {
+         Serial.print("PIN_VALV_WATER_IN ");
+         Serial.println(digitalRead(PIN_VALV_WATER_IN));
+         oPIN_VALV_WATER_IN = digitalRead(PIN_VALV_WATER_IN);
+     }
+     if (digitalRead(PIN_IND_ALARM) != oPIN_IND_ALARM)
+     {
+         Serial.print("PIN_IND_ALARM ");
+         Serial.println(digitalRead(PIN_IND_ALARM));
+         oPIN_IND_ALARM = digitalRead(PIN_IND_ALARM);
+     }
+     if (digitalRead(PIN_IND_MIN) != oPIN_IND_MIN)
+     {
+         Serial.print("PIN_IND_MIN ");
+         Serial.println(digitalRead(PIN_IND_MIN));
+         oPIN_IND_MIN = digitalRead(PIN_IND_MIN);
+     }
+     if (digitalRead(PIN_IND_MAX) != oPIN_IND_MAX)
+     {
+         Serial.print("PIN_IND_MAX ");
+         Serial.println(digitalRead(PIN_IND_MAX));
+         oPIN_IND_MAX = digitalRead(PIN_IND_MAX);
+     }
+     if (digitalRead(PIN_IND_AUTO) != oPIN_IND_AUTO)
+     {
+         Serial.print("PIN_IND_AUTO ");
+         Serial.println(digitalRead(PIN_IND_AUTO));
+         oPIN_IND_AUTO = digitalRead(PIN_IND_AUTO);
+     }
+     if (digitalRead(PIN_IND_MAN) != oPIN_IND_MAN)
+     {
+         Serial.print("PIN_IND_MAN ");
+         Serial.println(digitalRead(PIN_IND_MAN));
+         oPIN_IND_MAN = digitalRead(PIN_IND_MAN);
+     }*/
+}

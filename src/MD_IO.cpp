@@ -195,7 +195,7 @@ void waterManagement()
     {
         setPump(ON);
     }
-    else if (getWaterAlarm())
+    else if (getAlarm())
     {
         setPump(ON);
     }
@@ -224,11 +224,11 @@ void indicatorsManagement()
         setIndMin(OFF);
     }
 
-    if (getWaterAlarm())
+    if (getAlarm())
     {
         setIndAlarm(ON);
     }
-    else if (!getWaterAlarm())
+    else if (!getAlarm())
     {
         setIndAlarm(OFF);
     }

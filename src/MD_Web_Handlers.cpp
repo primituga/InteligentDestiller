@@ -66,7 +66,7 @@ String handleState(const String &state)
   else if (state == "waterIn") return String(getValv_Water_In());
   else if (state == "waterMax") return String(getWaterMax());
   else if (state == "waterMin") return String(getWaterMin());
-  else if (state == "waterAlarm") return String(getWaterAlarm());
+  else if (state == "waterAlarm") return String(getAlarm());
   return String();
 }
 

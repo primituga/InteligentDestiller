@@ -28,6 +28,8 @@ void loop2(void *pvParameters)
 {
 	while (1) // Main loop
 	{
+		readInputs();
 		destiler(); // Destiler function to operate the machine
+		writeOutputs();
 	}
 }

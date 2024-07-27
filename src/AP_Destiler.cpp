@@ -17,8 +17,6 @@ void destiler()
             sPrintLnNbr(getWaterMax());
             sPrintStr("getWaterMin ");
             sPrintLnNbr(getWaterMin());
-            sPrintStr("getWaterAlarm ");
-            sPrintLnNbr(getWaterAlarm());
             sPrintStr("getAlarm ");
             sPrintLnNbr(getAlarm());
             sPrintStr("getManualMode ");
@@ -60,8 +58,8 @@ void destiler()
     /************************************************************************/
     /* WORKING BLOCK                                                        */
     /************************************************************************/
-
-    /*if (!getManualMode()) // If manual mode is off
+/*
+    if (getAutoMode()) // If Auto mode is on
     {
         if (getAutoMode() && getTimerStatus()) // If auto mode is on
         {
@@ -101,7 +99,7 @@ void destiler()
             IDDLE_FLAG = ON;
         }
     }
-    else // If manual mode is on
+    else if (getManualMode()) // If manual mode is on
     {
         if (getManualMode())
         {
@@ -141,4 +139,5 @@ void destiler()
             IDDLE_FLAG = ON;
         }
     }*/
+    
 }
