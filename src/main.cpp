@@ -8,19 +8,16 @@ void setup()
 	initSerial();	   // Initiate Serial communication
 	initMultiCore();   // Initiate MultiCore
 	initFS();		   // Initiate SPIFFS
+	readInputs();
+	test_IO();
 }
 
 // loop to run on 1st cpu core
 void loop(void)
 { // Main loop
-	if (initWIFI())
-	{
-		setupRoutes(); // Setup Routes
-	}
-	else
-	{
-		webTimer("*", 0);
-	}
+	readInputs();
+	destiler(); // Destiler function to operate the machine
+	writeOutputs();
 }
 
 // loop to run on 2nd cpu core
@@ -28,8 +25,13 @@ void loop2(void *pvParameters)
 {
 	while (1) // Main loop
 	{
-		readInputs();
-		destiler(); // Destiler function to operate the machine
-		writeOutputs();
+		if (initWIFI())
+		{
+			setupRoutes(); // Setup Routes
+		}
+		else
+		{
+			webTimer("*", 0);
+		}
 	}
 }

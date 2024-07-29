@@ -1,17 +1,10 @@
 #include "OS.h"
 
-bool ALARM_STATE;
-
-// bool swMan, sMin, sMax, swAuto, sAlarm;
-// bool raq, valvWaterIn, valvWaterOut, bmb, indMin, indMax, indAlarm, indMan, indAuto;
-
 uint8_t inputVarsImage[5];
 const uint8_t inputVarsPINs[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM};
 
 uint8_t outputVarsImage[9];
 const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN, PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN};
-
-// const bool outputVars[] = {raq, valvWaterIn, valvWaterOut, bmb, indMin, indMax, indAlarm, indMan, indAuto};
 
 void writeOutputs()
 {
@@ -26,10 +19,10 @@ void readInputs()
     for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++)
     {
         inputVarsImage[i] = digitalRead(inputVarsPINs[i]);
-        //Serial.println(inputVarsImage[i]);
+        // Serial.println(inputVarsImage[i]);
     }
 
-    //Serial.println(" ");
+    // Serial.println(" ");
 }
 
 /************************************************************************/
@@ -78,11 +71,6 @@ bool getAlarm()
     return inputVarsImage[POS_SALARM];
 }
 
-bool getAutoMode()
-{
-    return outputVarsImage[POS_IND_AUTO];
-}
-
 bool getAutoModeSW()
 {
     return inputVarsImage[POS_SW_AUTO];
@@ -91,6 +79,11 @@ bool getAutoModeSW()
 bool getManualMode()
 {
     return inputVarsImage[POS_SW_MAN];
+}
+
+bool getAutoMode()
+{
+    return outputVarsImage[POS_IND_AUTO];
 }
 
 bool getResistor()
@@ -116,47 +109,6 @@ bool getPump()
 /************************************************************************/
 /* SETS BLOCK                                                           */
 /************************************************************************/
-
-bool deBouncing(bool _getInPutState, String _debugLog)
-{
-    static int buttonState = 0;     // current state of the button
-    static int lastButtonState = 0; // previous state of the button
-
-    static int currentButtonState = 0;         // current state of the button
-    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
-    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
-
-    currentButtonState = _getInPutState; // read the state of the switch into a local variable
-
-    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
-    {
-        lastDebounceTime = millis(); // reset the debouncing timer
-    }
-    bool returnState;
-    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
-    {
-        if (currentButtonState != buttonState) // if the button state has changed
-        {
-            buttonState = currentButtonState; // save the new state
-            if (buttonState == OFF)           // if the button state is HIGH
-            {
-                if (DEBUG)
-                    sPrintStr(_debugLog + buttonState);
-                returnState = buttonState;
-            }
-            else
-            {
-                if (DEBUG)
-                    sPrintStr(_debugLog + buttonState);
-
-                returnState = buttonState;
-            }
-        }
-    }
-    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
-    Serial.println("deb" + returnState);
-    return returnState;
-}
 
 void setIndMax(bool state)
 {
@@ -212,7 +164,6 @@ void setIndAlarm(bool state)
 
     if (state == ON)
     {
-        ALARM_STATE = ON;
         if (millis() - previousTimer > ALARM_TIME_ON)
         {
             // digitalWrite(PIN_IND_ALARM, OFF);
@@ -227,7 +178,6 @@ void setIndAlarm(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        ALARM_STATE = OFF;
         // digitalWrite(PIN_IND_ALARM, OFF);
         outputVarsImage[POS_IND_ALARM] = OFF;
     }
@@ -249,10 +199,6 @@ void setIndAlarm(bool state)
 
 void setIndMan(bool state)
 {
-    // Serial.println("set" );
-    // Serial.println( PIN_IND_MAN );
-    // Serial.println(deBouncing(getManualMode(), "setManMonde"));
-
     // digitalWrite(PIN_IND_MAN, deBouncing(getManualMode(), "setIndMan "));
     static int buttonState = 0;     // current state of the button
     static int lastButtonState = 0; // previous state of the button

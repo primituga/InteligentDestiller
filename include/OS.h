@@ -101,6 +101,11 @@ void initMultiCore();
 void initFS(); // Inicia o sistema de arquivos
 
 //********************************************************************************
+// Test I/Os
+//********************************************************************************
+void test_IO();
+
+//********************************************************************************
 // I/O
 //********************************************************************************
 
@@ -109,7 +114,7 @@ void initPinsOutputs();            // Inicia os outputs
 void initPinsInputs();             // Inicia os inputs
 bool getWaterMax();                // Retorna estado do sensor de agua de maximo
 bool getWaterMin();                // Retorna estado do sensor de agua de minimo
-bool getWaterAlarm();              // Retorna estado do sensor de agua de alarme
+bool getAlarm();                   // Retorna estado do alarme
 bool getAutoMode();                // Retorna estado do modo auto
 bool getAutoModeSW();              // Retorna estado do interruptor auto
 bool getManualMode();              // Retorna estado do botao manual
@@ -117,7 +122,7 @@ bool getResistor();                // Retorna estado do resistor
 bool getValv_Water_In();           // Retorna estado da entrada de agua
 bool getValv_Water_Out();          // Retorna estado da valvula de vapor
 bool getPump();                    // Retorna estado da bomba de agua
-bool getAlarm();                   // Retorna estado do alarme
+
 void setIndMax(bool state);        // Liga/desliga o indicador luminoso nivel agua maximo
 void setIndMin(bool state);        // Liga/desliga o indicador luminoso  nivel agua minimo
 void setIndAlarm(bool state);      // Liga/desliga o indicador luminoso alarme
