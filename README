@@ -1,8 +1,14 @@
 
-This is a project that uses a old analogic destiller machine, that machine got all old parts removed and got installed one 
-ESP32 that controlls all its functions, it have also one web server built-in to controll all the machine. 
-The machine have a water pump, a heater, a valve to control the water flow to cool the destiller coil
+This is a project that uses a old analogic destiller machine, that machine got all old parts removed and got installed one ESP32 that controlls all its functions, it have also one web server built-in to controll all the machine. 
+The machine have:
+1 water tank, 1 water pump, 1 water heater, 2 valves, 1st to control the water flow to cool the destiller coil, and a 2nd one to control the steam exit, 3 water level sensors, 1 switch to switch between manual and another one switch to toggle automatic mode.
 
+The software runing in dualcore, core nr 0 run the webserver, core nr 1 run the firmware
+
+O firmware administra o nivel de água, se o reservatório estiver cheio, desliga a bomba, se estiver no minimo, liga a bomba, se estiver em nível de alarme, desliga a resisténcia de aquecimento, e as valvulas, isto é, interrompe o funcionamento normal de funcionamento.
+
+O servidor web, comunica 
+------------------------------------------------
 Libs:
 // Arduino Libraries
 #include <stdint.h>

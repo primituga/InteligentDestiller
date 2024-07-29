@@ -11,20 +11,14 @@ void setup()
 }
 
 // loop to run on 1st cpu core
-void loop(void) // Main loop
-{
-	// Created the 'FLAG_INIT_WIFI' to be able to operate the machine while
-	// WIFI is init, this way, user can operate the machine manualy, no need
-	// to wait for WIFI to init
-	if (WiFi.status() != WL_CONNECTED)
+void loop(void)
+{ // Main loop
+	if (initWIFI())
 	{
-		sPrintLnStr("WIFI INIT....");
-		initWIFI();	  // Initiate WIFI
-		setupCalls(); // Initiate calls
+		setupRoutes(); // Setup Routes
 	}
 	else
 	{
-		// ProcessWebPage(); // Process WebPage
 		webTimer("*", 0);
 	}
 }
@@ -34,6 +28,8 @@ void loop2(void *pvParameters)
 {
 	while (1) // Main loop
 	{
+		readInputs();
 		destiler(); // Destiler function to operate the machine
+		writeOutputs();
 	}
 }

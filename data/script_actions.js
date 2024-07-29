@@ -1,4 +1,3 @@
-
 /*************************************************************************/
 /*  Webpage Javascript                                                   */
 /*************************************************************************/
@@ -19,168 +18,216 @@ button.onclick = function () {
 //***********************************************************************
 // Get for Start/Stop/Reset                                             *
 //***********************************************************************
-function startTimer() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/startTimer", true);
-    xhttp.send();
-    updateStatus();
+async function startTimer() {
+    try {
+        await fetch('/startTimer');
+        updateStatus();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function stopTimer() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/stopTimer", true);
-    xhttp.send();
-    updateStatus();
+async function stopTimer() {
+    try {
+        await fetch('/stopTimer');
+        updateStatus();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function resetTimer() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/resetTimer", true);
-    xhttp.send();
-    updateStatus();
+async function resetTimer() {
+    try {
+        await fetch('/resetTimer');
+        updateStatus();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function updateStatus() {
-    getTimerData();
-    getResistorData();
-    getPumpData();
-    getWaterInData();
-    getDumpWaterData();
+async function updateStatus() {
+    try {
+        await getTimerData();
+        await getResistorData();
+        await getPumpData();
+        await getWaterInData();
+        await getDumpWaterData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function onloadStatus() {
-    getTimerData();
-    getTimerHourData();
-    getTimerMinuteData();
-    getTimerSecoundData();
-    getWifiSSIDData();
-    getWifiQualityData();
+async function onloadStatus() {
+    try {
+        await getTimerData();
+        await getTimerHourData();
+        await getTimerMinuteData();
+        await getTimerSecoundData();
+        await getWifiSSIDData();
+        await getWifiQualityData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 //***********************************************************************
 // Get for Add time buttons                                             *
 //***********************************************************************
-function add1s() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/add1s", true);
-    xhttp.send();
-    getTimerData();
+async function add1s() {
+    try {
+        await fetch('/add1s');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function add5s() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/add5s", true);
-    xhttp.send();
-    getTimerData();
+async function add5s() {
+    try {
+        await fetch('/add5s');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function add10s() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/add10s", true);
-    xhttp.send();
-    getTimerData();
+async function add10s() {
+    try {
+        await fetch('/add10s');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function add1m() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/add1m", true);
-    xhttp.send();
-    getTimerData();
+async function add1m() {
+    try {
+        await fetch('/add1m');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function add5m() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/add5m", true);
-    xhttp.send();
-    getTimerData();
+async function add5m() {
+    try {
+        await fetch('/add5m');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function add10m() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/add10m", true);
-    xhttp.send();
-    getTimerData();
+async function add10m() {
+    try {
+        await fetch('/add10m');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 //***********************************************************************
 // Get for Remove time buttons                                          *
 //***********************************************************************
-function rem1s() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/rem1s", true);
-    xhttp.send();
-    getTimerData();
+async function rem1s() {
+    try {
+        await fetch('/rem1s');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function rem5s() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/rem5s", true);
-    xhttp.send();
-    getTimerData();
+async function rem5s() {
+    try {
+        await fetch('/rem5s');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function rem10s() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/rem10s", true);
-    xhttp.send();
-    getTimerData();
+async function rem10s() {
+    try {
+        await fetch('/rem10s');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function rem1m() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/rem1m", true);
-    xhttp.send();
-    getTimerData();
+async function rem1m() {
+    try {
+        await fetch('/rem1m');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function rem5m() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/rem5m", true);
-    xhttp.send();
-    getTimerData();
+async function rem5m() {
+    try {
+        await fetch('/rem5m');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function rem10m() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/rem10m", true);
-    xhttp.send();
-    getTimerData();
+async function rem10m() {
+    try {
+        await fetch('/rem10m');
+        getTimerData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 //***********************************************************************
 // Get for toggable states                                              *
 //***********************************************************************
-function toggleAutoMode() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/toggleAutoMode", true);
-    xhttp.send();
-    getAutoModeData();
+async function toggleAutoMode() {
+    try {
+        await fetch('/toggleAutoMode');
+        getAutoModeData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function togglePump() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/togglePump", true);
-    xhttp.send();
-    getPumpData();
+async function togglePump() {
+    try {
+        await fetch('/togglePump');
+        getPumpData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function toggleWaterIn() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/toggleWaterIn", true);
-    xhttp.send();
-    getWaterInData();
+async function toggleWaterIn() {
+    try {
+        await fetch('/toggleWaterIn');
+        getWaterInData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function toggleResistor() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/toggleResistor", true);
-    xhttp.send();
-    getResistorData();
+async function toggleResistor() {
+    try {
+        await fetch('/toggleResistor');
+        getResistorData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function toggleDumpWater() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/toggleDumpWater", true);
-    xhttp.send();
-    getDumpWaterData();
+async function toggleDumpWater() {
+    try {
+        await fetch('/toggleDumpWater');
+        getDumpWaterData();
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }

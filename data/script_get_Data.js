@@ -6,18 +6,8 @@
 //***********************************************************************
 // Get timer data                                                       *
 //***********************************************************************
-function getTimerData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("timer").innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("GET", "/readTimer", true);
-    xhttp.send();
-}
 
-function getTimerHourData() {
+/*function getTimerHourData() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -27,155 +17,223 @@ function getTimerHourData() {
     xhttp.open("GET", "/readHour", true);
     xhttp.send();
 }
+function getTimerHourData() {
+    fetch('/readHour')
+        .then(response => {
+            if (response.status != 200) throw new Error('Request failed');
+            return response.text();
+        })
+        .then(text => {
+            document.getElementById("hour").innerHTML = text;
+        });
+}*/
 
-function getTimerMinuteData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("minute").innerHTML = this.responseText;
+// Timer Data
+async function getTimerData() {
+    try {
+        const response = await fetch('/readTimer');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readMinute", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("timer").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getTimerSecoundData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("secound").innerHTML = this.responseText;
+// Timer Hour Data
+async function getTimerHourData() {
+    try {
+        const response = await fetch('/readHour');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readSecound", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("hour").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-//***********************************************************************
-// Get for Auto/Manual mode                                             *
-//***********************************************************************
-function getAutoModeData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("autoMode").innerHTML = this.responseText;
+// Timer Minute Data
+async function getTimerMinuteData() {
+    try {
+        const response = await fetch('/readMinute');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readAutoMode", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("minute").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getManualModeData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("manualMode").innerHTML = this.responseText;
+// Timer Second Data
+async function getTimerSecoundData() {
+    try {
+        const response = await fetch('/readSecound');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readManualMode", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("secound").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-//***********************************************************************
-// Get for I/Os                                                         *
-//***********************************************************************
-function getResistorData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("resistor").innerHTML = this.responseText;
+// Auto Mode Data
+async function getAutoModeData() {
+    try {
+        const response = await fetch('/readAutoMode');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readResistor", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("autoMode").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getPumpData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("pump").innerHTML = this.responseText;
+// Manual Mode Data
+async function getManualModeData() {
+    try {
+        const response = await fetch('/readManualMode');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readPump", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("manualMode").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getWaterInData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterIn").innerHTML = this.responseText;
+// Resistor Data
+async function getResistorData() {
+    try {
+        const response = await fetch('/readResistor');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readWaterIn", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("resistor").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getDumpWaterData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("dumpWater").innerHTML = this.responseText;
+// Pump Data
+async function getPumpData() {
+    try {
+        const response = await fetch('/readPump');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readDumpWater", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("pump").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getWaterMaxData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterMax").innerHTML = this.responseText;
+// Water In Data
+async function getWaterInData() {
+    try {
+        const response = await fetch('/readWaterIn');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readWaterMax", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("waterIn").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getWaterMinData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterMin").innerHTML = this.responseText;
+// Dump Water Data
+async function getDumpWaterData() {
+    try {
+        const response = await fetch('/readDumpWater');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readWaterMin", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("dumpWater").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getWaterAlarmData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("waterAlarm").innerHTML = this.responseText;
+// Water Max Data
+async function getWaterMaxData() {
+    try {
+        const response = await fetch('/readWaterMax');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readWaterAlarm", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("waterMax").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-//***********************************************************************
-// Get for WiFi Data                                                    *
-//***********************************************************************
-function getWifiSSIDData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("wifiSSID").innerHTML = this.responseText;
+// Water Min Data
+async function getWaterMinData() {
+    try {
+        const response = await fetch('/readWaterMin');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readWifiSSID", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("waterMin").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
-function getWifiQualityData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("wifiQuality").innerHTML = this.responseText;
+// Water Alarm Data
+async function getWaterAlarmData() {
+    try {
+        const response = await fetch('/readWaterAlarm');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
         }
-    };
-    xhttp.open("GET", "/readWifiQuality", true);
-    xhttp.send();
+        const text = await response.text();
+        document.getElementById("waterAlarm").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// WiFi SSID Data
+async function getWifiSSIDData() {
+    try {
+        const response = await fetch('/readWifiSSID');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
+        }
+        const text = await response.text();
+        document.getElementById("wifiSSID").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// WiFi Quality Data
+async function getWifiQualityData() {
+    try {
+        const response = await fetch('/readWifiQuality');
+        if (response.status !== 200) {
+            throw new Error('Request failed');
+        }
+        const text = await response.text();
+        document.getElementById("wifiQuality").innerHTML = text;
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }

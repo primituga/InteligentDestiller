@@ -10,6 +10,6 @@
 
 // Function prototypes  
 void destiler();
-void setupCalls();
+void setupRoutes();
 
 #endif
