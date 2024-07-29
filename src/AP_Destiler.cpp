@@ -58,7 +58,7 @@ void destiler()
     /************************************************************************/
     /* WORKING BLOCK                                                        */
     /************************************************************************/
-/*
+
     if (getAutoMode()) // If Auto mode is on
     {
         if (getAutoMode() && getTimerStatus()) // If auto mode is on
@@ -68,7 +68,7 @@ void destiler()
                 workingMax(); // Working when water level is max
                 IDDLE_FLAG = OFF;
             }
-            else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
+            else if (!getWaterMax() && !getAlarm()) // If water level is min
             {
                 workingMaxMin(); // Working within max and min water level
                 if (getWaterMin())
@@ -82,7 +82,7 @@ void destiler()
                 workingMin();
                 IDDLE_FLAG = OFF;
             }
-            else if (getWaterAlarm()) // If water level is alarm
+            else if (getAlarm()) // If water level is alarm
             {
                 workingAlarm();
                 IDDLE_FLAG = OFF;
@@ -108,7 +108,7 @@ void destiler()
                 workingMax();
                 IDDLE_FLAG = OFF;
             }
-            else if (!getWaterMax() && !getWaterAlarm()) // If water level is min
+            else if (!getWaterMax() && !getAlarm()) // If water level is min
             {
                 workingMaxMin();
                 if (getWaterMin())
@@ -122,7 +122,7 @@ void destiler()
                 workingMin();
                 IDDLE_FLAG = OFF;
             }
-            else if (getWaterAlarm())
+            else if (getAlarm())
             {
                 workingAlarm();
                 IDDLE_FLAG = OFF;
@@ -138,6 +138,6 @@ void destiler()
             workingIdle();
             IDDLE_FLAG = ON;
         }
-    }*/
+    }
     
 }
