@@ -19,10 +19,7 @@ void readInputs()
     for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++)
     {
         inputVarsImage[i] = digitalRead(inputVarsPINs[i]);
-        // Serial.println(inputVarsImage[i]);
     }
-
-    // Serial.println(" ");
 }
 
 /************************************************************************/
@@ -115,7 +112,6 @@ void setIndMax(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_IND_MAX, ON);
         outputVarsImage[POS_IND_MAX] = ON;
         if (DEBUG)
             sPrintLnStr("setIndMax ON");
@@ -123,7 +119,6 @@ void setIndMax(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_IND_MAX, OFF);
         outputVarsImage[POS_IND_MAX] = OFF;
         if (DEBUG)
             sPrintLnStr("setIndMax OFF");
@@ -136,7 +131,6 @@ void setIndMin(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_IND_MIN, ON);
         outputVarsImage[POS_IND_MIN] = ON;
         if (DEBUG)
         {
@@ -146,7 +140,6 @@ void setIndMin(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_IND_MIN, OFF);
         outputVarsImage[POS_IND_MIN] = OFF;
         if (DEBUG)
         {
@@ -166,19 +159,16 @@ void setIndAlarm(bool state)
     {
         if (millis() - previousTimer > ALARM_TIME_ON)
         {
-            // digitalWrite(PIN_IND_ALARM, OFF);
             outputVarsImage[POS_IND_ALARM] = OFF;
             previousTimer = millis();
         }
         else if (millis() - previousTimer > ALARM_TIME_OFF)
         {
-            // digitalWrite(PIN_IND_ALARM, ON);
             outputVarsImage[POS_IND_ALARM] = ON;
         }
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_IND_ALARM, OFF);
         outputVarsImage[POS_IND_ALARM] = OFF;
     }
 
@@ -199,7 +189,6 @@ void setIndAlarm(bool state)
 
 void setIndMan(bool state)
 {
-    // digitalWrite(PIN_IND_MAN, deBouncing(getManualMode(), "setIndMan "));
     static int buttonState = 0;     // current state of the button
     static int lastButtonState = 0; // previous state of the button
 
@@ -224,16 +213,12 @@ void setIndMan(bool state)
                 if (DEBUG)
                     sPrintLnStr("_setIndMan OFF");
                 outputVarsImage[POS_IND_MAN] = OFF;
-                // digitalWrite(PIN_IND_MAN, OFF);
-                //  setIndMan(OFF); // Toggle Auto Mode
             }
             else if (buttonState == OFF)
             {
                 if (DEBUG)
                     sPrintLnStr("_setIndMan ON");
                 outputVarsImage[POS_IND_MAN] = ON;
-                // digitalWrite(PIN_IND_MAN, ON);
-                //  setIndMan(ON); // Toggle Auto Mode
             }
         }
     }
@@ -245,7 +230,6 @@ void setAutoMode(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_IND_AUTO, ON);
         outputVarsImage[POS_IND_AUTO] = ON;
         if (DEBUG)
             sPrintLnStr("setAutoMode ON");
@@ -253,8 +237,6 @@ void setAutoMode(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_IND_AUTO, OFF);
-
         outputVarsImage[POS_IND_AUTO] = OFF;
         if (DEBUG)
             sPrintLnStr("setAutoMode OFF");
@@ -267,7 +249,6 @@ void setPump(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_BMB, ON);
         outputVarsImage[POS_BMB] = ON;
         if (DEBUG)
             sPrintLnStr("setPump ON");
@@ -275,7 +256,6 @@ void setPump(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_BMB, OFF);
         outputVarsImage[POS_BMB] = OFF;
         if (DEBUG)
             sPrintLnStr("setPump OFF");
@@ -288,7 +268,6 @@ void setValveWaterIn(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_VALV_WATER_IN, ON);
         outputVarsImage[POS_VALV_WATER_IN] = ON;
         if (DEBUG)
             sPrintLnStr("setValveWaterIn ON");
@@ -296,7 +275,6 @@ void setValveWaterIn(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_VALV_WATER_IN, OFF);
         outputVarsImage[POS_VALV_WATER_IN] = OFF;
         if (DEBUG)
             sPrintLnStr("setValveWaterIn OFF");
@@ -309,7 +287,6 @@ void setValveWaterOut(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_VALV_WATER_OUT, ON);
         outputVarsImage[POS_VALV_WATER_OUT] = ON;
         if (DEBUG)
             sPrintLnStr("setValveWaterOut ON");
@@ -317,7 +294,6 @@ void setValveWaterOut(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_VALV_WATER_OUT, OFF);
         outputVarsImage[POS_VALV_WATER_OUT] = OFF;
         if (DEBUG)
             sPrintLnStr("setValveWaterOut OFF");
@@ -330,7 +306,6 @@ void setResistor(bool state)
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)
     {
-        // digitalWrite(PIN_RAQ, ON);
         outputVarsImage[POS_RAQ] = ON;
         if (DEBUG)
             sPrintLnStr("setResistor ON");
@@ -338,7 +313,6 @@ void setResistor(bool state)
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        // digitalWrite(PIN_RAQ, OFF);
         outputVarsImage[POS_RAQ] = OFF;
         if (DEBUG)
             sPrintLnStr("setResistor OFF");
