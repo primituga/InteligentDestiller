@@ -1,19 +1,17 @@
 #include "OS.h"
 
+// ********************************************************************************
+// GPIO Images
 uint8_t inputVarsImage[5];
 const uint8_t inputVarsPINs[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM};
 
 uint8_t outputVarsImage[9];
 const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN, PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN};
 
-void writeOutputs()
-{
-    for (uint8_t i = 0; i < PIN_OUTPUT_COUNT; i++)
-    {
-        digitalWrite(outputVarsPINs[i], outputVarsImage[i]);
-    }
-}
 
+/************************************************************************/
+/* Read ESP32 GPIOs and stores in the image array                                             */
+/************************************************************************/
 void readInputs()
 {
     for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++)
@@ -23,7 +21,18 @@ void readInputs()
 }
 
 /************************************************************************/
-/* INIT INPUT PINS BLOCK                                                */
+/* Write Outputs from array image to GPIO                                               */
+/************************************************************************/
+void writeOutputs()
+{
+    for (uint8_t i = 0; i < PIN_OUTPUT_COUNT; i++)
+    {
+        digitalWrite(outputVarsPINs[i], outputVarsImage[i]);
+    }
+}
+
+/************************************************************************/
+/* Configure GPIOs as INPUT                                                */
 /************************************************************************/
 void initPinsInputs()
 {
@@ -35,7 +44,7 @@ void initPinsInputs()
 }
 
 /************************************************************************/
-/* INIT OUTUP PINS BLOCK                                                */
+/* Configure GPIOs as OUTPUTs                                                */
 /************************************************************************/
 void initPinsOutputs()
 {
@@ -106,7 +115,6 @@ bool getPump()
 /************************************************************************/
 /* SETS BLOCK                                                           */
 /************************************************************************/
-
 void setIndMax(bool state)
 {
     static bool OLDSTATE;
@@ -225,6 +233,8 @@ void setIndMan(bool state)
     lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
 }
 
+
+
 void setAutoMode(bool state)
 {
     static bool OLDSTATE;
@@ -243,6 +253,9 @@ void setAutoMode(bool state)
         OLDSTATE = state;
     }
 }
+
+
+
 
 void setPump(bool state)
 {

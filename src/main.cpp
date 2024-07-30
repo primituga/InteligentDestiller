@@ -1,4 +1,9 @@
+
+
 #include "AP.h"
+
+//bool DEBUG=1;  // Debug mode
+
 
 // setup to run on 1st cpu core
 void setup()

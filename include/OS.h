@@ -17,8 +17,7 @@
 #include "WiFiManager.h"
 #include "WiFi.h"
 
-// EEPROM Libraries
-#include "EEPROM.h"
+#include "EEPROM.h"                             // EEPROM Libraries
 
 // Async Libraries
 #include "AsyncTCP.h"
@@ -29,8 +28,8 @@
 #include "SPIFFS.h"
 
 // Debug Definitions
-#define DEBUG       1 // Debug mode
-#define DEBUGlog    0 // Debug log mode
+bool DEBUG=1;  // Debug mode
+#define DEBUGlog    0                           // Debug log mode
 
 //********************************************************************************
 // I/O Map Header

@@ -4,12 +4,24 @@
 
 void test_IO()
 {
+	bool isDEBUGON = false;
+	Serial.println("Test I/Os ...");
+	if (DEBUG)
+	{
+		DEBUG = false;
+		isDEBUGON = true;
+	}
+
+	// Test I/O Indicador Maximo
+	Serial.print("Indicador Maximo ... ");
 	setIndMax(ON);//
 	delay(delayT);
 	writeOutputs();
 	setIndMax(OFF);//
 	delay(delayT);
 	writeOutputs();
+	Serial.print("OK");
+
 	setIndMin(ON);//
 	delay(delayT);
 	writeOutputs();
@@ -57,4 +69,9 @@ void test_IO()
 	//delay(delayT);
 	//setPump(OFF);
 	//delay(delayT);
+
+	if (isDEBUGON)
+	{
+		DEBUG = true;
+	}
 }
