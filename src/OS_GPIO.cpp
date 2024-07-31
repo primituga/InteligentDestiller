@@ -1,40 +1,37 @@
 /**
  * @file OS_GPIO.cpp
  * @author Sérgio Carmo (19749@ipportalegre.pt)
- * @brief 
+ * @brief GPIO functions
  * @version 0.1
- * @date 2024-07-31
- * 
- * @copyright Copyright (c) 2024
- * 
+ *
  */
 
-#include "OS.h"
+#include "OS.h" 
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// GPIO Images
 ////////////////////////////////////////////////////////////////////////////////////////
-uint8_t inputVarsImage[5];
-const uint8_t inputVarsPINs[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM};
+uint8_t inputVarsImage[5];  /// Input variables image
+const uint8_t inputVarsPINs[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM};  /// Input variables pins
 
-uint8_t outputVarsImage[9];
-const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN, PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN};
+uint8_t outputVarsImage[9]; /// Output variables image
+const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN, PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN}; /// Output variables pins
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Read ESP32 GPIOs and stores in the image array
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Read all inputs and store in the image array
- * 
+ *
  * This function reads all the inputs and stores them in the image array.
  * The image array is used to store the current state of the inputs and outputs.
  *
  */
 void readInputs()
 {
-    for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++)
+    for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++)               /// PIN_INPUT_COUNT = 5
     {
-        inputVarsImage[i] = digitalRead(inputVarsPINs[i]);
+        inputVarsImage[i] = digitalRead(inputVarsPINs[i]);      /// Read the input from the GPIO
     }
 }
 
@@ -43,16 +40,16 @@ void readInputs()
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Write all outputs from the image array to the GPIOs
- * 
+ *
  * This function writes all the outputs from the image array to the GPIOs.
  * The image array is used to store the current state of the inputs and outputs.
  *
  */
 void writeOutputs()
 {
-    for (uint8_t i = 0; i < PIN_OUTPUT_COUNT; i++)
+    for (uint8_t i = 0; i < PIN_OUTPUT_COUNT; i++)              /// PIN_OUTPUT_COUNT = 9
     {
-        digitalWrite(outputVarsPINs[i], outputVarsImage[i]);
+        digitalWrite(outputVarsPINs[i], outputVarsImage[i]);    /// Write the output to the GPIO
     }
 }
 
@@ -61,18 +58,18 @@ void writeOutputs()
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Configure GPIOs as INPUTs
- * 
+ *
  * This function configures the GPIOs as INPUTs.
  * The GPIOs are used to read the state of the switches and sensors.
  *
  */
 void initPinsInputs()
 {
-    pinMode(PIN_SW_MAN, INPUT); /// on/off sw
-    pinMode(PIN_SMIN, INPUT);
-    pinMode(PIN_SMAX, INPUT);
-    pinMode(PIN_SW_AUTO, INPUT); /// push sw
-    pinMode(PIN_SALARM, INPUT);
+    pinMode(PIN_SW_MAN, INPUT);         /// on/off sw
+    pinMode(PIN_SMIN, INPUT);           /// min sensor
+    pinMode(PIN_SMAX, INPUT);           /// max sensor
+    pinMode(PIN_SW_AUTO, INPUT);        /// push sw
+    pinMode(PIN_SALARM, INPUT);         /// alarm
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -80,22 +77,22 @@ void initPinsInputs()
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Configure GPIOs as OUTPUTs
- * 
+ *
  * This function configures the GPIOs as OUTPUTs.
  * The GPIOs are used to control the indicators, valves, pump, and resistor.
  *
  */
 void initPinsOutputs()
 {
-    pinMode(PIN_RAQ, OUTPUT);
-    pinMode(PIN_VALV_WATER_IN, OUTPUT);
-    pinMode(PIN_VALV_WATER_OUT, OUTPUT);
-    pinMode(PIN_BMB, OUTPUT);
-    pinMode(PIN_IND_MIN, OUTPUT);
-    pinMode(PIN_IND_MAX, OUTPUT);
-    pinMode(PIN_IND_ALARM, OUTPUT);
-    pinMode(PIN_IND_MAN, OUTPUT);
-    pinMode(PIN_IND_AUTO, OUTPUT);
+    pinMode(PIN_RAQ, OUTPUT);            /// resistor
+    pinMode(PIN_VALV_WATER_IN, OUTPUT);  /// water in valve
+    pinMode(PIN_VALV_WATER_OUT, OUTPUT); /// water out valve
+    pinMode(PIN_BMB, OUTPUT);            /// water pump
+    pinMode(PIN_IND_MIN, OUTPUT);        /// min indicator
+    pinMode(PIN_IND_MAX, OUTPUT);        /// max indicator
+    pinMode(PIN_IND_ALARM, OUTPUT);      /// alarm indicator
+    pinMode(PIN_IND_MAN, OUTPUT);        /// manual indicator
+    pinMode(PIN_IND_AUTO, OUTPUT);       /// auto indicator
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -104,11 +101,11 @@ void initPinsOutputs()
 
 /**
  * @brief Get the Water Max object
- * 
+ *
  * This function returns the state of the water max sensor.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getWaterMax()
 {
@@ -117,11 +114,11 @@ bool getWaterMax()
 
 /**
  * @brief Get the Water Min object
- * 
+ *
  * This function returns the state of the water min sensor.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getWaterMin()
 {
@@ -130,11 +127,11 @@ bool getWaterMin()
 
 /**
  * @brief Get the Alarm object
- * 
+ *
  * This function returns the state of the alarm.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getAlarm()
 {
@@ -143,11 +140,11 @@ bool getAlarm()
 
 /**
  * @brief Get the Auto Mode SW object
- * 
+ *
  * This function returns the state of the auto mode switch.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getAutoModeSW()
 {
@@ -156,11 +153,11 @@ bool getAutoModeSW()
 
 /**
  * @brief Get the Manual Mode object
- * 
+ *
  * This function returns the state of the manual mode switch.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getManualMode()
 {
@@ -169,11 +166,11 @@ bool getManualMode()
 
 /**
  * @brief Get the Ind Max object
- * 
+ *
  * This function returns the state of the max indicator.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getAutoMode()
 {
@@ -182,11 +179,11 @@ bool getAutoMode()
 
 /**
  * @brief Get the Ind Min object
- * 
+ *
  * This function returns the state of the min indicator.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getResistor()
 {
@@ -195,11 +192,11 @@ bool getResistor()
 
 /**
  * @brief Get the Ind Alarm object
- * 
+ *
  * This function returns the state of the alarm indicator.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getValv_Water_In()
 {
@@ -208,11 +205,11 @@ bool getValv_Water_In()
 
 /**
  * @brief Get the Valv Water Out object
- * 
+ *
  * This function returns the state of the water out valve.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getValv_Water_Out()
 {
@@ -221,11 +218,11 @@ bool getValv_Water_Out()
 
 /**
  * @brief Get the Pump object
- * 
+ *
  * This function returns the state of the water pump.
- * 
- * @return true 
- * @return false 
+ *
+ * @return true
+ * @return false
  */
 bool getPump()
 {
@@ -237,17 +234,17 @@ bool getPump()
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Set the Ind Max object
- * 
+ *
  * This function sets the state of the max indicator.
- * 
+ *
  * @param state
- * 
+ *
  * @return void
  */
 void setIndMax(bool state)
 {
-    static bool OLDSTATE;
-    if (state == ON && OLDSTATE == OFF)
+    static bool OLDSTATE;   /// Old state of the indicator
+    if (state == ON && OLDSTATE == OFF) 
     {
         outputVarsImage[POS_IND_MAX] = ON;
         if (DEBUG)
@@ -265,16 +262,16 @@ void setIndMax(bool state)
 
 /**
  * @brief Set the Ind Min object
- * 
+ *
  * This function sets the state of the min indicator.
- * 
+ *
  * @param state
- * 
+ *
  * @return void
  */
 void setIndMin(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE;   /// Old state of the indicator
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImage[POS_IND_MIN] = ON;
@@ -297,16 +294,16 @@ void setIndMin(bool state)
 
 /**
  * @brief Set the Ind Alarm object
- * 
+ *
  * This function sets the state of the alarm indicator.
- * 
+ *
  * @param state
- * 
+ *
  * @return void
  */
 void setIndAlarm(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE;   /// Old state of the indicator
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
 
@@ -344,13 +341,13 @@ void setIndAlarm(bool state)
 
 /**
  * @brief Set the Ind Man object
- * 
+ *
  * This function sets the state of the manual indicator.
- * 
- * @param state 
- * 
+ *
+ * @param state
+ *
  * @return void
- * 
+ *
  */
 void setIndMan(bool state)
 {
@@ -392,11 +389,11 @@ void setIndMan(bool state)
 
 /**
  * @brief Set the Auto Mode object
- * 
+ *
  * This function sets the state of the auto mode.
- * 
- * @param state 
- * 
+ *
+ * @param state
+ *
  * @return void
  */
 void setAutoMode(bool state)
@@ -420,11 +417,11 @@ void setAutoMode(bool state)
 
 /**
  * @brief Set the Pump object
- * 
+ *
  * This function sets the state of the pump.
- * 
- * @param state 
- * 
+ *
+ * @param state
+ *
  * @return void
  */
 void setPump(bool state)
@@ -448,11 +445,11 @@ void setPump(bool state)
 
 /**
  * @brief Set the Valve Water In object
- * 
+ *
  * This function sets the state of the water in valve.
- * 
- * @param state 
- * 
+ *
+ * @param state
+ *
  * @return void
  */
 void setValveWaterIn(bool state)
@@ -476,11 +473,11 @@ void setValveWaterIn(bool state)
 
 /**
  * @brief Set the Valve Water Out object
- * 
+ *
  * This function sets the state of the water out valve.
- * 
- * @param state 
- * 
+ *
+ * @param state
+ *
  * @return void
  */
 void setValveWaterOut(bool state)
@@ -504,11 +501,11 @@ void setValveWaterOut(bool state)
 
 /**
  * @brief Set the Resistor object
- * 
+ *
  * This function sets the state of the resistor.
- * 
- * @param state 
- * 
+ *
+ * @param state
+ *
  * @return void
  */
 void setResistor(bool state)
