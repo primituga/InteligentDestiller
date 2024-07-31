@@ -1,4 +1,5 @@
 /**
+ * @author Sérgio Carmo
  * @file AP_Destiler.cpp
  * @brief Application file for the MD project.
  * @version 1.0
@@ -67,9 +68,9 @@ void destiler()
     if (!getAutoMode())
         setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
 
-    /************************************************************************/
-    /* WORKING BLOCK                                                        */
-    /************************************************************************/
+    ////////////////////////////////////////////////////////////////////////////////////////
+    /// WORKING BLOCK
+    ////////////////////////////////////////////////////////////////////////////////////////
 
     if (getAutoMode()) /**< Automatic mode operations */
     {

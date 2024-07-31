@@ -1,41 +1,42 @@
 /**
+ * @author Sérgio Carmo
  * @file MD_IO.cpp
  * @brief IO functions for the MD project
  * @version 1.0
  */
 #include "MD.h"
 
-void toggleAutoMode() // Toggle Auto Mode
+void toggleAutoMode() /// Toggle Auto Mode
 {
-    static int buttonState = 0;     // current state of the button
-    static int lastButtonState = 0; // previous state of the button
+    static int buttonState = 0;     /// current state of the button
+    static int lastButtonState = 0; /// previous state of the button
 
-    static int currentButtonState = 0;         // current state of the button
-    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
-    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
+    static int currentButtonState = 0;         /// current state of the button
+    static unsigned long lastDebounceTime = 0; /// the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;   /// the debounce time; increase if the output flickers
 
-    currentButtonState = getAutoModeSW(); // read the state of the switch into a local variable
+    currentButtonState = getAutoModeSW(); /// read the state of the switch into a local variable
 
-    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
+    if (currentButtonState != lastButtonState) /// If the switch changed, due to noise or pressing
     {
-        lastDebounceTime = millis(); // reset the debouncing timer
+        lastDebounceTime = millis(); /// reset the debouncing timer
     }
 
-    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
+    if ((millis() - lastDebounceTime) > debounceDelay) /// if the switch value has been stable for a while
     {
-        if (currentButtonState != buttonState) // if the button state has changed
+        if (currentButtonState != buttonState) /// if the button state has changed
         {
-            buttonState = currentButtonState; // save the new state
-            if (buttonState == OFF)           // if the button state is HIGH
+            buttonState = currentButtonState; /// save the new state
+            if (buttonState == OFF)           /// if the button state is HIGH
             {
-                toggleAutoModeWEB(); // Toggle Auto Mode
+                toggleAutoModeWEB(); /// Toggle Auto Mode
             }
         }
     }
-    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
+    lastButtonState = currentButtonState; /// save the current state as the last state, for next time through the loop
 }
 
-void toggleAutoModeWEB() // Toggle Auto Mode
+void toggleAutoModeWEB() /// Toggle Auto Mode
 {
     bool state = getAutoMode();
 
@@ -51,40 +52,40 @@ void toggleAutoModeWEB() // Toggle Auto Mode
     }
 }
 
-void toggleManualMode() // Toggle Auto Mode
+void toggleManualMode() /// Toggle Auto Mode
 {
-    static int buttonState = 0;     // current state of the button
-    static int lastButtonState = 0; // previous state of the button
+    static int buttonState = 0;     /// current state of the button
+    static int lastButtonState = 0; /// previous state of the button
 
-    static int currentButtonState = 0;         // current state of the button
-    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
-    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
+    static int currentButtonState = 0;         /// current state of the button
+    static unsigned long lastDebounceTime = 0; /// the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;   /// the debounce time; increase if the output flickers
 
-    currentButtonState = getManualMode(); // read the state of the switch into a local variable
+    currentButtonState = getManualMode(); /// read the state of the switch into a local variable
 
-    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
+    if (currentButtonState != lastButtonState) /// If the switch changed, due to noise or pressing
     {
-        lastDebounceTime = millis(); // reset the debouncing timer
+        lastDebounceTime = millis(); /// reset the debouncing timer
     }
 
-    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
+    if ((millis() - lastDebounceTime) > debounceDelay) /// if the switch value has been stable for a while
     {
-        if (currentButtonState != buttonState) // if the button state has changed
+        if (currentButtonState != buttonState) /// if the button state has changed
         {
-            buttonState = currentButtonState; // save the new state
-            if (buttonState == OFF)           // if the button state is HIGH
+            buttonState = currentButtonState; /// save the new state
+            if (buttonState == OFF)           /// if the button state is HIGH
             {
-                setIndMan(OFF); // Toggle Auto Mode
+                setIndMan(OFF); /// Toggle Auto Mode
             }
             else{
-                setIndMan(ON); // Toggle Auto Mode
+                setIndMan(ON); /// Toggle Auto Mode
             }
         }
     }
-    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
+    lastButtonState = currentButtonState; /// save the current state as the last state, for next time through the loop
 }
 
-void togglePump() // Toggle Pump
+void togglePump() /// Toggle Pump
 {
     bool state = getPump();
     if (state == OFF)
@@ -99,7 +100,7 @@ void togglePump() // Toggle Pump
     }
 }
 
-void toggleValveWaterIn() // Toggle Valve Water In
+void toggleValveWaterIn() /// Toggle Valve Water In
 {
     bool state = getValv_Water_In();
 
@@ -115,7 +116,7 @@ void toggleValveWaterIn() // Toggle Valve Water In
     }
 }
 
-void toggleValveWaterOut() // Toggle Valve Water Out
+void toggleValveWaterOut() /// Toggle Valve Water Out
 {
     bool state = getValv_Water_Out();
 
@@ -131,7 +132,7 @@ void toggleValveWaterOut() // Toggle Valve Water Out
     }
 }
 
-void toggleResistor() // Toggle Resistor
+void toggleResistor() /// Toggle Resistor
 {
     bool state = getResistor();
 
@@ -147,39 +148,39 @@ void toggleResistor() // Toggle Resistor
     }
 }
 
-/************************************************************************/
-/* DESTILLER STATE MANAGEMENT BLOCK                                     */
-/************************************************************************/
+////////////////////////////////////////////////////////////////////////////////////////
+// DESTILLER STATE MANAGEMENT BLOCK
+////////////////////////////////////////////////////////////////////////////////////////
 
 void workingMax()
-{ // Working state when water level is max
+{ /// Working state when water level is max
     setResistor(ON);
     setValveWaterIn(ON);
     setValveWaterOut(OFF);
 }
 
 void workingMaxMin()
-{ // Working state when water level is between max and min
+{ /// Working state when water level is between max and min
     setResistor(ON);
     setValveWaterIn(ON);
     setValveWaterOut(OFF);
 }
 
 void workingMin()
-{ // Working state when water level is min
+{ /// Working state when water level is min
     setValveWaterIn(ON);
     setValveWaterOut(OFF);
 }
 
 void workingAlarm()
-{ // Working state when water level is alarm
+{ /// Working state when water level is alarm
     setResistor(OFF);
     setValveWaterIn(OFF);
     setValveWaterOut(ON);
 }
 
 void workingIdle()
-{ // Working state when water level is idle
+{ /// Working state when water level is idle
     setResistor(OFF);
     setValveWaterIn(OFF);
     setValveWaterOut(ON);
@@ -187,9 +188,9 @@ void workingIdle()
 
 void waterManagement()
 {
-    /************************************************************************/
-    /* WATER MANAGEMENT BLOCK                                               */
-    /************************************************************************/
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // WATER MANAGEMENT BLOCK
+    ////////////////////////////////////////////////////////////////////////////////////////
     if (getWaterMax())
     {
         setPump(OFF);
@@ -206,9 +207,9 @@ void waterManagement()
 
 void indicatorsManagement()
 {
-    /************************************************************************/
-    /* INDICATORS BLOCK                                                     */
-    /************************************************************************/
+    ////////////////////////////////////////////////////////////////////////////////////////
+    /// INDICATORS BLOCK
+    ////////////////////////////////////////////////////////////////////////////////////////
     if (getWaterMax())
     {
         setIndMax(ON);
@@ -248,9 +249,9 @@ void indicatorsManagement()
 
 void modeManagement()
 {
-    /************************************************************************/
-    /* MACHINE MODE MANAGEMENT BLOCK                                        */
-    /************************************************************************/
+    ////////////////////////////////////////////////////////////////////////////////////////
+    /// MACHINE MODE MANAGEMENT BLOCK
+    ////////////////////////////////////////////////////////////////////////////////////////
     if (!getManualMode())
     {
         toggleAutoMode();

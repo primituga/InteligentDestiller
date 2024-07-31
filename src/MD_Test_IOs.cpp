@@ -1,4 +1,5 @@
 /**
+ * @author Sérgio Carmo
  * @file MD_Test_IOs.cpp
  * @brief Test I/Os for the MD project
  * @version 1.0
@@ -16,63 +17,63 @@ void test_IO()
 		isDEBUGON = true;
 	}
 
-	// Test I/O Indicador Maximo
+	///  Test I/O Indicador Maximo
 	Serial.print("Indicador Maximo ... ");
-	setIndMax(ON);//
+	setIndMax(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setIndMax(OFF);//
+	setIndMax(OFF);/// 
 	delay(delayT);
 	writeOutputs();
 	Serial.print("OK");
 
-	setIndMin(ON);//
+	setIndMin(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setIndMin(OFF);//
+	setIndMin(OFF);/// 
 	delay(delayT);
 	writeOutputs();
-	setIndAlarm(ON);//
+	setIndAlarm(ON);/// 
 	delay(1000);
 	writeOutputs();
-	setIndAlarm(OFF);//
+	setIndAlarm(OFF);/// 
 	delay(1000);
 	writeOutputs();
-	//setIndMan(ON);//
-	//delay(delayT);
-	//writeOutputs();
-	//setIndMan(OFF);//
+	/// setIndMan(ON);/// 
+	/// delay(delayT);
+	/// writeOutputs();
+	/// setIndMan(OFF);/// 
 	delay(delayT);
 	writeOutputs();
-	setAutoMode(ON);//
+	setAutoMode(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setAutoMode(OFF);//
+	setAutoMode(OFF);/// 
 	delay(delayT);
 	writeOutputs();
-	setValveWaterIn(ON);//
+	setValveWaterIn(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setValveWaterIn(OFF);//
+	setValveWaterIn(OFF);/// 
 	delay(delayT);
 	writeOutputs();
-	setValveWaterOut(ON);//
+	setValveWaterOut(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setValveWaterOut(OFF);//
+	setValveWaterOut(OFF);/// 
 	delay(delayT);
 	writeOutputs();
-	setResistor(ON);//
+	setResistor(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setResistor(OFF);//
+	setResistor(OFF);/// 
 	delay(delayT);
 	writeOutputs();
 	
-	//setPump(ON);
-	//delay(delayT);
-	//setPump(OFF);
-	//delay(delayT);
+	/// setPump(ON);
+	/// delay(delayT);
+	/// setPump(OFF);
+	/// delay(delayT);
 
 	if (isDEBUGON)
 	{
