@@ -172,7 +172,7 @@ String handleState(const String &state)
 String handleToggle(const String &toggle)
 {
   if (toggle == "auto")
-    toggleAutoModeWEB();
+    toggleAutoMode();
   else if (toggle == "pump")
     togglePump();
   else if (toggle == "dumpWater")

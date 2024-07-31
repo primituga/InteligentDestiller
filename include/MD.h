@@ -19,8 +19,8 @@ void togglePump();
 void toggleValveWaterIn();
 void toggleValveWaterOut();
 void toggleResistor();
+void toggleAutoModeDebounce();
 void toggleAutoMode();
-void toggleAutoModeWEB();
 void workingMax();
 void workingMin();
 void workingAlarm();
@@ -46,6 +46,13 @@ String handleTimerControl(const String &control);
 String handleState(const String &state);
 String handleToggle(const String &toggle);
 String processor(const String &var);
+
+bool toggleAutoModeWEB();
+bool setAutoModeWEB(bool state);
+bool setPumpWEB(bool state);
+bool setValveWaterInWEB(bool state);
+bool setValveWaterOutWEB(bool state);
+bool setResistorWEB(bool state);
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// TIMERS

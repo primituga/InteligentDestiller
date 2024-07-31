@@ -14,7 +14,7 @@
  *
  * @note This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4)
  */
-void toggleAutoMode()
+void toggleAutoModeDebounce()
 {
     static int buttonState = 0;                         /// current state of the button
     static int lastButtonState = 0;                     /// previous state of the button
@@ -37,14 +37,14 @@ void toggleAutoMode()
             buttonState = currentButtonState;           /// save the new state
             if (buttonState == OFF)                     /// if the button state is HIGH
             {
-                toggleAutoModeWEB();                    /// Toggle Auto Mode
+                toggleAutoMode();                    /// Toggle Auto Mode
             }
         }
     }
     lastButtonState = currentButtonState;               /// save the current state as the last state, for next time through the loop
 }
 
-void toggleAutoModeWEB()
+void toggleAutoMode()
 {
     bool state = getAutoMode();
 
@@ -285,9 +285,9 @@ void modeManagement()
     ////////////////////////////////////////////////////////////////////////////////////////
     /// MACHINE MODE MANAGEMENT BLOCK
     ////////////////////////////////////////////////////////////////////////////////////////
-    if (!getManualMode())
+    if (!getManualMode() || getManualModeWEB())
     {
-        toggleAutoMode();
+        toggleAutoModeDebounce();
     }
     else
     {
