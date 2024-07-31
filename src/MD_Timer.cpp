@@ -13,11 +13,23 @@
 bool flagTimerStatus = OFF; /// flag to timer status
 static unsigned long previousTimer = 0;
 
-// function to control the timer in the web page
+/**
+ * @brief Web Timer function to add, remove or reset the timer
+ * 
+ * @param op 
+ * @param amount 
+ * 
+ * @note This function is called by the processor function in MD_Web_Handlers.cpp
+ * @return long 
+ */
 long webTimer(String op, int16_t amount)
 {
 	unsigned long currentTimer = millis();
 	static long tot = 0;
+	/**
+	 * @brief Construct a new if object to add, remove or reset the timer
+	 * 
+	 */
 	if (op == "+")
 	{
 		switch (amount) /// case to add time
@@ -103,7 +115,12 @@ long webTimer(String op, int16_t amount)
 	return tot;
 }
 
-/// function to return timer status
+/**
+ * @brief Get the Timer Status object to get the timer status (ON/OFF)
+ * @note This function is called by the processor function in AP_Destiller.cpp
+ * @return true 
+ * @return false 
+ */
 bool getTimerStatus()
 {
 	if (flagTimerStatus == ON)
@@ -112,25 +129,41 @@ bool getTimerStatus()
 		return OFF;
 }
 
-/// get timer in secounds
+/**
+ * @brief Get the Timer Secound object to get the timer secound
+ * 
+ * @return int 
+ */
 int getTimerSecound()
 {
 	return (webTimer("*", 0) / 1000) % 60;
 }
 
-/// get timer in minutes
+/**
+ * @brief Get the Timer Minute object to get the timer minute
+ * 
+ * @return int 
+ */
 int getTimerMinute()
 {
 	return ((webTimer("*", 0) / 1000) / 60) % 60;
 }
 
-/// get timer in Hours
+/**
+ * @brief Get the Timer Hour object to get the timer hour
+ * 
+ * @return int 
+ */
 int getTimerHour()
 {
 	return ((webTimer("*", 0) / 1000) / 60) / 60;
 }
 
-/// Start or stop the timer
+/**
+ * @brief Set the Timer object to set the timer status (ON/OFF)
+ * 
+ * @param stat 
+ */
 void setTimer(bool stat)
 {
 	if (stat == ON)
@@ -139,66 +172,118 @@ void setTimer(bool stat)
 		flagTimerStatus = OFF;
 }
 
+/**
+ * @brief Add 1 secound to timer object to add 1 secound to timer
+ * 
+ */
 void add1s()
 {
 	webTimer("+", 1);
 }
 
+/**
+ * @brief Add 5 secounds to timer object to add 5 secounds to timer
+ * 
+ */
 void add5s()
 {
 	webTimer("+", 5);
 }
 
+/**
+ * @brief Add 10 secounds to timer object to add 10 secounds to timer
+ * 
+ */
 void add10s()
 {
 	webTimer("+", 10);
 }
 
+/**
+ * @brief Add 1 minute to timer object to add 1 minute to timer
+ * 
+ */
 void add1m()
 {
 	webTimer("+", 60);
 }
 
+/**
+ * @brief Add 5 minutes to timer object to add 5 minutes to timer
+ * 
+ */
 void add5m()
 {
 	webTimer("+", 300);
 }
 
+/**
+ * @brief Add 10 minutes to timer object to add 10 minutes to timer
+ * 
+ */
 void add10m()
 {
 	webTimer("+", 600);
 }
 
+/**
+ * @brief Remove 1 secound to timer object to remove 1 secound to timer
+ * 
+ */
 void rem1s()
 {
 	webTimer("-", 1);
 }
 
+/**
+ * @brief Remove 5 secounds to timer object to remove 5 secounds to timer
+ * 
+ */
 void rem5s()
 {
 	webTimer("-", 5);
 }
 
+/**
+ * @brief Remove 10 secounds to timer object to remove 10 secounds to timer
+ * 
+ */
 void rem10s()
 {
 	webTimer("-", 10);
 }
 
+/**
+ * @brief Remove 1 minute to timer object to remove 1 minute to timer
+ * 
+ */
 void rem1m()
 {
 	webTimer("-", 60);
 }
 
+/**
+ * @brief Remove 5 minutes to timer object to remove 5 minutes to timer
+ * 
+ */
 void rem5m()
 {
 	webTimer("-", 300);
 }
 
+/**
+ * @brief Remove 10 minutes to timer object to remove 10 minutes to timer
+ * 
+ */
 void rem10m()
 {
 	webTimer("-", 600);
 }
 
+/**
+ * @brief Reset Timer object to reset timer
+ * 
+ */
 void resetTimer()
 {
 	webTimer("=", 0);

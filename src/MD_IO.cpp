@@ -2,41 +2,49 @@
  * @author Sérgio Carmo
  * @file MD_IO.cpp
  * @brief IO functions for the MD project
+ * <This file contains the IO functions for the MD project that are used to control the Machine and 
+ * its peripherals using the ESP32 GPIOs and the Web Interface of the project.>
  * @version 1.0
  */
+
 #include "MD.h"
 
-void toggleAutoMode() /// Toggle Auto Mode
+/**
+ * @brief Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4)
+ *
+ * @note This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4)
+ */
+void toggleAutoMode()
 {
-    static int buttonState = 0;     /// current state of the button
-    static int lastButtonState = 0; /// previous state of the button
+    static int buttonState = 0;                         /// current state of the button
+    static int lastButtonState = 0;                     /// previous state of the button
 
-    static int currentButtonState = 0;         /// current state of the button
-    static unsigned long lastDebounceTime = 0; /// the last time the output pin was toggled
-    static unsigned long debounceDelay = 50;   /// the debounce time; increase if the output flickers
+    static int currentButtonState = 0;                  /// current state of the button
+    static unsigned long lastDebounceTime = 0;          /// the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;            /// the debounce time; increase if the output flickers
 
-    currentButtonState = getAutoModeSW(); /// read the state of the switch into a local variable
+    currentButtonState = getAutoModeSW();               /// read the state of the switch into a local variable
 
-    if (currentButtonState != lastButtonState) /// If the switch changed, due to noise or pressing
+    if (currentButtonState != lastButtonState)          /// If the switch changed, due to noise or pressing
     {
-        lastDebounceTime = millis(); /// reset the debouncing timer
+        lastDebounceTime = millis();                    /// reset the debouncing timer
     }
 
-    if ((millis() - lastDebounceTime) > debounceDelay) /// if the switch value has been stable for a while
+    if ((millis() - lastDebounceTime) > debounceDelay)  /// if the switch value has been stable for a while
     {
-        if (currentButtonState != buttonState) /// if the button state has changed
+        if (currentButtonState != buttonState)          /// if the button state has changed
         {
-            buttonState = currentButtonState; /// save the new state
-            if (buttonState == OFF)           /// if the button state is HIGH
+            buttonState = currentButtonState;           /// save the new state
+            if (buttonState == OFF)                     /// if the button state is HIGH
             {
-                toggleAutoModeWEB(); /// Toggle Auto Mode
+                toggleAutoModeWEB();                    /// Toggle Auto Mode
             }
         }
     }
-    lastButtonState = currentButtonState; /// save the current state as the last state, for next time through the loop
+    lastButtonState = currentButtonState;               /// save the current state as the last state, for next time through the loop
 }
 
-void toggleAutoModeWEB() /// Toggle Auto Mode
+void toggleAutoModeWEB()
 {
     bool state = getAutoMode();
 
@@ -77,7 +85,8 @@ void toggleManualMode() /// Toggle Auto Mode
             {
                 setIndMan(OFF); /// Toggle Auto Mode
             }
-            else{
+            else
+            {
                 setIndMan(ON); /// Toggle Auto Mode
             }
         }
@@ -183,10 +192,18 @@ void workingIdle()
 { /// Working state when water level is idle
     setResistor(OFF);
     setValveWaterIn(OFF);
-    setValveWaterOut(ON);
+    setValveWaterOut(OFF);
 }
 
-void waterManagement()
+void workingOFF()
+{ /// Working state when water level is idle
+    setResistor(OFF);
+    setValveWaterIn(OFF);
+    setValveWaterOut(OFF);
+    setPump(OFF);
+}
+
+void waterManagementAuto()
 {
     ////////////////////////////////////////////////////////////////////////////////////////
     // WATER MANAGEMENT BLOCK
@@ -202,6 +219,22 @@ void waterManagement()
     else if (getAlarm())
     {
         setPump(ON);
+    }
+}
+
+void waterManagementManual()
+{
+    ////////////////////////////////////////////////////////////////////////////////////////
+    // WATER MANAGEMENT BLOCK
+    ////////////////////////////////////////////////////////////////////////////////////////
+    if (getWaterMax())
+    {
+        setPump(OFF);
+    }
+
+    if (getAlarm())
+    {
+        setResistor(OFF);
     }
 }
 

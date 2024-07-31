@@ -9,26 +9,73 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Timer handlers
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Handle Timer
+ * @return String
+ * @note This function handles the timer
+ * @note This function returns the timer in the format HH:MM:SS
+ */
 String handleTimer()
 {
   return String(getTimerHour()) + "h :" + String(getTimerMinute()) + "m :" + String(getTimerSecound()) + "s";
 }
-
+/**
+ * @brief Handle Hour
+ * @return String
+ * @note This function returns the timer hour
+ */
 String handleHour() { return String(getTimerHour()); }
+/**
+ * @brief Handle Minute
+ * @return String
+ * @note This function returns the timer minute
+ */
 String handleMinute() { return String(getTimerMinute()); }
+/**
+ * @brief Handle Secound
+ * @return String
+ * @note This function returns the timer secound
+ */
 String handleSecound() { return String(getTimerSecound()); }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Handlers for Wifi Quality, SSID, TX and IP
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Handle Wifi Quality
+ * @return String
+ * @note This function returns the WiFi quality in percentage
+ */
 String handleWifiQuality() { return wifiQuality(); }
+/**
+ * @brief Handle Wifi SSID
+ * @return String
+ * @note This function returns the WiFi SSID
+ */
 String handleWifiSSID() { return WiFi.SSID(); }
+/**
+ * @brief Handle Wifi TX
+ * @return String
+ * @note This function returns the WiFi TX power
+ */
 String handleWifiTX() { return String(WiFi.getTxPower() + " dBm"); }
+/**
+ * @brief Handle Wifi IP
+ * @return String
+ * @note This function returns the WiFi IP address
+ */
 String handleWifiIP() { return WiFi.localIP().toString(); }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Timer Add/Remove Time
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Handle Time Adjust
+ * @param adjustment
+ * @return String
+ * @note This function adjusts the timer
+ * @note This function returns the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)
+ */
 String handleTimeAdjust(const String &adjustment)
 {
   if (adjustment == "add1s")
@@ -61,6 +108,13 @@ String handleTimeAdjust(const String &adjustment)
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Timer Start/Stop/Reset
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Handle Timer Control
+ * @param control
+ * @return String
+ * @note This function controls the timer
+ * @note This function returns the control message for the timer (start, stop, reset)
+ */
 String handleTimerControl(const String &control)
 {
   if (control == "start")
@@ -75,6 +129,13 @@ String handleTimerControl(const String &control)
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Handlers for Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax With Response
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Handle State
+ * @param state
+ * @return String 
+ * @note This function handles the state of the variable (auto, manual, pump, dumpWater, resistor, waterIn, waterMax, waterMin, waterAlarm)
+ * @note This function returns the state of the variable (auto, manual, pump, dumpWater, resistor, waterIn, waterMax, waterMin, waterAlarm)
+ */
 String handleState(const String &state)
 {
   if (state == "auto")
@@ -101,6 +162,13 @@ String handleState(const String &state)
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Handlers for Toggle Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Handle Toggle
+ * @param toggle
+ * @return String
+ * @note This function toggles the variable (auto, pump, dumpWater, resistor, waterIn)
+ * @note This function returns the toggle message for the variable (auto, pump, dumpWater, resistor, waterIn)
+ */
 String handleToggle(const String &toggle)
 {
   if (toggle == "auto")
@@ -119,6 +187,14 @@ String handleToggle(const String &toggle)
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Function to handle the HTTP requests for the variables
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Processor
+ * @param var
+ * @return String
+ * @note This function processes the variables for the web server requests
+ * @note This function is called by the web server handle function (server.on)
+ * @note This function returns the variable value for the web server request 
+ */
 String processor(const String &var)
 {
   if (var == "TIMER")

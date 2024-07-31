@@ -18,7 +18,7 @@ void setup()
 	initMultiCore();   /// Initiate MultiCore
 	initFS();		   /// Initiate SPIFFS
 	readInputs();
-	test_IO();
+	//test_IO();
 }
 
 /// loop to run on 1st cpu core

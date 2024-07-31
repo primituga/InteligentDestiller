@@ -25,8 +25,10 @@ void workingMax();
 void workingMin();
 void workingAlarm();
 void workingIdle();
+void workingOFF();
 void workingMaxMin();
-void waterManagement();
+void waterManagementAuto();
+void waterManagementManual();
 void indicatorsManagement();
 void modeManagement();
 

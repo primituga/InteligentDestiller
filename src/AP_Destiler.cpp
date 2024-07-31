@@ -61,7 +61,6 @@ void destiler()
         }
     }
 
-    waterManagement();      /**< Call to manage water levels */
     indicatorsManagement(); /**< Call to manage indicators */
     modeManagement();       /**< Call to manage operation modes */
 
@@ -74,6 +73,7 @@ void destiler()
 
     if (getAutoMode()) /**< Automatic mode operations */
     {
+        waterManagementAuto(); /**< Call to manage water levels */
         if (getAutoMode() && getTimerStatus())
         {
             if (getWaterMax())
@@ -114,42 +114,19 @@ void destiler()
     }
     else if (getManualMode()) /**< Manual mode operations */
     {
-        if (getManualMode())
+        waterManagementManual(); /**< Call to manage water levels */
+
+        if (getWaterMax())
         {
-            if (getWaterMax())
-            {
-                workingMax(); /**< Working when water level is max */
-                IDDLE_FLAG = OFF;
-            }
-            else if (!getWaterMax() && !getAlarm())
-            {
-                workingMaxMin(); /**< Working within max and min water level */
-                if (getWaterMin())
-                {
-                    workingMin(); /**< Working when water level is min */
-                    IDDLE_FLAG = OFF;
-                }
-            }
-            else if (getWaterMin())
-            {
-                workingMin(); /**< Working when water level is min */
-                IDDLE_FLAG = OFF;
-            }
-            else if (getAlarm())
-            {
-                workingAlarm(); /**< Working when there is an alarm */
-                IDDLE_FLAG = OFF;
-            }
-            else if (!IDDLE_FLAG)
-            {
-                workingIdle(); /**< Working in idle state */
-                IDDLE_FLAG = ON;
-            }
+            setPump(OFF);
         }
-        else
+        else if (!getWaterMax() && getAlarm())
         {
-            workingIdle(); /**< Working in idle state */
-            IDDLE_FLAG = ON;
+           setResistor(OFF);
         }
+    }
+    else
+    {
+        workingOFF(); 
     }
 }

@@ -10,6 +10,12 @@
 const char *soft_ap_ssid = "Destiller-AP";
 const char *soft_ap_password = "Destiller-AP";
 
+/**
+ * @brief WiFi Event Handler
+ * @note This function handles the WiFi events
+ * @param event
+ * @return void
+ */
 void OnWiFiEvent(WiFiEvent_t event)
 {
   switch (event)
@@ -31,6 +37,11 @@ void OnWiFiEvent(WiFiEvent_t event)
   }
 }
 
+/**
+ * @brief WiFi Quality
+ * @return String
+ * @note This function returns the WiFi quality in percentage
+ */
 String wifiQuality()
 {
   int rssi = WiFi.RSSI();
@@ -51,11 +62,13 @@ String wifiQuality()
   return "RSSI: " + String(rssi) + " dBm (" + String(quality) + " %)";
 }
 
+/**
+ * @brief Connect to WiFi
+ * @return void
+ * @note This function connects the ESP32 to a WiFi network
+ */
 void connectToWIFI()
 {
-  /// readSettingsFromEEPROM(WIFI_SSID, WIFI_PASSWORD);
-  /// Read the SSID and Password from the EEPROM
-
   WiFiManager wifiManager;
 
   wifiManager.setClass("invert");         /// Dark theme
@@ -74,22 +87,22 @@ void connectToWIFI()
   String ssid = wifiManager.getWiFiSSID();
   String password = wifiManager.getWiFiPass();
 
-  /// saveSettingsToEEPPROM(WIFI_SSID, WIFI_PASSWORD);
-
   WiFi.begin(ssid.c_str(), password.c_str());
   delay(100);
   sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));
   sPrintLnStr("--wmHostname: " + wifiManager.getWiFiHostname());
-  /// Serial.print("--ESP32 IP on the WiFi network: ");
-  /// sPrintLnStr(WiFi.localIP().toString());
-  /// Serial.print("--Connected to: ");
-  /// Serial.println(WiFi.SSID());
   sPrintStr("--TxPower: ");
   sPrintStr(String(WiFi.getTxPower()));
   sPrintLnStr(" dBm");
   sPrintLnStr("--" + wifiQuality());
 }
 
+/**
+ * @brief Connect to SoftAP
+ * @return void
+ * @note This function creates a Soft Access Point
+ * @note The IP Address of the ESP32 Soft Access Point is set to: 192.168.100.100
+ */
 void connectToSoftAP()
 {
   WiFi.setHostname("Destiler"); /// Set hostname
@@ -109,10 +122,23 @@ void connectToSoftAP()
   sPrintLnStr(WiFi.softAPIP().toString());
 }
 
+/**
+ * @brief Initiate WiFi
+ * @return bool
+ * @note This function initiates the WiFi connection
+ */
 bool initWIFI()
 {
   static bool WIFI_SOFTAP_FLAG = true;
-
+  /**
+   * @brief WIFI_MODE_OPTIONS
+   * 
+   * 1 - Connect to local WiFi
+   * 
+   * 2 - Create a local AP
+   * 
+   * 3 - Both
+   */
   if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 1)
   {
     sPrintLnStr("WIFI INIT....");
