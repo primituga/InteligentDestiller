@@ -1,9 +1,12 @@
-
+/**
+ * @file main.cpp
+ * @brief Main file for the MD project
+ * @version 1.0
+ */
 
 #include "AP.h"
 
-//bool DEBUG=1;  // Debug mode
-
+bool DEBUG = 1; // Debug mode
 
 // setup to run on 1st cpu core
 void setup()
@@ -19,7 +22,7 @@ void setup()
 
 // loop to run on 1st cpu core
 void loop(void)
-{ // Main loop
+{
 	readInputs();
 	destiler(); // Destiler function to operate the machine
 	writeOutputs();

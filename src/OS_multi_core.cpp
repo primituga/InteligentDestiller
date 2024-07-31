@@ -1,3 +1,8 @@
+/**
+ * @file OS_multi_core.cpp
+ * @brief Operating System MultiCore functions
+ * @version 1.0
+ */
 #include "OS.h"
 
 void initMultiCore()    // Function to initiate the 2nd core

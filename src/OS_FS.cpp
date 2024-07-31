@@ -1,9 +1,14 @@
+/**
+ * @brief Operating System File System functions
+ * @version 1.0
+ * @file OS_FS.cpp
+ */
+
+#include "OS.h"
 
 // /************************************************************************/
 // /* Initialize Serial Terminal                                           */
 // /************************************************************************/
-
-#include "OS.h"
 
 void initFS()
 {

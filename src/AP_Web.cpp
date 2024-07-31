@@ -1,4 +1,8 @@
-/*! \file AP_WEB.cpp */
+/**
+ * @file AP_Web.cpp
+ * @brief Web Server functions
+ * @version 1.0
+ */
 
 #include "AP.h" // Definitions
 
@@ -7,6 +11,14 @@ AsyncWebServer server(80); // Create a webserver object that listens for HTTP re
 //********************************************************************************
 // Setup Calls
 //********************************************************************************
+
+/**
+ * @brief Setup the routes for the web server.
+ * 
+ * This function defines the routes for handling HTTP GET requests for various
+ * resources such as HTML pages, CSS files, JS files, images, time adjustments,
+ * timer control, toggle actions, state actions, WiFi handlers, and timer handlers.
+ */
 void setupRoutes()
 {
   //////////////////////////////////////////////////////////////

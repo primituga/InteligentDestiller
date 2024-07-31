@@ -1,6 +1,9 @@
+/**
+ * @file MD_IO.cpp
+ * @brief IO functions for the MD project
+ * @version 1.0
+ */
 #include "MD.h"
-
-
 
 void toggleAutoMode() // Toggle Auto Mode
 {

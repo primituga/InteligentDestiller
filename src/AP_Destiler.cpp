@@ -1,16 +1,28 @@
+/**
+ * @file AP_Destiler.cpp
+ * @brief Application file for the MD project.
+ * @version 1.0
+ */
+
 #include "AP.h"
 
+/**
+ * @brief Destiler function to operate the machine.
+ *
+ * This function controls the operation of the distillation machine by
+ * managing water levels, indicators, and modes. It includes debugging
+ * information and handles both automatic and manual modes of operation.
+ */
 void destiler()
 {
     static bool IDDLE_FLAG = OFF;
 
-    if (DEBUGlog) // Print debug information
+    if (DEBUGlog) /**< Debug information logging */
     {
         static unsigned long previousTimer = 0;
         unsigned long currentTimer = millis();
         if (millis() - previousTimer > 5000)
         {
-            // digitalWrite(PIN_IND_ALARM, OFF);
             previousTimer = millis();
             sPrintLnStr("  ");
             sPrintStr("getWaterMax ");
@@ -48,96 +60,95 @@ void destiler()
         }
     }
 
-    waterManagement();      // Water Management
-    indicatorsManagement(); // Indicators Management
-    modeManagement();       // Mode Management
+    waterManagement();      /**< Call to manage water levels */
+    indicatorsManagement(); /**< Call to manage indicators */
+    modeManagement();       /**< Call to manage operation modes */
 
     if (!getAutoMode())
-        setTimer(OFF); // Stop Timer if AutoMode is OFF
+        setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
 
     /************************************************************************/
     /* WORKING BLOCK                                                        */
     /************************************************************************/
 
-    if (getAutoMode()) // If Auto mode is on
+    if (getAutoMode()) /**< Automatic mode operations */
     {
-        if (getAutoMode() && getTimerStatus()) // If auto mode is on
-        {
-            if (getWaterMax()) // If water level is max
-            {
-                workingMax(); // Working when water level is max
-                IDDLE_FLAG = OFF;
-            }
-            else if (!getWaterMax() && !getAlarm()) // If water level is min
-            {
-                workingMaxMin(); // Working within max and min water level
-                if (getWaterMin())
-                {
-                    workingMin(); // Working when water level is min
-                    IDDLE_FLAG = OFF;
-                }
-            }
-            else if (getWaterMin()) // If water level is min
-            {
-                workingMin();
-                IDDLE_FLAG = OFF;
-            }
-            else if (getAlarm()) // If water level is alarm
-            {
-                workingAlarm();
-                IDDLE_FLAG = OFF;
-            }
-            else if (!IDDLE_FLAG)
-            {
-                workingIdle();
-                IDDLE_FLAG = ON;
-            }
-        }
-        else if (!IDDLE_FLAG)
-        {
-            workingIdle();
-            IDDLE_FLAG = ON;
-        }
-    }
-    else if (getManualMode()) // If manual mode is on
-    {
-        if (getManualMode())
+        if (getAutoMode() && getTimerStatus())
         {
             if (getWaterMax())
             {
-                workingMax();
+                workingMax(); /**< Working when water level is max */
                 IDDLE_FLAG = OFF;
             }
-            else if (!getWaterMax() && !getAlarm()) // If water level is min
+            else if (!getWaterMax() && !getAlarm())
             {
-                workingMaxMin();
+                workingMaxMin(); /**< Working within max and min water level */
                 if (getWaterMin())
                 {
-                    workingMin();
+                    workingMin(); /**< Working when water level is min */
                     IDDLE_FLAG = OFF;
                 }
             }
             else if (getWaterMin())
             {
-                workingMin();
+                workingMin(); /**< Working when water level is min */
                 IDDLE_FLAG = OFF;
             }
             else if (getAlarm())
             {
-                workingAlarm();
+                workingAlarm(); /**< Working when there is an alarm */
                 IDDLE_FLAG = OFF;
             }
             else if (!IDDLE_FLAG)
             {
-                workingIdle();
+                workingIdle(); /**< Working in idle state */
+                IDDLE_FLAG = ON;
+            }
+        }
+        else if (!IDDLE_FLAG)
+        {
+            workingIdle(); /**< Working in idle state */
+            IDDLE_FLAG = ON;
+        }
+    }
+    else if (getManualMode()) /**< Manual mode operations */
+    {
+        if (getManualMode())
+        {
+            if (getWaterMax())
+            {
+                workingMax(); /**< Working when water level is max */
+                IDDLE_FLAG = OFF;
+            }
+            else if (!getWaterMax() && !getAlarm())
+            {
+                workingMaxMin(); /**< Working within max and min water level */
+                if (getWaterMin())
+                {
+                    workingMin(); /**< Working when water level is min */
+                    IDDLE_FLAG = OFF;
+                }
+            }
+            else if (getWaterMin())
+            {
+                workingMin(); /**< Working when water level is min */
+                IDDLE_FLAG = OFF;
+            }
+            else if (getAlarm())
+            {
+                workingAlarm(); /**< Working when there is an alarm */
+                IDDLE_FLAG = OFF;
+            }
+            else if (!IDDLE_FLAG)
+            {
+                workingIdle(); /**< Working in idle state */
                 IDDLE_FLAG = ON;
             }
         }
         else
         {
-            workingIdle();
+            workingIdle(); /**< Working in idle state */
             IDDLE_FLAG = ON;
         }
     }
-    
 }

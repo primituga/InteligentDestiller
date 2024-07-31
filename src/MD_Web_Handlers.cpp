@@ -1,5 +1,8 @@
-/*! \file AP_WEB.cpp */
-
+/**
+ * @file MD_Web_Handlers.cpp
+ * @brief Web Handlers for the MD project
+ * @version 1.0
+ */
 #include "MD.h" // Definitions
 
 //********************************************************************************
