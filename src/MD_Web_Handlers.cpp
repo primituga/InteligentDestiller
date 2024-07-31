@@ -172,15 +172,15 @@ String handleState(const String &state)
 String handleToggle(const String &toggle)
 {
   if (toggle == "auto")
-    toggleAutoMode();
+    toggleAutoModeWeb();
   else if (toggle == "pump")
-    togglePump();
+    togglePumpWeb();
   else if (toggle == "dumpWater")
-    toggleValveWaterOut();
+    toggleValveWaterOutWeb();
   else if (toggle == "waterIn")
-    toggleValveWaterIn();
+    toggleValveWaterInWeb();
   else if (toggle == "resistor")
-    toggleResistor();
+    toggleResistorWeb();
   return toggle + " toggled";
 }
 

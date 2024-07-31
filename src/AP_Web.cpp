@@ -200,7 +200,7 @@ void setupRoutes()
             { request->send_P(200, "text/plain", handleToggle("resistor").c_str()); });
 
   ////////////////////////////////////////////////////////////////////////////////////////
-  /// Routes for handling state actions
+  /// Routes for handling read actions
   ////////////////////////////////////////////////////////////////////////////////////////
   server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("auto").c_str()); });

@@ -373,14 +373,14 @@ void setIndMan(bool state)
             if (buttonState == ON)            /// if the button state is HIGH
             {
                 if (DEBUG)
-                    sPrintLnStr("_setIndMan OFF");
-                outputVarsImage[POS_IND_MAN] = OFF;
+                    sPrintLnStr("_setIndMan ON");
+                outputVarsImage[POS_IND_MAN] = ON;
             }
             else if (buttonState == OFF)
             {
                 if (DEBUG)
-                    sPrintLnStr("_setIndMan ON");
-                outputVarsImage[POS_IND_MAN] = ON;
+                    sPrintLnStr("_setIndMan OFF");
+                outputVarsImage[POS_IND_MAN] = OFF;
             }
         }
     }

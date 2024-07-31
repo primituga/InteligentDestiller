@@ -25,6 +25,7 @@ void setup()
 void loop(void)
 {
 	readInputs();
+	readOutputsWeb();
 	destiler(); /// Destiler function to operate the machine
 	writeOutputs();
 }

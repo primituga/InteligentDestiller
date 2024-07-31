@@ -62,10 +62,11 @@ void destiler()
     }
 
     indicatorsManagement(); /**< Call to manage indicators */
-    modeManagement();       /**< Call to manage operation modes */
-
-    if (!getAutoMode())
-        setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
+    //modeManagement();       /**< Call to manage operation modes */
+    if (getAutoMode() || getAutoModeWeb())
+    {
+        toggleAutoMode();
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////////
     /// WORKING BLOCK
@@ -74,6 +75,7 @@ void destiler()
     if (getAutoMode()) /**< Automatic mode operations */
     {
         waterManagementAuto(); /**< Call to manage water levels */
+
         if (getAutoMode() && getTimerStatus())
         {
             if (getWaterMax())
@@ -115,6 +117,7 @@ void destiler()
     else if (getManualMode()) /**< Manual mode operations */
     {
         waterManagementManual(); /**< Call to manage water levels */
+        setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
 
         if (getWaterMax())
         {
@@ -127,6 +130,7 @@ void destiler()
     }
     else
     {
+        setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
         workingOFF(); 
     }
 }

@@ -19,7 +19,6 @@ void togglePump();
 void toggleValveWaterIn();
 void toggleValveWaterOut();
 void toggleResistor();
-void toggleAutoModeDebounce();
 void toggleAutoMode();
 void workingMax();
 void workingMin();
@@ -31,6 +30,25 @@ void waterManagementAuto();
 void waterManagementManual();
 void indicatorsManagement();
 void modeManagement();
+
+void readOutputsWeb();
+void toggleAutoModeWeb();
+void togglePumpWeb();
+void toggleValveWaterInWeb();
+void toggleValveWaterOutWeb();
+void toggleResistorWeb();
+
+void setAutoModeWeb(bool state);
+void setPumpWeb(bool state);
+void setValveWaterInWeb(bool state);
+void setValveWaterOutWeb(bool state);
+void setResistorWeb(bool state);
+
+bool getAutoModeWeb();
+bool getPumpWeb();
+bool getValv_Water_InWeb();
+bool getValv_Water_OutWeb();
+bool getResistorWeb();
 
 /// Handlers
 String handleTimer();
@@ -46,13 +64,6 @@ String handleTimerControl(const String &control);
 String handleState(const String &state);
 String handleToggle(const String &toggle);
 String processor(const String &var);
-
-bool toggleAutoModeWEB();
-bool setAutoModeWEB(bool state);
-bool setPumpWEB(bool state);
-bool setValveWaterInWEB(bool state);
-bool setValveWaterOutWEB(bool state);
-bool setResistorWEB(bool state);
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// TIMERS
@@ -106,7 +117,7 @@ void test_IO();
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /// WIFI Functions calls
-#define WIFI_MODE_OPTIONS 2 /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
+#define WIFI_MODE_OPTIONS 3 /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
 bool initWIFI();            /// Inicia o wifi
 String wifiQuality();       /// Retorna a qualidade do wifi
 
