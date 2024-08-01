@@ -14,10 +14,10 @@ void setup()
 {
 	initPinsInputs();  /// Initiate all pins as inputs
 	initPinsOutputs(); /// Initiate all pins as outputs
-	test_IO();
-	initSerial();	   /// Initiate Serial communication
-	initMultiCore();   /// Initiate MultiCore
-	initFS();		   /// Initiate SPIFFS
+	// test_IO();
+	initSerial();	 /// Initiate Serial communication
+	initMultiCore(); /// Initiate MultiCore
+	initFS();		 /// Initiate SPIFFS
 	readInputs();
 	updateOutputsWeb();
 }
@@ -27,8 +27,8 @@ void loop(void)
 {
 	readInputs();
 	destiler(); /// Destiler function to operate the machine
+	updateOutputsWeb();
 	writeOutputs();
-	//updateOutputsWeb();
 }
 
 /// loop to run on 2nd cpu core
@@ -36,13 +36,10 @@ void loop2(void *pvParameters)
 {
 	while (1) /// Main loop
 	{
+		webTimer("*", 0);
 		if (initWIFI())
 		{
 			setupRoutes(); /// Setup Routes
-		}
-		else
-		{
-			webTimer("*", 0);
 		}
 	}
 }

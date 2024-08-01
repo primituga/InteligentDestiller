@@ -78,7 +78,7 @@ void connectToWIFI()
   wifiManager.setHostname("Destiler");    /// Hostname
   WiFi.setHostname("Destiler");           /// Hostname
 
-  if (!wifiManager.autoConnect("DestilerAP"))
+  if (!wifiManager.autoConnect("Conf Destiler AP"))
   {
     sPrintLnStr("Failed to connect");
     return;
@@ -155,8 +155,8 @@ bool initWIFI()
   else if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 3)
   {
     sPrintLnStr("WIFI INIT and SoftAP....");
-    connectToSoftAP(); /// Initiate WiFi in AP mode
     connectToWIFI();   /// Initiate WiFi
+    connectToSoftAP(); /// Initiate WiFi in AP mode
     return true;
   }
   else

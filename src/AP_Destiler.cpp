@@ -63,7 +63,7 @@ void destiler()
 
     indicatorsManagement(); /**< Call to manage indicators */
     modeManagement();       /**< Call to manage operation modes */
-   
+
     ////////////////////////////////////////////////////////////////////////////////////////
     /// WORKING BLOCK
     ////////////////////////////////////////////////////////////////////////////////////////
@@ -112,19 +112,22 @@ void destiler()
     }
     else if (getManualMode()) /**< Manual mode operations */
     {
-        waterManagementManual(); /**< Call to manage water levels */
-        setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
+        waterManagementManual();
+        setTimer(OFF);
         setIndAuto(OFF);
         setAutoModeWeb(OFF);
 
         setPump(getPumpWeb());
         setValveWaterIn(getValv_Water_InWeb());
         setValveWaterOut(getValv_Water_OutWeb());
-        setResistor(getResistorWeb());
+        if (!getAlarm())
+        {
+            setResistor(getResistorWeb());
+        }
     }
-    else 
+    else
     {
-        setTimer(OFF); 
-        workingOFF(); 
+        setTimer(OFF);
+        workingOFF();
     }
 }

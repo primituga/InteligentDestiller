@@ -16,7 +16,7 @@ uint8_t outputVarsImageWeb[9]; /// Output variables image
 ////////////////////////////////////////////////////////////////////////////////////////
 void updateOutputsWeb()
 {
-    outputVarsImageWeb[0] = getResistor();
+    outputVarsImageWeb[0] = outputVarsImage[POS_RAQ];
     outputVarsImageWeb[1] = getPump();
     outputVarsImageWeb[2] = getValv_Water_Out();
     outputVarsImageWeb[3] = getValv_Water_In();
@@ -243,12 +243,12 @@ void toggleAutoModeWeb()
 void togglePumpWeb() /// Toggle Pump
 {
     bool state = getPump();
-    if (state == OFF)
+    if (state == OFF && getManualMode())
     {
         state = !state;
         setPumpWeb(state);
     }
-    else
+    else if (state == ON && getManualMode())
     {
         state = !state;
         setPumpWeb(state);
@@ -259,12 +259,12 @@ void toggleValveWaterInWeb() /// Toggle Valve Water In
 {
     bool state = getValv_Water_In();
 
-    if (state == OFF)
+    if (state == OFF && getManualMode())
     {
         state = !state;
         setValveWaterInWeb(state);
     }
-    else
+    else if (state == ON && getManualMode())
     {
         state = !state;
         setValveWaterInWeb(state);
@@ -275,12 +275,12 @@ void toggleValveWaterOutWeb() /// Toggle Valve Water Out
 {
     bool state = getValv_Water_Out();
 
-    if (state == OFF)
+    if (state == OFF && getManualMode())
     {
         state = !state;
         setValveWaterOutWeb(state);
     }
-    else
+    else if (state == ON && getManualMode())
     {
         state = !state;
         setValveWaterOutWeb(state);
@@ -291,12 +291,12 @@ void toggleResistorWeb() /// Toggle Resistor
 {
     bool state = getResistor();
 
-    if (state == OFF)
+    if (state == OFF && getManualMode())
     {
         state = !state;
         setResistorWeb(state);
     }
-    else
+    else if (state == ON && getManualMode())
     {
         state = !state;
         setResistorWeb(state);
