@@ -16,7 +16,7 @@ uint8_t outputVarsImageWeb[9]; /// Output variables image
 ////////////////////////////////////////////////////////////////////////////////////////
 void updateOutputsWeb()
 {
-    outputVarsImageWeb[0] = outputVarsImage[POS_RAQ];
+    outputVarsImageWeb[0] = getResistor();
     outputVarsImageWeb[1] = getPump();
     outputVarsImageWeb[2] = getValv_Water_Out();
     outputVarsImageWeb[3] = getValv_Water_In();
