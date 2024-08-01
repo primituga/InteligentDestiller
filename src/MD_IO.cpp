@@ -276,6 +276,9 @@ void modeManagement()
     {
         toggleAutoMode();
         setIndAuto(getAutoModeWeb());
+    }else
+    {
+        setIndAuto(OFF);
     }
 
     /*if (getAutoModeWeb() && !getManualMode())

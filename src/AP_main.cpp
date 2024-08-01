@@ -14,22 +14,21 @@ void setup()
 {
 	initPinsInputs();  /// Initiate all pins as inputs
 	initPinsOutputs(); /// Initiate all pins as outputs
+	test_IO();
 	initSerial();	   /// Initiate Serial communication
 	initMultiCore();   /// Initiate MultiCore
 	initFS();		   /// Initiate SPIFFS
 	readInputs();
 	updateOutputsWeb();
-	//test_IO();
 }
 
 /// loop to run on 1st cpu core
 void loop(void)
 {
 	readInputs();
-	//readOutputsWeb();
 	destiler(); /// Destiler function to operate the machine
-	updateOutputsWeb();
 	writeOutputs();
+	//updateOutputsWeb();
 }
 
 /// loop to run on 2nd cpu core

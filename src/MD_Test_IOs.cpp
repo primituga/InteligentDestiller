@@ -5,18 +5,18 @@
  * @version 1.0
  */
 #include "MD.h"
-#define delayT 500	/// Delay time for testing I/Os 
+#define delayT 500 /// Delay time for testing I/Os
 
 /**
  * @brief Test I/Os
- * 
+ *
  * @return void
  */
 void test_IO()
 {
 	bool isDEBUGON = false;
 	Serial.println("Test I/Os ...");
-	if (DEBUG)	
+	if (DEBUG)
 	{
 		DEBUG = false;
 		isDEBUGON = true;
@@ -24,84 +24,84 @@ void test_IO()
 
 	///  Test I/O Indicador Maximo
 	Serial.print("Indicador Maximo ... ");
-	setIndMax(ON);/// 
+	setIndMax(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setIndMax(OFF);/// 
+	setIndMax(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
 
 	///  Test I/O Indicador Minimo
 	Serial.print("Indicador Minimo ... ");
-	setIndMin(ON);/// 
+	setIndMin(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setIndMin(OFF);/// 
+	setIndMin(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
 
 	///  Test I/O Indicador Alarme
 	Serial.print("Indicador Alarme ... ");
-	setIndAlarm(ON);/// 
-	delay(1000);
+	setIndAlarm(ON); ///
+	delay(delayT);
 	writeOutputs();
-	setIndAlarm(OFF);/// 
-	delay(1000);
+	setIndAlarm(OFF); ///
+	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
-	
+
 	///  Test I/O Indicador Manual
 	Serial.print("Indicador Manual ... ");
-	setIndMan(ON);/// 
+	setIndMan(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setIndMan(OFF);/// 
+	setIndMan(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
-	
+
 	///  Test I/O Indicador Auto
 	Serial.print("Indicador Auto ... ");
-	setIndAuto(ON);/// 
+	setIndAuto(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setIndAuto(OFF);/// 
+	setIndAuto(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
 
 	///  Test I/O Indicador Valvula Entrada
 	Serial.print("Indicador Valvula Entrada ... ");
-	setValveWaterIn(ON);/// 
+	setValveWaterIn(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setValveWaterIn(OFF);/// 
+	setValveWaterIn(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
 
 	///  Test I/O Indicador Valvula Saida
 	Serial.print("Indicador Valvula Saida ... ");
-	setValveWaterOut(ON);/// 
+	setValveWaterOut(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setValveWaterOut(OFF);/// 
+	setValveWaterOut(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
 
 	///  Test I/O Indicador Resistor
 	Serial.print("Indicador Resistor ... ");
-	setResistor(ON);/// 
+	setResistor(ON); ///
 	delay(delayT);
 	writeOutputs();
-	setResistor(OFF);/// 
+	setResistor(OFF); ///
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");
-	
+
 	/*
 	///  Test I/O Indicador Bomba
 	Serial.print("Indicador Bomba ... ");

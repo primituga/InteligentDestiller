@@ -23,7 +23,7 @@ void updateOutputsWeb()
     outputVarsImageWeb[4] = getAlarm();
     outputVarsImageWeb[5] = getWaterMin();
     outputVarsImageWeb[6] = getWaterMax();
-    outputVarsImageWeb[7] = getIndAuto();
+    //outputVarsImageWeb[7] = getIndAuto();
     outputVarsImageWeb[8] = getManualMode();
 }
 
