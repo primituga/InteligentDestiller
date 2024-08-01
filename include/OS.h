@@ -104,7 +104,7 @@ void initPinsInputs();             /// Inicia os inputs
 bool getWaterMax();                /// Retorna estado do sensor de agua de maximo
 bool getWaterMin();                /// Retorna estado do sensor de agua de minimo
 bool getAlarm();                   /// Retorna estado do alarme
-bool getAutoMode();                /// Retorna estado do modo auto
+bool getIndAuto();                /// Retorna estado do modo auto
 bool getAutoModeSW();              /// Retorna estado do interruptor auto
 bool getManualMode();              /// Retorna estado do botao manual
 bool getResistor();                /// Retorna estado do resistor
@@ -120,7 +120,7 @@ void setPump(bool state);          /// Liga/desliga o indicador luminoso da bomb
 void setValveWaterIn(bool state);  /// Liga/desliga o indicador luminoso da valvula 1
 void setValveWaterOut(bool state); /// Liga/desliga o indicador luminoso da valvula 2
 void setResistor(bool state);      /// Liga/desliga o indicador luminoso da resistencia
-void setAutoMode(bool state1);     /// Liga/desliga o modo auto
+void setIndAuto(bool state1);     /// Liga/desliga o modo auto
 void writeOutputs();
 void readInputs();
 

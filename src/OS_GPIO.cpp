@@ -6,16 +6,17 @@
  *
  */
 
-#include "OS.h" 
+#include "OS.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// GPIO Images
 ////////////////////////////////////////////////////////////////////////////////////////
-uint8_t inputVarsImage[5];  /// Input variables image
-const uint8_t inputVarsPINs[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM};  /// Input variables pins
+uint8_t inputVarsImage[5];                                                                 /// Input variables image
+const uint8_t inputVarsPINs[] = {PIN_SW_MAN, PIN_SMIN, PIN_SMAX, PIN_SW_AUTO, PIN_SALARM}; /// Input variables pins
 
 uint8_t outputVarsImage[9]; /// Output variables image
-const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN, PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN}; /// Output variables pins
+const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN,
+                                  PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN}; /// Output variables pins
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Read ESP32 GPIOs and stores in the image array
@@ -29,9 +30,9 @@ const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV
  */
 void readInputs()
 {
-    for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++)               /// PIN_INPUT_COUNT = 5
+    for (uint8_t i = 0; i < PIN_INPUT_COUNT; i++) /// PIN_INPUT_COUNT = 5
     {
-        inputVarsImage[i] = digitalRead(inputVarsPINs[i]);      /// Read the input from the GPIO
+        inputVarsImage[i] = digitalRead(inputVarsPINs[i]); /// Read the input from the GPIO
     }
 }
 
@@ -47,9 +48,9 @@ void readInputs()
  */
 void writeOutputs()
 {
-    for (uint8_t i = 0; i < PIN_OUTPUT_COUNT; i++)              /// PIN_OUTPUT_COUNT = 9
+    for (uint8_t i = 0; i < PIN_OUTPUT_COUNT; i++) /// PIN_OUTPUT_COUNT = 9
     {
-        digitalWrite(outputVarsPINs[i], outputVarsImage[i]);    /// Write the output to the GPIO
+        digitalWrite(outputVarsPINs[i], outputVarsImage[i]); /// Write the output to the GPIO
     }
 }
 
@@ -65,11 +66,11 @@ void writeOutputs()
  */
 void initPinsInputs()
 {
-    pinMode(PIN_SW_MAN, INPUT);         /// on/off sw
-    pinMode(PIN_SMIN, INPUT);           /// min sensor
-    pinMode(PIN_SMAX, INPUT);           /// max sensor
-    pinMode(PIN_SW_AUTO, INPUT);        /// push sw
-    pinMode(PIN_SALARM, INPUT);         /// alarm
+    pinMode(PIN_SW_MAN, INPUT);  /// on/off sw
+    pinMode(PIN_SMIN, INPUT);    /// min sensor
+    pinMode(PIN_SMAX, INPUT);    /// max sensor
+    pinMode(PIN_SW_AUTO, INPUT); /// push sw
+    pinMode(PIN_SALARM, INPUT);  /// alarm
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -172,7 +173,7 @@ bool getManualMode()
  * @return true
  * @return false
  */
-bool getAutoMode()
+bool getIndAuto()
 {
     return outputVarsImage[POS_IND_AUTO];
 }
@@ -243,8 +244,8 @@ bool getPump()
  */
 void setIndMax(bool state)
 {
-    static bool OLDSTATE;   /// Old state of the indicator
-    if (state == ON && OLDSTATE == OFF) 
+    static bool OLDSTATE; /// Old state of the indicator
+    if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImage[POS_IND_MAX] = ON;
         if (DEBUG)
@@ -271,7 +272,7 @@ void setIndMax(bool state)
  */
 void setIndMin(bool state)
 {
-    static bool OLDSTATE;   /// Old state of the indicator
+    static bool OLDSTATE; /// Old state of the indicator
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImage[POS_IND_MIN] = ON;
@@ -303,20 +304,20 @@ void setIndMin(bool state)
  */
 void setIndAlarm(bool state)
 {
-    static bool OLDSTATE;   /// Old state of the indicator
+    static bool OLDSTATE; /// Old state of the indicator
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
 
     if (state == ON && OLDSTATE == OFF)
     {
-        //if (millis() - previousTimer > ALARM_TIME_ON)
+        // if (millis() - previousTimer > ALARM_TIME_ON)
         //{
-        //    outputVarsImage[POS_IND_ALARM] = OFF;
-         //   previousTimer = millis();
+        //     outputVarsImage[POS_IND_ALARM] = OFF;
+        //    previousTimer = millis();
         //}
-        //else if (millis() - previousTimer > ALARM_TIME_OFF)
+        // else if (millis() - previousTimer > ALARM_TIME_OFF)
         //{
-            outputVarsImage[POS_IND_ALARM] = ON;
+        outputVarsImage[POS_IND_ALARM] = ON;
         //}
     }
     else if (state == OFF && OLDSTATE == ON)
@@ -396,7 +397,7 @@ void setIndMan(bool state)
  *
  * @return void
  */
-void setAutoMode(bool state)
+void setIndAuto(bool state)
 {
     static bool OLDSTATE;
     if (state == ON && OLDSTATE == OFF)

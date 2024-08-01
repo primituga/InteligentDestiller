@@ -42,8 +42,8 @@ void destiler()
             sPrintLnNbr(getValv_Water_Out());
             sPrintStr("getResistor ");
             sPrintLnNbr(getResistor());
-            sPrintStr("getAutoMode ");
-            sPrintLnNbr(getAutoMode());
+            sPrintStr("getIndAuto ");
+            sPrintLnNbr(getIndAuto());
             sPrintStr("WifiConnected: ");
             sPrintLnNbr(WiFi.isConnected());
             sPrintStr("TxPower: ");
@@ -62,21 +62,17 @@ void destiler()
     }
 
     indicatorsManagement(); /**< Call to manage indicators */
-    //modeManagement();       /**< Call to manage operation modes */
-    if (getAutoMode() || getAutoModeWeb())
-    {
-        toggleAutoMode();
-    }
-
+    modeManagement();       /**< Call to manage operation modes */
+   
     ////////////////////////////////////////////////////////////////////////////////////////
     /// WORKING BLOCK
     ////////////////////////////////////////////////////////////////////////////////////////
 
-    if (getAutoMode()) /**< Automatic mode operations */
+    if (getIndAuto()) /**< Automatic mode operations */
     {
         waterManagementAuto(); /**< Call to manage water levels */
 
-        if (getAutoMode() && getTimerStatus())
+        if (getIndAuto() && getTimerStatus())
         {
             if (getWaterMax())
             {
@@ -118,19 +114,17 @@ void destiler()
     {
         waterManagementManual(); /**< Call to manage water levels */
         setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
+        setIndAuto(OFF);
+        setAutoModeWeb(OFF);
 
-        if (getWaterMax())
-        {
-            setPump(OFF);
-        }
-        else if (!getWaterMax() && getAlarm())
-        {
-           setResistor(OFF);
-        }
+        setPump(getPumpWeb());
+        setValveWaterIn(getValv_Water_InWeb());
+        setValveWaterOut(getValv_Water_OutWeb());
+        setResistor(getResistorWeb());
     }
-    else
+    else 
     {
-        setTimer(OFF); /**< Stop Timer if AutoMode is OFF */
+        setTimer(OFF); 
         workingOFF(); 
     }
 }

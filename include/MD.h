@@ -20,6 +20,7 @@ void toggleValveWaterIn();
 void toggleValveWaterOut();
 void toggleResistor();
 void toggleAutoMode();
+void toggleIndAuto();
 void workingMax();
 void workingMin();
 void workingAlarm();
@@ -31,7 +32,7 @@ void waterManagementManual();
 void indicatorsManagement();
 void modeManagement();
 
-void readOutputsWeb();
+void updateOutputsWeb();
 void toggleAutoModeWeb();
 void togglePumpWeb();
 void toggleValveWaterInWeb();

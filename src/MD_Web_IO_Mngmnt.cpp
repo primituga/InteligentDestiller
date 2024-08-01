@@ -14,7 +14,7 @@ uint8_t outputVarsImageWeb[9]; /// Output variables image
 ////////////////////////////////////////////////////////////////////////////////////////
 /// FUNCTIONS BLOCK
 ////////////////////////////////////////////////////////////////////////////////////////
-void readOutputsWeb()
+void updateOutputsWeb()
 {
     outputVarsImageWeb[0] = getResistor();
     outputVarsImageWeb[1] = getPump();
@@ -23,7 +23,7 @@ void readOutputsWeb()
     outputVarsImageWeb[4] = getAlarm();
     outputVarsImageWeb[5] = getWaterMin();
     outputVarsImageWeb[6] = getWaterMax();
-    outputVarsImageWeb[7] = getAutoMode();
+    outputVarsImageWeb[7] = getIndAuto();
     outputVarsImageWeb[8] = getManualMode();
 }
 
@@ -115,15 +115,11 @@ void setAutoModeWeb(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImageWeb[POS_IND_AUTO] = ON;
-        if (DEBUG)
-            sPrintLnStr("setAutoMode ON Web");
         OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImageWeb[POS_IND_AUTO] = OFF;
-        if (DEBUG)
-            sPrintLnStr("setAutoMode OFF Web");
         OLDSTATE = state;
     }
 }
@@ -143,15 +139,11 @@ void setPumpWeb(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImageWeb[POS_BMB] = ON;
-        if (DEBUG)
-            sPrintLnStr("setPump ON Web");
         OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImageWeb[POS_BMB] = OFF;
-        if (DEBUG)
-            sPrintLnStr("setPump OFF Web");
         OLDSTATE = state;
     }
 }
@@ -171,15 +163,11 @@ void setValveWaterInWeb(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImageWeb[POS_VALV_WATER_IN] = ON;
-        if (DEBUG)
-            sPrintLnStr("setValveWaterIn ON Web");
         OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImageWeb[POS_VALV_WATER_IN] = OFF;
-        if (DEBUG)
-            sPrintLnStr("setValveWaterIn OFF Web");
         OLDSTATE = state;
     }
 }
@@ -199,15 +187,11 @@ void setValveWaterOutWeb(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImageWeb[POS_VALV_WATER_OUT] = ON;
-        if (DEBUG)
-            sPrintLnStr("setValveWaterOut ON Web");
         OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImageWeb[POS_VALV_WATER_OUT] = OFF;
-        if (DEBUG)
-            sPrintLnStr("setValveWaterOut OFF Web");
         OLDSTATE = state;
     }
 }
@@ -227,15 +211,11 @@ void setResistorWeb(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImageWeb[POS_RAQ] = ON;
-        if (DEBUG)
-            sPrintLnStr("setResistor ON Web");
         OLDSTATE = state;
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImageWeb[POS_RAQ] = OFF;
-        if (DEBUG)
-            sPrintLnStr("setResistor OFF Web");
         OLDSTATE = state;
     }
 }
@@ -246,14 +226,14 @@ void setResistorWeb(bool state)
 
 void toggleAutoModeWeb()
 {
-    bool state = getAutoModeWeb();
+    bool state = getIndAuto();
 
-    if (state == OFF)
+    if (state == OFF && !getManualMode())
     {
         state = !state;
         setAutoModeWeb(state);
     }
-    else
+    else if (state == ON && !getManualMode())
     {
         state = !state;
         setAutoModeWeb(state);
@@ -262,7 +242,7 @@ void toggleAutoModeWeb()
 
 void togglePumpWeb() /// Toggle Pump
 {
-    bool state = getPumpWeb();
+    bool state = getPump();
     if (state == OFF)
     {
         state = !state;
@@ -277,7 +257,7 @@ void togglePumpWeb() /// Toggle Pump
 
 void toggleValveWaterInWeb() /// Toggle Valve Water In
 {
-    bool state = getValv_Water_InWeb();
+    bool state = getValv_Water_In();
 
     if (state == OFF)
     {
@@ -293,7 +273,7 @@ void toggleValveWaterInWeb() /// Toggle Valve Water In
 
 void toggleValveWaterOutWeb() /// Toggle Valve Water Out
 {
-    bool state = getValv_Water_OutWeb();
+    bool state = getValv_Water_Out();
 
     if (state == OFF)
     {
@@ -309,7 +289,7 @@ void toggleValveWaterOutWeb() /// Toggle Valve Water Out
 
 void toggleResistorWeb() /// Toggle Resistor
 {
-    bool state = getResistorWeb();
+    bool state = getResistor();
 
     if (state == OFF)
     {

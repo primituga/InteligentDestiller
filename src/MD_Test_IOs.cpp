@@ -64,10 +64,10 @@ void test_IO()
 	
 	///  Test I/O Indicador Auto
 	Serial.print("Indicador Auto ... ");
-	setAutoMode(ON);/// 
+	setIndAuto(ON);/// 
 	delay(delayT);
 	writeOutputs();
-	setAutoMode(OFF);/// 
+	setIndAuto(OFF);/// 
 	delay(delayT);
 	writeOutputs();
 	Serial.println("OK");

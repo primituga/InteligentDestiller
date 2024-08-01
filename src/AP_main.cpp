@@ -18,6 +18,7 @@ void setup()
 	initMultiCore();   /// Initiate MultiCore
 	initFS();		   /// Initiate SPIFFS
 	readInputs();
+	updateOutputsWeb();
 	//test_IO();
 }
 
@@ -25,8 +26,9 @@ void setup()
 void loop(void)
 {
 	readInputs();
-	readOutputsWeb();
+	//readOutputsWeb();
 	destiler(); /// Destiler function to operate the machine
+	updateOutputsWeb();
 	writeOutputs();
 }
 

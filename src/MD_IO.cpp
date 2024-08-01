@@ -14,19 +14,21 @@
  * @note This function is used to toggle the Auto Mode of the Machine
  *
  */
-void toggleAutoModeAux()
+void toggleIndAuto()
 {
-    bool state = getAutoMode();
+    bool state = getIndAuto();
 
     if (state == OFF)
     {
         state = !state;
-        setAutoMode(state);
+        setIndAuto(state);
+        setAutoModeWeb(state);
     }
     else
     {
         state = !state;
-        setAutoMode(state);
+        setIndAuto(state);
+        setAutoModeWeb(state);
     }
 }
 
@@ -58,7 +60,7 @@ void toggleAutoMode()
             buttonState = currentButtonState; /// save the new state
             if (buttonState == OFF)           /// if the button state is HIGH
             {
-                toggleAutoModeAux(); /// Toggle Auto Mode
+                toggleIndAuto(); /// Toggle Auto Mode
             }
         }
     }
@@ -72,11 +74,13 @@ void togglePump() /// Toggle Pump
     {
         state = !state;
         setPump(state);
+        setPumpWeb(state);
     }
     else
     {
         state = !state;
         setPump(state);
+        setPumpWeb(state);
     }
 }
 
@@ -88,11 +92,13 @@ void toggleValveWaterIn() /// Toggle Valve Water In
     {
         state = !state;
         setValveWaterIn(state);
+        setValveWaterInWeb(state);
     }
     else
     {
         state = !state;
         setValveWaterIn(state);
+        setValveWaterInWeb(state);
     }
 }
 
@@ -104,11 +110,13 @@ void toggleValveWaterOut() /// Toggle Valve Water Out
     {
         state = !state;
         setValveWaterOut(state);
+        setValveWaterOutWeb(state);
     }
     else
     {
         state = !state;
         setValveWaterOut(state);
+        setValveWaterOutWeb(state);
     }
 }
 
@@ -120,11 +128,13 @@ void toggleResistor() /// Toggle Resistor
     {
         state = !state;
         setResistor(state);
+        setResistorWeb(state);
     }
     else
     {
         state = !state;
         setResistor(state);
+        setResistorWeb(state);
     }
 }
 
@@ -172,6 +182,12 @@ void workingOFF()
     setValveWaterIn(OFF);
     setValveWaterOut(OFF);
     setPump(OFF);
+
+
+    /*setResistorWeb(OFF);
+    setValveWaterInWeb(OFF);
+    setValveWaterOutWeb(OFF);
+    setPumpWeb(OFF);*/
 }
 
 void waterManagementAuto()
@@ -259,9 +275,15 @@ void modeManagement()
     if (!getManualMode())
     {
         toggleAutoMode();
+        setIndAuto(getAutoModeWeb());
+    }
+
+    /*if (getAutoModeWeb() && !getManualMode())
+    {
+        setIndAuto(ON);
     }
     else
     {
-        setAutoMode(OFF);
-    }
+        setIndAuto(OFF);
+    }*/
 }

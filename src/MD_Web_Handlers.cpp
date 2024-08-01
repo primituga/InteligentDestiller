@@ -139,7 +139,7 @@ String handleTimerControl(const String &control)
 String handleState(const String &state)
 {
   if (state == "auto")
-    return String(getAutoMode());
+    return String(getIndAuto());
   else if (state == "manual")
     return String(getManualMode());
   else if (state == "pump")
