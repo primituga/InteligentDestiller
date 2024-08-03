@@ -1,0 +1,30 @@
+<definition hotspot_x="21" hotspot_y="10" height="20" link_type="simple" width="40" type="element" version="0.90">
+    <uuid uuid="{4a1fc068-1281-42e1-a609-e2fb59c1aae2}"/>
+    <names>
+        <name lang="es">Fuente neutro</name>
+        <name lang="el">Ουδέτερος</name>
+        <name lang="fr">Source neutre</name>
+        <name lang="en">Neutral source</name>
+        <name lang="pt">Fonte de neutro</name>
+        <name lang="hu">N</name>
+        <name lang="it">Sorgente neutro</name>
+        <name lang="ar">مصدر محايد</name>
+        <name lang="ru">Нейтраль</name>
+        <name lang="cs">Přípojnice N</name>
+        <name lang="nl">Nul voeding</name>
+        <name lang="pl">Przewód neutralny</name>
+        <name lang="de">Neutralleiter</name>
+    </names>
+    <elementInformations/>
+    <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+    <description>
+        <line y2="0" y1="0" x1="0" x2="10" length2="1.5" antialias="false" end1="none" length1="1.5" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+        <dynamic_text text_from="ElementInfo" z="2" text_width="-1" keep_visual_rotation="false" y="-26.95" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Halignment="AlignLeft" uuid="{5d3f0890-d9bf-473c-a625-e197ff00f949}" frame="false" Valignment="AlignTop" x="-5">
+            <text></text>
+            <info_name>label</info_name>
+        </dynamic_text>
+        <text y="3" font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" text="PE" x="-13" color="#000000"/>
+        <terminal y="0" uuid="{5495086a-8025-4f86-866b-733c32027833}" type="Generic" orientation="e" x="10" name=""/>
+    </description>
+</definition>

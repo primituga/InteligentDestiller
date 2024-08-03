@@ -52,6 +52,9 @@ async function updateStatus() {
         await getPumpData();
         await getWaterInData();
         await getDumpWaterData();
+        await getTimerHourData();
+        await getTimerMinuteData();
+        await getTimerSecoundData();
     } catch (error) {
         console.error('Error:', error);
     }

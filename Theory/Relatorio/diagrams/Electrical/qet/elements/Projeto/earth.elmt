@@ -1,0 +1,46 @@
+<definition hotspot_x="15" hotspot_y="16" height="40" link_type="terminal" width="30" type="element" version="0.90">
+    <uuid uuid="{b810dba3-66b9-4d37-ade1-a1f7d65d657e}"/>
+    <names>
+        <name lang="es">Masa</name>
+        <name lang="el">Γείωση</name>
+        <name lang="fr">Masse</name>
+        <name lang="pt">Massa</name>
+        <name lang="en">Ground</name>
+        <name lang="it">Massa</name>
+        <name lang="hu">Test</name>
+        <name lang="ru">Шасси</name>
+        <name lang="ar">هيكل معدني</name>
+        <name lang="ro">Masă</name>
+        <name lang="cs">Kostra</name>
+        <name lang="nl">Massa</name>
+        <name lang="pl">Masa</name>
+        <name lang="de">Masse</name>
+    </names>
+    <kindInformations>
+        <kindInformation name="type">generic</kindInformation>
+        <kindInformation name="function">generic</kindInformation>
+    </kindInformations>
+    <elementInformations>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+    </elementInformations>
+    <informations>titus
+titus0818@yahoo.com</informations>
+    <description>
+        <line y2="10.8" y1="-6.6" x1="0.887674" x2="0.887674" length2="1.5" antialias="false" end1="none" length1="1.5" end2="none" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+        <line y2="18" y1="12" x1="0.887674" x2="-2.57204" length2="1.5" antialias="false" end1="none" length1="1.5" end2="none" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+        <line y2="18" y1="12" x1="-6.7237" x2="-10.1834" length2="1.5" antialias="false" end1="none" length1="1.5" end2="none" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+        <line y2="18" y1="12" x1="7.80711" x2="4.34739" length2="1.5" antialias="false" end1="none" length1="1.5" end2="none" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+        <line y2="11.4" y1="11.4" x1="-8.55687" x2="9.62" length2="1.5" antialias="false" end1="none" length1="1.5" end2="none" style="line-style:normal;line-weight:hight;filling:none;color:black"/>
+        <terminal y="-9" uuid="{a2224b95-1ca1-4778-8b08-6954e93b57a7}" type="Generic" orientation="n" x="0.887674" name=""/>
+    </description>
+</definition>

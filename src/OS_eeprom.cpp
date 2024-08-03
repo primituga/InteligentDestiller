@@ -1,3 +1,10 @@
+/**
+ * @author Sérgio Carmo
+ * @file OS_eeprom.cpp
+ * @brief Operating System EEPROM functions
+ * @version 1.0
+ */
+
 #include "OS.h"
 
 //================================================================
