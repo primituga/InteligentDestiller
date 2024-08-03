@@ -7,46 +7,29 @@
 
 #include "AP.h" /// Definitions
 
-AsyncWebServer server(80); /// Create a webserver object that listens for HTTP request on port 80
-
-
-
-
-
-void sendWiFiQuality() {
-  String wifiData = wifiQuality();
-  ws.textAll(wifiData);
-}
-
-void handleWebSocketMessage(void *arg, uint8_t *data, size_t len)
-{
+void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
   AwsFrameInfo *info = (AwsFrameInfo *)arg;
-  if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT)
-  {
+  if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT) {
     data[len] = 0;
     String message = (char *)data;
-    // Handle WebSocket message
     Serial.println("Received WebSocket message: " + message);
-    // You can process the message and send a response if needed
   }
 }
 
-void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)
-{
-  switch (type)
-  {
-  case WS_EVT_CONNECT:
-    Serial.println("WebSocket client connected");
-    break;
-  case WS_EVT_DISCONNECT:
-    Serial.println("WebSocket client disconnected");
-    break;
-  case WS_EVT_DATA:
-    handleWebSocketMessage(arg, data, len);
-    break;
-  case WS_EVT_PONG:
-  case WS_EVT_ERROR:
-    break;
+void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len) {
+  switch (type) {
+    case WS_EVT_CONNECT:
+      Serial.println("WebSocket client connected: " + client->remoteIP().toString());
+      break;
+    case WS_EVT_DISCONNECT:
+      Serial.println("WebSocket client disconnected: " + client->remoteIP().toString());
+      break;
+    case WS_EVT_DATA:
+      handleWebSocketMessage(arg, data, len);
+      break;
+    case WS_EVT_PONG:
+    case WS_EVT_ERROR:
+      break;
   }
 }
 
@@ -236,12 +219,17 @@ void setupRoutes()
   ////////////////////////////////////////////////////////////////////////////////////////
   /// Routes for handling read actions
   ////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/*
+
   server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("auto").c_str()); });
 
   server.on("/readManualMode", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("manual").c_str()); });
-
+*/
   server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("pump").c_str()); });
 
@@ -282,15 +270,8 @@ void setupRoutes()
   /// Route for Timer Handlers
   ////////////////////////////////////////////////////////////////////////////////////////
 
-
-  server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request) {
-    sendWiFiQuality();
-    request->send(200, "text/plain", "WiFi Quality sent");
-  });
-
-
-  //server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-  //          { request->send_P(200, "text/plain", handleTimer().c_str()); });
+  server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleTimer().c_str()); });
 
   server.on("/readHour", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleHour().c_str()); });

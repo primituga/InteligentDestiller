@@ -23,12 +23,16 @@ void toggleIndAuto()
         state = !state;
         setIndAuto(state);
         setAutoModeWeb(state);
+        //ws.textAll(String(state));
+        ws.textAll(String(" autoMode: " + state));
     }
     else
     {
         state = !state;
         setIndAuto(state);
         setAutoModeWeb(state);
+        //ws.textAll(String(state));
+        ws.textAll(String(" autoMode: " + state));
     }
 }
 

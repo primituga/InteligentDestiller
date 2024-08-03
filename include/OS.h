@@ -32,6 +32,7 @@
 #include "MD.h"
 
 extern AsyncWebSocket ws; /// WebSocket
+extern AsyncWebServer server; /// WebServer
 
 extern bool DEBUG;  /// Debug mode
 #define DEBUGlog    0                           /// Debug log mode
