@@ -2,6 +2,48 @@
 /*  Webpage Javascript for Timers                                        */
 /*************************************************************************/
 
+
+
+var gateway = `ws://${window.location.hostname}/ws`;
+
+    function initWebSocket() {
+      console.log('Trying to open a WebSocket connection...');
+      websocket = new WebSocket(gateway);
+      websocket.onopen    = onOpen;
+      websocket.onclose   = onClose;
+      websocket.onmessage = onMessage;
+    }
+
+    function onOpen(event) {
+      console.log('Connection opened');
+    }
+
+    function onClose(event) {
+      console.log('Connection closed');
+      setTimeout(initWebSocket, 2000);
+    }
+
+    function onMessage(event) {
+      console.log('Message received: ', event.data);
+      var data = event.data.split(": ");
+      var type = data[0];
+      var value = data[1];
+
+      switch (type) {
+        case "manualMode":
+          document.getElementById('manualMode').innerHTML = value;
+          break;
+        case "autoMode":
+          document.getElementById('autoMode').innerHTML = value;
+          break;
+        default:
+          console.log("Unknown data type: " + type);
+      }
+    }
+
+    window.addEventListener('load', initWebSocket);
+
+
 /*************************************************************************/
 /* Timer for the wifi                                                    */
 /*************************************************************************/
@@ -43,7 +85,7 @@ window.addEventListener('load', (event) => {
     }, 1012);
 });
 
-window.addEventListener('load', (event) => {
+/*window.addEventListener('load', (event) => {
     setInterval(async function () {
         try {
             await getAutoModeData();
@@ -53,7 +95,7 @@ window.addEventListener('load', (event) => {
         }
     }, 952);
 });
-
+*/
 window.addEventListener('load', (event) => {
     setInterval(async function () {
         try {
@@ -90,16 +132,16 @@ window.addEventListener('load', (event) => {
 
         const isTimerZero = second === "0" && minute === "0" && hour === "0";
 
-        const buttonStart   = document.getElementById("ButtonStartTimer");
-        const buttonStop    = document.getElementById("ButtonStopTimer");
-        const buttonReset   = document.getElementById("ButtonResetTimer");
+        const buttonStart = document.getElementById("ButtonStartTimer");
+        const buttonStop = document.getElementById("ButtonStopTimer");
+        const buttonReset = document.getElementById("ButtonResetTimer");
 
-        const rem1s         = document.getElementById("ButtonRem1s");
-        const rem5s         = document.getElementById("ButtonRem5s");
-        const rem10s        = document.getElementById("ButtonRem10s");
-        const rem1m         = document.getElementById("ButtonRem1m");
-        const rem5m         = document.getElementById("ButtonRem5m");
-        const rem10m        = document.getElementById("ButtonRem10m");
+        const rem1s = document.getElementById("ButtonRem1s");
+        const rem5s = document.getElementById("ButtonRem5s");
+        const rem10s = document.getElementById("ButtonRem10s");
+        const rem1m = document.getElementById("ButtonRem1m");
+        const rem5m = document.getElementById("ButtonRem5m");
+        const rem10m = document.getElementById("ButtonRem10m");
 
         if (isTimerZero) {
 
@@ -147,7 +189,7 @@ window.addEventListener('load', (event) => {
         else
             rem1m.classList.replace("buttonDisabled", "button");
 
-        if (minute < 5 && hour < 1)    
+        if (minute < 5 && hour < 1)
             rem5m.classList.replace("button", "buttonDisabled");
         else
             rem5m.classList.replace("buttonDisabled", "button");
@@ -157,6 +199,6 @@ window.addEventListener('load', (event) => {
         else
             rem10m.classList.replace("buttonDisabled", "button");
 
-        
+
     }, 931);
 });

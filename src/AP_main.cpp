@@ -10,6 +10,7 @@
 bool DEBUG = 1; /// Debug mode
 
 AsyncWebSocket ws("/ws");
+AsyncWebServer server(80); /// Create a webserver object that listens for HTTP request on port 80
 
 /// setup to run on 1st cpu core
 void setup()
@@ -22,7 +23,9 @@ void setup()
 	initFS();		 /// Initiate SPIFFS
 	readInputs();
 	updateOutputsWeb();
+	
 	setupRoutes(); /// Setup Routes
+	 server.addHandler(&ws);
 }
 
 /// loop to run on 1st cpu core
@@ -39,8 +42,8 @@ void loop2(void *pvParameters)
 {
 	while (1) /// Main loop
 	{
+		ws.cleanupClients();
 		webTimer("*", 0);
 		initWIFI();
-		ws.cleanupClients();
 	}
 }
