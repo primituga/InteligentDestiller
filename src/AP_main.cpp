@@ -9,6 +9,8 @@
 
 bool DEBUG = 1; /// Debug mode
 
+AsyncWebSocket ws("/ws");
+
 /// setup to run on 1st cpu core
 void setup()
 {
@@ -20,6 +22,7 @@ void setup()
 	initFS();		 /// Initiate SPIFFS
 	readInputs();
 	updateOutputsWeb();
+	setupRoutes(); /// Setup Routes
 }
 
 /// loop to run on 1st cpu core
@@ -27,7 +30,7 @@ void loop(void)
 {
 	readInputs();
 	destiler(); /// Destiler function to operate the machine
-	updateOutputsWeb();
+	//updateOutputsWeb();
 	writeOutputs();
 }
 
@@ -37,9 +40,7 @@ void loop2(void *pvParameters)
 	while (1) /// Main loop
 	{
 		webTimer("*", 0);
-		if (initWIFI())
-		{
-			setupRoutes(); /// Setup Routes
-		}
+		initWIFI();
+		ws.cleanupClients();
 	}
 }

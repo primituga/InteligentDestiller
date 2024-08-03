@@ -242,16 +242,20 @@ void toggleAutoModeWeb()
 
 void togglePumpWeb() /// Toggle Pump
 {
-    bool state = getPump();
+    bool state = getPumpWeb();
     if (state == OFF && getManualMode())
     {
         state = !state;
         setPumpWeb(state);
+        sPrintStr("togglePumpWeb ");
+        Serial.println(state);
     }
     else if (state == ON && getManualMode())
     {
         state = !state;
         setPumpWeb(state);
+        sPrintStr("togglePumpWeb ");
+        Serial.println(state);
     }
 }
 

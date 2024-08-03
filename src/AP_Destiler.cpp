@@ -8,15 +8,23 @@
 #include "AP.h"
 
 /**
- * @brief Destiler function to operate the machine.
+ * @brief Destiler function
  *
- * This function controls the operation of the distillation machine by
- * managing water levels, indicators, and modes. It includes debugging
- * information and handles both automatic and manual modes of operation.
+ * This function is responsible for managing the operation of the machine.
+ *
  */
 void destiler()
 {
-    static bool IDDLE_FLAG = OFF;
+    /**
+     * @brief BMB_FLAG, RAQ_FLAG
+     * BMB_FLAG and RAQ_FLAG are flags that are used to control the operation of the machine.
+     * BMB_FLAG is used to control the operation of the machine when the water level is above the maximum level.
+     * RAQ_FLAG is used to control the operation of the machine when the water level is below the minimum level.
+     * @note BMB_FLAG and RAQ_FLAG are used to control the operation of the machine.
+     * @note BMB_FLAG is used to control the operation of the machine when the water level is above the maximum level.
+     * @note RAQ_FLAG is used to control the operation of the machine when the water level is below the minimum level.
+     */
+    static bool BMB_FLAG, RAQ_FLAG = OFF;
 
     if (DEBUGlog) /**< Debug information logging */
     {
@@ -67,67 +75,34 @@ void destiler()
     ////////////////////////////////////////////////////////////////////////////////////////
     /// WORKING BLOCK
     ////////////////////////////////////////////////////////////////////////////////////////
-
-    if (getIndAuto()) /**< Automatic mode operations */
+    if (getWaterMax())
     {
-        waterManagementAuto(); /**< Call to manage water levels */
-
-        if (getIndAuto() && getTimerStatus())
-        {
-            if (getWaterMax())
-            {
-                workingMax(); /**< Working when water level is max */
-                IDDLE_FLAG = OFF;
-            }
-            else if (!getWaterMax() && !getAlarm())
-            {
-                workingMaxMin(); /**< Working within max and min water level */
-                if (getWaterMin())
-                {
-                    workingMin(); /**< Working when water level is min */
-                    IDDLE_FLAG = OFF;
-                }
-            }
-            else if (getWaterMin())
-            {
-                workingMin(); /**< Working when water level is min */
-                IDDLE_FLAG = OFF;
-            }
-            else if (getAlarm())
-            {
-                workingAlarm(); /**< Working when there is an alarm */
-                IDDLE_FLAG = OFF;
-            }
-            else if (!IDDLE_FLAG)
-            {
-                workingIdle(); /**< Working in idle state */
-                IDDLE_FLAG = ON;
-            }
-        }
-        else if (!IDDLE_FLAG)
-        {
-            workingIdle(); /**< Working in idle state */
-            IDDLE_FLAG = ON;
-        }
+        BMB_FLAG = OFF;
     }
-    else if (getManualMode()) /**< Manual mode operations */
+    else if (getWaterMin() || getAlarm())
     {
-        waterManagementManual();
-        setTimer(OFF);
-        setIndAuto(OFF);
-        setAutoModeWeb(OFF);
+        BMB_FLAG = ON;
+    }
 
-        setPump(getPumpWeb());
-        setValveWaterIn(getValv_Water_InWeb());
-        setValveWaterOut(getValv_Water_OutWeb());
-        if (!getAlarm())
-        {
-            setResistor(getResistorWeb());
-        }
+    if (getWaterMax() || getWaterMin() || !getAlarm())
+    {
+        RAQ_FLAG = ON;
     }
     else
     {
-        setTimer(OFF);
-        workingOFF();
+        RAQ_FLAG = OFF;
     }
+
+    bool BMB = (BMB_FLAG && getIndAuto() || getPumpWeb() && getManualMode());
+
+    bool RAQ = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getResistorWeb() && getManualMode() && !getAlarm());
+
+    bool V_IN = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_InWeb() && getManualMode() && !getAlarm());
+
+    bool V_OUT = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_OutWeb() && getManualMode() && !getAlarm());
+
+    setPump(BMB);
+    setResistor(RAQ);
+    setValveWaterIn(V_IN);
+    setValveWaterOut(V_OUT);
 }

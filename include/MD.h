@@ -14,21 +14,11 @@
 
 #include "OS.h"
 
+
 /// Function prototypes
-void togglePump();
-void toggleValveWaterIn();
-void toggleValveWaterOut();
-void toggleResistor();
+void sendWiFiQuality();
 void toggleAutoMode();
 void toggleIndAuto();
-void workingMax();
-void workingMin();
-void workingAlarm();
-void workingIdle();
-void workingOFF();
-void workingMaxMin();
-void waterManagementAuto();
-void waterManagementManual();
 void indicatorsManagement();
 void modeManagement();
 

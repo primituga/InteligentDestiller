@@ -9,19 +9,62 @@
 
 AsyncWebServer server(80); /// Create a webserver object that listens for HTTP request on port 80
 
+
+
+
+
+void sendWiFiQuality() {
+  String wifiData = wifiQuality();
+  ws.textAll(wifiData);
+}
+
+void handleWebSocketMessage(void *arg, uint8_t *data, size_t len)
+{
+  AwsFrameInfo *info = (AwsFrameInfo *)arg;
+  if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT)
+  {
+    data[len] = 0;
+    String message = (char *)data;
+    // Handle WebSocket message
+    Serial.println("Received WebSocket message: " + message);
+    // You can process the message and send a response if needed
+  }
+}
+
+void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)
+{
+  switch (type)
+  {
+  case WS_EVT_CONNECT:
+    Serial.println("WebSocket client connected");
+    break;
+  case WS_EVT_DISCONNECT:
+    Serial.println("WebSocket client disconnected");
+    break;
+  case WS_EVT_DATA:
+    handleWebSocketMessage(arg, data, len);
+    break;
+  case WS_EVT_PONG:
+  case WS_EVT_ERROR:
+    break;
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Setup Calls
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * @brief Setup the routes for the web server.
- * 
+ *
  * This function defines the routes for handling HTTP GET requests for various
  * resources such as HTML pages, CSS files, JS files, images, time adjustments,
  * timer control, toggle actions, state actions, WiFi handlers, and timer handlers.
  */
 void setupRoutes()
 {
+  ws.onEvent(onEvent);
+  server.addHandler(&ws);
   ////////////////////////////////////////////////////////////////////////////////////////
   /// Route for root / and index_webButtons.html
   ////////////////////////////////////////////////////////////////////////////////////////
@@ -238,8 +281,16 @@ void setupRoutes()
   ////////////////////////////////////////////////////////////////////////////////////////
   /// Route for Timer Handlers
   ////////////////////////////////////////////////////////////////////////////////////////
-  server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleTimer().c_str()); });
+
+
+  server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request) {
+    sendWiFiQuality();
+    request->send(200, "text/plain", "WiFi Quality sent");
+  });
+
+
+  //server.on("/readTimer", HTTP_GET, [](AsyncWebServerRequest *request)
+  //          { request->send_P(200, "text/plain", handleTimer().c_str()); });
 
   server.on("/readHour", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleHour().c_str()); });
