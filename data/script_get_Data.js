@@ -2,31 +2,76 @@
 /*************************************************************************/
 /*  Webpage Javascript to get data from firmware                         */
 /*************************************************************************/
+let wsUri = `ws://${window.location.hostname}/ws`;
+let websocket;
+
+function initWebSocket() {
+    console.log('Trying to open a WebSocket connection...');
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = onOpen;
+    websocket.onclose = onClose;
+    websocket.onmessage = onMessage;
+}
+
+function onOpen(event) {
+    console.log('Connection opened');
+}
+
+function onClose(event) {
+    console.log('Connection closed');
+    setTimeout(initWebSocket, 2000);
+}
+
+function onMessage(event) {
+    let data = JSON.parse(event.data);
+    switch (data.type) {
+        case "wifiQuality":
+            document.getElementById('wifiQuality').innerHTML = data.value;
+            break;
+        case "manualMode":
+            document.getElementById('manualMode').innerHTML = data.value;
+            break;
+        case "autoMode":
+            document.getElementById('autoMode').innerHTML = data.value;
+            break;
+        case "resistor":
+            document.getElementById('resistor').innerHTML = data.value;
+            break;
+        case "pump":
+            document.getElementById('pump').innerHTML = data.value;
+            break;
+        case "waterIn":
+            document.getElementById('waterIn').innerHTML = data.value;
+            break;
+        case "waterOut":
+            document.getElementById('waterOut').innerHTML = data.value;
+            break;
+        case "waterMin":
+            document.getElementById('waterMin').innerHTML = data.value;
+            break;
+        case "waterMax":
+            document.getElementById('waterMax').innerHTML = data.value;
+            break;
+        case "waterAlarm":
+            document.getElementById('waterAlarm').innerHTML = data.value;
+            break;
+        case "timer":
+            console.log("Timer - Hour: " + data.hour + ", Minute: " + data.minute + ", Second: " + data.second + ", Status: " + data.timerStat);
+            document.getElementById('hour').innerHTML = data.hour;
+            document.getElementById('minute').innerHTML = data.minute;
+            document.getElementById('secound').innerHTML = data.second;
+            document.getElementById('timerStat').innerHTML = data.timerStat ? 'ON' : 'OFF';
+            break;
+        default:
+            console.log("Unknown data type= " + data.type + " with value " + data.value);
+    }
+}
+
+window.addEventListener('load', initWebSocket);
 
 //***********************************************************************
 // Get timer data                                                       *
 //***********************************************************************
-
-/*function getTimerHourData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("hour").innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("GET", "/readHour", true);
-    xhttp.send();
-}
-function getTimerHourData() {
-    fetch('/readHour')
-        .then(response => {
-            if (response.status != 200) throw new Error('Request failed');
-            return response.text();
-        })
-        .then(text => {
-            document.getElementById("hour").innerHTML = text;
-        });
-}*/
 
 // Timer Data
 async function getTimerData() {
@@ -155,14 +200,14 @@ async function getWaterInData() {
 }
 
 // Dump Water Data
-async function getDumpWaterData() {
+async function getWaterOutData() {
     try {
-        const response = await fetch('/readDumpWater');
+        const response = await fetch('/readWaterOut');
         if (response.status !== 200) {
             throw new Error('Request failed');
         }
         const text = await response.text();
-        document.getElementById("dumpWater").innerHTML = text;
+        document.getElementById("waterOut").innerHTML = text;
     } catch (error) {
         console.error('Error:', error);
     }

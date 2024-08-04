@@ -2,52 +2,10 @@
 /*  Webpage Javascript for Timers                                        */
 /*************************************************************************/
 
-
-
-var gateway = `ws://${window.location.hostname}/ws`;
-
-    function initWebSocket() {
-      console.log('Trying to open a WebSocket connection...');
-      websocket = new WebSocket(gateway);
-      websocket.onopen    = onOpen;
-      websocket.onclose   = onClose;
-      websocket.onmessage = onMessage;
-    }
-
-    function onOpen(event) {
-      console.log('Connection opened');
-    }
-
-    function onClose(event) {
-      console.log('Connection closed');
-      setTimeout(initWebSocket, 2000);
-    }
-
-    function onMessage(event) {
-      console.log('Message received: ', event.data);
-      var data = event.data.split(": ");
-      var type = data[0];
-      var value = data[1];
-
-      switch (type) {
-        case "manualMode":
-          document.getElementById('manualMode').innerHTML = value;
-          break;
-        case "autoMode":
-          document.getElementById('autoMode').innerHTML = value;
-          break;
-        default:
-          console.log("Unknown data type: " + type);
-      }
-    }
-
-    window.addEventListener('load', initWebSocket);
-
-
 /*************************************************************************/
 /* Timer for the wifi                                                    */
 /*************************************************************************/
-setInterval(async function () {
+/*setInterval(async function () {
     try {
         await getWifiSSIDData();
         await getWifiQualityData();
@@ -55,11 +13,11 @@ setInterval(async function () {
         console.error('Error:', error);
     }
 }, 5245);
-
+*/
 /*************************************************************************/
 /* Timer to get data                                                     */
 /*************************************************************************/
-window.addEventListener('load', (event) => {
+/*window.addEventListener('load', (event) => {
     setInterval(async function () {
         try {
             if (document.getElementById("autoMode").innerHTML === "1" && document.getElementById("timer").innerHTML !== "0h :0m :0s") {
@@ -70,7 +28,8 @@ window.addEventListener('load', (event) => {
         }
     }, 500);
 });
-
+*/
+/*
 window.addEventListener('load', (event) => {
     setInterval(async function () {
         try {
@@ -84,7 +43,7 @@ window.addEventListener('load', (event) => {
         }
     }, 1012);
 });
-
+*/
 /*window.addEventListener('load', (event) => {
     setInterval(async function () {
         try {
@@ -95,7 +54,7 @@ window.addEventListener('load', (event) => {
         }
     }, 952);
 });
-*/
+
 window.addEventListener('load', (event) => {
     setInterval(async function () {
         try {
@@ -120,7 +79,7 @@ window.addEventListener('load', (event) => {
         }
     }, 943);
 });
-
+*/
 /*************************************************************************/
 /* Timer for EN/Disable buttons                                          */
 /*************************************************************************/

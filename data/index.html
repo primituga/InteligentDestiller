@@ -26,7 +26,7 @@
         <img id="Destiller_img" alt="Destiller_img" src="destiller.png">
         <img id="BMB_img" alt="BMB_ON_img" src="BMB_ON.png" onclick="togglePump()" class="pump">
         <img id="valve1_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleWaterIn()" class="valve1_off">
-        <img id="valve2_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleDumpWater()" class="valve2_off">
+        <img id="valve2_img" alt="valve_ON_img" src="Valve_OFF.png" onclick="toggleWaterOut()" class="valve2_off">
         <img id="tank" alt="Tank" src="sMax.png" class="tank">
         <img id="RAQ_img" alt="RAQ_ON_img" src="RAQ_ON.png" onclick="toggleResistor()" class="raq">
         <img id="button_Man" alt="button_Man_img" src="button_OFF.png" class="button_Man">
@@ -114,8 +114,8 @@
                         <td><span id="waterIn">-</span></td>
                     </tr>
                     <tr>
-                        <td>Dump Water:</td>
-                        <td><span id="dumpWater">-</span></td>
+                        <td>Water Out:</td>
+                        <td><span id="waterOut">-</span></td>
                     </tr>
                     <tr>
                         <td>Water Min:</td>
@@ -128,6 +128,10 @@
                     <tr>
                         <td>Water Alarm:</td>
                         <td><span id="waterAlarm">-</span></td>
+                    </tr>
+                    <tr>
+                        <td>timerStat:</td>
+                        <td><span id="timerStat">-</span></td>
                     </tr>
                     <tr>
                         <td>Hour:</td>
