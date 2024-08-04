@@ -207,8 +207,8 @@ void setupRoutes()
   server.on("/togglePump", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleToggle("pump").c_str()); });
 
-  server.on("/toggleDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleToggle("dumpWater").c_str()); });
+  server.on("/toggleWaterOut", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleToggle("waterOut").c_str()); });
 
   server.on("/toggleWaterIn", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleToggle("waterIn").c_str()); });
@@ -220,21 +220,17 @@ void setupRoutes()
   /// Routes for handling read actions
   ////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-/*
-
   server.on("/readAutoMode", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("auto").c_str()); });
 
   server.on("/readManualMode", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("manual").c_str()); });
-*/
+
   server.on("/readPump", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("pump").c_str()); });
 
-  server.on("/readDumpWater", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send_P(200, "text/plain", handleState("dumpWater").c_str()); });
+  server.on("/readWaterOut", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", handleState("waterOut").c_str()); });
 
   server.on("/readResistor", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", handleState("resistor").c_str()); });

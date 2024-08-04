@@ -46,6 +46,7 @@ String wifiQuality()
 {
   int rssi = WiFi.RSSI();
   int quality;
+  String qualityStr;
 
   if (rssi <= -100)
   {
@@ -59,7 +60,9 @@ String wifiQuality()
   {
     quality = (rssi + 100) * 1.25;
   }
-  return "RSSI: " + String(rssi) + " dBm (" + String(quality) + " %)";
+  qualityStr = "RSSI " + String(rssi) + " dBm (" + String(quality) + " %)";
+  ws.textAll("{\"type\": \"wifiQuality\", \"value\": " + String(quality) + "}");
+  return qualityStr;
 }
 
 /**
@@ -132,11 +135,11 @@ bool initWIFI()
   static bool WIFI_SOFTAP_FLAG = true;
   /**
    * @brief WIFI_MODE_OPTIONS
-   * 
+   *
    * 1 - Connect to local WiFi
-   * 
+   *
    * 2 - Create a local AP
-   * 
+   *
    * 3 - Both
    */
   if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 1)

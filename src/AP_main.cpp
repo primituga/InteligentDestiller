@@ -9,10 +9,32 @@
 
 bool DEBUG = 1; /// Debug mode
 
+/**
+ * @brief AsyncWebSocket object to handle websocket connections
+ */
 AsyncWebSocket ws("/ws");
+
+/**
+ * @brief AsyncWebSocket object to handle websocket connections 
+ */
 AsyncWebServer server(80); /// Create a webserver object that listens for HTTP request on port 80
 
-/// setup to run on 1st cpu core
+/**
+ * @brief Setup function to initiate all the necessary functions to run the machine
+ * 
+ * This function is responsible for initiating all the necessary functions to run the machine.
+ * 
+ * @note Initiate all pins as inputs
+ * @note Initiate all pins as outputs
+ * @note Initiate Serial communication
+ * @note Initiate MultiCore
+ * @note Initiate SPIFFS
+ * @note Read inputs
+ * @note Update outputs
+ * @note Setup Routes
+ * @note Add handler to the server
+ * 
+ */
 void setup()
 {
 	initPinsInputs();  /// Initiate all pins as inputs
@@ -28,7 +50,20 @@ void setup()
 	 server.addHandler(&ws);
 }
 
-/// loop to run on 1st cpu core
+/**
+ * @brief Loop function to run the machine operation 
+ * 
+ * This function is responsible for running the machine operation.
+ * 
+ * @note Read inputs 
+ * @note Destiler function to operate the machine
+ * @note Update outputs
+ * 
+ * @see readInputs()
+ * @see destiler()
+ * @see updateOutputsWeb()
+ * 
+ */
 void loop(void)
 {
 	readInputs();
@@ -37,7 +72,21 @@ void loop(void)
 	writeOutputs();
 }
 
-/// loop to run on 2nd cpu core
+/**
+ * @brief Main function to run the second core operation
+ * 
+ * This function is responsible for running the second core operation.
+ * 
+ * @note Initiate WIFI
+ * @note Cleanup clients 
+ * @note WebTimer function
+ * 
+ * @see initWIFI()
+ * @see ws.cleanupClients()
+ * @see webTimer()
+ * 
+ * @param pvParameters 
+ */
 void loop2(void *pvParameters)
 {
 	while (1) /// Main loop

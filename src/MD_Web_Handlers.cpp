@@ -127,14 +127,14 @@ String handleTimerControl(const String &control)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
-/// Handlers for Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax With Response
+/// Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Handle State
  * @param state
  * @return String 
- * @note This function handles the state of the variable (auto, manual, pump, dumpWater, resistor, waterIn, waterMax, waterMin, waterAlarm)
- * @note This function returns the state of the variable (auto, manual, pump, dumpWater, resistor, waterIn, waterMax, waterMin, waterAlarm)
+ * @note This function handles the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)
+ * @note This function returns the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)
  */
 String handleState(const String &state)
 {
@@ -144,7 +144,7 @@ String handleState(const String &state)
     return String(getManualMode());
   else if (state == "pump")
     return String(getPump());
-  else if (state == "dumpWater")
+  else if (state == "waterOut")
     return String(getValv_Water_Out());
   else if (state == "resistor")
     return String(getResistor());
@@ -160,14 +160,14 @@ String handleState(const String &state)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
-/// Handlers for Toggle Auto, Pump, DumpWater, Resistor, WaterIn and WaterMax
+/// Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
  * @brief Handle Toggle
  * @param toggle
  * @return String
- * @note This function toggles the variable (auto, pump, dumpWater, resistor, waterIn)
- * @note This function returns the toggle message for the variable (auto, pump, dumpWater, resistor, waterIn)
+ * @note This function toggles the variable (auto, pump, waterOut, resistor, waterIn)
+ * @note This function returns the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)
  */
 String handleToggle(const String &toggle)
 {
@@ -175,7 +175,7 @@ String handleToggle(const String &toggle)
     toggleAutoModeWeb();
   else if (toggle == "pump")
     togglePumpWeb();
-  else if (toggle == "dumpWater")
+  else if (toggle == "waterOut")
     toggleValveWaterOutWeb();
   else if (toggle == "waterIn")
     toggleValveWaterInWeb();
@@ -211,8 +211,8 @@ String processor(const String &var)
     return handleState("manual");
   if (var == "PUMP")
     return handleState("pump");
-  if (var == "DUMPWATER")
-    return handleState("dumpWater");
+  if (var == "WATEROUT")
+    return handleState("waterOut");
   if (var == "RESISTOR")
     return handleState("resistor");
   if (var == "WATERIN")

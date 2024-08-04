@@ -248,18 +248,18 @@ void setIndMax(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImage[POS_IND_MAX] = ON;
-        ws.textAll(String("waterMax: " + state));
         if (DEBUG)
             sPrintLnStr("setIndMax ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterMax\", \"value\": " + String(getWaterMax()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImage[POS_IND_MAX] = OFF;
-        ws.textAll(String("waterMax: " + state));
         if (DEBUG)
             sPrintLnStr("setIndMax OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterMax\", \"value\": " + String(getWaterMax()) + "}");
     }
 }
 
@@ -283,6 +283,7 @@ void setIndMin(bool state)
             sPrintLnStr("setIndMin ON");
         }
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterMin\", \"value\": " + String(getWaterMin()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
@@ -292,6 +293,7 @@ void setIndMin(bool state)
             sPrintLnStr("setIndMin OFF");
         }
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterMin\", \"value\": " + String(getWaterMin()) + "}");
     }
 }
 
@@ -333,12 +335,14 @@ void setIndAlarm(bool state)
         if (DEBUG)
             sPrintLnStr("setIndAlarm ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterAlarm\", \"value\": " + String(getAlarm()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
         if (DEBUG)
             sPrintLnStr("setIndAlarm OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterAlarm\", \"value\": " + String(getAlarm()) + "}");
     }
 }
 
@@ -354,42 +358,42 @@ void setIndAlarm(bool state)
  */
 void setIndMan(bool state)
 {
-    static int buttonState = 0;     /// current state of the button
-    static int lastButtonState = 0; /// previous state of the button
+    static int buttonState = 0;     // current state of the button
+    static int lastButtonState = 0; // previous state of the button
 
-    static int currentButtonState = 0;         /// current state of the button
-    static unsigned long lastDebounceTime = 0; /// the last time the output pin was toggled
-    static unsigned long debounceDelay = 50;   /// the debounce time; increase if the output flickers
+    static int currentButtonState = 0;         // current state of the button
+    static unsigned long lastDebounceTime = 0; // the last time the output pin was toggled
+    static unsigned long debounceDelay = 50;   // the debounce time; increase if the output flickers
 
-    currentButtonState = getManualMode(); /// read the state of the switch into a local variable
+    currentButtonState = getManualMode(); // read the state of the switch into a local variable
 
-    if (currentButtonState != lastButtonState) /// If the switch changed, due to noise or pressing
+    if (currentButtonState != lastButtonState) // If the switch changed, due to noise or pressing
     {
-        lastDebounceTime = millis(); /// reset the debouncing timer
+        lastDebounceTime = millis(); // reset the debouncing timer
     }
 
-    if ((millis() - lastDebounceTime) > debounceDelay) /// if the switch value has been stable for a while
+    if ((millis() - lastDebounceTime) > debounceDelay) // if the switch value has been stable for a while
     {
-        if (currentButtonState != buttonState) /// if the button state has changed
+        if (currentButtonState != buttonState) // if the button state has changed
         {
-            buttonState = currentButtonState; /// save the new state
-            if (buttonState == ON)            /// if the button state is HIGH
+            buttonState = currentButtonState; // save the new state
+            if (buttonState == ON)            // if the button state is HIGH
             {
                 if (DEBUG)
                     sPrintLnStr("setIndMan ON");
                 outputVarsImage[POS_IND_MAN] = ON;
-                ws.textAll(String(" manualMode: " + getManualMode()));
+                ws.textAll("{\"type\": \"manualMode\", \"value\": " + String(getManualMode()) + "}");
             }
             else if (buttonState == OFF)
             {
                 if (DEBUG)
                     sPrintLnStr("setIndMan OFF");
                 outputVarsImage[POS_IND_MAN] = OFF;
-                ws.textAll(String(" manualMode: " + getManualMode()));
+                ws.textAll("{\"type\": \"manualMode\", \"value\": " + String(getManualMode()) + "}");
             }
         }
     }
-    lastButtonState = currentButtonState; /// save the current state as the last state, for next time through the loop
+    lastButtonState = currentButtonState; // save the current state as the last state, for next time through the loop
 }
 
 /**
@@ -410,6 +414,7 @@ void setIndAuto(bool state)
         if (DEBUG)
             sPrintLnStr("setAutoMode ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"autoMode\", \"value\": " + String(getIndAuto()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
@@ -417,6 +422,7 @@ void setIndAuto(bool state)
         if (DEBUG)
             sPrintLnStr("setAutoMode OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"autoMode\", \"value\": " + String(getIndAuto()) + "}");
     }
 }
 
@@ -438,6 +444,7 @@ void setPump(bool state)
         if (DEBUG)
             sPrintLnStr("setPump ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"pump\", \"value\": " + String(getPump()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
@@ -445,6 +452,7 @@ void setPump(bool state)
         if (DEBUG)
             sPrintLnStr("setPump OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"pump\", \"value\": " + String(getPump()) + "}");
     }
 }
 
@@ -466,6 +474,7 @@ void setValveWaterIn(bool state)
         if (DEBUG)
             sPrintLnStr("setValveWaterIn ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterIn\", \"value\": " + String(getValv_Water_In()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
@@ -473,6 +482,7 @@ void setValveWaterIn(bool state)
         if (DEBUG)
             sPrintLnStr("setValveWaterIn OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterIn\", \"value\": " + String(getValv_Water_In()) + "}");
     }
 }
 
@@ -494,6 +504,7 @@ void setValveWaterOut(bool state)
         if (DEBUG)
             sPrintLnStr("setValveWaterOut ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterOut\", \"value\": " + String(getValv_Water_Out()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
@@ -501,6 +512,7 @@ void setValveWaterOut(bool state)
         if (DEBUG)
             sPrintLnStr("setValveWaterOut OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"waterOut\", \"value\": " + String(getValv_Water_Out()) + "}");
     }
 }
 
@@ -522,6 +534,7 @@ void setResistor(bool state)
         if (DEBUG)
             sPrintLnStr("setResistor ON");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"resistor\", \"value\": " + String(getResistor()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
@@ -529,5 +542,6 @@ void setResistor(bool state)
         if (DEBUG)
             sPrintLnStr("setResistor OFF");
         OLDSTATE = state;
+        ws.textAll("{\"type\": \"resistor\", \"value\": " + String(getResistor()) + "}");
     }
 }

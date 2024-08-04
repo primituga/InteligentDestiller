@@ -23,7 +23,7 @@ window.addEventListener('load', (event) => {
                 valve1Img.src = "Valve_OFF.png";
             }
 
-            const dumpWaterStatus = document.getElementById("dumpWater").innerHTML;
+            const dumpWaterStatus = document.getElementById("waterOut").innerHTML;
             const valve2Img = document.getElementById("valve2_img");
             if (dumpWaterStatus === "1") {
                 valve2Img.classList.remove("valve2_off");

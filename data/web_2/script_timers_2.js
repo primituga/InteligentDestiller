@@ -18,7 +18,7 @@ window.addEventListener('load', (event) => {
         } catch (error) {
             console.error('Error:', error);
         }
-    }, 1432);
+    }, 521);
 });
 
 /*************************************************************************/
@@ -31,17 +31,17 @@ window.addEventListener('load', (event) => {
             const resistor = document.getElementById("resistor").innerHTML;
             const pump = document.getElementById("pump").innerHTML;
             const waterIn = document.getElementById("waterIn").innerHTML;
-            const dumpWater = document.getElementById("dumpWater").innerHTML;
+            const waterOut = document.getElementById("waterOut").innerHTML;
 
             document.getElementById("ButtonToggleAuto").style.border = autoMode === "1" ? "5px solid #00ff00" : "5px solid #000000";
             document.getElementById("ButtonToggleResistor").style.border = resistor === "1" ? "5px solid #00ff00" : "5px solid #000000";
             document.getElementById("ButtonTogglePump").style.border = pump === "1" ? "5px solid #00ff00" : "5px solid #000000";
             document.getElementById("ButtonToggleWaterIn").style.border = waterIn === "1" ? "5px solid #00ff00" : "5px solid #000000";
-            document.getElementById("ButtonToggleDumpWater").style.border = dumpWater === "1" ? "5px solid #00ff00" : "5px solid #000000";
+            document.getElementById("ButtonToggleWaterOut").style.border = waterOut === "1" ? "5px solid #00ff00" : "5px solid #000000";
         } catch (error) {
             console.error('Error:', error);
         }
-    }, 1365);
+    }, 503);
 });
 
 /*************************************************************************/
@@ -77,5 +77,5 @@ window.addEventListener('load', (event) => {
         } catch (error) {
             console.error('Error:', error);
         }
-    }, 1429);
+    }, 546);
 });

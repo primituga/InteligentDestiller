@@ -21,7 +21,7 @@ button.onclick = function () {
 async function startTimer() {
     try {
         await fetch('/startTimer');
-        updateStatus();
+        //updateStatus();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -30,7 +30,7 @@ async function startTimer() {
 async function stopTimer() {
     try {
         await fetch('/stopTimer');
-        updateStatus();
+        //updateStatus();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -39,7 +39,7 @@ async function stopTimer() {
 async function resetTimer() {
     try {
         await fetch('/resetTimer');
-        updateStatus();
+        //updateStatus();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -47,14 +47,7 @@ async function resetTimer() {
 
 async function updateStatus() {
     try {
-        await getTimerData();
-        await getResistorData();
-        await getPumpData();
-        await getWaterInData();
-        await getDumpWaterData();
-        await getTimerHourData();
-        await getTimerMinuteData();
-        await getTimerSecoundData();
+        onloadStatus();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -68,6 +61,15 @@ async function onloadStatus() {
         await getTimerSecoundData();
         await getWifiSSIDData();
         await getWifiQualityData();
+        await getAutoModeData();
+        await getManualModeData();
+        await getResistorData();
+        await getPumpData();
+        await getWaterInData();
+        await getWaterOutData();
+        await getWaterMinData();
+        await getWaterMaxData();
+        await getWaterAlarmData();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -193,7 +195,7 @@ async function rem10m() {
 async function toggleAutoMode() {
     try {
         await fetch('/toggleAutoMode');
-        getAutoModeData();
+        //getAutoModeData();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -202,7 +204,7 @@ async function toggleAutoMode() {
 async function togglePump() {
     try {
         await fetch('/togglePump');
-        getPumpData();
+        //getPumpData();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -211,7 +213,7 @@ async function togglePump() {
 async function toggleWaterIn() {
     try {
         await fetch('/toggleWaterIn');
-        getWaterInData();
+        //getWaterInData();
     } catch (error) {
         console.error('Error:', error);
     }
@@ -220,16 +222,16 @@ async function toggleWaterIn() {
 async function toggleResistor() {
     try {
         await fetch('/toggleResistor');
-        getResistorData();
+        //getResistorData();
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
-async function toggleDumpWater() {
+async function toggleWaterOut() {
     try {
-        await fetch('/toggleDumpWater');
-        getDumpWaterData();
+        await fetch('/toggleWaterOut');
+        //getWaterOutData();
     } catch (error) {
         console.error('Error:', error);
     }
