@@ -56,11 +56,11 @@ function onMessage(event) {
             document.getElementById('waterAlarm').innerHTML = data.value;
             break;
         case "timer":
-            console.log("Timer - Hour: " + data.hour + ", Minute: " + data.minute + ", Second: " + data.second + ", Status: " + data.timerStat);
             document.getElementById('hour').innerHTML = data.hour;
             document.getElementById('minute').innerHTML = data.minute;
             document.getElementById('secound').innerHTML = data.second;
             document.getElementById('timerStat').innerHTML = data.timerStat ? 'ON' : 'OFF';
+            document.getElementById('timer').innerHTML = document.getElementById('hour').innerHTML + ':' + document.getElementById('minute').innerHTML + ':' + document.getElementById('secound').innerHTML;
             break;
         default:
             console.log("Unknown data type= " + data.type + " with value " + data.value);

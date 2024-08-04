@@ -11,11 +11,20 @@ const unsigned long updateInterval = 1000; // Send updates every second
 
 void sendTimer()
 {
+  static int old_minute, old_hour, old_second, old_timerStat;
+  if (old_minute == getTimerMinute() && old_hour == getTimerHour() && old_second == getTimerSecound() && old_timerStat == getTimerStatus())
+  {
+    return;
+  }
   String message = "{\"type\": \"timer\", \"hour\": " + String(getTimerHour()) +
                    ", \"minute\": " + String(getTimerMinute()) +
                    ", \"second\": " + String(getTimerSecound()) +
                    ", \"timerStat\": " + String(getTimerStatus()) + "}";
   ws.textAll(message);
+  old_minute = getTimerMinute();
+  old_hour = getTimerHour();
+  old_second = getTimerSecound();
+  old_timerStat = getTimerStatus();
 }
 
 long webTimer(String op, int16_t amount)
