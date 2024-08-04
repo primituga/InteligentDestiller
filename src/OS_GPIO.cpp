@@ -248,7 +248,6 @@ void setIndMax(bool state)
     if (state == ON && OLDSTATE == OFF)
     {
         outputVarsImage[POS_IND_MAX] = ON;
-        ws.textAll(String("waterMax: " + state));
         if (DEBUG)
             sPrintLnStr("setIndMax ON");
         OLDSTATE = state;
@@ -257,7 +256,6 @@ void setIndMax(bool state)
     else if (state == OFF && OLDSTATE == ON)
     {
         outputVarsImage[POS_IND_MAX] = OFF;
-        ws.textAll(String("waterMax: " + state));
         if (DEBUG)
             sPrintLnStr("setIndMax OFF");
         OLDSTATE = state;

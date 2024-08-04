@@ -110,7 +110,7 @@ window.addEventListener('load', (event) => {
             [rem1s, rem5s, rem10s, rem1m, rem5m, rem10m].forEach(btn => btn.classList.replace("buttonDisabled", "button"));
         }
 
-        if (document.getElementById("autoMode").innerHTML === "0" || isTimerZero) {
+        if (isTimerZero || document.getElementById("autoMode").innerHTML === "0") {
             buttonStart.classList.replace("button", "buttonDisabled");
             buttonStop.classList.replace("button", "buttonDisabled");
         } else {
@@ -119,12 +119,8 @@ window.addEventListener('load', (event) => {
         }
 
         if (isTimerZero) {
-            buttonStart.classList.replace("button", "buttonDisabled");
-            buttonStop.classList.replace("button", "buttonDisabled");
             buttonReset.classList.replace("button", "buttonDisabled");
         } else {
-            buttonStart.classList.replace("buttonDisabled", "button");
-            buttonStop.classList.replace("buttonDisabled", "button");
             buttonReset.classList.replace("buttonDisabled", "button");
         }
 

@@ -18,7 +18,7 @@ window.addEventListener('load', (event) => {
         } catch (error) {
             console.error('Error:', error);
         }
-    }, 1432);
+    }, 521);
 });
 
 /*************************************************************************/
@@ -41,7 +41,7 @@ window.addEventListener('load', (event) => {
         } catch (error) {
             console.error('Error:', error);
         }
-    }, 1365);
+    }, 503);
 });
 
 /*************************************************************************/
@@ -77,5 +77,5 @@ window.addEventListener('load', (event) => {
         } catch (error) {
             console.error('Error:', error);
         }
-    }, 1429);
+    }, 546);
 });
