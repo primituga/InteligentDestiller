@@ -1,90 +1,12 @@
 /*************************************************************************/
 /*  Webpage Javascript for Timers                                        */
 /*************************************************************************/
-
-/*************************************************************************/
-/* Timer for the wifi                                                    */
-/*************************************************************************/
-/*setInterval(async function () {
-    try {
-        await getWifiSSIDData();
-        await getWifiQualityData();
-    } catch (error) {
-        console.error('Error:', error);
-    }
-}, 5245);
-*/
-/*************************************************************************/
-/* Timer to get data                                                     */
-/*************************************************************************/
-/*window.addEventListener('load', (event) => {
-    setInterval(async function () {
-        try {
-            if (document.getElementById("autoMode").innerHTML === "1" && document.getElementById("timer").innerHTML !== "0h :0m :0s") {
-                await getTimerData();
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }, 500);
-});
-*/
-/*
-window.addEventListener('load', (event) => {
-    setInterval(async function () {
-        try {
-            if (document.getElementById("autoMode").innerHTML === "1" && document.getElementById("timer").innerHTML !== "0h :0m :0s") {
-                await getTimerHourData();
-                await getTimerMinuteData();
-                await getTimerSecoundData();
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }, 1012);
-});
-*/
-/*window.addEventListener('load', (event) => {
-    setInterval(async function () {
-        try {
-            await getAutoModeData();
-            await getManualModeData();
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }, 952);
-});
-
-window.addEventListener('load', (event) => {
-    setInterval(async function () {
-        try {
-            await getResistorData();
-            await getPumpData();
-            await getWaterInData();
-            await getDumpWaterData();
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }, 932);
-});
-
-window.addEventListener('load', (event) => {
-    setInterval(async function () {
-        try {
-            await getWaterMinData();
-            await getWaterAlarmData();
-            await getWaterMaxData();
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }, 943);
-});
-*/
 /*************************************************************************/
 /* Timer for EN/Disable buttons                                          */
 /*************************************************************************/
 window.addEventListener('load', (event) => {
     setInterval(function () {
+        const timerStat = document.getElementById("timerStat").innerHTML;
         const second = document.getElementById("secound").innerHTML;
         const minute = document.getElementById("minute").innerHTML;
         const hour = document.getElementById("hour").innerHTML;
@@ -153,6 +75,13 @@ window.addEventListener('load', (event) => {
             rem10m.classList.replace("button", "buttonDisabled");
         else
             rem10m.classList.replace("buttonDisabled", "button");
+
+        if (timerStat == 0)
+            document.getElementById("content").style.border = "3px solid #0000ff";
+        else if (timerStat == 1)
+            document.getElementById("content").style.border = "3px solid #10ff10";
+        if (!isTimerZero && timerStat == 0)
+            document.getElementById("content").style.border = "3px solid #00ffff";
 
 
     }, 931);

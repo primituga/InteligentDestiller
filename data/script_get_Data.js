@@ -14,7 +14,7 @@ function initWebSocket() {
 }
 
 function onOpen(event) {
-    onloadStatus();
+    updateStatus();
     console.log('Connection opened');
 }
 
@@ -60,7 +60,8 @@ function onMessage(event) {
             document.getElementById('hour').innerHTML = data.hour;
             document.getElementById('minute').innerHTML = data.minute;
             document.getElementById('secound').innerHTML = data.second;
-            document.getElementById('timerStat').innerHTML = data.timerStat ? 'ON' : 'OFF';
+            //document.getElementById('timerStat').innerHTML = data.timerStat ? 'ON' : 'OFF';
+            document.getElementById('timerStat').innerHTML = data.timerStat;
             document.getElementById('timer').innerHTML = document.getElementById('hour').innerHTML + 'h :' + document.getElementById('minute').innerHTML + 'm :' + document.getElementById('secound').innerHTML + 's';
             break;
         default:

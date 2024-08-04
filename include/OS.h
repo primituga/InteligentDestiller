@@ -35,7 +35,7 @@ extern AsyncWebSocket ws; /// WebSocket
 extern AsyncWebServer server; /// WebServer
 
 extern bool DEBUG;  /// Debug mode
-#define DEBUGlog    1                           /// Debug log mode
+#define DEBUGlog    0                           /// Debug log mode
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// I/O Map Header

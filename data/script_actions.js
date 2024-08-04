@@ -47,14 +47,7 @@ async function resetTimer() {
 
 async function updateStatus() {
     try {
-        await getTimerData();
-        await getResistorData();
-        await getPumpData();
-        await getWaterInData();
-        await getWaterOutData();
-        await getTimerHourData();
-        await getTimerMinuteData();
-        await getTimerSecoundData();
+        onloadStatus();
     } catch (error) {
         console.error('Error:', error);
     }
