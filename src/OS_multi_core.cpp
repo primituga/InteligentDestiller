@@ -7,7 +7,7 @@
 #include "OS.h"
 
 /**
- * @brief Function to initiate the 2nd core
+ * @brief Function to initiate the 2nd core to run 'loop2' function
  */
 void initMultiCore()    /// <Function to initiate the 2nd core>
 {

@@ -69,8 +69,8 @@ void destiler()
         }
     }
 
-    indicatorsManagement(); /**< Call to manage indicators */
-    modeManagement();       /**< Call to manage operation modes */
+    indicatorsManagement(); /// Call the indicatorsManagement function to manage the indicators of the machine
+    modeManagement();       /// Call the modeManagement function to manage the different modes of the machine (Auto and Manual)
 
     ////////////////////////////////////////////////////////////////////////////////////////
     /// WORKING BLOCK
@@ -83,13 +83,14 @@ void destiler()
      * @note If the water level is at the maximum, the water pump is turned off.
      * @note If the water level is at the minimum or there is an alarm, the water pump is turned on.
      */
-    if (getWaterMax())
+    if (getWaterMax()) /// If the water level is at the maximum turn off the water pump
     {
-        BMB_FLAG = OFF;
+        BMB_FLAG = OFF;  /// Turn off the water pump
+        setPumpWeb(OFF); /// Set the water pump to OFF in the web interface
     }
-    else if (getWaterMin() || getAlarm())
+    else if (getWaterMin() || getAlarm())   /// If the water level is at the minimum or at the alarm level, turn on the water pump
     {
-        BMB_FLAG = ON;
+        BMB_FLAG = ON;  /// Turn on the water pump
     }
     /**
      * @brief Control of the operation of the water heater resistor
@@ -99,11 +100,11 @@ void destiler()
      * @note If the water level is at the maximum, the water heater resistor is turned off.
      * @note If the water level is at the minimum or there is an alarm, the water heater resistor is turned on. *
      */
-    if (getWaterMax() || getWaterMin() || !getAlarm())
+    if (getWaterMax() || getWaterMin() || !getAlarm())  /// If the water level is at the maximum or min or is not at alarm lvl, turn ON the water heater resistor
     {
         RAQ_FLAG = ON;
     }
-    else
+    else    /// If the water level is at the alarmlvl, turn OFF the water heater resistor
     {
         RAQ_FLAG = OFF;
     }
@@ -120,9 +121,13 @@ void destiler()
      * @note V_IN is used to control the operation of the water inlet valve.
      * @note V_OUT is used to control the operation of the water outlet valve.
      */
-    bool BMB = (BMB_FLAG && getIndAuto() || getPumpWeb() && getManualMode());
+    /// If the water pump is on and the machine is in auto mode or the water pump is on in manual mode and the water level is not at the maximum, turn on the water pump
+    bool BMB = (BMB_FLAG && getIndAuto() || getPumpWeb() && getManualMode() && !getWaterMax()); 
+    /// If the water heater resistor is on and the machine is in auto mode or the water heater resistor is on in manual mode and the alarm is not on, turn on the water heater resistor
     bool RAQ = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getResistorWeb() && getManualMode() && !getAlarm());
+    /// If the water inlet valve is on and the machine is in auto mode or the water inlet valve is on in manual mode and the alarm is not on, turn on the water inlet valve
     bool V_IN = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_InWeb() && getManualMode() && !getAlarm());
+    /// If the water outlet valve is on and the machine is in auto mode or the water outlet valve is on in manual mode and the alarm is not on, turn on the water outlet valve
     bool V_OUT = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_OutWeb() && getManualMode() && !getAlarm());
 
     /**

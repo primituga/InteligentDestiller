@@ -23,7 +23,7 @@ void toggleIndAuto()
         state = !state;
         setIndAuto(state);
         setAutoModeWeb(state);
-        //ws.textAll(String(state));
+        // ws.textAll(String(state));
         ws.textAll(String(" autoMode: " + state));
     }
     else
@@ -31,7 +31,7 @@ void toggleIndAuto()
         state = !state;
         setIndAuto(state);
         setAutoModeWeb(state);
-        //ws.textAll(String(state));
+        // ws.textAll(String(state));
         ws.textAll(String(" autoMode: " + state));
     }
 }
@@ -76,10 +76,10 @@ void indicatorsManagement()
     ////////////////////////////////////////////////////////////////////////////////////////
     /// INDICATORS BLOCK
     ////////////////////////////////////////////////////////////////////////////////////////
-    setIndMax(getWaterMax());
-    setIndMin(getWaterMin());
-    setIndAlarm(getAlarm());
-    setIndMan(getManualMode());
+    setIndMax(getWaterMax());   /// Set the maximum water level indicator
+    setIndMin(getWaterMin());   /// Set the minimum water level indicator
+    setIndAlarm(getAlarm());    /// Set the alarm indicator
+    setIndMan(getManualMode()); /// Set the manual mode indicator
 }
 
 void modeManagement()
@@ -87,13 +87,20 @@ void modeManagement()
     ////////////////////////////////////////////////////////////////////////////////////////
     /// MACHINE MODE MANAGEMENT BLOCK
     ////////////////////////////////////////////////////////////////////////////////////////
+    /// If the machine is in manual mode, turn off the auto mode indicator
     if (!getManualMode())
     {
-        toggleAutoMode();
-        setIndAuto(getAutoModeWeb());
+        toggleAutoMode();             /// Toggle the auto mode
+        setIndAuto(getAutoModeWeb()); /// Set the auto mode indicator to the web value of the auto mode
     }
     else
     {
-        setIndAuto(OFF);
+        setIndAuto(OFF); /// Set the auto mode indicator to OFF
+    }
+
+    /// If the machine is in manual mode, turn off the timer
+    if (!getIndAuto())
+    {
+        setTimer(OFF);  /// Turn off the timer
     }
 }

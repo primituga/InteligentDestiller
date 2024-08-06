@@ -19,8 +19,8 @@
  * @note This function is used to print the initial message to the Serial Terminal
  */
 void initSerial()
-{ /// Initialize Serial Communications
-	Serial.begin(9600);
+{
+	Serial.begin(9600);	/// Initialize Serial Communications with the default baud rate of 9600 bps
 
 	sPrintLnStr(" 			   ░▒▓██▓▒░");
 	sPrintLnStr(" ");

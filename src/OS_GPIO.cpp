@@ -247,18 +247,23 @@ void setIndMax(bool state)
     static bool OLDSTATE; /// Old state of the indicator
     if (state == ON && OLDSTATE == OFF)
     {
+        /// Set the max indicator to ON
         outputVarsImage[POS_IND_MAX] = ON;
+        /// Condition to debug
         if (DEBUG)
             sPrintLnStr("setIndMax ON");
         OLDSTATE = state;
+        /// Send the max indicator value to the web server
         ws.textAll("{\"type\": \"waterMax\", \"value\": " + String(getWaterMax()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
+        /// Set the max indicator to OFF
         outputVarsImage[POS_IND_MAX] = OFF;
         if (DEBUG)
             sPrintLnStr("setIndMax OFF");
         OLDSTATE = state;
+        /// Send the max indicator value to the web server
         ws.textAll("{\"type\": \"waterMax\", \"value\": " + String(getWaterMax()) + "}");
     }
 }
@@ -277,22 +282,26 @@ void setIndMin(bool state)
     static bool OLDSTATE; /// Old state of the indicator
     if (state == ON && OLDSTATE == OFF)
     {
+        /// Set the min indicator to ON
         outputVarsImage[POS_IND_MIN] = ON;
         if (DEBUG)
         {
             sPrintLnStr("setIndMin ON");
         }
         OLDSTATE = state;
+        /// Send the min indicator value to the web server
         ws.textAll("{\"type\": \"waterMin\", \"value\": " + String(getWaterMin()) + "}");
     }
     else if (state == OFF && OLDSTATE == ON)
     {
+        /// Set the min indicator to OFF
         outputVarsImage[POS_IND_MIN] = OFF;
         if (DEBUG)
         {
             sPrintLnStr("setIndMin OFF");
         }
         OLDSTATE = state;
+        /// Send the min indicator value to the web server
         ws.textAll("{\"type\": \"waterMin\", \"value\": " + String(getWaterMin()) + "}");
     }
 }
@@ -314,15 +323,15 @@ void setIndAlarm(bool state)
 
     if (state == ON && OLDSTATE == OFF)
     {
-        // if (millis() - previousTimer > ALARM_TIME_ON)
-        //{
-        //     outputVarsImage[POS_IND_ALARM] = OFF;
-        //    previousTimer = millis();
-        //}
-        // else if (millis() - previousTimer > ALARM_TIME_OFF)
-        //{
+         if (millis() - previousTimer > ALARM_TIME_ON)
+        {
+             outputVarsImage[POS_IND_ALARM] = OFF;
+            previousTimer = millis();
+        }
+         else if (millis() - previousTimer > ALARM_TIME_OFF)
+        {
         outputVarsImage[POS_IND_ALARM] = ON;
-        //}
+        }
     }
     else if (state == OFF && OLDSTATE == ON)
     {
