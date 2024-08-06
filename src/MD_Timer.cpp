@@ -9,29 +9,53 @@ static unsigned long previousTimer = 0;
 static unsigned long lastUpdateSent = 0;
 const unsigned long updateInterval = 1000; // Send updates every second
 
+/**
+ * @brief Send timer to web
+ *
+ * This function sends the timer to the web interface to update the timer display in the web interface.
+ *
+ * @note This function is called by the webTimer function in MD_Timer.cpp
+ */
 void sendTimer()
 {
   static int old_minute, old_hour, old_second, old_timerStat;
+
+  /// Only send updates if the timer has changed
   if (old_minute == getTimerMinute() && old_hour == getTimerHour() && old_second == getTimerSecound() && old_timerStat == getTimerStatus())
   {
     return;
   }
+
+  /// Send the timer to the web interface
   String message = "{\"type\": \"timer\", \"hour\": " + String(getTimerHour()) +
                    ", \"minute\": " + String(getTimerMinute()) +
                    ", \"second\": " + String(getTimerSecound()) +
                    ", \"timerStat\": " + String(getTimerStatus()) + "}";
+  /// Send the message to the web interface
   ws.textAll(message);
+
+  /// Update the old values
   old_minute = getTimerMinute();
   old_hour = getTimerHour();
   old_second = getTimerSecound();
   old_timerStat = getTimerStatus();
 }
 
+/**
+ * @brief Web timer function to manage the timer operations in the web interface
+ *
+ * This function is responsible for managing the timer operations.
+ *
+ * @param op
+ * @param amount
+ * @return unsigned long
+ */
 long webTimer(String op, int16_t amount)
 {
   unsigned long currentTimer = millis();
   static long tot = 0;
 
+  /// Timer operations to add, remove or reset the timer value in miliseconds
   if (op == "+")
   {
     switch (amount)
@@ -89,6 +113,7 @@ long webTimer(String op, int16_t amount)
     tot = 0;
   }
 
+  /// Timer management to decrease the timer every second and turn it off when it reaches 0 seconds left
   if (currentTimer - previousTimer >= 1000)
   {
     previousTimer = currentTimer;
@@ -103,13 +128,12 @@ long webTimer(String op, int16_t amount)
     }
   }
 
-  // Only send updates at the defined interval
+  /// Only send updates at the defined interval
   if (currentTimer - lastUpdateSent >= updateInterval)
   {
     lastUpdateSent = currentTimer;
     sendTimer();
   }
-
   return tot;
 }
 
@@ -172,16 +196,55 @@ void setTimer(bool stat)
   sendTimer();
 }
 
+/**
+ * @brief Add 1 secound to timer
+ */
 void add1s() { webTimer("+", 1); }
+/**
+ * @brief Add 5 secounds to timer
+ */
 void add5s() { webTimer("+", 5); }
+/**
+ * @brief Add 10 secounds to timer
+ */
 void add10s() { webTimer("+", 10); }
+/**
+ * @brief Add 1 minute to timer
+ */
 void add1m() { webTimer("+", 60); }
+/**
+ * @brief Add 5 minutes to timer
+ */
 void add5m() { webTimer("+", 300); }
+/**
+ * @brief Add 10 minutes to timer
+ */
 void add10m() { webTimer("+", 600); }
+/**
+ * @brief Remove 1 secound from timer
+ */
 void rem1s() { webTimer("-", 1); }
+/**
+ * @brief Remove 5 secounds from timer
+ */
 void rem5s() { webTimer("-", 5); }
+/**
+ * @brief Remove 10 secounds from timer
+ */
 void rem10s() { webTimer("-", 10); }
+/**
+ * @brief Remove 1 minute from timer
+ */
 void rem1m() { webTimer("-", 60); }
+/**
+ * @brief Remove 5 minutes from timer
+ */
 void rem5m() { webTimer("-", 300); }
+/**
+ * @brief Remove 10 minutes from timer
+ */
 void rem10m() { webTimer("-", 600); }
+/**
+ * @brief Reset timer
+ */
 void resetTimer() { webTimer("=", 0); }
