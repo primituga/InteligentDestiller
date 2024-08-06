@@ -119,10 +119,10 @@ void setupRoutes()
             { request->send(SPIFFS, "/script_timers.js", "text/javascript"); });  /// Send the script_timers.js file to the client when requested
 
   server.on("/script_timers_Img.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/script_timers_Img.js", "text/javascript"); });  /// Send the script_timers.js file to the client when requested
+            { request->send(SPIFFS, "/script_timers_Img.js", "text/javascript"); });  /// Send the script_timers_Img.js file to the client when requested
 
   server.on("/script_timers_2.js", HTTP_GET, [](AsyncWebServerRequest *request)
-            { request->send(SPIFFS, "/web_2/script_timers_2.js", "text/javascript"); });  /// Send the script_timers.js file to the client when requested
+            { request->send(SPIFFS, "/web_2/script_timers_2.js", "text/javascript"); });  /// Send the script_timers_2.js file to the client when requested
 
   ////////////////////////////////////////////////////////////////////////////////////////
   /// Route for image files
