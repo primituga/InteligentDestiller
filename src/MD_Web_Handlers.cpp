@@ -78,31 +78,32 @@ String handleWifiIP() { return WiFi.localIP().toString(); }
  */
 String handleTimeAdjust(const String &adjustment)
 {
-  if (adjustment == "add1s")
+  /// Adjust the timer based on the adjustment parameter
+  if (adjustment == "add1s") /// Add 1 secound to timer
     add1s();
-  else if (adjustment == "add5s")
+  else if (adjustment == "add5s") /// Add 5 secounds to timer
     add5s();
-  else if (adjustment == "add10s")
+  else if (adjustment == "add10s") /// Add 10 secounds to timer
     add10s();
-  else if (adjustment == "add1m")
+  else if (adjustment == "add1m") /// Add 1 minute to timer
     add1m();
-  else if (adjustment == "add5m")
+  else if (adjustment == "add5m") /// Add 5 minutes to timer
     add5m();
-  else if (adjustment == "add10m")
+  else if (adjustment == "add10m") /// Add 10 minutes to timer
     add10m();
-  else if (adjustment == "rem1s")
+  else if (adjustment == "rem1s") /// Remove 1 secound from timer
     rem1s();
-  else if (adjustment == "rem5s")
+  else if (adjustment == "rem5s") /// Remove 5 secounds from timer
     rem5s();
-  else if (adjustment == "rem10s")
+  else if (adjustment == "rem10s") /// Remove 10 secounds from timer
     rem10s();
-  else if (adjustment == "rem1m")
+  else if (adjustment == "rem1m") /// Remove 1 minute from timer
     rem1m();
-  else if (adjustment == "rem5m")
+  else if (adjustment == "rem5m") /// Remove 5 minutes from timer
     rem5m();
-  else if (adjustment == "rem10m")
+  else if (adjustment == "rem10m") /// Remove 10 minutes from timer
     rem10m();
-  return adjustment;
+  return adjustment; /// Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -117,13 +118,14 @@ String handleTimeAdjust(const String &adjustment)
  */
 String handleTimerControl(const String &control)
 {
-  if (control == "start")
+  /// Control the timer based on the control parameter (start, stop, reset)
+  if (control == "start") /// Start the timer
     setTimer(ON);
-  else if (control == "stop")
+  else if (control == "stop") /// Stop the timer
     setTimer(OFF);
-  else if (control == "reset")
+  else if (control == "reset") /// Reset the timer
     resetTimer();
-  return "Timer " + control;
+  return "Timer " + control; /// Return the control message for the timer (start, stop, reset)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -132,31 +134,32 @@ String handleTimerControl(const String &control)
 /**
  * @brief Handle State
  * @param state
- * @return String 
+ * @return String
  * @note This function handles the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)
  * @note This function returns the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)
  */
 String handleState(const String &state)
 {
-  if (state == "auto")
+  /// Get the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)
+  if (state == "auto") /// Get the auto mode indicator state
     return String(getIndAuto());
-  else if (state == "manual")
+  else if (state == "manual") /// Get the manual mode indicator state
     return String(getManualMode());
-  else if (state == "pump")
+  else if (state == "pump") /// Get the pump state
     return String(getPump());
-  else if (state == "waterOut")
+  else if (state == "waterOut") /// Get the water out valve state
     return String(getValv_Water_Out());
-  else if (state == "resistor")
+  else if (state == "resistor") /// Get the resistor state
     return String(getResistor());
-  else if (state == "waterIn")
+  else if (state == "waterIn") /// Get the water in valve state
     return String(getValv_Water_In());
-  else if (state == "waterMax")
+  else if (state == "waterMax") /// Get the water max state
     return String(getWaterMax());
-  else if (state == "waterMin")
+  else if (state == "waterMin") /// Get the water min state
     return String(getWaterMin());
-  else if (state == "waterAlarm")
+  else if (state == "waterAlarm") /// Get the water alarm state
     return String(getAlarm());
-  return String();
+  return String(); /// Return nothing if the state is not found
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -171,17 +174,18 @@ String handleState(const String &state)
  */
 String handleToggle(const String &toggle)
 {
-  if (toggle == "auto")
+  /// Toggle the variable (auto, pump, waterOut, resistor, waterIn)
+  if (toggle == "auto") /// Toggle the auto mode indicator state
     toggleAutoModeWeb();
-  else if (toggle == "pump")
+  else if (toggle == "pump") /// Toggle the pump state
     togglePumpWeb();
-  else if (toggle == "waterOut")
+  else if (toggle == "waterOut") /// Toggle the water out valve state
     toggleValveWaterOutWeb();
-  else if (toggle == "waterIn")
+  else if (toggle == "waterIn") /// Toggle the water in valve state
     toggleValveWaterInWeb();
-  else if (toggle == "resistor")
+  else if (toggle == "resistor") /// Toggle the resistor state
     toggleResistorWeb();
-  return toggle + " toggled";
+  return toggle + " toggled"; /// Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -193,43 +197,44 @@ String handleToggle(const String &toggle)
  * @return String
  * @note This function processes the variables for the web server requests
  * @note This function is called by the web server handle function (server.on)
- * @note This function returns the variable value for the web server request 
+ * @note This function returns the variable value for the web server request
  */
 String processor(const String &var)
 {
-  if (var == "TIMER")
-    return handleTimer();
-  if (var == "WATERMAX")
-    return handleState("waterMax");
-  if (var == "WATERMIN")
-    return handleState("waterMin");
-  if (var == "WATERALARM")
-    return handleState("waterAlarm");
-  if (var == "AUTO")
-    return handleState("auto");
-  if (var == "MANUAL")
-    return handleState("manual");
-  if (var == "PUMP")
-    return handleState("pump");
-  if (var == "WATEROUT")
-    return handleState("waterOut");
-  if (var == "RESISTOR")
-    return handleState("resistor");
-  if (var == "WATERIN")
-    return handleState("waterIn");
-  if (var == "WIFIQUALITY")
-    return handleWifiQuality();
-  if (var == "WIFISSID")
-    return handleWifiSSID();
-  if (var == "WIFITX")
-    return handleWifiTX();
-  if (var == "WIFIIP")
-    return handleWifiIP();
-  if (var == "TIMERHOUR")
-    return handleHour();
-  if (var == "TIMERMINUTE")
-    return handleMinute();
-  if (var == "TIMERSECOUND")
-    return handleSecound();
-  return String(); /// Return nothing
+  /// Process the variable for the web server request (var) and return the variable value
+  if (var == "TIMER")                 /// Timer variable request
+    return handleTimer();             /// Return the timer value in the format HH:MM:SS
+  if (var == "WATERMAX")              /// WaterMax variable request
+    return handleState("waterMax");   /// Return the waterMax value
+  if (var == "WATERMIN")              /// WaterMin variable request
+    return handleState("waterMin");   /// Return the waterMin value
+  if (var == "WATERALARM")            /// WaterAlarm variable request
+    return handleState("waterAlarm"); /// Return the waterAlarm value
+  if (var == "AUTO")                  /// Auto variable request
+    return handleState("auto");       /// Return the auto value
+  if (var == "MANUAL")                /// Manual variable request
+    return handleState("manual");     /// Return the manual value
+  if (var == "PUMP")                  /// Pump variable request
+    return handleState("pump");       /// Return the pump value
+  if (var == "WATEROUT")              /// WaterOut variable request
+    return handleState("waterOut");   /// Return the waterOut value
+  if (var == "RESISTOR")              /// Resistor variable request
+    return handleState("resistor");   /// Return the resistor value
+  if (var == "WATERIN")               /// WaterIn variable request
+    return handleState("waterIn");    /// Return the waterIn value
+  if (var == "WIFIQUALITY")           /// WifiQuality variable request
+    return handleWifiQuality();       /// Return the wifiQuality value
+  if (var == "WIFISSID")              /// WifiSSID variable request
+    return handleWifiSSID();          /// Return the wifiSSID value
+  if (var == "WIFITX")                /// WifiTX variable request
+    return handleWifiTX();            /// Return the wifiTX value
+  if (var == "WIFIIP")                /// WifiIP variable request
+    return handleWifiIP();            /// Return the wifiIP value
+  if (var == "TIMERHOUR")             /// TimerHour variable request
+    return handleHour();              /// Return the timerHour value
+  if (var == "TIMERMINUTE")           /// TimerMinute variable request
+    return handleMinute();            /// Return the timerMinute value
+  if (var == "TIMERSECOUND")          /// TimerSecound variable request
+    return handleSecound();           /// Return the timerSecound value
+  return String();                    /// Return nothing if the variable is not found
 }

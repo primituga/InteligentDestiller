@@ -6,25 +6,29 @@
  */
 #include "MD.h"
 
-// uint8_t inputVarsImageWeb[5];  /// Input variables image
-// nao, vou a origem
-
 uint8_t outputVarsImageWeb[9]; /// Output variables image
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// FUNCTIONS BLOCK
 ////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Update Outputs Web
+ *
+ * This function updates the outputs for the web interface.
+ *
+ * @return void
+ */
 void updateOutputsWeb()
 {
-    outputVarsImageWeb[0] = getResistor();
-    outputVarsImageWeb[1] = getPump();
-    outputVarsImageWeb[2] = getValv_Water_Out();
-    outputVarsImageWeb[3] = getValv_Water_In();
-    outputVarsImageWeb[4] = getAlarm();
-    outputVarsImageWeb[5] = getWaterMin();
-    outputVarsImageWeb[6] = getWaterMax();
-    //outputVarsImageWeb[7] = getIndAuto();
-    outputVarsImageWeb[8] = getManualMode();
+    outputVarsImageWeb[0] = getResistor();       /// Update the resistor state
+    outputVarsImageWeb[1] = getPump();           /// Update the pump state
+    outputVarsImageWeb[2] = getValv_Water_Out(); /// Update the water out valve state
+    outputVarsImageWeb[3] = getValv_Water_In();  /// Update the water in valve state
+    outputVarsImageWeb[4] = getAlarm();          /// Update the alarm state
+    outputVarsImageWeb[5] = getWaterMin();       /// Update the water min state
+    outputVarsImageWeb[6] = getWaterMax();       /// Update the water max state
+    outputVarsImageWeb[8] = getManualMode();     /// Update the manual mode state
+    /// outputVarsImageWeb[7] = getIndAuto();        /// Update the auto indicator state
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -111,16 +115,16 @@ bool getPumpWeb()
  */
 void setAutoModeWeb(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE; /// Static variable to store the old state
     if (state == ON && OLDSTATE == OFF)
     {
-        outputVarsImageWeb[POS_IND_AUTO] = ON;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_IND_AUTO] = ON; /// Set the auto indicator to ON
+        OLDSTATE = state;                      /// Set the old state to the current state
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        outputVarsImageWeb[POS_IND_AUTO] = OFF;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_IND_AUTO] = OFF; /// Set the auto indicator to OFF
+        OLDSTATE = state;                       /// Set the old state to the current state
     }
 }
 
@@ -135,16 +139,16 @@ void setAutoModeWeb(bool state)
  */
 void setPumpWeb(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE; /// Static variable to store the old state
     if (state == ON && OLDSTATE == OFF)
     {
-        outputVarsImageWeb[POS_BMB] = ON;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_BMB] = ON; /// Set the pump to ON
+        OLDSTATE = state;                 /// Set the old state to the current state
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        outputVarsImageWeb[POS_BMB] = OFF;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_BMB] = OFF; /// Set the pump to OFF
+        OLDSTATE = state;                  /// Set the old state to the current state
     }
 }
 
@@ -159,16 +163,16 @@ void setPumpWeb(bool state)
  */
 void setValveWaterInWeb(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE; /// Static variable to store the old state
     if (state == ON && OLDSTATE == OFF)
     {
-        outputVarsImageWeb[POS_VALV_WATER_IN] = ON;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_VALV_WATER_IN] = ON; /// Set the water in valve to ON
+        OLDSTATE = state;                           /// Set the old state to the current state
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        outputVarsImageWeb[POS_VALV_WATER_IN] = OFF;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_VALV_WATER_IN] = OFF; /// Set the water in valve to OFF
+        OLDSTATE = state;                            /// Set the old state to the current state
     }
 }
 
@@ -183,16 +187,16 @@ void setValveWaterInWeb(bool state)
  */
 void setValveWaterOutWeb(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE; /// Static variable to store the old state
     if (state == ON && OLDSTATE == OFF)
     {
-        outputVarsImageWeb[POS_VALV_WATER_OUT] = ON;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_VALV_WATER_OUT] = ON; /// Set the water out valve to ON
+        OLDSTATE = state;                            /// Set the old state to the current state
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        outputVarsImageWeb[POS_VALV_WATER_OUT] = OFF;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_VALV_WATER_OUT] = OFF; /// Set the water out valve to OFF
+        OLDSTATE = state;                             /// Set the old state to the current state
     }
 }
 
@@ -207,16 +211,16 @@ void setValveWaterOutWeb(bool state)
  */
 void setResistorWeb(bool state)
 {
-    static bool OLDSTATE;
+    static bool OLDSTATE; /// Static variable to store the old state
     if (state == ON && OLDSTATE == OFF)
     {
-        outputVarsImageWeb[POS_RAQ] = ON;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_RAQ] = ON; /// Set the resistor to ON
+        OLDSTATE = state;                 /// Set the old state to the current state
     }
     else if (state == OFF && OLDSTATE == ON)
     {
-        outputVarsImageWeb[POS_RAQ] = OFF;
-        OLDSTATE = state;
+        outputVarsImageWeb[POS_RAQ] = OFF; /// Set the resistor to OFF
+        OLDSTATE = state;                  /// Set the old state to the current state
     }
 }
 
@@ -224,85 +228,117 @@ void setResistorWeb(bool state)
 /// TOGGLES BLOCK
 ////////////////////////////////////////////////////////////////////////////////////////
 
+/**
+ * @brief Toggle Auto Mode Web
+ *
+ * This function toggles the auto mode.
+ *
+ * @return void
+ */
 void toggleAutoModeWeb()
 {
-    bool state = getIndAuto();
-
+    bool state = getIndAuto(); /// Get the auto indicator state
     if (state == OFF && !getManualMode())
     {
-        state = !state;
-        setAutoModeWeb(state);
+        state = !state;        /// Toggle the auto indicator state
+        setAutoModeWeb(state); /// Set the auto indicator state
     }
     else if (state == ON && !getManualMode())
     {
-        state = !state;
-        setAutoModeWeb(state);
+        state = !state;        /// Toggle the auto indicator state
+        setAutoModeWeb(state); /// Set the auto indicator state
     }
 }
 
+/**
+ * @brief Toggle Pump Web
+ *
+ * This function toggles the pump.
+ *
+ * @return void
+ */
 void togglePumpWeb() /// Toggle Pump
 {
-    bool state = getPumpWeb();
+    bool state = getPumpWeb(); /// Get the pump state
     if (state == OFF && getManualMode())
     {
-        state = !state;
-        setPumpWeb(state);
-        sPrintStr("togglePumpWeb ");
-        Serial.println(state);
+        state = !state;              /// Toggle the pump state
+        setPumpWeb(state);           /// Set the pump state
+        sPrintStr("togglePumpWeb "); /// Print the pump state
+        Serial.println(state);       /// Print the pump state
     }
     else if (state == ON && getManualMode())
     {
-        state = !state;
-        setPumpWeb(state);
-        sPrintStr("togglePumpWeb ");
-        Serial.println(state);
+        state = !state;              /// Toggle the pump state
+        setPumpWeb(state);           /// Set the pump state
+        sPrintStr("togglePumpWeb "); /// Print the pump state
+        Serial.println(state);       /// Print the pump state
     }
 }
 
+/**
+ * @brief Toggle Valve Water In Web
+ *
+ * This function toggles the water in valve.
+ *
+ * @return void
+ */
 void toggleValveWaterInWeb() /// Toggle Valve Water In
 {
-    bool state = getValv_Water_In();
-
+    bool state = getValv_Water_In(); /// Get the water in valve state
     if (state == OFF && getManualMode())
     {
-        state = !state;
-        setValveWaterInWeb(state);
+        state = !state;            /// Toggle the water in valve state
+        setValveWaterInWeb(state); /// Set the water in valve state
     }
     else if (state == ON && getManualMode())
     {
-        state = !state;
-        setValveWaterInWeb(state);
+        state = !state;            /// Toggle the water in valve state
+        setValveWaterInWeb(state); /// Set the water in valve state
     }
 }
 
+/**
+ * @brief Toggle Valve Water Out Web
+ *
+ * This function toggles the water out valve.
+ *
+ * @return void
+ */
 void toggleValveWaterOutWeb() /// Toggle Valve Water Out
 {
-    bool state = getValv_Water_Out();
-
-    if (state == OFF && getManualMode())
+    bool state = getValv_Water_Out();    /// Get the water out valve state
+    if (state == OFF && getManualMode()) /// If the water out valve state is OFF and the manual mode is ON
     {
-        state = !state;
-        setValveWaterOutWeb(state);
+        state = !state;             /// Toggle the water out valve state
+        setValveWaterOutWeb(state); /// Set the water out valve state
     }
     else if (state == ON && getManualMode())
     {
-        state = !state;
-        setValveWaterOutWeb(state);
+        state = !state;             /// Toggle the water out valve state
+        setValveWaterOutWeb(state); /// Set the water out valve state
     }
 }
 
+/**
+ * @brief Toggle Resistor Web
+ *
+ * This function toggles the resistor.
+ *
+ * @return void
+ */
 void toggleResistorWeb() /// Toggle Resistor
 {
-    bool state = getResistor();
+    bool state = getResistor(); /// Get the resistor state
 
     if (state == OFF && getManualMode())
     {
-        state = !state;
-        setResistorWeb(state);
+        state = !state;        /// Toggle the resistor state
+        setResistorWeb(state); /// Set the resistor state
     }
     else if (state == ON && getManualMode())
     {
-        state = !state;
-        setResistorWeb(state);
+        state = !state;        /// Toggle the resistor state
+        setResistorWeb(state); /// Set the resistor state
     }
 }

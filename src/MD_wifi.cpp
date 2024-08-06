@@ -18,18 +18,19 @@ const char *soft_ap_password = "Destiller-AP";
  */
 void OnWiFiEvent(WiFiEvent_t event)
 {
+  /// Handle WiFi events
   switch (event)
   {
-  case SYSTEM_EVENT_STA_CONNECTED:
+  case SYSTEM_EVENT_STA_CONNECTED: /// Station connected to WiFi network
     sPrintLnStr("ESP32 Connected to WiFi Network");
     break;
-  case SYSTEM_EVENT_AP_START:
+  case SYSTEM_EVENT_AP_START: /// Soft Access Point started
     sPrintLnStr("ESP32 soft AP started");
     break;
-  case SYSTEM_EVENT_AP_STACONNECTED:
+  case SYSTEM_EVENT_AP_STACONNECTED: /// Station connected to ESP32 Soft Access Point
     sPrintLnStr("Station connected to ESP32 soft AP");
     break;
-  case SYSTEM_EVENT_AP_STADISCONNECTED:
+  case SYSTEM_EVENT_AP_STADISCONNECTED: /// Station disconnected from ESP32 Soft Access Point
     sPrintLnStr("Station disconnected from ESP32 soft AP");
     break;
   default:
@@ -44,10 +45,11 @@ void OnWiFiEvent(WiFiEvent_t event)
  */
 String wifiQuality()
 {
-  int rssi = WiFi.RSSI();
-  int quality;
-  String qualityStr;
+  int rssi = WiFi.RSSI(); /// Get the Received Signal Strength Indicator (RSSI) in dBm
+  int quality;            /// Quality in percentage
+  String qualityStr;      /// Quality in string format
 
+  /// Calculate the quality in percentage
   if (rssi <= -100)
   {
     quality = 0;
@@ -60,9 +62,11 @@ String wifiQuality()
   {
     quality = (rssi + 100) * 1.25;
   }
+  /// Return the quality in string format with RSSI and quality in percentage values
   qualityStr = "RSSI " + String(rssi) + " dBm (" + String(quality) + " %)";
+  /// Send the quality in percentage to the web server as a JSON object
   ws.textAll("{\"type\": \"wifiQuality\", \"value\": " + String(quality) + "}");
-  return qualityStr;
+  return qualityStr; /// Return the quality in string format with RSSI and quality in percentage values
 }
 
 /**
@@ -81,19 +85,25 @@ void connectToWIFI()
   wifiManager.setHostname("Destiler");    /// Hostname
   WiFi.setHostname("Destiler");           /// Hostname
 
+  /// Set the WiFiManager parameters and connect to the WiFi network with the SSID and password stored in the EEPROM memory
   if (!wifiManager.autoConnect("Conf Destiler AP"))
   {
     sPrintLnStr("Failed to connect");
     return;
   }
 
+  /// Get the SSID and password from the WiFiManager and connect to the WiFi network
   String ssid = wifiManager.getWiFiSSID();
   String password = wifiManager.getWiFiPass();
 
+  /// Connect to the WiFi network with the SSID and password
   WiFi.begin(ssid.c_str(), password.c_str());
-  delay(100);
+  delay(10);
+  /// Wait for the ESP32 to connect to the WiFi network and print the connection status
   sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));
   sPrintLnStr("--wmHostname: " + wifiManager.getWiFiHostname());
+  sPrintStr("--SSID: ");
+  sPrintLnStr(WiFi.SSID());
   sPrintStr("--TxPower: ");
   sPrintStr(String(WiFi.getTxPower()));
   sPrintLnStr(" dBm");
@@ -132,15 +142,15 @@ void connectToSoftAP()
  */
 bool initWIFI()
 {
-  static bool WIFI_SOFTAP_FLAG = true;
+  static bool WIFI_SOFTAP_FLAG = true;  /// SoftAP flag to create a Soft Access Point only once
   /**
    * @brief WIFI_MODE_OPTIONS
    *
-   * 1 - Connect to local WiFi
+   * 1 - Connect to local WiFi network only
    *
-   * 2 - Create a local AP
+   * 2 - Create a local AP (SoftAP)
    *
-   * 3 - Both
+   * 3 - Both (Connect to local WiFi network and create a local AP)
    */
   if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 1)
   {

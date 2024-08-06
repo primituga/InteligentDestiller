@@ -323,15 +323,15 @@ void setIndAlarm(bool state)
 
     if (state == ON && OLDSTATE == OFF)
     {
-        // if (millis() - previousTimer > ALARM_TIME_ON)
-        //{
-        //     outputVarsImage[POS_IND_ALARM] = OFF;
-        //    previousTimer = millis();
-        //}
-        // else if (millis() - previousTimer > ALARM_TIME_OFF)
-        //{
+         if (millis() - previousTimer > ALARM_TIME_ON)
+        {
+             outputVarsImage[POS_IND_ALARM] = OFF;
+            previousTimer = millis();
+        }
+         else if (millis() - previousTimer > ALARM_TIME_OFF)
+        {
         outputVarsImage[POS_IND_ALARM] = ON;
-        //}
+        }
     }
     else if (state == OFF && OLDSTATE == ON)
     {

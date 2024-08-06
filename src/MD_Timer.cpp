@@ -18,7 +18,7 @@ const unsigned long updateInterval = 1000; // Send updates every second
  */
 void sendTimer()
 {
-  static int old_minute, old_hour, old_second, old_timerStat;
+  static int old_minute, old_hour, old_second, old_timerStat; /// Old values to compare with the new values to send updates only when the timer changes
 
   /// Only send updates if the timer has changed
   if (old_minute == getTimerMinute() && old_hour == getTimerHour() && old_second == getTimerSecound() && old_timerStat == getTimerStatus())
@@ -30,7 +30,7 @@ void sendTimer()
   String message = "{\"type\": \"timer\", \"hour\": " + String(getTimerHour()) +
                    ", \"minute\": " + String(getTimerMinute()) +
                    ", \"second\": " + String(getTimerSecound()) +
-                   ", \"timerStat\": " + String(getTimerStatus()) + "}";
+                   ", \"timerStat\": " + String(getTimerStatus()) + "}"; /// Create the message to send to the web interface as a JSON object
   /// Send the message to the web interface
   ws.textAll(message);
 
@@ -56,59 +56,59 @@ long webTimer(String op, int16_t amount)
   static long tot = 0;
 
   /// Timer operations to add, remove or reset the timer value in miliseconds
-  if (op == "+")
+  if (op == "+") /// Add time to the timer
   {
     switch (amount)
     {
-    case 1:
+    case 1: /// Add 1 second
       tot += 1000;
       break;
-    case 5:
+    case 5: /// Add 5 seconds
       tot += 5000;
       break;
-    case 10:
+    case 10: /// Add 10 seconds
       tot += 10000;
       break;
-    case 60:
+    case 60: /// Add 1 minute
       tot += 60000;
       break;
-    case 300:
+    case 300: /// Add 5 minutes
       tot += 300000;
       break;
-    case 600:
+    case 600: /// Add 10 minutes
       tot += 600000;
       break;
     default:
       break;
     }
   }
-  else if (op == "-")
+  else if (op == "-") /// Remove time from the timer
   {
     switch (amount)
     {
-    case 1:
+    case 1: /// Remove 1 second
       tot -= 1000;
       break;
-    case 5:
+    case 5: /// Remove 5 seconds
       tot -= 5000;
       break;
-    case 10:
+    case 10: /// Remove 10 seconds
       tot -= 10000;
       break;
-    case 60:
+    case 60: /// Remove 1 minute
       tot -= 60000;
       break;
-    case 300:
+    case 300: /// Remove 5 minutes
       tot -= 300000;
       break;
-    case 600:
+    case 600: /// Remove 10 minutes
       tot -= 600000;
       break;
     default:
       break;
     }
   }
-  else if (op == "=")
+  else if (op == "=") /// Reset the timer to 0
   {
     tot = 0;
   }
@@ -117,11 +117,12 @@ long webTimer(String op, int16_t amount)
   if (currentTimer - previousTimer >= 1000)
   {
     previousTimer = currentTimer;
+    /// Decrease the timer every second if the timer is ON
     if (flagTimerStatus == ON)
     {
       tot -= 1000;
     }
-    if (tot <= 0)
+    if (tot <= 0) /// Turn off the timer when it reaches 0 seconds left 
     {
       setTimer(OFF);
       tot = 0;
@@ -131,8 +132,8 @@ long webTimer(String op, int16_t amount)
   /// Only send updates at the defined interval
   if (currentTimer - lastUpdateSent >= updateInterval)
   {
-    lastUpdateSent = currentTimer;
-    sendTimer();
+    lastUpdateSent = currentTimer;  
+    sendTimer();  /// Send the timer to the web interface
   }
   return tot;
 }
@@ -145,7 +146,7 @@ long webTimer(String op, int16_t amount)
  */
 bool getTimerStatus()
 {
-  return flagTimerStatus;
+  return flagTimerStatus; /// Return the timer status (ON/OFF)
 }
 
 /**
@@ -155,7 +156,7 @@ bool getTimerStatus()
  */
 int getTimerSecound()
 {
-  return (webTimer("*", 0) / 1000) % 60;
+  return (webTimer("*", 0) / 1000) % 60;  /// Return the timer seconds left in the timer  
 }
 
 /**
@@ -165,7 +166,7 @@ int getTimerSecound()
  */
 int getTimerMinute()
 {
-  return ((webTimer("*", 0) / 1000) / 60) % 60;
+  return ((webTimer("*", 0) / 1000) / 60) % 60; /// Return the timer minutes left in the timer
 }
 
 /**
@@ -175,7 +176,7 @@ int getTimerMinute()
  */
 int getTimerHour()
 {
-  return ((webTimer("*", 0) / 1000) / 60) / 60;
+  return ((webTimer("*", 0) / 1000) / 60) / 60; /// Return the timer hours left in the timer
 }
 
 /**
@@ -184,7 +185,7 @@ int getTimerHour()
  * @param stat
  */
 void setTimer(bool stat)
-{
+{ /// Set the timer status (ON/OFF)
   if (stat == ON)
   {
     flagTimerStatus = ON;
