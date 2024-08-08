@@ -122,13 +122,13 @@ void destiler()
      * @note V_OUT is used to control the operation of the water outlet valve.
      */
     /// If the water pump is on and the machine is in auto mode or the water pump is on in manual mode and the water level is not at the maximum, turn on the water pump
-    bool BMB = (BMB_FLAG && getIndAuto() || getPumpWeb() && getManualMode() && !getWaterMax()); 
+    bool BMB = (BMB_FLAG && getIndAuto() || getPumpWeb() && getManualMode()) && !getWaterMax(); 
     /// If the water heater resistor is on and the machine is in auto mode or the water heater resistor is on in manual mode and the alarm is not on, turn on the water heater resistor
-    bool RAQ = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getResistorWeb() && getManualMode() && !getAlarm());
+    bool RAQ = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getResistorWeb() && getManualMode()) && !getAlarm();
     /// If the water inlet valve is on and the machine is in auto mode or the water inlet valve is on in manual mode and the alarm is not on, turn on the water inlet valve
-    bool V_IN = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_InWeb() && getManualMode() && !getAlarm());
+    bool V_IN = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_InWeb() && getManualMode()) && !getAlarm();
     /// If the water outlet valve is on and the machine is in auto mode or the water outlet valve is on in manual mode and the alarm is not on, turn on the water outlet valve
-    bool V_OUT = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_OutWeb() && getManualMode() && !getAlarm());
+    bool V_OUT = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_OutWeb() && getManualMode()) && !getAlarm();
 
     /**
      * @brief Set the Pump object to the BMB variable value
