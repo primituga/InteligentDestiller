@@ -1,0 +1,34 @@
+<definition height="20" type="element" hotspot_x="5" width="40" link_type="simple" hotspot_y="11" version="0.90">
+    <uuid uuid="{2822ae20-cb1a-4afb-ad9a-a6d1380fa75f}"/>
+    <names>
+        <name lang="nl">Fase</name>
+        <name lang="hu">F</name>
+        <name lang="ar">مصدر وجه</name>
+        <name lang="es">Fuente fase</name>
+        <name lang="pl">Przewód liniowy</name>
+        <name lang="en">Phase source</name>
+        <name lang="el">Φάση</name>
+        <name lang="fr">Source phase</name>
+        <name lang="it">Sorgente fase</name>
+        <name lang="de">Phase</name>
+        <name lang="cs">Přípojnice L</name>
+        <name lang="ru">Фаза</name>
+        <name lang="pt">Fonte de fase</name>
+    </names>
+    <elementInformations/>
+    <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+    <description>
+        <dynamic_text Valignment="AlignTop" text_width="-1" keep_visual_rotation="false" text_from="ElementInfo" z="1" Halignment="AlignLeft" y="-28" frame="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="1" uuid="{1106885d-6f6b-4cd0-ab32-90868edf2c86}" rotation="0">
+            <text></text>
+            <info_name>label</info_name>
+        </dynamic_text>
+        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x1="5" end1="none" end2="none" length1="1.5" length2="1.5" x2="15" antialias="false" y2="0" y1="0"/>
+        <dynamic_text Valignment="AlignTop" text_width="-1" keep_visual_rotation="false" text_from="ElementInfo" z="2" Halignment="AlignLeft" y="-26.95" frame="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="0" uuid="{296f996e-cdfa-4f1a-bdd5-90abd5ebb7e4}" rotation="0">
+            <text></text>
+            <info_name>label</info_name>
+        </dynamic_text>
+        <text y="2" font="Sans Serif,5,-1,5,50,0,0,0,0,0" color="#000000" x="21" text="5V" rotation="0"/>
+        <terminal name="" y="0" orientation="w" type="Generic" x="0" uuid="{7b21f822-d1cc-418a-b033-36d2146a6b60}"/>
+    </description>
+</definition>

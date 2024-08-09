@@ -1,0 +1,14 @@
+<definition width="520" hotspot_x="260" hotspot_y="40" version="0.90" link_type="simple" height="100" type="element">
+    <uuid uuid="{48e1f7a4-e377-4f7e-a6a3-92c068a463d3}"/>
+    <names>
+        <name lang="de">ESP8266</name>
+        <name lang="fr">ESP8266</name>
+    </names>
+    <elementInformations/>
+    <informations></informations>
+    <description>
+        <rect width="510" style="line-style:normal;line-weight:normal;filling:HTMLYellowYellow;color:black" ry="0" y="-35" height="90" rx="0" antialias="false" x="-255"/>
+        <rect width="510" style="line-style:normal;line-weight:normal;filling:HTMLYellowGold;color:black" ry="0" y="-25" height="70" rx="0" antialias="false" x="-255"/>
+        <rect width="510" style="line-style:normal;line-weight:normal;filling:HTMLYellowYellow;color:black" ry="0" y="-15" height="50" rx="0" antialias="false" x="-255"/>
+    </description>
+</definition>
