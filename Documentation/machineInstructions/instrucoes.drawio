@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-08-08T00:06:54.936Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="IjWLqU8cX-gWVi5J742X" version="24.6.4" type="device" pages="2">
+<mxfile host="Electron" modified="2024-08-08T23:53:54.484Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="VWnTVWDkqRHQLPjoShKN" version="24.6.4" type="device" pages="2">
   <diagram name="Page-1" id="c9db0220-8083-56f3-ca83-edcdcd058819">
-    <mxGraphModel dx="2390" dy="1408" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="#CCCCCC" math="0" shadow="1">
+    <mxGraphModel dx="1434" dy="845" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="827" background="#CCCCCC" math="0" shadow="1">
       <root>
         <mxCell id="0" style=";html=1;" />
         <mxCell id="1" style=";html=1;" parent="0" />
@@ -76,16 +76,16 @@
         <mxCell id="2YnCRiWeuu0UEgC85o-5-16" value="&lt;b&gt;As válvulas ativam se a água estiver entre o nível máximo e mínimo.&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#663300;" parent="2YnCRiWeuu0UEgC85o-5-1" vertex="1">
           <mxGeometry x="33.5" y="110" width="286.5" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="VwVlD6YOIoYpZP_DtELG-2" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" vertex="1" parent="2YnCRiWeuu0UEgC85o-5-1">
+        <mxCell id="VwVlD6YOIoYpZP_DtELG-2" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" parent="2YnCRiWeuu0UEgC85o-5-1" vertex="1">
           <mxGeometry x="7" y="28.5" width="19.5" height="19.5" as="geometry" />
         </mxCell>
-        <mxCell id="VwVlD6YOIoYpZP_DtELG-5" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" vertex="1" parent="2YnCRiWeuu0UEgC85o-5-1">
+        <mxCell id="VwVlD6YOIoYpZP_DtELG-5" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" parent="2YnCRiWeuu0UEgC85o-5-1" vertex="1">
           <mxGeometry x="7" y="143.5" width="19.5" height="19.5" as="geometry" />
         </mxCell>
-        <mxCell id="VwVlD6YOIoYpZP_DtELG-4" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" vertex="1" parent="2YnCRiWeuu0UEgC85o-5-1">
+        <mxCell id="VwVlD6YOIoYpZP_DtELG-4" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" parent="2YnCRiWeuu0UEgC85o-5-1" vertex="1">
           <mxGeometry x="7" y="110" width="19.5" height="19.5" as="geometry" />
         </mxCell>
-        <mxCell id="VwVlD6YOIoYpZP_DtELG-3" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" vertex="1" parent="2YnCRiWeuu0UEgC85o-5-1">
+        <mxCell id="VwVlD6YOIoYpZP_DtELG-3" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Info_2.svg;" parent="2YnCRiWeuu0UEgC85o-5-1" vertex="1">
           <mxGeometry x="7" y="62" width="19.5" height="19.5" as="geometry" />
         </mxCell>
         <mxCell id="V2KpZzOQ1ttUnoX-Q1Wj-6" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.47;dx=23.14;notch=0;rotation=0;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="z9f-o0gOQVocvgUbbKW2-10" vertex="1">
