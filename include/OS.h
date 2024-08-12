@@ -106,6 +106,7 @@ void initPinsInputs();    /// Inicia os inputs
 bool getWaterMax();       /// Retorna estado do sensor de agua de maximo
 bool getWaterMin();       /// Retorna estado do sensor de agua de minimo
 bool getAlarm();          /// Retorna estado do alarme
+bool getAlarmIND();       /// Retorna estado do indicador de alarme
 bool getIndAuto();        /// Retorna estado do modo auto
 bool getAutoModeSW();     /// Retorna estado do interruptor auto
 bool getManualMode();     /// Retorna estado do botao manual

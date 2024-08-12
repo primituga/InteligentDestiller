@@ -78,7 +78,7 @@ void indicatorsManagement()
     ////////////////////////////////////////////////////////////////////////////////////////
     setIndMax(getWaterMax());   /// Set the maximum water level indicator
     setIndMin(getWaterMin());   /// Set the minimum water level indicator
-    setIndAlarm(getAlarm());    /// Set the alarm indicator
+    setIndAlarm(getAlarmIND()); /// Set the alarm indicator
     setIndMan(getManualMode()); /// Set the manual mode indicator
 }
 
@@ -95,12 +95,13 @@ void modeManagement()
     }
     else
     {
-        setIndAuto(OFF); /// Set the auto mode indicator to OFF
+        setIndAuto(OFF);     /// Set the auto mode indicator to OFF
+        setAutoModeWeb(OFF); /// Set the auto mode to OFF in the web interface
     }
 
     /// If the machine is in manual mode, turn off the timer
     if (!getIndAuto())
     {
-        setTimer(OFF);  /// Turn off the timer
+        setTimer(OFF); /// Turn off the timer
     }
 }

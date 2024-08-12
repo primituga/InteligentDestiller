@@ -67,6 +67,7 @@ void setup()
 void loop(void)
 {
 	readInputs();
+	//updateOutputsWeb(); /// Update outputs for the web interface
 	destiler();		/// Destiler function to operate the machine
 	writeOutputs(); /// Update outputs
 }
