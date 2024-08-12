@@ -78,7 +78,7 @@ void indicatorsManagement()
     ////////////////////////////////////////////////////////////////////////////////////////
     setIndMax(getWaterMax());   /// Set the maximum water level indicator
     setIndMin(getWaterMin());   /// Set the minimum water level indicator
-    setIndAlarm(getAlarm());    /// Set the alarm indicator
+    setIndAlarm(getAlarmIND());    /// Set the alarm indicator
     setIndMan(getManualMode()); /// Set the manual mode indicator
 }
 

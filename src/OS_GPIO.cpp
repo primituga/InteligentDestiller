@@ -18,6 +18,8 @@ uint8_t outputVarsImage[9]; /// Output variables image
 const uint8_t outputVarsPINs[] = {PIN_RAQ, PIN_BMB, PIN_VALV_WATER_OUT, PIN_VALV_WATER_IN,
                                   PIN_IND_ALARM, PIN_IND_MIN, PIN_IND_MAX, PIN_IND_AUTO, PIN_IND_MAN}; /// Output variables pins
 
+bool ALARM_STATE = OFF; /// Alarm state
+
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Read ESP32 GPIOs and stores in the image array
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -135,6 +137,19 @@ bool getWaterMin()
  * @return false
  */
 bool getAlarm()
+{
+    return ALARM_STATE;
+}
+
+/**
+ * @brief Get the Alarm State object
+ *
+ * This function returns the state of the alarm.
+ *
+ * @return true
+ * @return false
+ */
+bool getAlarmIND()
 {
     return inputVarsImage[POS_SALARM];
 }
@@ -315,26 +330,29 @@ void setIndMin(bool state)
  *
  * @return void
  */
+
 void setIndAlarm(bool state)
 {
     static bool OLDSTATE; /// Old state of the indicator
     static unsigned long previousTimer = 0;
     unsigned long currentTimer = millis();
 
-    if (state == ON && OLDSTATE == OFF)
+    if (state == ON)
     {
-         if (millis() - previousTimer > ALARM_TIME_ON)
+        ALARM_STATE = ON;
+        if (millis() - previousTimer > ALARM_TIME_ON)
         {
-             outputVarsImage[POS_IND_ALARM] = OFF;
+            outputVarsImage[POS_IND_ALARM] = OFF;
             previousTimer = millis();
         }
-         else if (millis() - previousTimer > ALARM_TIME_OFF)
+        else if (millis() - previousTimer > ALARM_TIME_OFF)
         {
-        outputVarsImage[POS_IND_ALARM] = ON;
+            outputVarsImage[POS_IND_ALARM] = ON;
         }
     }
-    else if (state == OFF && OLDSTATE == ON)
+    else if (state == OFF)
     {
+        ALARM_STATE = OFF;
         outputVarsImage[POS_IND_ALARM] = OFF;
     }
 
