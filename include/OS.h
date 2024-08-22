@@ -42,11 +42,11 @@ extern bool DEBUG; /// Debug mode
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /// Input Pins Definitions
+#define PIN_SW_AUTO 32 /// Botão  de modo auto
+#define PIN_SALARM 25  /// Botão  de modo alarme
 #define PIN_SW_MAN 26  /// Interruptor  de modo manual
 #define PIN_SMIN 27    /// Sensor de nivel agua minimo
 #define PIN_SMAX 14    /// Sensor de nivel agua maximo
-#define PIN_SW_AUTO 32 /// Botão  de modo auto
-#define PIN_SALARM 25  /// Botão  de modo alarme
 
 #define PIN_INPUT_COUNT 5
 #define POS_SW_MAN 0
