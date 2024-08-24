@@ -37,15 +37,14 @@ AsyncWebServer server(80); /// Create a webserver object that listens for HTTP r
  */
 void setup()
 {
-	initPinsInputs();  /// Initiate all pins as inputs
-	initPinsOutputs(); /// Initiate all pins as outputs
-	test_IO();
-	initSerial();		/// Initiate Serial communication (9600 bps)
-	initMultiCore();	/// Initiate MultiCore (Second Core)
-	initFS();			/// Initiate SPIFFS (SPI Flash File System)
-	readInputs();		/// Read inputs for the first time
-	updateOutputsWeb(); /// Update outputs for the web interface
-
+	initPinsInputs();		/// Initiate all pins as inputs
+	initPinsOutputs();		/// Initiate all pins as outputs
+	initSerial();			/// Initiate Serial communication (9600 bps)
+	test_IO();				/// Test IO
+	initMultiCore();		/// Initiate MultiCore (Second Core)
+	initFS();				/// Initiate SPIFFS (SPI Flash File System)
+	readInputs();			/// Read inputs for the first time
+	updateOutputsWeb();		/// Update outputs for the web interface
 	setupRoutes();			/// Setup Routes
 	server.addHandler(&ws); /// Add handler to the server (Websocket)
 }
@@ -67,7 +66,7 @@ void setup()
 void loop(void)
 {
 	readInputs();
-	//updateOutputsWeb(); /// Update outputs for the web interface
+	// updateOutputsWeb(); /// Update outputs for the web interface
 	destiler();		/// Destiler function to operate the machine
 	writeOutputs(); /// Update outputs
 }
