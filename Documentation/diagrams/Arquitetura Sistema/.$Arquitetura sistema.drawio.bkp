@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Página-1" id="SOGBXdCxIRMawFzwVd_m">
+    <mxGraphModel dx="558" dy="993" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="430" width="590" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="530" width="590" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--1" value="Application" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--2" value="Midleware" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--3" value="Operating System" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="530" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="310" width="590" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--7" value="EEPROM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--8" value="GPIO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--9" value="FS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--10" value="MultiCore" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CmBgIdvQ9qwsD9Urgrc--13" value="Wi-Fi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
