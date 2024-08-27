@@ -1,0 +1,31 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Página-1" id="likM_Zx0xi8ce1BpOYYx">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-1" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-2" value="Validar I/Os" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-3" value="Validar MultiCore" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-4" value="Atualizar Inputs da Web" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-5" value="Ler Inputs" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-6" value="Validar FS" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CnbaMy-7QA9IRP3xKi6g-7" value="Validar Rotas para os pedidos da Web" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,7 +1,7 @@
 /**
  * @author Sérgio Carmo
  * @file OS_wifi.cpp
- * @brief Operating System WiFi functions
+ * @brief WiFi file for the MD project (MiddleWare) - WiFi functions and handlers for the MD project
  * @version 1.0
  */
 

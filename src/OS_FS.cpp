@@ -13,9 +13,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * @brief Function to initiate the Serial Terminal
+ * @brief Initialize File System (SPIFFS)
+ * 
+ * This function is responsible for initializing the File System (SPIFFS).
+ * 
+ * @note Initialize SPIFFS
  * 
  * @return void
+ * 
+ * @code 
+ * initFS();
+ * @endcode
+ * 
  */
 void initFS()
 {
