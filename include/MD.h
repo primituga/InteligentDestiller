@@ -108,7 +108,7 @@ void test_IO();
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /// WIFI Functions calls
-#define WIFI_MODE_OPTIONS 3 /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
+#define WIFI_MODE_OPTIONS 1 /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
 bool initWIFI();            /// Inicia o wifi
 String wifiQuality();       /// Retorna a qualidade do wifi
 

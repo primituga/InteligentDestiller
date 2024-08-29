@@ -14,17 +14,9 @@
 
 /// Wifi Libraries
 #include "WiFiManager.h"
-#include "WiFi.h"
-
-/// EEPROM Libraries
-#include "EEPROM.h"
 
 /// Async Libraries
-///#include "AsyncTCP.h"
 #include "ESPAsyncWebServer.h"
-
-/// LittleFS Libraries
-#include "LittleFS.h"
 
 /// SPIFFS Libraries
 #include "SPIFFS.h"
@@ -126,18 +118,5 @@ void setResistor(bool state);      /// Liga/desliga o indicador luminoso da resi
 void setIndAuto(bool state1);      /// Liga/desliga o modo auto
 void writeOutputs();
 void readInputs();
-
-////////////////////////////////////////////////////////////////////////////////////////
-/// EEPROM
-////////////////////////////////////////////////////////////////////////////////////////
-
-/// EEPROM Definitions
-#define eepromTextVariableSize 33 /// the max size of the ssid, password etc. 32+null terminated
-#define eepromBufferSize 200      /// the size of the eeprom buffer
-
-/// EEPROM Functions calls
-void readSettingsFromEEPROM(char *ssid_, char *pass_); /// Read settings from EEPROM
-void saveSettingsToEEPPROM(char *ssid_, char *pass_);  /// Save settings to EEPROM
-byte getStatusFromEeprom();                            /// Get status from EEPROM
 
 #endif

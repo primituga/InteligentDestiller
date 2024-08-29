@@ -37,14 +37,15 @@ AsyncWebServer server(80); /// Create a webserver object that listens for HTTP r
  */
 void setup()
 {
-	initPinsInputs();		/// Initiate all pins as inputs
-	initPinsOutputs();		/// Initiate all pins as outputs
-	initSerial();			/// Initiate Serial communication (9600 bps)
-	test_IO();				/// Test IO
+	initPinsInputs();  /// Initiate all pins as inputs
+	initPinsOutputs(); /// Initiate all pins as outputs
+	initSerial();	   /// Initiate Serial communication (9600 bps)
+	test_IO();			/// Test IO
 	initMultiCore();		/// Initiate MultiCore (Second Core)
 	initFS();				/// Initiate SPIFFS (SPI Flash File System)
 	readInputs();			/// Read inputs for the first time
 	updateOutputsWeb();		/// Update outputs for the web interface
+	initWIFI();				/// Initiate WIFI
 	setupRoutes();			/// Setup Routes
 	server.addHandler(&ws); /// Add handler to the server (Websocket)
 }
@@ -92,6 +93,5 @@ void loop2(void *pvParameters)
 	{
 		ws.cleanupClients(); /// Cleanup clients
 		webTimer("*", 0);	 /// WebTimer function
-		initWIFI();			 /// Initiate WIFI
 	}
 }

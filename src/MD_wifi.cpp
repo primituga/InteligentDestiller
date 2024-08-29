@@ -78,6 +78,7 @@ void connectToWIFI()
 {
   WiFiManager wifiManager;
 
+  server.end(); /// End the server
   wifiManager.setClass("invert");         /// Dark theme
   wifiManager.setConfigPortalTimeout(60); /// Timeout to web server
   wifiManager.setConnectTimeout(20);      /// Timeout to connect
@@ -118,7 +119,7 @@ void connectToWIFI()
  */
 void connectToSoftAP()
 {
-  WiFi.setHostname("Destiler"); /// Set hostname
+  WiFi.setHostname("DestilerSoft"); /// Set hostname
   WiFi.onEvent(OnWiFiEvent);    /// Set event handler for WiFi events
   WiFi.setAutoReconnect(true);  /// Enable auto reconnect
   WiFi.mode(WIFI_MODE_APSTA);   /// Set to Station + Access Point mode
@@ -152,6 +153,7 @@ bool initWIFI()
    *
    * 3 - Both (Connect to local WiFi network and create a local AP)
    */
+
   if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 1)
   {
     sPrintLnStr("WIFI INIT....");
