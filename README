@@ -1,25 +1,35 @@
+![alt text](https://github.com/primisc/InteligentDestiller/blob/main/Documentation/etc/Pictures/20240806_191158.jpg)
 
-This is a project that uses a old analogic destiller machine, that machine got all old parts removed and got installed one ESP32 that controlls all its functions, it have also one web server built-in to controll all the machine. 
+This is a project that uses a old analogic destiller machine, that machine got most of the old parts removed and got installed one ESP32 that controlls all its functions, it have also one web server built-in to controll all the machine. 
+
 The machine have:
 1 water tank, 1 water pump, 1 water heater, 2 valves, 1st to control the water flow to cool the destiller coil, and a 2nd one to control the steam exit, 3 water level sensors, 1 switch to switch between manual and another one switch to toggle automatic mode.
 
 The software run in dualcore, core 0 run the webserver, core 1 run the firmware
+The firmware is responsible to control all the machine functions, like, turn on/off the water pump, turn on/off the water heater, open/close the valves, and also, the firmware send the water level status to the webserver, so the webserver can show the water level status in real time.
 
-O firmware administra o nivel de água, se o reservatório estiver cheio, desliga a bomba, se estiver no minimo, liga a bomba, se estiver em nível de alarme, desliga a resisténcia de aquecimento, e as valvulas, isto é, interrompe o funcionamento normal de funcionamento.
+The webserver is responsible to show the machine status, and also to control the machine, like, turn on/off the water pump, turn on/off the water heater, open/close the valves, and also, the webserver can show the water level status in real time.
 
-O servidor web, comunica 
+The firmware uses the AsyncWebServer to create the webserver, and the WiFiManager to connect to the wifi network.
+To comunicate with the webserver, the firmware uses websockets, so the webserver can send commands to the firmware, like, turn on/off the water pump, turn on/off the water heater, open/close the valves, and also, the firmware send the water level status to the webserver, so the webserver can show the water level status in real time.
+Also uses fetch and promises to get data from the firmware, when webpage is loaded or refreshed so always have the last status of the machine.
+
+The firmware uses the SPIFFS to store the webserver files, like html, css, js, images, etc in the ESP32, so the webserver can serve the files to the client.
+
+The firmware uses WiFiManager to connect to the wifi network, so the user can connect the ESP32 to the wifi network, without the need to hardcode the wifi credentials in the firmware. The user can connect the ESP32 to the wifi network using a smartphone, tablet or computer, and the ESP32 will save the wifi credentials in the EEPROM, so the ESP32 can connect to the wifi network automatically when it is powered on. 
+The firmware also allow so create a softAP, so the user can connect to the ESP32 using a smartphone, tablet or computer, and set the wifi credentials, if the ESP32 is not connected to the wifi network.
+
+The firmware uses the EEPROM to save the wifi credentials, so the ESP32 can connect to the wifi network automatically when it is powered on.
+
+
 ------------------------------------------------
 Libs:
 /// Wifi Libraries
 #include "WiFiManager.h"
-#include "WiFi.h"
-/// EEPROM Libraries
-#include "EEPROM.h"
+
 /// Async Libraries
-#include "AsyncTCP.h"
 #include "ESPAsyncWebServer.h"
-/// LittleFS Libraries
-#include "LittleFS.h"
+
 /// SPIFFS Libraries
 #include "SPIFFS.h"
 
