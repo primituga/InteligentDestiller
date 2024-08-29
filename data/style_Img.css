@@ -1,13 +1,20 @@
 .card {
-    float: right;
+    float: center;
     margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    text-align: center;
 }
 
-.Destiller_img{
+.Destiller_img {
     position: absolute;
     text-align: center;
-    top: 32%;
-    left: 10%;
+    /*top: 32%;
+    left: 10%;*/
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -10%);
 }
 
 .pump {
@@ -16,7 +23,7 @@
     top: 470px;
     left: 826px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .valve1_on {
@@ -25,7 +32,7 @@
     top: 597px;
     left: 370px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .valve1_off {
@@ -34,7 +41,7 @@
     top: 598px;
     left: 356px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .valve2_on {
@@ -43,7 +50,7 @@
     top: 118px;
     left: 470px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .valve2_off {
@@ -52,7 +59,7 @@
     top: 117px;
     left: 456px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .raq {
@@ -61,7 +68,7 @@
     top: 440px;
     left: 655px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .tank {
@@ -78,7 +85,7 @@
     top: 108px;
     left: 719px;
     transform: translate(0%, -50%);
-    cursor:grab;
+    cursor: grab;
 }
 
 .button_Man {

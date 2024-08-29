@@ -1,0 +1,74 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Maquina de Estados Detalhada" id="blRHKFbfdIBPHpfnoRGv">
+    <mxGraphModel dx="819" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-1" value="Inicial" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-2" value="Verifica Nível de Água" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-3" value="BMB ON (Bomba Ligada)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-4" value="BMB OFF (Bomba Desligada)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="200" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-5" value="RAQ ON (Resistência Ligada)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="120" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-6" value="RAQ OFF (Resistência Desligada)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="250" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-7" value="Verifica Modo (Auto/Manual)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="130" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-8" value="Ativa Válvulas (V_IN, V_OUT)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-9" value="Desativa Válvulas (V_IN, V_OUT)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="240" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-1" target="x5IuN4LGu5D-JBdYhpNV-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-11" value="getWaterMin() || getAlarm()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-2" target="x5IuN4LGu5D-JBdYhpNV-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-12" value="getWaterMax()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-2" target="x5IuN4LGu5D-JBdYhpNV-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-13" value="BMB_FLAG = ON" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-3" target="x5IuN4LGu5D-JBdYhpNV-5">
+          <mxGeometry y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-14" value="BMB_FLAG = OFF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-4" target="x5IuN4LGu5D-JBdYhpNV-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-15" value="RAQ_FLAG = ON" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-5" target="x5IuN4LGu5D-JBdYhpNV-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-16" value="RAQ_FLAG = OFF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-6" target="x5IuN4LGu5D-JBdYhpNV-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-17" value="Modo Auto/Manual" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;align=center;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-7" target="x5IuN4LGu5D-JBdYhpNV-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x5IuN4LGu5D-JBdYhpNV-18" value="Alarm ON" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;spacing=2;fontSize=7;" edge="1" parent="1" source="x5IuN4LGu5D-JBdYhpNV-7" target="x5IuN4LGu5D-JBdYhpNV-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
