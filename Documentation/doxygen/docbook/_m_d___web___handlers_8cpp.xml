@@ -1,0 +1,812 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___web___handlers_8cpp" xml:lang="en-US">
+<title>src/MD_Web_Handlers.cpp File Reference</title>
+<indexterm><primary>src/MD_Web_Handlers.cpp</primary></indexterm>
+<para>
+
+<para>Web Handlers for the MD project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_Web_Handlers.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1af81d47970421b46f19156b8c97bb4ee3">handleTimer</link> ()</para>
+
+<para>Definitions. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1af5d26a4c3ed9e05f2b2d04935793447f">handleHour</link> ()</para>
+
+<para>Handle Hour. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1ac109e287eeaaac772d362b9192d186d8">handleMinute</link> ()</para>
+
+<para>Handle Minute. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1a06bda99cade1494aaaafff873d92ded3">handleSecound</link> ()</para>
+
+<para>Handle Secound. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1a6f8cf668f5479d2c408cd6002f30dc94">handleWifiQuality</link> ()</para>
+
+<para>Handlers for Wifi Quality, SSID, TX and IP. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1aa72d97405ad3471e84716689e54bd5ce">handleWifiSSID</link> ()</para>
+
+<para>Handle Wifi SSID. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1ab8ee32b756c8c141be8847349f723395">handleWifiTX</link> ()</para>
+
+<para>Handle Wifi TX. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1aaaba643a4700d7420108e9ec4ced8550">handleWifiIP</link> ()</para>
+
+<para>Handle Wifi IP. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1acd82388b56435489b8b58cf2033a2d99">handleTimeAdjust</link> (const String &amp;adjustment)</para>
+
+<para>Timer Add/Remove Time. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1a72a515762408e37f73ff78c93edeb326">handleTimerControl</link> (const String &amp;control)</para>
+
+<para>Timer Start/Stop/Reset. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1a5f2461b87633880956acaad69733ec8d">handleState</link> (const String &amp;state)</para>
+
+<para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1ade79ba305a284591f94d9eb3c89718bd">handleToggle</link> (const String &amp;toggle)</para>
+
+<para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d___web___handlers_8cpp_1a0c021f9721c3b479757f8e1b40624b6c">processor</link> (const String &amp;var)</para>
+
+<para>Function to handle the HTTP requests for the variables. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Web Handlers for the MD project. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d___web___handlers_8cpp_1af5d26a4c3ed9e05f2b2d04935793447f"/><section>
+    <title>handleHour()</title>
+<indexterm><primary>handleHour</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleHour</secondary></indexterm>
+<para><computeroutput>String handleHour ( )</computeroutput></para><para>
+
+<para>Handle Hour. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the timer hour </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_af5d26a4c3ed9e05f2b2d04935793447f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_af5d26a4c3ed9e05f2b2d04935793447f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1ac109e287eeaaac772d362b9192d186d8"/><section>
+    <title>handleMinute()</title>
+<indexterm><primary>handleMinute</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleMinute</secondary></indexterm>
+<para><computeroutput>String handleMinute ( )</computeroutput></para><para>
+
+<para>Handle Minute. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the timer minute </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_ac109e287eeaaac772d362b9192d186d8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_ac109e287eeaaac772d362b9192d186d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1a06bda99cade1494aaaafff873d92ded3"/><section>
+    <title>handleSecound()</title>
+<indexterm><primary>handleSecound</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleSecound</secondary></indexterm>
+<para><computeroutput>String handleSecound ( )</computeroutput></para><para>
+
+<para>Handle Secound. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the timer secound </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a06bda99cade1494aaaafff873d92ded3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a06bda99cade1494aaaafff873d92ded3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1a5f2461b87633880956acaad69733ec8d"/><section>
+    <title>handleState()</title>
+<indexterm><primary>handleState</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleState</secondary></indexterm>
+<para><computeroutput>String handleState (const String &amp; state)</computeroutput></para><para>
+
+<para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
+</para>
+
+<para>Handle State 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function handles the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) </para>
+
+<para>This function returns the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) </para>
+</note>
+</para>
+
+<para>Get the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)</para>
+
+<para>Get the auto mode indicator state</para>
+
+<para>Get the manual mode indicator state</para>
+
+<para>Get the pump state</para>
+
+<para>Get the water out valve state</para>
+
+<para>Get the resistor state</para>
+
+<para>Get the water in valve state</para>
+
+<para>Get the water max state</para>
+
+<para>Get the water min state</para>
+
+<para>Get the water alarm state</para>
+
+<para>Return nothing if the state is not found</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a5f2461b87633880956acaad69733ec8d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a5f2461b87633880956acaad69733ec8d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1acd82388b56435489b8b58cf2033a2d99"/><section>
+    <title>handleTimeAdjust()</title>
+<indexterm><primary>handleTimeAdjust</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleTimeAdjust</secondary></indexterm>
+<para><computeroutput>String handleTimeAdjust (const String &amp; adjustment)</computeroutput></para><para>
+
+<para>Timer Add/Remove Time. </para>
+</para>
+
+<para>Handle Time Adjust 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>adjustment</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function adjusts the timer </para>
+
+<para>This function returns the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m) </para>
+</note>
+</para>
+
+<para>Adjust the timer based on the adjustment parameter</para>
+
+<para>Add 1 secound to timer</para>
+
+<para>Add 5 secounds to timer</para>
+
+<para>Add 10 secounds to timer</para>
+
+<para>Add 1 minute to timer</para>
+
+<para>Add 5 minutes to timer</para>
+
+<para>Add 10 minutes to timer</para>
+
+<para>Remove 1 secound from timer</para>
+
+<para>Remove 5 secounds from timer</para>
+
+<para>Remove 10 secounds from timer</para>
+
+<para>Remove 1 minute from timer</para>
+
+<para>Remove 5 minutes from timer</para>
+
+<para>Remove 10 minutes from timer</para>
+
+<para>Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_acd82388b56435489b8b58cf2033a2d99_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_acd82388b56435489b8b58cf2033a2d99_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1af81d47970421b46f19156b8c97bb4ee3"/><section>
+    <title>handleTimer()</title>
+<indexterm><primary>handleTimer</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleTimer</secondary></indexterm>
+<para><computeroutput>String handleTimer ( )</computeroutput></para><para>
+
+<para>Definitions. </para>
+</para>
+
+<para>Handlers.</para>
+
+<para>Timer handlers</para>
+
+<para>Handle Timer <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function handles the timer </para>
+
+<para>This function returns the timer in the format HH:MM:SS </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_af81d47970421b46f19156b8c97bb4ee3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_af81d47970421b46f19156b8c97bb4ee3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1a72a515762408e37f73ff78c93edeb326"/><section>
+    <title>handleTimerControl()</title>
+<indexterm><primary>handleTimerControl</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleTimerControl</secondary></indexterm>
+<para><computeroutput>String handleTimerControl (const String &amp; control)</computeroutput></para><para>
+
+<para>Timer Start/Stop/Reset. </para>
+</para>
+
+<para>Handle Timer Control 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>control</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function controls the timer </para>
+
+<para>This function returns the control message for the timer (start, stop, reset) </para>
+</note>
+</para>
+
+<para>Control the timer based on the control parameter (start, stop, reset)</para>
+
+<para>Start the timer</para>
+
+<para>Stop the timer</para>
+
+<para>Reset the timer</para>
+
+<para>Return the control message for the timer (start, stop, reset)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a72a515762408e37f73ff78c93edeb326_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a72a515762408e37f73ff78c93edeb326_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1ade79ba305a284591f94d9eb3c89718bd"/><section>
+    <title>handleToggle()</title>
+<indexterm><primary>handleToggle</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleToggle</secondary></indexterm>
+<para><computeroutput>String handleToggle (const String &amp; toggle)</computeroutput></para><para>
+
+<para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
+</para>
+
+<para>Handle Toggle 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>toggle</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function toggles the variable (auto, pump, waterOut, resistor, waterIn) </para>
+
+<para>This function returns the toggle message for the variable (auto, pump, waterOut, resistor, waterIn) </para>
+</note>
+</para>
+
+<para>Toggle the variable (auto, pump, waterOut, resistor, waterIn)</para>
+
+<para>Toggle the auto mode indicator state</para>
+
+<para>Toggle the pump state</para>
+
+<para>Toggle the water out valve state</para>
+
+<para>Toggle the water in valve state</para>
+
+<para>Toggle the resistor state</para>
+
+<para>Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_ade79ba305a284591f94d9eb3c89718bd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_ade79ba305a284591f94d9eb3c89718bd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1aaaba643a4700d7420108e9ec4ced8550"/><section>
+    <title>handleWifiIP()</title>
+<indexterm><primary>handleWifiIP</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleWifiIP</secondary></indexterm>
+<para><computeroutput>String handleWifiIP ( )</computeroutput></para><para>
+
+<para>Handle Wifi IP. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi IP address </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_aaaba643a4700d7420108e9ec4ced8550_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1a6f8cf668f5479d2c408cd6002f30dc94"/><section>
+    <title>handleWifiQuality()</title>
+<indexterm><primary>handleWifiQuality</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleWifiQuality</secondary></indexterm>
+<para><computeroutput>String handleWifiQuality ( )</computeroutput></para><para>
+
+<para>Handlers for Wifi Quality, SSID, TX and IP. </para>
+</para>
+
+<para>Handle Wifi Quality <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi quality in percentage </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a6f8cf668f5479d2c408cd6002f30dc94_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a6f8cf668f5479d2c408cd6002f30dc94_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1aa72d97405ad3471e84716689e54bd5ce"/><section>
+    <title>handleWifiSSID()</title>
+<indexterm><primary>handleWifiSSID</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleWifiSSID</secondary></indexterm>
+<para><computeroutput>String handleWifiSSID ( )</computeroutput></para><para>
+
+<para>Handle Wifi SSID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi SSID </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_aa72d97405ad3471e84716689e54bd5ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1ab8ee32b756c8c141be8847349f723395"/><section>
+    <title>handleWifiTX()</title>
+<indexterm><primary>handleWifiTX</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>handleWifiTX</secondary></indexterm>
+<para><computeroutput>String handleWifiTX ( )</computeroutput></para><para>
+
+<para>Handle Wifi TX. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi TX power </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_ab8ee32b756c8c141be8847349f723395_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___handlers_8cpp_1a0c021f9721c3b479757f8e1b40624b6c"/><section>
+    <title>processor()</title>
+<indexterm><primary>processor</primary><secondary>MD_Web_Handlers.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_Handlers.cpp</primary><secondary>processor</secondary></indexterm>
+<para><computeroutput>String processor (const String &amp; var)</computeroutput></para><para>
+
+<para>Function to handle the HTTP requests for the variables. </para>
+</para>
+
+<para>Processor 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>var</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function processes the variables for the web server requests </para>
+
+<para>This function is called by the web server handle function (server.on) </para>
+
+<para>This function returns the variable value for the web server request </para>
+</note>
+</para>
+
+<para>Process the variable for the web server request (var) and return the variable value</para>
+
+<para>Timer variable request</para>
+
+<para>Return the timer value in the format HH:MM:SS</para>
+
+<para>WaterMax variable request</para>
+
+<para>Return the waterMax value</para>
+
+<para>WaterMin variable request</para>
+
+<para>Return the waterMin value</para>
+
+<para>WaterAlarm variable request</para>
+
+<para>Return the waterAlarm value</para>
+
+<para>Auto variable request</para>
+
+<para>Return the auto value</para>
+
+<para>Manual variable request</para>
+
+<para>Return the manual value</para>
+
+<para>Pump variable request</para>
+
+<para>Return the pump value</para>
+
+<para>WaterOut variable request</para>
+
+<para>Return the waterOut value</para>
+
+<para>Resistor variable request</para>
+
+<para>Return the resistor value</para>
+
+<para>WaterIn variable request</para>
+
+<para>Return the waterIn value</para>
+
+<para>WifiQuality variable request</para>
+
+<para>Return the wifiQuality value</para>
+
+<para>WifiSSID variable request</para>
+
+<para>Return the wifiSSID value</para>
+
+<para>WifiTX variable request</para>
+
+<para>Return the wifiTX value</para>
+
+<para>WifiIP variable request</para>
+
+<para>Return the wifiIP value</para>
+
+<para>TimerHour variable request</para>
+
+<para>Return the timerHour value</para>
+
+<para>TimerMinute variable request</para>
+
+<para>Return the timerMinute value</para>
+
+<para>TimerSecound variable request</para>
+
+<para>Return the timerSecound value</para>
+
+<para>Return nothing if the variable is not found</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a0c021f9721c3b479757f8e1b40624b6c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___handlers_8cpp_a0c021f9721c3b479757f8e1b40624b6c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

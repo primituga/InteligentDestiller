@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="en-US">
+<title>src Directory Reference</title>
+<indexterm><primary>src Directory Reference</primary></indexterm>
+Directory dependency graph for src:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__a_p___destiler_8cpp">AP_Destiler.cpp</link></para>
+
+<para>Application file for the MD project. </para>
+</listitem>
+            <listitem><para>file <link linkend="__a_p__main_8cpp">AP_main.cpp</link></para>
+
+<para>Main file for the MD project. </para>
+</listitem>
+            <listitem><para>file <link linkend="__a_p___web_8cpp">AP_Web.cpp</link></para>
+
+<para>Web Server functions. </para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d___i_o_8cpp">MD_IO.cpp</link></para>
+
+<para>IO functions for the MD project &lt;This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project.&gt; </para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d___serial_8cpp">MD_Serial.cpp</link></para>
+
+<para>Serial functions for the MD project. </para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d___test___i_os_8cpp">MD_Test_IOs.cpp</link></para>
+
+<para>Test I/Os for the MD project. </para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d___timer_8cpp">MD_Timer.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d___web___handlers_8cpp">MD_Web_Handlers.cpp</link></para>
+
+<para>Web Handlers for the MD project. </para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d___web___i_o___mngmnt_8cpp">MD_Web_IO_Mngmnt.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__m_d__wifi_8cpp">MD_wifi.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__o_s___f_s_8cpp">OS_FS.cpp</link></para>
+
+<para>File System functions. </para>
+</listitem>
+            <listitem><para>file <link linkend="__o_s___g_p_i_o_8cpp">OS_GPIO.cpp</link></para>
+
+<para>GPIO functions. </para>
+</listitem>
+            <listitem><para>file <link linkend="__o_s__multi__core_8cpp">OS_multi_core.cpp</link></para>
+
+<para>Operating System MultiCore functions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

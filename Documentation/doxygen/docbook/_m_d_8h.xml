@@ -1,0 +1,3079 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d_8h" xml:lang="en-US">
+<title>include/MD.h File Reference</title>
+<indexterm><primary>include/MD.h</primary></indexterm>
+<para>
+
+<para>Header file for the MD project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;OS.h&quot;<?linebreak?></programlisting>Include dependency graph for MD.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48">ALARM_TIME_ON</link>&#160;&#160;&#160;600</para>
+
+<para>TIMERS. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38">ALARM_TIME_OFF</link>&#160;&#160;&#160;200</para>
+</listitem>
+            <listitem><para>#define <link linkend="__m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2">WIFI_MODE_OPTIONS</link>&#160;&#160;&#160;1</para>
+
+<para>WIFI SERVICE. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9">sendWiFiQuality</link> ()</para>
+
+<para>MiddleWare Header. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f">toggleAutoMode</link> ()</para>
+
+<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1ae48dc2d309ef711693328c6300ad5e80">toggleIndAuto</link> ()</para>
+
+<para>Toggle the Auto Mode of the Machine. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a747c973d9633421336e8d59a78faf49f">indicatorsManagement</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a27162a64461db61f83b3752bd0b6d125">modeManagement</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a76f121aef723f8209031f700a1cf5a61">updateOutputsWeb</link> ()</para>
+
+<para>Output variables image. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451">toggleAutoModeWeb</link> ()</para>
+
+<para>TOGGLES BLOCK. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc">togglePumpWeb</link> ()</para>
+
+<para>Toggle Pump Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9">toggleValveWaterInWeb</link> ()</para>
+
+<para>Toggle Valve Water In Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3">toggleValveWaterOutWeb</link> ()</para>
+
+<para>Toggle Valve Water Out Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aece7bc529bc15d8753086021a9810637">toggleResistorWeb</link> ()</para>
+
+<para>Toggle Resistor Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955">setAutoModeWeb</link> (bool state)</para>
+
+<para>SETS BLOCK. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6">setPumpWeb</link> (bool state)</para>
+
+<para>Set the Pump object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1abe554b3a794b4000aa2d251a3d63a54f">setValveWaterInWeb</link> (bool state)</para>
+
+<para>Set the Valve Water In object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a922a642ffb3645f0271b481309cdb133">setValveWaterOutWeb</link> (bool state)</para>
+
+<para>Set the Valve Water Out object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1afc81a927862b27a260c9a12ae7773739">setResistorWeb</link> (bool state)</para>
+
+<para>Set the Resistor object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea">getAutoModeWeb</link> ()</para>
+
+<para>GETS BLOCK. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1a47fd66708aa0f427cd949f639cebc0df">getPumpWeb</link> ()</para>
+
+<para>Get the Pump object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac">getValv_Water_InWeb</link> ()</para>
+
+<para>Get the Ind Alarm object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417">getValv_Water_OutWeb</link> ()</para>
+
+<para>Get the Valv Water Out object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280">getResistorWeb</link> ()</para>
+
+<para>Get the Ind Min object. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1af81d47970421b46f19156b8c97bb4ee3">handleTimer</link> ()</para>
+
+<para>Handlers. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f">handleHour</link> ()</para>
+
+<para>Handle Hour. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1ac109e287eeaaac772d362b9192d186d8">handleMinute</link> ()</para>
+
+<para>Handle Minute. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1a06bda99cade1494aaaafff873d92ded3">handleSecound</link> ()</para>
+
+<para>Handle Secound. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94">handleWifiQuality</link> ()</para>
+
+<para>Handlers for Wifi Quality, SSID, TX and IP. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1aa72d97405ad3471e84716689e54bd5ce">handleWifiSSID</link> ()</para>
+
+<para>Handle Wifi SSID. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1ab8ee32b756c8c141be8847349f723395">handleWifiTX</link> ()</para>
+
+<para>Handle Wifi TX. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1aaaba643a4700d7420108e9ec4ced8550">handleWifiIP</link> ()</para>
+
+<para>Handle Wifi IP. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1acd82388b56435489b8b58cf2033a2d99">handleTimeAdjust</link> (const String &amp;adjustment)</para>
+
+<para>Timer Add/Remove Time. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1a72a515762408e37f73ff78c93edeb326">handleTimerControl</link> (const String &amp;control)</para>
+
+<para>Timer Start/Stop/Reset. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1a5f2461b87633880956acaad69733ec8d">handleState</link> (const String &amp;state)</para>
+
+<para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1ade79ba305a284591f94d9eb3c89718bd">handleToggle</link> (const String &amp;toggle)</para>
+
+<para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c">processor</link> (const String &amp;var)</para>
+
+<para>Function to handle the HTTP requests for the variables. </para>
+</listitem>
+            <listitem><para>long <link linkend="__m_d_8h_1a504723789792b242f59e8f9adfb48009">webTimer</link> (String op, int16_t amount)</para>
+
+<para>Timer Functions calls. </para>
+</listitem>
+            <listitem><para>int <link linkend="__m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354">getTimerSecound</link> ()</para>
+
+<para>Timer for web operations. </para>
+</listitem>
+            <listitem><para>int <link linkend="__m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4">getTimerMinute</link> ()</para>
+
+<para>Get timer secound. </para>
+</listitem>
+            <listitem><para>int <link linkend="__m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68">getTimerHour</link> ()</para>
+
+<para>Get timer minute. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1aa9493843bba040c07f9f66300059268a">getTimerStatus</link> ()</para>
+
+<para>Get timer hour. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0">add1s</link> ()</para>
+
+<para>Get timer status. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aa323da979d7e0bdd7639b1932d401150">add5s</link> ()</para>
+
+<para>Add 1 secound to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aecf5a85e72e116087f5917d708e37f64">add10s</link> ()</para>
+
+<para>Add 5 secounds to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a4e34974421187d65e1cb2db63585549d">add1m</link> ()</para>
+
+<para>Add 10 secounds to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a10e275a2b4beec90555c95286db80a6a">add5m</link> ()</para>
+
+<para>Add 1 minute to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89">add10m</link> ()</para>
+
+<para>Add 5 minutes to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a82bc62194a206899dfa2b287b9d16236">rem1s</link> ()</para>
+
+<para>Add 10 minutes to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a7e996a9f3af638141257662a8f931e11">rem5s</link> ()</para>
+
+<para>Remove 1 secound from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c">rem10s</link> ()</para>
+
+<para>Remove 5 secounds from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66">rem1m</link> ()</para>
+
+<para>Remove 10 secounds from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e">rem5m</link> ()</para>
+
+<para>Remove 1 minute from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1afde4bd8c891772121c1bee27077ab395">rem10m</link> ()</para>
+
+<para>Remove 5 minutes from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1ad43a02209687d9c1e04dddd167f32c45">resetTimer</link> ()</para>
+
+<para>Remove 10 minutes from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1">setTimer</link> (bool stat)</para>
+
+<para>Reset timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a2531a428197475f184bd61c0b412396a">initSerial</link> ()</para>
+
+<para>Set timer status. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a4ca51e07e88692392bd382ee685505d0">sPrint</link> (char *abc)</para>
+
+<para>Inicia a serial. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515">sPrintLn</link> (char *abc)</para>
+
+<para>Print string. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1ac26aedfdce8cea151106030a2ae286b9">sPrintStr</link> (String abc)</para>
+
+<para>Print string with new line. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e">sPrintNbr</link> (int nbr)</para>
+
+<para>Print string. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1aaaf82364eff15ff055f45914b62051ab">sPrintLnStr</link> (String abc)</para>
+
+<para>Print number. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1ae8ac89f250af24dadb79c7f683c544e0">sPrintLnNbr</link> (int nbr)</para>
+
+<para>Print string with new line. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1">test_IO</link> ()</para>
+
+<para>Print number with new line. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744">initWIFI</link> ()</para>
+
+<para>Initiate WiFi. </para>
+</listitem>
+            <listitem><para>String <link linkend="__m_d_8h_1abb46cda72435678d0ea2a5881f4349e7">wifiQuality</link> ()</para>
+
+<para>Inicia o wifi. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the MD project. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38"/><section>
+    <title>ALARM_TIME_OFF</title>
+<indexterm><primary>ALARM_TIME_OFF</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>ALARM_TIME_OFF</secondary></indexterm>
+<para><computeroutput>#define ALARM_TIME_OFF&#160;&#160;&#160;200</computeroutput></para></section>
+<anchor xml:id="__m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48"/><section>
+    <title>ALARM_TIME_ON</title>
+<indexterm><primary>ALARM_TIME_ON</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>ALARM_TIME_ON</secondary></indexterm>
+<para><computeroutput>#define ALARM_TIME_ON&#160;&#160;&#160;600</computeroutput></para><para>
+
+<para>TIMERS. </para>
+</para>
+
+<para>Defining timers for the alarm indicator blinking </para>
+</section>
+<anchor xml:id="__m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2"/><section>
+    <title>WIFI_MODE_OPTIONS</title>
+<indexterm><primary>WIFI_MODE_OPTIONS</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>WIFI_MODE_OPTIONS</secondary></indexterm>
+<para><computeroutput>#define WIFI_MODE_OPTIONS&#160;&#160;&#160;1</computeroutput></para><para>
+
+<para>WIFI SERVICE. </para>
+</para>
+
+<para>WIFI Functions calls </para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89"/><section>
+    <title>add10m()</title>
+<indexterm><primary>add10m</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>add10m</secondary></indexterm>
+<para><computeroutput>void add10m ( )</computeroutput></para><para>
+
+<para>Add 5 minutes to timer. </para>
+</para>
+
+<para>Add 5 minutes to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a2345c47ec0c5b7a61a02281c2174df89_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a2345c47ec0c5b7a61a02281c2174df89_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aecf5a85e72e116087f5917d708e37f64"/><section>
+    <title>add10s()</title>
+<indexterm><primary>add10s</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>add10s</secondary></indexterm>
+<para><computeroutput>void add10s ( )</computeroutput></para><para>
+
+<para>Add 5 secounds to timer. </para>
+</para>
+
+<para>Add 5 secounds to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aecf5a85e72e116087f5917d708e37f64_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aecf5a85e72e116087f5917d708e37f64_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a4e34974421187d65e1cb2db63585549d"/><section>
+    <title>add1m()</title>
+<indexterm><primary>add1m</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>add1m</secondary></indexterm>
+<para><computeroutput>void add1m ( )</computeroutput></para><para>
+
+<para>Add 10 secounds to timer. </para>
+</para>
+
+<para>Add 10 secounds to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a4e34974421187d65e1cb2db63585549d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a4e34974421187d65e1cb2db63585549d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0"/><section>
+    <title>add1s()</title>
+<indexterm><primary>add1s</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>add1s</secondary></indexterm>
+<para><computeroutput>void add1s ( )</computeroutput></para><para>
+
+<para>Get timer status. </para>
+</para>
+
+<para>Get timer status. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a4205a2b9aa1216af70d0e72d139508a0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a4205a2b9aa1216af70d0e72d139508a0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a10e275a2b4beec90555c95286db80a6a"/><section>
+    <title>add5m()</title>
+<indexterm><primary>add5m</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>add5m</secondary></indexterm>
+<para><computeroutput>void add5m ( )</computeroutput></para><para>
+
+<para>Add 1 minute to timer. </para>
+</para>
+
+<para>Add 1 minute to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a10e275a2b4beec90555c95286db80a6a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a10e275a2b4beec90555c95286db80a6a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aa323da979d7e0bdd7639b1932d401150"/><section>
+    <title>add5s()</title>
+<indexterm><primary>add5s</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>add5s</secondary></indexterm>
+<para><computeroutput>void add5s ( )</computeroutput></para><para>
+
+<para>Add 1 secound to timer. </para>
+</para>
+
+<para>Add 1 secound to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa323da979d7e0bdd7639b1932d401150_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa323da979d7e0bdd7639b1932d401150_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea"/><section>
+    <title>getAutoModeWeb()</title>
+<indexterm><primary>getAutoModeWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getAutoModeWeb</secondary></indexterm>
+<para><computeroutput>bool getAutoModeWeb ( )</computeroutput></para><para>
+
+<para>GETS BLOCK. </para>
+</para>
+
+<para>Get the Ind Max object</para>
+
+<para>This function returns the state of the max indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a47a030b4b82d5d1b1a73e1c2dfdc36ea_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a47fd66708aa0f427cd949f639cebc0df"/><section>
+    <title>getPumpWeb()</title>
+<indexterm><primary>getPumpWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getPumpWeb</secondary></indexterm>
+<para><computeroutput>bool getPumpWeb ( )</computeroutput></para><para>
+
+<para>Get the Pump object. </para>
+</para>
+
+<para>This function returns the state of the water pump.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a47fd66708aa0f427cd949f639cebc0df_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280"/><section>
+    <title>getResistorWeb()</title>
+<indexterm><primary>getResistorWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getResistorWeb</secondary></indexterm>
+<para><computeroutput>bool getResistorWeb ( )</computeroutput></para><para>
+
+<para>Get the Ind Min object. </para>
+</para>
+
+<para>This function returns the state of the min indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a12a9a8e5c80ace6e8643360f7603c280_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68"/><section>
+    <title>getTimerHour()</title>
+<indexterm><primary>getTimerHour</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getTimerHour</secondary></indexterm>
+<para><computeroutput>int getTimerHour ( )</computeroutput></para><para>
+
+<para>Get timer minute. </para>
+</para>
+
+<para>Get timer minute.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+
+<para>Return the timer hours left in the timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a7497ed4b5f459145ba576e35a34b2f68_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a7497ed4b5f459145ba576e35a34b2f68_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4"/><section>
+    <title>getTimerMinute()</title>
+<indexterm><primary>getTimerMinute</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getTimerMinute</secondary></indexterm>
+<para><computeroutput>int getTimerMinute ( )</computeroutput></para><para>
+
+<para>Get timer secound. </para>
+</para>
+
+<para>Get timer secound.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+
+<para>Return the timer minutes left in the timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ae8ad20dbd759f4fb98dabba7876428f4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ae8ad20dbd759f4fb98dabba7876428f4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354"/><section>
+    <title>getTimerSecound()</title>
+<indexterm><primary>getTimerSecound</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getTimerSecound</secondary></indexterm>
+<para><computeroutput>int getTimerSecound ( )</computeroutput></para><para>
+
+<para>Timer for web operations. </para>
+</para>
+
+<para>Timer for web operations.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+
+<para>Return the timer seconds left in the timer <?linebreak?></para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a71f3ffe6a2e0fca30bca87a87fc92354_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a71f3ffe6a2e0fca30bca87a87fc92354_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aa9493843bba040c07f9f66300059268a"/><section>
+    <title>getTimerStatus()</title>
+<indexterm><primary>getTimerStatus</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getTimerStatus</secondary></indexterm>
+<para><computeroutput>bool getTimerStatus ( )</computeroutput></para><para>
+
+<para>Get timer hour. </para>
+</para>
+
+<para>Get timer hour.</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called by the processor function in AP_Destiller.cpp </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+
+<para>Return the timer status (ON/OFF)</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa9493843bba040c07f9f66300059268a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac"/><section>
+    <title>getValv_Water_InWeb()</title>
+<indexterm><primary>getValv_Water_InWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getValv_Water_InWeb</secondary></indexterm>
+<para><computeroutput>bool getValv_Water_InWeb ( )</computeroutput></para><para>
+
+<para>Get the Ind Alarm object. </para>
+</para>
+
+<para>This function returns the state of the alarm indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a99fa4a4b0ba168d3daeb40ee65452bac_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417"/><section>
+    <title>getValv_Water_OutWeb()</title>
+<indexterm><primary>getValv_Water_OutWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>getValv_Water_OutWeb</secondary></indexterm>
+<para><computeroutput>bool getValv_Water_OutWeb ( )</computeroutput></para><para>
+
+<para>Get the Valv Water Out object. </para>
+</para>
+
+<para>This function returns the state of the water out valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a1f7f13061ad706f397dd2ddfb581d417_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f"/><section>
+    <title>handleHour()</title>
+<indexterm><primary>handleHour</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleHour</secondary></indexterm>
+<para><computeroutput>String handleHour ( )</computeroutput></para><para>
+
+<para>Handle Hour. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the timer hour </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_af5d26a4c3ed9e05f2b2d04935793447f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_af5d26a4c3ed9e05f2b2d04935793447f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ac109e287eeaaac772d362b9192d186d8"/><section>
+    <title>handleMinute()</title>
+<indexterm><primary>handleMinute</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleMinute</secondary></indexterm>
+<para><computeroutput>String handleMinute ( )</computeroutput></para><para>
+
+<para>Handle Minute. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the timer minute </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ac109e287eeaaac772d362b9192d186d8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ac109e287eeaaac772d362b9192d186d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a06bda99cade1494aaaafff873d92ded3"/><section>
+    <title>handleSecound()</title>
+<indexterm><primary>handleSecound</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleSecound</secondary></indexterm>
+<para><computeroutput>String handleSecound ( )</computeroutput></para><para>
+
+<para>Handle Secound. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the timer secound </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a06bda99cade1494aaaafff873d92ded3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a06bda99cade1494aaaafff873d92ded3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a5f2461b87633880956acaad69733ec8d"/><section>
+    <title>handleState()</title>
+<indexterm><primary>handleState</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleState</secondary></indexterm>
+<para><computeroutput>String handleState (const String &amp; state)</computeroutput></para><para>
+
+<para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
+</para>
+
+<para>Handle State 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function handles the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) </para>
+
+<para>This function returns the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) </para>
+</note>
+</para>
+
+<para>Get the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)</para>
+
+<para>Get the auto mode indicator state</para>
+
+<para>Get the manual mode indicator state</para>
+
+<para>Get the pump state</para>
+
+<para>Get the water out valve state</para>
+
+<para>Get the resistor state</para>
+
+<para>Get the water in valve state</para>
+
+<para>Get the water max state</para>
+
+<para>Get the water min state</para>
+
+<para>Get the water alarm state</para>
+
+<para>Return nothing if the state is not found</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a5f2461b87633880956acaad69733ec8d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a5f2461b87633880956acaad69733ec8d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1acd82388b56435489b8b58cf2033a2d99"/><section>
+    <title>handleTimeAdjust()</title>
+<indexterm><primary>handleTimeAdjust</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleTimeAdjust</secondary></indexterm>
+<para><computeroutput>String handleTimeAdjust (const String &amp; adjustment)</computeroutput></para><para>
+
+<para>Timer Add/Remove Time. </para>
+</para>
+
+<para>Handle Time Adjust 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>adjustment</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function adjusts the timer </para>
+
+<para>This function returns the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m) </para>
+</note>
+</para>
+
+<para>Adjust the timer based on the adjustment parameter</para>
+
+<para>Add 1 secound to timer</para>
+
+<para>Add 5 secounds to timer</para>
+
+<para>Add 10 secounds to timer</para>
+
+<para>Add 1 minute to timer</para>
+
+<para>Add 5 minutes to timer</para>
+
+<para>Add 10 minutes to timer</para>
+
+<para>Remove 1 secound from timer</para>
+
+<para>Remove 5 secounds from timer</para>
+
+<para>Remove 10 secounds from timer</para>
+
+<para>Remove 1 minute from timer</para>
+
+<para>Remove 5 minutes from timer</para>
+
+<para>Remove 10 minutes from timer</para>
+
+<para>Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_acd82388b56435489b8b58cf2033a2d99_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_acd82388b56435489b8b58cf2033a2d99_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1af81d47970421b46f19156b8c97bb4ee3"/><section>
+    <title>handleTimer()</title>
+<indexterm><primary>handleTimer</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleTimer</secondary></indexterm>
+<para><computeroutput>String handleTimer ( )</computeroutput></para><para>
+
+<para>Handlers. </para>
+</para>
+
+<para>Handlers.</para>
+
+<para>Timer handlers</para>
+
+<para>Handle Timer <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function handles the timer </para>
+
+<para>This function returns the timer in the format HH:MM:SS </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_af81d47970421b46f19156b8c97bb4ee3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_af81d47970421b46f19156b8c97bb4ee3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a72a515762408e37f73ff78c93edeb326"/><section>
+    <title>handleTimerControl()</title>
+<indexterm><primary>handleTimerControl</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleTimerControl</secondary></indexterm>
+<para><computeroutput>String handleTimerControl (const String &amp; control)</computeroutput></para><para>
+
+<para>Timer Start/Stop/Reset. </para>
+</para>
+
+<para>Handle Timer Control 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>control</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function controls the timer </para>
+
+<para>This function returns the control message for the timer (start, stop, reset) </para>
+</note>
+</para>
+
+<para>Control the timer based on the control parameter (start, stop, reset)</para>
+
+<para>Start the timer</para>
+
+<para>Stop the timer</para>
+
+<para>Reset the timer</para>
+
+<para>Return the control message for the timer (start, stop, reset)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a72a515762408e37f73ff78c93edeb326_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a72a515762408e37f73ff78c93edeb326_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ade79ba305a284591f94d9eb3c89718bd"/><section>
+    <title>handleToggle()</title>
+<indexterm><primary>handleToggle</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleToggle</secondary></indexterm>
+<para><computeroutput>String handleToggle (const String &amp; toggle)</computeroutput></para><para>
+
+<para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
+</para>
+
+<para>Handle Toggle 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>toggle</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function toggles the variable (auto, pump, waterOut, resistor, waterIn) </para>
+
+<para>This function returns the toggle message for the variable (auto, pump, waterOut, resistor, waterIn) </para>
+</note>
+</para>
+
+<para>Toggle the variable (auto, pump, waterOut, resistor, waterIn)</para>
+
+<para>Toggle the auto mode indicator state</para>
+
+<para>Toggle the pump state</para>
+
+<para>Toggle the water out valve state</para>
+
+<para>Toggle the water in valve state</para>
+
+<para>Toggle the resistor state</para>
+
+<para>Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ade79ba305a284591f94d9eb3c89718bd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ade79ba305a284591f94d9eb3c89718bd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aaaba643a4700d7420108e9ec4ced8550"/><section>
+    <title>handleWifiIP()</title>
+<indexterm><primary>handleWifiIP</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleWifiIP</secondary></indexterm>
+<para><computeroutput>String handleWifiIP ( )</computeroutput></para><para>
+
+<para>Handle Wifi IP. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi IP address </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aaaba643a4700d7420108e9ec4ced8550_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94"/><section>
+    <title>handleWifiQuality()</title>
+<indexterm><primary>handleWifiQuality</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleWifiQuality</secondary></indexterm>
+<para><computeroutput>String handleWifiQuality ( )</computeroutput></para><para>
+
+<para>Handlers for Wifi Quality, SSID, TX and IP. </para>
+</para>
+
+<para>Handle Wifi Quality <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi quality in percentage </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a6f8cf668f5479d2c408cd6002f30dc94_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a6f8cf668f5479d2c408cd6002f30dc94_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aa72d97405ad3471e84716689e54bd5ce"/><section>
+    <title>handleWifiSSID()</title>
+<indexterm><primary>handleWifiSSID</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleWifiSSID</secondary></indexterm>
+<para><computeroutput>String handleWifiSSID ( )</computeroutput></para><para>
+
+<para>Handle Wifi SSID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi SSID </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa72d97405ad3471e84716689e54bd5ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ab8ee32b756c8c141be8847349f723395"/><section>
+    <title>handleWifiTX()</title>
+<indexterm><primary>handleWifiTX</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>handleWifiTX</secondary></indexterm>
+<para><computeroutput>String handleWifiTX ( )</computeroutput></para><para>
+
+<para>Handle Wifi TX. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi TX power </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ab8ee32b756c8c141be8847349f723395_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a747c973d9633421336e8d59a78faf49f"/><section>
+    <title>indicatorsManagement()</title>
+<indexterm><primary>indicatorsManagement</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>indicatorsManagement</secondary></indexterm>
+<para><computeroutput>void indicatorsManagement ( )</computeroutput></para>
+<para>INDICATORS BLOCK</para>
+
+<para>Set the maximum water level indicator</para>
+
+<para>Set the minimum water level indicator</para>
+
+<para>Set the alarm indicator</para>
+
+<para>Set the manual mode indicator</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a747c973d9633421336e8d59a78faf49f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a747c973d9633421336e8d59a78faf49f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a2531a428197475f184bd61c0b412396a"/><section>
+    <title>initSerial()</title>
+<indexterm><primary>initSerial</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>initSerial</secondary></indexterm>
+<para><computeroutput>void initSerial ( )</computeroutput></para><para>
+
+<para>Set timer status. </para>
+</para>
+
+<para>SERIAL Serial Functions calls</para>
+
+<para>Set timer status.</para>
+
+<para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
+
+<para><note><title>Note</title>
+
+<para>This function is used to initialize the Serial Communications with the default baud rate of 9600 bps </para>
+
+<para>This function is called in the <link linkend="__a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d">setup()</link> function of the main program </para>
+
+<para>This function is used to print the initial message to the Serial Terminal </para>
+</note>
+</para>
+
+<para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a2531a428197475f184bd61c0b412396a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a2531a428197475f184bd61c0b412396a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744"/><section>
+    <title>initWIFI()</title>
+<indexterm><primary>initWIFI</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>initWIFI</secondary></indexterm>
+<para><computeroutput>bool initWIFI ( )</computeroutput></para><para>
+
+<para>Initiate WiFi. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>bool </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function initiates the WiFi connection </para>
+</note>
+</para>
+
+<para>SoftAP flag to create a Soft Access Point only once</para>
+
+<para>WIFI_MODE_OPTIONS</para>
+
+<para>1 - Connect to local WiFi network only</para>
+
+<para>2 - Create a local AP (SoftAP)</para>
+
+<para>3 - Both (Connect to local WiFi network and create a local AP)</para>
+
+<para>Initiate WiFi</para>
+
+<para>Initiate WiFi in AP mode only</para>
+
+<para>Initiate WiFi</para>
+
+<para>Initiate WiFi in AP mode</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a6a4f6edd72eb1d80a65dea86d761f744_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a6a4f6edd72eb1d80a65dea86d761f744_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a27162a64461db61f83b3752bd0b6d125"/><section>
+    <title>modeManagement()</title>
+<indexterm><primary>modeManagement</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>modeManagement</secondary></indexterm>
+<para><computeroutput>void modeManagement ( )</computeroutput></para>
+<para>MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator</para>
+
+<para>Toggle the auto mode</para>
+
+<para>Set the auto mode indicator to the web value of the auto mode</para>
+
+<para>Set the auto mode indicator to OFF</para>
+
+<para>Set the auto mode to OFF in the web interface</para>
+
+<para>If the machine is in manual mode, turn off the timer</para>
+
+<para>Turn off the timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a27162a64461db61f83b3752bd0b6d125_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a27162a64461db61f83b3752bd0b6d125_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c"/><section>
+    <title>processor()</title>
+<indexterm><primary>processor</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>processor</secondary></indexterm>
+<para><computeroutput>String processor (const String &amp; var)</computeroutput></para><para>
+
+<para>Function to handle the HTTP requests for the variables. </para>
+</para>
+
+<para>Processor 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>var</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function processes the variables for the web server requests </para>
+
+<para>This function is called by the web server handle function (server.on) </para>
+
+<para>This function returns the variable value for the web server request </para>
+</note>
+</para>
+
+<para>Process the variable for the web server request (var) and return the variable value</para>
+
+<para>Timer variable request</para>
+
+<para>Return the timer value in the format HH:MM:SS</para>
+
+<para>WaterMax variable request</para>
+
+<para>Return the waterMax value</para>
+
+<para>WaterMin variable request</para>
+
+<para>Return the waterMin value</para>
+
+<para>WaterAlarm variable request</para>
+
+<para>Return the waterAlarm value</para>
+
+<para>Auto variable request</para>
+
+<para>Return the auto value</para>
+
+<para>Manual variable request</para>
+
+<para>Return the manual value</para>
+
+<para>Pump variable request</para>
+
+<para>Return the pump value</para>
+
+<para>WaterOut variable request</para>
+
+<para>Return the waterOut value</para>
+
+<para>Resistor variable request</para>
+
+<para>Return the resistor value</para>
+
+<para>WaterIn variable request</para>
+
+<para>Return the waterIn value</para>
+
+<para>WifiQuality variable request</para>
+
+<para>Return the wifiQuality value</para>
+
+<para>WifiSSID variable request</para>
+
+<para>Return the wifiSSID value</para>
+
+<para>WifiTX variable request</para>
+
+<para>Return the wifiTX value</para>
+
+<para>WifiIP variable request</para>
+
+<para>Return the wifiIP value</para>
+
+<para>TimerHour variable request</para>
+
+<para>Return the timerHour value</para>
+
+<para>TimerMinute variable request</para>
+
+<para>Return the timerMinute value</para>
+
+<para>TimerSecound variable request</para>
+
+<para>Return the timerSecound value</para>
+
+<para>Return nothing if the variable is not found</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a0c021f9721c3b479757f8e1b40624b6c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a0c021f9721c3b479757f8e1b40624b6c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1afde4bd8c891772121c1bee27077ab395"/><section>
+    <title>rem10m()</title>
+<indexterm><primary>rem10m</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>rem10m</secondary></indexterm>
+<para><computeroutput>void rem10m ( )</computeroutput></para><para>
+
+<para>Remove 5 minutes from timer. </para>
+</para>
+
+<para>Remove 5 minutes from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_afde4bd8c891772121c1bee27077ab395_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_afde4bd8c891772121c1bee27077ab395_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c"/><section>
+    <title>rem10s()</title>
+<indexterm><primary>rem10s</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>rem10s</secondary></indexterm>
+<para><computeroutput>void rem10s ( )</computeroutput></para><para>
+
+<para>Remove 5 secounds from timer. </para>
+</para>
+
+<para>Remove 5 secounds from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aab03ff01ea9b512f5470cd80bee1025c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aab03ff01ea9b512f5470cd80bee1025c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66"/><section>
+    <title>rem1m()</title>
+<indexterm><primary>rem1m</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>rem1m</secondary></indexterm>
+<para><computeroutput>void rem1m ( )</computeroutput></para><para>
+
+<para>Remove 10 secounds from timer. </para>
+</para>
+
+<para>Remove 10 secounds from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a1d544cbb8a4f76ecae3455d08961fa66_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a1d544cbb8a4f76ecae3455d08961fa66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a82bc62194a206899dfa2b287b9d16236"/><section>
+    <title>rem1s()</title>
+<indexterm><primary>rem1s</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>rem1s</secondary></indexterm>
+<para><computeroutput>void rem1s ( )</computeroutput></para><para>
+
+<para>Add 10 minutes to timer. </para>
+</para>
+
+<para>Add 10 minutes to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a82bc62194a206899dfa2b287b9d16236_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a82bc62194a206899dfa2b287b9d16236_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e"/><section>
+    <title>rem5m()</title>
+<indexterm><primary>rem5m</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>rem5m</secondary></indexterm>
+<para><computeroutput>void rem5m ( )</computeroutput></para><para>
+
+<para>Remove 1 minute from timer. </para>
+</para>
+
+<para>Remove 1 minute from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a6dd7da3e0329e60af93c3c96301fb81e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a6dd7da3e0329e60af93c3c96301fb81e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a7e996a9f3af638141257662a8f931e11"/><section>
+    <title>rem5s()</title>
+<indexterm><primary>rem5s</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>rem5s</secondary></indexterm>
+<para><computeroutput>void rem5s ( )</computeroutput></para><para>
+
+<para>Remove 1 secound from timer. </para>
+</para>
+
+<para>Remove 1 secound from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a7e996a9f3af638141257662a8f931e11_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a7e996a9f3af638141257662a8f931e11_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ad43a02209687d9c1e04dddd167f32c45"/><section>
+    <title>resetTimer()</title>
+<indexterm><primary>resetTimer</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>resetTimer</secondary></indexterm>
+<para><computeroutput>void resetTimer ( )</computeroutput></para><para>
+
+<para>Remove 10 minutes from timer. </para>
+</para>
+
+<para>Remove 10 minutes from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ad43a02209687d9c1e04dddd167f32c45_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ad43a02209687d9c1e04dddd167f32c45_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9"/><section>
+    <title>sendWiFiQuality()</title>
+<indexterm><primary>sendWiFiQuality</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sendWiFiQuality</secondary></indexterm>
+<para><computeroutput>void sendWiFiQuality ( )</computeroutput></para><para>
+
+<para>MiddleWare Header. </para>
+</para>
+
+<para>Function prototypes </para>
+</section>
+<anchor xml:id="__m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955"/><section>
+    <title>setAutoModeWeb()</title>
+<indexterm><primary>setAutoModeWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>setAutoModeWeb</secondary></indexterm>
+<para><computeroutput>void setAutoModeWeb (bool state)</computeroutput></para><para>
+
+<para>SETS BLOCK. </para>
+</para>
+
+<para>Set the Auto Mode object</para>
+
+<para>This function sets the state of the auto mode.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the auto indicator to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the auto indicator to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a4f59623372f8c8c8d704f0f004f7d955_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6"/><section>
+    <title>setPumpWeb()</title>
+<indexterm><primary>setPumpWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>setPumpWeb</secondary></indexterm>
+<para><computeroutput>void setPumpWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Pump object. </para>
+</para>
+
+<para>This function sets the state of the pump.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the pump to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the pump to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a79d7f2ee79816b8a1c7d71f4887df8c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1afc81a927862b27a260c9a12ae7773739"/><section>
+    <title>setResistorWeb()</title>
+<indexterm><primary>setResistorWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>setResistorWeb</secondary></indexterm>
+<para><computeroutput>void setResistorWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Resistor object. </para>
+</para>
+
+<para>This function sets the state of the resistor.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the resistor to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the resistor to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_afc81a927862b27a260c9a12ae7773739_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1"/><section>
+    <title>setTimer()</title>
+<indexterm><primary>setTimer</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>setTimer</secondary></indexterm>
+<para><computeroutput>void setTimer (bool stat)</computeroutput></para><para>
+
+<para>Reset timer. </para>
+</para>
+
+<para>Reset timer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>stat</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>Set the timer status (ON/OFF)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a75d67ecc1e985e54d2701c06a6aaa3a1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a75d67ecc1e985e54d2701c06a6aaa3a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1abe554b3a794b4000aa2d251a3d63a54f"/><section>
+    <title>setValveWaterInWeb()</title>
+<indexterm><primary>setValveWaterInWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>setValveWaterInWeb</secondary></indexterm>
+<para><computeroutput>void setValveWaterInWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Valve Water In object. </para>
+</para>
+
+<para>This function sets the state of the water in valve.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the water in valve to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the water in valve to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_abe554b3a794b4000aa2d251a3d63a54f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a922a642ffb3645f0271b481309cdb133"/><section>
+    <title>setValveWaterOutWeb()</title>
+<indexterm><primary>setValveWaterOutWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>setValveWaterOutWeb</secondary></indexterm>
+<para><computeroutput>void setValveWaterOutWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Valve Water Out object. </para>
+</para>
+
+<para>This function sets the state of the water out valve.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the water out valve to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the water out valve to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a922a642ffb3645f0271b481309cdb133_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a4ca51e07e88692392bd382ee685505d0"/><section>
+    <title>sPrint()</title>
+<indexterm><primary>sPrint</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sPrint</secondary></indexterm>
+<para><computeroutput>void sPrint (char * abc)</computeroutput></para><para>
+
+<para>Inicia a serial. </para>
+</para>
+
+<para>Inicia a serial.</para>
+
+<para>Print a string to the Serial Terminal 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with no line break </para>
+</note>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515"/><section>
+    <title>sPrintLn()</title>
+<indexterm><primary>sPrintLn</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sPrintLn</secondary></indexterm>
+<para><computeroutput>void sPrintLn (char * abc)</computeroutput></para><para>
+
+<para>Print string. </para>
+</para>
+
+<para>Print string.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with a line break </para>
+</note>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ae8ac89f250af24dadb79c7f683c544e0"/><section>
+    <title>sPrintLnNbr()</title>
+<indexterm><primary>sPrintLnNbr</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sPrintLnNbr</secondary></indexterm>
+<para><computeroutput>void sPrintLnNbr (int nbr)</computeroutput></para><para>
+
+<para>Print string with new line. </para>
+</para>
+
+<para>Print string with new line.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>nbr</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a number to the Serial Terminal with a line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ae8ac89f250af24dadb79c7f683c544e0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aaaf82364eff15ff055f45914b62051ab"/><section>
+    <title>sPrintLnStr()</title>
+<indexterm><primary>sPrintLnStr</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sPrintLnStr</secondary></indexterm>
+<para><computeroutput>void sPrintLnStr (String abc)</computeroutput></para><para>
+
+<para>Print number. </para>
+</para>
+
+<para>Print number.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with a line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aaaf82364eff15ff055f45914b62051ab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e"/><section>
+    <title>sPrintNbr()</title>
+<indexterm><primary>sPrintNbr</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sPrintNbr</secondary></indexterm>
+<para><computeroutput>void sPrintNbr (int nbr)</computeroutput></para><para>
+
+<para>Print string. </para>
+</para>
+
+<para>Print string.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>nbr</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a number to the Serial Terminal with no line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aef2f197956cfc5cbd5dae5c7bacf263e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ac26aedfdce8cea151106030a2ae286b9"/><section>
+    <title>sPrintStr()</title>
+<indexterm><primary>sPrintStr</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>sPrintStr</secondary></indexterm>
+<para><computeroutput>void sPrintStr (String abc)</computeroutput></para><para>
+
+<para>Print string with new line. </para>
+</para>
+
+<para>Print string with new line.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with no line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ac26aedfdce8cea151106030a2ae286b9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1"/><section>
+    <title>test_IO()</title>
+<indexterm><primary>test_IO</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>test_IO</secondary></indexterm>
+<para><computeroutput>void test_IO ( )</computeroutput></para><para>
+
+<para>Print number with new line. </para>
+</para>
+
+<para>Test I/Os</para>
+
+<para>Print number with new line.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Test I/O Indicador Maximo</para>
+
+<para>Test I/O Indicador Minimo</para>
+
+<para>Test I/O Indicador Alarme</para>
+
+<para>Test I/O Indicador Manual</para>
+
+<para>Test I/O Indicador Auto</para>
+
+<para>Test I/O Indicador Valvula Entrada</para>
+
+<para>Test I/O Indicador Valvula Saida</para>
+
+<para>Test I/O Indicador Resistor</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a9e210ff652f1bccff9bb78912bd121c1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a9e210ff652f1bccff9bb78912bd121c1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f"/><section>
+    <title>toggleAutoMode()</title>
+<indexterm><primary>toggleAutoMode</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>toggleAutoMode</secondary></indexterm>
+<para><computeroutput>void toggleAutoMode ( )</computeroutput></para><para>
+
+<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</note>
+</para>
+
+<para>current state of the button</para>
+
+<para>previous state of the button</para>
+
+<para>current state of the button</para>
+
+<para>the last time the output pin was toggled</para>
+
+<para>the debounce time; increase if the output flickers</para>
+
+<para>read the state of the switch into a local variable</para>
+
+<para>If the switch changed, due to noise or pressing</para>
+
+<para>reset the debouncing timer</para>
+
+<para>if the switch value has been stable for a while</para>
+
+<para>if the button state has changed</para>
+
+<para>save the new state</para>
+
+<para>if the button state is HIGH</para>
+
+<para>Toggle Auto Mode</para>
+
+<para>save the current state as the last state, for next time through the loop</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa8b96a74409fec0e22a5ee8451114a7f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa8b96a74409fec0e22a5ee8451114a7f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451"/><section>
+    <title>toggleAutoModeWeb()</title>
+<indexterm><primary>toggleAutoModeWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>toggleAutoModeWeb</secondary></indexterm>
+<para><computeroutput>void toggleAutoModeWeb ( )</computeroutput></para><para>
+
+<para>TOGGLES BLOCK. </para>
+</para>
+
+<para>Toggle Auto Mode Web</para>
+
+<para>This function toggles the auto mode.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Get the auto indicator state</para>
+
+<para>Toggle the auto indicator state</para>
+
+<para>Set the auto indicator state</para>
+
+<para>Toggle the auto indicator state</para>
+
+<para>Set the auto indicator state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a1ab8fa34a60a7d71e2e1269469623451_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a1ab8fa34a60a7d71e2e1269469623451_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1ae48dc2d309ef711693328c6300ad5e80"/><section>
+    <title>toggleIndAuto()</title>
+<indexterm><primary>toggleIndAuto</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>toggleIndAuto</secondary></indexterm>
+<para><computeroutput>void toggleIndAuto ( )</computeroutput></para><para>
+
+<para>Toggle the Auto Mode of the Machine. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is used to toggle the Auto Mode of the Machine </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ae48dc2d309ef711693328c6300ad5e80_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_ae48dc2d309ef711693328c6300ad5e80_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc"/><section>
+    <title>togglePumpWeb()</title>
+<indexterm><primary>togglePumpWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>togglePumpWeb</secondary></indexterm>
+<para><computeroutput>void togglePumpWeb ( )</computeroutput></para><para>
+
+<para>Toggle Pump Web. </para>
+</para>
+
+<para>This function toggles the pump.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Pump </para>
+</formalpara>
+</para>
+
+<para>Get the pump state</para>
+
+<para>Toggle the pump state</para>
+
+<para>Set the pump state</para>
+
+<para>Print the pump state</para>
+
+<para>Print the pump state</para>
+
+<para>Toggle the pump state</para>
+
+<para>Set the pump state</para>
+
+<para>Print the pump state</para>
+
+<para>Print the pump state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa5b521b0b413a137701f7e2f630f4fdc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aa5b521b0b413a137701f7e2f630f4fdc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aece7bc529bc15d8753086021a9810637"/><section>
+    <title>toggleResistorWeb()</title>
+<indexterm><primary>toggleResistorWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>toggleResistorWeb</secondary></indexterm>
+<para><computeroutput>void toggleResistorWeb ( )</computeroutput></para><para>
+
+<para>Toggle Resistor Web. </para>
+</para>
+
+<para>This function toggles the resistor.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Resistor </para>
+</formalpara>
+</para>
+
+<para>Get the resistor state</para>
+
+<para>Toggle the resistor state</para>
+
+<para>Set the resistor state</para>
+
+<para>Toggle the resistor state</para>
+
+<para>Set the resistor state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aece7bc529bc15d8753086021a9810637_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aece7bc529bc15d8753086021a9810637_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9"/><section>
+    <title>toggleValveWaterInWeb()</title>
+<indexterm><primary>toggleValveWaterInWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>toggleValveWaterInWeb</secondary></indexterm>
+<para><computeroutput>void toggleValveWaterInWeb ( )</computeroutput></para><para>
+
+<para>Toggle Valve Water In Web. </para>
+</para>
+
+<para>This function toggles the water in valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Valve Water In </para>
+</formalpara>
+</para>
+
+<para>Get the water in valve state</para>
+
+<para>Toggle the water in valve state</para>
+
+<para>Set the water in valve state</para>
+
+<para>Toggle the water in valve state</para>
+
+<para>Set the water in valve state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a757ebfbdd26d049507dd4662ff9edba9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a757ebfbdd26d049507dd4662ff9edba9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3"/><section>
+    <title>toggleValveWaterOutWeb()</title>
+<indexterm><primary>toggleValveWaterOutWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>toggleValveWaterOutWeb</secondary></indexterm>
+<para><computeroutput>void toggleValveWaterOutWeb ( )</computeroutput></para><para>
+
+<para>Toggle Valve Water Out Web. </para>
+</para>
+
+<para>This function toggles the water out valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Valve Water Out </para>
+</formalpara>
+</para>
+
+<para>Get the water out valve state</para>
+
+<para>If the water out valve state is OFF and the manual mode is ON</para>
+
+<para>Toggle the water out valve state</para>
+
+<para>Set the water out valve state</para>
+
+<para>Toggle the water out valve state</para>
+
+<para>Set the water out valve state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aed9cbec3cbb71c6f6fec13b36223efa3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_aed9cbec3cbb71c6f6fec13b36223efa3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a76f121aef723f8209031f700a1cf5a61"/><section>
+    <title>updateOutputsWeb()</title>
+<indexterm><primary>updateOutputsWeb</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>updateOutputsWeb</secondary></indexterm>
+<para><computeroutput>void updateOutputsWeb ( )</computeroutput></para><para>
+
+<para>Output variables image. </para>
+</para>
+
+<para>FUNCTIONS BLOCK</para>
+
+<para>Update Outputs Web</para>
+
+<para>This function updates the outputs for the web interface.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Update the resistor state</para>
+
+<para>Update the pump state</para>
+
+<para>Update the water out valve state</para>
+
+<para>Update the water in valve state</para>
+
+<para>Update the alarm state</para>
+
+<para>Update the water min state</para>
+
+<para>Update the water max state</para>
+
+<para>Update the manual mode state</para>
+
+<para>outputVarsImageWeb[7] = <link linkend="__o_s_8h_1abbca1cc0d29f545e9a39778288a12071">getIndAuto()</link>; /// Update the auto indicator state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a76f121aef723f8209031f700a1cf5a61_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a76f121aef723f8209031f700a1cf5a61_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1a504723789792b242f59e8f9adfb48009"/><section>
+    <title>webTimer()</title>
+<indexterm><primary>webTimer</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>webTimer</secondary></indexterm>
+<para><computeroutput>long webTimer (String op, int16_t amount)</computeroutput></para><para>
+
+<para>Timer Functions calls. </para>
+</para>
+
+<para>Timer Functions calls.</para>
+
+<para>This function is responsible for managing the timer operations.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>op</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>amount</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>unsigned long </para>
+</formalpara>
+</para>
+
+<para>Timer operations to add, remove or reset the timer value in miliseconds</para>
+
+<para>Add time to the timer</para>
+
+<para>Add 1 second</para>
+
+<para>Add 5 seconds</para>
+
+<para>Add 10 seconds</para>
+
+<para>Add 1 minute</para>
+
+<para>Add 5 minutes</para>
+
+<para>Add 10 minutes</para>
+
+<para>Remove time from the timer</para>
+
+<para>Remove 1 second</para>
+
+<para>Remove 5 seconds</para>
+
+<para>Remove 10 seconds</para>
+
+<para>Remove 1 minute</para>
+
+<para>Remove 5 minutes</para>
+
+<para>Remove 10 minutes</para>
+
+<para>Reset the timer to 0</para>
+
+<para>Timer management to decrease the timer every second and turn it off when it reaches 0 seconds left</para>
+
+<para>Decrease the timer every second if the timer is ON</para>
+
+<para>Turn off the timer when it reaches 0 seconds left</para>
+
+<para>Only send updates at the defined interval</para>
+
+<para>Send the timer to the web interface</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a504723789792b242f59e8f9adfb48009_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_a504723789792b242f59e8f9adfb48009_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d_8h_1abb46cda72435678d0ea2a5881f4349e7"/><section>
+    <title>wifiQuality()</title>
+<indexterm><primary>wifiQuality</primary><secondary>MD.h</secondary></indexterm>
+<indexterm><primary>MD.h</primary><secondary>wifiQuality</secondary></indexterm>
+<para><computeroutput>String wifiQuality ( )</computeroutput></para><para>
+
+<para>Inicia o wifi. </para>
+</para>
+
+<para>Inicia o wifi.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function returns the WiFi quality in percentage </para>
+</note>
+</para>
+
+<para>Get the Received Signal Strength Indicator (RSSI) in dBm</para>
+
+<para>Quality in percentage</para>
+
+<para>Quality in string format</para>
+
+<para>Calculate the quality in percentage</para>
+
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+
+<para>Send the quality in percentage to the web server as a JSON object</para>
+
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d_8h_abb46cda72435678d0ea2a5881f4349e7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

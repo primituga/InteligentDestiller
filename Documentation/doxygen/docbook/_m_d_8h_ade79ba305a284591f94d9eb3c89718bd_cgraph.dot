@@ -1,0 +1,47 @@
+digraph "handleToggle"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="handleToggle",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax."];
+  Node1 -> Node2 [id="edge43_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="toggleAutoModeWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a1ab8fa34a60a7d71e2e1269469623451",tooltip="TOGGLES BLOCK."];
+  Node2 -> Node3 [id="edge44_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="getIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#abbca1cc0d29f545e9a39778288a12071",tooltip="Retorna estado do indicador de alarme."];
+  Node2 -> Node4 [id="edge45_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="getManualMode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a20a8e677a695003ed8259fc2e32b6462",tooltip="Retorna estado do interruptor auto."];
+  Node2 -> Node5 [id="edge46_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="setAutoModeWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a4f59623372f8c8c8d704f0f004f7d955",tooltip="SETS BLOCK."];
+  Node1 -> Node6 [id="edge47_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="togglePumpWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#aa5b521b0b413a137701f7e2f630f4fdc",tooltip="Toggle Pump Web."];
+  Node6 -> Node4 [id="edge48_Node000006_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node7 [id="edge49_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="getPumpWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a47fd66708aa0f427cd949f639cebc0df",tooltip="Get the Pump object."];
+  Node6 -> Node8 [id="edge50_Node000006_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="setPumpWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a79d7f2ee79816b8a1c7d71f4887df8c6",tooltip="Set the Pump object."];
+  Node6 -> Node9 [id="edge51_Node000006_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="sPrintStr",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___serial_8cpp.html#ac26aedfdce8cea151106030a2ae286b9",tooltip="Print string with new line."];
+  Node1 -> Node10 [id="edge52_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="toggleResistorWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#aece7bc529bc15d8753086021a9810637",tooltip="Toggle Resistor Web."];
+  Node10 -> Node4 [id="edge53_Node000010_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node11 [id="edge54_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="getResistor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a56feb35df23b1452f2695b6469042ec2",tooltip="Retorna estado do botao manual."];
+  Node10 -> Node12 [id="edge55_Node000010_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="setResistorWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#afc81a927862b27a260c9a12ae7773739",tooltip="Set the Resistor object."];
+  Node1 -> Node13 [id="edge56_Node000001_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="toggleValveWaterInWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a757ebfbdd26d049507dd4662ff9edba9",tooltip="Toggle Valve Water In Web."];
+  Node13 -> Node4 [id="edge57_Node000013_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node14 [id="edge58_Node000013_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="getValv_Water_In",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a2e1179e338420a43f95be0b8a7ed885d",tooltip="Retorna estado do resistor."];
+  Node13 -> Node15 [id="edge59_Node000013_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="setValveWaterInWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#abe554b3a794b4000aa2d251a3d63a54f",tooltip="Set the Valve Water In object."];
+  Node1 -> Node16 [id="edge60_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="toggleValveWaterOutWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#aed9cbec3cbb71c6f6fec13b36223efa3",tooltip="Toggle Valve Water Out Web."];
+  Node16 -> Node4 [id="edge61_Node000016_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node16 -> Node17 [id="edge62_Node000016_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="getValv_Water_Out",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a8b22aea595b0457364230c92779ae37a",tooltip="Retorna estado da entrada de agua."];
+  Node16 -> Node18 [id="edge63_Node000016_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="setValveWaterOutWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a922a642ffb3645f0271b481309cdb133",tooltip="Set the Valve Water Out object."];
+}

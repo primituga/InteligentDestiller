@@ -1,0 +1,457 @@
+\doxysection{src/\+MD\+\_\+\+Timer.cpp File Reference}
+\hypertarget{_m_d___timer_8cpp}{}\label{_m_d___timer_8cpp}\index{src/MD\_Timer.cpp@{src/MD\_Timer.cpp}}
+{\ttfamily \#include "{}MD.\+h"{}}\newline
+Include dependency graph for MD\+\_\+\+Timer.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_acf8eb689c061a70a35d6f2f5ed57c474}{send\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Send timer to web. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{_m_d___timer_8cpp_a504723789792b242f59e8f9adfb48009}{web\+Timer}} (String op, int16\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Web timer function to manage the timer operations in the web interface. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_m_d___timer_8cpp_aa9493843bba040c07f9f66300059268a}{get\+Timer\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Get the Timer Status object to get the timer status (ON/\+OFF) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_m_d___timer_8cpp_a71f3ffe6a2e0fca30bca87a87fc92354}{get\+Timer\+Secound}} ()
+\begin{DoxyCompactList}\small\item\em Get the Timer Secound object to get the timer secound. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_m_d___timer_8cpp_ae8ad20dbd759f4fb98dabba7876428f4}{get\+Timer\+Minute}} ()
+\begin{DoxyCompactList}\small\item\em Get the Timer Minute object to get the timer minute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_m_d___timer_8cpp_a7497ed4b5f459145ba576e35a34b2f68}{get\+Timer\+Hour}} ()
+\begin{DoxyCompactList}\small\item\em Get the Timer Hour object to get the timer hour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a75d67ecc1e985e54d2701c06a6aaa3a1}{set\+Timer}} (bool stat)
+\begin{DoxyCompactList}\small\item\em Set the Timer object to set the timer status (ON/\+OFF) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a4205a2b9aa1216af70d0e72d139508a0}{add1s}} ()
+\begin{DoxyCompactList}\small\item\em Add 1 secound to timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_aa323da979d7e0bdd7639b1932d401150}{add5s}} ()
+\begin{DoxyCompactList}\small\item\em Add 5 secounds to timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_aecf5a85e72e116087f5917d708e37f64}{add10s}} ()
+\begin{DoxyCompactList}\small\item\em Add 10 secounds to timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a4e34974421187d65e1cb2db63585549d}{add1m}} ()
+\begin{DoxyCompactList}\small\item\em Add 1 minute to timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a10e275a2b4beec90555c95286db80a6a}{add5m}} ()
+\begin{DoxyCompactList}\small\item\em Add 5 minutes to timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a2345c47ec0c5b7a61a02281c2174df89}{add10m}} ()
+\begin{DoxyCompactList}\small\item\em Add 10 minutes to timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a82bc62194a206899dfa2b287b9d16236}{rem1s}} ()
+\begin{DoxyCompactList}\small\item\em Remove 1 secound from timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a7e996a9f3af638141257662a8f931e11}{rem5s}} ()
+\begin{DoxyCompactList}\small\item\em Remove 5 secounds from timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_aab03ff01ea9b512f5470cd80bee1025c}{rem10s}} ()
+\begin{DoxyCompactList}\small\item\em Remove 10 secounds from timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a1d544cbb8a4f76ecae3455d08961fa66}{rem1m}} ()
+\begin{DoxyCompactList}\small\item\em Remove 1 minute from timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_a6dd7da3e0329e60af93c3c96301fb81e}{rem5m}} ()
+\begin{DoxyCompactList}\small\item\em Remove 5 minutes from timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_afde4bd8c891772121c1bee27077ab395}{rem10m}} ()
+\begin{DoxyCompactList}\small\item\em Remove 10 minutes from timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_m_d___timer_8cpp_ad43a02209687d9c1e04dddd167f32c45}{reset\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Reset timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_m_d___timer_8cpp_a62d5c540f80173b879eb9236600c961b}{flag\+Timer\+Status}} = \mbox{\hyperlink{_o_s_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}
+\begin{DoxyCompactList}\small\item\em Timer Functions. \end{DoxyCompactList}\item 
+const unsigned long \mbox{\hyperlink{_m_d___timer_8cpp_a56cbe7f463932051d17bba95b3cac9b4}{update\+Interval}} = 1000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_m_d___timer_8cpp_a2345c47ec0c5b7a61a02281c2174df89}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!add10m@{add10m}}
+\index{add10m@{add10m}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{add10m()}{add10m()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a2345c47ec0c5b7a61a02281c2174df89} 
+void add10m (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add 10 minutes to timer. 
+
+Add 5 minutes to timer. Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{_m_d___timer_8cpp_aecf5a85e72e116087f5917d708e37f64}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!add10s@{add10s}}
+\index{add10s@{add10s}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{add10s()}{add10s()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_aecf5a85e72e116087f5917d708e37f64} 
+void add10s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add 10 secounds to timer. 
+
+Add 5 secounds to timer. Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{_m_d___timer_8cpp_a4e34974421187d65e1cb2db63585549d}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!add1m@{add1m}}
+\index{add1m@{add1m}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{add1m()}{add1m()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a4e34974421187d65e1cb2db63585549d} 
+void add1m (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add 1 minute to timer. 
+
+Add 10 secounds to timer. Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{_m_d___timer_8cpp_a4205a2b9aa1216af70d0e72d139508a0}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!add1s@{add1s}}
+\index{add1s@{add1s}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{add1s()}{add1s()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a4205a2b9aa1216af70d0e72d139508a0} 
+void add1s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add 1 secound to timer. 
+
+Get timer status. Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{_m_d___timer_8cpp_a10e275a2b4beec90555c95286db80a6a}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!add5m@{add5m}}
+\index{add5m@{add5m}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{add5m()}{add5m()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a10e275a2b4beec90555c95286db80a6a} 
+void add5m (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add 5 minutes to timer. 
+
+Add 1 minute to timer. Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{_m_d___timer_8cpp_aa323da979d7e0bdd7639b1932d401150}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!add5s@{add5s}}
+\index{add5s@{add5s}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{add5s()}{add5s()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_aa323da979d7e0bdd7639b1932d401150} 
+void add5s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Add 5 secounds to timer. 
+
+Add 1 secound to timer. Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{_m_d___timer_8cpp_a7497ed4b5f459145ba576e35a34b2f68}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!getTimerHour@{getTimerHour}}
+\index{getTimerHour@{getTimerHour}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{getTimerHour()}{getTimerHour()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a7497ed4b5f459145ba576e35a34b2f68} 
+int get\+Timer\+Hour (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the Timer Hour object to get the timer hour. 
+
+Get timer minute.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Return the timer hours left in the timerHere is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\Hypertarget{_m_d___timer_8cpp_ae8ad20dbd759f4fb98dabba7876428f4}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!getTimerMinute@{getTimerMinute}}
+\index{getTimerMinute@{getTimerMinute}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{getTimerMinute()}{getTimerMinute()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_ae8ad20dbd759f4fb98dabba7876428f4} 
+int get\+Timer\+Minute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the Timer Minute object to get the timer minute. 
+
+Get timer secound.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Return the timer minutes left in the timerHere is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\Hypertarget{_m_d___timer_8cpp_a71f3ffe6a2e0fca30bca87a87fc92354}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!getTimerSecound@{getTimerSecound}}
+\index{getTimerSecound@{getTimerSecound}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{getTimerSecound()}{getTimerSecound()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a71f3ffe6a2e0fca30bca87a87fc92354} 
+int get\+Timer\+Secound (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the Timer Secound object to get the timer secound. 
+
+Timer for web operations.
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Return the timer seconds left in the timer ~\newline
+Here is the call graph for this function\+:
+% FIG 17
+Here is the caller graph for this function\+:
+% FIG 18
+\Hypertarget{_m_d___timer_8cpp_aa9493843bba040c07f9f66300059268a}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!getTimerStatus@{getTimerStatus}}
+\index{getTimerStatus@{getTimerStatus}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{getTimerStatus()}{getTimerStatus()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_aa9493843bba040c07f9f66300059268a} 
+bool get\+Timer\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the Timer Status object to get the timer status (ON/\+OFF) 
+
+Get timer hour.
+
+\begin{DoxyNote}{Note}
+This function is called by the processor function in AP\+\_\+\+Destiller.\+cpp 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Return the timer status (ON/\+OFF)Here is the caller graph for this function\+:
+% FIG 19
+\Hypertarget{_m_d___timer_8cpp_afde4bd8c891772121c1bee27077ab395}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!rem10m@{rem10m}}
+\index{rem10m@{rem10m}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{rem10m()}{rem10m()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_afde4bd8c891772121c1bee27077ab395} 
+void rem10m (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove 10 minutes from timer. 
+
+Remove 5 minutes from timer. Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\Hypertarget{_m_d___timer_8cpp_aab03ff01ea9b512f5470cd80bee1025c}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!rem10s@{rem10s}}
+\index{rem10s@{rem10s}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{rem10s()}{rem10s()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_aab03ff01ea9b512f5470cd80bee1025c} 
+void rem10s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove 10 secounds from timer. 
+
+Remove 5 secounds from timer. Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\Hypertarget{_m_d___timer_8cpp_a1d544cbb8a4f76ecae3455d08961fa66}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!rem1m@{rem1m}}
+\index{rem1m@{rem1m}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{rem1m()}{rem1m()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a1d544cbb8a4f76ecae3455d08961fa66} 
+void rem1m (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove 1 minute from timer. 
+
+Remove 10 secounds from timer. Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\Hypertarget{_m_d___timer_8cpp_a82bc62194a206899dfa2b287b9d16236}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!rem1s@{rem1s}}
+\index{rem1s@{rem1s}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{rem1s()}{rem1s()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a82bc62194a206899dfa2b287b9d16236} 
+void rem1s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove 1 secound from timer. 
+
+Add 10 minutes to timer. Here is the call graph for this function\+:
+% FIG 26
+Here is the caller graph for this function\+:
+% FIG 27
+\Hypertarget{_m_d___timer_8cpp_a6dd7da3e0329e60af93c3c96301fb81e}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!rem5m@{rem5m}}
+\index{rem5m@{rem5m}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{rem5m()}{rem5m()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a6dd7da3e0329e60af93c3c96301fb81e} 
+void rem5m (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove 5 minutes from timer. 
+
+Remove 1 minute from timer. Here is the call graph for this function\+:
+% FIG 28
+Here is the caller graph for this function\+:
+% FIG 29
+\Hypertarget{_m_d___timer_8cpp_a7e996a9f3af638141257662a8f931e11}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!rem5s@{rem5s}}
+\index{rem5s@{rem5s}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{rem5s()}{rem5s()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a7e996a9f3af638141257662a8f931e11} 
+void rem5s (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove 5 secounds from timer. 
+
+Remove 1 secound from timer. Here is the call graph for this function\+:
+% FIG 30
+Here is the caller graph for this function\+:
+% FIG 31
+\Hypertarget{_m_d___timer_8cpp_ad43a02209687d9c1e04dddd167f32c45}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!resetTimer@{resetTimer}}
+\index{resetTimer@{resetTimer}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{resetTimer()}{resetTimer()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_ad43a02209687d9c1e04dddd167f32c45} 
+void reset\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reset timer. 
+
+Remove 10 minutes from timer. Here is the call graph for this function\+:
+% FIG 32
+Here is the caller graph for this function\+:
+% FIG 33
+\Hypertarget{_m_d___timer_8cpp_acf8eb689c061a70a35d6f2f5ed57c474}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!sendTimer@{sendTimer}}
+\index{sendTimer@{sendTimer}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{sendTimer()}{sendTimer()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_acf8eb689c061a70a35d6f2f5ed57c474} 
+void send\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Send timer to web. 
+
+This function sends the timer to the web interface to update the timer display in the web interface.
+
+\begin{DoxyNote}{Note}
+This function is called by the web\+Timer function in \doxylink{_m_d___timer_8cpp}{MD\+\_\+\+Timer.\+cpp} 
+\end{DoxyNote}
+Old values to compare with the new values to send updates only when the timer changes
+
+Only send updates if the timer has changed
+
+Send the timer to the web interface
+
+Create the message to send to the web interface as a JSON object
+
+Send the message to the web interface
+
+Update the old valuesHere is the call graph for this function\+:
+% FIG 34
+Here is the caller graph for this function\+:
+% FIG 35
+\Hypertarget{_m_d___timer_8cpp_a75d67ecc1e985e54d2701c06a6aaa3a1}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!setTimer@{setTimer}}
+\index{setTimer@{setTimer}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{setTimer()}{setTimer()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a75d67ecc1e985e54d2701c06a6aaa3a1} 
+void set\+Timer (\begin{DoxyParamCaption}\item[{bool}]{stat}{}\end{DoxyParamCaption})}
+
+
+
+Set the Timer object to set the timer status (ON/\+OFF) 
+
+Reset timer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stat} & \\
+\hline
+\end{DoxyParams}
+Set the timer status (ON/\+OFF)Here is the call graph for this function\+:
+% FIG 36
+Here is the caller graph for this function\+:
+% FIG 37
+\Hypertarget{_m_d___timer_8cpp_a504723789792b242f59e8f9adfb48009}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!webTimer@{webTimer}}
+\index{webTimer@{webTimer}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{webTimer()}{webTimer()}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a504723789792b242f59e8f9adfb48009} 
+long web\+Timer (\begin{DoxyParamCaption}\item[{String}]{op}{, }\item[{int16\+\_\+t}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Web timer function to manage the timer operations in the web interface. 
+
+Timer Functions calls.
+
+This function is responsible for managing the timer operations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & \\
+\hline
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned long 
+\end{DoxyReturn}
+Timer operations to add, remove or reset the timer value in miliseconds
+
+Add time to the timer
+
+Add 1 second
+
+Add 5 seconds
+
+Add 10 seconds
+
+Add 1 minute
+
+Add 5 minutes
+
+Add 10 minutes
+
+Remove time from the timer
+
+Remove 1 second
+
+Remove 5 seconds
+
+Remove 10 seconds
+
+Remove 1 minute
+
+Remove 5 minutes
+
+Remove 10 minutes
+
+Reset the timer to 0
+
+Timer management to decrease the timer every second and turn it off when it reaches 0 seconds left
+
+Decrease the timer every second if the timer is ON
+
+Turn off the timer when it reaches 0 seconds left
+
+Only send updates at the defined interval
+
+Send the timer to the web interfaceHere is the call graph for this function\+:
+% FIG 38
+Here is the caller graph for this function\+:
+% FIG 39
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_m_d___timer_8cpp_a62d5c540f80173b879eb9236600c961b}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!flagTimerStatus@{flagTimerStatus}}
+\index{flagTimerStatus@{flagTimerStatus}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{flagTimerStatus}{flagTimerStatus}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a62d5c540f80173b879eb9236600c961b} 
+bool flag\+Timer\+Status = \mbox{\hyperlink{_o_s_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}}
+
+
+
+Timer Functions. 
+
+\Hypertarget{_m_d___timer_8cpp_a56cbe7f463932051d17bba95b3cac9b4}\index{MD\_Timer.cpp@{MD\_Timer.cpp}!updateInterval@{updateInterval}}
+\index{updateInterval@{updateInterval}!MD\_Timer.cpp@{MD\_Timer.cpp}}
+\doxysubsubsection{\texorpdfstring{updateInterval}{updateInterval}}
+{\footnotesize\ttfamily \label{_m_d___timer_8cpp_a56cbe7f463932051d17bba95b3cac9b4} 
+const unsigned long update\+Interval = 1000}
+

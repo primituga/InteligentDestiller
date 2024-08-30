@@ -1,0 +1,302 @@
+\doxysection{src/\+AP\+\_\+\+Web.cpp File Reference}
+\hypertarget{_a_p___web_8cpp}{}\label{_a_p___web_8cpp}\index{src/AP\_Web.cpp@{src/AP\_Web.cpp}}
+
+
+Web Server functions.  
+
+
+{\ttfamily \#include "{}AP.\+h"{}}\newline
+Include dependency graph for AP\+\_\+\+Web.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p___web_8cpp_a0be75b75b82f96e18d5c695059a67a63}{handle\+Web\+Socket\+Message}} (void \texorpdfstring{$\ast$}{*}arg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Definitions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p___web_8cpp_ad296f25594d8ca4d02d0025819437b7b}{on\+Event}} (Async\+Web\+Socket \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_o_s_8h_a56916c67f21f332014c1c19b200d45f3}{server}}, Async\+Web\+Socket\+Client \texorpdfstring{$\ast$}{*}client, Aws\+Event\+Type type, void \texorpdfstring{$\ast$}{*}arg, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Web Server and Web\+Socket Server variables and constants initialization function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p___web_8cpp_a553ce9cca044d40931e5cbe9deb407e4}{setup\+Routes}} ()
+\begin{DoxyCompactList}\small\item\em Setup Calls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Web Server functions. 
+
+\begin{DoxyAuthor}{Author}
+Sérgio Carmo
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_a_p___web_8cpp_a0be75b75b82f96e18d5c695059a67a63}\index{AP\_Web.cpp@{AP\_Web.cpp}!handleWebSocketMessage@{handleWebSocketMessage}}
+\index{handleWebSocketMessage@{handleWebSocketMessage}!AP\_Web.cpp@{AP\_Web.cpp}}
+\doxysubsubsection{\texorpdfstring{handleWebSocketMessage()}{handleWebSocketMessage()}}
+{\footnotesize\ttfamily \label{_a_p___web_8cpp_a0be75b75b82f96e18d5c695059a67a63} 
+void handle\+Web\+Socket\+Message (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Definitions. 
+
+Variables and Constants for Web Server and Web\+Socket Server
+
+Web Server and Web\+Socket Server variables
+
+These variables are used to create the Web Server and Web\+Socket Server.
+
+\begin{DoxyNote}{Note}
+These variables are used to create the Web Server and Web\+Socket Server. 
+
+These variables are used to handle the HTTP GET requests for various resources.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & Web Server \\
+\hline
+{\em ws} & Web\+Socket Server \\
+\hline
+{\em processor} & Web Server Processor \\
+\hline
+{\em ws\+Frame\+Info} & Web\+Socket Frame Information \\
+\hline
+{\em ws\+Mask} & Web\+Socket Mask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Web\+Socket Frame Information Structure Pointer (info)
+
+Check if the Web\+Socket message is a text message and the final message in the frame sequence and the length of the message is equal to the length of the frame and the index of the frame is 0
+
+Null-\/terminate the data to make it a string (char array)
+
+Convert the data to a String object
+
+Print the received Web\+Socket messageHere is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{_a_p___web_8cpp_ad296f25594d8ca4d02d0025819437b7b}\index{AP\_Web.cpp@{AP\_Web.cpp}!onEvent@{onEvent}}
+\index{onEvent@{onEvent}!AP\_Web.cpp@{AP\_Web.cpp}}
+\doxysubsubsection{\texorpdfstring{onEvent()}{onEvent()}}
+{\footnotesize\ttfamily \label{_a_p___web_8cpp_ad296f25594d8ca4d02d0025819437b7b} 
+void on\+Event (\begin{DoxyParamCaption}\item[{Async\+Web\+Socket \texorpdfstring{$\ast$}{*}}]{server}{, }\item[{Async\+Web\+Socket\+Client \texorpdfstring{$\ast$}{*}}]{client}{, }\item[{Aws\+Event\+Type}]{type}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Web Server and Web\+Socket Server variables and constants initialization function. 
+
+This function initializes the Web Server and Web\+Socket Server variables and constants.
+
+\begin{DoxyNote}{Note}
+This function initializes the Web Server and Web\+Socket Server variables and constants.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & \\
+\hline
+{\em client} & \\
+\hline
+{\em type} & \\
+\hline
+{\em arg} & \\
+\hline
+{\em data} & \\
+\hline
+{\em len} & \\
+\hline
+\end{DoxyParams}
+Handle Web\+Socket events based on the event type (type)
+
+Web\+Socket client connected event
+
+Print the IP address of the connected Web\+Socket client
+
+Web\+Socket client disconnected event
+
+Print the IP address of the disconnected Web\+Socket client
+
+Web\+Socket data event
+
+Handle the Web\+Socket message data event
+
+Web\+Socket Pong event (response to a Ping)
+
+Web\+Socket error eventHere is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{_a_p___web_8cpp_a553ce9cca044d40931e5cbe9deb407e4}\index{AP\_Web.cpp@{AP\_Web.cpp}!setupRoutes@{setupRoutes}}
+\index{setupRoutes@{setupRoutes}!AP\_Web.cpp@{AP\_Web.cpp}}
+\doxysubsubsection{\texorpdfstring{setupRoutes()}{setupRoutes()}}
+{\footnotesize\ttfamily \label{_a_p___web_8cpp_a553ce9cca044d40931e5cbe9deb407e4} 
+void setup\+Routes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Setup Calls. 
+
+Setup the routes for the web server.
+
+This function defines the routes for handling HTTP GET requests for various resources such as HTML pages, CSS files, JS files, images, time adjustments, timer control, toggle actions, state actions, Wi\+Fi handlers, and timer handlers. Set the Web\+Socket event handler function for the Web\+Socket Server (ws)
+
+Add the Web\+Socket handler to the server (server) ///////////////////////////////////////////////////////////////////////////////////// Route for root / and index\+\_\+web\+Buttons.\+html
+
+Send the index.\+html file to the client when the root / is requested
+
+Send the index.\+html file to the client when the root / is requested
+
+Route for CSS files
+
+Send the style.\+css file to the client when requested
+
+Send the style.\+css file to the client when requested
+
+Send the style.\+css file to the client when requested
+
+Route JS files
+
+Send the script\+\_\+actions.\+js file to the client when requested
+
+Send the script\+\_\+get\+\_\+\+Data.\+js file to the client when requested
+
+Send the script\+\_\+timers.\+js file to the client when requested
+
+Send the script\+\_\+timers\+\_\+\+Img.\+js file to the client when requested
+
+Send the script\+\_\+timers\+\_\+2.\+js file to the client when requested
+
+Route for image files
+
+Send the icon.\+png file to the client when requested
+
+Send the estg\+\_\+logo.\+png file to the client when requested
+
+Send the bg.\+png file to the client when requested
+
+Send the destiller.\+png file to the client when requested
+
+Send the BMB\+\_\+\+ON.\+png file to the client when requested
+
+Send the BMB\+\_\+\+OFF.\+png file to the client when requested
+
+Send the RAQ\+\_\+\+ON.\+png file to the client when requested
+
+Send the RAQ\+\_\+\+OFF.\+png file to the client when requested
+
+Send the Valve\+\_\+\+ON.\+png file to the client when requested
+
+Send the Valve\+\_\+\+OFF.\+png file to the client when requested
+
+Send the Auto\+\_\+\+ON.\+png file to the client when requested
+
+Send the Auto\+\_\+\+OFF.\+png file to the client when requested
+
+Send the Man\+\_\+\+ON.\+png file to the client when requested
+
+Send the Man\+\_\+\+OFF.\+png file to the client when requested
+
+Send the s\+Min.\+png file to the client when requested
+
+Send the s\+Max.\+png file to the client when requested
+
+Send the s\+Alarm.\+png file to the client when requested
+
+Send the button\+\_\+\+ON.\+png file to the client when requested
+
+Send the button\+\_\+\+OFF.\+png file to the client when requested
+
+Routes for handling time adjustments
+
+Send the response to the client when the /add1s route is requested
+
+Send the response to the client when the /add5s route is requested
+
+Send the response to the client when the /add10s route is requested
+
+Send the response to the client when the /add1m route is requested
+
+Send the response to the client when the /add5m route is requested
+
+Send the response to the client when the /add10m route is requested
+
+Send the response to the client when the /rem1s route is requested
+
+Send the response to the client when the /rem5s route is requested
+
+Send the response to the client when the /rem10s route is requested
+
+Send the response to the client when the /rem1m route is requested
+
+Send the response to the client when the /rem5m route is requested
+
+Send the response to the client when the /rem10m route is requested
+
+Routes for handling timer control
+
+Send the response to the client when the /start\+Timer route is requested
+
+Send the response to the client when the /stop\+Timer route is requested
+
+Send the response to the client when the /reset\+Timer route is requested
+
+Routes for handling toggle actions
+
+Send the response to the client when the /toggle\+Auto\+Mode route is requested
+
+Send the response to the client when the /toggle\+Pump route is requested
+
+Send the response to the client when the /toggle\+Water\+Out route is requested
+
+Send the response to the client when the /toggle\+Water\+In route is requested
+
+Send the response to the client when the /toggle\+Resistor route is requested
+
+Routes for handling read actions
+
+Send the response to the client when the /read\+Auto\+Mode route is requested
+
+Send the response to the client when the /read\+Manual\+Mode route is requested
+
+Send the response to the client when the /read\+Pump route is requested
+
+Send the response to the client when the /read\+Water\+Out route is requested
+
+Send the response to the client when the /read\+Resistor route is requested
+
+Send the response to the client when the /read\+Water\+In route is requested
+
+Send the response to the client when the /read\+Water\+Max route is requested
+
+Send the response to the client when the /read\+Water\+Min route is requested
+
+Send the response to the client when the /read\+Water\+Alarm route is requested
+
+Route for Wi\+Fi Handlers
+
+Send the response to the client when the /read\+Wifi\+Quality route is requested
+
+Send the response to the client when the /read\+Wifi\+SSID route is requested
+
+Send the response to the client when the /read\+Wifi\+TX route is requested
+
+Send the response to the client when the /read\+Wifi\+IP route is requested
+
+Route for Timer Handlers
+
+Send the response to the client when the /read\+Timer route is requested
+
+Send the response to the client when the /read\+Hour route is requested
+
+Send the response to the client when the /read\+Minute route is requested
+
+Send the response to the client when the /read\+Secound route is requested
+
+Start Server
+
+Start the serverHere is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5

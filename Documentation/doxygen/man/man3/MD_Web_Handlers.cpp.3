@@ -1,0 +1,554 @@
+.TH "src/MD_Web_Handlers.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/MD_Web_Handlers.cpp \- Web Handlers for the MD project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'MD\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "String \fBhandleTimer\fP ()"
+.br
+.RI "Definitions\&. "
+.ti -1c
+.RI "String \fBhandleHour\fP ()"
+.br
+.RI "Handle Hour\&. "
+.ti -1c
+.RI "String \fBhandleMinute\fP ()"
+.br
+.RI "Handle Minute\&. "
+.ti -1c
+.RI "String \fBhandleSecound\fP ()"
+.br
+.RI "Handle Secound\&. "
+.ti -1c
+.RI "String \fBhandleWifiQuality\fP ()"
+.br
+.RI "Handlers for Wifi Quality, SSID, TX and IP\&. "
+.ti -1c
+.RI "String \fBhandleWifiSSID\fP ()"
+.br
+.RI "Handle Wifi SSID\&. "
+.ti -1c
+.RI "String \fBhandleWifiTX\fP ()"
+.br
+.RI "Handle Wifi TX\&. "
+.ti -1c
+.RI "String \fBhandleWifiIP\fP ()"
+.br
+.RI "Handle Wifi IP\&. "
+.ti -1c
+.RI "String \fBhandleTimeAdjust\fP (const String &adjustment)"
+.br
+.RI "Timer Add/Remove Time\&. "
+.ti -1c
+.RI "String \fBhandleTimerControl\fP (const String &control)"
+.br
+.RI "Timer Start/Stop/Reset\&. "
+.ti -1c
+.RI "String \fBhandleState\fP (const String &state)"
+.br
+.RI "Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response\&. "
+.ti -1c
+.RI "String \fBhandleToggle\fP (const String &toggle)"
+.br
+.RI "Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax\&. "
+.ti -1c
+.RI "String \fBprocessor\fP (const String &var)"
+.br
+.RI "Function to handle the HTTP requests for the variables\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Web Handlers for the MD project\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Sérgio Carmo
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "String handleHour ()"
+
+.PP
+Handle Hour\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the timer hour 
+.RE
+.PP
+
+.SS "String handleMinute ()"
+
+.PP
+Handle Minute\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the timer minute 
+.RE
+.PP
+
+.SS "String handleSecound ()"
+
+.PP
+Handle Secound\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the timer secound 
+.RE
+.PP
+
+.SS "String handleState (const String & state)"
+
+.PP
+Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response\&. Handle State 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function handles the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) 
+
+.PP
+This function returns the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) 
+.RE
+.PP
+Get the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)
+
+.PP
+Get the auto mode indicator state
+
+.PP
+Get the manual mode indicator state
+
+.PP
+Get the pump state
+
+.PP
+Get the water out valve state
+
+.PP
+Get the resistor state
+
+.PP
+Get the water in valve state
+
+.PP
+Get the water max state
+
+.PP
+Get the water min state
+
+.PP
+Get the water alarm state
+
+.PP
+Return nothing if the state is not found
+.SS "String handleTimeAdjust (const String & adjustment)"
+
+.PP
+Timer Add/Remove Time\&. Handle Time Adjust 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadjustment\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function adjusts the timer 
+
+.PP
+This function returns the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m) 
+.RE
+.PP
+Adjust the timer based on the adjustment parameter
+
+.PP
+Add 1 secound to timer
+
+.PP
+Add 5 secounds to timer
+
+.PP
+Add 10 secounds to timer
+
+.PP
+Add 1 minute to timer
+
+.PP
+Add 5 minutes to timer
+
+.PP
+Add 10 minutes to timer
+
+.PP
+Remove 1 secound from timer
+
+.PP
+Remove 5 secounds from timer
+
+.PP
+Remove 10 secounds from timer
+
+.PP
+Remove 1 minute from timer
+
+.PP
+Remove 5 minutes from timer
+
+.PP
+Remove 10 minutes from timer
+
+.PP
+Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)
+.SS "String handleTimer ()"
+
+.PP
+Definitions\&. Handlers\&.
+
+.PP
+Timer handlers
+
+.PP
+Handle Timer 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function handles the timer 
+
+.PP
+This function returns the timer in the format HH:MM:SS 
+.RE
+.PP
+
+.SS "String handleTimerControl (const String & control)"
+
+.PP
+Timer Start/Stop/Reset\&. Handle Timer Control 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrol\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function controls the timer 
+
+.PP
+This function returns the control message for the timer (start, stop, reset) 
+.RE
+.PP
+Control the timer based on the control parameter (start, stop, reset)
+
+.PP
+Start the timer
+
+.PP
+Stop the timer
+
+.PP
+Reset the timer
+
+.PP
+Return the control message for the timer (start, stop, reset)
+.SS "String handleToggle (const String & toggle)"
+
+.PP
+Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax\&. Handle Toggle 
+.PP
+\fBParameters\fP
+.RS 4
+\fItoggle\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function toggles the variable (auto, pump, waterOut, resistor, waterIn) 
+
+.PP
+This function returns the toggle message for the variable (auto, pump, waterOut, resistor, waterIn) 
+.RE
+.PP
+Toggle the variable (auto, pump, waterOut, resistor, waterIn)
+
+.PP
+Toggle the auto mode indicator state
+
+.PP
+Toggle the pump state
+
+.PP
+Toggle the water out valve state
+
+.PP
+Toggle the water in valve state
+
+.PP
+Toggle the resistor state
+
+.PP
+Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)
+.SS "String handleWifiIP ()"
+
+.PP
+Handle Wifi IP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the WiFi IP address 
+.RE
+.PP
+
+.SS "String handleWifiQuality ()"
+
+.PP
+Handlers for Wifi Quality, SSID, TX and IP\&. Handle Wifi Quality 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the WiFi quality in percentage 
+.RE
+.PP
+
+.SS "String handleWifiSSID ()"
+
+.PP
+Handle Wifi SSID\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the WiFi SSID 
+.RE
+.PP
+
+.SS "String handleWifiTX ()"
+
+.PP
+Handle Wifi TX\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the WiFi TX power 
+.RE
+.PP
+
+.SS "String processor (const String & var)"
+
+.PP
+Function to handle the HTTP requests for the variables\&. Processor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvar\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function processes the variables for the web server requests 
+
+.PP
+This function is called by the web server handle function (server\&.on) 
+
+.PP
+This function returns the variable value for the web server request 
+.RE
+.PP
+Process the variable for the web server request (var) and return the variable value
+
+.PP
+Timer variable request
+
+.PP
+Return the timer value in the format HH:MM:SS
+
+.PP
+WaterMax variable request
+
+.PP
+Return the waterMax value
+
+.PP
+WaterMin variable request
+
+.PP
+Return the waterMin value
+
+.PP
+WaterAlarm variable request
+
+.PP
+Return the waterAlarm value
+
+.PP
+Auto variable request
+
+.PP
+Return the auto value
+
+.PP
+Manual variable request
+
+.PP
+Return the manual value
+
+.PP
+Pump variable request
+
+.PP
+Return the pump value
+
+.PP
+WaterOut variable request
+
+.PP
+Return the waterOut value
+
+.PP
+Resistor variable request
+
+.PP
+Return the resistor value
+
+.PP
+WaterIn variable request
+
+.PP
+Return the waterIn value
+
+.PP
+WifiQuality variable request
+
+.PP
+Return the wifiQuality value
+
+.PP
+WifiSSID variable request
+
+.PP
+Return the wifiSSID value
+
+.PP
+WifiTX variable request
+
+.PP
+Return the wifiTX value
+
+.PP
+WifiIP variable request
+
+.PP
+Return the wifiIP value
+
+.PP
+TimerHour variable request
+
+.PP
+Return the timerHour value
+
+.PP
+TimerMinute variable request
+
+.PP
+Return the timerMinute value
+
+.PP
+TimerSecound variable request
+
+.PP
+Return the timerSecound value
+
+.PP
+Return nothing if the variable is not found
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for IntelligentDestiller from the source code\&.

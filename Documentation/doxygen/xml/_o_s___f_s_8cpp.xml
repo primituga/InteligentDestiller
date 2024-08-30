@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_o_s___f_s_8cpp" kind="file" language="C++">
+    <compoundname>OS_FS.cpp</compoundname>
+    <includes refid="_o_s_8h" local="yes">OS.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>MD.h</label>
+        <link refid="_m_d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OS.h</label>
+        <link refid="_o_s_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/OS_FS.cpp</label>
+        <link refid="_o_s___f_s_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="5">
+        <label>SPIFFS.h</label>
+      </node>
+      <node id="3">
+        <label>WiFiManager.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_o_s___f_s_8cpp_1a71502ea2a2f3c2ba9d3caaeb1655c997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initFS</definition>
+        <argsstring>()</argsstring>
+        <name>initFS</name>
+        <briefdescription>
+<para>Initialize Serial Terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>LittleFS.</para>
+<para>Initialize File System (SPIFFS)</para>
+<para>This function is responsible for initializing the File System (SPIFFS).</para>
+<para><simplesect kind="note"><para>Initialize SPIFFS</para>
+</simplesect>
+<simplesect kind="return"><para>void</para>
+</simplesect>
+<programlisting><codeline><highlight class="normal">initFS();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Initialize SPIFFS</para>
+        </inbodydescription>
+        <location file="src/OS_FS.cpp" line="29" column="6" bodyfile="src/OS_FS.cpp" bodystart="29" bodyend="37"/>
+        <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
+        <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>File System functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sérgio Carmo (<ulink url="mailto:19749@ipportalegre.pt">19749@ipportalegre.pt</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_o_s_8h" kindref="compound">OS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"></codeline>
+<codeline lineno="29" refid="_o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s___f_s_8cpp_1a71502ea2a2f3c2ba9d3caaeb1655c997" kindref="member">initFS</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!SPIFFS.begin(</highlight><highlight class="keyword">true</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;An<sp/>Error<sp/>has<sp/>occurred<sp/>while<sp/>mounting<sp/>SPIFFS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/OS_FS.cpp"/>
+  </compounddef>
+</doxygen>

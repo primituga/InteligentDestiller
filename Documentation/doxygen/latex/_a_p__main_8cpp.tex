@@ -1,0 +1,201 @@
+\doxysection{src/\+AP\+\_\+main.cpp File Reference}
+\hypertarget{_a_p__main_8cpp}{}\label{_a_p__main_8cpp}\index{src/AP\_main.cpp@{src/AP\_main.cpp}}
+
+
+Main file for the MD project.  
+
+
+{\ttfamily \#include "{}AP.\+h"{}}\newline
+Include dependency graph for AP\+\_\+main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Async\+Web\+Socket \mbox{\hyperlink{_a_p__main_8cpp_a12b97dd15b0118cb30b85286f7c4b3c9}{ws}} ("{}/ws"{})
+\begin{DoxyCompactList}\small\item\em Debug mode. \end{DoxyCompactList}\item 
+Async\+Web\+Server \mbox{\hyperlink{_a_p__main_8cpp_a85f30d66aa1231313c8553fd485b22b1}{server}} (80)
+\begin{DoxyCompactList}\small\item\em Async\+Web\+Socket object to handle websocket connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p__main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Create a webserver object that listens for HTTP request on port 80. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p__main_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}{loop}} (void)
+\begin{DoxyCompactList}\small\item\em Loop function to run the machine operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p__main_8cpp_a8b626fb41c6433470c66289ad702ba87}{loop2}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Main function to run the second core operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_a_p__main_8cpp_a117352cc494cc62c6b2f1882786a332c}{DEBUG}} = 1
+\begin{DoxyCompactList}\small\item\em Web\+Server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main file for the MD project. 
+
+\begin{DoxyAuthor}{Author}
+Sérgio Carmo
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_a_p__main_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}\index{AP\_main.cpp@{AP\_main.cpp}!loop@{loop}}
+\index{loop@{loop}!AP\_main.cpp@{AP\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_a_p__main_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f} 
+void loop (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Loop function to run the machine operation. 
+
+This function is responsible for running the machine operation.
+
+\begin{DoxyNote}{Note}
+Read inputs 
+
+Destiler function to operate the machine 
+
+Update outputs
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3}{read\+Inputs()} 
+
+\doxylink{_a_p_8h_a59b4c2612675374aa0a9445d2f49d009}{destiler()} 
+
+\doxylink{_m_d_8h_a76f121aef723f8209031f700a1cf5a61}{update\+Outputs\+Web()} 
+\end{DoxySeeAlso}
+Destiler function to operate the machine
+
+Update outputsHere is the call graph for this function\+:
+% FIG 1
+\Hypertarget{_a_p__main_8cpp_a8b626fb41c6433470c66289ad702ba87}\index{AP\_main.cpp@{AP\_main.cpp}!loop2@{loop2}}
+\index{loop2@{loop2}!AP\_main.cpp@{AP\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop2()}{loop2()}}
+{\footnotesize\ttfamily \label{_a_p__main_8cpp_a8b626fb41c6433470c66289ad702ba87} 
+void loop2 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters}{}\end{DoxyParamCaption})}
+
+
+
+Main function to run the second core operation. 
+
+MAIN.
+
+This function is responsible for running the second core operation.
+
+\begin{DoxyNote}{Note}
+Initiate WIFI 
+
+Cleanup clients 
+
+Web\+Timer function
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{_m_d_8h_a6a4f6edd72eb1d80a65dea86d761f744}{init\+WIFI()} 
+
+ws.\+cleanup\+Clients() 
+
+\doxylink{_m_d_8h_a504723789792b242f59e8f9adfb48009}{web\+Timer()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameters} & \\
+\hline
+\end{DoxyParams}
+Main loop
+
+Cleanup clients
+
+Web\+Timer functionHere is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{_a_p__main_8cpp_a85f30d66aa1231313c8553fd485b22b1}\index{AP\_main.cpp@{AP\_main.cpp}!server@{server}}
+\index{server@{server}!AP\_main.cpp@{AP\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}}
+{\footnotesize\ttfamily \label{_a_p__main_8cpp_a85f30d66aa1231313c8553fd485b22b1} 
+Async\+Web\+Server server (\begin{DoxyParamCaption}\item[{80}]{}{}\end{DoxyParamCaption})}
+
+
+
+Async\+Web\+Socket object to handle websocket connections. 
+
+\Hypertarget{_a_p__main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\index{AP\_main.cpp@{AP\_main.cpp}!setup@{setup}}
+\index{setup@{setup}!AP\_main.cpp@{AP\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_a_p__main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create a webserver object that listens for HTTP request on port 80. 
+
+Setup function to initiate all the necessary functions to run the machine
+
+This function is responsible for initiating all the necessary functions to run the machine.
+
+\begin{DoxyNote}{Note}
+Initiate all pins as inputs 
+
+Initiate all pins as outputs 
+
+Initiate Serial communication 
+
+Initiate Multi\+Core 
+
+Initiate SPIFFS 
+
+Read inputs 
+
+Update outputs 
+
+Setup Routes 
+
+Add handler to the server 
+\end{DoxyNote}
+Initiate all pins as inputs
+
+Initiate all pins as outputs
+
+Initiate Serial communication (9600 bps)
+
+Test IO
+
+Initiate Multi\+Core (Second Core)
+
+Initiate SPIFFS (SPI Flash File System)
+
+Read inputs for the first time
+
+Update outputs for the web interface
+
+Initiate WIFI
+
+Setup Routes
+
+Add handler to the server (Websocket)Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{_a_p__main_8cpp_a12b97dd15b0118cb30b85286f7c4b3c9}\index{AP\_main.cpp@{AP\_main.cpp}!ws@{ws}}
+\index{ws@{ws}!AP\_main.cpp@{AP\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{ws()}{ws()}}
+{\footnotesize\ttfamily \label{_a_p__main_8cpp_a12b97dd15b0118cb30b85286f7c4b3c9} 
+Async\+Web\+Socket ws (\begin{DoxyParamCaption}\item[{"{}/ws"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Debug mode. 
+
+Async\+Web\+Socket object to handle websocket connections 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_a_p__main_8cpp_a117352cc494cc62c6b2f1882786a332c}\index{AP\_main.cpp@{AP\_main.cpp}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!AP\_main.cpp@{AP\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily \label{_a_p__main_8cpp_a117352cc494cc62c6b2f1882786a332c} 
+bool DEBUG = 1}
+
+
+
+Web\+Server. 
+

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___test___i_os_8cpp" xml:lang="en-US">
+<title>src/MD_Test_IOs.cpp File Reference</title>
+<indexterm><primary>src/MD_Test_IOs.cpp</primary></indexterm>
+<para>
+
+<para>Test I/Os for the MD project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_Test_IOs.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___test___i_os_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__m_d___test___i_os_8cpp_1af8d251b3d3e161e3f5e4c012e121d5c6">delayT</link>&#160;&#160;&#160;500</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__m_d___test___i_os_8cpp_1a9e210ff652f1bccff9bb78912bd121c1">test_IO</link> ()</para>
+
+<para>Test I/Os. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Test I/Os for the MD project. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__m_d___test___i_os_8cpp_1af8d251b3d3e161e3f5e4c012e121d5c6"/><section>
+    <title>delayT</title>
+<indexterm><primary>delayT</primary><secondary>MD_Test_IOs.cpp</secondary></indexterm>
+<indexterm><primary>MD_Test_IOs.cpp</primary><secondary>delayT</secondary></indexterm>
+<para><computeroutput>#define delayT&#160;&#160;&#160;500</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d___test___i_os_8cpp_1a9e210ff652f1bccff9bb78912bd121c1"/><section>
+    <title>test_IO()</title>
+<indexterm><primary>test_IO</primary><secondary>MD_Test_IOs.cpp</secondary></indexterm>
+<indexterm><primary>MD_Test_IOs.cpp</primary><secondary>test_IO</secondary></indexterm>
+<para><computeroutput>void test_IO ( )</computeroutput></para><para>
+
+<para>Test I/Os. </para>
+</para>
+
+<para>Print number with new line.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Test I/O Indicador Maximo</para>
+
+<para>Test I/O Indicador Minimo</para>
+
+<para>Test I/O Indicador Alarme</para>
+
+<para>Test I/O Indicador Manual</para>
+
+<para>Test I/O Indicador Auto</para>
+
+<para>Test I/O Indicador Valvula Entrada</para>
+
+<para>Test I/O Indicador Valvula Saida</para>
+
+<para>Test I/O Indicador Resistor</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___test___i_os_8cpp_a9e210ff652f1bccff9bb78912bd121c1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___test___i_os_8cpp_a9e210ff652f1bccff9bb78912bd121c1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

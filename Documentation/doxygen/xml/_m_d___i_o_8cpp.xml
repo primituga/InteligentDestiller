@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_m_d___i_o_8cpp" kind="file" language="C++">
+    <compoundname>MD_IO.cpp</compoundname>
+    <includes refid="_m_d_8h" local="yes">MD.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>MD.h</label>
+        <link refid="_m_d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>OS.h</label>
+        <link refid="_o_s_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/MD_IO.cpp</label>
+        <link refid="_m_d___i_o_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="6">
+        <label>SPIFFS.h</label>
+      </node>
+      <node id="4">
+        <label>WiFiManager.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleIndAuto</definition>
+        <argsstring>()</argsstring>
+        <name>toggleIndAuto</name>
+        <briefdescription>
+<para>Toggle the Auto Mode of the Machine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/MD_IO.cpp" line="17" column="6" bodyfile="src/MD_IO.cpp" bodystart="17" bodyend="37"/>
+        <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
+        <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
+        <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
+        <referencedby refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" compoundref="_m_d___i_o_8cpp" startline="44" endline="72">toggleAutoMode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleAutoMode</definition>
+        <argsstring>()</argsstring>
+        <name>toggleAutoMode</name>
+        <briefdescription>
+<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>current state of the button</para>
+<para>previous state of the button</para>
+<para>current state of the button</para>
+<para>the last time the output pin was toggled</para>
+<para>the debounce time; increase if the output flickers</para>
+<para>read the state of the switch into a local variable</para>
+<para>If the switch changed, due to noise or pressing</para>
+<para>reset the debouncing timer</para>
+<para>if the switch value has been stable for a while</para>
+<para>if the button state has changed</para>
+<para>save the new state</para>
+<para>if the button state is HIGH</para>
+<para>Toggle Auto Mode</para>
+<para>save the current state as the last state, for next time through the loop</para>
+        </inbodydescription>
+        <location file="src/MD_IO.cpp" line="44" column="6" bodyfile="src/MD_IO.cpp" bodystart="44" bodyend="72"/>
+        <references refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" compoundref="_o_s___g_p_i_o_8cpp" startline="165" endline="168">getAutoModeSW</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</references>
+        <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d___i_o_8cpp_1a747c973d9633421336e8d59a78faf49f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void indicatorsManagement</definition>
+        <argsstring>()</argsstring>
+        <name>indicatorsManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>INDICATORS BLOCK</para>
+<para>Set the maximum water level indicator</para>
+<para>Set the minimum water level indicator</para>
+<para>Set the alarm indicator</para>
+<para>Set the manual mode indicator</para>
+        </inbodydescription>
+        <location file="src/MD_IO.cpp" line="74" column="6" bodyfile="src/MD_IO.cpp" bodystart="74" bodyend="83"/>
+        <references refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" compoundref="_o_s___g_p_i_o_8cpp" startline="152" endline="155">getAlarmIND</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
+        <references refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</references>
+        <references refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</references>
+        <references refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</references>
+        <references refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" compoundref="_o_s___g_p_i_o_8cpp" startline="260" endline="284">setIndMax</references>
+        <references refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" compoundref="_o_s___g_p_i_o_8cpp" startline="295" endline="322">setIndMin</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d___i_o_8cpp_1a27162a64461db61f83b3752bd0b6d125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modeManagement</definition>
+        <argsstring>()</argsstring>
+        <name>modeManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator</para>
+<para>Toggle the auto mode</para>
+<para>Set the auto mode indicator to the web value of the auto mode</para>
+<para>Set the auto mode indicator to OFF</para>
+<para>Set the auto mode to OFF in the web interface</para>
+<para>If the machine is in manual mode, turn off the timer</para>
+<para>Turn off the timer</para>
+        </inbodydescription>
+        <location file="src/MD_IO.cpp" line="85" column="6" bodyfile="src/MD_IO.cpp" bodystart="85" bodyend="107"/>
+        <references refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="46" endline="49">getAutoModeWeb</references>
+        <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
+        <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
+        <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
+        <references refid="_m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f" compoundref="_m_d___i_o_8cpp" startline="44" endline="72">toggleAutoMode</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>IO functions for the MD project &lt;This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project.&gt; </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sérgio Carmo</para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_d_8h" kindref="compound">MD.h</ref>&quot;</highlight></codeline>
+<codeline lineno="17" refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" kindref="member">toggleIndAuto</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state<sp/>=<sp/><ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>==<sp/><ref refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/>!state;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" kindref="member">setIndAuto</ref>(state);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" kindref="member">setAutoModeWeb</ref>(state);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ws.textAll(String(state));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>.textAll(String(</highlight><highlight class="stringliteral">&quot;<sp/>autoMode:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>state));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/>!state;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" kindref="member">setIndAuto</ref>(state);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" kindref="member">setAutoModeWeb</ref>(state);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ws.textAll(String(state));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>.textAll(String(</highlight><highlight class="stringliteral">&quot;<sp/>autoMode:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>state));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f" kindref="member">toggleAutoMode</ref>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buttonState<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lastButtonState<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentButtonState<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lastDebounceTime<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>debounceDelay<sp/>=<sp/>50;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>currentButtonState<sp/>=<sp/><ref refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" kindref="member">getAutoModeSW</ref>();<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentButtonState<sp/>!=<sp/>lastButtonState)<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastDebounceTime<sp/>=<sp/>millis();<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((millis()<sp/>-<sp/>lastDebounceTime)<sp/>&gt;<sp/>debounceDelay)<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentButtonState<sp/>!=<sp/>buttonState)<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttonState<sp/>=<sp/>currentButtonState;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buttonState<sp/>==<sp/><ref refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" kindref="member">toggleIndAuto</ref>();<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>lastButtonState<sp/>=<sp/>currentButtonState;<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d___i_o_8cpp_1a747c973d9633421336e8d59a78faf49f" kindref="member">indicatorsManagement</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" kindref="member">setIndMax</ref>(<ref refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" kindref="member">getWaterMax</ref>());<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" kindref="member">setIndMin</ref>(<ref refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" kindref="member">getWaterMin</ref>());<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" kindref="member">setIndAlarm</ref>(<ref refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" kindref="member">getAlarmIND</ref>());<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" kindref="member">setIndMan</ref>(<ref refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" kindref="member">getManualMode</ref>());<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d___i_o_8cpp_1a27162a64461db61f83b3752bd0b6d125" kindref="member">modeManagement</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" kindref="member">getManualMode</ref>())</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f" kindref="member">toggleAutoMode</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" kindref="member">setIndAuto</ref>(<ref refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" kindref="member">getAutoModeWeb</ref>());<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" kindref="member">setIndAuto</ref>(<ref refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref>);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" kindref="member">setAutoModeWeb</ref>(<ref refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref>);<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto</ref>())</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" kindref="member">setTimer</ref>(<ref refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref>);<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/MD_IO.cpp"/>
+  </compounddef>
+</doxygen>

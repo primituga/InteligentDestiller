@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_8h" xml:lang="en-US">
+<title>include/AP.h File Reference</title>
+<indexterm><primary>include/AP.h</primary></indexterm>
+<para>
+
+<para>Header file for the AP project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for AP.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_p_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_p_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__a_p_8h_1a59b4c2612675374aa0a9445d2f49d009">destiler</link> ()</para>
+
+<para>APP Header. </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4">setupRoutes</link> ()</para>
+
+<para>Setup Calls. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file for the AP project. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_p_8h_1a59b4c2612675374aa0a9445d2f49d009"/><section>
+    <title>destiler()</title>
+<indexterm><primary>destiler</primary><secondary>AP.h</secondary></indexterm>
+<indexterm><primary>AP.h</primary><secondary>destiler</secondary></indexterm>
+<para><computeroutput>void destiler ( )</computeroutput></para><para>
+
+<para>APP Header. </para>
+</para>
+
+<para>Function prototypes <?linebreak?></para>
+
+<para>APP Header.</para>
+
+<para>This function is responsible for managing the operation of the machine. </para>
+
+<para>BMB_FLAG, RAQ_FLAG BMB_FLAG and RAQ_FLAG are flags that are used to control the operation of the machine. BMB_FLAG is used to control the operation of the water pump. RAQ_FLAG is used to control the operation of the water heater resistor. <note><title>Note</title>
+
+<para>BMB_FLAG and RAQ_FLAG are used to control the operation of the machine. </para>
+
+<para>BMB_FLAG is used to control the operation of the water pump. </para>
+
+<para>RAQ_FLAG is used to control the operation of the water heater resistor.</para>
+</note>
+&lt; Debug information logging</para>
+
+<para>Call the indicatorsManagement function to manage the indicators of the machine</para>
+
+<para>Call the modeManagement function to manage the different modes of the machine (Auto and Manual)</para>
+
+<para>WORKING BLOCK</para>
+
+<para>Flag to control the operation of the water pump</para>
+
+<para>If the water level is at the maximum, the water pump is turned off. If the water level is at the minimum or there is an alarm, the water pump is turned on. <note><title>Note</title>
+
+<para>If the water level is at the maximum, the water pump is turned off. </para>
+
+<para>If the water level is at the minimum or there is an alarm, the water pump is turned on.</para>
+</note>
+If the water level is at the maximum turn off the water pump</para>
+
+<para>Turn off the water pump</para>
+
+<para>Set the water pump to OFF in the web interface</para>
+
+<para>If the water level is at the minimum or at the alarm level, turn on the water pump</para>
+
+<para>Turn on the water pump</para>
+
+<para>Control of the operation of the water heater resistor</para>
+
+<para>If the water level is at the maximum, the water heater resistor is turned off. If the water level is at the minimum or there is an alarm, the water heater resistor is turned on. <note><title>Note</title>
+
+<para>If the water level is at the maximum, the water heater resistor is turned off. </para>
+
+<para>If the water level is at the minimum or there is an alarm, the water heater resistor is turned on. *</para>
+</note>
+If the water level is at the maximum or min or is not at alarm lvl, turn ON the water heater resistor</para>
+
+<para>If the water level is at the alarmlvl, turn OFF the water heater resistor</para>
+
+<para>BMB, RAQ, V_IN, V_OUT BMB, RAQ, V_IN, V_OUT are variables that are used to control the operation of the machine. BMB is used to control the operation of the water pump. RAQ is used to control the operation of the water heater resistor. V_IN is used to control the operation of the water inlet valve. V_OUT is used to control the operation of the water outlet valve. <note><title>Note</title>
+
+<para>BMB is used to control the operation of the water pump. </para>
+
+<para>RAQ is used to control the operation of the water heater resistor. </para>
+
+<para>V_IN is used to control the operation of the water inlet valve. </para>
+
+<para>V_OUT is used to control the operation of the water outlet valve.</para>
+</note>
+If the water pump is on and the machine is in auto mode or the water pump is on in manual mode and the water level is not at the maximum, turn on the water pump</para>
+
+<para>If the water heater resistor is on and the machine is in auto mode or the water heater resistor is on in manual mode and the alarm is not on, turn on the water heater resistor</para>
+
+<para>If the water inlet valve is on and the machine is in auto mode or the water inlet valve is on in manual mode and the alarm is not on, turn on the water inlet valve</para>
+
+<para>If the water outlet valve is on and the machine is in auto mode or the water outlet valve is on in manual mode and the alarm is not on, turn on the water outlet valve</para>
+
+<para>Set the Pump object to the BMB variable value Set the Pump object to the BMB variable value. <note><title>Note</title>
+
+<para>Set the Pump object to the BMB variable value.</para>
+</note>
+Set the Resistor object to the RAQ variable value Set the Resistor object to the RAQ variable value. <note><title>Note</title>
+
+<para>Set the Resistor object to the RAQ variable value.</para>
+</note>
+Set the Valve Water In object Set the Valve Water In object to the V_IN variable value. <note><title>Note</title>
+
+<para>Set the Valve Water In object to the V_IN variable value.</para>
+</note>
+Set the Valve Water Out object Set the Valve Water Out object to the V_OUT variable value. <note><title>Note</title>
+
+<para>Set the Valve Water Out object to the V_OUT variable value.</para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_p_8h_a59b4c2612675374aa0a9445d2f49d009_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_p_8h_a59b4c2612675374aa0a9445d2f49d009_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4"/><section>
+    <title>setupRoutes()</title>
+<indexterm><primary>setupRoutes</primary><secondary>AP.h</secondary></indexterm>
+<indexterm><primary>AP.h</primary><secondary>setupRoutes</secondary></indexterm>
+<para><computeroutput>void setupRoutes ( )</computeroutput></para><para>
+
+<para>Setup Calls. </para>
+</para>
+
+<para>Setup the routes for the web server.</para>
+
+<para>This function defines the routes for handling HTTP GET requests for various resources such as HTML pages, CSS files, JS files, images, time adjustments, timer control, toggle actions, state actions, WiFi handlers, and timer handlers. </para>
+
+<para>Set the WebSocket event handler function for the WebSocket Server (ws)</para>
+
+<para>Add the WebSocket handler to the server (server) ///////////////////////////////////////////////////////////////////////////////////// Route for root / and index_webButtons.html</para>
+
+<para>Send the index.html file to the client when the root / is requested</para>
+
+<para>Send the index.html file to the client when the root / is requested</para>
+
+<para>Route for CSS files</para>
+
+<para>Send the style.css file to the client when requested</para>
+
+<para>Send the style.css file to the client when requested</para>
+
+<para>Send the style.css file to the client when requested</para>
+
+<para>Route JS files</para>
+
+<para>Send the script_actions.js file to the client when requested</para>
+
+<para>Send the script_get_Data.js file to the client when requested</para>
+
+<para>Send the script_timers.js file to the client when requested</para>
+
+<para>Send the script_timers_Img.js file to the client when requested</para>
+
+<para>Send the script_timers_2.js file to the client when requested</para>
+
+<para>Route for image files</para>
+
+<para>Send the icon.png file to the client when requested</para>
+
+<para>Send the estg_logo.png file to the client when requested</para>
+
+<para>Send the bg.png file to the client when requested</para>
+
+<para>Send the destiller.png file to the client when requested</para>
+
+<para>Send the BMB_ON.png file to the client when requested</para>
+
+<para>Send the BMB_OFF.png file to the client when requested</para>
+
+<para>Send the RAQ_ON.png file to the client when requested</para>
+
+<para>Send the RAQ_OFF.png file to the client when requested</para>
+
+<para>Send the Valve_ON.png file to the client when requested</para>
+
+<para>Send the Valve_OFF.png file to the client when requested</para>
+
+<para>Send the Auto_ON.png file to the client when requested</para>
+
+<para>Send the Auto_OFF.png file to the client when requested</para>
+
+<para>Send the Man_ON.png file to the client when requested</para>
+
+<para>Send the Man_OFF.png file to the client when requested</para>
+
+<para>Send the sMin.png file to the client when requested</para>
+
+<para>Send the sMax.png file to the client when requested</para>
+
+<para>Send the sAlarm.png file to the client when requested</para>
+
+<para>Send the button_ON.png file to the client when requested</para>
+
+<para>Send the button_OFF.png file to the client when requested</para>
+
+<para>Routes for handling time adjustments</para>
+
+<para>Send the response to the client when the /add1s route is requested</para>
+
+<para>Send the response to the client when the /add5s route is requested</para>
+
+<para>Send the response to the client when the /add10s route is requested</para>
+
+<para>Send the response to the client when the /add1m route is requested</para>
+
+<para>Send the response to the client when the /add5m route is requested</para>
+
+<para>Send the response to the client when the /add10m route is requested</para>
+
+<para>Send the response to the client when the /rem1s route is requested</para>
+
+<para>Send the response to the client when the /rem5s route is requested</para>
+
+<para>Send the response to the client when the /rem10s route is requested</para>
+
+<para>Send the response to the client when the /rem1m route is requested</para>
+
+<para>Send the response to the client when the /rem5m route is requested</para>
+
+<para>Send the response to the client when the /rem10m route is requested</para>
+
+<para>Routes for handling timer control</para>
+
+<para>Send the response to the client when the /startTimer route is requested</para>
+
+<para>Send the response to the client when the /stopTimer route is requested</para>
+
+<para>Send the response to the client when the /resetTimer route is requested</para>
+
+<para>Routes for handling toggle actions</para>
+
+<para>Send the response to the client when the /toggleAutoMode route is requested</para>
+
+<para>Send the response to the client when the /togglePump route is requested</para>
+
+<para>Send the response to the client when the /toggleWaterOut route is requested</para>
+
+<para>Send the response to the client when the /toggleWaterIn route is requested</para>
+
+<para>Send the response to the client when the /toggleResistor route is requested</para>
+
+<para>Routes for handling read actions</para>
+
+<para>Send the response to the client when the /readAutoMode route is requested</para>
+
+<para>Send the response to the client when the /readManualMode route is requested</para>
+
+<para>Send the response to the client when the /readPump route is requested</para>
+
+<para>Send the response to the client when the /readWaterOut route is requested</para>
+
+<para>Send the response to the client when the /readResistor route is requested</para>
+
+<para>Send the response to the client when the /readWaterIn route is requested</para>
+
+<para>Send the response to the client when the /readWaterMax route is requested</para>
+
+<para>Send the response to the client when the /readWaterMin route is requested</para>
+
+<para>Send the response to the client when the /readWaterAlarm route is requested</para>
+
+<para>Route for WiFi Handlers</para>
+
+<para>Send the response to the client when the /readWifiQuality route is requested</para>
+
+<para>Send the response to the client when the /readWifiSSID route is requested</para>
+
+<para>Send the response to the client when the /readWifiTX route is requested</para>
+
+<para>Send the response to the client when the /readWifiIP route is requested</para>
+
+<para>Route for Timer Handlers</para>
+
+<para>Send the response to the client when the /readTimer route is requested</para>
+
+<para>Send the response to the client when the /readHour route is requested</para>
+
+<para>Send the response to the client when the /readMinute route is requested</para>
+
+<para>Send the response to the client when the /readSecound route is requested</para>
+
+<para>Start Server</para>
+
+<para>Start the server</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_p_8h_a553ce9cca044d40931e5cbe9deb407e4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_p_8h_a553ce9cca044d40931e5cbe9deb407e4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

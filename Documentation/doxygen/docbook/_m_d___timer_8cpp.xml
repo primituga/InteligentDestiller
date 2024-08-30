@@ -1,0 +1,856 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___timer_8cpp" xml:lang="en-US">
+<title>src/MD_Timer.cpp File Reference</title>
+<indexterm><primary>src/MD_Timer.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_Timer.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474">sendTimer</link> ()</para>
+
+<para>Send timer to web. </para>
+</listitem>
+            <listitem><para>long <link linkend="__m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009">webTimer</link> (String op, int16_t amount)</para>
+
+<para>Web timer function to manage the timer operations in the web interface. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d___timer_8cpp_1aa9493843bba040c07f9f66300059268a">getTimerStatus</link> ()</para>
+
+<para>Get the Timer Status object to get the timer status (ON/OFF) </para>
+</listitem>
+            <listitem><para>int <link linkend="__m_d___timer_8cpp_1a71f3ffe6a2e0fca30bca87a87fc92354">getTimerSecound</link> ()</para>
+
+<para>Get the Timer Secound object to get the timer secound. </para>
+</listitem>
+            <listitem><para>int <link linkend="__m_d___timer_8cpp_1ae8ad20dbd759f4fb98dabba7876428f4">getTimerMinute</link> ()</para>
+
+<para>Get the Timer Minute object to get the timer minute. </para>
+</listitem>
+            <listitem><para>int <link linkend="__m_d___timer_8cpp_1a7497ed4b5f459145ba576e35a34b2f68">getTimerHour</link> ()</para>
+
+<para>Get the Timer Hour object to get the timer hour. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a75d67ecc1e985e54d2701c06a6aaa3a1">setTimer</link> (bool stat)</para>
+
+<para>Set the Timer object to set the timer status (ON/OFF) </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a4205a2b9aa1216af70d0e72d139508a0">add1s</link> ()</para>
+
+<para>Add 1 secound to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1aa323da979d7e0bdd7639b1932d401150">add5s</link> ()</para>
+
+<para>Add 5 secounds to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1aecf5a85e72e116087f5917d708e37f64">add10s</link> ()</para>
+
+<para>Add 10 secounds to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a4e34974421187d65e1cb2db63585549d">add1m</link> ()</para>
+
+<para>Add 1 minute to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a10e275a2b4beec90555c95286db80a6a">add5m</link> ()</para>
+
+<para>Add 5 minutes to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a2345c47ec0c5b7a61a02281c2174df89">add10m</link> ()</para>
+
+<para>Add 10 minutes to timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a82bc62194a206899dfa2b287b9d16236">rem1s</link> ()</para>
+
+<para>Remove 1 secound from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a7e996a9f3af638141257662a8f931e11">rem5s</link> ()</para>
+
+<para>Remove 5 secounds from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1aab03ff01ea9b512f5470cd80bee1025c">rem10s</link> ()</para>
+
+<para>Remove 10 secounds from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a1d544cbb8a4f76ecae3455d08961fa66">rem1m</link> ()</para>
+
+<para>Remove 1 minute from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1a6dd7da3e0329e60af93c3c96301fb81e">rem5m</link> ()</para>
+
+<para>Remove 5 minutes from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1afde4bd8c891772121c1bee27077ab395">rem10m</link> ()</para>
+
+<para>Remove 10 minutes from timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___timer_8cpp_1ad43a02209687d9c1e04dddd167f32c45">resetTimer</link> ()</para>
+
+<para>Reset timer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="__m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b">flagTimerStatus</link> = <link linkend="__o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5">OFF</link></para>
+
+<para>Timer Functions. </para>
+</listitem>
+            <listitem><para>const unsigned long <link linkend="__m_d___timer_8cpp_1a56cbe7f463932051d17bba95b3cac9b4">updateInterval</link> = 1000</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d___timer_8cpp_1a2345c47ec0c5b7a61a02281c2174df89"/><section>
+    <title>add10m()</title>
+<indexterm><primary>add10m</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>add10m</secondary></indexterm>
+<para><computeroutput>void add10m ( )</computeroutput></para><para>
+
+<para>Add 10 minutes to timer. </para>
+</para>
+
+<para>Add 5 minutes to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a2345c47ec0c5b7a61a02281c2174df89_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a2345c47ec0c5b7a61a02281c2174df89_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1aecf5a85e72e116087f5917d708e37f64"/><section>
+    <title>add10s()</title>
+<indexterm><primary>add10s</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>add10s</secondary></indexterm>
+<para><computeroutput>void add10s ( )</computeroutput></para><para>
+
+<para>Add 10 secounds to timer. </para>
+</para>
+
+<para>Add 5 secounds to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aecf5a85e72e116087f5917d708e37f64_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aecf5a85e72e116087f5917d708e37f64_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a4e34974421187d65e1cb2db63585549d"/><section>
+    <title>add1m()</title>
+<indexterm><primary>add1m</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>add1m</secondary></indexterm>
+<para><computeroutput>void add1m ( )</computeroutput></para><para>
+
+<para>Add 1 minute to timer. </para>
+</para>
+
+<para>Add 10 secounds to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a4e34974421187d65e1cb2db63585549d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a4e34974421187d65e1cb2db63585549d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a4205a2b9aa1216af70d0e72d139508a0"/><section>
+    <title>add1s()</title>
+<indexterm><primary>add1s</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>add1s</secondary></indexterm>
+<para><computeroutput>void add1s ( )</computeroutput></para><para>
+
+<para>Add 1 secound to timer. </para>
+</para>
+
+<para>Get timer status. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a4205a2b9aa1216af70d0e72d139508a0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a4205a2b9aa1216af70d0e72d139508a0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a10e275a2b4beec90555c95286db80a6a"/><section>
+    <title>add5m()</title>
+<indexterm><primary>add5m</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>add5m</secondary></indexterm>
+<para><computeroutput>void add5m ( )</computeroutput></para><para>
+
+<para>Add 5 minutes to timer. </para>
+</para>
+
+<para>Add 1 minute to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a10e275a2b4beec90555c95286db80a6a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a10e275a2b4beec90555c95286db80a6a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1aa323da979d7e0bdd7639b1932d401150"/><section>
+    <title>add5s()</title>
+<indexterm><primary>add5s</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>add5s</secondary></indexterm>
+<para><computeroutput>void add5s ( )</computeroutput></para><para>
+
+<para>Add 5 secounds to timer. </para>
+</para>
+
+<para>Add 1 secound to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aa323da979d7e0bdd7639b1932d401150_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aa323da979d7e0bdd7639b1932d401150_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a7497ed4b5f459145ba576e35a34b2f68"/><section>
+    <title>getTimerHour()</title>
+<indexterm><primary>getTimerHour</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>getTimerHour</secondary></indexterm>
+<para><computeroutput>int getTimerHour ( )</computeroutput></para><para>
+
+<para>Get the Timer Hour object to get the timer hour. </para>
+</para>
+
+<para>Get timer minute.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+
+<para>Return the timer hours left in the timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a7497ed4b5f459145ba576e35a34b2f68_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a7497ed4b5f459145ba576e35a34b2f68_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1ae8ad20dbd759f4fb98dabba7876428f4"/><section>
+    <title>getTimerMinute()</title>
+<indexterm><primary>getTimerMinute</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>getTimerMinute</secondary></indexterm>
+<para><computeroutput>int getTimerMinute ( )</computeroutput></para><para>
+
+<para>Get the Timer Minute object to get the timer minute. </para>
+</para>
+
+<para>Get timer secound.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+
+<para>Return the timer minutes left in the timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_ae8ad20dbd759f4fb98dabba7876428f4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_ae8ad20dbd759f4fb98dabba7876428f4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a71f3ffe6a2e0fca30bca87a87fc92354"/><section>
+    <title>getTimerSecound()</title>
+<indexterm><primary>getTimerSecound</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>getTimerSecound</secondary></indexterm>
+<para><computeroutput>int getTimerSecound ( )</computeroutput></para><para>
+
+<para>Get the Timer Secound object to get the timer secound. </para>
+</para>
+
+<para>Timer for web operations.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+
+<para>Return the timer seconds left in the timer <?linebreak?></para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a71f3ffe6a2e0fca30bca87a87fc92354_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a71f3ffe6a2e0fca30bca87a87fc92354_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1aa9493843bba040c07f9f66300059268a"/><section>
+    <title>getTimerStatus()</title>
+<indexterm><primary>getTimerStatus</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>getTimerStatus</secondary></indexterm>
+<para><computeroutput>bool getTimerStatus ( )</computeroutput></para><para>
+
+<para>Get the Timer Status object to get the timer status (ON/OFF) </para>
+</para>
+
+<para>Get timer hour.</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called by the processor function in AP_Destiller.cpp </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+
+<para>Return the timer status (ON/OFF)</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aa9493843bba040c07f9f66300059268a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1afde4bd8c891772121c1bee27077ab395"/><section>
+    <title>rem10m()</title>
+<indexterm><primary>rem10m</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>rem10m</secondary></indexterm>
+<para><computeroutput>void rem10m ( )</computeroutput></para><para>
+
+<para>Remove 10 minutes from timer. </para>
+</para>
+
+<para>Remove 5 minutes from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_afde4bd8c891772121c1bee27077ab395_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_afde4bd8c891772121c1bee27077ab395_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1aab03ff01ea9b512f5470cd80bee1025c"/><section>
+    <title>rem10s()</title>
+<indexterm><primary>rem10s</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>rem10s</secondary></indexterm>
+<para><computeroutput>void rem10s ( )</computeroutput></para><para>
+
+<para>Remove 10 secounds from timer. </para>
+</para>
+
+<para>Remove 5 secounds from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aab03ff01ea9b512f5470cd80bee1025c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_aab03ff01ea9b512f5470cd80bee1025c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a1d544cbb8a4f76ecae3455d08961fa66"/><section>
+    <title>rem1m()</title>
+<indexterm><primary>rem1m</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>rem1m</secondary></indexterm>
+<para><computeroutput>void rem1m ( )</computeroutput></para><para>
+
+<para>Remove 1 minute from timer. </para>
+</para>
+
+<para>Remove 10 secounds from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a1d544cbb8a4f76ecae3455d08961fa66_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a1d544cbb8a4f76ecae3455d08961fa66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a82bc62194a206899dfa2b287b9d16236"/><section>
+    <title>rem1s()</title>
+<indexterm><primary>rem1s</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>rem1s</secondary></indexterm>
+<para><computeroutput>void rem1s ( )</computeroutput></para><para>
+
+<para>Remove 1 secound from timer. </para>
+</para>
+
+<para>Add 10 minutes to timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a82bc62194a206899dfa2b287b9d16236_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a82bc62194a206899dfa2b287b9d16236_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a6dd7da3e0329e60af93c3c96301fb81e"/><section>
+    <title>rem5m()</title>
+<indexterm><primary>rem5m</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>rem5m</secondary></indexterm>
+<para><computeroutput>void rem5m ( )</computeroutput></para><para>
+
+<para>Remove 5 minutes from timer. </para>
+</para>
+
+<para>Remove 1 minute from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a6dd7da3e0329e60af93c3c96301fb81e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a6dd7da3e0329e60af93c3c96301fb81e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a7e996a9f3af638141257662a8f931e11"/><section>
+    <title>rem5s()</title>
+<indexterm><primary>rem5s</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>rem5s</secondary></indexterm>
+<para><computeroutput>void rem5s ( )</computeroutput></para><para>
+
+<para>Remove 5 secounds from timer. </para>
+</para>
+
+<para>Remove 1 secound from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a7e996a9f3af638141257662a8f931e11_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a7e996a9f3af638141257662a8f931e11_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1ad43a02209687d9c1e04dddd167f32c45"/><section>
+    <title>resetTimer()</title>
+<indexterm><primary>resetTimer</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>resetTimer</secondary></indexterm>
+<para><computeroutput>void resetTimer ( )</computeroutput></para><para>
+
+<para>Reset timer. </para>
+</para>
+
+<para>Remove 10 minutes from timer. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_ad43a02209687d9c1e04dddd167f32c45_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_ad43a02209687d9c1e04dddd167f32c45_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474"/><section>
+    <title>sendTimer()</title>
+<indexterm><primary>sendTimer</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>sendTimer</secondary></indexterm>
+<para><computeroutput>void sendTimer ( )</computeroutput></para><para>
+
+<para>Send timer to web. </para>
+</para>
+
+<para>This function sends the timer to the web interface to update the timer display in the web interface.</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called by the webTimer function in <link linkend="__m_d___timer_8cpp">MD_Timer.cpp</link> </para>
+</note>
+</para>
+
+<para>Old values to compare with the new values to send updates only when the timer changes</para>
+
+<para>Only send updates if the timer has changed</para>
+
+<para>Send the timer to the web interface</para>
+
+<para>Create the message to send to the web interface as a JSON object</para>
+
+<para>Send the message to the web interface</para>
+
+<para>Update the old values</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_acf8eb689c061a70a35d6f2f5ed57c474_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_acf8eb689c061a70a35d6f2f5ed57c474_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a75d67ecc1e985e54d2701c06a6aaa3a1"/><section>
+    <title>setTimer()</title>
+<indexterm><primary>setTimer</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>setTimer</secondary></indexterm>
+<para><computeroutput>void setTimer (bool stat)</computeroutput></para><para>
+
+<para>Set the Timer object to set the timer status (ON/OFF) </para>
+</para>
+
+<para>Reset timer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>stat</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>Set the timer status (ON/OFF)</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a75d67ecc1e985e54d2701c06a6aaa3a1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a75d67ecc1e985e54d2701c06a6aaa3a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009"/><section>
+    <title>webTimer()</title>
+<indexterm><primary>webTimer</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>webTimer</secondary></indexterm>
+<para><computeroutput>long webTimer (String op, int16_t amount)</computeroutput></para><para>
+
+<para>Web timer function to manage the timer operations in the web interface. </para>
+</para>
+
+<para>Timer Functions calls.</para>
+
+<para>This function is responsible for managing the timer operations.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>op</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>amount</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>unsigned long </para>
+</formalpara>
+</para>
+
+<para>Timer operations to add, remove or reset the timer value in miliseconds</para>
+
+<para>Add time to the timer</para>
+
+<para>Add 1 second</para>
+
+<para>Add 5 seconds</para>
+
+<para>Add 10 seconds</para>
+
+<para>Add 1 minute</para>
+
+<para>Add 5 minutes</para>
+
+<para>Add 10 minutes</para>
+
+<para>Remove time from the timer</para>
+
+<para>Remove 1 second</para>
+
+<para>Remove 5 seconds</para>
+
+<para>Remove 10 seconds</para>
+
+<para>Remove 1 minute</para>
+
+<para>Remove 5 minutes</para>
+
+<para>Remove 10 minutes</para>
+
+<para>Reset the timer to 0</para>
+
+<para>Timer management to decrease the timer every second and turn it off when it reaches 0 seconds left</para>
+
+<para>Decrease the timer every second if the timer is ON</para>
+
+<para>Turn off the timer when it reaches 0 seconds left</para>
+
+<para>Only send updates at the defined interval</para>
+
+<para>Send the timer to the web interface</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a504723789792b242f59e8f9adfb48009_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___timer_8cpp_a504723789792b242f59e8f9adfb48009_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b"/><section>
+    <title>flagTimerStatus</title>
+<indexterm><primary>flagTimerStatus</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>flagTimerStatus</secondary></indexterm>
+<para><computeroutput>bool flagTimerStatus = <link linkend="__o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5">OFF</link></computeroutput></para><para>
+
+<para>Timer Functions. </para>
+</para>
+</section>
+<anchor xml:id="__m_d___timer_8cpp_1a56cbe7f463932051d17bba95b3cac9b4"/><section>
+    <title>updateInterval</title>
+<indexterm><primary>updateInterval</primary><secondary>MD_Timer.cpp</secondary></indexterm>
+<indexterm><primary>MD_Timer.cpp</primary><secondary>updateInterval</secondary></indexterm>
+<para><computeroutput>const unsigned long updateInterval = 1000</computeroutput></para></section>
+</section>
+</section>
