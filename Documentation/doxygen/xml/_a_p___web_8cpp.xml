@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_a_p___web_8cpp" kind="file" language="C++">
+    <compoundname>AP_Web.cpp</compoundname>
+    <includes refid="_a_p_8h" local="yes">AP.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>AP.h</label>
+        <link refid="_a_p_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MD.h</label>
+        <link refid="_m_d_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>OS.h</label>
+        <link refid="_o_s_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/AP_Web.cpp</label>
+        <link refid="_a_p___web_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="7">
+        <label>SPIFFS.h</label>
+      </node>
+      <node id="5">
+        <label>WiFiManager.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_a_p___web_8cpp_1a0be75b75b82f96e18d5c695059a67a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleWebSocketMessage</definition>
+        <argsstring>(void *arg, uint8_t *data, size_t len)</argsstring>
+        <name>handleWebSocketMessage</name>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Definitions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Variables and Constants for Web Server and WebSocket Server</para>
+<para>Web Server and WebSocket Server variables</para>
+<para>These variables are used to create the Web Server and WebSocket Server.</para>
+<para><simplesect kind="note"><para>These variables are used to create the Web Server and WebSocket Server. </para>
+</simplesect>
+<simplesect kind="note"><para>These variables are used to handle the HTTP GET requests for various resources.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Web Server </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ws</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WebSocket Server </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>processor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Web Server Processor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wsFrameInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WebSocket Frame Information </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wsMask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>WebSocket Mask</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>WebSocket Frame Information Structure Pointer (info)</para>
+<para>Check if the WebSocket message is a text message and the final message in the frame sequence and the length of the message is equal to the length of the frame and the index of the frame is 0</para>
+<para>Null-terminate the data to make it a string (char array)</para>
+<para>Convert the data to a String object</para>
+<para>Print the received WebSocket message</para>
+        </inbodydescription>
+        <location file="src/AP_Web.cpp" line="29" column="6" bodyfile="src/AP_Web.cpp" bodystart="29" bodyend="38"/>
+        <referencedby refid="_a_p___web_8cpp_1ad296f25594d8ca4d02d0025819437b7b" compoundref="_a_p___web_8cpp" startline="54" endline="71">onEvent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p___web_8cpp_1ad296f25594d8ca4d02d0025819437b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void onEvent</definition>
+        <argsstring>(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)</argsstring>
+        <name>onEvent</name>
+        <param>
+          <type>AsyncWebSocket *</type>
+          <declname>server</declname>
+        </param>
+        <param>
+          <type>AsyncWebSocketClient *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>AwsEventType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Web Server and WebSocket Server variables and constants initialization function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the Web Server and WebSocket Server variables and constants.</para>
+<para><simplesect kind="note"><para>This function initializes the Web Server and WebSocket Server variables and constants.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Handle WebSocket events based on the event type (type)</para>
+<para>WebSocket client connected event</para>
+<para>Print the IP address of the connected WebSocket client</para>
+<para>WebSocket client disconnected event</para>
+<para>Print the IP address of the disconnected WebSocket client</para>
+<para>WebSocket data event</para>
+<para>Handle the WebSocket message data event</para>
+<para>WebSocket Pong event (response to a Ping)</para>
+<para>WebSocket error event</para>
+        </inbodydescription>
+        <location file="src/AP_Web.cpp" line="54" column="6" bodyfile="src/AP_Web.cpp" bodystart="54" bodyend="71"/>
+        <references refid="_a_p___web_8cpp_1a0be75b75b82f96e18d5c695059a67a63" compoundref="_a_p___web_8cpp" startline="29" endline="38">handleWebSocketMessage</references>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_a_p___web_8cpp_1a553ce9cca044d40931e5cbe9deb407e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupRoutes</definition>
+        <argsstring>()</argsstring>
+        <name>setupRoutes</name>
+        <briefdescription>
+<para>Setup Calls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Setup the routes for the web server.</para>
+<para>This function defines the routes for handling HTTP GET requests for various resources such as HTML pages, CSS files, JS files, images, time adjustments, timer control, toggle actions, state actions, WiFi handlers, and timer handlers. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Set the WebSocket event handler function for the WebSocket Server (ws)</para>
+<para>Add the WebSocket handler to the server (server) ///////////////////////////////////////////////////////////////////////////////////// Route for root / and index_webButtons.html</para>
+<para>Send the index.html file to the client when the root / is requested</para>
+<para>Send the index.html file to the client when the root / is requested</para>
+<para>Route for CSS files</para>
+<para>Send the style.css file to the client when requested</para>
+<para>Send the style.css file to the client when requested</para>
+<para>Send the style.css file to the client when requested</para>
+<para>Route JS files</para>
+<para>Send the script_actions.js file to the client when requested</para>
+<para>Send the script_get_Data.js file to the client when requested</para>
+<para>Send the script_timers.js file to the client when requested</para>
+<para>Send the script_timers_Img.js file to the client when requested</para>
+<para>Send the script_timers_2.js file to the client when requested</para>
+<para>Route for image files</para>
+<para>Send the icon.png file to the client when requested</para>
+<para>Send the estg_logo.png file to the client when requested</para>
+<para>Send the bg.png file to the client when requested</para>
+<para>Send the destiller.png file to the client when requested</para>
+<para>Send the BMB_ON.png file to the client when requested</para>
+<para>Send the BMB_OFF.png file to the client when requested</para>
+<para>Send the RAQ_ON.png file to the client when requested</para>
+<para>Send the RAQ_OFF.png file to the client when requested</para>
+<para>Send the Valve_ON.png file to the client when requested</para>
+<para>Send the Valve_OFF.png file to the client when requested</para>
+<para>Send the Auto_ON.png file to the client when requested</para>
+<para>Send the Auto_OFF.png file to the client when requested</para>
+<para>Send the Man_ON.png file to the client when requested</para>
+<para>Send the Man_OFF.png file to the client when requested</para>
+<para>Send the sMin.png file to the client when requested</para>
+<para>Send the sMax.png file to the client when requested</para>
+<para>Send the sAlarm.png file to the client when requested</para>
+<para>Send the button_ON.png file to the client when requested</para>
+<para>Send the button_OFF.png file to the client when requested</para>
+<para>Routes for handling time adjustments</para>
+<para>Send the response to the client when the /add1s route is requested</para>
+<para>Send the response to the client when the /add5s route is requested</para>
+<para>Send the response to the client when the /add10s route is requested</para>
+<para>Send the response to the client when the /add1m route is requested</para>
+<para>Send the response to the client when the /add5m route is requested</para>
+<para>Send the response to the client when the /add10m route is requested</para>
+<para>Send the response to the client when the /rem1s route is requested</para>
+<para>Send the response to the client when the /rem5s route is requested</para>
+<para>Send the response to the client when the /rem10s route is requested</para>
+<para>Send the response to the client when the /rem1m route is requested</para>
+<para>Send the response to the client when the /rem5m route is requested</para>
+<para>Send the response to the client when the /rem10m route is requested</para>
+<para>Routes for handling timer control</para>
+<para>Send the response to the client when the /startTimer route is requested</para>
+<para>Send the response to the client when the /stopTimer route is requested</para>
+<para>Send the response to the client when the /resetTimer route is requested</para>
+<para>Routes for handling toggle actions</para>
+<para>Send the response to the client when the /toggleAutoMode route is requested</para>
+<para>Send the response to the client when the /togglePump route is requested</para>
+<para>Send the response to the client when the /toggleWaterOut route is requested</para>
+<para>Send the response to the client when the /toggleWaterIn route is requested</para>
+<para>Send the response to the client when the /toggleResistor route is requested</para>
+<para>Routes for handling read actions</para>
+<para>Send the response to the client when the /readAutoMode route is requested</para>
+<para>Send the response to the client when the /readManualMode route is requested</para>
+<para>Send the response to the client when the /readPump route is requested</para>
+<para>Send the response to the client when the /readWaterOut route is requested</para>
+<para>Send the response to the client when the /readResistor route is requested</para>
+<para>Send the response to the client when the /readWaterIn route is requested</para>
+<para>Send the response to the client when the /readWaterMax route is requested</para>
+<para>Send the response to the client when the /readWaterMin route is requested</para>
+<para>Send the response to the client when the /readWaterAlarm route is requested</para>
+<para>Route for WiFi Handlers</para>
+<para>Send the response to the client when the /readWifiQuality route is requested</para>
+<para>Send the response to the client when the /readWifiSSID route is requested</para>
+<para>Send the response to the client when the /readWifiTX route is requested</para>
+<para>Send the response to the client when the /readWifiIP route is requested</para>
+<para>Route for Timer Handlers</para>
+<para>Send the response to the client when the /readTimer route is requested</para>
+<para>Send the response to the client when the /readHour route is requested</para>
+<para>Send the response to the client when the /readMinute route is requested</para>
+<para>Send the response to the client when the /readSecound route is requested</para>
+<para>Start Server</para>
+<para>Start the server</para>
+        </inbodydescription>
+        <location file="src/AP_Web.cpp" line="84" column="6" bodyfile="src/AP_Web.cpp" bodystart="84" bodyend="322"/>
+        <references refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</references>
+        <references refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</references>
+        <references refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</references>
+        <references refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</references>
+        <references refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</references>
+        <references refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" compoundref="_m_d___web___handlers_8cpp" startline="18" endline="21">handleTimer</references>
+        <references refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</references>
+        <references refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</references>
+        <references refid="_m_d_8h_1aaaba643a4700d7420108e9ec4ced8550" compoundref="_m_d___web___handlers_8cpp" startline="67" endline="67">handleWifiIP</references>
+        <references refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" compoundref="_m_d___web___handlers_8cpp" startline="49" endline="49">handleWifiQuality</references>
+        <references refid="_m_d_8h_1aa72d97405ad3471e84716689e54bd5ce" compoundref="_m_d___web___handlers_8cpp" startline="55" endline="55">handleWifiSSID</references>
+        <references refid="_m_d_8h_1ab8ee32b756c8c141be8847349f723395" compoundref="_m_d___web___handlers_8cpp" startline="61" endline="61">handleWifiTX</references>
+        <references refid="_a_p___web_8cpp_1ad296f25594d8ca4d02d0025819437b7b" compoundref="_a_p___web_8cpp" startline="54" endline="71">onEvent</references>
+        <references refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</references>
+        <references refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3">server</references>
+        <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
+        <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Web Server functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sérgio Carmo</para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_p_8h" kindref="compound">AP.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"></codeline>
+<codeline lineno="29" refid="_a_p___web_8cpp_1a0be75b75b82f96e18d5c695059a67a63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p___web_8cpp_1a0be75b75b82f96e18d5c695059a67a63" kindref="member">handleWebSocketMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg,<sp/>uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>AwsFrameInfo<sp/>*info<sp/>=<sp/>(AwsFrameInfo<sp/>*)arg;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(info-&gt;final<sp/>&amp;&amp;<sp/>info-&gt;index<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>info-&gt;len<sp/>==<sp/>len<sp/>&amp;&amp;<sp/>info-&gt;opcode<sp/>==<sp/>WS_TEXT)<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>data[len]<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>message<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)data;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Received<sp/>WebSocket<sp/>message:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message);<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_a_p___web_8cpp_1ad296f25594d8ca4d02d0025819437b7b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p___web_8cpp_1ad296f25594d8ca4d02d0025819437b7b" kindref="member">onEvent</ref>(AsyncWebSocket<sp/>*<ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>,<sp/>AsyncWebSocketClient<sp/>*client,<sp/>AwsEventType<sp/>type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg,<sp/>uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type)<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WS_EVT_CONNECT:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;WebSocket<sp/>client<sp/>connected:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>client-&gt;remoteIP().toString());<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WS_EVT_DISCONNECT:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;WebSocket<sp/>client<sp/>disconnected:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>client-&gt;remoteIP().toString());<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WS_EVT_DATA:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_a_p___web_8cpp_1a0be75b75b82f96e18d5c695059a67a63" kindref="member">handleWebSocketMessage</ref>(arg,<sp/>data,<sp/>len);<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WS_EVT_PONG:<sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>WS_EVT_ERROR:<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"></codeline>
+<codeline lineno="84" refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_a_p___web_8cpp_1a553ce9cca044d40931e5cbe9deb407e4" kindref="member">setupRoutes</ref>()</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>.onEvent(<ref refid="_a_p___web_8cpp_1ad296f25594d8ca4d02d0025819437b7b" kindref="member">onEvent</ref>);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.addHandler(&amp;<ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>);<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/index.html&quot;</highlight><highlight class="normal">,<sp/>String(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" kindref="member">processor</ref>);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/index_2.html&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/web_2/index_2.html&quot;</highlight><highlight class="normal">,<sp/>String(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" kindref="member">processor</ref>);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/style.css&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/style.css&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/css&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/style_2.css&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/web_2/style_2.css&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/css&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/style_Img.css&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/style_Img.css&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/css&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/script_actions.js&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/script_actions.js&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/script_get_Data.js&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/script_get_Data.js&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/script_timers.js&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/script_timers.js&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/script_timers_Img.js&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/script_timers_Img.js&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/script_timers_2.js&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/web_2/script_timers_2.js&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/icon.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/icon.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/estg_logo.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/estg_logo.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/bg.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/bg.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/destiller.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/destiller.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/BMB_ON.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/BMB_ON.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/BMB_OFF.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/BMB_OFF.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/RAQ_ON.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/RAQ_ON.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/RAQ_OFF.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/RAQ_OFF.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/Valve_ON.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/Valve_ON.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/Valve_OFF.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/Valve_OFF.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/Auto_ON.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/Auto_ON.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/Auto_OFF.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/Auto_OFF.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/Man_ON.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/Man_ON.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/Man_OFF.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/Man_OFF.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/sMin.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/sMin.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/sMax.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/sMax.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/sAlarm.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/sAlarm.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/button_ON.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/button_ON.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/button_OFF.png&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send(SPIFFS,<sp/></highlight><highlight class="stringliteral">&quot;/img/button_OFF.png&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;image/png&quot;</highlight><highlight class="normal">);<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/add1s&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;add1s&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/add5s&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;add5s&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/add10s&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;add10s&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/add1m&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;add1m&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/add5m&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;add5m&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/add10m&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;add10m&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/rem1s&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;rem1s&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/rem5s&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;rem5s&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/rem10s&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;rem10s&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/rem1m&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;rem1m&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/rem5m&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;rem5m&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/rem10m&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="stringliteral">&quot;rem10m&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/startTimer&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" kindref="member">handleTimerControl</ref>(</highlight><highlight class="stringliteral">&quot;start&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/stopTimer&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" kindref="member">handleTimerControl</ref>(</highlight><highlight class="stringliteral">&quot;stop&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/resetTimer&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" kindref="member">handleTimerControl</ref>(</highlight><highlight class="stringliteral">&quot;reset&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/toggleAutoMode&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="stringliteral">&quot;auto&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/togglePump&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="stringliteral">&quot;pump&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/toggleWaterOut&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="stringliteral">&quot;waterOut&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/toggleWaterIn&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="stringliteral">&quot;waterIn&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/toggleResistor&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="stringliteral">&quot;resistor&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readAutoMode&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;auto&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readManualMode&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;manual&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readPump&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;pump&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWaterOut&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;waterOut&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readResistor&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;resistor&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWaterIn&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;waterIn&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWaterMax&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;waterMax&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWaterMin&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;waterMin&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWaterAlarm&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="stringliteral">&quot;waterAlarm&quot;</highlight><highlight class="normal">).c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWifiQuality&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" kindref="member">handleWifiQuality</ref>().c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWifiSSID&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1aa72d97405ad3471e84716689e54bd5ce" kindref="member">handleWifiSSID</ref>().c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWifiTX&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ab8ee32b756c8c141be8847349f723395" kindref="member">handleWifiTX</ref>().c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readWifiIP&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1aaaba643a4700d7420108e9ec4ced8550" kindref="member">handleWifiIP</ref>().c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readTimer&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" kindref="member">handleTimer</ref>().c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readHour&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" kindref="member">handleHour</ref>().c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readMinute&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" kindref="member">handleMinute</ref>().c_str());<sp/>});<sp/></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.on(</highlight><highlight class="stringliteral">&quot;/readSecound&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>[](AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/><ref refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" kindref="member">handleSecound</ref>().c_str());<sp/>});<sp/><sp/></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.begin();<sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/AP_Web.cpp"/>
+  </compounddef>
+</doxygen>

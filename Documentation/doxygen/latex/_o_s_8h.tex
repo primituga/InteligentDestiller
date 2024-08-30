@@ -1,0 +1,1102 @@
+\doxysection{include/\+OS.h File Reference}
+\hypertarget{_o_s_8h}{}\label{_o_s_8h}\index{include/OS.h@{include/OS.h}}
+
+
+Header file for the OS project.  
+
+
+{\ttfamily \#include "{}Wi\+Fi\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}ESPAsync\+Web\+Server.\+h"{}}\newline
+{\ttfamily \#include "{}SPIFFS.\+h"{}}\newline
+{\ttfamily \#include "{}MD.\+h"{}}\newline
+Include dependency graph for OS.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a285977f0ffd4b45d30c3d459b39a878f}{DEBUGlog}}~0
+\begin{DoxyCompactList}\small\item\em Debug mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_o_s_8h_a3c9aac2ffa03d0822447b318c20178b4}{PIN\+\_\+\+SW\+\_\+\+AUTO}}~32
+\begin{DoxyCompactList}\small\item\em I/O Map Header. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_o_s_8h_ade7c8509801fc3f4480082e29c72926d}{PIN\+\_\+\+SALARM}}~25
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_ab697946c681df5f56d99516a2715ae5a}{PIN\+\_\+\+SW\+\_\+\+MAN}}~26
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_acb14a8bc9fbd152e8354418a7855a1b8}{PIN\+\_\+\+SMIN}}~27
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_ae392f500936676d5a630c590de1a6115}{PIN\+\_\+\+SMAX}}~14
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_ad8bd7dfea612e3f597b33a34115ead1c}{PIN\+\_\+\+INPUT\+\_\+\+COUNT}}~5
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_aae28e39b451039001b9bf29ec995fd8e}{POS\+\_\+\+SW\+\_\+\+MAN}}~0
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a9c786ece8dfd4c7c32d94f96e02034c7}{POS\+\_\+\+SMIN}}~1
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a98d27cbdf2f1601f89a3d54c8f57caa0}{POS\+\_\+\+SMAX}}~2
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a03d4fa071eaec6b43a142d39b76af91a}{POS\+\_\+\+SW\+\_\+\+AUTO}}~3
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a3808ebdb25737de42c2d7ca821f56b23}{POS\+\_\+\+SALARM}}~4
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_ae7d962d8e7f7ad921a0ad994ea7ca34a}{PIN\+\_\+\+RAQ}}~23
+\begin{DoxyCompactList}\small\item\em Output Pins Definitions. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_o_s_8h_abc131bd8e71df8904a6ebeb67c56290a}{PIN\+\_\+\+BMB}}~22
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a5890ed8b1dfbb6be07f82fab51dcd66b}{PIN\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+OUT}}~21
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a050b83ef44d5cae61794b32499c9fcf8}{PIN\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+IN}}~19
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_aebfef237ff2d3039cd3c2050b749de1d}{PIN\+\_\+\+IND\+\_\+\+ALARM}}~18
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a384be38ab3e7b926921179cc420d646c}{PIN\+\_\+\+IND\+\_\+\+MIN}}~05
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_aa33c6f09058f0ef261c58dec1ae26af6}{PIN\+\_\+\+IND\+\_\+\+MAX}}~04
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a924bcfd3898c818255811fee578e25ce}{PIN\+\_\+\+IND\+\_\+\+AUTO}}~15
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_acd0ee7482c4a9d885282477b66664985}{PIN\+\_\+\+IND\+\_\+\+MAN}}~33
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a868eb55a6c58c348f0d606d75c7d5e05}{PIN\+\_\+\+OUTPUT\+\_\+\+COUNT}}~9
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a9472a8b9e2b8d90752761a9a6ca08298}{POS\+\_\+\+RAQ}}~0
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a30022858a28fa578366b3b18125ca945}{POS\+\_\+\+BMB}}~1
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a965705c26a5cada30cae9f36c10bb393}{POS\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+OUT}}~2
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_ae99920ff82b3c80822e2bc1c7b365ec0}{POS\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+IN}}~3
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a3f3f0d6170ffa0797fe36f5772ad2947}{POS\+\_\+\+IND\+\_\+\+ALARM}}~4
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a0a1040b6ffe1abde775c47360900520c}{POS\+\_\+\+IND\+\_\+\+MIN}}~5
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a87be610e0ff8c38e2a36273c0ec4a429}{POS\+\_\+\+IND\+\_\+\+MAX}}~6
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_a09b9fae0461ba906d04f583fb165225d}{POS\+\_\+\+IND\+\_\+\+AUTO}}~7
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_aed87ea2d1c8368d8ae40dfcdf0c5e58d}{POS\+\_\+\+IND\+\_\+\+MAN}}~8
+\item 
+\#define \mbox{\hyperlink{_o_s_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}~HIGH
+\begin{DoxyCompactList}\small\item\em ON/\+OFF Definitions for I/O pins (HIGH/\+LOW) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_o_s_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}~LOW
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_o_s_8h_a8b626fb41c6433470c66289ad702ba87}{loop2}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em MAIN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a02ef1114b2c4e173a5ddafb425f38cc5}{init\+Multi\+Core}} ()
+\begin{DoxyCompactList}\small\item\em Main loop to run in core 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997}{init\+FS}} ()
+\begin{DoxyCompactList}\small\item\em Little\+FS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a034848835eb2ce8872c4da77568895fc}{init\+Pins\+Outputs}} ()
+\begin{DoxyCompactList}\small\item\em Inicia o sistema de arquivos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a96f4f5e9c32d277c8b5f45b1b0c068fc}{init\+Pins\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Inicia os outputs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a2b0449e42db71938062564c4f643c215}{get\+Water\+Max}} ()
+\begin{DoxyCompactList}\small\item\em Inicia os inputs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a166177fea9ace421d96924d83286abfc}{get\+Water\+Min}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do sensor de agua de maximo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a36575ea4abf90b10ef86ad50f0b9fad0}{get\+Alarm}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do sensor de agua de minimo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a364e39356237485f2ee12f8bf224683b}{get\+Alarm\+IND}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do alarme. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_abbca1cc0d29f545e9a39778288a12071}{get\+Ind\+Auto}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do indicador de alarme. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a601560973c681265f62316a3f68e2ac3}{get\+Auto\+Mode\+SW}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do modo auto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a20a8e677a695003ed8259fc2e32b6462}{get\+Manual\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do interruptor auto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a56feb35df23b1452f2695b6469042ec2}{get\+Resistor}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do botao manual. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a2e1179e338420a43f95be0b8a7ed885d}{get\+Valv\+\_\+\+Water\+\_\+\+In}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado do resistor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a8b22aea595b0457364230c92779ae37a}{get\+Valv\+\_\+\+Water\+\_\+\+Out}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado da entrada de agua. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a796c21f2a4c37ce17a1f14d80b54ed66}{get\+Pump}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado da valvula de vapor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a87a31bccb377b0b9f859242b0635052c}{set\+Ind\+Max}} (bool state)
+\begin{DoxyCompactList}\small\item\em Retorna estado da bomba de agua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_afd12f5c7d9986ada0226426896ee09c7}{set\+Ind\+Min}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso nivel agua maximo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a76b46044c939e363a3e761d515af2e1a}{set\+Ind\+Alarm}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso nivel agua minimo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a86fca9908335532b4c89bca82aaa9346}{set\+Ind\+Man}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso alarme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_adbfc39d1df02e4404b08e9573d1fd404}{set\+Pump}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso modo manual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a0d4efaa2bfb0fa53aa24405940a7a66c}{set\+Valve\+Water\+In}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso da bomba de agua. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_abfda791029a2af9523cc59ff44b6c52e}{set\+Valve\+Water\+Out}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso da valvula 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a2a90701c1f779b95de3a3770a5425f3c}{set\+Resistor}} (bool state)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso da valvula 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_aa879192b15484f1d9112d2b91ef5cea9}{set\+Ind\+Auto}} (bool state1)
+\begin{DoxyCompactList}\small\item\em Liga/desliga o indicador luminoso da resistencia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_a4be402fa1ac7049ed1671c31572e0f75}{write\+Outputs}} ()
+\begin{DoxyCompactList}\small\item\em Liga/desliga o modo auto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3}{read\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Alarm state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Async\+Web\+Socket \mbox{\hyperlink{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd}{ws}}
+\begin{DoxyCompactList}\small\item\em Libraries. \end{DoxyCompactList}\item 
+Async\+Web\+Server \mbox{\hyperlink{_o_s_8h_a56916c67f21f332014c1c19b200d45f3}{server}}
+\begin{DoxyCompactList}\small\item\em Web\+Socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_o_s_8h_a117352cc494cc62c6b2f1882786a332c}{DEBUG}}
+\begin{DoxyCompactList}\small\item\em Web\+Server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the OS project. 
+
+\begin{DoxyAuthor}{Author}
+Sérgio Carmo
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_o_s_8h_a285977f0ffd4b45d30c3d459b39a878f}\index{OS.h@{OS.h}!DEBUGlog@{DEBUGlog}}
+\index{DEBUGlog@{DEBUGlog}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{DEBUGlog}{DEBUGlog}}
+{\footnotesize\ttfamily \label{_o_s_8h_a285977f0ffd4b45d30c3d459b39a878f} 
+\#define DEBUGlog~0}
+
+
+
+Debug mode. 
+
+\Hypertarget{_o_s_8h_a29e413f6725b2ba32d165ffaa35b01e5}\index{OS.h@{OS.h}!OFF@{OFF}}
+\index{OFF@{OFF}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{OFF}{OFF}}
+{\footnotesize\ttfamily \label{_o_s_8h_a29e413f6725b2ba32d165ffaa35b01e5} 
+\#define OFF~LOW}
+
+\Hypertarget{_o_s_8h_ad76d1750a6cdeebd506bfcd6752554d2}\index{OS.h@{OS.h}!ON@{ON}}
+\index{ON@{ON}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{ON}{ON}}
+{\footnotesize\ttfamily \label{_o_s_8h_ad76d1750a6cdeebd506bfcd6752554d2} 
+\#define ON~HIGH}
+
+
+
+ON/\+OFF Definitions for I/O pins (HIGH/\+LOW) 
+
+\Hypertarget{_o_s_8h_abc131bd8e71df8904a6ebeb67c56290a}\index{OS.h@{OS.h}!PIN\_BMB@{PIN\_BMB}}
+\index{PIN\_BMB@{PIN\_BMB}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_BMB}{PIN\_BMB}}
+{\footnotesize\ttfamily \label{_o_s_8h_abc131bd8e71df8904a6ebeb67c56290a} 
+\#define PIN\+\_\+\+BMB~22}
+
+\Hypertarget{_o_s_8h_aebfef237ff2d3039cd3c2050b749de1d}\index{OS.h@{OS.h}!PIN\_IND\_ALARM@{PIN\_IND\_ALARM}}
+\index{PIN\_IND\_ALARM@{PIN\_IND\_ALARM}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_IND\_ALARM}{PIN\_IND\_ALARM}}
+{\footnotesize\ttfamily \label{_o_s_8h_aebfef237ff2d3039cd3c2050b749de1d} 
+\#define PIN\+\_\+\+IND\+\_\+\+ALARM~18}
+
+\Hypertarget{_o_s_8h_a924bcfd3898c818255811fee578e25ce}\index{OS.h@{OS.h}!PIN\_IND\_AUTO@{PIN\_IND\_AUTO}}
+\index{PIN\_IND\_AUTO@{PIN\_IND\_AUTO}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_IND\_AUTO}{PIN\_IND\_AUTO}}
+{\footnotesize\ttfamily \label{_o_s_8h_a924bcfd3898c818255811fee578e25ce} 
+\#define PIN\+\_\+\+IND\+\_\+\+AUTO~15}
+
+\Hypertarget{_o_s_8h_acd0ee7482c4a9d885282477b66664985}\index{OS.h@{OS.h}!PIN\_IND\_MAN@{PIN\_IND\_MAN}}
+\index{PIN\_IND\_MAN@{PIN\_IND\_MAN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_IND\_MAN}{PIN\_IND\_MAN}}
+{\footnotesize\ttfamily \label{_o_s_8h_acd0ee7482c4a9d885282477b66664985} 
+\#define PIN\+\_\+\+IND\+\_\+\+MAN~33}
+
+\Hypertarget{_o_s_8h_aa33c6f09058f0ef261c58dec1ae26af6}\index{OS.h@{OS.h}!PIN\_IND\_MAX@{PIN\_IND\_MAX}}
+\index{PIN\_IND\_MAX@{PIN\_IND\_MAX}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_IND\_MAX}{PIN\_IND\_MAX}}
+{\footnotesize\ttfamily \label{_o_s_8h_aa33c6f09058f0ef261c58dec1ae26af6} 
+\#define PIN\+\_\+\+IND\+\_\+\+MAX~04}
+
+\Hypertarget{_o_s_8h_a384be38ab3e7b926921179cc420d646c}\index{OS.h@{OS.h}!PIN\_IND\_MIN@{PIN\_IND\_MIN}}
+\index{PIN\_IND\_MIN@{PIN\_IND\_MIN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_IND\_MIN}{PIN\_IND\_MIN}}
+{\footnotesize\ttfamily \label{_o_s_8h_a384be38ab3e7b926921179cc420d646c} 
+\#define PIN\+\_\+\+IND\+\_\+\+MIN~05}
+
+\Hypertarget{_o_s_8h_ad8bd7dfea612e3f597b33a34115ead1c}\index{OS.h@{OS.h}!PIN\_INPUT\_COUNT@{PIN\_INPUT\_COUNT}}
+\index{PIN\_INPUT\_COUNT@{PIN\_INPUT\_COUNT}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_INPUT\_COUNT}{PIN\_INPUT\_COUNT}}
+{\footnotesize\ttfamily \label{_o_s_8h_ad8bd7dfea612e3f597b33a34115ead1c} 
+\#define PIN\+\_\+\+INPUT\+\_\+\+COUNT~5}
+
+\Hypertarget{_o_s_8h_a868eb55a6c58c348f0d606d75c7d5e05}\index{OS.h@{OS.h}!PIN\_OUTPUT\_COUNT@{PIN\_OUTPUT\_COUNT}}
+\index{PIN\_OUTPUT\_COUNT@{PIN\_OUTPUT\_COUNT}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_OUTPUT\_COUNT}{PIN\_OUTPUT\_COUNT}}
+{\footnotesize\ttfamily \label{_o_s_8h_a868eb55a6c58c348f0d606d75c7d5e05} 
+\#define PIN\+\_\+\+OUTPUT\+\_\+\+COUNT~9}
+
+\Hypertarget{_o_s_8h_ae7d962d8e7f7ad921a0ad994ea7ca34a}\index{OS.h@{OS.h}!PIN\_RAQ@{PIN\_RAQ}}
+\index{PIN\_RAQ@{PIN\_RAQ}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_RAQ}{PIN\_RAQ}}
+{\footnotesize\ttfamily \label{_o_s_8h_ae7d962d8e7f7ad921a0ad994ea7ca34a} 
+\#define PIN\+\_\+\+RAQ~23}
+
+
+
+Output Pins Definitions. 
+
+\Hypertarget{_o_s_8h_ade7c8509801fc3f4480082e29c72926d}\index{OS.h@{OS.h}!PIN\_SALARM@{PIN\_SALARM}}
+\index{PIN\_SALARM@{PIN\_SALARM}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_SALARM}{PIN\_SALARM}}
+{\footnotesize\ttfamily \label{_o_s_8h_ade7c8509801fc3f4480082e29c72926d} 
+\#define PIN\+\_\+\+SALARM~25}
+
+\Hypertarget{_o_s_8h_ae392f500936676d5a630c590de1a6115}\index{OS.h@{OS.h}!PIN\_SMAX@{PIN\_SMAX}}
+\index{PIN\_SMAX@{PIN\_SMAX}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_SMAX}{PIN\_SMAX}}
+{\footnotesize\ttfamily \label{_o_s_8h_ae392f500936676d5a630c590de1a6115} 
+\#define PIN\+\_\+\+SMAX~14}
+
+\Hypertarget{_o_s_8h_acb14a8bc9fbd152e8354418a7855a1b8}\index{OS.h@{OS.h}!PIN\_SMIN@{PIN\_SMIN}}
+\index{PIN\_SMIN@{PIN\_SMIN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_SMIN}{PIN\_SMIN}}
+{\footnotesize\ttfamily \label{_o_s_8h_acb14a8bc9fbd152e8354418a7855a1b8} 
+\#define PIN\+\_\+\+SMIN~27}
+
+\Hypertarget{_o_s_8h_a3c9aac2ffa03d0822447b318c20178b4}\index{OS.h@{OS.h}!PIN\_SW\_AUTO@{PIN\_SW\_AUTO}}
+\index{PIN\_SW\_AUTO@{PIN\_SW\_AUTO}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_SW\_AUTO}{PIN\_SW\_AUTO}}
+{\footnotesize\ttfamily \label{_o_s_8h_a3c9aac2ffa03d0822447b318c20178b4} 
+\#define PIN\+\_\+\+SW\+\_\+\+AUTO~32}
+
+
+
+I/O Map Header. 
+
+Input Pins Definitions \Hypertarget{_o_s_8h_ab697946c681df5f56d99516a2715ae5a}\index{OS.h@{OS.h}!PIN\_SW\_MAN@{PIN\_SW\_MAN}}
+\index{PIN\_SW\_MAN@{PIN\_SW\_MAN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_SW\_MAN}{PIN\_SW\_MAN}}
+{\footnotesize\ttfamily \label{_o_s_8h_ab697946c681df5f56d99516a2715ae5a} 
+\#define PIN\+\_\+\+SW\+\_\+\+MAN~26}
+
+\Hypertarget{_o_s_8h_a050b83ef44d5cae61794b32499c9fcf8}\index{OS.h@{OS.h}!PIN\_VALV\_WATER\_IN@{PIN\_VALV\_WATER\_IN}}
+\index{PIN\_VALV\_WATER\_IN@{PIN\_VALV\_WATER\_IN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_VALV\_WATER\_IN}{PIN\_VALV\_WATER\_IN}}
+{\footnotesize\ttfamily \label{_o_s_8h_a050b83ef44d5cae61794b32499c9fcf8} 
+\#define PIN\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+IN~19}
+
+\Hypertarget{_o_s_8h_a5890ed8b1dfbb6be07f82fab51dcd66b}\index{OS.h@{OS.h}!PIN\_VALV\_WATER\_OUT@{PIN\_VALV\_WATER\_OUT}}
+\index{PIN\_VALV\_WATER\_OUT@{PIN\_VALV\_WATER\_OUT}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_VALV\_WATER\_OUT}{PIN\_VALV\_WATER\_OUT}}
+{\footnotesize\ttfamily \label{_o_s_8h_a5890ed8b1dfbb6be07f82fab51dcd66b} 
+\#define PIN\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+OUT~21}
+
+\Hypertarget{_o_s_8h_a30022858a28fa578366b3b18125ca945}\index{OS.h@{OS.h}!POS\_BMB@{POS\_BMB}}
+\index{POS\_BMB@{POS\_BMB}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_BMB}{POS\_BMB}}
+{\footnotesize\ttfamily \label{_o_s_8h_a30022858a28fa578366b3b18125ca945} 
+\#define POS\+\_\+\+BMB~1}
+
+\Hypertarget{_o_s_8h_a3f3f0d6170ffa0797fe36f5772ad2947}\index{OS.h@{OS.h}!POS\_IND\_ALARM@{POS\_IND\_ALARM}}
+\index{POS\_IND\_ALARM@{POS\_IND\_ALARM}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_IND\_ALARM}{POS\_IND\_ALARM}}
+{\footnotesize\ttfamily \label{_o_s_8h_a3f3f0d6170ffa0797fe36f5772ad2947} 
+\#define POS\+\_\+\+IND\+\_\+\+ALARM~4}
+
+\Hypertarget{_o_s_8h_a09b9fae0461ba906d04f583fb165225d}\index{OS.h@{OS.h}!POS\_IND\_AUTO@{POS\_IND\_AUTO}}
+\index{POS\_IND\_AUTO@{POS\_IND\_AUTO}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_IND\_AUTO}{POS\_IND\_AUTO}}
+{\footnotesize\ttfamily \label{_o_s_8h_a09b9fae0461ba906d04f583fb165225d} 
+\#define POS\+\_\+\+IND\+\_\+\+AUTO~7}
+
+\Hypertarget{_o_s_8h_aed87ea2d1c8368d8ae40dfcdf0c5e58d}\index{OS.h@{OS.h}!POS\_IND\_MAN@{POS\_IND\_MAN}}
+\index{POS\_IND\_MAN@{POS\_IND\_MAN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_IND\_MAN}{POS\_IND\_MAN}}
+{\footnotesize\ttfamily \label{_o_s_8h_aed87ea2d1c8368d8ae40dfcdf0c5e58d} 
+\#define POS\+\_\+\+IND\+\_\+\+MAN~8}
+
+\Hypertarget{_o_s_8h_a87be610e0ff8c38e2a36273c0ec4a429}\index{OS.h@{OS.h}!POS\_IND\_MAX@{POS\_IND\_MAX}}
+\index{POS\_IND\_MAX@{POS\_IND\_MAX}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_IND\_MAX}{POS\_IND\_MAX}}
+{\footnotesize\ttfamily \label{_o_s_8h_a87be610e0ff8c38e2a36273c0ec4a429} 
+\#define POS\+\_\+\+IND\+\_\+\+MAX~6}
+
+\Hypertarget{_o_s_8h_a0a1040b6ffe1abde775c47360900520c}\index{OS.h@{OS.h}!POS\_IND\_MIN@{POS\_IND\_MIN}}
+\index{POS\_IND\_MIN@{POS\_IND\_MIN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_IND\_MIN}{POS\_IND\_MIN}}
+{\footnotesize\ttfamily \label{_o_s_8h_a0a1040b6ffe1abde775c47360900520c} 
+\#define POS\+\_\+\+IND\+\_\+\+MIN~5}
+
+\Hypertarget{_o_s_8h_a9472a8b9e2b8d90752761a9a6ca08298}\index{OS.h@{OS.h}!POS\_RAQ@{POS\_RAQ}}
+\index{POS\_RAQ@{POS\_RAQ}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_RAQ}{POS\_RAQ}}
+{\footnotesize\ttfamily \label{_o_s_8h_a9472a8b9e2b8d90752761a9a6ca08298} 
+\#define POS\+\_\+\+RAQ~0}
+
+\Hypertarget{_o_s_8h_a3808ebdb25737de42c2d7ca821f56b23}\index{OS.h@{OS.h}!POS\_SALARM@{POS\_SALARM}}
+\index{POS\_SALARM@{POS\_SALARM}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_SALARM}{POS\_SALARM}}
+{\footnotesize\ttfamily \label{_o_s_8h_a3808ebdb25737de42c2d7ca821f56b23} 
+\#define POS\+\_\+\+SALARM~4}
+
+\Hypertarget{_o_s_8h_a98d27cbdf2f1601f89a3d54c8f57caa0}\index{OS.h@{OS.h}!POS\_SMAX@{POS\_SMAX}}
+\index{POS\_SMAX@{POS\_SMAX}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_SMAX}{POS\_SMAX}}
+{\footnotesize\ttfamily \label{_o_s_8h_a98d27cbdf2f1601f89a3d54c8f57caa0} 
+\#define POS\+\_\+\+SMAX~2}
+
+\Hypertarget{_o_s_8h_a9c786ece8dfd4c7c32d94f96e02034c7}\index{OS.h@{OS.h}!POS\_SMIN@{POS\_SMIN}}
+\index{POS\_SMIN@{POS\_SMIN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_SMIN}{POS\_SMIN}}
+{\footnotesize\ttfamily \label{_o_s_8h_a9c786ece8dfd4c7c32d94f96e02034c7} 
+\#define POS\+\_\+\+SMIN~1}
+
+\Hypertarget{_o_s_8h_a03d4fa071eaec6b43a142d39b76af91a}\index{OS.h@{OS.h}!POS\_SW\_AUTO@{POS\_SW\_AUTO}}
+\index{POS\_SW\_AUTO@{POS\_SW\_AUTO}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_SW\_AUTO}{POS\_SW\_AUTO}}
+{\footnotesize\ttfamily \label{_o_s_8h_a03d4fa071eaec6b43a142d39b76af91a} 
+\#define POS\+\_\+\+SW\+\_\+\+AUTO~3}
+
+\Hypertarget{_o_s_8h_aae28e39b451039001b9bf29ec995fd8e}\index{OS.h@{OS.h}!POS\_SW\_MAN@{POS\_SW\_MAN}}
+\index{POS\_SW\_MAN@{POS\_SW\_MAN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_SW\_MAN}{POS\_SW\_MAN}}
+{\footnotesize\ttfamily \label{_o_s_8h_aae28e39b451039001b9bf29ec995fd8e} 
+\#define POS\+\_\+\+SW\+\_\+\+MAN~0}
+
+\Hypertarget{_o_s_8h_ae99920ff82b3c80822e2bc1c7b365ec0}\index{OS.h@{OS.h}!POS\_VALV\_WATER\_IN@{POS\_VALV\_WATER\_IN}}
+\index{POS\_VALV\_WATER\_IN@{POS\_VALV\_WATER\_IN}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_VALV\_WATER\_IN}{POS\_VALV\_WATER\_IN}}
+{\footnotesize\ttfamily \label{_o_s_8h_ae99920ff82b3c80822e2bc1c7b365ec0} 
+\#define POS\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+IN~3}
+
+\Hypertarget{_o_s_8h_a965705c26a5cada30cae9f36c10bb393}\index{OS.h@{OS.h}!POS\_VALV\_WATER\_OUT@{POS\_VALV\_WATER\_OUT}}
+\index{POS\_VALV\_WATER\_OUT@{POS\_VALV\_WATER\_OUT}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{POS\_VALV\_WATER\_OUT}{POS\_VALV\_WATER\_OUT}}
+{\footnotesize\ttfamily \label{_o_s_8h_a965705c26a5cada30cae9f36c10bb393} 
+\#define POS\+\_\+\+VALV\+\_\+\+WATER\+\_\+\+OUT~2}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_o_s_8h_a36575ea4abf90b10ef86ad50f0b9fad0}\index{OS.h@{OS.h}!getAlarm@{getAlarm}}
+\index{getAlarm@{getAlarm}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getAlarm()}{getAlarm()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a36575ea4abf90b10ef86ad50f0b9fad0} 
+bool get\+Alarm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do sensor de agua de minimo. 
+
+Retorna estado do sensor de agua de minimo.
+
+This function returns the state of the alarm.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{_o_s_8h_a364e39356237485f2ee12f8bf224683b}\index{OS.h@{OS.h}!getAlarmIND@{getAlarmIND}}
+\index{getAlarmIND@{getAlarmIND}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getAlarmIND()}{getAlarmIND()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a364e39356237485f2ee12f8bf224683b} 
+bool get\+Alarm\+IND (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do alarme. 
+
+Retorna estado do alarme.
+
+This function returns the state of the alarm.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{_o_s_8h_a601560973c681265f62316a3f68e2ac3}\index{OS.h@{OS.h}!getAutoModeSW@{getAutoModeSW}}
+\index{getAutoModeSW@{getAutoModeSW}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getAutoModeSW()}{getAutoModeSW()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a601560973c681265f62316a3f68e2ac3} 
+bool get\+Auto\+Mode\+SW (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do modo auto. 
+
+Retorna estado do modo auto.
+
+This function returns the state of the auto mode switch.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{_o_s_8h_abbca1cc0d29f545e9a39778288a12071}\index{OS.h@{OS.h}!getIndAuto@{getIndAuto}}
+\index{getIndAuto@{getIndAuto}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getIndAuto()}{getIndAuto()}}
+{\footnotesize\ttfamily \label{_o_s_8h_abbca1cc0d29f545e9a39778288a12071} 
+bool get\+Ind\+Auto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do indicador de alarme. 
+
+Retorna estado do indicador de alarme.
+
+This function returns the state of the max indicator.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{_o_s_8h_a20a8e677a695003ed8259fc2e32b6462}\index{OS.h@{OS.h}!getManualMode@{getManualMode}}
+\index{getManualMode@{getManualMode}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getManualMode()}{getManualMode()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a20a8e677a695003ed8259fc2e32b6462} 
+bool get\+Manual\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do interruptor auto. 
+
+Retorna estado do interruptor auto.
+
+This function returns the state of the manual mode switch.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{_o_s_8h_a796c21f2a4c37ce17a1f14d80b54ed66}\index{OS.h@{OS.h}!getPump@{getPump}}
+\index{getPump@{getPump}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getPump()}{getPump()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a796c21f2a4c37ce17a1f14d80b54ed66} 
+bool get\+Pump (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado da valvula de vapor. 
+
+Retorna estado da valvula de vapor.
+
+This function returns the state of the water pump.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{_o_s_8h_a56feb35df23b1452f2695b6469042ec2}\index{OS.h@{OS.h}!getResistor@{getResistor}}
+\index{getResistor@{getResistor}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getResistor()}{getResistor()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a56feb35df23b1452f2695b6469042ec2} 
+bool get\+Resistor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do botao manual. 
+
+Retorna estado do botao manual.
+
+This function returns the state of the min indicator.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{_o_s_8h_a2e1179e338420a43f95be0b8a7ed885d}\index{OS.h@{OS.h}!getValv\_Water\_In@{getValv\_Water\_In}}
+\index{getValv\_Water\_In@{getValv\_Water\_In}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getValv\_Water\_In()}{getValv\_Water\_In()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a2e1179e338420a43f95be0b8a7ed885d} 
+bool get\+Valv\+\_\+\+Water\+\_\+\+In (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do resistor. 
+
+Retorna estado do resistor.
+
+This function returns the state of the alarm indicator.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{_o_s_8h_a8b22aea595b0457364230c92779ae37a}\index{OS.h@{OS.h}!getValv\_Water\_Out@{getValv\_Water\_Out}}
+\index{getValv\_Water\_Out@{getValv\_Water\_Out}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getValv\_Water\_Out()}{getValv\_Water\_Out()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a8b22aea595b0457364230c92779ae37a} 
+bool get\+Valv\+\_\+\+Water\+\_\+\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado da entrada de agua. 
+
+Retorna estado da entrada de agua.
+
+This function returns the state of the water out valve.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{_o_s_8h_a2b0449e42db71938062564c4f643c215}\index{OS.h@{OS.h}!getWaterMax@{getWaterMax}}
+\index{getWaterMax@{getWaterMax}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getWaterMax()}{getWaterMax()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a2b0449e42db71938062564c4f643c215} 
+bool get\+Water\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicia os inputs. 
+
+Inicia os inputs.
+
+Get the Water Max object
+
+This function returns the state of the water max sensor.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{_o_s_8h_a166177fea9ace421d96924d83286abfc}\index{OS.h@{OS.h}!getWaterMin@{getWaterMin}}
+\index{getWaterMin@{getWaterMin}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{getWaterMin()}{getWaterMin()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a166177fea9ace421d96924d83286abfc} 
+bool get\+Water\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado do sensor de agua de maximo. 
+
+Retorna estado do sensor de agua de maximo.
+
+This function returns the state of the water min sensor.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997}\index{OS.h@{OS.h}!initFS@{initFS}}
+\index{initFS@{initFS}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{initFS()}{initFS()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997} 
+void init\+FS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Little\+FS. 
+
+Little\+FS.
+
+Initialize File System (SPIFFS)
+
+This function is responsible for initializing the File System (SPIFFS).
+
+\begin{DoxyNote}{Note}
+Initialize SPIFFS
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997}{initFS}}();}
+
+\end{DoxyCode}
+ Initialize SPIFFSHere is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\Hypertarget{_o_s_8h_a02ef1114b2c4e173a5ddafb425f38cc5}\index{OS.h@{OS.h}!initMultiCore@{initMultiCore}}
+\index{initMultiCore@{initMultiCore}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{initMultiCore()}{initMultiCore()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a02ef1114b2c4e173a5ddafb425f38cc5} 
+void init\+Multi\+Core (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main loop to run in core 1. 
+
+Multicore
+
+Main loop to run in core 1.
+
+\texorpdfstring{$<$}{<}Function to initiate the 2nd core\texorpdfstring{$>$}{>} Implements the 2nd core option to run \textquotesingle{}loop2\textquotesingle{} function
+
+Function to implement the task
+
+Name of the task
+
+Stack size in words
+
+Task input parameter
+
+Priority of the task
+
+Task handle.
+
+Core where the task should runHere is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\Hypertarget{_o_s_8h_a96f4f5e9c32d277c8b5f45b1b0c068fc}\index{OS.h@{OS.h}!initPinsInputs@{initPinsInputs}}
+\index{initPinsInputs@{initPinsInputs}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{initPinsInputs()}{initPinsInputs()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a96f4f5e9c32d277c8b5f45b1b0c068fc} 
+void init\+Pins\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicia os outputs. 
+
+Inicia os outputs.
+
+Configure GPIOs as INPUTs
+
+This function configures the GPIOs as INPUTs. The GPIOs are used to read the state of the switches and sensors. on/off sw
+
+min sensor
+
+max sensor
+
+push sw
+
+alarmHere is the caller graph for this function\+:
+% FIG 17
+\Hypertarget{_o_s_8h_a034848835eb2ce8872c4da77568895fc}\index{OS.h@{OS.h}!initPinsOutputs@{initPinsOutputs}}
+\index{initPinsOutputs@{initPinsOutputs}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{initPinsOutputs()}{initPinsOutputs()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a034848835eb2ce8872c4da77568895fc} 
+void init\+Pins\+Outputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicia o sistema de arquivos. 
+
+I/O I/O Functions calls
+
+Inicia o sistema de arquivos.
+
+Configure GPIOs as OUTPUTs
+
+This function configures the GPIOs as OUTPUTs. The GPIOs are used to control the indicators, valves, pump, and resistor. resistor
+
+water in valve
+
+water out valve
+
+water pump
+
+min indicator
+
+max indicator
+
+alarm indicator
+
+manual indicator
+
+auto indicatorHere is the caller graph for this function\+:
+% FIG 18
+\Hypertarget{_o_s_8h_a8b626fb41c6433470c66289ad702ba87}\index{OS.h@{OS.h}!loop2@{loop2}}
+\index{loop2@{loop2}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{loop2()}{loop2()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a8b626fb41c6433470c66289ad702ba87} 
+void loop2 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters}{}\end{DoxyParamCaption})}
+
+
+
+MAIN. 
+
+MAIN.
+
+This function is responsible for running the second core operation.
+
+\begin{DoxyNote}{Note}
+Initiate WIFI 
+
+Cleanup clients 
+
+Web\+Timer function
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{_m_d_8h_a6a4f6edd72eb1d80a65dea86d761f744}{init\+WIFI()} 
+
+ws.\+cleanup\+Clients() 
+
+\doxylink{_m_d_8h_a504723789792b242f59e8f9adfb48009}{web\+Timer()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameters} & \\
+\hline
+\end{DoxyParams}
+Main loop
+
+Cleanup clients
+
+Web\+Timer functionHere is the call graph for this function\+:
+% FIG 19
+Here is the caller graph for this function\+:
+% FIG 20
+\Hypertarget{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3}\index{OS.h@{OS.h}!readInputs@{readInputs}}
+\index{readInputs@{readInputs}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{readInputs()}{readInputs()}}
+{\footnotesize\ttfamily \label{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3} 
+void read\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Alarm state. 
+
+Read ESP32 GPIOs and stores in the image array
+
+Read all inputs and store in the image array
+
+This function reads all the inputs and stores them in the image array. The image array is used to store the current state of the inputs and outputs. PIN\+\_\+\+INPUT\+\_\+\+COUNT = 5
+
+Read the input from the GPIOHere is the caller graph for this function\+:
+% FIG 21
+\Hypertarget{_o_s_8h_a76b46044c939e363a3e761d515af2e1a}\index{OS.h@{OS.h}!setIndAlarm@{setIndAlarm}}
+\index{setIndAlarm@{setIndAlarm}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setIndAlarm()}{setIndAlarm()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a76b46044c939e363a3e761d515af2e1a} 
+void set\+Ind\+Alarm (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso nivel agua minimo. 
+
+Liga/desliga o indicador luminoso nivel agua minimo.
+
+This function sets the state of the alarm indicator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Old state of the indicator
+
+Condition to debugHere is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\Hypertarget{_o_s_8h_aa879192b15484f1d9112d2b91ef5cea9}\index{OS.h@{OS.h}!setIndAuto@{setIndAuto}}
+\index{setIndAuto@{setIndAuto}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setIndAuto()}{setIndAuto()}}
+{\footnotesize\ttfamily \label{_o_s_8h_aa879192b15484f1d9112d2b91ef5cea9} 
+void set\+Ind\+Auto (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso da resistencia. 
+
+Liga/desliga o indicador luminoso da resistencia.
+
+This function sets the state of the auto mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\Hypertarget{_o_s_8h_a86fca9908335532b4c89bca82aaa9346}\index{OS.h@{OS.h}!setIndMan@{setIndMan}}
+\index{setIndMan@{setIndMan}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setIndMan()}{setIndMan()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a86fca9908335532b4c89bca82aaa9346} 
+void set\+Ind\+Man (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso alarme. 
+
+Liga/desliga o indicador luminoso alarme.
+
+This function sets the state of the manual indicator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 26
+Here is the caller graph for this function\+:
+% FIG 27
+\Hypertarget{_o_s_8h_a87a31bccb377b0b9f859242b0635052c}\index{OS.h@{OS.h}!setIndMax@{setIndMax}}
+\index{setIndMax@{setIndMax}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setIndMax()}{setIndMax()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a87a31bccb377b0b9f859242b0635052c} 
+void set\+Ind\+Max (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Retorna estado da bomba de agua. 
+
+Retorna estado da bomba de agua.
+
+Set the Ind Max object
+
+This function sets the state of the max indicator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Old state of the indicator
+
+Set the max indicator to ON
+
+Condition to debug
+
+Send the max indicator value to the web server
+
+Set the max indicator to OFF
+
+Send the max indicator value to the web serverHere is the call graph for this function\+:
+% FIG 28
+Here is the caller graph for this function\+:
+% FIG 29
+\Hypertarget{_o_s_8h_afd12f5c7d9986ada0226426896ee09c7}\index{OS.h@{OS.h}!setIndMin@{setIndMin}}
+\index{setIndMin@{setIndMin}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setIndMin()}{setIndMin()}}
+{\footnotesize\ttfamily \label{_o_s_8h_afd12f5c7d9986ada0226426896ee09c7} 
+void set\+Ind\+Min (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso nivel agua maximo. 
+
+Liga/desliga o indicador luminoso nivel agua maximo.
+
+This function sets the state of the min indicator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Old state of the indicator
+
+Set the min indicator to ON
+
+Send the min indicator value to the web server
+
+Set the min indicator to OFF
+
+Send the min indicator value to the web serverHere is the call graph for this function\+:
+% FIG 30
+Here is the caller graph for this function\+:
+% FIG 31
+\Hypertarget{_o_s_8h_adbfc39d1df02e4404b08e9573d1fd404}\index{OS.h@{OS.h}!setPump@{setPump}}
+\index{setPump@{setPump}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setPump()}{setPump()}}
+{\footnotesize\ttfamily \label{_o_s_8h_adbfc39d1df02e4404b08e9573d1fd404} 
+void set\+Pump (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso modo manual. 
+
+Liga/desliga o indicador luminoso modo manual.
+
+This function sets the state of the pump.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 32
+Here is the caller graph for this function\+:
+% FIG 33
+\Hypertarget{_o_s_8h_a2a90701c1f779b95de3a3770a5425f3c}\index{OS.h@{OS.h}!setResistor@{setResistor}}
+\index{setResistor@{setResistor}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setResistor()}{setResistor()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a2a90701c1f779b95de3a3770a5425f3c} 
+void set\+Resistor (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso da valvula 2. 
+
+Liga/desliga o indicador luminoso da valvula 2.
+
+This function sets the state of the resistor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 34
+Here is the caller graph for this function\+:
+% FIG 35
+\Hypertarget{_o_s_8h_a0d4efaa2bfb0fa53aa24405940a7a66c}\index{OS.h@{OS.h}!setValveWaterIn@{setValveWaterIn}}
+\index{setValveWaterIn@{setValveWaterIn}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setValveWaterIn()}{setValveWaterIn()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a0d4efaa2bfb0fa53aa24405940a7a66c} 
+void set\+Valve\+Water\+In (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso da bomba de agua. 
+
+Liga/desliga o indicador luminoso da bomba de agua.
+
+This function sets the state of the water in valve.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 36
+Here is the caller graph for this function\+:
+% FIG 37
+\Hypertarget{_o_s_8h_abfda791029a2af9523cc59ff44b6c52e}\index{OS.h@{OS.h}!setValveWaterOut@{setValveWaterOut}}
+\index{setValveWaterOut@{setValveWaterOut}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{setValveWaterOut()}{setValveWaterOut()}}
+{\footnotesize\ttfamily \label{_o_s_8h_abfda791029a2af9523cc59ff44b6c52e} 
+void set\+Valve\+Water\+Out (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o indicador luminoso da valvula 1. 
+
+Liga/desliga o indicador luminoso da valvula 1.
+
+This function sets the state of the water out valve.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 38
+Here is the caller graph for this function\+:
+% FIG 39
+\Hypertarget{_o_s_8h_a4be402fa1ac7049ed1671c31572e0f75}\index{OS.h@{OS.h}!writeOutputs@{writeOutputs}}
+\index{writeOutputs@{writeOutputs}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{writeOutputs()}{writeOutputs()}}
+{\footnotesize\ttfamily \label{_o_s_8h_a4be402fa1ac7049ed1671c31572e0f75} 
+void write\+Outputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Liga/desliga o modo auto. 
+
+Liga/desliga o modo auto.
+
+Write all outputs from the image array to the GPIOs
+
+This function writes all the outputs from the image array to the GPIOs. The image array is used to store the current state of the inputs and outputs. PIN\+\_\+\+OUTPUT\+\_\+\+COUNT = 9
+
+Write the output to the GPIOHere is the caller graph for this function\+:
+% FIG 40
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_o_s_8h_a117352cc494cc62c6b2f1882786a332c}\index{OS.h@{OS.h}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily \label{_o_s_8h_a117352cc494cc62c6b2f1882786a332c} 
+bool DEBUG\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Web\+Server. 
+
+\Hypertarget{_o_s_8h_a56916c67f21f332014c1c19b200d45f3}\index{OS.h@{OS.h}!server@{server}}
+\index{server@{server}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \label{_o_s_8h_a56916c67f21f332014c1c19b200d45f3} 
+Async\+Web\+Server server\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Web\+Socket. 
+
+\Hypertarget{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd}\index{OS.h@{OS.h}!ws@{ws}}
+\index{ws@{ws}!OS.h@{OS.h}}
+\doxysubsubsection{\texorpdfstring{ws}{ws}}
+{\footnotesize\ttfamily \label{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd} 
+Async\+Web\+Socket ws\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Libraries. 
+
+Wifi Libraries Async Libraries SPIFFS Libraries 

@@ -1,0 +1,250 @@
+.TH "src/MD_wifi.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/MD_wifi.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'MD\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnWiFiEvent\fP (WiFiEvent_t event)"
+.br
+.RI "WiFi Event Handler\&. "
+.ti -1c
+.RI "String \fBwifiQuality\fP ()"
+.br
+.RI "WiFi Quality\&. "
+.ti -1c
+.RI "void \fBconnectToWIFI\fP ()"
+.br
+.RI "Connect to WiFi\&. "
+.ti -1c
+.RI "void \fBconnectToSoftAP\fP ()"
+.br
+.RI "Connect to SoftAP\&. "
+.ti -1c
+.RI "bool \fBinitWIFI\fP ()"
+.br
+.RI "Initiate WiFi\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBsoft_ap_ssid\fP = 'Destiller\-AP'"
+.br
+.ti -1c
+.RI "const char * \fBsoft_ap_password\fP = 'Destiller\-AP'"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void connectToSoftAP ()"
+
+.PP
+Connect to SoftAP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function creates a Soft Access Point 
+
+.PP
+The IP Address of the ESP32 Soft Access Point is set to: 192\&.168\&.100\&.100 
+.RE
+.PP
+Set hostname
+
+.PP
+Set event handler for WiFi events
+
+.PP
+Enable auto reconnect
+
+.PP
+Set to Station + Access Point mode
+
+.PP
+Set IP Address of the ESP32 Soft Access Point
+
+.PP
+AP IP
+
+.PP
+Gateway IP
+
+.PP
+Subnet Mask
+.SS "void connectToWIFI ()"
+
+.PP
+Connect to WiFi\&. 
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function connects the ESP32 to a WiFi network 
+.RE
+.PP
+End the server
+
+.PP
+Dark theme
+
+.PP
+Timeout to web server
+
+.PP
+Timeout to connect
+
+.PP
+Debug output
+
+.PP
+Hostname
+
+.PP
+Hostname
+
+.PP
+Set the WiFiManager parameters and connect to the WiFi network with the SSID and password stored in the EEPROM memory
+
+.PP
+Get the SSID and password from the WiFiManager and connect to the WiFi network
+
+.PP
+Connect to the WiFi network with the SSID and password
+
+.PP
+Wait for the ESP32 to connect to the WiFi network and print the connection status
+.SS "bool initWIFI ()"
+
+.PP
+Initiate WiFi\&. 
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function initiates the WiFi connection 
+.RE
+.PP
+SoftAP flag to create a Soft Access Point only once
+
+.PP
+WIFI_MODE_OPTIONS
+
+.PP
+1 - Connect to local WiFi network only
+
+.PP
+2 - Create a local AP (SoftAP)
+
+.PP
+3 - Both (Connect to local WiFi network and create a local AP)
+
+.PP
+Initiate WiFi
+
+.PP
+Initiate WiFi in AP mode only
+
+.PP
+Initiate WiFi
+
+.PP
+Initiate WiFi in AP mode
+.SS "void OnWiFiEvent (WiFiEvent_t event)"
+
+.PP
+WiFi Event Handler\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function handles the WiFi events 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+Handle WiFi events
+
+.PP
+Station connected to WiFi network
+
+.PP
+Soft Access Point started
+
+.PP
+Station connected to ESP32 Soft Access Point
+
+.PP
+Station disconnected from ESP32 Soft Access Point
+.SS "String wifiQuality ()"
+
+.PP
+WiFi Quality\&. Inicia o wifi\&.
+
+.PP
+\fBReturns\fP
+.RS 4
+String 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function returns the WiFi quality in percentage 
+.RE
+.PP
+Get the Received Signal Strength Indicator (RSSI) in dBm
+
+.PP
+Quality in percentage
+
+.PP
+Quality in string format
+
+.PP
+Calculate the quality in percentage
+
+.PP
+Return the quality in string format with RSSI and quality in percentage values
+
+.PP
+Send the quality in percentage to the web server as a JSON object
+
+.PP
+Return the quality in string format with RSSI and quality in percentage values
+.SH "Variable Documentation"
+.PP 
+.SS "const char* soft_ap_password = 'Destiller\-AP'"
+
+.SS "const char* soft_ap_ssid = 'Destiller\-AP'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for IntelligentDestiller from the source code\&.

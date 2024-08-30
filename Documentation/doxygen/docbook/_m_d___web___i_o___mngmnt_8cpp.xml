@@ -1,0 +1,822 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___web___i_o___mngmnt_8cpp" xml:lang="en-US">
+<title>src/MD_Web_IO_Mngmnt.cpp File Reference</title>
+<indexterm><primary>src/MD_Web_IO_Mngmnt.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_Web_IO_Mngmnt.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a76f121aef723f8209031f700a1cf5a61">updateOutputsWeb</link> ()</para>
+
+<para>Output variables image. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a47a030b4b82d5d1b1a73e1c2dfdc36ea">getAutoModeWeb</link> ()</para>
+
+<para>GETS BLOCK. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a12a9a8e5c80ace6e8643360f7603c280">getResistorWeb</link> ()</para>
+
+<para>Get the Ind Min object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a99fa4a4b0ba168d3daeb40ee65452bac">getValv_Water_InWeb</link> ()</para>
+
+<para>Get the Ind Alarm object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a1f7f13061ad706f397dd2ddfb581d417">getValv_Water_OutWeb</link> ()</para>
+
+<para>Get the Valv Water Out object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a47fd66708aa0f427cd949f639cebc0df">getPumpWeb</link> ()</para>
+
+<para>Get the Pump object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a4f59623372f8c8c8d704f0f004f7d955">setAutoModeWeb</link> (bool state)</para>
+
+<para>SETS BLOCK. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a79d7f2ee79816b8a1c7d71f4887df8c6">setPumpWeb</link> (bool state)</para>
+
+<para>Set the Pump object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1abe554b3a794b4000aa2d251a3d63a54f">setValveWaterInWeb</link> (bool state)</para>
+
+<para>Set the Valve Water In object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a922a642ffb3645f0271b481309cdb133">setValveWaterOutWeb</link> (bool state)</para>
+
+<para>Set the Valve Water Out object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1afc81a927862b27a260c9a12ae7773739">setResistorWeb</link> (bool state)</para>
+
+<para>Set the Resistor object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a1ab8fa34a60a7d71e2e1269469623451">toggleAutoModeWeb</link> ()</para>
+
+<para>TOGGLES BLOCK. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1aa5b521b0b413a137701f7e2f630f4fdc">togglePumpWeb</link> ()</para>
+
+<para>Toggle Pump Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1a757ebfbdd26d049507dd4662ff9edba9">toggleValveWaterInWeb</link> ()</para>
+
+<para>Toggle Valve Water In Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1aed9cbec3cbb71c6f6fec13b36223efa3">toggleValveWaterOutWeb</link> ()</para>
+
+<para>Toggle Valve Water Out Web. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___web___i_o___mngmnt_8cpp_1aece7bc529bc15d8753086021a9810637">toggleResistorWeb</link> ()</para>
+
+<para>Toggle Resistor Web. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="__m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389">outputVarsImageWeb</link> [9]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo (<link xlink:href="mailto:19749@ipportalegre.pt">19749@ipportalegre.pt</link>) </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a47a030b4b82d5d1b1a73e1c2dfdc36ea"/><section>
+    <title>getAutoModeWeb()</title>
+<indexterm><primary>getAutoModeWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>getAutoModeWeb</secondary></indexterm>
+<para><computeroutput>bool getAutoModeWeb ( )</computeroutput></para><para>
+
+<para>GETS BLOCK. </para>
+</para>
+
+<para>Get the Ind Max object</para>
+
+<para>This function returns the state of the max indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a47a030b4b82d5d1b1a73e1c2dfdc36ea_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a47fd66708aa0f427cd949f639cebc0df"/><section>
+    <title>getPumpWeb()</title>
+<indexterm><primary>getPumpWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>getPumpWeb</secondary></indexterm>
+<para><computeroutput>bool getPumpWeb ( )</computeroutput></para><para>
+
+<para>Get the Pump object. </para>
+</para>
+
+<para>This function returns the state of the water pump.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a47fd66708aa0f427cd949f639cebc0df_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a12a9a8e5c80ace6e8643360f7603c280"/><section>
+    <title>getResistorWeb()</title>
+<indexterm><primary>getResistorWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>getResistorWeb</secondary></indexterm>
+<para><computeroutput>bool getResistorWeb ( )</computeroutput></para><para>
+
+<para>Get the Ind Min object. </para>
+</para>
+
+<para>This function returns the state of the min indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a12a9a8e5c80ace6e8643360f7603c280_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a99fa4a4b0ba168d3daeb40ee65452bac"/><section>
+    <title>getValv_Water_InWeb()</title>
+<indexterm><primary>getValv_Water_InWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>getValv_Water_InWeb</secondary></indexterm>
+<para><computeroutput>bool getValv_Water_InWeb ( )</computeroutput></para><para>
+
+<para>Get the Ind Alarm object. </para>
+</para>
+
+<para>This function returns the state of the alarm indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a99fa4a4b0ba168d3daeb40ee65452bac_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a1f7f13061ad706f397dd2ddfb581d417"/><section>
+    <title>getValv_Water_OutWeb()</title>
+<indexterm><primary>getValv_Water_OutWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>getValv_Water_OutWeb</secondary></indexterm>
+<para><computeroutput>bool getValv_Water_OutWeb ( )</computeroutput></para><para>
+
+<para>Get the Valv Water Out object. </para>
+</para>
+
+<para>This function returns the state of the water out valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a1f7f13061ad706f397dd2ddfb581d417_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a4f59623372f8c8c8d704f0f004f7d955"/><section>
+    <title>setAutoModeWeb()</title>
+<indexterm><primary>setAutoModeWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>setAutoModeWeb</secondary></indexterm>
+<para><computeroutput>void setAutoModeWeb (bool state)</computeroutput></para><para>
+
+<para>SETS BLOCK. </para>
+</para>
+
+<para>Set the Auto Mode object</para>
+
+<para>This function sets the state of the auto mode.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the auto indicator to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the auto indicator to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a4f59623372f8c8c8d704f0f004f7d955_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a79d7f2ee79816b8a1c7d71f4887df8c6"/><section>
+    <title>setPumpWeb()</title>
+<indexterm><primary>setPumpWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>setPumpWeb</secondary></indexterm>
+<para><computeroutput>void setPumpWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Pump object. </para>
+</para>
+
+<para>This function sets the state of the pump.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the pump to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the pump to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a79d7f2ee79816b8a1c7d71f4887df8c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1afc81a927862b27a260c9a12ae7773739"/><section>
+    <title>setResistorWeb()</title>
+<indexterm><primary>setResistorWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>setResistorWeb</secondary></indexterm>
+<para><computeroutput>void setResistorWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Resistor object. </para>
+</para>
+
+<para>This function sets the state of the resistor.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the resistor to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the resistor to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_afc81a927862b27a260c9a12ae7773739_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1abe554b3a794b4000aa2d251a3d63a54f"/><section>
+    <title>setValveWaterInWeb()</title>
+<indexterm><primary>setValveWaterInWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>setValveWaterInWeb</secondary></indexterm>
+<para><computeroutput>void setValveWaterInWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Valve Water In object. </para>
+</para>
+
+<para>This function sets the state of the water in valve.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the water in valve to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the water in valve to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_abe554b3a794b4000aa2d251a3d63a54f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a922a642ffb3645f0271b481309cdb133"/><section>
+    <title>setValveWaterOutWeb()</title>
+<indexterm><primary>setValveWaterOutWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>setValveWaterOutWeb</secondary></indexterm>
+<para><computeroutput>void setValveWaterOutWeb (bool state)</computeroutput></para><para>
+
+<para>Set the Valve Water Out object. </para>
+</para>
+
+<para>This function sets the state of the water out valve.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Static variable to store the old state</para>
+
+<para>Set the water out valve to ON</para>
+
+<para>Set the old state to the current state</para>
+
+<para>Set the water out valve to OFF</para>
+
+<para>Set the old state to the current state</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a922a642ffb3645f0271b481309cdb133_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a1ab8fa34a60a7d71e2e1269469623451"/><section>
+    <title>toggleAutoModeWeb()</title>
+<indexterm><primary>toggleAutoModeWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>toggleAutoModeWeb</secondary></indexterm>
+<para><computeroutput>void toggleAutoModeWeb ( )</computeroutput></para><para>
+
+<para>TOGGLES BLOCK. </para>
+</para>
+
+<para>Toggle Auto Mode Web</para>
+
+<para>This function toggles the auto mode.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Get the auto indicator state</para>
+
+<para>Toggle the auto indicator state</para>
+
+<para>Set the auto indicator state</para>
+
+<para>Toggle the auto indicator state</para>
+
+<para>Set the auto indicator state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a1ab8fa34a60a7d71e2e1269469623451_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a1ab8fa34a60a7d71e2e1269469623451_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1aa5b521b0b413a137701f7e2f630f4fdc"/><section>
+    <title>togglePumpWeb()</title>
+<indexterm><primary>togglePumpWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>togglePumpWeb</secondary></indexterm>
+<para><computeroutput>void togglePumpWeb ( )</computeroutput></para><para>
+
+<para>Toggle Pump Web. </para>
+</para>
+
+<para>This function toggles the pump.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Pump </para>
+</formalpara>
+</para>
+
+<para>Get the pump state</para>
+
+<para>Toggle the pump state</para>
+
+<para>Set the pump state</para>
+
+<para>Print the pump state</para>
+
+<para>Print the pump state</para>
+
+<para>Toggle the pump state</para>
+
+<para>Set the pump state</para>
+
+<para>Print the pump state</para>
+
+<para>Print the pump state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_aa5b521b0b413a137701f7e2f630f4fdc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_aa5b521b0b413a137701f7e2f630f4fdc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1aece7bc529bc15d8753086021a9810637"/><section>
+    <title>toggleResistorWeb()</title>
+<indexterm><primary>toggleResistorWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>toggleResistorWeb</secondary></indexterm>
+<para><computeroutput>void toggleResistorWeb ( )</computeroutput></para><para>
+
+<para>Toggle Resistor Web. </para>
+</para>
+
+<para>This function toggles the resistor.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Resistor </para>
+</formalpara>
+</para>
+
+<para>Get the resistor state</para>
+
+<para>Toggle the resistor state</para>
+
+<para>Set the resistor state</para>
+
+<para>Toggle the resistor state</para>
+
+<para>Set the resistor state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_aece7bc529bc15d8753086021a9810637_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_aece7bc529bc15d8753086021a9810637_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a757ebfbdd26d049507dd4662ff9edba9"/><section>
+    <title>toggleValveWaterInWeb()</title>
+<indexterm><primary>toggleValveWaterInWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>toggleValveWaterInWeb</secondary></indexterm>
+<para><computeroutput>void toggleValveWaterInWeb ( )</computeroutput></para><para>
+
+<para>Toggle Valve Water In Web. </para>
+</para>
+
+<para>This function toggles the water in valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Valve Water In </para>
+</formalpara>
+</para>
+
+<para>Get the water in valve state</para>
+
+<para>Toggle the water in valve state</para>
+
+<para>Set the water in valve state</para>
+
+<para>Toggle the water in valve state</para>
+
+<para>Set the water in valve state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a757ebfbdd26d049507dd4662ff9edba9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a757ebfbdd26d049507dd4662ff9edba9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1aed9cbec3cbb71c6f6fec13b36223efa3"/><section>
+    <title>toggleValveWaterOutWeb()</title>
+<indexterm><primary>toggleValveWaterOutWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>toggleValveWaterOutWeb</secondary></indexterm>
+<para><computeroutput>void toggleValveWaterOutWeb ( )</computeroutput></para><para>
+
+<para>Toggle Valve Water Out Web. </para>
+</para>
+
+<para>This function toggles the water out valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void Toggle Valve Water Out </para>
+</formalpara>
+</para>
+
+<para>Get the water out valve state</para>
+
+<para>If the water out valve state is OFF and the manual mode is ON</para>
+
+<para>Toggle the water out valve state</para>
+
+<para>Set the water out valve state</para>
+
+<para>Toggle the water out valve state</para>
+
+<para>Set the water out valve state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_aed9cbec3cbb71c6f6fec13b36223efa3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_aed9cbec3cbb71c6f6fec13b36223efa3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1a76f121aef723f8209031f700a1cf5a61"/><section>
+    <title>updateOutputsWeb()</title>
+<indexterm><primary>updateOutputsWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>updateOutputsWeb</secondary></indexterm>
+<para><computeroutput>void updateOutputsWeb ( )</computeroutput></para><para>
+
+<para>Output variables image. </para>
+</para>
+
+<para>FUNCTIONS BLOCK</para>
+
+<para>Update Outputs Web</para>
+
+<para>This function updates the outputs for the web interface.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Update the resistor state</para>
+
+<para>Update the pump state</para>
+
+<para>Update the water out valve state</para>
+
+<para>Update the water in valve state</para>
+
+<para>Update the alarm state</para>
+
+<para>Update the water min state</para>
+
+<para>Update the water max state</para>
+
+<para>Update the manual mode state</para>
+
+<para>outputVarsImageWeb[7] = <link linkend="__o_s_8h_1abbca1cc0d29f545e9a39778288a12071">getIndAuto()</link>; /// Update the auto indicator state</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a76f121aef723f8209031f700a1cf5a61_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___web___i_o___mngmnt_8cpp_a76f121aef723f8209031f700a1cf5a61_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389"/><section>
+    <title>outputVarsImageWeb</title>
+<indexterm><primary>outputVarsImageWeb</primary><secondary>MD_Web_IO_Mngmnt.cpp</secondary></indexterm>
+<indexterm><primary>MD_Web_IO_Mngmnt.cpp</primary><secondary>outputVarsImageWeb</secondary></indexterm>
+<para><computeroutput>uint8_t outputVarsImageWeb[9]</computeroutput></para></section>
+</section>
+</section>

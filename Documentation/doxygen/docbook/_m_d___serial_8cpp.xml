@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___serial_8cpp" xml:lang="en-US">
+<title>src/MD_Serial.cpp File Reference</title>
+<indexterm><primary>src/MD_Serial.cpp</primary></indexterm>
+<para>
+
+<para>Serial functions for the MD project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_Serial.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1a2531a428197475f184bd61c0b412396a">initSerial</link> ()</para>
+
+<para>Initialize Serial Terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1a4ca51e07e88692392bd382ee685505d0">sPrint</link> (char *abc)</para>
+
+<para>Serial Print Functions. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1a90840feb19f9ce9215d2e2be6de2d515">sPrintLn</link> (char *abc)</para>
+
+<para>Print a string to the Serial Terminal with a line break. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1ac26aedfdce8cea151106030a2ae286b9">sPrintStr</link> (String abc)</para>
+
+<para>Print a string to the Serial Terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1aaaf82364eff15ff055f45914b62051ab">sPrintLnStr</link> (String abc)</para>
+
+<para>Print a string to the Serial Terminal with a line break. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1aef2f197956cfc5cbd5dae5c7bacf263e">sPrintNbr</link> (int nbr)</para>
+
+<para>Print a number to the Serial Terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___serial_8cpp_1ae8ac89f250af24dadb79c7f683c544e0">sPrintLnNbr</link> (int nbr)</para>
+
+<para>Print a number to the Serial Terminal with a line break. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Serial functions for the MD project. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d___serial_8cpp_1a2531a428197475f184bd61c0b412396a"/><section>
+    <title>initSerial()</title>
+<indexterm><primary>initSerial</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>initSerial</secondary></indexterm>
+<para><computeroutput>void initSerial ( )</computeroutput></para><para>
+
+<para>Initialize Serial Terminal. </para>
+</para>
+
+<para>Set timer status.</para>
+
+<para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
+
+<para><note><title>Note</title>
+
+<para>This function is used to initialize the Serial Communications with the default baud rate of 9600 bps </para>
+
+<para>This function is called in the <link linkend="__a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d">setup()</link> function of the main program </para>
+
+<para>This function is used to print the initial message to the Serial Terminal </para>
+</note>
+</para>
+
+<para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp_a2531a428197475f184bd61c0b412396a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp_a2531a428197475f184bd61c0b412396a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___serial_8cpp_1a4ca51e07e88692392bd382ee685505d0"/><section>
+    <title>sPrint()</title>
+<indexterm><primary>sPrint</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>sPrint</secondary></indexterm>
+<para><computeroutput>void sPrint (char * abc)</computeroutput></para><para>
+
+<para>Serial Print Functions. </para>
+</para>
+
+<para>Inicia a serial.</para>
+
+<para>Print a string to the Serial Terminal 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with no line break </para>
+</note>
+</para>
+</section>
+<anchor xml:id="__m_d___serial_8cpp_1a90840feb19f9ce9215d2e2be6de2d515"/><section>
+    <title>sPrintLn()</title>
+<indexterm><primary>sPrintLn</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>sPrintLn</secondary></indexterm>
+<para><computeroutput>void sPrintLn (char * abc)</computeroutput></para><para>
+
+<para>Print a string to the Serial Terminal with a line break. </para>
+</para>
+
+<para>Print string.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with a line break </para>
+</note>
+</para>
+</section>
+<anchor xml:id="__m_d___serial_8cpp_1ae8ac89f250af24dadb79c7f683c544e0"/><section>
+    <title>sPrintLnNbr()</title>
+<indexterm><primary>sPrintLnNbr</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>sPrintLnNbr</secondary></indexterm>
+<para><computeroutput>void sPrintLnNbr (int nbr)</computeroutput></para><para>
+
+<para>Print a number to the Serial Terminal with a line break. </para>
+</para>
+
+<para>Print string with new line.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>nbr</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a number to the Serial Terminal with a line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp_ae8ac89f250af24dadb79c7f683c544e0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___serial_8cpp_1aaaf82364eff15ff055f45914b62051ab"/><section>
+    <title>sPrintLnStr()</title>
+<indexterm><primary>sPrintLnStr</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>sPrintLnStr</secondary></indexterm>
+<para><computeroutput>void sPrintLnStr (String abc)</computeroutput></para><para>
+
+<para>Print a string to the Serial Terminal with a line break. </para>
+</para>
+
+<para>Print number.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with a line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp_aaaf82364eff15ff055f45914b62051ab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___serial_8cpp_1aef2f197956cfc5cbd5dae5c7bacf263e"/><section>
+    <title>sPrintNbr()</title>
+<indexterm><primary>sPrintNbr</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>sPrintNbr</secondary></indexterm>
+<para><computeroutput>void sPrintNbr (int nbr)</computeroutput></para><para>
+
+<para>Print a number to the Serial Terminal. </para>
+</para>
+
+<para>Print string.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>nbr</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a number to the Serial Terminal with no line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp_aef2f197956cfc5cbd5dae5c7bacf263e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___serial_8cpp_1ac26aedfdce8cea151106030a2ae286b9"/><section>
+    <title>sPrintStr()</title>
+<indexterm><primary>sPrintStr</primary><secondary>MD_Serial.cpp</secondary></indexterm>
+<indexterm><primary>MD_Serial.cpp</primary><secondary>sPrintStr</secondary></indexterm>
+<para><computeroutput>void sPrintStr (String abc)</computeroutput></para><para>
+
+<para>Print a string to the Serial Terminal. </para>
+</para>
+
+<para>Print string with new line.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>abc</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is used to print a string to the Serial Terminal with no line break </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___serial_8cpp_ac26aedfdce8cea151106030a2ae286b9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

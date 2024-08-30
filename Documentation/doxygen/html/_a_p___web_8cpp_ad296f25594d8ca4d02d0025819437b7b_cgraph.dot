@@ -1,0 +1,11 @@
+digraph "onEvent"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="onEvent",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Web Server and WebSocket Server variables and constants initialization function."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="handleWebSocketMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___web_8cpp.html#a0be75b75b82f96e18d5c695059a67a63",tooltip="Definitions."];
+}

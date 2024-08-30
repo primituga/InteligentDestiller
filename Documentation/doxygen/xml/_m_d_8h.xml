@@ -1,0 +1,2183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_m_d_8h" kind="file" language="C++">
+    <compoundname>MD.h</compoundname>
+    <includes refid="_o_s_8h" local="yes">OS.h</includes>
+    <includedby refid="_a_p_8h" local="yes">include/AP.h</includedby>
+    <includedby refid="_o_s_8h" local="yes">include/OS.h</includedby>
+    <includedby refid="_m_d___i_o_8cpp" local="yes">src/MD_IO.cpp</includedby>
+    <includedby refid="_m_d___serial_8cpp" local="yes">src/MD_Serial.cpp</includedby>
+    <includedby refid="_m_d___test___i_os_8cpp" local="yes">src/MD_Test_IOs.cpp</includedby>
+    <includedby refid="_m_d___timer_8cpp" local="yes">src/MD_Timer.cpp</includedby>
+    <includedby refid="_m_d___web___handlers_8cpp" local="yes">src/MD_Web_Handlers.cpp</includedby>
+    <includedby refid="_m_d___web___i_o___mngmnt_8cpp" local="yes">src/MD_Web_IO_Mngmnt.cpp</includedby>
+    <includedby refid="_m_d__wifi_8cpp" local="yes">src/MD_wifi.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/MD.h</label>
+        <link refid="_m_d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OS.h</label>
+        <link refid="_o_s_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="5">
+        <label>SPIFFS.h</label>
+      </node>
+      <node id="3">
+        <label>WiFiManager.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/AP.h</label>
+        <link refid="_a_p_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/MD.h</label>
+        <link refid="_m_d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/OS.h</label>
+        <link refid="_o_s_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/AP_Destiler.cpp</label>
+        <link refid="_a_p___destiler_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/AP_Web.cpp</label>
+        <link refid="_a_p___web_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/AP_main.cpp</label>
+        <link refid="_a_p__main_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/MD_IO.cpp</label>
+        <link refid="_m_d___i_o_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/MD_Serial.cpp</label>
+        <link refid="_m_d___serial_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/MD_Test_IOs.cpp</label>
+        <link refid="_m_d___test___i_os_8cpp"/>
+      </node>
+      <node id="13">
+        <label>src/MD_Timer.cpp</label>
+        <link refid="_m_d___timer_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/MD_Web_Handlers.cpp</label>
+        <link refid="_m_d___web___handlers_8cpp"/>
+      </node>
+      <node id="15">
+        <label>src/MD_Web_IO_Mngmnt.cpp</label>
+        <link refid="_m_d___web___i_o___mngmnt_8cpp"/>
+      </node>
+      <node id="16">
+        <label>src/MD_wifi.cpp</label>
+        <link refid="_m_d__wifi_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/OS_FS.cpp</label>
+        <link refid="_o_s___f_s_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/OS_GPIO.cpp</label>
+        <link refid="_o_s___g_p_i_o_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/OS_multi_core.cpp</label>
+        <link refid="_o_s__multi__core_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" prot="public" static="no">
+        <name>ALARM_TIME_ON</name>
+        <initializer>600</initializer>
+        <briefdescription>
+<para>TIMERS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defining timers for the alarm indicator blinking </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="64" column="9" bodyfile="include/MD.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" prot="public" static="no">
+        <name>ALARM_TIME_OFF</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="65" column="9" bodyfile="include/MD.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" prot="public" static="no">
+        <name>WIFI_MODE_OPTIONS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>WIFI SERVICE. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>WIFI Functions calls </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="111" column="9" bodyfile="include/MD.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendWiFiQuality</definition>
+        <argsstring>()</argsstring>
+        <name>sendWiFiQuality</name>
+        <briefdescription>
+<para>MiddleWare Header. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function prototypes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="19" column="6" declfile="include/MD.h" declline="19" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleAutoMode</definition>
+        <argsstring>()</argsstring>
+        <name>toggleAutoMode</name>
+        <briefdescription>
+<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>current state of the button</para>
+<para>previous state of the button</para>
+<para>current state of the button</para>
+<para>the last time the output pin was toggled</para>
+<para>the debounce time; increase if the output flickers</para>
+<para>read the state of the switch into a local variable</para>
+<para>If the switch changed, due to noise or pressing</para>
+<para>reset the debouncing timer</para>
+<para>if the switch value has been stable for a while</para>
+<para>if the button state has changed</para>
+<para>save the new state</para>
+<para>if the button state is HIGH</para>
+<para>Toggle Auto Mode</para>
+<para>save the current state as the last state, for next time through the loop</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="20" column="6" bodyfile="src/MD_IO.cpp" bodystart="44" bodyend="72" declfile="include/MD.h" declline="20" declcolumn="6"/>
+        <references refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" compoundref="_o_s___g_p_i_o_8cpp" startline="165" endline="168">getAutoModeSW</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</references>
+        <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleIndAuto</definition>
+        <argsstring>()</argsstring>
+        <name>toggleIndAuto</name>
+        <briefdescription>
+<para>Toggle the Auto Mode of the Machine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="21" column="6" bodyfile="src/MD_IO.cpp" bodystart="17" bodyend="37" declfile="include/MD.h" declline="21" declcolumn="6"/>
+        <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
+        <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
+        <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
+        <referencedby refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" compoundref="_m_d___i_o_8cpp" startline="44" endline="72">toggleAutoMode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void indicatorsManagement</definition>
+        <argsstring>()</argsstring>
+        <name>indicatorsManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>INDICATORS BLOCK</para>
+<para>Set the maximum water level indicator</para>
+<para>Set the minimum water level indicator</para>
+<para>Set the alarm indicator</para>
+<para>Set the manual mode indicator</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="22" column="6" bodyfile="src/MD_IO.cpp" bodystart="74" bodyend="83" declfile="include/MD.h" declline="22" declcolumn="6"/>
+        <references refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" compoundref="_o_s___g_p_i_o_8cpp" startline="152" endline="155">getAlarmIND</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
+        <references refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</references>
+        <references refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</references>
+        <references refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</references>
+        <references refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" compoundref="_o_s___g_p_i_o_8cpp" startline="260" endline="284">setIndMax</references>
+        <references refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" compoundref="_o_s___g_p_i_o_8cpp" startline="295" endline="322">setIndMin</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modeManagement</definition>
+        <argsstring>()</argsstring>
+        <name>modeManagement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator</para>
+<para>Toggle the auto mode</para>
+<para>Set the auto mode indicator to the web value of the auto mode</para>
+<para>Set the auto mode indicator to OFF</para>
+<para>Set the auto mode to OFF in the web interface</para>
+<para>If the machine is in manual mode, turn off the timer</para>
+<para>Turn off the timer</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="23" column="6" bodyfile="src/MD_IO.cpp" bodystart="85" bodyend="107" declfile="include/MD.h" declline="23" declcolumn="6"/>
+        <references refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="46" endline="49">getAutoModeWeb</references>
+        <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
+        <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
+        <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
+        <references refid="_m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f" compoundref="_m_d___i_o_8cpp" startline="44" endline="72">toggleAutoMode</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a76f121aef723f8209031f700a1cf5a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateOutputsWeb</definition>
+        <argsstring>()</argsstring>
+        <name>updateOutputsWeb</name>
+        <briefdescription>
+<para>Output variables image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>FUNCTIONS BLOCK</para>
+<para>Update Outputs Web</para>
+<para>This function updates the outputs for the web interface.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Update the resistor state</para>
+<para>Update the pump state</para>
+<para>Update the water out valve state</para>
+<para>Update the water in valve state</para>
+<para>Update the alarm state</para>
+<para>Update the water min state</para>
+<para>Update the water max state</para>
+<para>Update the manual mode state</para>
+<para>outputVarsImageWeb[7] = <ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto()</ref>; /// Update the auto indicator state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="25" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="21" bodyend="32" declfile="include/MD.h" declline="25" declcolumn="6"/>
+        <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" compoundref="_o_s___g_p_i_o_8cpp" startline="243" endline="246">getPump</references>
+        <references refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</references>
+        <references refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</references>
+        <references refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</references>
+        <references refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
+        <references refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleAutoModeWeb</definition>
+        <argsstring>()</argsstring>
+        <name>toggleAutoModeWeb</name>
+        <briefdescription>
+<para>TOGGLES BLOCK. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Toggle Auto Mode Web</para>
+<para>This function toggles the auto mode.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the auto indicator state</para>
+<para>Toggle the auto indicator state</para>
+<para>Set the auto indicator state</para>
+<para>Toggle the auto indicator state</para>
+<para>Set the auto indicator state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="26" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="238" bodyend="251" declfile="include/MD.h" declline="26" declcolumn="6"/>
+        <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
+        <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void togglePumpWeb</definition>
+        <argsstring>()</argsstring>
+        <name>togglePumpWeb</name>
+        <briefdescription>
+<para>Toggle Pump Web. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function toggles the pump.</para>
+<para><simplesect kind="return"><para>void Toggle Pump </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the pump state</para>
+<para>Toggle the pump state</para>
+<para>Set the pump state</para>
+<para>Print the pump state</para>
+<para>Print the pump state</para>
+<para>Toggle the pump state</para>
+<para>Set the pump state</para>
+<para>Print the pump state</para>
+<para>Print the pump state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="27" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="260" bodyend="277" declfile="include/MD.h" declline="27" declcolumn="6"/>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1a47fd66708aa0f427cd949f639cebc0df" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="98" endline="101">getPumpWeb</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1a79d7f2ee79816b8a1c7d71f4887df8c6" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="140" endline="153">setPumpWeb</references>
+        <references refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" compoundref="_m_d___serial_8cpp" startline="67" endline="70">sPrintStr</references>
+        <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleValveWaterInWeb</definition>
+        <argsstring>()</argsstring>
+        <name>toggleValveWaterInWeb</name>
+        <briefdescription>
+<para>Toggle Valve Water In Web. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function toggles the water in valve.</para>
+<para><simplesect kind="return"><para>void Toggle Valve Water In </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the water in valve state</para>
+<para>Toggle the water in valve state</para>
+<para>Set the water in valve state</para>
+<para>Toggle the water in valve state</para>
+<para>Set the water in valve state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="28" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="286" bodyend="299" declfile="include/MD.h" declline="28" declcolumn="6"/>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1abe554b3a794b4000aa2d251a3d63a54f" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="164" endline="177">setValveWaterInWeb</references>
+        <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleValveWaterOutWeb</definition>
+        <argsstring>()</argsstring>
+        <name>toggleValveWaterOutWeb</name>
+        <briefdescription>
+<para>Toggle Valve Water Out Web. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function toggles the water out valve.</para>
+<para><simplesect kind="return"><para>void Toggle Valve Water Out </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the water out valve state</para>
+<para>If the water out valve state is OFF and the manual mode is ON</para>
+<para>Toggle the water out valve state</para>
+<para>Set the water out valve state</para>
+<para>Toggle the water out valve state</para>
+<para>Set the water out valve state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="29" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="308" bodyend="321" declfile="include/MD.h" declline="29" declcolumn="6"/>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1a922a642ffb3645f0271b481309cdb133" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="188" endline="201">setValveWaterOutWeb</references>
+        <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aece7bc529bc15d8753086021a9810637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleResistorWeb</definition>
+        <argsstring>()</argsstring>
+        <name>toggleResistorWeb</name>
+        <briefdescription>
+<para>Toggle Resistor Web. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function toggles the resistor.</para>
+<para><simplesect kind="return"><para>void Toggle Resistor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the resistor state</para>
+<para>Toggle the resistor state</para>
+<para>Set the resistor state</para>
+<para>Toggle the resistor state</para>
+<para>Set the resistor state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="30" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="330" bodyend="344" declfile="include/MD.h" declline="30" declcolumn="6"/>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1afc81a927862b27a260c9a12ae7773739" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="212" endline="225">setResistorWeb</references>
+        <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAutoModeWeb</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setAutoModeWeb</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>SETS BLOCK. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the Auto Mode object</para>
+<para>This function sets the state of the auto mode.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Static variable to store the old state</para>
+<para>Set the auto indicator to ON</para>
+<para>Set the old state to the current state</para>
+<para>Set the auto indicator to OFF</para>
+<para>Set the old state to the current state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="32" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="116" bodyend="129" declfile="include/MD.h" declline="32" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
+        <referencedby refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="238" endline="251">toggleAutoModeWeb</referencedby>
+        <referencedby refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPumpWeb</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setPumpWeb</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the Pump object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the state of the pump.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Static variable to store the old state</para>
+<para>Set the pump to ON</para>
+<para>Set the old state to the current state</para>
+<para>Set the pump to OFF</para>
+<para>Set the old state to the current state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="33" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="140" bodyend="153" declfile="include/MD.h" declline="33" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1abe554b3a794b4000aa2d251a3d63a54f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setValveWaterInWeb</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setValveWaterInWeb</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the Valve Water In object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the state of the water in valve.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Static variable to store the old state</para>
+<para>Set the water in valve to ON</para>
+<para>Set the old state to the current state</para>
+<para>Set the water in valve to OFF</para>
+<para>Set the old state to the current state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="34" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="164" bodyend="177" declfile="include/MD.h" declline="34" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <referencedby refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="286" endline="299">toggleValveWaterInWeb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a922a642ffb3645f0271b481309cdb133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setValveWaterOutWeb</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setValveWaterOutWeb</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the Valve Water Out object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the state of the water out valve.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Static variable to store the old state</para>
+<para>Set the water out valve to ON</para>
+<para>Set the old state to the current state</para>
+<para>Set the water out valve to OFF</para>
+<para>Set the old state to the current state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="35" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="188" bodyend="201" declfile="include/MD.h" declline="35" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <referencedby refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="308" endline="321">toggleValveWaterOutWeb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1afc81a927862b27a260c9a12ae7773739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setResistorWeb</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setResistorWeb</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the Resistor object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the state of the resistor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Static variable to store the old state</para>
+<para>Set the resistor to ON</para>
+<para>Set the old state to the current state</para>
+<para>Set the resistor to OFF</para>
+<para>Set the old state to the current state</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="36" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="212" bodyend="225" declfile="include/MD.h" declline="36" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <referencedby refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="330" endline="344">toggleResistorWeb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getAutoModeWeb</definition>
+        <argsstring>()</argsstring>
+        <name>getAutoModeWeb</name>
+        <briefdescription>
+<para>GETS BLOCK. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the Ind Max object</para>
+<para>This function returns the state of the max indicator.</para>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="38" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="46" bodyend="49" declfile="include/MD.h" declline="38" declcolumn="6"/>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getPumpWeb</definition>
+        <argsstring>()</argsstring>
+        <name>getPumpWeb</name>
+        <briefdescription>
+<para>Get the Pump object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the state of the water pump.</para>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="39" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="98" bodyend="101" declfile="include/MD.h" declline="39" declcolumn="6"/>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getValv_Water_InWeb</definition>
+        <argsstring>()</argsstring>
+        <name>getValv_Water_InWeb</name>
+        <briefdescription>
+<para>Get the Ind Alarm object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the state of the alarm indicator.</para>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="40" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="72" bodyend="75" declfile="include/MD.h" declline="40" declcolumn="6"/>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getValv_Water_OutWeb</definition>
+        <argsstring>()</argsstring>
+        <name>getValv_Water_OutWeb</name>
+        <briefdescription>
+<para>Get the Valv Water Out object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the state of the water out valve.</para>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="41" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="85" bodyend="88" declfile="include/MD.h" declline="41" declcolumn="6"/>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getResistorWeb</definition>
+        <argsstring>()</argsstring>
+        <name>getResistorWeb</name>
+        <briefdescription>
+<para>Get the Ind Min object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the state of the min indicator.</para>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="42" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="59" bodyend="62" declfile="include/MD.h" declline="42" declcolumn="6"/>
+        <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleTimer</definition>
+        <argsstring>()</argsstring>
+        <name>handleTimer</name>
+        <briefdescription>
+<para>Handlers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handlers.</para>
+<para>Timer handlers</para>
+<para>Handle Timer <simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function handles the timer </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the timer in the format HH:MM:SS </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="45" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="18" bodyend="21" declfile="include/MD.h" declline="45" declcolumn="8"/>
+        <references refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
+        <references refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
+        <references refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleHour</definition>
+        <argsstring>()</argsstring>
+        <name>handleHour</name>
+        <briefdescription>
+<para>Handle Hour. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the timer hour </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="46" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="27" bodyend="27" declfile="include/MD.h" declline="46" declcolumn="8"/>
+        <references refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleMinute</definition>
+        <argsstring>()</argsstring>
+        <name>handleMinute</name>
+        <briefdescription>
+<para>Handle Minute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the timer minute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="47" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="33" bodyend="33" declfile="include/MD.h" declline="47" declcolumn="8"/>
+        <references refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleSecound</definition>
+        <argsstring>()</argsstring>
+        <name>handleSecound</name>
+        <briefdescription>
+<para>Handle Secound. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the timer secound </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="48" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="39" bodyend="39" declfile="include/MD.h" declline="48" declcolumn="8"/>
+        <references refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleWifiQuality</definition>
+        <argsstring>()</argsstring>
+        <name>handleWifiQuality</name>
+        <briefdescription>
+<para>Handlers for Wifi Quality, SSID, TX and IP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle Wifi Quality <simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the WiFi quality in percentage </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="49" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="49" bodyend="49" declfile="include/MD.h" declline="49" declcolumn="8"/>
+        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="70">wifiQuality</references>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aa72d97405ad3471e84716689e54bd5ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleWifiSSID</definition>
+        <argsstring>()</argsstring>
+        <name>handleWifiSSID</name>
+        <briefdescription>
+<para>Handle Wifi SSID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the WiFi SSID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="50" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="55" bodyend="55" declfile="include/MD.h" declline="50" declcolumn="8"/>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ab8ee32b756c8c141be8847349f723395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleWifiTX</definition>
+        <argsstring>()</argsstring>
+        <name>handleWifiTX</name>
+        <briefdescription>
+<para>Handle Wifi TX. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the WiFi TX power </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="51" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="61" bodyend="61" declfile="include/MD.h" declline="51" declcolumn="8"/>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aaaba643a4700d7420108e9ec4ced8550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleWifiIP</definition>
+        <argsstring>()</argsstring>
+        <name>handleWifiIP</name>
+        <briefdescription>
+<para>Handle Wifi IP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the WiFi IP address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="52" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="67" bodyend="67" declfile="include/MD.h" declline="52" declcolumn="8"/>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleTimeAdjust</definition>
+        <argsstring>(const String &amp;adjustment)</argsstring>
+        <name>handleTimeAdjust</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>adjustment</declname>
+        </param>
+        <briefdescription>
+<para>Timer Add/Remove Time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle Time Adjust <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>adjustment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function adjusts the timer </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Adjust the timer based on the adjustment parameter</para>
+<para>Add 1 secound to timer</para>
+<para>Add 5 secounds to timer</para>
+<para>Add 10 secounds to timer</para>
+<para>Add 1 minute to timer</para>
+<para>Add 5 minutes to timer</para>
+<para>Add 10 minutes to timer</para>
+<para>Remove 1 secound from timer</para>
+<para>Remove 5 secounds from timer</para>
+<para>Remove 10 secounds from timer</para>
+<para>Remove 1 minute from timer</para>
+<para>Remove 5 minutes from timer</para>
+<para>Remove 10 minutes from timer</para>
+<para>Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="53" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="79" bodyend="107" declfile="include/MD.h" declline="53" declcolumn="8"/>
+        <references refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" compoundref="_m_d___timer_8cpp" startline="223" endline="223">add10m</references>
+        <references refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" compoundref="_m_d___timer_8cpp" startline="211" endline="211">add10s</references>
+        <references refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" compoundref="_m_d___timer_8cpp" startline="215" endline="215">add1m</references>
+        <references refid="_m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0" compoundref="_m_d___timer_8cpp" startline="203" endline="203">add1s</references>
+        <references refid="_m_d_8h_1a10e275a2b4beec90555c95286db80a6a" compoundref="_m_d___timer_8cpp" startline="219" endline="219">add5m</references>
+        <references refid="_m_d_8h_1aa323da979d7e0bdd7639b1932d401150" compoundref="_m_d___timer_8cpp" startline="207" endline="207">add5s</references>
+        <references refid="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" compoundref="_m_d___timer_8cpp" startline="247" endline="247">rem10m</references>
+        <references refid="_m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c" compoundref="_m_d___timer_8cpp" startline="235" endline="235">rem10s</references>
+        <references refid="_m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66" compoundref="_m_d___timer_8cpp" startline="239" endline="239">rem1m</references>
+        <references refid="_m_d_8h_1a82bc62194a206899dfa2b287b9d16236" compoundref="_m_d___timer_8cpp" startline="227" endline="227">rem1s</references>
+        <references refid="_m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e" compoundref="_m_d___timer_8cpp" startline="243" endline="243">rem5m</references>
+        <references refid="_m_d_8h_1a7e996a9f3af638141257662a8f931e11" compoundref="_m_d___timer_8cpp" startline="231" endline="231">rem5s</references>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleTimerControl</definition>
+        <argsstring>(const String &amp;control)</argsstring>
+        <name>handleTimerControl</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>control</declname>
+        </param>
+        <briefdescription>
+<para>Timer Start/Stop/Reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle Timer Control <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>control</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function controls the timer </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the control message for the timer (start, stop, reset) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Control the timer based on the control parameter (start, stop, reset)</para>
+<para>Start the timer</para>
+<para>Stop the timer</para>
+<para>Reset the timer</para>
+<para>Return the control message for the timer (start, stop, reset)</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="54" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="119" bodyend="129" declfile="include/MD.h" declline="54" declcolumn="8"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" compoundref="_m_d___timer_8cpp" startline="251" endline="251">resetTimer</references>
+        <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleState</definition>
+        <argsstring>(const String &amp;state)</argsstring>
+        <name>handleState</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle State <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function handles the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the state of the variable (auto, manual, pump, waterOut, resistor, waterIn, waterMax, waterMin, waterAlarm)</para>
+<para>Get the auto mode indicator state</para>
+<para>Get the manual mode indicator state</para>
+<para>Get the pump state</para>
+<para>Get the water out valve state</para>
+<para>Get the resistor state</para>
+<para>Get the water in valve state</para>
+<para>Get the water max state</para>
+<para>Get the water min state</para>
+<para>Get the water alarm state</para>
+<para>Return nothing if the state is not found</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="55" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="141" bodyend="163" declfile="include/MD.h" declline="55" declcolumn="8"/>
+        <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
+        <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
+        <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
+        <references refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" compoundref="_o_s___g_p_i_o_8cpp" startline="243" endline="246">getPump</references>
+        <references refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</references>
+        <references refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</references>
+        <references refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</references>
+        <references refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
+        <references refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</references>
+        <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleToggle</definition>
+        <argsstring>(const String &amp;toggle)</argsstring>
+        <name>handleToggle</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>toggle</declname>
+        </param>
+        <briefdescription>
+<para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle Toggle <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toggle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function toggles the variable (auto, pump, waterOut, resistor, waterIn) </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the toggle message for the variable (auto, pump, waterOut, resistor, waterIn) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Toggle the variable (auto, pump, waterOut, resistor, waterIn)</para>
+<para>Toggle the auto mode indicator state</para>
+<para>Toggle the pump state</para>
+<para>Toggle the water out valve state</para>
+<para>Toggle the water in valve state</para>
+<para>Toggle the resistor state</para>
+<para>Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="56" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="175" bodyend="189" declfile="include/MD.h" declline="56" declcolumn="8"/>
+        <references refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="238" endline="251">toggleAutoModeWeb</references>
+        <references refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</references>
+        <references refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="330" endline="344">toggleResistorWeb</references>
+        <references refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="286" endline="299">toggleValveWaterInWeb</references>
+        <references refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="308" endline="321">toggleValveWaterOutWeb</references>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String processor</definition>
+        <argsstring>(const String &amp;var)</argsstring>
+        <name>processor</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Function to handle the HTTP requests for the variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Processor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function processes the variables for the web server requests </para>
+</simplesect>
+<simplesect kind="note"><para>This function is called by the web server handle function (server.on) </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the variable value for the web server request </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Process the variable for the web server request (var) and return the variable value</para>
+<para>Timer variable request</para>
+<para>Return the timer value in the format HH:MM:SS</para>
+<para>WaterMax variable request</para>
+<para>Return the waterMax value</para>
+<para>WaterMin variable request</para>
+<para>Return the waterMin value</para>
+<para>WaterAlarm variable request</para>
+<para>Return the waterAlarm value</para>
+<para>Auto variable request</para>
+<para>Return the auto value</para>
+<para>Manual variable request</para>
+<para>Return the manual value</para>
+<para>Pump variable request</para>
+<para>Return the pump value</para>
+<para>WaterOut variable request</para>
+<para>Return the waterOut value</para>
+<para>Resistor variable request</para>
+<para>Return the resistor value</para>
+<para>WaterIn variable request</para>
+<para>Return the waterIn value</para>
+<para>WifiQuality variable request</para>
+<para>Return the wifiQuality value</para>
+<para>WifiSSID variable request</para>
+<para>Return the wifiSSID value</para>
+<para>WifiTX variable request</para>
+<para>Return the wifiTX value</para>
+<para>WifiIP variable request</para>
+<para>Return the wifiIP value</para>
+<para>TimerHour variable request</para>
+<para>Return the timerHour value</para>
+<para>TimerMinute variable request</para>
+<para>Return the timerMinute value</para>
+<para>TimerSecound variable request</para>
+<para>Return the timerSecound value</para>
+<para>Return nothing if the variable is not found</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="57" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="202" bodyend="240" declfile="include/MD.h" declline="57" declcolumn="8"/>
+        <references refid="_m_d___web___handlers_8cpp_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</references>
+        <references refid="_m_d___web___handlers_8cpp_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</references>
+        <references refid="_m_d___web___handlers_8cpp_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</references>
+        <references refid="_m_d___web___handlers_8cpp_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</references>
+        <references refid="_m_d___web___handlers_8cpp_1af81d47970421b46f19156b8c97bb4ee3" compoundref="_m_d___web___handlers_8cpp" startline="18" endline="21">handleTimer</references>
+        <references refid="_m_d___web___handlers_8cpp_1aaaba643a4700d7420108e9ec4ced8550" compoundref="_m_d___web___handlers_8cpp" startline="67" endline="67">handleWifiIP</references>
+        <references refid="_m_d___web___handlers_8cpp_1a6f8cf668f5479d2c408cd6002f30dc94" compoundref="_m_d___web___handlers_8cpp" startline="49" endline="49">handleWifiQuality</references>
+        <references refid="_m_d___web___handlers_8cpp_1aa72d97405ad3471e84716689e54bd5ce" compoundref="_m_d___web___handlers_8cpp" startline="55" endline="55">handleWifiSSID</references>
+        <references refid="_m_d___web___handlers_8cpp_1ab8ee32b756c8c141be8847349f723395" compoundref="_m_d___web___handlers_8cpp" startline="61" endline="61">handleWifiTX</references>
+        <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a504723789792b242f59e8f9adfb48009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long webTimer</definition>
+        <argsstring>(String op, int16_t amount)</argsstring>
+        <name>webTimer</name>
+        <param>
+          <type>String</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Timer Functions calls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer Functions calls.</para>
+<para>This function is responsible for managing the timer operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Timer operations to add, remove or reset the timer value in miliseconds</para>
+<para>Add time to the timer</para>
+<para>Add 1 second</para>
+<para>Add 5 seconds</para>
+<para>Add 10 seconds</para>
+<para>Add 1 minute</para>
+<para>Add 5 minutes</para>
+<para>Add 10 minutes</para>
+<para>Remove time from the timer</para>
+<para>Remove 1 second</para>
+<para>Remove 5 seconds</para>
+<para>Remove 10 seconds</para>
+<para>Remove 1 minute</para>
+<para>Remove 5 minutes</para>
+<para>Remove 10 minutes</para>
+<para>Reset the timer to 0</para>
+<para>Timer management to decrease the timer every second and turn it off when it reaches 0 seconds left</para>
+<para>Decrease the timer every second if the timer is ON</para>
+<para>Turn off the timer when it reaches 0 seconds left</para>
+<para>Only send updates at the defined interval</para>
+<para>Send the timer to the web interface</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="68" column="6" bodyfile="src/MD_Timer.cpp" bodystart="53" bodyend="139" declfile="include/MD.h" declline="68" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</references>
+        <references refid="_m_d___timer_8cpp_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
+        <references refid="_m_d___timer_8cpp_1a56cbe7f463932051d17bba95b3cac9b4" compoundref="_m_d___timer_8cpp" startline="10">updateInterval</references>
+        <referencedby refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" compoundref="_m_d___timer_8cpp" startline="223" endline="223">add10m</referencedby>
+        <referencedby refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" compoundref="_m_d___timer_8cpp" startline="211" endline="211">add10s</referencedby>
+        <referencedby refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" compoundref="_m_d___timer_8cpp" startline="215" endline="215">add1m</referencedby>
+        <referencedby refid="_m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0" compoundref="_m_d___timer_8cpp" startline="203" endline="203">add1s</referencedby>
+        <referencedby refid="_m_d_8h_1a10e275a2b4beec90555c95286db80a6a" compoundref="_m_d___timer_8cpp" startline="219" endline="219">add5m</referencedby>
+        <referencedby refid="_m_d_8h_1aa323da979d7e0bdd7639b1932d401150" compoundref="_m_d___timer_8cpp" startline="207" endline="207">add5s</referencedby>
+        <referencedby refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</referencedby>
+        <referencedby refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</referencedby>
+        <referencedby refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</referencedby>
+        <referencedby refid="_o_s_8h_1a8b626fb41c6433470c66289ad702ba87" compoundref="_a_p__main_8cpp" startline="90" endline="97">loop2</referencedby>
+        <referencedby refid="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" compoundref="_m_d___timer_8cpp" startline="247" endline="247">rem10m</referencedby>
+        <referencedby refid="_m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c" compoundref="_m_d___timer_8cpp" startline="235" endline="235">rem10s</referencedby>
+        <referencedby refid="_m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66" compoundref="_m_d___timer_8cpp" startline="239" endline="239">rem1m</referencedby>
+        <referencedby refid="_m_d_8h_1a82bc62194a206899dfa2b287b9d16236" compoundref="_m_d___timer_8cpp" startline="227" endline="227">rem1s</referencedby>
+        <referencedby refid="_m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e" compoundref="_m_d___timer_8cpp" startline="243" endline="243">rem5m</referencedby>
+        <referencedby refid="_m_d_8h_1a7e996a9f3af638141257662a8f931e11" compoundref="_m_d___timer_8cpp" startline="231" endline="231">rem5s</referencedby>
+        <referencedby refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" compoundref="_m_d___timer_8cpp" startline="251" endline="251">resetTimer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getTimerSecound</definition>
+        <argsstring>()</argsstring>
+        <name>getTimerSecound</name>
+        <briefdescription>
+<para>Timer for web operations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer for web operations.</para>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the timer seconds left in the timer <linebreak/>
+</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="69" column="5" bodyfile="src/MD_Timer.cpp" bodystart="157" bodyend="160" declfile="include/MD.h" declline="69" declcolumn="5"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</referencedby>
+        <referencedby refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" compoundref="_m_d___web___handlers_8cpp" startline="18" endline="21">handleTimer</referencedby>
+        <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getTimerMinute</definition>
+        <argsstring>()</argsstring>
+        <name>getTimerMinute</name>
+        <briefdescription>
+<para>Get timer secound. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get timer secound.</para>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the timer minutes left in the timer</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="70" column="5" bodyfile="src/MD_Timer.cpp" bodystart="167" bodyend="170" declfile="include/MD.h" declline="70" declcolumn="5"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</referencedby>
+        <referencedby refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" compoundref="_m_d___web___handlers_8cpp" startline="18" endline="21">handleTimer</referencedby>
+        <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getTimerHour</definition>
+        <argsstring>()</argsstring>
+        <name>getTimerHour</name>
+        <briefdescription>
+<para>Get timer minute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get timer minute.</para>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the timer hours left in the timer</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="71" column="5" bodyfile="src/MD_Timer.cpp" bodystart="177" bodyend="180" declfile="include/MD.h" declline="71" declcolumn="5"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</referencedby>
+        <referencedby refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" compoundref="_m_d___web___handlers_8cpp" startline="18" endline="21">handleTimer</referencedby>
+        <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aa9493843bba040c07f9f66300059268a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getTimerStatus</definition>
+        <argsstring>()</argsstring>
+        <name>getTimerStatus</name>
+        <briefdescription>
+<para>Get timer hour. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get timer hour.</para>
+<para><simplesect kind="note"><para>This function is called by the processor function in AP_Destiller.cpp </para>
+</simplesect>
+<simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the timer status (ON/OFF)</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="72" column="6" bodyfile="src/MD_Timer.cpp" bodystart="147" bodyend="150" declfile="include/MD.h" declline="72" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add1s</definition>
+        <argsstring>()</argsstring>
+        <name>add1s</name>
+        <briefdescription>
+<para>Get timer status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get timer status. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="73" column="6" bodyfile="src/MD_Timer.cpp" bodystart="203" bodyend="203" declfile="include/MD.h" declline="73" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aa323da979d7e0bdd7639b1932d401150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add5s</definition>
+        <argsstring>()</argsstring>
+        <name>add5s</name>
+        <briefdescription>
+<para>Add 1 secound to timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add 1 secound to timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="74" column="6" bodyfile="src/MD_Timer.cpp" bodystart="207" bodyend="207" declfile="include/MD.h" declline="74" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add10s</definition>
+        <argsstring>()</argsstring>
+        <name>add10s</name>
+        <briefdescription>
+<para>Add 5 secounds to timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add 5 secounds to timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="75" column="6" bodyfile="src/MD_Timer.cpp" bodystart="211" bodyend="211" declfile="include/MD.h" declline="75" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add1m</definition>
+        <argsstring>()</argsstring>
+        <name>add1m</name>
+        <briefdescription>
+<para>Add 10 secounds to timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add 10 secounds to timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="76" column="6" bodyfile="src/MD_Timer.cpp" bodystart="215" bodyend="215" declfile="include/MD.h" declline="76" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a10e275a2b4beec90555c95286db80a6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add5m</definition>
+        <argsstring>()</argsstring>
+        <name>add5m</name>
+        <briefdescription>
+<para>Add 1 minute to timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add 1 minute to timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="77" column="6" bodyfile="src/MD_Timer.cpp" bodystart="219" bodyend="219" declfile="include/MD.h" declline="77" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add10m</definition>
+        <argsstring>()</argsstring>
+        <name>add10m</name>
+        <briefdescription>
+<para>Add 5 minutes to timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add 5 minutes to timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="78" column="6" bodyfile="src/MD_Timer.cpp" bodystart="223" bodyend="223" declfile="include/MD.h" declline="78" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a82bc62194a206899dfa2b287b9d16236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rem1s</definition>
+        <argsstring>()</argsstring>
+        <name>rem1s</name>
+        <briefdescription>
+<para>Add 10 minutes to timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add 10 minutes to timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="79" column="6" bodyfile="src/MD_Timer.cpp" bodystart="227" bodyend="227" declfile="include/MD.h" declline="79" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a7e996a9f3af638141257662a8f931e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rem5s</definition>
+        <argsstring>()</argsstring>
+        <name>rem5s</name>
+        <briefdescription>
+<para>Remove 1 secound from timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove 1 secound from timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="80" column="6" bodyfile="src/MD_Timer.cpp" bodystart="231" bodyend="231" declfile="include/MD.h" declline="80" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rem10s</definition>
+        <argsstring>()</argsstring>
+        <name>rem10s</name>
+        <briefdescription>
+<para>Remove 5 secounds from timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove 5 secounds from timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="81" column="6" bodyfile="src/MD_Timer.cpp" bodystart="235" bodyend="235" declfile="include/MD.h" declline="81" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rem1m</definition>
+        <argsstring>()</argsstring>
+        <name>rem1m</name>
+        <briefdescription>
+<para>Remove 10 secounds from timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove 10 secounds from timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="82" column="6" bodyfile="src/MD_Timer.cpp" bodystart="239" bodyend="239" declfile="include/MD.h" declline="82" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rem5m</definition>
+        <argsstring>()</argsstring>
+        <name>rem5m</name>
+        <briefdescription>
+<para>Remove 1 minute from timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove 1 minute from timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="83" column="6" bodyfile="src/MD_Timer.cpp" bodystart="243" bodyend="243" declfile="include/MD.h" declline="83" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rem10m</definition>
+        <argsstring>()</argsstring>
+        <name>rem10m</name>
+        <briefdescription>
+<para>Remove 5 minutes from timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove 5 minutes from timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="84" column="6" bodyfile="src/MD_Timer.cpp" bodystart="247" bodyend="247" declfile="include/MD.h" declline="84" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resetTimer</definition>
+        <argsstring>()</argsstring>
+        <name>resetTimer</name>
+        <briefdescription>
+<para>Remove 10 minutes from timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove 10 minutes from timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="85" column="6" bodyfile="src/MD_Timer.cpp" bodystart="251" bodyend="251" declfile="include/MD.h" declline="85" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
+        <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setTimer</definition>
+        <argsstring>(bool stat)</argsstring>
+        <name>setTimer</name>
+        <param>
+          <type>bool</type>
+          <declname>stat</declname>
+        </param>
+        <briefdescription>
+<para>Reset timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset timer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Set the timer status (ON/OFF)</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="86" column="6" bodyfile="src/MD_Timer.cpp" bodystart="187" bodyend="198" declfile="include/MD.h" declline="86" declcolumn="6"/>
+        <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</references>
+        <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
+        <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
+        <referencedby refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a2531a428197475f184bd61c0b412396a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initSerial</definition>
+        <argsstring>()</argsstring>
+        <name>initSerial</name>
+        <briefdescription>
+<para>Set timer status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>SERIAL Serial Functions calls</para>
+<para>Set timer status.</para>
+<para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
+<para><simplesect kind="note"><para>This function is used to initialize the Serial Communications with the default baud rate of 9600 bps </para>
+</simplesect>
+<simplesect kind="note"><para>This function is called in the <ref refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup()</ref> function of the main program </para>
+</simplesect>
+<simplesect kind="note"><para>This function is used to print the initial message to the Serial Terminal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="93" column="6" bodyfile="src/MD_Serial.cpp" bodystart="21" bodyend="37" declfile="include/MD.h" declline="93" declcolumn="6"/>
+        <references refid="_m_d___serial_8cpp_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
+        <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a4ca51e07e88692392bd382ee685505d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sPrint</definition>
+        <argsstring>(char *abc)</argsstring>
+        <name>sPrint</name>
+        <param>
+          <type>char *</type>
+          <declname>abc</declname>
+        </param>
+        <briefdescription>
+<para>Inicia a serial. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inicia a serial.</para>
+<para>Print a string to the Serial Terminal <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used to print a string to the Serial Terminal with no line break </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="94" column="6" bodyfile="src/MD_Serial.cpp" bodystart="47" bodyend="50" declfile="include/MD.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sPrintLn</definition>
+        <argsstring>(char *abc)</argsstring>
+        <name>sPrintLn</name>
+        <param>
+          <type>char *</type>
+          <declname>abc</declname>
+        </param>
+        <briefdescription>
+<para>Print string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used to print a string to the Serial Terminal with a line break </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="95" column="6" bodyfile="src/MD_Serial.cpp" bodystart="57" bodyend="60" declfile="include/MD.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sPrintStr</definition>
+        <argsstring>(String abc)</argsstring>
+        <name>sPrintStr</name>
+        <param>
+          <type>String</type>
+          <declname>abc</declname>
+        </param>
+        <briefdescription>
+<para>Print string with new line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print string with new line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used to print a string to the Serial Terminal with no line break </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="96" column="6" bodyfile="src/MD_Serial.cpp" bodystart="67" bodyend="70" declfile="include/MD.h" declline="96" declcolumn="6"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sPrintNbr</definition>
+        <argsstring>(int nbr)</argsstring>
+        <name>sPrintNbr</name>
+        <param>
+          <type>int</type>
+          <declname>nbr</declname>
+        </param>
+        <briefdescription>
+<para>Print string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used to print a number to the Serial Terminal with no line break </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="97" column="6" bodyfile="src/MD_Serial.cpp" bodystart="87" bodyend="90" declfile="include/MD.h" declline="97" declcolumn="6"/>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sPrintLnStr</definition>
+        <argsstring>(String abc)</argsstring>
+        <name>sPrintLnStr</name>
+        <param>
+          <type>String</type>
+          <declname>abc</declname>
+        </param>
+        <briefdescription>
+<para>Print number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print number.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>abc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used to print a string to the Serial Terminal with a line break </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="98" column="6" bodyfile="src/MD_Serial.cpp" bodystart="77" bodyend="80" declfile="include/MD.h" declline="98" declcolumn="6"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997" compoundref="_o_s___f_s_8cpp" startline="29" endline="37">initFS</referencedby>
+        <referencedby refid="_m_d_8h_1a2531a428197475f184bd61c0b412396a" compoundref="_m_d___serial_8cpp" startline="21" endline="37">initSerial</referencedby>
+        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</referencedby>
+        <referencedby refid="_m_d__wifi_8cpp_1a76abca56e85121cdcc6b6936ad2fd51c" compoundref="_m_d__wifi_8cpp" startline="19" endline="39">OnWiFiEvent</referencedby>
+        <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
+        <referencedby refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</referencedby>
+        <referencedby refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</referencedby>
+        <referencedby refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" compoundref="_o_s___g_p_i_o_8cpp" startline="260" endline="284">setIndMax</referencedby>
+        <referencedby refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" compoundref="_o_s___g_p_i_o_8cpp" startline="295" endline="322">setIndMin</referencedby>
+        <referencedby refid="_o_s_8h_1adbfc39d1df02e4404b08e9573d1fd404" compoundref="_o_s___g_p_i_o_8cpp" startline="465" endline="484">setPump</referencedby>
+        <referencedby refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" compoundref="_o_s___g_p_i_o_8cpp" startline="555" endline="574">setResistor</referencedby>
+        <referencedby refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" compoundref="_o_s___g_p_i_o_8cpp" startline="495" endline="514">setValveWaterIn</referencedby>
+        <referencedby refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" compoundref="_o_s___g_p_i_o_8cpp" startline="525" endline="544">setValveWaterOut</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1ae8ac89f250af24dadb79c7f683c544e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sPrintLnNbr</definition>
+        <argsstring>(int nbr)</argsstring>
+        <name>sPrintLnNbr</name>
+        <param>
+          <type>int</type>
+          <declname>nbr</declname>
+        </param>
+        <briefdescription>
+<para>Print string with new line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Print string with new line.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used to print a number to the Serial Terminal with a line break </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/MD.h" line="99" column="6" bodyfile="src/MD_Serial.cpp" bodystart="97" bodyend="100" declfile="include/MD.h" declline="99" declcolumn="6"/>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_IO</definition>
+        <argsstring>()</argsstring>
+        <name>test_IO</name>
+        <briefdescription>
+<para>Print number with new line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test I/Os</para>
+<para>Print number with new line.</para>
+<para><simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Test I/O Indicador Maximo</para>
+<para>Test I/O Indicador Minimo</para>
+<para>Test I/O Indicador Alarme</para>
+<para>Test I/O Indicador Manual</para>
+<para>Test I/O Indicador Auto</para>
+<para>Test I/O Indicador Valvula Entrada</para>
+<para>Test I/O Indicador Valvula Saida</para>
+<para>Test I/O Indicador Resistor</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="104" column="6" bodyfile="src/MD_Test_IOs.cpp" bodystart="15" bodyend="120" declfile="include/MD.h" declline="104" declcolumn="6"/>
+        <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
+        <references refid="_m_d___test___i_os_8cpp_1af8d251b3d3e161e3f5e4c012e121d5c6" compoundref="_m_d___test___i_os_8cpp" startline="8">delayT</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</references>
+        <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
+        <references refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</references>
+        <references refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" compoundref="_o_s___g_p_i_o_8cpp" startline="260" endline="284">setIndMax</references>
+        <references refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" compoundref="_o_s___g_p_i_o_8cpp" startline="295" endline="322">setIndMin</references>
+        <references refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" compoundref="_o_s___g_p_i_o_8cpp" startline="555" endline="574">setResistor</references>
+        <references refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" compoundref="_o_s___g_p_i_o_8cpp" startline="495" endline="514">setValveWaterIn</references>
+        <references refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" compoundref="_o_s___g_p_i_o_8cpp" startline="525" endline="544">setValveWaterOut</references>
+        <references refid="_o_s_8h_1a4be402fa1ac7049ed1671c31572e0f75" compoundref="_o_s___g_p_i_o_8cpp" startline="51" endline="57">writeOutputs</references>
+        <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool initWIFI</definition>
+        <argsstring>()</argsstring>
+        <name>initWIFI</name>
+        <briefdescription>
+<para>Initiate WiFi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para>
+</simplesect>
+<simplesect kind="note"><para>This function initiates the WiFi connection </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>SoftAP flag to create a Soft Access Point only once</para>
+<para>WIFI_MODE_OPTIONS</para>
+<para>1 - Connect to local WiFi network only</para>
+<para>2 - Create a local AP (SoftAP)</para>
+<para>3 - Both (Connect to local WiFi network and create a local AP)</para>
+<para>Initiate WiFi</para>
+<para>Initiate WiFi in AP mode only</para>
+<para>Initiate WiFi</para>
+<para>Initiate WiFi in AP mode</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="112" column="6" bodyfile="src/MD_wifi.cpp" bodystart="144" bodyend="181" declfile="include/MD.h" declline="112" declcolumn="6"/>
+        <references refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</references>
+        <references refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</references>
+        <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
+        <references refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" compoundref="_m_d_8h" startline="111">WIFI_MODE_OPTIONS</references>
+        <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String wifiQuality</definition>
+        <argsstring>()</argsstring>
+        <name>wifiQuality</name>
+        <briefdescription>
+<para>Inicia o wifi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inicia o wifi.</para>
+<para><simplesect kind="return"><para>String </para>
+</simplesect>
+<simplesect kind="note"><para>This function returns the WiFi quality in percentage </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Get the Received Signal Strength Indicator (RSSI) in dBm</para>
+<para>Quality in percentage</para>
+<para>Quality in string format</para>
+<para>Calculate the quality in percentage</para>
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+<para>Send the quality in percentage to the web server as a JSON object</para>
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+        </inbodydescription>
+        <location file="include/MD.h" line="113" column="8" bodyfile="src/MD_wifi.cpp" bodystart="46" bodyend="70" declfile="include/MD.h" declline="113" declcolumn="8"/>
+        <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
+        <referencedby refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" compoundref="_m_d___web___handlers_8cpp" startline="49" endline="49">handleWifiQuality</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for the MD project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sérgio Carmo</para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_MD_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MD_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_o_s_8h" kindref="compound">OS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" kindref="member">sendWiFiQuality</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" kindref="member">toggleAutoMode</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" kindref="member">toggleIndAuto</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" kindref="member">indicatorsManagement</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" kindref="member">modeManagement</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a76f121aef723f8209031f700a1cf5a61" kindref="member">updateOutputsWeb</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" kindref="member">toggleAutoModeWeb</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" kindref="member">togglePumpWeb</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" kindref="member">toggleValveWaterInWeb</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" kindref="member">toggleValveWaterOutWeb</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" kindref="member">toggleResistorWeb</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" kindref="member">setAutoModeWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6" kindref="member">setPumpWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1abe554b3a794b4000aa2d251a3d63a54f" kindref="member">setValveWaterInWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a922a642ffb3645f0271b481309cdb133" kindref="member">setValveWaterOutWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1afc81a927862b27a260c9a12ae7773739" kindref="member">setResistorWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" kindref="member">getAutoModeWeb</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" kindref="member">getPumpWeb</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac" kindref="member">getValv_Water_InWeb</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417" kindref="member">getValv_Water_OutWeb</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" kindref="member">getResistorWeb</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" kindref="member">handleTimer</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" kindref="member">handleHour</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" kindref="member">handleMinute</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" kindref="member">handleSecound</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" kindref="member">handleWifiQuality</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1aa72d97405ad3471e84716689e54bd5ce" kindref="member">handleWifiSSID</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ab8ee32b756c8c141be8847349f723395" kindref="member">handleWifiTX</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1aaaba643a4700d7420108e9ec4ced8550" kindref="member">handleWifiIP</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;adjustment);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" kindref="member">handleTimerControl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;control);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;state);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;toggle);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" kindref="member">processor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;var);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"></codeline>
+<codeline lineno="64" refid="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" refkind="member"><highlight class="preprocessor">#define<sp/>ALARM_TIME_ON<sp/><sp/><sp/>600</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALARM_TIME_OFF<sp/><sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" kindref="member">webTimer</ref>(String<sp/>op,<sp/>int16_t<sp/>amount);<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" kindref="member">getTimerSecound</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" kindref="member">getTimerMinute</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" kindref="member">getTimerHour</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa9493843bba040c07f9f66300059268a" kindref="member">getTimerStatus</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0" kindref="member">add1s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa323da979d7e0bdd7639b1932d401150" kindref="member">add5s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" kindref="member">add10s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" kindref="member">add1m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a10e275a2b4beec90555c95286db80a6a" kindref="member">add5m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" kindref="member">add10m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a82bc62194a206899dfa2b287b9d16236" kindref="member">rem1s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a7e996a9f3af638141257662a8f931e11" kindref="member">rem5s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c" kindref="member">rem10s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66" kindref="member">rem1m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e" kindref="member">rem5m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" kindref="member">rem10m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" kindref="member">resetTimer</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" kindref="member">setTimer</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stat);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"></codeline>
+<codeline lineno="93"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a2531a428197475f184bd61c0b412396a" kindref="member">initSerial</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4ca51e07e88692392bd382ee685505d0" kindref="member">sPrint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*abc);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515" kindref="member">sPrintLn</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*abc);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(String<sp/>abc);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e" kindref="member">sPrintNbr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbr);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(String<sp/>abc);<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae8ac89f250af24dadb79c7f683c544e0" kindref="member">sPrintLnNbr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbr);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1" kindref="member">test_IO</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"></codeline>
+<codeline lineno="111" refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" refkind="member"><highlight class="preprocessor">#define<sp/>WIFI_MODE_OPTIONS<sp/>1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" kindref="member">initWIFI</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" kindref="member">wifiQuality</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/MD.h"/>
+  </compounddef>
+</doxygen>

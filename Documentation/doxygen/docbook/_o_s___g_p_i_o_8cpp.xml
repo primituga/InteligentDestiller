@@ -1,0 +1,1200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s___g_p_i_o_8cpp" xml:lang="en-US">
+<title>src/OS_GPIO.cpp File Reference</title>
+<indexterm><primary>src/OS_GPIO.cpp</primary></indexterm>
+<para>
+
+<para>GPIO functions. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;OS.h&quot;<?linebreak?></programlisting>Include dependency graph for OS_GPIO.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1acfc1d4a44c5d7039701b596a3df6eae3">readInputs</link> ()</para>
+
+<para>Alarm state. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a4be402fa1ac7049ed1671c31572e0f75">writeOutputs</link> ()</para>
+
+<para>Write Outputs from array image to GPIO. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a96f4f5e9c32d277c8b5f45b1b0c068fc">initPinsInputs</link> ()</para>
+
+<para>Configure GPIOs as INPUT. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a034848835eb2ce8872c4da77568895fc">initPinsOutputs</link> ()</para>
+
+<para>Configure GPIOs as OUTPUTs. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a2b0449e42db71938062564c4f643c215">getWaterMax</link> ()</para>
+
+<para>GETS BLOCK. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a166177fea9ace421d96924d83286abfc">getWaterMin</link> ()</para>
+
+<para>Get the Water Min object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a36575ea4abf90b10ef86ad50f0b9fad0">getAlarm</link> ()</para>
+
+<para>Get the Alarm object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a364e39356237485f2ee12f8bf224683b">getAlarmIND</link> ()</para>
+
+<para>Get the Alarm State object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a601560973c681265f62316a3f68e2ac3">getAutoModeSW</link> ()</para>
+
+<para>Get the Auto Mode SW object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a20a8e677a695003ed8259fc2e32b6462">getManualMode</link> ()</para>
+
+<para>Get the Manual Mode object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1abbca1cc0d29f545e9a39778288a12071">getIndAuto</link> ()</para>
+
+<para>Get the Ind Max object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a56feb35df23b1452f2695b6469042ec2">getResistor</link> ()</para>
+
+<para>Get the Ind Min object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a2e1179e338420a43f95be0b8a7ed885d">getValv_Water_In</link> ()</para>
+
+<para>Get the Ind Alarm object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a8b22aea595b0457364230c92779ae37a">getValv_Water_Out</link> ()</para>
+
+<para>Get the Valv Water Out object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1a796c21f2a4c37ce17a1f14d80b54ed66">getPump</link> ()</para>
+
+<para>Get the Pump object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a87a31bccb377b0b9f859242b0635052c">setIndMax</link> (bool state)</para>
+
+<para>SETS BLOCK. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1afd12f5c7d9986ada0226426896ee09c7">setIndMin</link> (bool state)</para>
+
+<para>Set the Ind Min object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a76b46044c939e363a3e761d515af2e1a">setIndAlarm</link> (bool state)</para>
+
+<para>Set the Ind Alarm object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a86fca9908335532b4c89bca82aaa9346">setIndMan</link> (bool state)</para>
+
+<para>Set the Ind Man object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1ad606ba53b3e713efe768dd0e380c97a2">setIndAuto</link> (bool state)</para>
+
+<para>Set the Auto Mode object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1adbfc39d1df02e4404b08e9573d1fd404">setPump</link> (bool state)</para>
+
+<para>Set the Pump object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a0d4efaa2bfb0fa53aa24405940a7a66c">setValveWaterIn</link> (bool state)</para>
+
+<para>Set the Valve Water In object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1abfda791029a2af9523cc59ff44b6c52e">setValveWaterOut</link> (bool state)</para>
+
+<para>Set the Valve Water Out object. </para>
+</listitem>
+            <listitem><para>void <link linkend="__o_s___g_p_i_o_8cpp_1a2a90701c1f779b95de3a3770a5425f3c">setResistor</link> (bool state)</para>
+
+<para>Set the Resistor object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="__o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d">inputVarsImage</link> [5]</para>
+
+<para>GPIO Images. </para>
+</listitem>
+            <listitem><para>const uint8_t <link linkend="__o_s___g_p_i_o_8cpp_1a1dde1641b66d86ac330d5254cc02c2bb">inputVarsPINs</link> [] = {<link linkend="__o_s_8h_1ab697946c681df5f56d99516a2715ae5a">PIN_SW_MAN</link>, <link linkend="__o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8">PIN_SMIN</link>, <link linkend="__o_s_8h_1ae392f500936676d5a630c590de1a6115">PIN_SMAX</link>, <link linkend="__o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4">PIN_SW_AUTO</link>, <link linkend="__o_s_8h_1ade7c8509801fc3f4480082e29c72926d">PIN_SALARM</link>}</para>
+
+<para>Input variables image. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="__o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694">outputVarsImage</link> [9]</para>
+
+<para>Input variables pins. </para>
+</listitem>
+            <listitem><para>const uint8_t <link linkend="__o_s___g_p_i_o_8cpp_1adff3d2e1c5ba3ab7d9135a66afc7ebed">outputVarsPINs</link> []</para>
+
+<para>Output variables image. </para>
+</listitem>
+            <listitem><para>bool <link linkend="__o_s___g_p_i_o_8cpp_1abf96cb4803956f98d512b0891869c500">ALARM_STATE</link> = <link linkend="__o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5">OFF</link></para>
+
+<para>Output variables pins. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>GPIO functions. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo (<link xlink:href="mailto:19749@ipportalegre.pt">19749@ipportalegre.pt</link>) </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a36575ea4abf90b10ef86ad50f0b9fad0"/><section>
+    <title>getAlarm()</title>
+<indexterm><primary>getAlarm</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getAlarm</secondary></indexterm>
+<para><computeroutput>bool getAlarm ( )</computeroutput></para><para>
+
+<para>Get the Alarm object. </para>
+</para>
+
+<para>Retorna estado do sensor de agua de minimo.</para>
+
+<para>This function returns the state of the alarm.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a36575ea4abf90b10ef86ad50f0b9fad0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a364e39356237485f2ee12f8bf224683b"/><section>
+    <title>getAlarmIND()</title>
+<indexterm><primary>getAlarmIND</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getAlarmIND</secondary></indexterm>
+<para><computeroutput>bool getAlarmIND ( )</computeroutput></para><para>
+
+<para>Get the Alarm State object. </para>
+</para>
+
+<para>Retorna estado do alarme.</para>
+
+<para>This function returns the state of the alarm.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a364e39356237485f2ee12f8bf224683b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a601560973c681265f62316a3f68e2ac3"/><section>
+    <title>getAutoModeSW()</title>
+<indexterm><primary>getAutoModeSW</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getAutoModeSW</secondary></indexterm>
+<para><computeroutput>bool getAutoModeSW ( )</computeroutput></para><para>
+
+<para>Get the Auto Mode SW object. </para>
+</para>
+
+<para>Retorna estado do modo auto.</para>
+
+<para>This function returns the state of the auto mode switch.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a601560973c681265f62316a3f68e2ac3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1abbca1cc0d29f545e9a39778288a12071"/><section>
+    <title>getIndAuto()</title>
+<indexterm><primary>getIndAuto</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getIndAuto</secondary></indexterm>
+<para><computeroutput>bool getIndAuto ( )</computeroutput></para><para>
+
+<para>Get the Ind Max object. </para>
+</para>
+
+<para>Retorna estado do indicador de alarme.</para>
+
+<para>This function returns the state of the max indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_abbca1cc0d29f545e9a39778288a12071_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a20a8e677a695003ed8259fc2e32b6462"/><section>
+    <title>getManualMode()</title>
+<indexterm><primary>getManualMode</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getManualMode</secondary></indexterm>
+<para><computeroutput>bool getManualMode ( )</computeroutput></para><para>
+
+<para>Get the Manual Mode object. </para>
+</para>
+
+<para>Retorna estado do interruptor auto.</para>
+
+<para>This function returns the state of the manual mode switch.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a20a8e677a695003ed8259fc2e32b6462_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a796c21f2a4c37ce17a1f14d80b54ed66"/><section>
+    <title>getPump()</title>
+<indexterm><primary>getPump</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getPump</secondary></indexterm>
+<para><computeroutput>bool getPump ( )</computeroutput></para><para>
+
+<para>Get the Pump object. </para>
+</para>
+
+<para>Retorna estado da valvula de vapor.</para>
+
+<para>This function returns the state of the water pump.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a796c21f2a4c37ce17a1f14d80b54ed66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a56feb35df23b1452f2695b6469042ec2"/><section>
+    <title>getResistor()</title>
+<indexterm><primary>getResistor</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getResistor</secondary></indexterm>
+<para><computeroutput>bool getResistor ( )</computeroutput></para><para>
+
+<para>Get the Ind Min object. </para>
+</para>
+
+<para>Retorna estado do botao manual.</para>
+
+<para>This function returns the state of the min indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a56feb35df23b1452f2695b6469042ec2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a2e1179e338420a43f95be0b8a7ed885d"/><section>
+    <title>getValv_Water_In()</title>
+<indexterm><primary>getValv_Water_In</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getValv_Water_In</secondary></indexterm>
+<para><computeroutput>bool getValv_Water_In ( )</computeroutput></para><para>
+
+<para>Get the Ind Alarm object. </para>
+</para>
+
+<para>Retorna estado do resistor.</para>
+
+<para>This function returns the state of the alarm indicator.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a2e1179e338420a43f95be0b8a7ed885d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a8b22aea595b0457364230c92779ae37a"/><section>
+    <title>getValv_Water_Out()</title>
+<indexterm><primary>getValv_Water_Out</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getValv_Water_Out</secondary></indexterm>
+<para><computeroutput>bool getValv_Water_Out ( )</computeroutput></para><para>
+
+<para>Get the Valv Water Out object. </para>
+</para>
+
+<para>Retorna estado da entrada de agua.</para>
+
+<para>This function returns the state of the water out valve.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a8b22aea595b0457364230c92779ae37a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a2b0449e42db71938062564c4f643c215"/><section>
+    <title>getWaterMax()</title>
+<indexterm><primary>getWaterMax</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getWaterMax</secondary></indexterm>
+<para><computeroutput>bool getWaterMax ( )</computeroutput></para><para>
+
+<para>GETS BLOCK. </para>
+</para>
+
+<para>Inicia os inputs.</para>
+
+<para>Get the Water Max object</para>
+
+<para>This function returns the state of the water max sensor.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a2b0449e42db71938062564c4f643c215_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a166177fea9ace421d96924d83286abfc"/><section>
+    <title>getWaterMin()</title>
+<indexterm><primary>getWaterMin</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>getWaterMin</secondary></indexterm>
+<para><computeroutput>bool getWaterMin ( )</computeroutput></para><para>
+
+<para>Get the Water Min object. </para>
+</para>
+
+<para>Retorna estado do sensor de agua de maximo.</para>
+
+<para>This function returns the state of the water min sensor.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true </para>
+
+<para>false </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a166177fea9ace421d96924d83286abfc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a96f4f5e9c32d277c8b5f45b1b0c068fc"/><section>
+    <title>initPinsInputs()</title>
+<indexterm><primary>initPinsInputs</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>initPinsInputs</secondary></indexterm>
+<para><computeroutput>void initPinsInputs ( )</computeroutput></para><para>
+
+<para>Configure GPIOs as INPUT. </para>
+</para>
+
+<para>Inicia os outputs.</para>
+
+<para>Configure GPIOs as INPUTs</para>
+
+<para>This function configures the GPIOs as INPUTs. The GPIOs are used to read the state of the switches and sensors. </para>
+
+<para>on/off sw</para>
+
+<para>min sensor</para>
+
+<para>max sensor</para>
+
+<para>push sw</para>
+
+<para>alarm</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a96f4f5e9c32d277c8b5f45b1b0c068fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a034848835eb2ce8872c4da77568895fc"/><section>
+    <title>initPinsOutputs()</title>
+<indexterm><primary>initPinsOutputs</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>initPinsOutputs</secondary></indexterm>
+<para><computeroutput>void initPinsOutputs ( )</computeroutput></para><para>
+
+<para>Configure GPIOs as OUTPUTs. </para>
+</para>
+
+<para>Inicia o sistema de arquivos.</para>
+
+<para>Configure GPIOs as OUTPUTs</para>
+
+<para>This function configures the GPIOs as OUTPUTs. The GPIOs are used to control the indicators, valves, pump, and resistor. </para>
+
+<para>resistor</para>
+
+<para>water in valve</para>
+
+<para>water out valve</para>
+
+<para>water pump</para>
+
+<para>min indicator</para>
+
+<para>max indicator</para>
+
+<para>alarm indicator</para>
+
+<para>manual indicator</para>
+
+<para>auto indicator</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a034848835eb2ce8872c4da77568895fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1acfc1d4a44c5d7039701b596a3df6eae3"/><section>
+    <title>readInputs()</title>
+<indexterm><primary>readInputs</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>readInputs</secondary></indexterm>
+<para><computeroutput>void readInputs ( )</computeroutput></para><para>
+
+<para>Alarm state. </para>
+</para>
+
+<para>Read ESP32 GPIOs and stores in the image array</para>
+
+<para>Read all inputs and store in the image array</para>
+
+<para>This function reads all the inputs and stores them in the image array. The image array is used to store the current state of the inputs and outputs. </para>
+
+<para>PIN_INPUT_COUNT = 5</para>
+
+<para>Read the input from the GPIO</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_acfc1d4a44c5d7039701b596a3df6eae3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a76b46044c939e363a3e761d515af2e1a"/><section>
+    <title>setIndAlarm()</title>
+<indexterm><primary>setIndAlarm</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setIndAlarm</secondary></indexterm>
+<para><computeroutput>void setIndAlarm (bool state)</computeroutput></para><para>
+
+<para>Set the Ind Alarm object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso nivel agua minimo.</para>
+
+<para>This function sets the state of the alarm indicator.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Old state of the indicator</para>
+
+<para>Condition to debug</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a76b46044c939e363a3e761d515af2e1a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a76b46044c939e363a3e761d515af2e1a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1ad606ba53b3e713efe768dd0e380c97a2"/><section>
+    <title>setIndAuto()</title>
+<indexterm><primary>setIndAuto</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setIndAuto</secondary></indexterm>
+<para><computeroutput>void setIndAuto (bool state)</computeroutput></para><para>
+
+<para>Set the Auto Mode object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso da resistencia.</para>
+
+<para>This function sets the state of the auto mode.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_ad606ba53b3e713efe768dd0e380c97a2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_ad606ba53b3e713efe768dd0e380c97a2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a86fca9908335532b4c89bca82aaa9346"/><section>
+    <title>setIndMan()</title>
+<indexterm><primary>setIndMan</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setIndMan</secondary></indexterm>
+<para><computeroutput>void setIndMan (bool state)</computeroutput></para><para>
+
+<para>Set the Ind Man object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso alarme.</para>
+
+<para>This function sets the state of the manual indicator.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a86fca9908335532b4c89bca82aaa9346_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a86fca9908335532b4c89bca82aaa9346_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a87a31bccb377b0b9f859242b0635052c"/><section>
+    <title>setIndMax()</title>
+<indexterm><primary>setIndMax</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setIndMax</secondary></indexterm>
+<para><computeroutput>void setIndMax (bool state)</computeroutput></para><para>
+
+<para>SETS BLOCK. </para>
+</para>
+
+<para>Retorna estado da bomba de agua.</para>
+
+<para>Set the Ind Max object</para>
+
+<para>This function sets the state of the max indicator.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Old state of the indicator</para>
+
+<para>Set the max indicator to ON</para>
+
+<para>Condition to debug</para>
+
+<para>Send the max indicator value to the web server</para>
+
+<para>Set the max indicator to OFF</para>
+
+<para>Send the max indicator value to the web server</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a87a31bccb377b0b9f859242b0635052c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a87a31bccb377b0b9f859242b0635052c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1afd12f5c7d9986ada0226426896ee09c7"/><section>
+    <title>setIndMin()</title>
+<indexterm><primary>setIndMin</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setIndMin</secondary></indexterm>
+<para><computeroutput>void setIndMin (bool state)</computeroutput></para><para>
+
+<para>Set the Ind Min object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso nivel agua maximo.</para>
+
+<para>This function sets the state of the min indicator.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>Old state of the indicator</para>
+
+<para>Set the min indicator to ON</para>
+
+<para>Send the min indicator value to the web server</para>
+
+<para>Set the min indicator to OFF</para>
+
+<para>Send the min indicator value to the web server</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_afd12f5c7d9986ada0226426896ee09c7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_afd12f5c7d9986ada0226426896ee09c7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1adbfc39d1df02e4404b08e9573d1fd404"/><section>
+    <title>setPump()</title>
+<indexterm><primary>setPump</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setPump</secondary></indexterm>
+<para><computeroutput>void setPump (bool state)</computeroutput></para><para>
+
+<para>Set the Pump object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso modo manual.</para>
+
+<para>This function sets the state of the pump.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_adbfc39d1df02e4404b08e9573d1fd404_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_adbfc39d1df02e4404b08e9573d1fd404_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a2a90701c1f779b95de3a3770a5425f3c"/><section>
+    <title>setResistor()</title>
+<indexterm><primary>setResistor</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setResistor</secondary></indexterm>
+<para><computeroutput>void setResistor (bool state)</computeroutput></para><para>
+
+<para>Set the Resistor object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso da valvula 2.</para>
+
+<para>This function sets the state of the resistor.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a2a90701c1f779b95de3a3770a5425f3c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a2a90701c1f779b95de3a3770a5425f3c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a0d4efaa2bfb0fa53aa24405940a7a66c"/><section>
+    <title>setValveWaterIn()</title>
+<indexterm><primary>setValveWaterIn</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setValveWaterIn</secondary></indexterm>
+<para><computeroutput>void setValveWaterIn (bool state)</computeroutput></para><para>
+
+<para>Set the Valve Water In object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso da bomba de agua.</para>
+
+<para>This function sets the state of the water in valve.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a0d4efaa2bfb0fa53aa24405940a7a66c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a0d4efaa2bfb0fa53aa24405940a7a66c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1abfda791029a2af9523cc59ff44b6c52e"/><section>
+    <title>setValveWaterOut()</title>
+<indexterm><primary>setValveWaterOut</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>setValveWaterOut</secondary></indexterm>
+<para><computeroutput>void setValveWaterOut (bool state)</computeroutput></para><para>
+
+<para>Set the Valve Water Out object. </para>
+</para>
+
+<para>Liga/desliga o indicador luminoso da valvula 1.</para>
+
+<para>This function sets the state of the water out valve.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_abfda791029a2af9523cc59ff44b6c52e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_abfda791029a2af9523cc59ff44b6c52e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a4be402fa1ac7049ed1671c31572e0f75"/><section>
+    <title>writeOutputs()</title>
+<indexterm><primary>writeOutputs</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>writeOutputs</secondary></indexterm>
+<para><computeroutput>void writeOutputs ( )</computeroutput></para><para>
+
+<para>Write Outputs from array image to GPIO. </para>
+</para>
+
+<para>Liga/desliga o modo auto.</para>
+
+<para>Write all outputs from the image array to the GPIOs</para>
+
+<para>This function writes all the outputs from the image array to the GPIOs. The image array is used to store the current state of the inputs and outputs. </para>
+
+<para>PIN_OUTPUT_COUNT = 9</para>
+
+<para>Write the output to the GPIO</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_o_s___g_p_i_o_8cpp_a4be402fa1ac7049ed1671c31572e0f75_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1abf96cb4803956f98d512b0891869c500"/><section>
+    <title>ALARM_STATE</title>
+<indexterm><primary>ALARM_STATE</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>ALARM_STATE</secondary></indexterm>
+<para><computeroutput>bool ALARM_STATE = <link linkend="__o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5">OFF</link></computeroutput></para><para>
+
+<para>Output variables pins. </para>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d"/><section>
+    <title>inputVarsImage</title>
+<indexterm><primary>inputVarsImage</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>inputVarsImage</secondary></indexterm>
+<para><computeroutput>uint8_t inputVarsImage[5]</computeroutput></para><para>
+
+<para>GPIO Images. </para>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1a1dde1641b66d86ac330d5254cc02c2bb"/><section>
+    <title>inputVarsPINs</title>
+<indexterm><primary>inputVarsPINs</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>inputVarsPINs</secondary></indexterm>
+<para><computeroutput>const uint8_t inputVarsPINs[] = {<link linkend="__o_s_8h_1ab697946c681df5f56d99516a2715ae5a">PIN_SW_MAN</link>, <link linkend="__o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8">PIN_SMIN</link>, <link linkend="__o_s_8h_1ae392f500936676d5a630c590de1a6115">PIN_SMAX</link>, <link linkend="__o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4">PIN_SW_AUTO</link>, <link linkend="__o_s_8h_1ade7c8509801fc3f4480082e29c72926d">PIN_SALARM</link>}</computeroutput></para><para>
+
+<para>Input variables image. </para>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694"/><section>
+    <title>outputVarsImage</title>
+<indexterm><primary>outputVarsImage</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>outputVarsImage</secondary></indexterm>
+<para><computeroutput>uint8_t outputVarsImage[9]</computeroutput></para><para>
+
+<para>Input variables pins. </para>
+</para>
+</section>
+<anchor xml:id="__o_s___g_p_i_o_8cpp_1adff3d2e1c5ba3ab7d9135a66afc7ebed"/><section>
+    <title>outputVarsPINs</title>
+<indexterm><primary>outputVarsPINs</primary><secondary>OS_GPIO.cpp</secondary></indexterm>
+<indexterm><primary>OS_GPIO.cpp</primary><secondary>outputVarsPINs</secondary></indexterm>
+<para><computeroutput>const uint8_t outputVarsPINs[]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{<link linkend="__o_s_8h_1ae7d962d8e7f7ad921a0ad994ea7ca34a">PIN_RAQ</link>,&#32;<link linkend="__o_s_8h_1abc131bd8e71df8904a6ebeb67c56290a">PIN_BMB</link>,&#32;<link linkend="__o_s_8h_1a5890ed8b1dfbb6be07f82fab51dcd66b">PIN_VALV_WATER_OUT</link>,&#32;<link linkend="__o_s_8h_1a050b83ef44d5cae61794b32499c9fcf8">PIN_VALV_WATER_IN</link>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__o_s_8h_1aebfef237ff2d3039cd3c2050b749de1d">PIN_IND_ALARM</link>,&#32;<link linkend="__o_s_8h_1a384be38ab3e7b926921179cc420d646c">PIN_IND_MIN</link>,&#32;<link linkend="__o_s_8h_1aa33c6f09058f0ef261c58dec1ae26af6">PIN_IND_MAX</link>,&#32;<link linkend="__o_s_8h_1a924bcfd3898c818255811fee578e25ce">PIN_IND_AUTO</link>,&#32;<link linkend="__o_s_8h_1acd0ee7482c4a9d885282477b66664985">PIN_IND_MAN</link>}
+</programlisting><para>
+
+<para>Output variables image. </para>
+</para>
+</section>
+</section>
+</section>

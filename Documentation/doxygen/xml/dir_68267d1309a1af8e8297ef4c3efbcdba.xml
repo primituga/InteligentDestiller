@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_a_p___destiler_8cpp">AP_Destiler.cpp</innerfile>
+    <innerfile refid="_a_p__main_8cpp">AP_main.cpp</innerfile>
+    <innerfile refid="_a_p___web_8cpp">AP_Web.cpp</innerfile>
+    <innerfile refid="_m_d___i_o_8cpp">MD_IO.cpp</innerfile>
+    <innerfile refid="_m_d___serial_8cpp">MD_Serial.cpp</innerfile>
+    <innerfile refid="_m_d___test___i_os_8cpp">MD_Test_IOs.cpp</innerfile>
+    <innerfile refid="_m_d___timer_8cpp">MD_Timer.cpp</innerfile>
+    <innerfile refid="_m_d___web___handlers_8cpp">MD_Web_Handlers.cpp</innerfile>
+    <innerfile refid="_m_d___web___i_o___mngmnt_8cpp">MD_Web_IO_Mngmnt.cpp</innerfile>
+    <innerfile refid="_m_d__wifi_8cpp">MD_wifi.cpp</innerfile>
+    <innerfile refid="_o_s___f_s_8cpp">OS_FS.cpp</innerfile>
+    <innerfile refid="_o_s___g_p_i_o_8cpp">OS_GPIO.cpp</innerfile>
+    <innerfile refid="_o_s__multi__core_8cpp">OS_multi_core.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

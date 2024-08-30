@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___i_o_8cpp" xml:lang="en-US">
+<title>src/MD_IO.cpp File Reference</title>
+<indexterm><primary>src/MD_IO.cpp</primary></indexterm>
+<para>
+
+<para>IO functions for the MD project &lt;This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project.&gt; </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_IO.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80">toggleIndAuto</link> ()</para>
+
+<para>Toggle the Auto Mode of the Machine. </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f">toggleAutoMode</link> ()</para>
+
+<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___i_o_8cpp_1a747c973d9633421336e8d59a78faf49f">indicatorsManagement</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="__m_d___i_o_8cpp_1a27162a64461db61f83b3752bd0b6d125">modeManagement</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>IO functions for the MD project &lt;This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project.&gt; </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Sérgio Carmo</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__m_d___i_o_8cpp_1a747c973d9633421336e8d59a78faf49f"/><section>
+    <title>indicatorsManagement()</title>
+<indexterm><primary>indicatorsManagement</primary><secondary>MD_IO.cpp</secondary></indexterm>
+<indexterm><primary>MD_IO.cpp</primary><secondary>indicatorsManagement</secondary></indexterm>
+<para><computeroutput>void indicatorsManagement ( )</computeroutput></para>
+<para>INDICATORS BLOCK</para>
+
+<para>Set the maximum water level indicator</para>
+
+<para>Set the minimum water level indicator</para>
+
+<para>Set the alarm indicator</para>
+
+<para>Set the manual mode indicator</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_a747c973d9633421336e8d59a78faf49f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_a747c973d9633421336e8d59a78faf49f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___i_o_8cpp_1a27162a64461db61f83b3752bd0b6d125"/><section>
+    <title>modeManagement()</title>
+<indexterm><primary>modeManagement</primary><secondary>MD_IO.cpp</secondary></indexterm>
+<indexterm><primary>MD_IO.cpp</primary><secondary>modeManagement</secondary></indexterm>
+<para><computeroutput>void modeManagement ( )</computeroutput></para>
+<para>MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator</para>
+
+<para>Toggle the auto mode</para>
+
+<para>Set the auto mode indicator to the web value of the auto mode</para>
+
+<para>Set the auto mode indicator to OFF</para>
+
+<para>Set the auto mode to OFF in the web interface</para>
+
+<para>If the machine is in manual mode, turn off the timer</para>
+
+<para>Turn off the timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_a27162a64461db61f83b3752bd0b6d125_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_a27162a64461db61f83b3752bd0b6d125_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___i_o_8cpp_1aa8b96a74409fec0e22a5ee8451114a7f"/><section>
+    <title>toggleAutoMode()</title>
+<indexterm><primary>toggleAutoMode</primary><secondary>MD_IO.cpp</secondary></indexterm>
+<indexterm><primary>MD_IO.cpp</primary><secondary>toggleAutoMode</secondary></indexterm>
+<para><computeroutput>void toggleAutoMode ( )</computeroutput></para><para>
+
+<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+</note>
+</para>
+
+<para>current state of the button</para>
+
+<para>previous state of the button</para>
+
+<para>current state of the button</para>
+
+<para>the last time the output pin was toggled</para>
+
+<para>the debounce time; increase if the output flickers</para>
+
+<para>read the state of the switch into a local variable</para>
+
+<para>If the switch changed, due to noise or pressing</para>
+
+<para>reset the debouncing timer</para>
+
+<para>if the switch value has been stable for a while</para>
+
+<para>if the button state has changed</para>
+
+<para>save the new state</para>
+
+<para>if the button state is HIGH</para>
+
+<para>Toggle Auto Mode</para>
+
+<para>save the current state as the last state, for next time through the loop</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_aa8b96a74409fec0e22a5ee8451114a7f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_aa8b96a74409fec0e22a5ee8451114a7f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80"/><section>
+    <title>toggleIndAuto()</title>
+<indexterm><primary>toggleIndAuto</primary><secondary>MD_IO.cpp</secondary></indexterm>
+<indexterm><primary>MD_IO.cpp</primary><secondary>toggleIndAuto</secondary></indexterm>
+<para><computeroutput>void toggleIndAuto ( )</computeroutput></para><para>
+
+<para>Toggle the Auto Mode of the Machine. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is used to toggle the Auto Mode of the Machine </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_ae48dc2d309ef711693328c6300ad5e80_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_d___i_o_8cpp_ae48dc2d309ef711693328c6300ad5e80_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>
