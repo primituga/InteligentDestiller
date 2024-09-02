@@ -14,55 +14,60 @@
 
 #include "OS.h"
 
+////////////////////////////////////////////////////////////////////////////////////////
+/// I/O Map Header
+////////////////////////////////////////////////////////////////////////////////////////
 
 /// Function prototypes
-void sendWiFiQuality();
-void toggleAutoMode();
-void toggleIndAuto();
-void indicatorsManagement();
-void modeManagement();
+void toggleAutoMode();       /// Toggle auto mode
+void toggleIndAuto();        /// Toggle auto indicator
+void indicatorsManagement(); /// Indicators management
+void modeManagement();       /// Mode management
 
-void updateOutputsWeb();
-void toggleAutoModeWeb();
-void togglePumpWeb();
-void toggleValveWaterInWeb();
-void toggleValveWaterOutWeb();
-void toggleResistorWeb();
+void updateOutputsWeb();       /// Update outputs for the web interface
+void toggleAutoModeWeb();      /// Toggle auto mode
+void togglePumpWeb();          /// Toggle pump state
+void toggleValveWaterInWeb();  /// Toggle valve water in
+void toggleValveWaterOutWeb(); /// Toggle valve water out
+void toggleResistorWeb();      /// Toggle resistor
 
-void setAutoModeWeb(bool state);
-void setPumpWeb(bool state);
-void setValveWaterInWeb(bool state);
-void setValveWaterOutWeb(bool state);
-void setResistorWeb(bool state);
+void setAutoModeWeb(bool state);      /// Set auto mode
+void setPumpWeb(bool state);          /// Set pump state
+void setValveWaterInWeb(bool state);  /// Set valve water in
+void setValveWaterOutWeb(bool state); /// Set valve water out
+void setResistorWeb(bool state);      /// Set resistor
 
-bool getAutoModeWeb();
-bool getPumpWeb();
-bool getValv_Water_InWeb();
-bool getValv_Water_OutWeb();
-bool getResistorWeb();
+bool getAutoModeWeb();       /// Get auto mode
+bool getPumpWeb();           /// Get pump state
+bool getValv_Water_InWeb();  /// Get valve water in
+bool getValv_Water_OutWeb(); /// Get valve water out
+bool getResistorWeb();       /// Get resistor
 
+////////////////////////////////////////////////////////////////////////////////////////
+/// ROUTES AND HANDLERS
+////////////////////////////////////////////////////////////////////////////////////////
 /// Handlers
-String handleTimer();
-String handleHour();
-String handleMinute();
-String handleSecound();
-String handleWifiQuality();
-String handleWifiSSID();
-String handleWifiTX();
-String handleWifiIP();
-String handleTimeAdjust(const String &adjustment);
-String handleTimerControl(const String &control);
-String handleState(const String &state);
-String handleToggle(const String &toggle);
-String processor(const String &var);
+String handleTimer();                              /// Handle timer
+String handleHour();                               /// Handle hour
+String handleMinute();                             /// Handle minute
+String handleSecound();                            /// Handle secound
+String handleWifiQuality();                        /// Handle wifi quality
+String handleWifiSSID();                           /// Handle wifi SSID
+String handleWifiTX();                             /// Handle wifi TX
+String handleWifiIP();                             /// Handle wifi IP
+String handleTimeAdjust(const String &adjustment); /// Handle time adjustment
+String handleTimerControl(const String &control);  /// Handle timer control
+String handleState(const String &state);           /// Handle state
+String handleToggle(const String &toggle);         /// Handle toggle
+String processor(const String &var);               /// Processor
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// TIMERS
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /// Defining timers for the alarm indicator blinking
-#define ALARM_TIME_ON   600
-#define ALARM_TIME_OFF  200
+#define ALARM_TIME_ON 600  /// Alarm time on
+#define ALARM_TIME_OFF 200 /// Alarm time off
 
 /// Timer Functions calls
 long webTimer(String op, int16_t amount); /// Timer for web operations
@@ -101,15 +106,15 @@ void sPrintLnNbr(int nbr);    /// Print number with new line
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Test I/Os
 ////////////////////////////////////////////////////////////////////////////////////////
-void test_IO();
+void test_IO();               /// Testa as entradas e saidas
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// WIFI SERVICE
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /// WIFI Functions calls
-#define WIFI_MODE_OPTIONS 1 /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
-bool initWIFI();            /// Inicia o wifi
-String wifiQuality();       /// Retorna a qualidade do wifi
+#define WIFI_MODE_OPTIONS 3     /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
+bool initWIFI();                /// Inicia o wifi
+String wifiQuality();           /// Retorna a qualidade do wifi
 
 #endif
