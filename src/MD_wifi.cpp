@@ -45,28 +45,39 @@ void OnWiFiEvent(WiFiEvent_t event)
  */
 String wifiQuality()
 {
-  int rssi = WiFi.RSSI();           /// Get the Received Signal Strength Indicator (RSSI) in dBm
-  int quality;                      /// Quality in percentage
-  String qualityStr;                /// Quality in string format
+  int rssi = WiFi.RSSI();     /// Get the Received Signal Strength Indicator (RSSI) in dBm
+  int quality;                /// Quality in percentage
+  String qualityStr;          /// Quality in string format
+  static int lastQuality = 0; /// Last quality in percentage
+  static int lastRSSI = 0;    /// Last RSSI in dBm
 
-  /// Calculate the quality in percentage
-  if (rssi <= -100)                 /// If the RSSI is less than or equal to -100 dBm
+  if (lastRSSI == rssi) /// If the last RSSI is equal to the current RSSI
   {
-    quality = 0;                    /// Set the quality to 0%
+    return qualityStr; /// Return the quality in string format with RSSI and quality in percentage values
   }
-  else if (rssi >= -5)              /// If the RSSI is greater than or equal to -5 dBm
+  else
   {
-    quality = 100;                  /// Set the quality to 100%
+
+    /// Calculate the quality in percentage
+    if (rssi <= -100) /// If the RSSI is less than or equal to -100 dBm
+    {
+      quality = 0; /// Set the quality to 0%
+    }
+    else if (rssi >= -5) /// If the RSSI is greater than or equal to -5 dBm
+    {
+      quality = 100; /// Set the quality to 100%
+    }
+    else /// If the RSSI is between -100 dBm and -5 dBm
+    {
+      quality = (rssi + 100) * 1.25; /// Calculate the quality in percentage
+    }
+    /// Return the quality in string format with RSSI and quality in percentage values
+    qualityStr = "RSSI " + String(rssi) + " dBm (" + String(quality) + " %)";
+    /// Send the quality in percentage to the web server as a JSON object
+    //ws.textAll("{\"type\": \"wifiQuality\", \"value\": " + String(quality) + "}");
+    return qualityStr; /// Return the quality in string format with RSSI and quality in percentage values
   }
-  else                              /// If the RSSI is between -100 dBm and -5 dBm
-  {
-    quality = (rssi + 100) * 1.25;  /// Calculate the quality in percentage
-  }
-  /// Return the quality in string format with RSSI and quality in percentage values
-  qualityStr = "RSSI " + String(rssi) + " dBm (" + String(quality) + " %)";
-  /// Send the quality in percentage to the web server as a JSON object
-  ws.textAll("{\"type\": \"wifiQuality\", \"value\": " + String(quality) + "}");
-  return qualityStr;                /// Return the quality in string format with RSSI and quality in percentage values
+  lastRSSI = rssi; /// Update the last RSSI with the current RSSI
 }
 
 /**
@@ -94,12 +105,12 @@ void connectToWIFI()
   }
 
   /// Get the SSID and password from the WiFiManager and connect to the WiFi network
-  String ssid = wifiManager.getWiFiSSID();      /// Get the SSID from the WiFiManager
-  String password = wifiManager.getWiFiPass();  /// Get the password from the WiFiManager
+  String ssid = wifiManager.getWiFiSSID();     /// Get the SSID from the WiFiManager
+  String password = wifiManager.getWiFiPass(); /// Get the password from the WiFiManager
 
   /// Connect to the WiFi network with the SSID and password
-  WiFi.begin(ssid.c_str(), password.c_str());   /// Connect to the WiFi network with the SSID and password
-  delay(10);                                    /// Delay for 10 ms
+  WiFi.begin(ssid.c_str(), password.c_str()); /// Connect to the WiFi network with the SSID and password
+  delay(10);                                  /// Delay for 10 ms
   /// Wait for the ESP32 to connect to the WiFi network and print the connection status
   sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));
   sPrintLnStr("--wmHostname: " + wifiManager.getWiFiHostname());
@@ -124,20 +135,20 @@ void connectToSoftAP()
   WiFi.setAutoReconnect(true);      /// Enable auto reconnect to the WiFi network
   WiFi.mode(WIFI_MODE_APSTA);       /// Set to Station + Access Point mode
 
-  WiFi.softAP(soft_ap_ssid, soft_ap_password);    /// Start the Soft Access Point with the SSID and password
+  WiFi.softAP(soft_ap_ssid, soft_ap_password); /// Start the Soft Access Point with the SSID and password
 
   esp_netif_t *netif_ap = esp_netif_get_handle_from_ifkey("WIFI_AP_DEF"); /// Get the handle for the Soft Access Point interface
 
   /// Define IP configuration structure and set desired IPs
-  esp_netif_ip_info_t ipInfo;                             /// IP configuration structure
-  ipInfo.ip.addr = ipaddr_addr("192.168.100.100");        /// AP IP
-  ipInfo.gw.addr = ipaddr_addr("192.168.100.1");          /// Gateway IP
-  ipInfo.netmask.addr = ipaddr_addr("255.255.255.0");     /// Subnet Mask
+  esp_netif_ip_info_t ipInfo;                         /// IP configuration structure
+  ipInfo.ip.addr = ipaddr_addr("192.168.100.100");    /// AP IP
+  ipInfo.gw.addr = ipaddr_addr("192.168.100.1");      /// Gateway IP
+  ipInfo.netmask.addr = ipaddr_addr("255.255.255.0"); /// Subnet Mask
 
   /// Set the IP configuration to the soft AP interface
-  esp_netif_dhcps_stop(netif_ap);                         /// Stop DHCP server to change settings
-  esp_netif_set_ip_info(netif_ap, &ipInfo);               /// Apply new IP settings
-  esp_netif_dhcps_start(netif_ap);                        /// Restart DHCP server with new settings
+  esp_netif_dhcps_stop(netif_ap);           /// Stop DHCP server to change settings
+  esp_netif_set_ip_info(netif_ap, &ipInfo); /// Apply new IP settings
+  esp_netif_dhcps_start(netif_ap);          /// Restart DHCP server with new settings
 
   sPrintLnStr("Hostname: " + String(WiFi.getHostname())); /// Print the hostname
   sPrintStr("ESP32 IP as soft AP: ");                     /// Print the IP address of the ESP32 Soft Access Point
@@ -162,7 +173,7 @@ bool initWIFI()
    * 3 - Both (Connect to local WiFi network and create a local AP)
    */
 
-  if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 1)  
+  if (WiFi.status() != WL_CONNECTED && WIFI_MODE_OPTIONS == 1)
   {
     sPrintLnStr("WIFI INIT....");
     connectToWIFI(); /// Initiate WiFi

@@ -26,9 +26,9 @@ function onClose(event) {
 function onMessage(event) {
     let data = JSON.parse(event.data);
     switch (data.type) {
-        case "wifiQuality":
+        /*case "wifiQuality":
             document.getElementById('wifiQuality').innerHTML = data.value;
-            break;
+            break;*/
         case "manualMode":
             document.getElementById('manualMode').innerHTML = data.value;
             break;
