@@ -3,18 +3,18 @@
   <compounddef id="_m_d_8h" kind="file" language="C++">
     <compoundname>MD.h</compoundname>
     <includes refid="_o_s_8h" local="yes">OS.h</includes>
-    <includedby refid="_a_p_8h" local="yes">include/AP.h</includedby>
-    <includedby refid="_o_s_8h" local="yes">include/OS.h</includedby>
-    <includedby refid="_m_d___i_o_8cpp" local="yes">src/MD_IO.cpp</includedby>
-    <includedby refid="_m_d___serial_8cpp" local="yes">src/MD_Serial.cpp</includedby>
-    <includedby refid="_m_d___test___i_os_8cpp" local="yes">src/MD_Test_IOs.cpp</includedby>
-    <includedby refid="_m_d___timer_8cpp" local="yes">src/MD_Timer.cpp</includedby>
-    <includedby refid="_m_d___web___handlers_8cpp" local="yes">src/MD_Web_Handlers.cpp</includedby>
-    <includedby refid="_m_d___web___i_o___mngmnt_8cpp" local="yes">src/MD_Web_IO_Mngmnt.cpp</includedby>
-    <includedby refid="_m_d__wifi_8cpp" local="yes">src/MD_wifi.cpp</includedby>
+    <includedby refid="_a_p_8h" local="yes">C:/workspace/Projeto/InteligentDestiller/include/AP.h</includedby>
+    <includedby refid="_o_s_8h" local="yes">C:/workspace/Projeto/InteligentDestiller/include/OS.h</includedby>
+    <includedby refid="_m_d___i_o_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp</includedby>
+    <includedby refid="_m_d___serial_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp</includedby>
+    <includedby refid="_m_d___test___i_os_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_Test_IOs.cpp</includedby>
+    <includedby refid="_m_d___timer_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp</includedby>
+    <includedby refid="_m_d___web___handlers_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp</includedby>
+    <includedby refid="_m_d___web___i_o___mngmnt_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp</includedby>
+    <includedby refid="_m_d__wifi_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>include/MD.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/MD.h</label>
         <link refid="_m_d_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -28,22 +28,27 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>SPIFFS.h</label>
       </node>
       <node id="3">
         <label>WiFiManager.h</label>
       </node>
+      <node id="4">
+        <label>esp_netif.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>include/AP.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/AP.h</label>
         <link refid="_a_p_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -53,7 +58,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>include/MD.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/MD.h</label>
         <link refid="_m_d_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -75,7 +80,7 @@
         </childnode>
       </node>
       <node id="6">
-        <label>include/OS.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/OS.h</label>
         <link refid="_o_s_8h"/>
         <childnode refid="1" relation="include">
         </childnode>
@@ -87,55 +92,55 @@
         </childnode>
       </node>
       <node id="3">
-        <label>src/AP_Destiler.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_Destiler.cpp</label>
         <link refid="_a_p___destiler_8cpp"/>
       </node>
       <node id="4">
-        <label>src/AP_Web.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_Web.cpp</label>
         <link refid="_a_p___web_8cpp"/>
       </node>
       <node id="5">
-        <label>src/AP_main.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp</label>
         <link refid="_a_p__main_8cpp"/>
       </node>
       <node id="10">
-        <label>src/MD_IO.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp</label>
         <link refid="_m_d___i_o_8cpp"/>
       </node>
       <node id="11">
-        <label>src/MD_Serial.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp</label>
         <link refid="_m_d___serial_8cpp"/>
       </node>
       <node id="12">
-        <label>src/MD_Test_IOs.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Test_IOs.cpp</label>
         <link refid="_m_d___test___i_os_8cpp"/>
       </node>
       <node id="13">
-        <label>src/MD_Timer.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp</label>
         <link refid="_m_d___timer_8cpp"/>
       </node>
       <node id="14">
-        <label>src/MD_Web_Handlers.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp</label>
         <link refid="_m_d___web___handlers_8cpp"/>
       </node>
       <node id="15">
-        <label>src/MD_Web_IO_Mngmnt.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp</label>
         <link refid="_m_d___web___i_o___mngmnt_8cpp"/>
       </node>
       <node id="16">
-        <label>src/MD_wifi.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp</label>
         <link refid="_m_d__wifi_8cpp"/>
       </node>
       <node id="7">
-        <label>src/OS_FS.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/OS_FS.cpp</label>
         <link refid="_o_s___f_s_8cpp"/>
       </node>
       <node id="8">
-        <label>src/OS_GPIO.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp</label>
         <link refid="_o_s___g_p_i_o_8cpp"/>
       </node>
       <node id="9">
-        <label>src/OS_multi_core.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/OS_multi_core.cpp</label>
         <link refid="_o_s__multi__core_8cpp"/>
       </node>
     </invincdepgraph>
@@ -144,14 +149,14 @@
         <name>ALARM_TIME_ON</name>
         <initializer>600</initializer>
         <briefdescription>
-<para>TIMERS. </para>
+<para>Processor. </para>
         </briefdescription>
         <detaileddescription>
-<para>Defining timers for the alarm indicator blinking </para>
+<para>TIMERS Defining timers for the alarm indicator blinking </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="64" column="9" bodyfile="include/MD.h" bodystart="64" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="69" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" bodystart="69" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
       </memberdef>
       <memberdef kind="define" id="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" prot="public" static="no">
@@ -163,49 +168,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="65" column="9" bodyfile="include/MD.h" bodystart="65" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="70" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" bodystart="70" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
       </memberdef>
       <memberdef kind="define" id="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" prot="public" static="no">
         <name>WIFI_MODE_OPTIONS</name>
-        <initializer>1</initializer>
+        <initializer>3</initializer>
         <briefdescription>
-<para>WIFI SERVICE. </para>
+<para>Testa as entradas e saidas. </para>
         </briefdescription>
         <detaileddescription>
-<para>WIFI Functions calls </para>
+<para>WIFI SERVICE WIFI Functions calls </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="111" column="9" bodyfile="include/MD.h" bodystart="111" bodyend="-1"/>
-        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="116" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="163" endline="200">initWIFI</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void sendWiFiQuality</definition>
-        <argsstring>()</argsstring>
-        <name>sendWiFiQuality</name>
-        <briefdescription>
-<para>MiddleWare Header. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Function prototypes </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/MD.h" line="19" column="6" declfile="include/MD.h" declline="19" declcolumn="6"/>
-      </memberdef>
       <memberdef kind="function" id="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void toggleAutoMode</definition>
         <argsstring>()</argsstring>
         <name>toggleAutoMode</name>
         <briefdescription>
-<para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
+<para>MiddleWare Header. </para>
         </briefdescription>
         <detaileddescription>
+<para>I/O Map Header Function prototypes</para>
+<para>MiddleWare Header.</para>
 <para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
 </simplesect>
 </para>
@@ -226,9 +218,9 @@
 <para>Toggle Auto Mode</para>
 <para>save the current state as the last state, for next time through the loop</para>
         </inbodydescription>
-        <location file="include/MD.h" line="20" column="6" bodyfile="src/MD_IO.cpp" bodystart="44" bodyend="72" declfile="include/MD.h" declline="20" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="22" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="44" bodyend="72" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="22" declcolumn="6"/>
         <references refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" compoundref="_o_s___g_p_i_o_8cpp" startline="165" endline="168">getAutoModeSW</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
         <references refid="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
       </memberdef>
@@ -238,18 +230,19 @@
         <argsstring>()</argsstring>
         <name>toggleIndAuto</name>
         <briefdescription>
-<para>Toggle the Auto Mode of the Machine. </para>
+<para>Toggle auto mode. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle auto mode.</para>
 <para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="21" column="6" bodyfile="src/MD_IO.cpp" bodystart="17" bodyend="37" declfile="include/MD.h" declline="21" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="23" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="17" bodyend="37" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="23" declcolumn="6"/>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
         <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
         <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
@@ -261,6 +254,7 @@
         <argsstring>()</argsstring>
         <name>indicatorsManagement</name>
         <briefdescription>
+<para>Toggle auto indicator. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -271,7 +265,7 @@
 <para>Set the alarm indicator</para>
 <para>Set the manual mode indicator</para>
         </inbodydescription>
-        <location file="include/MD.h" line="22" column="6" bodyfile="src/MD_IO.cpp" bodystart="74" bodyend="83" declfile="include/MD.h" declline="22" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="24" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="74" bodyend="83" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="24" declcolumn="6"/>
         <references refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" compoundref="_o_s___g_p_i_o_8cpp" startline="152" endline="155">getAlarmIND</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
@@ -288,6 +282,7 @@
         <argsstring>()</argsstring>
         <name>modeManagement</name>
         <briefdescription>
+<para>Indicators management. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -300,11 +295,11 @@
 <para>If the machine is in manual mode, turn off the timer</para>
 <para>Turn off the timer</para>
         </inbodydescription>
-        <location file="include/MD.h" line="23" column="6" bodyfile="src/MD_IO.cpp" bodystart="85" bodyend="107" declfile="include/MD.h" declline="23" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="25" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="85" bodyend="107" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="25" declcolumn="6"/>
         <references refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="46" endline="49">getAutoModeWeb</references>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
         <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
         <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
         <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
@@ -317,9 +312,10 @@
         <argsstring>()</argsstring>
         <name>updateOutputsWeb</name>
         <briefdescription>
-<para>Output variables image. </para>
+<para>Mode management. </para>
         </briefdescription>
         <detaileddescription>
+<para>Mode management.</para>
 <para>FUNCTIONS BLOCK</para>
 <para>Update Outputs Web</para>
 <para>This function updates the outputs for the web interface.</para>
@@ -338,7 +334,7 @@
 <para>Update the manual mode state</para>
 <para>outputVarsImageWeb[7] = <ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto()</ref>; /// Update the auto indicator state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="25" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="21" bodyend="32" declfile="include/MD.h" declline="25" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="27" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="21" bodyend="32" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="27" declcolumn="6"/>
         <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" compoundref="_o_s___g_p_i_o_8cpp" startline="243" endline="246">getPump</references>
@@ -356,9 +352,10 @@
         <argsstring>()</argsstring>
         <name>toggleAutoModeWeb</name>
         <briefdescription>
-<para>TOGGLES BLOCK. </para>
+<para>Update outputs for the web interface. </para>
         </briefdescription>
         <detaileddescription>
+<para>Update outputs for the web interface.</para>
 <para>Toggle Auto Mode Web</para>
 <para>This function toggles the auto mode.</para>
 <para><simplesect kind="return"><para>void </para>
@@ -372,11 +369,11 @@
 <para>Toggle the auto indicator state</para>
 <para>Set the auto indicator state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="26" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="238" bodyend="251" declfile="include/MD.h" declline="26" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="28" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="238" bodyend="251" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="28" declcolumn="6"/>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -386,9 +383,10 @@
         <argsstring>()</argsstring>
         <name>togglePumpWeb</name>
         <briefdescription>
-<para>Toggle Pump Web. </para>
+<para>Toggle auto mode. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle auto mode.</para>
 <para>This function toggles the pump.</para>
 <para><simplesect kind="return"><para>void Toggle Pump </para>
 </simplesect>
@@ -405,11 +403,11 @@
 <para>Print the pump state</para>
 <para>Print the pump state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="27" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="260" bodyend="277" declfile="include/MD.h" declline="27" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="29" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="260" bodyend="277" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="29" declcolumn="6"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a47fd66708aa0f427cd949f639cebc0df" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="98" endline="101">getPumpWeb</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a79d7f2ee79816b8a1c7d71f4887df8c6" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="140" endline="153">setPumpWeb</references>
         <references refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" compoundref="_m_d___serial_8cpp" startline="67" endline="70">sPrintStr</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
@@ -420,9 +418,10 @@
         <argsstring>()</argsstring>
         <name>toggleValveWaterInWeb</name>
         <briefdescription>
-<para>Toggle Valve Water In Web. </para>
+<para>Toggle pump state. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle pump state.</para>
 <para>This function toggles the water in valve.</para>
 <para><simplesect kind="return"><para>void Toggle Valve Water In </para>
 </simplesect>
@@ -435,11 +434,11 @@
 <para>Toggle the water in valve state</para>
 <para>Set the water in valve state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="28" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="286" bodyend="299" declfile="include/MD.h" declline="28" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="30" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="286" bodyend="299" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="30" declcolumn="6"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1abe554b3a794b4000aa2d251a3d63a54f" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="164" endline="177">setValveWaterInWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -449,9 +448,10 @@
         <argsstring>()</argsstring>
         <name>toggleValveWaterOutWeb</name>
         <briefdescription>
-<para>Toggle Valve Water Out Web. </para>
+<para>Toggle valve water in. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle valve water in.</para>
 <para>This function toggles the water out valve.</para>
 <para><simplesect kind="return"><para>void Toggle Valve Water Out </para>
 </simplesect>
@@ -465,11 +465,11 @@
 <para>Toggle the water out valve state</para>
 <para>Set the water out valve state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="29" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="308" bodyend="321" declfile="include/MD.h" declline="29" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="31" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="308" bodyend="321" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="31" declcolumn="6"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a922a642ffb3645f0271b481309cdb133" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="188" endline="201">setValveWaterOutWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -479,9 +479,10 @@
         <argsstring>()</argsstring>
         <name>toggleResistorWeb</name>
         <briefdescription>
-<para>Toggle Resistor Web. </para>
+<para>Toggle valve water out. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle valve water out.</para>
 <para>This function toggles the resistor.</para>
 <para><simplesect kind="return"><para>void Toggle Resistor </para>
 </simplesect>
@@ -494,11 +495,11 @@
 <para>Toggle the resistor state</para>
 <para>Set the resistor state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="30" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="330" bodyend="344" declfile="include/MD.h" declline="30" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="32" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="330" bodyend="344" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="32" declcolumn="6"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1afc81a927862b27a260c9a12ae7773739" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="212" endline="225">setResistorWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -512,9 +513,10 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-<para>SETS BLOCK. </para>
+<para>Toggle resistor. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle resistor.</para>
 <para>Set the Auto Mode object</para>
 <para>This function sets the state of the auto mode.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -536,11 +538,11 @@
 <para>Set the auto indicator to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="32" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="116" bodyend="129" declfile="include/MD.h" declline="32" declcolumn="6"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="34" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="116" bodyend="129" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="34" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="70">POS_IND_AUTO</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
         <referencedby refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="238" endline="251">toggleAutoModeWeb</referencedby>
         <referencedby refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</referencedby>
@@ -555,9 +557,10 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-<para>Set the Pump object. </para>
+<para>Set auto mode. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set auto mode.</para>
 <para>This function sets the state of the pump.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -578,11 +581,11 @@
 <para>Set the pump to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="33" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="140" bodyend="153" declfile="include/MD.h" declline="33" declcolumn="6"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="35" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="140" bodyend="153" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="35" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="64">POS_BMB</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
       </memberdef>
@@ -596,9 +599,10 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-<para>Set the Valve Water In object. </para>
+<para>Set pump state. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set pump state.</para>
 <para>This function sets the state of the water in valve.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -619,11 +623,11 @@
 <para>Set the water in valve to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="34" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="164" bodyend="177" declfile="include/MD.h" declline="34" declcolumn="6"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="36" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="164" bodyend="177" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="36" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="66">POS_VALV_WATER_IN</references>
         <referencedby refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="286" endline="299">toggleValveWaterInWeb</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a922a642ffb3645f0271b481309cdb133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -636,9 +640,10 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-<para>Set the Valve Water Out object. </para>
+<para>Set valve water in. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set valve water in.</para>
 <para>This function sets the state of the water out valve.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -659,11 +664,11 @@
 <para>Set the water out valve to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="35" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="188" bodyend="201" declfile="include/MD.h" declline="35" declcolumn="6"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="37" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="188" bodyend="201" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="37" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_OUT</references>
         <referencedby refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="308" endline="321">toggleValveWaterOutWeb</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1afc81a927862b27a260c9a12ae7773739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -676,9 +681,10 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-<para>Set the Resistor object. </para>
+<para>Set valve water out. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set valve water out.</para>
 <para>This function sets the state of the resistor.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -699,11 +705,11 @@
 <para>Set the resistor to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="include/MD.h" line="36" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="212" bodyend="225" declfile="include/MD.h" declline="36" declcolumn="6"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="38" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="212" bodyend="225" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="38" declcolumn="6"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="63">POS_RAQ</references>
         <referencedby refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="330" endline="344">toggleResistorWeb</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -712,9 +718,10 @@
         <argsstring>()</argsstring>
         <name>getAutoModeWeb</name>
         <briefdescription>
-<para>GETS BLOCK. </para>
+<para>Set resistor. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set resistor.</para>
 <para>Get the Ind Max object</para>
 <para>This function returns the state of the max indicator.</para>
 <para><simplesect kind="return"><para>true </para>
@@ -725,9 +732,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="38" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="46" bodyend="49" declfile="include/MD.h" declline="38" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="40" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="46" bodyend="49" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="40" declcolumn="6"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="70">POS_IND_AUTO</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -736,9 +743,10 @@
         <argsstring>()</argsstring>
         <name>getPumpWeb</name>
         <briefdescription>
-<para>Get the Pump object. </para>
+<para>Get auto mode. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get auto mode.</para>
 <para>This function returns the state of the water pump.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -748,9 +756,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="39" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="98" bodyend="101" declfile="include/MD.h" declline="39" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="41" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="98" bodyend="101" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="41" declcolumn="6"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="64">POS_BMB</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
       </memberdef>
@@ -760,9 +768,10 @@
         <argsstring>()</argsstring>
         <name>getValv_Water_InWeb</name>
         <briefdescription>
-<para>Get the Ind Alarm object. </para>
+<para>Get pump state. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get pump state.</para>
 <para>This function returns the state of the alarm indicator.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -772,9 +781,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="40" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="72" bodyend="75" declfile="include/MD.h" declline="40" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="42" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="72" bodyend="75" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="42" declcolumn="6"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="66">POS_VALV_WATER_IN</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -783,9 +792,10 @@
         <argsstring>()</argsstring>
         <name>getValv_Water_OutWeb</name>
         <briefdescription>
-<para>Get the Valv Water Out object. </para>
+<para>Get valve water in. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get valve water in.</para>
 <para>This function returns the state of the water out valve.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -795,9 +805,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="41" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="85" bodyend="88" declfile="include/MD.h" declline="41" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="43" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="85" bodyend="88" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="43" declcolumn="6"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_OUT</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -806,9 +816,10 @@
         <argsstring>()</argsstring>
         <name>getResistorWeb</name>
         <briefdescription>
-<para>Get the Ind Min object. </para>
+<para>Get valve water out. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get valve water out.</para>
 <para>This function returns the state of the min indicator.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -818,9 +829,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="42" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="59" bodyend="62" declfile="include/MD.h" declline="42" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="44" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="59" bodyend="62" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="44" declcolumn="6"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="63">POS_RAQ</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -829,10 +840,11 @@
         <argsstring>()</argsstring>
         <name>handleTimer</name>
         <briefdescription>
-<para>Handlers. </para>
+<para>Get resistor. </para>
         </briefdescription>
         <detaileddescription>
-<para>Handlers.</para>
+<para>ROUTES AND HANDLERS ///////////////////////////////////////////////////////////////////////////////////// Handlers</para>
+<para>Get resistor.</para>
 <para>Timer handlers</para>
 <para>Handle Timer <simplesect kind="return"><para>String </para>
 </simplesect>
@@ -844,7 +856,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="45" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="18" bodyend="21" declfile="include/MD.h" declline="45" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="50" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="18" bodyend="21" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="50" declcolumn="8"/>
         <references refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
         <references refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
         <references refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
@@ -857,9 +869,10 @@
         <argsstring>()</argsstring>
         <name>handleHour</name>
         <briefdescription>
-<para>Handle Hour. </para>
+<para>Handle timer. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle timer.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the timer hour </para>
@@ -868,7 +881,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="46" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="27" bodyend="27" declfile="include/MD.h" declline="46" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="51" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="27" bodyend="27" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="51" declcolumn="8"/>
         <references refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -879,9 +892,10 @@
         <argsstring>()</argsstring>
         <name>handleMinute</name>
         <briefdescription>
-<para>Handle Minute. </para>
+<para>Handle hour. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle hour.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the timer minute </para>
@@ -890,7 +904,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="47" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="33" bodyend="33" declfile="include/MD.h" declline="47" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="52" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="33" bodyend="33" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="52" declcolumn="8"/>
         <references refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -901,9 +915,10 @@
         <argsstring>()</argsstring>
         <name>handleSecound</name>
         <briefdescription>
-<para>Handle Secound. </para>
+<para>Handle minute. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle minute.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the timer secound </para>
@@ -912,7 +927,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="48" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="39" bodyend="39" declfile="include/MD.h" declline="48" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="53" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="39" bodyend="39" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="53" declcolumn="8"/>
         <references refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -923,9 +938,10 @@
         <argsstring>()</argsstring>
         <name>handleWifiQuality</name>
         <briefdescription>
-<para>Handlers for Wifi Quality, SSID, TX and IP. </para>
+<para>Handle secound. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle secound.</para>
 <para>Handle Wifi Quality <simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi quality in percentage </para>
@@ -934,8 +950,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="49" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="49" bodyend="49" declfile="include/MD.h" declline="49" declcolumn="8"/>
-        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="70">wifiQuality</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="54" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="49" bodyend="49" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="54" declcolumn="8"/>
+        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="81">wifiQuality</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -945,9 +961,10 @@
         <argsstring>()</argsstring>
         <name>handleWifiSSID</name>
         <briefdescription>
-<para>Handle Wifi SSID. </para>
+<para>Handle wifi quality. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi quality.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi SSID </para>
@@ -956,7 +973,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="50" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="55" bodyend="55" declfile="include/MD.h" declline="50" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="55" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="55" bodyend="55" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="55" declcolumn="8"/>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -966,9 +983,10 @@
         <argsstring>()</argsstring>
         <name>handleWifiTX</name>
         <briefdescription>
-<para>Handle Wifi TX. </para>
+<para>Handle wifi SSID. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi SSID.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi TX power </para>
@@ -977,7 +995,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="51" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="61" bodyend="61" declfile="include/MD.h" declline="51" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="56" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="61" bodyend="61" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="56" declcolumn="8"/>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -987,9 +1005,10 @@
         <argsstring>()</argsstring>
         <name>handleWifiIP</name>
         <briefdescription>
-<para>Handle Wifi IP. </para>
+<para>Handle wifi TX. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi TX.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi IP address </para>
@@ -998,7 +1017,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="52" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="67" bodyend="67" declfile="include/MD.h" declline="52" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="57" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="67" bodyend="67" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="57" declcolumn="8"/>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -1012,9 +1031,10 @@
           <declname>adjustment</declname>
         </param>
         <briefdescription>
-<para>Timer Add/Remove Time. </para>
+<para>Handle wifi IP. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi IP.</para>
 <para>Handle Time Adjust <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>adjustment</parametername>
@@ -1048,7 +1068,7 @@
 <para>Remove 10 minutes from timer</para>
 <para>Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)</para>
         </inbodydescription>
-        <location file="include/MD.h" line="53" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="79" bodyend="107" declfile="include/MD.h" declline="53" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="58" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="79" bodyend="107" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="58" declcolumn="8"/>
         <references refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" compoundref="_m_d___timer_8cpp" startline="223" endline="223">add10m</references>
         <references refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" compoundref="_m_d___timer_8cpp" startline="211" endline="211">add10s</references>
         <references refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" compoundref="_m_d___timer_8cpp" startline="215" endline="215">add1m</references>
@@ -1073,9 +1093,10 @@
           <declname>control</declname>
         </param>
         <briefdescription>
-<para>Timer Start/Stop/Reset. </para>
+<para>Handle time adjustment. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle time adjustment.</para>
 <para>Handle Timer Control <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>control</parametername>
@@ -1100,9 +1121,9 @@
 <para>Reset the timer</para>
 <para>Return the control message for the timer (start, stop, reset)</para>
         </inbodydescription>
-        <location file="include/MD.h" line="54" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="119" bodyend="129" declfile="include/MD.h" declline="54" declcolumn="8"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="59" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="119" bodyend="129" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="59" declcolumn="8"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" compoundref="_m_d___timer_8cpp" startline="251" endline="251">resetTimer</references>
         <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -1117,9 +1138,10 @@
           <declname>state</declname>
         </param>
         <briefdescription>
-<para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
+<para>Handle timer control. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle timer control.</para>
 <para>Handle State <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>state</parametername>
@@ -1150,7 +1172,7 @@
 <para>Get the water alarm state</para>
 <para>Return nothing if the state is not found</para>
         </inbodydescription>
-        <location file="include/MD.h" line="55" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="141" bodyend="163" declfile="include/MD.h" declline="55" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="60" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="141" bodyend="163" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="60" declcolumn="8"/>
         <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
@@ -1173,9 +1195,10 @@
           <declname>toggle</declname>
         </param>
         <briefdescription>
-<para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
+<para>Handle state. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle state.</para>
 <para>Handle Toggle <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>toggle</parametername>
@@ -1202,7 +1225,7 @@
 <para>Toggle the resistor state</para>
 <para>Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)</para>
         </inbodydescription>
-        <location file="include/MD.h" line="56" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="175" bodyend="189" declfile="include/MD.h" declline="56" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="61" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="175" bodyend="189" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="61" declcolumn="8"/>
         <references refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="238" endline="251">toggleAutoModeWeb</references>
         <references refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</references>
         <references refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="330" endline="344">toggleResistorWeb</references>
@@ -1220,9 +1243,10 @@
           <declname>var</declname>
         </param>
         <briefdescription>
-<para>Function to handle the HTTP requests for the variables. </para>
+<para>Handle toggle. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle toggle.</para>
 <para>Processor <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>var</parametername>
@@ -1280,7 +1304,7 @@
 <para>Return the timerSecound value</para>
 <para>Return nothing if the variable is not found</para>
         </inbodydescription>
-        <location file="include/MD.h" line="57" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="202" bodyend="240" declfile="include/MD.h" declline="57" declcolumn="8"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="62" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="202" bodyend="240" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="62" declcolumn="8"/>
         <references refid="_m_d___web___handlers_8cpp_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</references>
         <references refid="_m_d___web___handlers_8cpp_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</references>
         <references refid="_m_d___web___handlers_8cpp_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</references>
@@ -1355,10 +1379,10 @@
 <para>Only send updates at the defined interval</para>
 <para>Send the timer to the web interface</para>
         </inbodydescription>
-        <location file="include/MD.h" line="68" column="6" bodyfile="src/MD_Timer.cpp" bodystart="53" bodyend="139" declfile="include/MD.h" declline="68" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="73" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="53" bodyend="139" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="73" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</references>
         <references refid="_m_d___timer_8cpp_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
         <references refid="_m_d___timer_8cpp_1a56cbe7f463932051d17bba95b3cac9b4" compoundref="_m_d___timer_8cpp" startline="10">updateInterval</references>
@@ -1398,7 +1422,7 @@
 <para>Return the timer seconds left in the timer <linebreak/>
 </para>
         </inbodydescription>
-        <location file="include/MD.h" line="69" column="5" bodyfile="src/MD_Timer.cpp" bodystart="157" bodyend="160" declfile="include/MD.h" declline="69" declcolumn="5"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="74" column="5" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="157" bodyend="160" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="74" declcolumn="5"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</referencedby>
@@ -1422,7 +1446,7 @@
         <inbodydescription>
 <para>Return the timer minutes left in the timer</para>
         </inbodydescription>
-        <location file="include/MD.h" line="70" column="5" bodyfile="src/MD_Timer.cpp" bodystart="167" bodyend="170" declfile="include/MD.h" declline="70" declcolumn="5"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="75" column="5" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="167" bodyend="170" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="75" declcolumn="5"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</referencedby>
@@ -1446,7 +1470,7 @@
         <inbodydescription>
 <para>Return the timer hours left in the timer</para>
         </inbodydescription>
-        <location file="include/MD.h" line="71" column="5" bodyfile="src/MD_Timer.cpp" bodystart="177" bodyend="180" declfile="include/MD.h" declline="71" declcolumn="5"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="76" column="5" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="177" bodyend="180" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="76" declcolumn="5"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</referencedby>
@@ -1474,7 +1498,7 @@
         <inbodydescription>
 <para>Return the timer status (ON/OFF)</para>
         </inbodydescription>
-        <location file="include/MD.h" line="72" column="6" bodyfile="src/MD_Timer.cpp" bodystart="147" bodyend="150" declfile="include/MD.h" declline="72" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="77" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="147" bodyend="150" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="77" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
@@ -1492,7 +1516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="73" column="6" bodyfile="src/MD_Timer.cpp" bodystart="203" bodyend="203" declfile="include/MD.h" declline="73" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="78" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="203" bodyend="203" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="78" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1509,7 +1533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="74" column="6" bodyfile="src/MD_Timer.cpp" bodystart="207" bodyend="207" declfile="include/MD.h" declline="74" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="79" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="207" bodyend="207" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="79" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1526,7 +1550,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="75" column="6" bodyfile="src/MD_Timer.cpp" bodystart="211" bodyend="211" declfile="include/MD.h" declline="75" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="80" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="211" bodyend="211" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="80" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1543,7 +1567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="76" column="6" bodyfile="src/MD_Timer.cpp" bodystart="215" bodyend="215" declfile="include/MD.h" declline="76" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="81" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="215" bodyend="215" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="81" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1560,7 +1584,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="77" column="6" bodyfile="src/MD_Timer.cpp" bodystart="219" bodyend="219" declfile="include/MD.h" declline="77" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="82" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="219" bodyend="219" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="82" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1577,7 +1601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="78" column="6" bodyfile="src/MD_Timer.cpp" bodystart="223" bodyend="223" declfile="include/MD.h" declline="78" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="83" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="223" bodyend="223" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="83" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1594,7 +1618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="79" column="6" bodyfile="src/MD_Timer.cpp" bodystart="227" bodyend="227" declfile="include/MD.h" declline="79" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="84" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="227" bodyend="227" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="84" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1611,7 +1635,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="80" column="6" bodyfile="src/MD_Timer.cpp" bodystart="231" bodyend="231" declfile="include/MD.h" declline="80" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="85" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="231" bodyend="231" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="85" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1628,7 +1652,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="81" column="6" bodyfile="src/MD_Timer.cpp" bodystart="235" bodyend="235" declfile="include/MD.h" declline="81" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="86" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="235" bodyend="235" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="86" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1645,7 +1669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="82" column="6" bodyfile="src/MD_Timer.cpp" bodystart="239" bodyend="239" declfile="include/MD.h" declline="82" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="87" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="239" bodyend="239" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="87" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1662,7 +1686,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="83" column="6" bodyfile="src/MD_Timer.cpp" bodystart="243" bodyend="243" declfile="include/MD.h" declline="83" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="88" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="243" bodyend="243" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="88" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1679,7 +1703,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="84" column="6" bodyfile="src/MD_Timer.cpp" bodystart="247" bodyend="247" declfile="include/MD.h" declline="84" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="89" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="247" bodyend="247" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="89" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -1696,7 +1720,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="85" column="6" bodyfile="src/MD_Timer.cpp" bodystart="251" bodyend="251" declfile="include/MD.h" declline="85" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="90" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="251" bodyend="251" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="90" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
       </memberdef>
@@ -1728,10 +1752,10 @@
         <inbodydescription>
 <para>Set the timer status (ON/OFF)</para>
         </inbodydescription>
-        <location file="include/MD.h" line="86" column="6" bodyfile="src/MD_Timer.cpp" bodystart="187" bodyend="198" declfile="include/MD.h" declline="86" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="91" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="187" bodyend="198" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="91" declcolumn="6"/>
         <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</references>
         <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
@@ -1760,7 +1784,7 @@
         <inbodydescription>
 <para>Initialize Serial Communications with the default baud rate of 9600 bps</para>
         </inbodydescription>
-        <location file="include/MD.h" line="93" column="6" bodyfile="src/MD_Serial.cpp" bodystart="21" bodyend="37" declfile="include/MD.h" declline="93" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="98" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="21" bodyend="37" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="98" declcolumn="6"/>
         <references refid="_m_d___serial_8cpp_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
@@ -1793,7 +1817,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="94" column="6" bodyfile="src/MD_Serial.cpp" bodystart="47" bodyend="50" declfile="include/MD.h" declline="94" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="99" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="47" bodyend="50" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="99" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1824,7 +1848,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="95" column="6" bodyfile="src/MD_Serial.cpp" bodystart="57" bodyend="60" declfile="include/MD.h" declline="95" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="100" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="57" bodyend="60" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="100" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1855,9 +1879,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="96" column="6" bodyfile="src/MD_Serial.cpp" bodystart="67" bodyend="70" declfile="include/MD.h" declline="96" declcolumn="6"/>
-        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
-        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="101" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="67" bodyend="70" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="101" declcolumn="6"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</referencedby>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</referencedby>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
       </memberdef>
@@ -1890,7 +1914,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="97" column="6" bodyfile="src/MD_Serial.cpp" bodystart="87" bodyend="90" declfile="include/MD.h" declline="97" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="102" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="87" bodyend="90" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="102" declcolumn="6"/>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1922,13 +1946,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="98" column="6" bodyfile="src/MD_Serial.cpp" bodystart="77" bodyend="80" declfile="include/MD.h" declline="98" declcolumn="6"/>
-        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
-        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="103" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="77" bodyend="80" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="103" declcolumn="6"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</referencedby>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</referencedby>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997" compoundref="_o_s___f_s_8cpp" startline="29" endline="37">initFS</referencedby>
         <referencedby refid="_m_d_8h_1a2531a428197475f184bd61c0b412396a" compoundref="_m_d___serial_8cpp" startline="21" endline="37">initSerial</referencedby>
-        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</referencedby>
+        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="163" endline="200">initWIFI</referencedby>
         <referencedby refid="_m_d__wifi_8cpp_1a76abca56e85121cdcc6b6936ad2fd51c" compoundref="_m_d__wifi_8cpp" startline="19" endline="39">OnWiFiEvent</referencedby>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
         <referencedby refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</referencedby>
@@ -1969,7 +1993,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/MD.h" line="99" column="6" bodyfile="src/MD_Serial.cpp" bodystart="97" bodyend="100" declfile="include/MD.h" declline="99" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="104" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp" bodystart="97" bodyend="100" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="104" declcolumn="6"/>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1997,11 +2021,11 @@
 <para>Test I/O Indicador Valvula Saida</para>
 <para>Test I/O Indicador Resistor</para>
         </inbodydescription>
-        <location file="include/MD.h" line="104" column="6" bodyfile="src/MD_Test_IOs.cpp" bodystart="15" bodyend="120" declfile="include/MD.h" declline="104" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="109" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Test_IOs.cpp" bodystart="15" bodyend="120" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="109" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_m_d___test___i_os_8cpp_1af8d251b3d3e161e3f5e4c012e121d5c6" compoundref="_m_d___test___i_os_8cpp" startline="8">delayT</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</references>
         <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
         <references refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</references>
@@ -2039,11 +2063,11 @@
 <para>Initiate WiFi</para>
 <para>Initiate WiFi in AP mode</para>
         </inbodydescription>
-        <location file="include/MD.h" line="112" column="6" bodyfile="src/MD_wifi.cpp" bodystart="144" bodyend="181" declfile="include/MD.h" declline="112" declcolumn="6"/>
-        <references refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</references>
-        <references refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="117" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="163" bodyend="200" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="117" declcolumn="6"/>
+        <references refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</references>
+        <references refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
-        <references refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" compoundref="_m_d_8h" startline="111">WIFI_MODE_OPTIONS</references>
+        <references refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" compoundref="_m_d_8h" startline="116">WIFI_MODE_OPTIONS</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2066,14 +2090,24 @@
 <para>Get the Received Signal Strength Indicator (RSSI) in dBm</para>
 <para>Quality in percentage</para>
 <para>Quality in string format</para>
+<para>Last quality in percentage</para>
+<para>Last RSSI in dBm</para>
+<para>If the last RSSI is equal to the current RSSI</para>
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+<para>Calculate the quality in percentage</para>
+<para>If the RSSI is less than or equal to -100 dBm</para>
+<para>Set the quality to 0%</para>
+<para>If the RSSI is greater than or equal to -5 dBm</para>
+<para>Set the quality to 100%</para>
+<para>If the RSSI is between -100 dBm and -5 dBm</para>
 <para>Calculate the quality in percentage</para>
 <para>Return the quality in string format with RSSI and quality in percentage values</para>
 <para>Send the quality in percentage to the web server as a JSON object</para>
 <para>Return the quality in string format with RSSI and quality in percentage values</para>
+<para>Update the last RSSI with the current RSSI</para>
         </inbodydescription>
-        <location file="include/MD.h" line="113" column="8" bodyfile="src/MD_wifi.cpp" bodystart="46" bodyend="70" declfile="include/MD.h" declline="113" declcolumn="8"/>
-        <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
-        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h" line="118" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="46" bodyend="81" declfile="C:/workspace/Projeto/InteligentDestiller/include/MD.h" declline="118" declcolumn="8"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</referencedby>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" compoundref="_m_d___web___handlers_8cpp" startline="49" endline="49">handleWifiQuality</referencedby>
       </memberdef>
@@ -2096,88 +2130,87 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_o_s_8h" kindref="compound">OS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" kindref="member">sendWiFiQuality</ref>();</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" kindref="member">toggleAutoMode</ref>();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" kindref="member">toggleIndAuto</ref>();</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" kindref="member">indicatorsManagement</ref>();</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" kindref="member">modeManagement</ref>();</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a76f121aef723f8209031f700a1cf5a61" kindref="member">updateOutputsWeb</ref>();</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" kindref="member">toggleAutoModeWeb</ref>();</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" kindref="member">togglePumpWeb</ref>();</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" kindref="member">toggleValveWaterInWeb</ref>();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" kindref="member">toggleValveWaterOutWeb</ref>();</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" kindref="member">toggleResistorWeb</ref>();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" kindref="member">setAutoModeWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6" kindref="member">setPumpWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1abe554b3a794b4000aa2d251a3d63a54f" kindref="member">setValveWaterInWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a922a642ffb3645f0271b481309cdb133" kindref="member">setValveWaterOutWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1afc81a927862b27a260c9a12ae7773739" kindref="member">setResistorWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" kindref="member">getAutoModeWeb</ref>();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" kindref="member">getPumpWeb</ref>();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac" kindref="member">getValv_Water_InWeb</ref>();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417" kindref="member">getValv_Water_OutWeb</ref>();</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" kindref="member">getResistorWeb</ref>();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" kindref="member">handleTimer</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" kindref="member">handleHour</ref>();</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" kindref="member">handleMinute</ref>();</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" kindref="member">handleSecound</ref>();</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" kindref="member">handleWifiQuality</ref>();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1aa72d97405ad3471e84716689e54bd5ce" kindref="member">handleWifiSSID</ref>();</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ab8ee32b756c8c141be8847349f723395" kindref="member">handleWifiTX</ref>();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1aaaba643a4700d7420108e9ec4ced8550" kindref="member">handleWifiIP</ref>();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;adjustment);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" kindref="member">handleTimerControl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;control);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;state);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;toggle);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" kindref="member">processor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;var);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"></codeline>
-<codeline lineno="64" refid="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" refkind="member"><highlight class="preprocessor">#define<sp/>ALARM_TIME_ON<sp/><sp/><sp/>600</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALARM_TIME_OFF<sp/><sp/>200</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" kindref="member">webTimer</ref>(String<sp/>op,<sp/>int16_t<sp/>amount);<sp/></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" kindref="member">getTimerSecound</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" kindref="member">getTimerMinute</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" kindref="member">getTimerHour</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa9493843bba040c07f9f66300059268a" kindref="member">getTimerStatus</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0" kindref="member">add1s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa323da979d7e0bdd7639b1932d401150" kindref="member">add5s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" kindref="member">add10s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" kindref="member">add1m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a10e275a2b4beec90555c95286db80a6a" kindref="member">add5m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" kindref="member">add10m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a82bc62194a206899dfa2b287b9d16236" kindref="member">rem1s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a7e996a9f3af638141257662a8f931e11" kindref="member">rem5s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c" kindref="member">rem10s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66" kindref="member">rem1m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e" kindref="member">rem5m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" kindref="member">rem10m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" kindref="member">resetTimer</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" kindref="member">setTimer</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stat);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"></codeline>
-<codeline lineno="93"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a2531a428197475f184bd61c0b412396a" kindref="member">initSerial</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4ca51e07e88692392bd382ee685505d0" kindref="member">sPrint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*abc);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515" kindref="member">sPrintLn</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*abc);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(String<sp/>abc);<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e" kindref="member">sPrintNbr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbr);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(String<sp/>abc);<sp/></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae8ac89f250af24dadb79c7f683c544e0" kindref="member">sPrintLnNbr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbr);<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1" kindref="member">test_IO</ref>();</highlight></codeline>
+<codeline lineno="20"></codeline>
+<codeline lineno="22"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" kindref="member">toggleAutoMode</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" kindref="member">toggleIndAuto</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" kindref="member">indicatorsManagement</ref>();<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" kindref="member">modeManagement</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a76f121aef723f8209031f700a1cf5a61" kindref="member">updateOutputsWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" kindref="member">toggleAutoModeWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" kindref="member">togglePumpWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" kindref="member">toggleValveWaterInWeb</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" kindref="member">toggleValveWaterOutWeb</ref>();<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" kindref="member">toggleResistorWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" kindref="member">setAutoModeWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6" kindref="member">setPumpWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1abe554b3a794b4000aa2d251a3d63a54f" kindref="member">setValveWaterInWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a922a642ffb3645f0271b481309cdb133" kindref="member">setValveWaterOutWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1afc81a927862b27a260c9a12ae7773739" kindref="member">setResistorWeb</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" kindref="member">getAutoModeWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" kindref="member">getPumpWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac" kindref="member">getValv_Water_InWeb</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417" kindref="member">getValv_Water_OutWeb</ref>();<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" kindref="member">getResistorWeb</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1af81d47970421b46f19156b8c97bb4ee3" kindref="member">handleTimer</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" kindref="member">handleHour</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" kindref="member">handleMinute</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" kindref="member">handleSecound</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" kindref="member">handleWifiQuality</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1aa72d97405ad3471e84716689e54bd5ce" kindref="member">handleWifiSSID</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ab8ee32b756c8c141be8847349f723395" kindref="member">handleWifiTX</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1aaaba643a4700d7420108e9ec4ced8550" kindref="member">handleWifiIP</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" kindref="member">handleTimeAdjust</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;adjustment);<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" kindref="member">handleTimerControl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;control);<sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" kindref="member">handleState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" kindref="member">handleToggle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;toggle);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" kindref="member">processor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;var);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"></codeline>
+<codeline lineno="69" refid="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" refkind="member"><highlight class="preprocessor">#define<sp/>ALARM_TIME_ON<sp/>600<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALARM_TIME_OFF<sp/>200<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" kindref="member">webTimer</ref>(String<sp/>op,<sp/>int16_t<sp/>amount);<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" kindref="member">getTimerSecound</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" kindref="member">getTimerMinute</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" kindref="member">getTimerHour</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa9493843bba040c07f9f66300059268a" kindref="member">getTimerStatus</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4205a2b9aa1216af70d0e72d139508a0" kindref="member">add1s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aa323da979d7e0bdd7639b1932d401150" kindref="member">add5s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" kindref="member">add10s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" kindref="member">add1m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a10e275a2b4beec90555c95286db80a6a" kindref="member">add5m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" kindref="member">add10m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a82bc62194a206899dfa2b287b9d16236" kindref="member">rem1s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a7e996a9f3af638141257662a8f931e11" kindref="member">rem5s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aab03ff01ea9b512f5470cd80bee1025c" kindref="member">rem10s</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a1d544cbb8a4f76ecae3455d08961fa66" kindref="member">rem1m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a6dd7da3e0329e60af93c3c96301fb81e" kindref="member">rem5m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" kindref="member">rem10m</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" kindref="member">resetTimer</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" kindref="member">setTimer</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stat);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"></codeline>
+<codeline lineno="98"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a2531a428197475f184bd61c0b412396a" kindref="member">initSerial</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a4ca51e07e88692392bd382ee685505d0" kindref="member">sPrint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*abc);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a90840feb19f9ce9215d2e2be6de2d515" kindref="member">sPrintLn</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*abc);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(String<sp/>abc);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e" kindref="member">sPrintNbr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbr);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(String<sp/>abc);<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1ae8ac89f250af24dadb79c7f683c544e0" kindref="member">sPrintLnNbr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbr);<sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"></codeline>
-<codeline lineno="111" refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" refkind="member"><highlight class="preprocessor">#define<sp/>WIFI_MODE_OPTIONS<sp/>1<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" kindref="member">initWIFI</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="113"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" kindref="member">wifiQuality</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1" kindref="member">test_IO</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"></codeline>
+<codeline lineno="116" refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" refkind="member"><highlight class="preprocessor">#define<sp/>WIFI_MODE_OPTIONS<sp/>3<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" kindref="member">initWIFI</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">String<sp/><ref refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" kindref="member">wifiQuality</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="include/MD.h"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/include/MD.h"/>
   </compounddef>
 </doxygen>

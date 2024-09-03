@@ -5,9 +5,9 @@ digraph "toggleAutoMode"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="RL";
-  Node1 [id="Node000001",label="toggleAutoMode",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4)"];
+  Node1 [id="Node000001",label="toggleAutoMode",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="MiddleWare Header."];
   Node1 -> Node2 [id="edge7_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="modeManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a27162a64461db61f83b3752bd0b6d125",tooltip=" "];
+  Node2 [id="Node000002",label="modeManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a27162a64461db61f83b3752bd0b6d125",tooltip="Indicators management."];
   Node2 -> Node3 [id="edge8_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="destiler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___destiler_8cpp.html#a59b4c2612675374aa0a9445d2f49d009",tooltip="APP Header."];
   Node3 -> Node4 [id="edge9_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];

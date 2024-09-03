@@ -5,7 +5,7 @@ digraph "toggleAutoModeWeb"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="toggleAutoModeWeb",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="TOGGLES BLOCK."];
+  Node1 [id="Node000001",label="toggleAutoModeWeb",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Update outputs for the web interface."];
   Node1 -> Node2 [id="edge7_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="getIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#abbca1cc0d29f545e9a39778288a12071",tooltip="Retorna estado do indicador de alarme."];
   Node1 -> Node3 [id="edge8_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];

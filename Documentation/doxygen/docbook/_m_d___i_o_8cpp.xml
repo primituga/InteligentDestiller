@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___i_o_8cpp" xml:lang="en-US">
-<title>src/MD_IO.cpp File Reference</title>
-<indexterm><primary>src/MD_IO.cpp</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp</primary></indexterm>
 <para>
 
 <para>IO functions for the MD project &lt;This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project.&gt; </para>
@@ -28,8 +28,12 @@
 <para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
 </listitem>
             <listitem><para>void <link linkend="__m_d___i_o_8cpp_1a747c973d9633421336e8d59a78faf49f">indicatorsManagement</link> ()</para>
+
+<para>Toggle auto indicator. </para>
 </listitem>
             <listitem><para>void <link linkend="__m_d___i_o_8cpp_1a27162a64461db61f83b3752bd0b6d125">modeManagement</link> ()</para>
+
+<para>Indicators management. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -54,7 +58,11 @@
     <title>indicatorsManagement()</title>
 <indexterm><primary>indicatorsManagement</primary><secondary>MD_IO.cpp</secondary></indexterm>
 <indexterm><primary>MD_IO.cpp</primary><secondary>indicatorsManagement</secondary></indexterm>
-<para><computeroutput>void indicatorsManagement ( )</computeroutput></para>
+<para><computeroutput>void indicatorsManagement ( )</computeroutput></para><para>
+
+<para>Toggle auto indicator. </para>
+</para>
+
 <para>INDICATORS BLOCK</para>
 
 <para>Set the maximum water level indicator</para>
@@ -87,7 +95,11 @@ Here is the caller graph for this function:<para>
     <title>modeManagement()</title>
 <indexterm><primary>modeManagement</primary><secondary>MD_IO.cpp</secondary></indexterm>
 <indexterm><primary>MD_IO.cpp</primary><secondary>modeManagement</secondary></indexterm>
-<para><computeroutput>void modeManagement ( )</computeroutput></para>
+<para><computeroutput>void modeManagement ( )</computeroutput></para><para>
+
+<para>Indicators management. </para>
+</para>
+
 <para>MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator</para>
 
 <para>Toggle the auto mode</para>
@@ -128,6 +140,8 @@ Here is the caller graph for this function:<para>
 
 <para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
 </para>
+
+<para>MiddleWare Header.</para>
 
 <para><note><title>Note</title>
 
@@ -189,6 +203,8 @@ Here is the caller graph for this function:<para>
 
 <para>Toggle the Auto Mode of the Machine. </para>
 </para>
+
+<para>Toggle auto mode.</para>
 
 <para><note><title>Note</title>
 

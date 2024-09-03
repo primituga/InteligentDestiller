@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IntelligentDestiller: include/OS.h File Reference</title>
-<link rel="icon" href="icon.png" type="image/x-icon" />
+<title>IntelligentDestiller: C:/workspace/Projeto/InteligentDestiller/include/OS.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign">
    <div id="projectname">IntelligentDestiller
    </div>
@@ -109,18 +107,19 @@ $(function(){initNavTree('_o_s_8h.html',''); initResizable(true); });
 <p>Header file for the OS project.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;WiFiManager.h&quot;</code><br />
+<code>#include &quot;esp_netif.h&quot;</code><br />
 <code>#include &quot;ESPAsyncWebServer.h&quot;</code><br />
 <code>#include &quot;SPIFFS.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_m_d_8h_source.html">MD.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for OS.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_o_s_8h__incl.png" border="0" usemap="#ainclude_2_o_s_8h" alt=""/></div>
+<div class="center"><img src="_o_s_8h__incl.png" border="0" usemap="#a_c_1_2workspace_2_projeto_2_inteligent_destiller_2include_2_o_s_8h" alt=""/></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_o_s_8h__dep__incl.png" border="0" usemap="#ainclude_2_o_s_8hdep" alt=""/></div>
+<div class="center"><img src="_o_s_8h__dep__incl.png" border="0" usemap="#a_c_1_2workspace_2_projeto_2_inteligent_destiller_2include_2_o_s_8hdep" alt=""/></div>
 </div>
 </div>
 <p><a href="_o_s_8h_source.html">Go to the source code of this file.</a></p>
@@ -207,7 +206,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a02ef1114b2c4e173a5ddafb425f38cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to run in core 1.  <br /></td></tr>
 <tr class="separator:a02ef1114b2c4e173a5ddafb425f38cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71502ea2a2f3c2ba9d3caaeb1655c997" id="r_a71502ea2a2f3c2ba9d3caaeb1655c997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71502ea2a2f3c2ba9d3caaeb1655c997">initFS</a> ()</td></tr>
-<tr class="memdesc:a71502ea2a2f3c2ba9d3caaeb1655c997"><td class="mdescLeft">&#160;</td><td class="mdescRight">LittleFS.  <br /></td></tr>
+<tr class="memdesc:a71502ea2a2f3c2ba9d3caaeb1655c997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o segundo core.  <br /></td></tr>
 <tr class="separator:a71502ea2a2f3c2ba9d3caaeb1655c997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a034848835eb2ce8872c4da77568895fc" id="r_a034848835eb2ce8872c4da77568895fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a034848835eb2ce8872c4da77568895fc">initPinsOutputs</a> ()</td></tr>
 <tr class="memdesc:a034848835eb2ce8872c4da77568895fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o sistema de arquivos.  <br /></td></tr>
@@ -279,7 +278,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a4be402fa1ac7049ed1671c31572e0f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liga/desliga o modo auto.  <br /></td></tr>
 <tr class="separator:a4be402fa1ac7049ed1671c31572e0f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfc1d4a44c5d7039701b596a3df6eae3" id="r_acfc1d4a44c5d7039701b596a3df6eae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfc1d4a44c5d7039701b596a3df6eae3">readInputs</a> ()</td></tr>
-<tr class="memdesc:acfc1d4a44c5d7039701b596a3df6eae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alarm state.  <br /></td></tr>
+<tr class="memdesc:acfc1d4a44c5d7039701b596a3df6eae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as saidas.  <br /></td></tr>
 <tr class="separator:acfc1d4a44c5d7039701b596a3df6eae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -288,7 +287,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:acbecb4e4203752ebd4b2d57ee6e376fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libraries.  <br /></td></tr>
 <tr class="separator:acbecb4e4203752ebd4b2d57ee6e376fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56916c67f21f332014c1c19b200d45f3" id="r_a56916c67f21f332014c1c19b200d45f3"><td class="memItemLeft" align="right" valign="top">AsyncWebServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56916c67f21f332014c1c19b200d45f3">server</a></td></tr>
-<tr class="memdesc:a56916c67f21f332014c1c19b200d45f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket.  <br /></td></tr>
+<tr class="memdesc:a56916c67f21f332014c1c19b200d45f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket Server.  <br /></td></tr>
 <tr class="separator:a56916c67f21f332014c1c19b200d45f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a117352cc494cc62c6b2f1882786a332c" id="r_a117352cc494cc62c6b2f1882786a332c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a117352cc494cc62c6b2f1882786a332c">DEBUG</a></td></tr>
 <tr class="memdesc:a117352cc494cc62c6b2f1882786a332c"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebServer.  <br /></td></tr>
@@ -1106,14 +1105,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>LittleFS. </p>
-<p>LittleFS.</p>
+<p>Inicia o segundo core. </p>
+<p>LittleFS</p>
+<p>Inicia o segundo core.</p>
 <p>Initialize File System (SPIFFS)</p>
 <p>This function is responsible for initializing the File System (SPIFFS).</p>
 <dl class="section note"><dt>Note</dt><dd>Initialize SPIFFS</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 <div class="fragment"><div class="line"><a class="code hl_function" href="#a71502ea2a2f3c2ba9d3caaeb1655c997">initFS</a>();</div>
-<div class="ttc" id="a_o_s_8h_html_a71502ea2a2f3c2ba9d3caaeb1655c997"><div class="ttname"><a href="#a71502ea2a2f3c2ba9d3caaeb1655c997">initFS</a></div><div class="ttdeci">void initFS()</div><div class="ttdoc">LittleFS.</div><div class="ttdef"><b>Definition</b> OS_FS.cpp:29</div></div>
+<div class="ttc" id="a_o_s_8h_html_a71502ea2a2f3c2ba9d3caaeb1655c997"><div class="ttname"><a href="#a71502ea2a2f3c2ba9d3caaeb1655c997">initFS</a></div><div class="ttdeci">void initFS()</div><div class="ttdoc">Inicia o segundo core.</div><div class="ttdef"><b>Definition</b> OS_FS.cpp:29</div></div>
 </div><!-- fragment --> <p>Initialize SPIFFS</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1302,7 +1302,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Alarm state. </p>
+<p>Atualiza as saidas. </p>
+<p>Atualiza as saidas.</p>
 <p>Read ESP32 GPIOs and stores in the image array</p>
 <p>Read all inputs and store in the image array</p>
 <p>This function reads all the inputs and stores them in the image array. The image array is used to store the current state of the inputs and outputs. </p>
@@ -1746,7 +1747,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>WebSocket. </p>
+<p>WebSocket Server. </p>
 
 </div>
 </div>
@@ -1771,7 +1772,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Libraries. </p>
-<p>Wifi Libraries Async Libraries SPIFFS Libraries </p>
+<p>Wifi Libraries WiFi Manager <br  />
+ ESP32 Network Interface Async Libraries Async Web Server SPIFFS Libraries SPI Flash File System MD Header </p>
 
 </div>
 </div>

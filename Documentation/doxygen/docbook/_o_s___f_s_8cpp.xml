@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s___f_s_8cpp" xml:lang="en-US">
-<title>src/OS_FS.cpp File Reference</title>
-<indexterm><primary>src/OS_FS.cpp</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/src/OS_FS.cpp File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/src/OS_FS.cpp</primary></indexterm>
 <para>
 
 <para>File System functions. </para>
@@ -51,7 +51,7 @@
 <para>Initialize Serial Terminal. </para>
 </para>
 
-<para>LittleFS.</para>
+<para>Inicia o segundo core.</para>
 
 <para>Initialize File System (SPIFFS)</para>
 

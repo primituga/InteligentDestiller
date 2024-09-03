@@ -5,7 +5,7 @@ digraph "handleMinute"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="handleMinute",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handle Minute."];
+  Node1 [id="Node000001",label="handleMinute",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handle hour."];
   Node1 -> Node2 [id="edge34_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="getTimerMinute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___timer_8cpp.html#ae8ad20dbd759f4fb98dabba7876428f4",tooltip="Get timer secound."];
   Node2 -> Node3 [id="edge35_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];

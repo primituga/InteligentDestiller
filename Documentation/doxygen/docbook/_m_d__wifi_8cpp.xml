@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d__wifi_8cpp" xml:lang="en-US">
-<title>src/MD_wifi.cpp File Reference</title>
-<indexterm><primary>src/MD_wifi.cpp</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp</primary></indexterm>
 <programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_wifi.cpp:<para>
     <informalfigure>
         <mediaobject>
@@ -68,21 +68,41 @@
 </note>
 </para>
 
-<para>Set hostname</para>
+<para>Set the hostname for the Soft Access Point</para>
 
-<para>Set event handler for WiFi events</para>
+<para>Set the WiFi event handler</para>
 
-<para>Enable auto reconnect</para>
+<para>Enable auto reconnect to the WiFi network</para>
 
 <para>Set to Station + Access Point mode</para>
 
-<para>Set IP Address of the ESP32 Soft Access Point</para>
+<para>Start the Soft Access Point with the SSID and password</para>
+
+<para>Get the handle for the Soft Access Point interface</para>
+
+<para>Define IP configuration structure and set desired IPs</para>
+
+<para>IP configuration structure</para>
 
 <para>AP IP</para>
 
 <para>Gateway IP</para>
 
 <para>Subnet Mask</para>
+
+<para>Set the IP configuration to the soft AP interface</para>
+
+<para>Stop DHCP server to change settings</para>
+
+<para>Apply new IP settings</para>
+
+<para>Restart DHCP server with new settings</para>
+
+<para>Print the hostname</para>
+
+<para>Print the IP address of the ESP32 Soft Access Point</para>
+
+<para>Print the IP address of the ESP32 Soft Access Point</para>
 Here is the call graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -139,7 +159,15 @@ Here is the caller graph for this function:<para>
 
 <para>Get the SSID and password from the WiFiManager and connect to the WiFi network</para>
 
+<para>Get the SSID from the WiFiManager</para>
+
+<para>Get the password from the WiFiManager</para>
+
 <para>Connect to the WiFi network with the SSID and password</para>
+
+<para>Connect to the WiFi network with the SSID and password</para>
+
+<para>Delay for 10 ms</para>
 
 <para>Wait for the ESP32 to connect to the WiFi network and print the connection status</para>
 Here is the call graph for this function:<para>
@@ -310,6 +338,26 @@ Here is the caller graph for this function:<para>
 
 <para>Quality in string format</para>
 
+<para>Last quality in percentage</para>
+
+<para>Last RSSI in dBm</para>
+
+<para>If the last RSSI is equal to the current RSSI</para>
+
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+
+<para>Calculate the quality in percentage</para>
+
+<para>If the RSSI is less than or equal to -100 dBm</para>
+
+<para>Set the quality to 0%</para>
+
+<para>If the RSSI is greater than or equal to -5 dBm</para>
+
+<para>Set the quality to 100%</para>
+
+<para>If the RSSI is between -100 dBm and -5 dBm</para>
+
 <para>Calculate the quality in percentage</para>
 
 <para>Return the quality in string format with RSSI and quality in percentage values</para>
@@ -317,6 +365,8 @@ Here is the caller graph for this function:<para>
 <para>Send the quality in percentage to the web server as a JSON object</para>
 
 <para>Return the quality in string format with RSSI and quality in percentage values</para>
+
+<para>Update the last RSSI with the current RSSI</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>

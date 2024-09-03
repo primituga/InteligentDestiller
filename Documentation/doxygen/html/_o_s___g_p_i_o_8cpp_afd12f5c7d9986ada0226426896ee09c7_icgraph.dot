@@ -7,7 +7,7 @@ digraph "setIndMin"
   rankdir="RL";
   Node1 [id="Node000001",label="setIndMin",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Set the Ind Min object."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="indicatorsManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a747c973d9633421336e8d59a78faf49f",tooltip=" "];
+  Node2 [id="Node000002",label="indicatorsManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a747c973d9633421336e8d59a78faf49f",tooltip="Toggle auto indicator."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="destiler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___destiler_8cpp.html#a59b4c2612675374aa0a9445d2f49d009",tooltip="APP Header."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];

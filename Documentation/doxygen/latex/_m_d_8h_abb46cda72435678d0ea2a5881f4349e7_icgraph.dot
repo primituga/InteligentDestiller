@@ -17,9 +17,9 @@ digraph "wifiQuality"
   Node5 -> Node6 [id="edge15_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p__main_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f",tooltip="Loop function to run the machine operation."];
   Node1 -> Node7 [id="edge16_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node7 [id="Node000007",label="handleWifiQuality",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a6f8cf668f5479d2c408cd6002f30dc94",tooltip="Handlers for Wifi Quality, SSID, TX and IP."];
+  Node7 [id="Node000007",label="handleWifiQuality",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a6f8cf668f5479d2c408cd6002f30dc94",tooltip="Handle secound."];
   Node7 -> Node8 [id="edge17_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node8 [id="Node000008",label="processor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a0c021f9721c3b479757f8e1b40624b6c",tooltip="Function to handle the HTTP requests for the variables."];
+  Node8 [id="Node000008",label="processor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a0c021f9721c3b479757f8e1b40624b6c",tooltip="Handle toggle."];
   Node8 -> Node9 [id="edge18_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node9 [id="Node000009",label="setupRoutes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___web_8cpp.html#a553ce9cca044d40931e5cbe9deb407e4",tooltip="Setup Calls."];
   Node9 -> Node4 [id="edge19_Node000009_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___web___i_o___mngmnt_8cpp" xml:lang="en-US">
-<title>src/MD_Web_IO_Mngmnt.cpp File Reference</title>
-<indexterm><primary>src/MD_Web_IO_Mngmnt.cpp</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp</primary></indexterm>
 <programlisting linenumbering="unnumbered">#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for MD_Web_IO_Mngmnt.cpp:<para>
     <informalfigure>
         <mediaobject>
@@ -111,6 +111,8 @@
 <para>GETS BLOCK. </para>
 </para>
 
+<para>Set resistor.</para>
+
 <para>Get the Ind Max object</para>
 
 <para>This function returns the state of the max indicator.</para>
@@ -141,6 +143,8 @@ Here is the caller graph for this function:<para>
 <para>Get the Pump object. </para>
 </para>
 
+<para>Get auto mode.</para>
+
 <para>This function returns the state of the water pump.</para>
 
 <para><formalpara><title>Returns</title>
@@ -168,6 +172,8 @@ Here is the caller graph for this function:<para>
 
 <para>Get the Ind Min object. </para>
 </para>
+
+<para>Get valve water out.</para>
 
 <para>This function returns the state of the min indicator.</para>
 
@@ -197,6 +203,8 @@ Here is the caller graph for this function:<para>
 <para>Get the Ind Alarm object. </para>
 </para>
 
+<para>Get pump state.</para>
+
 <para>This function returns the state of the alarm indicator.</para>
 
 <para><formalpara><title>Returns</title>
@@ -225,6 +233,8 @@ Here is the caller graph for this function:<para>
 <para>Get the Valv Water Out object. </para>
 </para>
 
+<para>Get valve water in.</para>
+
 <para>This function returns the state of the water out valve.</para>
 
 <para><formalpara><title>Returns</title>
@@ -252,6 +262,8 @@ Here is the caller graph for this function:<para>
 
 <para>SETS BLOCK. </para>
 </para>
+
+<para>Toggle resistor.</para>
 
 <para>Set the Auto Mode object</para>
 
@@ -309,6 +321,8 @@ Here is the caller graph for this function:<para>
 <para>Set the Pump object. </para>
 </para>
 
+<para>Set auto mode.</para>
+
 <para>This function sets the state of the pump.</para>
 
 <para>
@@ -362,6 +376,8 @@ Here is the caller graph for this function:<para>
 
 <para>Set the Resistor object. </para>
 </para>
+
+<para>Set valve water out.</para>
 
 <para>This function sets the state of the resistor.</para>
 
@@ -417,6 +433,8 @@ Here is the caller graph for this function:<para>
 <para>Set the Valve Water In object. </para>
 </para>
 
+<para>Set pump state.</para>
+
 <para>This function sets the state of the water in valve.</para>
 
 <para>
@@ -470,6 +488,8 @@ Here is the caller graph for this function:<para>
 
 <para>Set the Valve Water Out object. </para>
 </para>
+
+<para>Set valve water in.</para>
 
 <para>This function sets the state of the water out valve.</para>
 
@@ -525,6 +545,8 @@ Here is the caller graph for this function:<para>
 <para>TOGGLES BLOCK. </para>
 </para>
 
+<para>Update outputs for the web interface.</para>
+
 <para>Toggle Auto Mode Web</para>
 
 <para>This function toggles the auto mode.</para>
@@ -571,6 +593,8 @@ Here is the caller graph for this function:<para>
 
 <para>Toggle Pump Web. </para>
 </para>
+
+<para>Toggle auto mode.</para>
 
 <para>This function toggles the pump.</para>
 
@@ -625,6 +649,8 @@ Here is the caller graph for this function:<para>
 <para>Toggle Resistor Web. </para>
 </para>
 
+<para>Toggle valve water out.</para>
+
 <para>This function toggles the resistor.</para>
 
 <para><formalpara><title>Returns</title>
@@ -670,6 +696,8 @@ Here is the caller graph for this function:<para>
 <para>Toggle Valve Water In Web. </para>
 </para>
 
+<para>Toggle pump state.</para>
+
 <para>This function toggles the water in valve.</para>
 
 <para><formalpara><title>Returns</title>
@@ -714,6 +742,8 @@ Here is the caller graph for this function:<para>
 
 <para>Toggle Valve Water Out Web. </para>
 </para>
+
+<para>Toggle valve water in.</para>
 
 <para>This function toggles the water out valve.</para>
 
@@ -761,6 +791,8 @@ Here is the caller graph for this function:<para>
 
 <para>Output variables image. </para>
 </para>
+
+<para>Mode management.</para>
 
 <para>FUNCTIONS BLOCK</para>
 

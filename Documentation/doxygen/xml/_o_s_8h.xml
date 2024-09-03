@@ -3,22 +3,23 @@
   <compounddef id="_o_s_8h" kind="file" language="C++">
     <compoundname>OS.h</compoundname>
     <includes local="yes">WiFiManager.h</includes>
+    <includes local="yes">esp_netif.h</includes>
     <includes local="yes">ESPAsyncWebServer.h</includes>
     <includes local="yes">SPIFFS.h</includes>
     <includes refid="_m_d_8h" local="yes">MD.h</includes>
-    <includedby refid="_m_d_8h" local="yes">include/MD.h</includedby>
-    <includedby refid="_o_s___f_s_8cpp" local="yes">src/OS_FS.cpp</includedby>
-    <includedby refid="_o_s___g_p_i_o_8cpp" local="yes">src/OS_GPIO.cpp</includedby>
-    <includedby refid="_o_s__multi__core_8cpp" local="yes">src/OS_multi_core.cpp</includedby>
+    <includedby refid="_m_d_8h" local="yes">C:/workspace/Projeto/InteligentDestiller/include/MD.h</includedby>
+    <includedby refid="_o_s___f_s_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/OS_FS.cpp</includedby>
+    <includedby refid="_o_s___g_p_i_o_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp</includedby>
+    <includedby refid="_o_s__multi__core_8cpp" local="yes">C:/workspace/Projeto/InteligentDestiller/src/OS_multi_core.cpp</includedby>
     <incdepgraph>
-      <node id="5">
+      <node id="6">
         <label>MD.h</label>
         <link refid="_m_d_8h"/>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>include/OS.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/OS.h</label>
         <link refid="_o_s_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -28,20 +29,25 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>ESPAsyncWebServer.h</label>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="4">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="5">
         <label>SPIFFS.h</label>
       </node>
       <node id="2">
         <label>WiFiManager.h</label>
       </node>
+      <node id="3">
+        <label>esp_netif.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>include/AP.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/AP.h</label>
         <link refid="_a_p_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -51,7 +57,7 @@
         </childnode>
       </node>
       <node id="2">
-        <label>include/MD.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/MD.h</label>
         <link refid="_m_d_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -73,7 +79,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>include/OS.h</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/include/OS.h</label>
         <link refid="_o_s_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -85,55 +91,55 @@
         </childnode>
       </node>
       <node id="4">
-        <label>src/AP_Destiler.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_Destiler.cpp</label>
         <link refid="_a_p___destiler_8cpp"/>
       </node>
       <node id="5">
-        <label>src/AP_Web.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_Web.cpp</label>
         <link refid="_a_p___web_8cpp"/>
       </node>
       <node id="6">
-        <label>src/AP_main.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp</label>
         <link refid="_a_p__main_8cpp"/>
       </node>
       <node id="7">
-        <label>src/MD_IO.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp</label>
         <link refid="_m_d___i_o_8cpp"/>
       </node>
       <node id="8">
-        <label>src/MD_Serial.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Serial.cpp</label>
         <link refid="_m_d___serial_8cpp"/>
       </node>
       <node id="9">
-        <label>src/MD_Test_IOs.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Test_IOs.cpp</label>
         <link refid="_m_d___test___i_os_8cpp"/>
       </node>
       <node id="10">
-        <label>src/MD_Timer.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp</label>
         <link refid="_m_d___timer_8cpp"/>
       </node>
       <node id="11">
-        <label>src/MD_Web_Handlers.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp</label>
         <link refid="_m_d___web___handlers_8cpp"/>
       </node>
       <node id="12">
-        <label>src/MD_Web_IO_Mngmnt.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp</label>
         <link refid="_m_d___web___i_o___mngmnt_8cpp"/>
       </node>
       <node id="13">
-        <label>src/MD_wifi.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp</label>
         <link refid="_m_d__wifi_8cpp"/>
       </node>
       <node id="14">
-        <label>src/OS_FS.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/OS_FS.cpp</label>
         <link refid="_o_s___f_s_8cpp"/>
       </node>
       <node id="15">
-        <label>src/OS_GPIO.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp</label>
         <link refid="_o_s___g_p_i_o_8cpp"/>
       </node>
       <node id="16">
-        <label>src/OS_multi_core.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/OS_multi_core.cpp</label>
         <link refid="_o_s__multi__core_8cpp"/>
       </node>
     </invincdepgraph>
@@ -148,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="30" column="9" bodyfile="include/OS.h" bodystart="30" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="31" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="31" bodyend="-1"/>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4" prot="public" static="no">
@@ -162,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="37" column="9" bodyfile="include/OS.h" bodystart="37" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="38" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="38" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" compoundref="_o_s___g_p_i_o_8cpp" startline="69" endline="76">initPinsInputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1ade7c8509801fc3f4480082e29c72926d" prot="public" static="no">
@@ -174,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="38" column="9" bodyfile="include/OS.h" bodystart="38" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="39" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="39" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" compoundref="_o_s___g_p_i_o_8cpp" startline="69" endline="76">initPinsInputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1ab697946c681df5f56d99516a2715ae5a" prot="public" static="no">
@@ -186,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="39" column="9" bodyfile="include/OS.h" bodystart="39" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="40" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="40" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" compoundref="_o_s___g_p_i_o_8cpp" startline="69" endline="76">initPinsInputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8" prot="public" static="no">
@@ -198,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="40" column="9" bodyfile="include/OS.h" bodystart="40" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="41" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="41" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" compoundref="_o_s___g_p_i_o_8cpp" startline="69" endline="76">initPinsInputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1ae392f500936676d5a630c590de1a6115" prot="public" static="no">
@@ -210,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="41" column="9" bodyfile="include/OS.h" bodystart="41" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="42" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="42" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" compoundref="_o_s___g_p_i_o_8cpp" startline="69" endline="76">initPinsInputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1ad8bd7dfea612e3f597b33a34115ead1c" prot="public" static="no">
@@ -222,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="43" column="9" bodyfile="include/OS.h" bodystart="43" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="44" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="44" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1acfc1d4a44c5d7039701b596a3df6eae3" compoundref="_o_s___g_p_i_o_8cpp" startline="33" endline="39">readInputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1aae28e39b451039001b9bf29ec995fd8e" prot="public" static="no">
@@ -234,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="44" column="9" bodyfile="include/OS.h" bodystart="44" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="45" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="45" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a9c786ece8dfd4c7c32d94f96e02034c7" prot="public" static="no">
@@ -246,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="45" column="9" bodyfile="include/OS.h" bodystart="45" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="46" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="46" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a98d27cbdf2f1601f89a3d54c8f57caa0" prot="public" static="no">
@@ -258,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="46" column="9" bodyfile="include/OS.h" bodystart="46" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="47" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="47" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a03d4fa071eaec6b43a142d39b76af91a" prot="public" static="no">
@@ -270,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="47" column="9" bodyfile="include/OS.h" bodystart="47" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="48" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="48" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" compoundref="_o_s___g_p_i_o_8cpp" startline="165" endline="168">getAutoModeSW</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a3808ebdb25737de42c2d7ca821f56b23" prot="public" static="no">
@@ -282,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="48" column="9" bodyfile="include/OS.h" bodystart="48" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="49" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="49" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" compoundref="_o_s___g_p_i_o_8cpp" startline="152" endline="155">getAlarmIND</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1ae7d962d8e7f7ad921a0ad994ea7ca34a" prot="public" static="no">
@@ -295,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="51" column="9" bodyfile="include/OS.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="52" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="52" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1abc131bd8e71df8904a6ebeb67c56290a" prot="public" static="no">
@@ -307,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="52" column="9" bodyfile="include/OS.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="53" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="53" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a5890ed8b1dfbb6be07f82fab51dcd66b" prot="public" static="no">
@@ -319,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="53" column="9" bodyfile="include/OS.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="54" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="54" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a050b83ef44d5cae61794b32499c9fcf8" prot="public" static="no">
@@ -331,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="54" column="9" bodyfile="include/OS.h" bodystart="54" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="55" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="55" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1aebfef237ff2d3039cd3c2050b749de1d" prot="public" static="no">
@@ -343,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="55" column="9" bodyfile="include/OS.h" bodystart="55" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="56" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="56" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a384be38ab3e7b926921179cc420d646c" prot="public" static="no">
@@ -355,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="56" column="9" bodyfile="include/OS.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="57" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="57" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1aa33c6f09058f0ef261c58dec1ae26af6" prot="public" static="no">
@@ -367,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="57" column="9" bodyfile="include/OS.h" bodystart="57" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="58" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="58" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a924bcfd3898c818255811fee578e25ce" prot="public" static="no">
@@ -379,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="58" column="9" bodyfile="include/OS.h" bodystart="58" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="59" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="59" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1acd0ee7482c4a9d885282477b66664985" prot="public" static="no">
@@ -391,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="59" column="9" bodyfile="include/OS.h" bodystart="59" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="60" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="60" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a868eb55a6c58c348f0d606d75c7d5e05" prot="public" static="no">
@@ -403,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="61" column="9" bodyfile="include/OS.h" bodystart="61" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="62" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="62" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a4be402fa1ac7049ed1671c31572e0f75" compoundref="_o_s___g_p_i_o_8cpp" startline="51" endline="57">writeOutputs</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" prot="public" static="no">
@@ -415,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="62" column="9" bodyfile="include/OS.h" bodystart="62" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="63" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="63" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</referencedby>
         <referencedby refid="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="59" endline="62">getResistorWeb</referencedby>
         <referencedby refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" compoundref="_o_s___g_p_i_o_8cpp" startline="555" endline="574">setResistor</referencedby>
@@ -430,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="63" column="9" bodyfile="include/OS.h" bodystart="63" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="64" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="64" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" compoundref="_o_s___g_p_i_o_8cpp" startline="243" endline="246">getPump</referencedby>
         <referencedby refid="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="98" endline="101">getPumpWeb</referencedby>
         <referencedby refid="_o_s_8h_1adbfc39d1df02e4404b08e9573d1fd404" compoundref="_o_s___g_p_i_o_8cpp" startline="465" endline="484">setPump</referencedby>
@@ -445,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="64" column="9" bodyfile="include/OS.h" bodystart="64" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="65" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="65" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</referencedby>
         <referencedby refid="_m_d_8h_1a1f7f13061ad706f397dd2ddfb581d417" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="85" endline="88">getValv_Water_OutWeb</referencedby>
         <referencedby refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" compoundref="_o_s___g_p_i_o_8cpp" startline="525" endline="544">setValveWaterOut</referencedby>
@@ -460,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="65" column="9" bodyfile="include/OS.h" bodystart="65" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="66" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="66" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</referencedby>
         <referencedby refid="_m_d_8h_1a99fa4a4b0ba168d3daeb40ee65452bac" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="72" endline="75">getValv_Water_InWeb</referencedby>
         <referencedby refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" compoundref="_o_s___g_p_i_o_8cpp" startline="495" endline="514">setValveWaterIn</referencedby>
@@ -475,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="66" column="9" bodyfile="include/OS.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="67" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="67" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a0a1040b6ffe1abde775c47360900520c" prot="public" static="no">
@@ -487,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="67" column="9" bodyfile="include/OS.h" bodystart="67" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="68" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="68" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" compoundref="_o_s___g_p_i_o_8cpp" startline="295" endline="322">setIndMin</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a87be610e0ff8c38e2a36273c0ec4a429" prot="public" static="no">
@@ -499,7 +505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="68" column="9" bodyfile="include/OS.h" bodystart="68" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="69" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="69" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" compoundref="_o_s___g_p_i_o_8cpp" startline="260" endline="284">setIndMax</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" prot="public" static="no">
@@ -511,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="69" column="9" bodyfile="include/OS.h" bodystart="69" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="70" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="70" bodyend="-1"/>
         <referencedby refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="46" endline="49">getAutoModeWeb</referencedby>
         <referencedby refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</referencedby>
         <referencedby refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</referencedby>
@@ -526,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="70" column="9" bodyfile="include/OS.h" bodystart="70" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="71" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="71" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</referencedby>
       </memberdef>
       <memberdef kind="define" id="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" prot="public" static="no">
@@ -539,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="73" column="9" bodyfile="include/OS.h" bodystart="73" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="74" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="74" bodyend="-1"/>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
         <referencedby refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</referencedby>
@@ -574,7 +580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="74" column="9" bodyfile="include/OS.h" bodystart="74" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="75" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" bodystart="75" bodyend="-1"/>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
@@ -614,11 +620,12 @@
 <para>Libraries. </para>
         </briefdescription>
         <detaileddescription>
-<para>Wifi Libraries Async Libraries SPIFFS Libraries </para>
+<para>Wifi Libraries WiFi Manager <linebreak/>
+ ESP32 Network Interface Async Libraries Async Web Server SPIFFS Libraries SPI Flash File System MD Header </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="26" column="23" declfile="include/OS.h" declline="26" declcolumn="23"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="27" column="23" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="27" declcolumn="23"/>
         <referencedby refid="_o_s_8h_1a8b626fb41c6433470c66289ad702ba87" compoundref="_a_p__main_8cpp" startline="90" endline="97">loop2</referencedby>
         <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
@@ -633,7 +640,6 @@
         <referencedby refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" compoundref="_o_s___g_p_i_o_8cpp" startline="495" endline="514">setValveWaterIn</referencedby>
         <referencedby refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" compoundref="_o_s___g_p_i_o_8cpp" startline="525" endline="544">setValveWaterOut</referencedby>
         <referencedby refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</referencedby>
-        <referencedby refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="70">wifiQuality</referencedby>
       </memberdef>
       <memberdef kind="variable" id="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" prot="public" static="no" extern="yes" mutable="no">
         <type>AsyncWebServer</type>
@@ -641,14 +647,14 @@
         <argsstring></argsstring>
         <name>server</name>
         <briefdescription>
-<para>WebSocket. </para>
+<para>WebSocket Server. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="27" column="23" declfile="include/OS.h" declline="27" declcolumn="23"/>
-        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="28" column="23" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="28" declcolumn="23"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</referencedby>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -664,7 +670,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="29" column="13" bodyfile="src/AP_main.cpp" bodystart="10" bodyend="-1" declfile="include/OS.h" declline="29" declcolumn="13"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="30" column="13" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" bodystart="10" bodyend="-1" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="30" declcolumn="13"/>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
         <referencedby refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</referencedby>
         <referencedby refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</referencedby>
@@ -721,7 +727,7 @@
 <para>Cleanup clients</para>
 <para>WebTimer function</para>
         </inbodydescription>
-        <location file="include/OS.h" line="79" column="6" bodyfile="src/AP_main.cpp" bodystart="90" bodyend="97" declfile="include/OS.h" declline="79" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="80" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" bodystart="90" bodyend="97" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="80" declcolumn="6"/>
         <references refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_o_s_8h_1a02ef1114b2c4e173a5ddafb425f38cc5" compoundref="_o_s__multi__core_8cpp" startline="12" endline="24">initMultiCore</referencedby>
@@ -749,7 +755,7 @@
 <para>Task handle.</para>
 <para>Core where the task should run</para>
         </inbodydescription>
-        <location file="include/OS.h" line="84" column="6" bodyfile="src/OS_multi_core.cpp" bodystart="12" bodyend="24" declfile="include/OS.h" declline="84" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="85" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_multi_core.cpp" bodystart="12" bodyend="24" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="85" declcolumn="6"/>
         <references refid="_o_s_8h_1a8b626fb41c6433470c66289ad702ba87" compoundref="_a_p__main_8cpp" startline="90" endline="97">loop2</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
@@ -759,10 +765,11 @@
         <argsstring>()</argsstring>
         <name>initFS</name>
         <briefdescription>
-<para>LittleFS. </para>
+<para>Inicia o segundo core. </para>
         </briefdescription>
         <detaileddescription>
-<para>LittleFS.</para>
+<para>LittleFS</para>
+<para>Inicia o segundo core.</para>
 <para>Initialize File System (SPIFFS)</para>
 <para>This function is responsible for initializing the File System (SPIFFS).</para>
 <para><simplesect kind="note"><para>Initialize SPIFFS</para>
@@ -775,7 +782,7 @@
         <inbodydescription>
 <para>Initialize SPIFFS</para>
         </inbodydescription>
-        <location file="include/OS.h" line="89" column="6" bodyfile="src/OS_FS.cpp" bodystart="29" bodyend="37" declfile="include/OS.h" declline="89" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="90" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_FS.cpp" bodystart="29" bodyend="37" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="90" declcolumn="6"/>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
@@ -804,16 +811,16 @@
 <para>manual indicator</para>
 <para>auto indicator</para>
         </inbodydescription>
-        <location file="include/OS.h" line="96" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="88" bodyend="99" declfile="include/OS.h" declline="96" declcolumn="6"/>
-        <references refid="_o_s_8h_1abc131bd8e71df8904a6ebeb67c56290a" compoundref="_o_s_8h" startline="52">PIN_BMB</references>
-        <references refid="_o_s_8h_1aebfef237ff2d3039cd3c2050b749de1d" compoundref="_o_s_8h" startline="55">PIN_IND_ALARM</references>
-        <references refid="_o_s_8h_1a924bcfd3898c818255811fee578e25ce" compoundref="_o_s_8h" startline="58">PIN_IND_AUTO</references>
-        <references refid="_o_s_8h_1acd0ee7482c4a9d885282477b66664985" compoundref="_o_s_8h" startline="59">PIN_IND_MAN</references>
-        <references refid="_o_s_8h_1aa33c6f09058f0ef261c58dec1ae26af6" compoundref="_o_s_8h" startline="57">PIN_IND_MAX</references>
-        <references refid="_o_s_8h_1a384be38ab3e7b926921179cc420d646c" compoundref="_o_s_8h" startline="56">PIN_IND_MIN</references>
-        <references refid="_o_s_8h_1ae7d962d8e7f7ad921a0ad994ea7ca34a" compoundref="_o_s_8h" startline="51">PIN_RAQ</references>
-        <references refid="_o_s_8h_1a050b83ef44d5cae61794b32499c9fcf8" compoundref="_o_s_8h" startline="54">PIN_VALV_WATER_IN</references>
-        <references refid="_o_s_8h_1a5890ed8b1dfbb6be07f82fab51dcd66b" compoundref="_o_s_8h" startline="53">PIN_VALV_WATER_OUT</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="97" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="88" bodyend="99" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="97" declcolumn="6"/>
+        <references refid="_o_s_8h_1abc131bd8e71df8904a6ebeb67c56290a" compoundref="_o_s_8h" startline="53">PIN_BMB</references>
+        <references refid="_o_s_8h_1aebfef237ff2d3039cd3c2050b749de1d" compoundref="_o_s_8h" startline="56">PIN_IND_ALARM</references>
+        <references refid="_o_s_8h_1a924bcfd3898c818255811fee578e25ce" compoundref="_o_s_8h" startline="59">PIN_IND_AUTO</references>
+        <references refid="_o_s_8h_1acd0ee7482c4a9d885282477b66664985" compoundref="_o_s_8h" startline="60">PIN_IND_MAN</references>
+        <references refid="_o_s_8h_1aa33c6f09058f0ef261c58dec1ae26af6" compoundref="_o_s_8h" startline="58">PIN_IND_MAX</references>
+        <references refid="_o_s_8h_1a384be38ab3e7b926921179cc420d646c" compoundref="_o_s_8h" startline="57">PIN_IND_MIN</references>
+        <references refid="_o_s_8h_1ae7d962d8e7f7ad921a0ad994ea7ca34a" compoundref="_o_s_8h" startline="52">PIN_RAQ</references>
+        <references refid="_o_s_8h_1a050b83ef44d5cae61794b32499c9fcf8" compoundref="_o_s_8h" startline="55">PIN_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1a5890ed8b1dfbb6be07f82fab51dcd66b" compoundref="_o_s_8h" startline="54">PIN_VALV_WATER_OUT</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
       <memberdef kind="function" id="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -836,12 +843,12 @@
 <para>push sw</para>
 <para>alarm</para>
         </inbodydescription>
-        <location file="include/OS.h" line="97" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="69" bodyend="76" declfile="include/OS.h" declline="97" declcolumn="6"/>
-        <references refid="_o_s_8h_1ade7c8509801fc3f4480082e29c72926d" compoundref="_o_s_8h" startline="38">PIN_SALARM</references>
-        <references refid="_o_s_8h_1ae392f500936676d5a630c590de1a6115" compoundref="_o_s_8h" startline="41">PIN_SMAX</references>
-        <references refid="_o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8" compoundref="_o_s_8h" startline="40">PIN_SMIN</references>
-        <references refid="_o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4" compoundref="_o_s_8h" startline="37">PIN_SW_AUTO</references>
-        <references refid="_o_s_8h_1ab697946c681df5f56d99516a2715ae5a" compoundref="_o_s_8h" startline="39">PIN_SW_MAN</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="98" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="69" bodyend="76" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="98" declcolumn="6"/>
+        <references refid="_o_s_8h_1ade7c8509801fc3f4480082e29c72926d" compoundref="_o_s_8h" startline="39">PIN_SALARM</references>
+        <references refid="_o_s_8h_1ae392f500936676d5a630c590de1a6115" compoundref="_o_s_8h" startline="42">PIN_SMAX</references>
+        <references refid="_o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8" compoundref="_o_s_8h" startline="41">PIN_SMIN</references>
+        <references refid="_o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4" compoundref="_o_s_8h" startline="38">PIN_SW_AUTO</references>
+        <references refid="_o_s_8h_1ab697946c681df5f56d99516a2715ae5a" compoundref="_o_s_8h" startline="40">PIN_SW_MAN</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
       <memberdef kind="function" id="_o_s_8h_1a2b0449e42db71938062564c4f643c215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -864,9 +871,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="98" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="113" bodyend="116" declfile="include/OS.h" declline="98" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="99" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="113" bodyend="116" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="99" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d" compoundref="_o_s___g_p_i_o_8cpp" startline="14">inputVarsImage</references>
-        <references refid="_o_s_8h_1a98d27cbdf2f1601f89a3d54c8f57caa0" compoundref="_o_s_8h" startline="46">POS_SMAX</references>
+        <references refid="_o_s_8h_1a98d27cbdf2f1601f89a3d54c8f57caa0" compoundref="_o_s_8h" startline="47">POS_SMAX</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -892,9 +899,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="99" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="126" bodyend="129" declfile="include/OS.h" declline="99" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="100" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="126" bodyend="129" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="100" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d" compoundref="_o_s___g_p_i_o_8cpp" startline="14">inputVarsImage</references>
-        <references refid="_o_s_8h_1a9c786ece8dfd4c7c32d94f96e02034c7" compoundref="_o_s_8h" startline="45">POS_SMIN</references>
+        <references refid="_o_s_8h_1a9c786ece8dfd4c7c32d94f96e02034c7" compoundref="_o_s_8h" startline="46">POS_SMIN</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -920,7 +927,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="100" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="139" bodyend="142" declfile="include/OS.h" declline="100" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="101" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="139" bodyend="142" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="101" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1abf96cb4803956f98d512b0891869c500" compoundref="_o_s___g_p_i_o_8cpp" startline="21">ALARM_STATE</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
@@ -946,9 +953,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="101" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="152" bodyend="155" declfile="include/OS.h" declline="101" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="102" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="152" bodyend="155" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="102" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d" compoundref="_o_s___g_p_i_o_8cpp" startline="14">inputVarsImage</references>
-        <references refid="_o_s_8h_1a3808ebdb25737de42c2d7ca821f56b23" compoundref="_o_s_8h" startline="48">POS_SALARM</references>
+        <references refid="_o_s_8h_1a3808ebdb25737de42c2d7ca821f56b23" compoundref="_o_s_8h" startline="49">POS_SALARM</references>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
       </memberdef>
       <memberdef kind="function" id="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -970,9 +977,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="102" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="191" bodyend="194" declfile="include/OS.h" declline="102" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="103" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="191" bodyend="194" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="103" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="70">POS_IND_AUTO</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
@@ -999,9 +1006,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="103" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="165" bodyend="168" declfile="include/OS.h" declline="103" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="104" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="165" bodyend="168" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="104" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d" compoundref="_o_s___g_p_i_o_8cpp" startline="14">inputVarsImage</references>
-        <references refid="_o_s_8h_1a03d4fa071eaec6b43a142d39b76af91a" compoundref="_o_s_8h" startline="47">POS_SW_AUTO</references>
+        <references refid="_o_s_8h_1a03d4fa071eaec6b43a142d39b76af91a" compoundref="_o_s_8h" startline="48">POS_SW_AUTO</references>
         <referencedby refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" compoundref="_m_d___i_o_8cpp" startline="44" endline="72">toggleAutoMode</referencedby>
       </memberdef>
       <memberdef kind="function" id="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1023,9 +1030,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="104" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="178" bodyend="181" declfile="include/OS.h" declline="104" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="105" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="178" bodyend="181" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="105" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d" compoundref="_o_s___g_p_i_o_8cpp" startline="14">inputVarsImage</references>
-        <references refid="_o_s_8h_1aae28e39b451039001b9bf29ec995fd8e" compoundref="_o_s_8h" startline="44">POS_SW_MAN</references>
+        <references refid="_o_s_8h_1aae28e39b451039001b9bf29ec995fd8e" compoundref="_o_s_8h" startline="45">POS_SW_MAN</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -1057,9 +1064,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="105" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="204" bodyend="207" declfile="include/OS.h" declline="105" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="106" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="204" bodyend="207" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="106" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="63">POS_RAQ</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" compoundref="_o_s___g_p_i_o_8cpp" startline="555" endline="574">setResistor</referencedby>
@@ -1085,9 +1092,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="106" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="217" bodyend="220" declfile="include/OS.h" declline="106" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="107" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="217" bodyend="220" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="107" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="66">POS_VALV_WATER_IN</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" compoundref="_o_s___g_p_i_o_8cpp" startline="495" endline="514">setValveWaterIn</referencedby>
@@ -1113,9 +1120,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="107" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="230" bodyend="233" declfile="include/OS.h" declline="107" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="108" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="230" bodyend="233" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="108" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_OUT</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" compoundref="_o_s___g_p_i_o_8cpp" startline="525" endline="544">setValveWaterOut</referencedby>
@@ -1141,9 +1148,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="108" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="243" bodyend="246" declfile="include/OS.h" declline="108" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="109" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="243" bodyend="246" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="109" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="64">POS_BMB</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a5f2461b87633880956acaad69733ec8d" compoundref="_m_d___web___handlers_8cpp" startline="141" endline="163">handleState</referencedby>
         <referencedby refid="_o_s_8h_1adbfc39d1df02e4404b08e9573d1fd404" compoundref="_o_s___g_p_i_o_8cpp" startline="465" endline="484">setPump</referencedby>
@@ -1185,13 +1192,13 @@
 <para>Set the max indicator to OFF</para>
 <para>Send the max indicator value to the web server</para>
         </inbodydescription>
-        <location file="include/OS.h" line="110" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="260" bodyend="284" declfile="include/OS.h" declline="110" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="111" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="260" bodyend="284" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="111" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a87be610e0ff8c38e2a36273c0ec4a429" compoundref="_o_s_8h" startline="68">POS_IND_MAX</references>
+        <references refid="_o_s_8h_1a87be610e0ff8c38e2a36273c0ec4a429" compoundref="_o_s_8h" startline="69">POS_IND_MAX</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -1231,13 +1238,13 @@
 <para>Set the min indicator to OFF</para>
 <para>Send the min indicator value to the web server</para>
         </inbodydescription>
-        <location file="include/OS.h" line="111" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="295" bodyend="322" declfile="include/OS.h" declline="111" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="112" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="295" bodyend="322" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="112" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a0a1040b6ffe1abde775c47360900520c" compoundref="_o_s_8h" startline="67">POS_IND_MIN</references>
+        <references refid="_o_s_8h_1a0a1040b6ffe1abde775c47360900520c" compoundref="_o_s_8h" startline="68">POS_IND_MIN</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -1274,16 +1281,16 @@
 <para>Old state of the indicator</para>
 <para>Condition to debug</para>
         </inbodydescription>
-        <location file="include/OS.h" line="112" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="334" bodyend="374" declfile="include/OS.h" declline="112" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="113" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="334" bodyend="374" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="113" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1abf96cb4803956f98d512b0891869c500" compoundref="_o_s___g_p_i_o_8cpp" startline="21">ALARM_STATE</references>
-        <references refid="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" compoundref="_m_d_8h" startline="65">ALARM_TIME_OFF</references>
-        <references refid="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" compoundref="_m_d_8h" startline="64">ALARM_TIME_ON</references>
+        <references refid="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" compoundref="_m_d_8h" startline="70">ALARM_TIME_OFF</references>
+        <references refid="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" compoundref="_m_d_8h" startline="69">ALARM_TIME_ON</references>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a3f3f0d6170ffa0797fe36f5772ad2947" compoundref="_o_s_8h" startline="66">POS_IND_ALARM</references>
+        <references refid="_o_s_8h_1a3f3f0d6170ffa0797fe36f5772ad2947" compoundref="_o_s_8h" startline="67">POS_IND_ALARM</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -1318,13 +1325,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="113" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="386" bodyend="424" declfile="include/OS.h" declline="113" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="114" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="386" bodyend="424" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="114" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1aed87ea2d1c8368d8ae40dfcdf0c5e58d" compoundref="_o_s_8h" startline="70">POS_IND_MAN</references>
+        <references refid="_o_s_8h_1aed87ea2d1c8368d8ae40dfcdf0c5e58d" compoundref="_o_s_8h" startline="71">POS_IND_MAN</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</referencedby>
@@ -1359,13 +1366,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="114" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="465" bodyend="484" declfile="include/OS.h" declline="114" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="115" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="465" bodyend="484" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="115" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a796c21f2a4c37ce17a1f14d80b54ed66" compoundref="_o_s___g_p_i_o_8cpp" startline="243" endline="246">getPump</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="64">POS_BMB</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
@@ -1399,13 +1406,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="115" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="495" bodyend="514" declfile="include/OS.h" declline="115" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="116" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="495" bodyend="514" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="116" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="66">POS_VALV_WATER_IN</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
@@ -1440,13 +1447,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="116" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="525" bodyend="544" declfile="include/OS.h" declline="116" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="117" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="525" bodyend="544" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="117" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_OUT</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
@@ -1481,13 +1488,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="117" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="555" bodyend="574" declfile="include/OS.h" declline="117" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="118" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="555" bodyend="574" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="118" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="63">POS_RAQ</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
@@ -1523,13 +1530,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/OS.h" line="118" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="435" bodyend="454" declfile="include/OS.h" declline="118" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="119" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="435" bodyend="454" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="119" declcolumn="6"/>
         <references refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" compoundref="_a_p__main_8cpp" startline="10">DEBUG</references>
         <references refid="_o_s___g_p_i_o_8cpp_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
-        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="70">POS_IND_AUTO</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
@@ -1553,10 +1560,10 @@
 <para>PIN_OUTPUT_COUNT = 9</para>
 <para>Write the output to the GPIO</para>
         </inbodydescription>
-        <location file="include/OS.h" line="119" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="51" bodyend="57" declfile="include/OS.h" declline="119" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="120" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="51" bodyend="57" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="120" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1ab64e4db253712b5c823124dd2dc3d694" compoundref="_o_s___g_p_i_o_8cpp" startline="17">outputVarsImage</references>
         <references refid="_o_s___g_p_i_o_8cpp_1adff3d2e1c5ba3ab7d9135a66afc7ebed" compoundref="_o_s___g_p_i_o_8cpp" startline="18" endline="19">outputVarsPINs</references>
-        <references refid="_o_s_8h_1a868eb55a6c58c348f0d606d75c7d5e05" compoundref="_o_s_8h" startline="61">PIN_OUTPUT_COUNT</references>
+        <references refid="_o_s_8h_1a868eb55a6c58c348f0d606d75c7d5e05" compoundref="_o_s_8h" startline="62">PIN_OUTPUT_COUNT</references>
         <referencedby refid="_a_p__main_8cpp_1a0b33edabd7f1c4e4a0bf32c67269be2f" compoundref="_a_p__main_8cpp" startline="67" endline="73">loop</referencedby>
         <referencedby refid="_m_d_8h_1a9e210ff652f1bccff9bb78912bd121c1" compoundref="_m_d___test___i_os_8cpp" startline="15" endline="120">test_IO</referencedby>
       </memberdef>
@@ -1566,9 +1573,10 @@
         <argsstring>()</argsstring>
         <name>readInputs</name>
         <briefdescription>
-<para>Alarm state. </para>
+<para>Atualiza as saidas. </para>
         </briefdescription>
         <detaileddescription>
+<para>Atualiza as saidas.</para>
 <para>Read ESP32 GPIOs and stores in the image array</para>
 <para>Read all inputs and store in the image array</para>
 <para>This function reads all the inputs and stores them in the image array. The image array is used to store the current state of the inputs and outputs. </para>
@@ -1577,10 +1585,10 @@
 <para>PIN_INPUT_COUNT = 5</para>
 <para>Read the input from the GPIO</para>
         </inbodydescription>
-        <location file="include/OS.h" line="120" column="6" bodyfile="src/OS_GPIO.cpp" bodystart="33" bodyend="39" declfile="include/OS.h" declline="120" declcolumn="6"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h" line="121" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp" bodystart="33" bodyend="39" declfile="C:/workspace/Projeto/InteligentDestiller/include/OS.h" declline="121" declcolumn="6"/>
         <references refid="_o_s___g_p_i_o_8cpp_1a4f36b265674eff00292d33aa87f2a36d" compoundref="_o_s___g_p_i_o_8cpp" startline="14">inputVarsImage</references>
         <references refid="_o_s___g_p_i_o_8cpp_1a1dde1641b66d86ac330d5254cc02c2bb" compoundref="_o_s___g_p_i_o_8cpp" startline="15" endline="15">inputVarsPINs</references>
-        <references refid="_o_s_8h_1ad8bd7dfea612e3f597b33a34115ead1c" compoundref="_o_s_8h" startline="43">PIN_INPUT_COUNT</references>
+        <references refid="_o_s_8h_1ad8bd7dfea612e3f597b33a34115ead1c" compoundref="_o_s_8h" startline="44">PIN_INPUT_COUNT</references>
         <referencedby refid="_a_p__main_8cpp_1a0b33edabd7f1c4e4a0bf32c67269be2f" compoundref="_a_p__main_8cpp" startline="67" endline="73">loop</referencedby>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
@@ -1601,93 +1609,94 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OS_h</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"></codeline>
-<codeline lineno="16"><highlight class="preprocessor">#include<sp/>&quot;WiFiManager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="preprocessor">#include<sp/>&quot;ESPAsyncWebServer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="preprocessor">#include<sp/>&quot;SPIFFS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_d_8h" kindref="compound">MD.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>AsyncWebSocket<sp/><ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>AsyncWebServer<sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>;<sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" kindref="member">DEBUG</ref>;<sp/></highlight></codeline>
-<codeline lineno="30" refid="_o_s_8h_1a285977f0ffd4b45d30c3d459b39a878f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEBUGlog<sp/>0<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"></codeline>
-<codeline lineno="37" refid="_o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4" refkind="member"><highlight class="preprocessor">#define<sp/>PIN_SW_AUTO<sp/>32<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="_o_s_8h_1ade7c8509801fc3f4480082e29c72926d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SALARM<sp/>25<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="_o_s_8h_1ab697946c681df5f56d99516a2715ae5a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SW_MAN<sp/>26<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="_o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SMIN<sp/>27<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="_o_s_8h_1ae392f500936676d5a630c590de1a6115" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SMAX<sp/>14<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="_o_s_8h_1ad8bd7dfea612e3f597b33a34115ead1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_INPUT_COUNT<sp/>5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="_o_s_8h_1aae28e39b451039001b9bf29ec995fd8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SW_MAN<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="_o_s_8h_1a9c786ece8dfd4c7c32d94f96e02034c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SMIN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="_o_s_8h_1a98d27cbdf2f1601f89a3d54c8f57caa0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SMAX<sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="_o_s_8h_1a03d4fa071eaec6b43a142d39b76af91a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SW_AUTO<sp/>3</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="_o_s_8h_1a3808ebdb25737de42c2d7ca821f56b23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SALARM<sp/>4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="_o_s_8h_1ae7d962d8e7f7ad921a0ad994ea7ca34a" refkind="member"><highlight class="preprocessor">#define<sp/>PIN_RAQ<sp/>23<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="_o_s_8h_1abc131bd8e71df8904a6ebeb67c56290a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_BMB<sp/>22<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="_o_s_8h_1a5890ed8b1dfbb6be07f82fab51dcd66b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_VALV_WATER_OUT<sp/>21<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="_o_s_8h_1a050b83ef44d5cae61794b32499c9fcf8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_VALV_WATER_IN<sp/>19<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="_o_s_8h_1aebfef237ff2d3039cd3c2050b749de1d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_ALARM<sp/>18<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="_o_s_8h_1a384be38ab3e7b926921179cc420d646c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_MIN<sp/>05<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="_o_s_8h_1aa33c6f09058f0ef261c58dec1ae26af6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_MAX<sp/>04<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="_o_s_8h_1a924bcfd3898c818255811fee578e25ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_AUTO<sp/>15<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="_o_s_8h_1acd0ee7482c4a9d885282477b66664985" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_MAN<sp/>33<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="_o_s_8h_1a868eb55a6c58c348f0d606d75c7d5e05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_OUTPUT_COUNT<sp/>9</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_RAQ<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_BMB<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_VALV_WATER_OUT<sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_VALV_WATER_IN<sp/>3</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="_o_s_8h_1a3f3f0d6170ffa0797fe36f5772ad2947" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_ALARM<sp/>4</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="_o_s_8h_1a0a1040b6ffe1abde775c47360900520c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_MIN<sp/>5</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="_o_s_8h_1a87be610e0ff8c38e2a36273c0ec4a429" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_MAX<sp/>6</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_AUTO<sp/>7</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="_o_s_8h_1aed87ea2d1c8368d8ae40dfcdf0c5e58d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_MAN<sp/>8</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" refkind="member"><highlight class="preprocessor">#define<sp/>ON<sp/>HIGH<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OFF<sp/>LOW<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a8b626fb41c6433470c66289ad702ba87" kindref="member">loop2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvParameters);<sp/></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a02ef1114b2c4e173a5ddafb425f38cc5" kindref="member">initMultiCore</ref>();</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997" kindref="member">initFS</ref>();<sp/></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"></codeline>
-<codeline lineno="96"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" kindref="member">initPinsOutputs</ref>();<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" kindref="member">initPinsInputs</ref>();<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" kindref="member">getWaterMax</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" kindref="member">getWaterMin</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" kindref="member">getAlarm</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" kindref="member">getAlarmIND</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" kindref="member">getAutoModeSW</ref>();<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" kindref="member">getManualMode</ref>();<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" kindref="member">getResistor</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" kindref="member">getValv_Water_In</ref>();<sp/><sp/></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" kindref="member">getValv_Water_Out</ref>();<sp/></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" kindref="member">getPump</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" kindref="member">setIndMax</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" kindref="member">setIndMin</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" kindref="member">setIndAlarm</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" kindref="member">setIndMan</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1adbfc39d1df02e4404b08e9573d1fd404" kindref="member">setPump</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" kindref="member">setValveWaterIn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" kindref="member">setValveWaterOut</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" kindref="member">setResistor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" kindref="member">setIndAuto</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state1);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a4be402fa1ac7049ed1671c31572e0f75" kindref="member">writeOutputs</ref>();</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1acfc1d4a44c5d7039701b596a3df6eae3" kindref="member">readInputs</ref>();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#include<sp/>&quot;WiFiManager.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;esp_netif.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#include<sp/>&quot;ESPAsyncWebServer.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#include<sp/>&quot;SPIFFS.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_d_8h" kindref="compound">MD.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>AsyncWebSocket<sp/><ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>AsyncWebServer<sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a117352cc494cc62c6b2f1882786a332c" kindref="member">DEBUG</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="_o_s_8h_1a285977f0ffd4b45d30c3d459b39a878f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEBUGlog<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"></codeline>
+<codeline lineno="38" refid="_o_s_8h_1a3c9aac2ffa03d0822447b318c20178b4" refkind="member"><highlight class="preprocessor">#define<sp/>PIN_SW_AUTO<sp/>32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_o_s_8h_1ade7c8509801fc3f4480082e29c72926d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SALARM<sp/>25<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="_o_s_8h_1ab697946c681df5f56d99516a2715ae5a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SW_MAN<sp/>26<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_o_s_8h_1acb14a8bc9fbd152e8354418a7855a1b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SMIN<sp/>27<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_o_s_8h_1ae392f500936676d5a630c590de1a6115" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_SMAX<sp/>14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_o_s_8h_1ad8bd7dfea612e3f597b33a34115ead1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_INPUT_COUNT<sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_o_s_8h_1aae28e39b451039001b9bf29ec995fd8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SW_MAN<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_o_s_8h_1a9c786ece8dfd4c7c32d94f96e02034c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SMIN<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_o_s_8h_1a98d27cbdf2f1601f89a3d54c8f57caa0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SMAX<sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_o_s_8h_1a03d4fa071eaec6b43a142d39b76af91a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SW_AUTO<sp/>3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_o_s_8h_1a3808ebdb25737de42c2d7ca821f56b23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_SALARM<sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="_o_s_8h_1ae7d962d8e7f7ad921a0ad994ea7ca34a" refkind="member"><highlight class="preprocessor">#define<sp/>PIN_RAQ<sp/>23<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="_o_s_8h_1abc131bd8e71df8904a6ebeb67c56290a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_BMB<sp/>22<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_o_s_8h_1a5890ed8b1dfbb6be07f82fab51dcd66b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_VALV_WATER_OUT<sp/>21<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_o_s_8h_1a050b83ef44d5cae61794b32499c9fcf8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_VALV_WATER_IN<sp/>19<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_o_s_8h_1aebfef237ff2d3039cd3c2050b749de1d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_ALARM<sp/>18<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_o_s_8h_1a384be38ab3e7b926921179cc420d646c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_MIN<sp/>05<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_o_s_8h_1aa33c6f09058f0ef261c58dec1ae26af6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_MAX<sp/>04<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_o_s_8h_1a924bcfd3898c818255811fee578e25ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_AUTO<sp/>15<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_o_s_8h_1acd0ee7482c4a9d885282477b66664985" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_IND_MAN<sp/>33<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_o_s_8h_1a868eb55a6c58c348f0d606d75c7d5e05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_OUTPUT_COUNT<sp/>9<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_RAQ<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_BMB<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_VALV_WATER_OUT<sp/>2<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_VALV_WATER_IN<sp/>3<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="_o_s_8h_1a3f3f0d6170ffa0797fe36f5772ad2947" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_ALARM<sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_o_s_8h_1a0a1040b6ffe1abde775c47360900520c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_MIN<sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="_o_s_8h_1a87be610e0ff8c38e2a36273c0ec4a429" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_MAX<sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_AUTO<sp/>7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_o_s_8h_1aed87ea2d1c8368d8ae40dfcdf0c5e58d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POS_IND_MAN<sp/>8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" refkind="member"><highlight class="preprocessor">#define<sp/>ON<sp/>HIGH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OFF<sp/>LOW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a8b626fb41c6433470c66289ad702ba87" kindref="member">loop2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pvParameters);<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a02ef1114b2c4e173a5ddafb425f38cc5" kindref="member">initMultiCore</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997" kindref="member">initFS</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"></codeline>
+<codeline lineno="97"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" kindref="member">initPinsOutputs</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" kindref="member">initPinsInputs</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" kindref="member">getWaterMax</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" kindref="member">getWaterMin</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" kindref="member">getAlarm</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" kindref="member">getAlarmIND</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" kindref="member">getAutoModeSW</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" kindref="member">getManualMode</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" kindref="member">getResistor</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" kindref="member">getValv_Water_In</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" kindref="member">getValv_Water_Out</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" kindref="member">getPump</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a87a31bccb377b0b9f859242b0635052c" kindref="member">setIndMax</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1afd12f5c7d9986ada0226426896ee09c7" kindref="member">setIndMin</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" kindref="member">setIndAlarm</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" kindref="member">setIndMan</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1adbfc39d1df02e4404b08e9573d1fd404" kindref="member">setPump</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a0d4efaa2bfb0fa53aa24405940a7a66c" kindref="member">setValveWaterIn</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" kindref="member">setValveWaterOut</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" kindref="member">setResistor</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" kindref="member">setIndAuto</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1a4be402fa1ac7049ed1671c31572e0f75" kindref="member">writeOutputs</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_o_s_8h_1acfc1d4a44c5d7039701b596a3df6eae3" kindref="member">readInputs</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight></codeline>
     </programlisting>
-    <location file="include/OS.h"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/include/OS.h"/>
   </compounddef>
 </doxygen>

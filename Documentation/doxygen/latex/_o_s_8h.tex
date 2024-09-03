@@ -1,11 +1,12 @@
-\doxysection{include/\+OS.h File Reference}
-\hypertarget{_o_s_8h}{}\label{_o_s_8h}\index{include/OS.h@{include/OS.h}}
+\doxysection{C\+:/workspace/\+Projeto/\+Inteligent\+Destiller/include/\+OS.h File Reference}
+\hypertarget{_o_s_8h}{}\label{_o_s_8h}\index{C:/workspace/Projeto/InteligentDestiller/include/OS.h@{C:/workspace/Projeto/InteligentDestiller/include/OS.h}}
 
 
 Header file for the OS project.  
 
 
 {\ttfamily \#include "{}Wi\+Fi\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+netif.\+h"{}}\newline
 {\ttfamily \#include "{}ESPAsync\+Web\+Server.\+h"{}}\newline
 {\ttfamily \#include "{}SPIFFS.\+h"{}}\newline
 {\ttfamily \#include "{}MD.\+h"{}}\newline
@@ -90,7 +91,7 @@ void \mbox{\hyperlink{_o_s_8h_a8b626fb41c6433470c66289ad702ba87}{loop2}} (void \
 void \mbox{\hyperlink{_o_s_8h_a02ef1114b2c4e173a5ddafb425f38cc5}{init\+Multi\+Core}} ()
 \begin{DoxyCompactList}\small\item\em Main loop to run in core 1. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997}{init\+FS}} ()
-\begin{DoxyCompactList}\small\item\em Little\+FS. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Inicia o segundo core. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_o_s_8h_a034848835eb2ce8872c4da77568895fc}{init\+Pins\+Outputs}} ()
 \begin{DoxyCompactList}\small\item\em Inicia o sistema de arquivos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_o_s_8h_a96f4f5e9c32d277c8b5f45b1b0c068fc}{init\+Pins\+Inputs}} ()
@@ -138,14 +139,14 @@ void \mbox{\hyperlink{_o_s_8h_aa879192b15484f1d9112d2b91ef5cea9}{set\+Ind\+Auto}
 void \mbox{\hyperlink{_o_s_8h_a4be402fa1ac7049ed1671c31572e0f75}{write\+Outputs}} ()
 \begin{DoxyCompactList}\small\item\em Liga/desliga o modo auto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3}{read\+Inputs}} ()
-\begin{DoxyCompactList}\small\item\em Alarm state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Atualiza as saidas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 Async\+Web\+Socket \mbox{\hyperlink{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd}{ws}}
 \begin{DoxyCompactList}\small\item\em Libraries. \end{DoxyCompactList}\item 
 Async\+Web\+Server \mbox{\hyperlink{_o_s_8h_a56916c67f21f332014c1c19b200d45f3}{server}}
-\begin{DoxyCompactList}\small\item\em Web\+Socket. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Web\+Socket Server. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{_o_s_8h_a117352cc494cc62c6b2f1882786a332c}{DEBUG}}
 \begin{DoxyCompactList}\small\item\em Web\+Server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -620,9 +621,11 @@ void init\+FS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Little\+FS. 
+Inicia o segundo core. 
 
-Little\+FS.
+Little\+FS
+
+Inicia o segundo core.
 
 Initialize File System (SPIFFS)
 
@@ -782,7 +785,9 @@ void read\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Alarm state. 
+Atualiza as saidas. 
+
+Atualiza as saidas.
 
 Read ESP32 GPIOs and stores in the image array
 
@@ -1087,7 +1092,7 @@ Async\+Web\+Server server\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
-Web\+Socket. 
+Web\+Socket Server. 
 
 \Hypertarget{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd}\index{OS.h@{OS.h}!ws@{ws}}
 \index{ws@{ws}!OS.h@{OS.h}}
@@ -1099,4 +1104,5 @@ Async\+Web\+Socket ws\hspace{0.3cm}{\ttfamily [extern]}}
 
 Libraries. 
 
-Wifi Libraries Async Libraries SPIFFS Libraries 
+Wifi Libraries Wi\+Fi Manager ~\newline
+ ESP32 Network Interface Async Libraries Async Web Server SPIFFS Libraries SPI Flash File System MD Header 

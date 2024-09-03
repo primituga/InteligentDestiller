@@ -1,5 +1,5 @@
-\doxysection{src/\+MD\+\_\+\+IO.cpp File Reference}
-\hypertarget{_m_d___i_o_8cpp}{}\label{_m_d___i_o_8cpp}\index{src/MD\_IO.cpp@{src/MD\_IO.cpp}}
+\doxysection{C\+:/workspace/\+Projeto/\+Inteligent\+Destiller/src/\+MD\+\_\+\+IO.cpp File Reference}
+\hypertarget{_m_d___i_o_8cpp}{}\label{_m_d___i_o_8cpp}\index{C:/workspace/Projeto/InteligentDestiller/src/MD\_IO.cpp@{C:/workspace/Projeto/InteligentDestiller/src/MD\_IO.cpp}}
 
 
 IO functions for the MD project \texorpdfstring{$<$}{<}This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project.\texorpdfstring{$>$}{>}  
@@ -16,9 +16,9 @@ void \mbox{\hyperlink{_m_d___i_o_8cpp_ae48dc2d309ef711693328c6300ad5e80}{toggle\
 void \mbox{\hyperlink{_m_d___i_o_8cpp_aa8b96a74409fec0e22a5ee8451114a7f}{toggle\+Auto\+Mode}} ()
 \begin{DoxyCompactList}\small\item\em Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_m_d___i_o_8cpp_a747c973d9633421336e8d59a78faf49f}{indicators\+Management}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Toggle auto indicator. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_m_d___i_o_8cpp_a27162a64461db61f83b3752bd0b6d125}{mode\+Management}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicators management. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -39,6 +39,10 @@ Sérgio Carmo
 {\footnotesize\ttfamily \label{_m_d___i_o_8cpp_a747c973d9633421336e8d59a78faf49f} 
 void indicators\+Management (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Toggle auto indicator. 
+
 INDICATORS BLOCK
 
 Set the maximum water level indicator
@@ -56,6 +60,10 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{modeManagement()}{modeManagement()}}
 {\footnotesize\ttfamily \label{_m_d___i_o_8cpp_a27162a64461db61f83b3752bd0b6d125} 
 void mode\+Management (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Indicators management. 
 
 MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator
 
@@ -82,6 +90,8 @@ void toggle\+Auto\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) 
+
+Middle\+Ware Header.
 
 \begin{DoxyNote}{Note}
 This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) 
@@ -125,6 +135,8 @@ void toggle\+Ind\+Auto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 Toggle the Auto Mode of the Machine. 
+
+Toggle auto mode.
 
 \begin{DoxyNote}{Note}
 This function is used to toggle the Auto Mode of the Machine 

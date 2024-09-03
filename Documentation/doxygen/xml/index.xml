@@ -8,7 +8,6 @@
     <member refid="_m_d_8h_1a80eea64eb5264d437c6d72d1fba48b48" kind="define"><name>ALARM_TIME_ON</name></member>
     <member refid="_m_d_8h_1a6366b5adb0cf9781c23ca10d0bec4f38" kind="define"><name>ALARM_TIME_OFF</name></member>
     <member refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kind="define"><name>WIFI_MODE_OPTIONS</name></member>
-    <member refid="_m_d_8h_1a28e13c56e75b0dbf3c99206ac30956f9" kind="function"><name>sendWiFiQuality</name></member>
     <member refid="_m_d_8h_1aa8b96a74409fec0e22a5ee8451114a7f" kind="function"><name>toggleAutoMode</name></member>
     <member refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" kind="function"><name>toggleIndAuto</name></member>
     <member refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" kind="function"><name>indicatorsManagement</name></member>
@@ -278,8 +277,8 @@
   <compound refid="_o_s__multi__core_8cpp" kind="file"><name>OS_multi_core.cpp</name>
     <member refid="_o_s__multi__core_8cpp_1a02ef1114b2c4e173a5ddafb425f38cc5" kind="function"><name>initMultiCore</name></member>
   </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>C:/workspace/Projeto/InteligentDestiller/include</name>
   </compound>
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>C:/workspace/Projeto/InteligentDestiller/src</name>
   </compound>
 </doxygenindex>

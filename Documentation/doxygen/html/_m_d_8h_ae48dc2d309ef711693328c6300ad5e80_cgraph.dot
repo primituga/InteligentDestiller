@@ -5,11 +5,11 @@ digraph "toggleIndAuto"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="toggleIndAuto",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Toggle the Auto Mode of the Machine."];
+  Node1 [id="Node000001",label="toggleIndAuto",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Toggle auto mode."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="getIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#abbca1cc0d29f545e9a39778288a12071",tooltip="Retorna estado do indicador de alarme."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="setAutoModeWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a4f59623372f8c8c8d704f0f004f7d955",tooltip="SETS BLOCK."];
+  Node3 [id="Node000003",label="setAutoModeWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a4f59623372f8c8c8d704f0f004f7d955",tooltip="Toggle resistor."];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="setIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#ad606ba53b3e713efe768dd0e380c97a2",tooltip="Liga/desliga o indicador luminoso da resistencia."];
   Node4 -> Node2 [id="edge4_Node000004_Node000002",color="steelblue1",style="solid",tooltip=" "];

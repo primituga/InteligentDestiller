@@ -9,7 +9,7 @@ digraph "webTimer"
   Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="add10m",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___timer_8cpp.html#a2345c47ec0c5b7a61a02281c2174df89",tooltip="Add 5 minutes to timer."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="handleTimeAdjust",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#acd82388b56435489b8b58cf2033a2d99",tooltip="Timer Add/Remove Time."];
+  Node3 [id="Node000003",label="handleTimeAdjust",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#acd82388b56435489b8b58cf2033a2d99",tooltip="Handle wifi IP."];
   Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="setupRoutes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___web_8cpp.html#a553ce9cca044d40931e5cbe9deb407e4",tooltip="Setup Calls."];
   Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
@@ -36,13 +36,13 @@ digraph "webTimer"
   Node12 -> Node13 [id="edge17_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node13 [id="Node000013",label="loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p__main_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f",tooltip="Loop function to run the machine operation."];
   Node11 -> Node14 [id="edge18_Node000011_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node14 [id="Node000014",label="handleHour",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#af5d26a4c3ed9e05f2b2d04935793447f",tooltip="Handle Hour."];
+  Node14 [id="Node000014",label="handleHour",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#af5d26a4c3ed9e05f2b2d04935793447f",tooltip="Handle timer."];
   Node14 -> Node15 [id="edge19_Node000014_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="processor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a0c021f9721c3b479757f8e1b40624b6c",tooltip="Function to handle the HTTP requests for the variables."];
+  Node15 [id="Node000015",label="processor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a0c021f9721c3b479757f8e1b40624b6c",tooltip="Handle toggle."];
   Node15 -> Node4 [id="edge20_Node000015_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node4 [id="edge21_Node000014_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node16 [id="edge22_Node000011_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node16 [id="Node000016",label="handleTimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#af81d47970421b46f19156b8c97bb4ee3",tooltip="Handlers."];
+  Node16 [id="Node000016",label="handleTimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#af81d47970421b46f19156b8c97bb4ee3",tooltip="Get resistor."];
   Node16 -> Node15 [id="edge23_Node000016_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node16 -> Node4 [id="edge24_Node000016_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node17 [id="edge25_Node000011_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
@@ -50,10 +50,10 @@ digraph "webTimer"
   Node17 -> Node18 [id="edge26_Node000017_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node18 [id="Node000018",label="setTimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___timer_8cpp.html#a75d67ecc1e985e54d2701c06a6aaa3a1",tooltip="Reset timer."];
   Node18 -> Node19 [id="edge27_Node000018_Node000019",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node19 [id="Node000019",label="handleTimerControl",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a72a515762408e37f73ff78c93edeb326",tooltip="Timer Start/Stop/Reset."];
+  Node19 [id="Node000019",label="handleTimerControl",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a72a515762408e37f73ff78c93edeb326",tooltip="Handle time adjustment."];
   Node19 -> Node4 [id="edge28_Node000019_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node18 -> Node20 [id="edge29_Node000018_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node20 [id="Node000020",label="modeManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a27162a64461db61f83b3752bd0b6d125",tooltip=" "];
+  Node20 [id="Node000020",label="modeManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a27162a64461db61f83b3752bd0b6d125",tooltip="Indicators management."];
   Node20 -> Node12 [id="edge30_Node000020_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node18 -> Node1 [id="edge31_Node000018_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node17 -> Node1 [id="edge32_Node000017_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
@@ -61,7 +61,7 @@ digraph "webTimer"
   Node21 [id="Node000021",label="getTimerMinute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___timer_8cpp.html#ae8ad20dbd759f4fb98dabba7876428f4",tooltip="Get timer secound."];
   Node21 -> Node12 [id="edge34_Node000021_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node21 -> Node22 [id="edge35_Node000021_Node000022",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node22 [id="Node000022",label="handleMinute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#ac109e287eeaaac772d362b9192d186d8",tooltip="Handle Minute."];
+  Node22 [id="Node000022",label="handleMinute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#ac109e287eeaaac772d362b9192d186d8",tooltip="Handle hour."];
   Node22 -> Node15 [id="edge36_Node000022_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node22 -> Node4 [id="edge37_Node000022_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node21 -> Node16 [id="edge38_Node000021_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
@@ -70,7 +70,7 @@ digraph "webTimer"
   Node23 [id="Node000023",label="getTimerSecound",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___timer_8cpp.html#a71f3ffe6a2e0fca30bca87a87fc92354",tooltip="Timer for web operations."];
   Node23 -> Node12 [id="edge41_Node000023_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node23 -> Node24 [id="edge42_Node000023_Node000024",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node24 [id="Node000024",label="handleSecound",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a06bda99cade1494aaaafff873d92ded3",tooltip="Handle Secound."];
+  Node24 [id="Node000024",label="handleSecound",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a06bda99cade1494aaaafff873d92ded3",tooltip="Handle minute."];
   Node24 -> Node15 [id="edge43_Node000024_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node24 -> Node4 [id="edge44_Node000024_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node23 -> Node16 [id="edge45_Node000023_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];

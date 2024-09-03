@@ -5,7 +5,7 @@ digraph "handleTimerControl"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="handleTimerControl",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Timer Start/Stop/Reset."];
+  Node1 [id="Node000001",label="handleTimerControl",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handle time adjustment."];
   Node1 -> Node2 [id="edge14_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="resetTimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___timer_8cpp.html#ad43a02209687d9c1e04dddd167f32c45",tooltip="Remove 10 minutes from timer."];
   Node2 -> Node3 [id="edge15_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];

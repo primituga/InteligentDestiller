@@ -11,9 +11,9 @@ digraph "getValv_Water_In"
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p__main_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f",tooltip="Loop function to run the machine operation."];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="handleState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a5f2461b87633880956acaad69733ec8d",tooltip="Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response."];
+  Node4 [id="Node000004",label="handleState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a5f2461b87633880956acaad69733ec8d",tooltip="Handle timer control."];
   Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="processor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a0c021f9721c3b479757f8e1b40624b6c",tooltip="Function to handle the HTTP requests for the variables."];
+  Node5 [id="Node000005",label="processor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#a0c021f9721c3b479757f8e1b40624b6c",tooltip="Handle toggle."];
   Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="setupRoutes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___web_8cpp.html#a553ce9cca044d40931e5cbe9deb407e4",tooltip="Setup Calls."];
   Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
@@ -26,11 +26,11 @@ digraph "getValv_Water_In"
   Node9 [id="Node000009",label="test_IO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___test___i_os_8cpp.html#a9e210ff652f1bccff9bb78912bd121c1",tooltip="Print number with new line."];
   Node9 -> Node7 [id="edge11_Node000009_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node10 [id="edge12_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node10 [id="Node000010",label="toggleValveWaterInWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a757ebfbdd26d049507dd4662ff9edba9",tooltip="Toggle Valve Water In Web."];
+  Node10 [id="Node000010",label="toggleValveWaterInWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a757ebfbdd26d049507dd4662ff9edba9",tooltip="Toggle pump state."];
   Node10 -> Node11 [id="edge13_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="handleToggle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#ade79ba305a284591f94d9eb3c89718bd",tooltip="Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax."];
+  Node11 [id="Node000011",label="handleToggle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#ade79ba305a284591f94d9eb3c89718bd",tooltip="Handle state."];
   Node11 -> Node6 [id="edge14_Node000011_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node12 [id="edge15_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node12 [id="Node000012",label="updateOutputsWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a76f121aef723f8209031f700a1cf5a61",tooltip="Output variables image."];
+  Node12 [id="Node000012",label="updateOutputsWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a76f121aef723f8209031f700a1cf5a61",tooltip="Mode management."];
   Node12 -> Node7 [id="edge16_Node000012_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

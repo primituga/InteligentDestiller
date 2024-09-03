@@ -19,23 +19,28 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/MD_Timer.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp</label>
         <link refid="_m_d___timer_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>SPIFFS.h</label>
       </node>
       <node id="4">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="5">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="var">
@@ -52,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="7" column="6" bodyfile="src/MD_Timer.cpp" bodystart="7" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="7" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="7" bodyend="-1"/>
         <referencedby refid="_m_d_8h_1aa9493843bba040c07f9f66300059268a" compoundref="_m_d___timer_8cpp" startline="147" endline="150">getTimerStatus</referencedby>
         <referencedby refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</referencedby>
         <referencedby refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</referencedby>
@@ -70,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="8" column="22" bodyfile="src/MD_Timer.cpp" bodystart="8" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="8" column="22" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="8" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_m_d___timer_8cpp_1acef0d0fd3d03f5e278f7da2c7aa9c0e2" prot="public" static="yes" mutable="no">
         <type>unsigned long</type>
@@ -84,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="9" column="22" bodyfile="src/MD_Timer.cpp" bodystart="9" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="9" column="22" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="_m_d___timer_8cpp_1a56cbe7f463932051d17bba95b3cac9b4" prot="public" static="no" mutable="no">
         <type>const unsigned long</type>
@@ -98,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="10" column="21" bodyfile="src/MD_Timer.cpp" bodystart="10" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="10" column="21" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="10" bodyend="-1"/>
         <referencedby refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</referencedby>
       </memberdef>
     </sectiondef>
@@ -125,7 +130,7 @@
 <para>Send the message to the web interface</para>
 <para>Update the old values</para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="19" column="6" bodyfile="src/MD_Timer.cpp" bodystart="19" bodyend="42"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="19" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="19" bodyend="42"/>
         <references refid="_m_d___timer_8cpp_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
         <references refid="_m_d___timer_8cpp_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
         <references refid="_m_d___timer_8cpp_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
@@ -197,10 +202,10 @@
 <para>Only send updates at the defined interval</para>
 <para>Send the timer to the web interface</para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="53" column="6" bodyfile="src/MD_Timer.cpp" bodystart="53" bodyend="139"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="53" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="53" bodyend="139"/>
         <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</references>
         <references refid="_m_d___timer_8cpp_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
         <references refid="_m_d___timer_8cpp_1a56cbe7f463932051d17bba95b3cac9b4" compoundref="_m_d___timer_8cpp" startline="10">updateInterval</references>
@@ -243,7 +248,7 @@
         <inbodydescription>
 <para>Return the timer status (ON/OFF)</para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="147" column="6" bodyfile="src/MD_Timer.cpp" bodystart="147" bodyend="150"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="147" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="147" bodyend="150"/>
         <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</referencedby>
@@ -266,7 +271,7 @@
 <para>Return the timer seconds left in the timer <linebreak/>
 </para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="157" column="5" bodyfile="src/MD_Timer.cpp" bodystart="157" bodyend="160"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="157" column="5" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="157" bodyend="160"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</referencedby>
@@ -290,7 +295,7 @@
         <inbodydescription>
 <para>Return the timer minutes left in the timer</para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="167" column="5" bodyfile="src/MD_Timer.cpp" bodystart="167" bodyend="170"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="167" column="5" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="167" bodyend="170"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</referencedby>
@@ -314,7 +319,7 @@
         <inbodydescription>
 <para>Return the timer hours left in the timer</para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="177" column="5" bodyfile="src/MD_Timer.cpp" bodystart="177" bodyend="180"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="177" column="5" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="177" bodyend="180"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</referencedby>
@@ -349,10 +354,10 @@
         <inbodydescription>
 <para>Set the timer status (ON/OFF)</para>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="187" column="6" bodyfile="src/MD_Timer.cpp" bodystart="187" bodyend="198"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="187" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="187" bodyend="198"/>
         <references refid="_m_d___timer_8cpp_1a62d5c540f80173b879eb9236600c961b" compoundref="_m_d___timer_8cpp" startline="7">flagTimerStatus</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___timer_8cpp_1acf8eb689c061a70a35d6f2f5ed57c474" compoundref="_m_d___timer_8cpp" startline="19" endline="42">sendTimer</references>
         <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
@@ -371,7 +376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="203" column="6" bodyfile="src/MD_Timer.cpp" bodystart="203" bodyend="203"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="203" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="203" bodyend="203"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -388,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="207" column="6" bodyfile="src/MD_Timer.cpp" bodystart="207" bodyend="207"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="207" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="207" bodyend="207"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -405,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="211" column="6" bodyfile="src/MD_Timer.cpp" bodystart="211" bodyend="211"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="211" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="211" bodyend="211"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -422,7 +427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="215" column="6" bodyfile="src/MD_Timer.cpp" bodystart="215" bodyend="215"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="215" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="215" bodyend="215"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -439,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="219" column="6" bodyfile="src/MD_Timer.cpp" bodystart="219" bodyend="219"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="219" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="219" bodyend="219"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -456,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="223" column="6" bodyfile="src/MD_Timer.cpp" bodystart="223" bodyend="223"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="223" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="223" bodyend="223"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -473,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="227" column="6" bodyfile="src/MD_Timer.cpp" bodystart="227" bodyend="227"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="227" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="227" bodyend="227"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -490,7 +495,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="231" column="6" bodyfile="src/MD_Timer.cpp" bodystart="231" bodyend="231"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="231" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="231" bodyend="231"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -507,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="235" column="6" bodyfile="src/MD_Timer.cpp" bodystart="235" bodyend="235"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="235" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="235" bodyend="235"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -524,7 +529,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="239" column="6" bodyfile="src/MD_Timer.cpp" bodystart="239" bodyend="239"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="239" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="239" bodyend="239"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -541,7 +546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="243" column="6" bodyfile="src/MD_Timer.cpp" bodystart="243" bodyend="243"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="243" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="243" bodyend="243"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -558,7 +563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="247" column="6" bodyfile="src/MD_Timer.cpp" bodystart="247" bodyend="247"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="247" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="247" bodyend="247"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1acd82388b56435489b8b58cf2033a2d99" compoundref="_m_d___web___handlers_8cpp" startline="79" endline="107">handleTimeAdjust</referencedby>
       </memberdef>
@@ -575,7 +580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Timer.cpp" line="251" column="6" bodyfile="src/MD_Timer.cpp" bodystart="251" bodyend="251"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" line="251" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp" bodystart="251" bodyend="251"/>
         <references refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <referencedby refid="_m_d_8h_1a72a515762408e37f73ff78c93edeb326" compoundref="_m_d___web___handlers_8cpp" startline="119" endline="129">handleTimerControl</referencedby>
       </memberdef>
@@ -745,6 +750,6 @@
 <codeline lineno="247" refid="_m_d_8h_1afde4bd8c891772121c1bee27077ab395" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d___timer_8cpp_1afde4bd8c891772121c1bee27077ab395" kindref="member">rem10m</ref>()<sp/>{<sp/><ref refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" kindref="member">webTimer</ref>(</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">,<sp/>600);<sp/>}</highlight></codeline>
 <codeline lineno="251" refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d___timer_8cpp_1ad43a02209687d9c1e04dddd167f32c45" kindref="member">resetTimer</ref>()<sp/>{<sp/><ref refid="_m_d___timer_8cpp_1a504723789792b242f59e8f9adfb48009" kindref="member">webTimer</ref>(</highlight><highlight class="stringliteral">&quot;=&quot;</highlight><highlight class="normal">,<sp/>0);<sp/>}</highlight></codeline>
     </programlisting>
-    <location file="src/MD_Timer.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Timer.cpp"/>
   </compounddef>
 </doxygen>

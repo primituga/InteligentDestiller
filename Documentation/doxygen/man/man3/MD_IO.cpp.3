@@ -1,8 +1,8 @@
-.TH "src/MD_IO.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
+.TH "C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-src/MD_IO.cpp \- IO functions for the MD project <This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project\&.>  
+C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp \- IO functions for the MD project <This file contains the IO functions for the MD project that are used to control the Machine and its peripherals using the ESP32 GPIOs and the Web Interface of the project\&.>  
 
 .SH SYNOPSIS
 .br
@@ -24,9 +24,11 @@ src/MD_IO.cpp \- IO functions for the MD project <This file contains the IO func
 .ti -1c
 .RI "void \fBindicatorsManagement\fP ()"
 .br
+.RI "Toggle auto indicator\&. "
 .ti -1c
 .RI "void \fBmodeManagement\fP ()"
 .br
+.RI "Indicators management\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -48,7 +50,9 @@ Sérgio Carmo
 .SH "Function Documentation"
 .PP 
 .SS "void indicatorsManagement ()"
-INDICATORS BLOCK
+
+.PP
+Toggle auto indicator\&. INDICATORS BLOCK
 
 .PP
 Set the maximum water level indicator
@@ -62,7 +66,9 @@ Set the alarm indicator
 .PP
 Set the manual mode indicator
 .SS "void modeManagement ()"
-MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator
+
+.PP
+Indicators management\&. MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator
 
 .PP
 Toggle the auto mode
@@ -84,7 +90,8 @@ Turn off the timer
 .SS "void toggleAutoMode ()"
 
 .PP
-Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) 
+Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) MiddleWare Header\&.
+
 .PP
 \fBNote\fP
 .RS 4
@@ -134,7 +141,8 @@ save the current state as the last state, for next time through the loop
 .SS "void toggleIndAuto ()"
 
 .PP
-Toggle the Auto Mode of the Machine\&. 
+Toggle the Auto Mode of the Machine\&. Toggle auto mode\&.
+
 .PP
 \fBNote\fP
 .RS 4

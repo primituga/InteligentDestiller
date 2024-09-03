@@ -1,8 +1,8 @@
-.TH "src/MD_Web_Handlers.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
+.TH "C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-src/MD_Web_Handlers.cpp \- Web Handlers for the MD project\&.  
+C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp \- Web Handlers for the MD project\&.  
 
 .SH SYNOPSIS
 .br
@@ -88,7 +88,8 @@ Sérgio Carmo
 .SS "String handleHour ()"
 
 .PP
-Handle Hour\&. 
+Handle Hour\&. Handle timer\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -104,7 +105,8 @@ This function returns the timer hour
 .SS "String handleMinute ()"
 
 .PP
-Handle Minute\&. 
+Handle Minute\&. Handle hour\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -120,7 +122,8 @@ This function returns the timer minute
 .SS "String handleSecound ()"
 
 .PP
-Handle Secound\&. 
+Handle Secound\&. Handle minute\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -136,7 +139,10 @@ This function returns the timer secound
 .SS "String handleState (const String & state)"
 
 .PP
-Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response\&. Handle State 
+Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response\&. Handle timer control\&.
+
+.PP
+Handle State 
 .PP
 \fBParameters\fP
 .RS 4
@@ -190,7 +196,10 @@ Return nothing if the state is not found
 .SS "String handleTimeAdjust (const String & adjustment)"
 
 .PP
-Timer Add/Remove Time\&. Handle Time Adjust 
+Timer Add/Remove Time\&. Handle wifi IP\&.
+
+.PP
+Handle Time Adjust 
 .PP
 \fBParameters\fP
 .RS 4
@@ -253,7 +262,7 @@ Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m,
 .SS "String handleTimer ()"
 
 .PP
-Definitions\&. Handlers\&.
+Definitions\&. Get resistor\&.
 
 .PP
 Timer handlers
@@ -278,7 +287,10 @@ This function returns the timer in the format HH:MM:SS
 .SS "String handleTimerControl (const String & control)"
 
 .PP
-Timer Start/Stop/Reset\&. Handle Timer Control 
+Timer Start/Stop/Reset\&. Handle time adjustment\&.
+
+.PP
+Handle Timer Control 
 .PP
 \fBParameters\fP
 .RS 4
@@ -314,7 +326,10 @@ Return the control message for the timer (start, stop, reset)
 .SS "String handleToggle (const String & toggle)"
 
 .PP
-Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax\&. Handle Toggle 
+Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax\&. Handle state\&.
+
+.PP
+Handle Toggle 
 .PP
 \fBParameters\fP
 .RS 4
@@ -356,7 +371,8 @@ Return the toggle message for the variable (auto, pump, waterOut, resistor, wate
 .SS "String handleWifiIP ()"
 
 .PP
-Handle Wifi IP\&. 
+Handle Wifi IP\&. Handle wifi TX\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -372,7 +388,10 @@ This function returns the WiFi IP address
 .SS "String handleWifiQuality ()"
 
 .PP
-Handlers for Wifi Quality, SSID, TX and IP\&. Handle Wifi Quality 
+Handlers for Wifi Quality, SSID, TX and IP\&. Handle secound\&.
+
+.PP
+Handle Wifi Quality 
 .PP
 \fBReturns\fP
 .RS 4
@@ -388,7 +407,8 @@ This function returns the WiFi quality in percentage
 .SS "String handleWifiSSID ()"
 
 .PP
-Handle Wifi SSID\&. 
+Handle Wifi SSID\&. Handle wifi quality\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -404,7 +424,8 @@ This function returns the WiFi SSID
 .SS "String handleWifiTX ()"
 
 .PP
-Handle Wifi TX\&. 
+Handle Wifi TX\&. Handle wifi SSID\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -420,7 +441,10 @@ This function returns the WiFi TX power
 .SS "String processor (const String & var)"
 
 .PP
-Function to handle the HTTP requests for the variables\&. Processor 
+Function to handle the HTTP requests for the variables\&. Handle toggle\&.
+
+.PP
+Processor 
 .PP
 \fBParameters\fP
 .RS 4

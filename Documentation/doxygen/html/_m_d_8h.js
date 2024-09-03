@@ -42,7 +42,6 @@ var _m_d_8h =
     [ "rem5m", "_m_d_8h.html#a6dd7da3e0329e60af93c3c96301fb81e", null ],
     [ "rem5s", "_m_d_8h.html#a7e996a9f3af638141257662a8f931e11", null ],
     [ "resetTimer", "_m_d_8h.html#ad43a02209687d9c1e04dddd167f32c45", null ],
-    [ "sendWiFiQuality", "_m_d_8h.html#a28e13c56e75b0dbf3c99206ac30956f9", null ],
     [ "setAutoModeWeb", "_m_d_8h.html#a4f59623372f8c8c8d704f0f004f7d955", null ],
     [ "setPumpWeb", "_m_d_8h.html#a79d7f2ee79816b8a1c7d71f4887df8c6", null ],
     [ "setResistorWeb", "_m_d_8h.html#afc81a927862b27a260c9a12ae7773739", null ],

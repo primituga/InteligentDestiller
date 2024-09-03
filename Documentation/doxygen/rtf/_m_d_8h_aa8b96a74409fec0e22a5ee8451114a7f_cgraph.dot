@@ -5,7 +5,7 @@ digraph "toggleAutoMode"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="toggleAutoMode",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4)"];
+  Node1 [id="Node000001",label="toggleAutoMode",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="MiddleWare Header."];
   Node1 -> Node2 [id="edge22_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="getAutoModeSW",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a601560973c681265f62316a3f68e2ac3",tooltip="Retorna estado do modo auto."];
   Node1 -> Node3 [id="edge23_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
@@ -13,7 +13,7 @@ digraph "toggleAutoMode"
   Node3 -> Node4 [id="edge24_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="getIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#abbca1cc0d29f545e9a39778288a12071",tooltip="Retorna estado do indicador de alarme."];
   Node3 -> Node5 [id="edge25_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="setAutoModeWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a4f59623372f8c8c8d704f0f004f7d955",tooltip="SETS BLOCK."];
+  Node5 [id="Node000005",label="setAutoModeWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#a4f59623372f8c8c8d704f0f004f7d955",tooltip="Toggle resistor."];
   Node3 -> Node6 [id="edge26_Node000003_Node000006",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="setIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#ad606ba53b3e713efe768dd0e380c97a2",tooltip="Liga/desliga o indicador luminoso da resistencia."];
   Node6 -> Node4 [id="edge27_Node000006_Node000004",color="steelblue1",style="solid",tooltip=" "];

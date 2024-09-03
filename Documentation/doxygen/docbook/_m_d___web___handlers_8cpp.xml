@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_d___web___handlers_8cpp" xml:lang="en-US">
-<title>src/MD_Web_Handlers.cpp File Reference</title>
-<indexterm><primary>src/MD_Web_Handlers.cpp</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp</primary></indexterm>
 <para>
 
 <para>Web Handlers for the MD project. </para>
@@ -99,6 +99,8 @@
 <para>Handle Hour. </para>
 </para>
 
+<para>Handle timer.</para>
+
 <para><formalpara><title>Returns</title>
 
 <para>String </para>
@@ -135,6 +137,8 @@ Here is the caller graph for this function:<para>
 
 <para>Handle Minute. </para>
 </para>
+
+<para>Handle hour.</para>
 
 <para><formalpara><title>Returns</title>
 
@@ -173,6 +177,8 @@ Here is the caller graph for this function:<para>
 <para>Handle Secound. </para>
 </para>
 
+<para>Handle minute.</para>
+
 <para><formalpara><title>Returns</title>
 
 <para>String </para>
@@ -209,6 +215,8 @@ Here is the caller graph for this function:<para>
 
 <para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
 </para>
+
+<para>Handle timer control.</para>
 
 <para>Handle State 
                 <formalpara>
@@ -290,6 +298,8 @@ Here is the caller graph for this function:<para>
 
 <para>Timer Add/Remove Time. </para>
 </para>
+
+<para>Handle wifi IP.</para>
 
 <para>Handle Time Adjust 
                 <formalpara>
@@ -378,7 +388,7 @@ Here is the caller graph for this function:<para>
 <para>Definitions. </para>
 </para>
 
-<para>Handlers.</para>
+<para>Get resistor.</para>
 
 <para>Timer handlers</para>
 
@@ -420,6 +430,8 @@ Here is the caller graph for this function:<para>
 
 <para>Timer Start/Stop/Reset. </para>
 </para>
+
+<para>Handle time adjustment.</para>
 
 <para>Handle Timer Control 
                 <formalpara>
@@ -489,6 +501,8 @@ Here is the caller graph for this function:<para>
 
 <para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
 </para>
+
+<para>Handle state.</para>
 
 <para>Handle Toggle 
                 <formalpara>
@@ -563,6 +577,8 @@ Here is the caller graph for this function:<para>
 <para>Handle Wifi IP. </para>
 </para>
 
+<para>Handle wifi TX.</para>
+
 <para><formalpara><title>Returns</title>
 
 <para>String </para>
@@ -590,6 +606,8 @@ Here is the caller graph for this function:<para>
 
 <para>Handlers for Wifi Quality, SSID, TX and IP. </para>
 </para>
+
+<para>Handle secound.</para>
 
 <para>Handle Wifi Quality <formalpara><title>Returns</title>
 
@@ -628,6 +646,8 @@ Here is the caller graph for this function:<para>
 <para>Handle Wifi SSID. </para>
 </para>
 
+<para>Handle wifi quality.</para>
+
 <para><formalpara><title>Returns</title>
 
 <para>String </para>
@@ -656,6 +676,8 @@ Here is the caller graph for this function:<para>
 <para>Handle Wifi TX. </para>
 </para>
 
+<para>Handle wifi SSID.</para>
+
 <para><formalpara><title>Returns</title>
 
 <para>String </para>
@@ -683,6 +705,8 @@ Here is the caller graph for this function:<para>
 
 <para>Function to handle the HTTP requests for the variables. </para>
 </para>
+
+<para>Handle toggle.</para>
 
 <para>Processor 
                 <formalpara>
