@@ -1,5 +1,5 @@
-\doxysection{src/\+MD\+\_\+wifi.cpp File Reference}
-\hypertarget{_m_d__wifi_8cpp}{}\label{_m_d__wifi_8cpp}\index{src/MD\_wifi.cpp@{src/MD\_wifi.cpp}}
+\doxysection{C\+:/workspace/\+Projeto/\+Inteligent\+Destiller/src/\+MD\+\_\+wifi.cpp File Reference}
+\hypertarget{_m_d__wifi_8cpp}{}\label{_m_d__wifi_8cpp}\index{C:/workspace/Projeto/InteligentDestiller/src/MD\_wifi.cpp@{C:/workspace/Projeto/InteligentDestiller/src/MD\_wifi.cpp}}
 {\ttfamily \#include "{}MD.\+h"{}}\newline
 Include dependency graph for MD\+\_\+wifi.\+cpp\+:
 % FIG 0
@@ -44,21 +44,41 @@ This function creates a Soft Access Point
 
 The IP Address of the ESP32 Soft Access Point is set to\+: 192.\+168.\+100.\+100 
 \end{DoxyNote}
-Set hostname
+Set the hostname for the Soft Access Point
 
-Set event handler for Wi\+Fi events
+Set the Wi\+Fi event handler
 
-Enable auto reconnect
+Enable auto reconnect to the Wi\+Fi network
 
 Set to Station + Access Point mode
 
-Set IP Address of the ESP32 Soft Access Point
+Start the Soft Access Point with the SSID and password
+
+Get the handle for the Soft Access Point interface
+
+Define IP configuration structure and set desired IPs
+
+IP configuration structure
 
 AP IP
 
 Gateway IP
 
-Subnet MaskHere is the call graph for this function\+:
+Subnet Mask
+
+Set the IP configuration to the soft AP interface
+
+Stop DHCP server to change settings
+
+Apply new IP settings
+
+Restart DHCP server with new settings
+
+Print the hostname
+
+Print the IP address of the ESP32 Soft Access Point
+
+Print the IP address of the ESP32 Soft Access PointHere is the call graph for this function\+:
 % FIG 1
 Here is the caller graph for this function\+:
 % FIG 2
@@ -96,7 +116,15 @@ Set the Wi\+Fi\+Manager parameters and connect to the Wi\+Fi network with the SS
 
 Get the SSID and password from the Wi\+Fi\+Manager and connect to the Wi\+Fi network
 
+Get the SSID from the Wi\+Fi\+Manager
+
+Get the password from the Wi\+Fi\+Manager
+
 Connect to the Wi\+Fi network with the SSID and password
+
+Connect to the Wi\+Fi network with the SSID and password
+
+Delay for 10 ms
 
 Wait for the ESP32 to connect to the Wi\+Fi network and print the connection statusHere is the call graph for this function\+:
 % FIG 3
@@ -195,13 +223,35 @@ Quality in percentage
 
 Quality in string format
 
+Last quality in percentage
+
+Last RSSI in d\+Bm
+
+If the last RSSI is equal to the current RSSI
+
+Return the quality in string format with RSSI and quality in percentage values
+
+Calculate the quality in percentage
+
+If the RSSI is less than or equal to -\/100 d\+Bm
+
+Set the quality to 0\%
+
+If the RSSI is greater than or equal to -\/5 d\+Bm
+
+Set the quality to 100\%
+
+If the RSSI is between -\/100 d\+Bm and -\/5 d\+Bm
+
 Calculate the quality in percentage
 
 Return the quality in string format with RSSI and quality in percentage values
 
 Send the quality in percentage to the web server as a JSON object
 
-Return the quality in string format with RSSI and quality in percentage valuesHere is the caller graph for this function\+:
+Return the quality in string format with RSSI and quality in percentage values
+
+Update the last RSSI with the current RSSIHere is the caller graph for this function\+:
 % FIG 9
 
 

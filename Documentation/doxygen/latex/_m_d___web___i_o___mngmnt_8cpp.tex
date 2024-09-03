@@ -1,5 +1,5 @@
-\doxysection{src/\+MD\+\_\+\+Web\+\_\+\+IO\+\_\+\+Mngmnt.cpp File Reference}
-\hypertarget{_m_d___web___i_o___mngmnt_8cpp}{}\label{_m_d___web___i_o___mngmnt_8cpp}\index{src/MD\_Web\_IO\_Mngmnt.cpp@{src/MD\_Web\_IO\_Mngmnt.cpp}}
+\doxysection{C\+:/workspace/\+Projeto/\+Inteligent\+Destiller/src/\+MD\+\_\+\+Web\+\_\+\+IO\+\_\+\+Mngmnt.cpp File Reference}
+\hypertarget{_m_d___web___i_o___mngmnt_8cpp}{}\label{_m_d___web___i_o___mngmnt_8cpp}\index{C:/workspace/Projeto/InteligentDestiller/src/MD\_Web\_IO\_Mngmnt.cpp@{C:/workspace/Projeto/InteligentDestiller/src/MD\_Web\_IO\_Mngmnt.cpp}}
 {\ttfamily \#include "{}MD.\+h"{}}\newline
 Include dependency graph for MD\+\_\+\+Web\+\_\+\+IO\+\_\+\+Mngmnt.\+cpp\+:
 % FIG 0
@@ -65,6 +65,8 @@ bool get\+Auto\+Mode\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 GETS BLOCK. 
 
+Set resistor.
+
 Get the Ind Max object
 
 This function returns the state of the max indicator.
@@ -86,6 +88,8 @@ bool get\+Pump\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Get the Pump object. 
 
+Get auto mode.
+
 This function returns the state of the water pump.
 
 \begin{DoxyReturn}{Returns}
@@ -104,6 +108,8 @@ bool get\+Resistor\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 Get the Ind Min object. 
+
+Get valve water out.
 
 This function returns the state of the min indicator.
 
@@ -124,6 +130,8 @@ bool get\+Valv\+\_\+\+Water\+\_\+\+In\+Web (\begin{DoxyParamCaption}{}{}\end{Dox
 
 Get the Ind Alarm object. 
 
+Get pump state.
+
 This function returns the state of the alarm indicator.
 
 \begin{DoxyReturn}{Returns}
@@ -143,6 +151,8 @@ bool get\+Valv\+\_\+\+Water\+\_\+\+Out\+Web (\begin{DoxyParamCaption}{}{}\end{Do
 
 Get the Valv Water Out object. 
 
+Get valve water in.
+
 This function returns the state of the water out valve.
 
 \begin{DoxyReturn}{Returns}
@@ -161,6 +171,8 @@ void set\+Auto\+Mode\+Web (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{Do
 
 
 SETS BLOCK. 
+
+Toggle resistor.
 
 Set the Auto Mode object
 
@@ -194,6 +206,8 @@ void set\+Pump\+Web (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyPara
 
 Set the Pump object. 
 
+Set auto mode.
+
 This function sets the state of the pump.
 
 
@@ -223,6 +237,8 @@ void set\+Resistor\+Web (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{Doxy
 
 
 Set the Resistor object. 
+
+Set valve water out.
 
 This function sets the state of the resistor.
 
@@ -254,6 +270,8 @@ void set\+Valve\+Water\+In\+Web (\begin{DoxyParamCaption}\item[{bool}]{state}{}\
 
 Set the Valve Water In object. 
 
+Set pump state.
+
 This function sets the state of the water in valve.
 
 
@@ -283,6 +301,8 @@ void set\+Valve\+Water\+Out\+Web (\begin{DoxyParamCaption}\item[{bool}]{state}{}
 
 
 Set the Valve Water Out object. 
+
+Set valve water in.
 
 This function sets the state of the water out valve.
 
@@ -314,6 +334,8 @@ void toggle\+Auto\+Mode\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 TOGGLES BLOCK. 
 
+Update outputs for the web interface.
+
 Toggle Auto Mode Web
 
 This function toggles the auto mode.
@@ -342,6 +364,8 @@ void toggle\+Pump\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 Toggle Pump Web. 
+
+Toggle auto mode.
 
 This function toggles the pump.
 
@@ -378,6 +402,8 @@ void toggle\+Resistor\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Toggle Resistor Web. 
 
+Toggle valve water out.
+
 This function toggles the resistor.
 
 \begin{DoxyReturn}{Returns}
@@ -405,6 +431,8 @@ void toggle\+Valve\+Water\+In\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 Toggle Valve Water In Web. 
 
+Toggle pump state.
+
 This function toggles the water in valve.
 
 \begin{DoxyReturn}{Returns}
@@ -431,6 +459,8 @@ void toggle\+Valve\+Water\+Out\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamC
 
 
 Toggle Valve Water Out Web. 
+
+Toggle valve water in.
 
 This function toggles the water out valve.
 
@@ -460,6 +490,8 @@ void update\+Outputs\+Web (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 Output variables image. 
+
+Mode management.
 
 FUNCTIONS BLOCK
 

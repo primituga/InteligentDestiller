@@ -19,23 +19,28 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/MD_wifi.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp</label>
         <link refid="_m_d__wifi_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>SPIFFS.h</label>
       </node>
       <node id="4">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="5">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="var">
@@ -51,8 +56,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="10" column="12" bodyfile="src/MD_wifi.cpp" bodystart="10" bodyend="-1"/>
-        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="10" column="12" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="10" bodyend="-1"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</referencedby>
       </memberdef>
       <memberdef kind="variable" id="_m_d__wifi_8cpp_1af2b787a2a524d5d98ded3191ca76c160" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -66,8 +71,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="11" column="12" bodyfile="src/MD_wifi.cpp" bodystart="11" bodyend="-1"/>
-        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="11" column="12" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="11" bodyend="-1"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -106,9 +111,9 @@
 <para>Station connected to ESP32 Soft Access Point</para>
 <para>Station disconnected from ESP32 Soft Access Point</para>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="19" column="6" bodyfile="src/MD_wifi.cpp" bodystart="19" bodyend="39"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="19" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="19" bodyend="39"/>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
-        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</referencedby>
+        <referencedby refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d__wifi_8cpp_1abb46cda72435678d0ea2a5881f4349e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>String</type>
@@ -130,14 +135,24 @@
 <para>Get the Received Signal Strength Indicator (RSSI) in dBm</para>
 <para>Quality in percentage</para>
 <para>Quality in string format</para>
+<para>Last quality in percentage</para>
+<para>Last RSSI in dBm</para>
+<para>If the last RSSI is equal to the current RSSI</para>
+<para>Return the quality in string format with RSSI and quality in percentage values</para>
+<para>Calculate the quality in percentage</para>
+<para>If the RSSI is less than or equal to -100 dBm</para>
+<para>Set the quality to 0%</para>
+<para>If the RSSI is greater than or equal to -5 dBm</para>
+<para>Set the quality to 100%</para>
+<para>If the RSSI is between -100 dBm and -5 dBm</para>
 <para>Calculate the quality in percentage</para>
 <para>Return the quality in string format with RSSI and quality in percentage values</para>
 <para>Send the quality in percentage to the web server as a JSON object</para>
 <para>Return the quality in string format with RSSI and quality in percentage values</para>
+<para>Update the last RSSI with the current RSSI</para>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="46" column="8" bodyfile="src/MD_wifi.cpp" bodystart="46" bodyend="70"/>
-        <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
-        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</referencedby>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="46" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="46" bodyend="81"/>
+        <referencedby refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</referencedby>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1a6f8cf668f5479d2c408cd6002f30dc94" compoundref="_m_d___web___handlers_8cpp" startline="49" endline="49">handleWifiQuality</referencedby>
       </memberdef>
@@ -166,15 +181,19 @@
 <para>Hostname</para>
 <para>Set the WiFiManager parameters and connect to the WiFi network with the SSID and password stored in the EEPROM memory</para>
 <para>Get the SSID and password from the WiFiManager and connect to the WiFi network</para>
+<para>Get the SSID from the WiFiManager</para>
+<para>Get the password from the WiFiManager</para>
 <para>Connect to the WiFi network with the SSID and password</para>
+<para>Connect to the WiFi network with the SSID and password</para>
+<para>Delay for 10 ms</para>
 <para>Wait for the ESP32 to connect to the WiFi network and print the connection status</para>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="77" column="6" bodyfile="src/MD_wifi.cpp" bodystart="77" bodyend="112"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="88" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="88" bodyend="123"/>
         <references refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3">server</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" compoundref="_m_d___serial_8cpp" startline="67" endline="70">sPrintStr</references>
-        <references refid="_m_d__wifi_8cpp_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="70">wifiQuality</references>
-        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</referencedby>
+        <references refid="_m_d__wifi_8cpp_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="81">wifiQuality</references>
+        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="163" endline="200">initWIFI</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -194,22 +213,32 @@
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>Set hostname</para>
-<para>Set event handler for WiFi events</para>
-<para>Enable auto reconnect</para>
+<para>Set the hostname for the Soft Access Point</para>
+<para>Set the WiFi event handler</para>
+<para>Enable auto reconnect to the WiFi network</para>
 <para>Set to Station + Access Point mode</para>
-<para>Set IP Address of the ESP32 Soft Access Point</para>
+<para>Start the Soft Access Point with the SSID and password</para>
+<para>Get the handle for the Soft Access Point interface</para>
+<para>Define IP configuration structure and set desired IPs</para>
+<para>IP configuration structure</para>
 <para>AP IP</para>
 <para>Gateway IP</para>
 <para>Subnet Mask</para>
+<para>Set the IP configuration to the soft AP interface</para>
+<para>Stop DHCP server to change settings</para>
+<para>Apply new IP settings</para>
+<para>Restart DHCP server with new settings</para>
+<para>Print the hostname</para>
+<para>Print the IP address of the ESP32 Soft Access Point</para>
+<para>Print the IP address of the ESP32 Soft Access Point</para>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="120" column="6" bodyfile="src/MD_wifi.cpp" bodystart="120" bodyend="137"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="131" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="131" bodyend="156"/>
         <references refid="_m_d__wifi_8cpp_1a76abca56e85121cdcc6b6936ad2fd51c" compoundref="_m_d__wifi_8cpp" startline="19" endline="39">OnWiFiEvent</references>
         <references refid="_m_d__wifi_8cpp_1af2b787a2a524d5d98ded3191ca76c160" compoundref="_m_d__wifi_8cpp" startline="11">soft_ap_password</references>
         <references refid="_m_d__wifi_8cpp_1afe7cd998fb5cfbf9fc3037af4963f3d6" compoundref="_m_d__wifi_8cpp" startline="10">soft_ap_ssid</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" compoundref="_m_d___serial_8cpp" startline="67" endline="70">sPrintStr</references>
-        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</referencedby>
+        <referencedby refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="163" endline="200">initWIFI</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d__wifi_8cpp_1a6a4f6edd72eb1d80a65dea86d761f744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -237,11 +266,11 @@
 <para>Initiate WiFi</para>
 <para>Initiate WiFi in AP mode</para>
         </inbodydescription>
-        <location file="src/MD_wifi.cpp" line="144" column="6" bodyfile="src/MD_wifi.cpp" bodystart="144" bodyend="181"/>
-        <references refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="120" endline="137">connectToSoftAP</references>
-        <references refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="77" endline="112">connectToWIFI</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" line="163" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" bodystart="163" bodyend="200"/>
+        <references refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" compoundref="_m_d__wifi_8cpp" startline="131" endline="156">connectToSoftAP</references>
+        <references refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" compoundref="_m_d__wifi_8cpp" startline="88" endline="123">connectToWIFI</references>
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
-        <references refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" compoundref="_m_d_8h" startline="111">WIFI_MODE_OPTIONS</references>
+        <references refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" compoundref="_m_d_8h" startline="116">WIFI_MODE_OPTIONS</references>
         <referencedby refid="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" compoundref="_a_p__main_8cpp" startline="38" endline="51">setup</referencedby>
       </memberdef>
     </sectiondef>
@@ -279,107 +308,125 @@
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46" refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" refkind="member"><highlight class="normal">String<sp/><ref refid="_m_d__wifi_8cpp_1abb46cda72435678d0ea2a5881f4349e7" kindref="member">wifiQuality</ref>()</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rssi<sp/>=<sp/>WiFi.RSSI();<sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quality;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/>String<sp/>qualityStr;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rssi<sp/>&lt;=<sp/>-100)</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>quality<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rssi<sp/>&gt;=<sp/>-5)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>quality<sp/>=<sp/>100;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>quality<sp/>=<sp/>(rssi<sp/>+<sp/>100)<sp/>*<sp/>1.25;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>qualityStr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;RSSI<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(rssi)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>dBm<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(quality)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>%)&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd" kindref="member">ws</ref>.textAll(</highlight><highlight class="stringliteral">&quot;{\&quot;type\&quot;:<sp/>\&quot;wifiQuality\&quot;,<sp/>\&quot;value\&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(quality)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qualityStr;<sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77" refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" kindref="member">connectToWIFI</ref>()</highlight></codeline>
-<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>WiFiManager<sp/>wifiManager;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.end();<sp/></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>wifiManager.setClass(</highlight><highlight class="stringliteral">&quot;invert&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>wifiManager.setConfigPortalTimeout(60);<sp/></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/>wifiManager.setConnectTimeout(20);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>wifiManager.setDebugOutput(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/>wifiManager.setHostname(</highlight><highlight class="stringliteral">&quot;Destiler&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/>WiFi.setHostname(</highlight><highlight class="stringliteral">&quot;Destiler&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!wifiManager.autoConnect(</highlight><highlight class="stringliteral">&quot;Conf<sp/>Destiler<sp/>AP&quot;</highlight><highlight class="normal">))</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>connect&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/>String<sp/>ssid<sp/>=<sp/>wifiManager.getWiFiSSID();</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/>String<sp/>password<sp/>=<sp/>wifiManager.getWiFiPass();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rssi<sp/>=<sp/>WiFi.RSSI();<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quality;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>String<sp/>qualityStr;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lastQuality<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lastRSSI<sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lastRSSI<sp/>==<sp/>rssi)<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qualityStr;<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rssi<sp/>&lt;=<sp/>-100)<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>quality<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rssi<sp/>&gt;=<sp/>-5)<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>quality<sp/>=<sp/>100;<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>quality<sp/>=<sp/>(rssi<sp/>+<sp/>100)<sp/>*<sp/>1.25;<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>qualityStr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;RSSI<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(rssi)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>dBm<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(quality)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>%)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ws.textAll(&quot;{\&quot;type\&quot;:<sp/>\&quot;wifiQuality\&quot;,<sp/>\&quot;value\&quot;:<sp/>&quot;<sp/>+<sp/>String(quality)<sp/>+<sp/>&quot;}&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qualityStr;<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>lastRSSI<sp/>=<sp/>rssi;<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" kindref="member">connectToWIFI</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>WiFiManager<sp/>wifiManager;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3" kindref="member">server</ref>.end();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>wifiManager.setClass(</highlight><highlight class="stringliteral">&quot;invert&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>wifiManager.setConfigPortalTimeout(60);<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>wifiManager.setConnectTimeout(20);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>wifiManager.setDebugOutput(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>wifiManager.setHostname(</highlight><highlight class="stringliteral">&quot;Destiler&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>WiFi.setHostname(</highlight><highlight class="stringliteral">&quot;Destiler&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/>WiFi.begin(ssid.c_str(),<sp/>password.c_str());</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/>delay(10);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;--Hostname:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(WiFi.getHostname()));</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;--wmHostname:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>wifiManager.getWiFiHostname());</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(</highlight><highlight class="stringliteral">&quot;--SSID:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(WiFi.SSID());</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(</highlight><highlight class="stringliteral">&quot;--TxPower:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(String(WiFi.getTxPower()));</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>dBm&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_m_d__wifi_8cpp_1abb46cda72435678d0ea2a5881f4349e7" kindref="member">wifiQuality</ref>());</highlight></codeline>
-<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120" refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" kindref="member">connectToSoftAP</ref>()</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/>WiFi.setHostname(</highlight><highlight class="stringliteral">&quot;DestilerSoft&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/>WiFi.onEvent(<ref refid="_m_d__wifi_8cpp_1a76abca56e85121cdcc6b6936ad2fd51c" kindref="member">OnWiFiEvent</ref>);<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/>WiFi.setAutoReconnect(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/><sp/></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/>WiFi.mode(WIFI_MODE_APSTA);<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/>WiFi.softAP(<ref refid="_m_d__wifi_8cpp_1afe7cd998fb5cfbf9fc3037af4963f3d6" kindref="member">soft_ap_ssid</ref>,<sp/><ref refid="_m_d__wifi_8cpp_1af2b787a2a524d5d98ded3191ca76c160" kindref="member">soft_ap_password</ref>);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/>WiFi.softAPConfig(IPAddress(192,<sp/>168,<sp/>100,<sp/>100),<sp/></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IPAddress(192,<sp/>168,<sp/>100,<sp/>1),<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IPAddress(255,<sp/>255,<sp/>255,<sp/>0));<sp/><sp/></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;Hostname:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(WiFi.getHostname()));</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(</highlight><highlight class="stringliteral">&quot;ESP32<sp/>IP<sp/>as<sp/>soft<sp/>AP:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(WiFi.softAPIP().toString());</highlight></codeline>
-<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144" refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d__wifi_8cpp_1a6a4f6edd72eb1d80a65dea86d761f744" kindref="member">initWIFI</ref>()</highlight></codeline>
-<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>WIFI_SOFTAP_FLAG<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED<sp/>&amp;&amp;<sp/><ref refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kindref="member">WIFI_MODE_OPTIONS</ref><sp/>==<sp/>1)</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;WIFI<sp/>INIT....&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" kindref="member">connectToWIFI</ref>();<sp/></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WIFI_SOFTAP_FLAG<sp/>&amp;&amp;<sp/><ref refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kindref="member">WIFI_MODE_OPTIONS</ref><sp/>==<sp/>2)</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;SoftAP<sp/>INIT....&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" kindref="member">connectToSoftAP</ref>();<sp/></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>WIFI_SOFTAP_FLAG<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED<sp/>&amp;&amp;<sp/><ref refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kindref="member">WIFI_MODE_OPTIONS</ref><sp/>==<sp/>3)</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;WIFI<sp/>INIT<sp/>and<sp/>SoftAP....&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" kindref="member">connectToWIFI</ref>();<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" kindref="member">connectToSoftAP</ref>();<sp/></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!wifiManager.autoConnect(</highlight><highlight class="stringliteral">&quot;Conf<sp/>Destiler<sp/>AP&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>connect&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>String<sp/>ssid<sp/>=<sp/>wifiManager.getWiFiSSID();<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>String<sp/>password<sp/>=<sp/>wifiManager.getWiFiPass();<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>WiFi.begin(ssid.c_str(),<sp/>password.c_str());<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>delay(10);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;--Hostname:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(WiFi.getHostname()));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;--wmHostname:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>wifiManager.getWiFiHostname());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(</highlight><highlight class="stringliteral">&quot;--SSID:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(WiFi.SSID());</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(</highlight><highlight class="stringliteral">&quot;--TxPower:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(String(WiFi.getTxPower()));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>dBm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_m_d__wifi_8cpp_1abb46cda72435678d0ea2a5881f4349e7" kindref="member">wifiQuality</ref>());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" kindref="member">connectToSoftAP</ref>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>WiFi.setHostname(</highlight><highlight class="stringliteral">&quot;DestilerSoft&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>WiFi.onEvent(<ref refid="_m_d__wifi_8cpp_1a76abca56e85121cdcc6b6936ad2fd51c" kindref="member">OnWiFiEvent</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>WiFi.setAutoReconnect(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>WiFi.mode(WIFI_MODE_APSTA);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>WiFi.softAP(<ref refid="_m_d__wifi_8cpp_1afe7cd998fb5cfbf9fc3037af4963f3d6" kindref="member">soft_ap_ssid</ref>,<sp/><ref refid="_m_d__wifi_8cpp_1af2b787a2a524d5d98ded3191ca76c160" kindref="member">soft_ap_password</ref>);<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>esp_netif_t<sp/>*netif_ap<sp/>=<sp/>esp_netif_get_handle_from_ifkey(</highlight><highlight class="stringliteral">&quot;WIFI_AP_DEF&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>esp_netif_ip_info_t<sp/>ipInfo;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>ipInfo.ip.addr<sp/>=<sp/>ipaddr_addr(</highlight><highlight class="stringliteral">&quot;192.168.100.100&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>ipInfo.gw.addr<sp/>=<sp/>ipaddr_addr(</highlight><highlight class="stringliteral">&quot;192.168.100.1&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>ipInfo.netmask.addr<sp/>=<sp/>ipaddr_addr(</highlight><highlight class="stringliteral">&quot;255.255.255.0&quot;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>esp_netif_dhcps_stop(netif_ap);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>esp_netif_set_ip_info(netif_ap,<sp/>&amp;ipInfo);<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>esp_netif_dhcps_start(netif_ap);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;Hostname:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String(WiFi.getHostname()));<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" kindref="member">sPrintStr</ref>(</highlight><highlight class="stringliteral">&quot;ESP32<sp/>IP<sp/>as<sp/>soft<sp/>AP:<sp/>&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(WiFi.softAPIP().toString());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_m_d__wifi_8cpp_1a6a4f6edd72eb1d80a65dea86d761f744" kindref="member">initWIFI</ref>()</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>WIFI_SOFTAP_FLAG<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED<sp/>&amp;&amp;<sp/><ref refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kindref="member">WIFI_MODE_OPTIONS</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;WIFI<sp/>INIT....&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" kindref="member">connectToWIFI</ref>();<sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WIFI_SOFTAP_FLAG<sp/>&amp;&amp;<sp/><ref refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kindref="member">WIFI_MODE_OPTIONS</ref><sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;SoftAP<sp/>INIT....&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" kindref="member">connectToSoftAP</ref>();<sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>WIFI_SOFTAP_FLAG<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WiFi.status()<sp/>!=<sp/>WL_CONNECTED<sp/>&amp;&amp;<sp/><ref refid="_m_d_8h_1a874bb348c2f4e8ca353d7e38c07e32d2" kindref="member">WIFI_MODE_OPTIONS</ref><sp/>==<sp/>3)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" kindref="member">sPrintLnStr</ref>(</highlight><highlight class="stringliteral">&quot;WIFI<sp/>INIT<sp/>and<sp/>SoftAP....&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a1d87ca7595a03369db2c1199bc624318" kindref="member">connectToWIFI</ref>();<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_m_d__wifi_8cpp_1a9101d1f69c8269cfa31d1c48e083f9c7" kindref="member">connectToSoftAP</ref>();<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/MD_wifi.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp"/>
   </compounddef>
 </doxygen>

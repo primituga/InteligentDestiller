@@ -11,9 +11,9 @@ digraph "getPumpWeb"
   Node2 -> Node3 [id="edge8_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p__main_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f",tooltip="Loop function to run the machine operation."];
   Node1 -> Node4 [id="edge9_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="togglePumpWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#aa5b521b0b413a137701f7e2f630f4fdc",tooltip="Toggle Pump Web."];
+  Node4 [id="Node000004",label="togglePumpWeb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___i_o___mngmnt_8cpp.html#aa5b521b0b413a137701f7e2f630f4fdc",tooltip="Toggle auto mode."];
   Node4 -> Node5 [id="edge10_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="handleToggle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#ade79ba305a284591f94d9eb3c89718bd",tooltip="Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax."];
+  Node5 [id="Node000005",label="handleToggle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___web___handlers_8cpp.html#ade79ba305a284591f94d9eb3c89718bd",tooltip="Handle state."];
   Node5 -> Node6 [id="edge11_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node6 [id="Node000006",label="setupRoutes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p___web_8cpp.html#a553ce9cca044d40931e5cbe9deb407e4",tooltip="Setup Calls."];
   Node6 -> Node7 [id="edge12_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];

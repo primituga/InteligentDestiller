@@ -1,8 +1,8 @@
-.TH "include/MD.h" 3 "IntelligentDestiller" \" -*- nroff -*-
+.TH "C:/workspace/Projeto/InteligentDestiller/include/MD.h" 3 "IntelligentDestiller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/MD.h \- Header file for the MD project\&.  
+C:/workspace/Projeto/InteligentDestiller/include/MD.h \- Header file for the MD project\&.  
 
 .SH SYNOPSIS
 .br
@@ -16,152 +16,150 @@ include/MD.h \- Header file for the MD project\&.
 .ti -1c
 .RI "#define \fBALARM_TIME_ON\fP   600"
 .br
-.RI "TIMERS\&. "
+.RI "Processor\&. "
 .ti -1c
 .RI "#define \fBALARM_TIME_OFF\fP   200"
 .br
 .ti -1c
-.RI "#define \fBWIFI_MODE_OPTIONS\fP   1"
+.RI "#define \fBWIFI_MODE_OPTIONS\fP   3"
 .br
-.RI "WIFI SERVICE\&. "
+.RI "Testa as entradas e saidas\&. "
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBsendWiFiQuality\fP ()"
+.RI "void \fBtoggleAutoMode\fP ()"
 .br
 .RI "MiddleWare Header\&. "
 .ti -1c
-.RI "void \fBtoggleAutoMode\fP ()"
-.br
-.RI "Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) "
-.ti -1c
 .RI "void \fBtoggleIndAuto\fP ()"
 .br
-.RI "Toggle the Auto Mode of the Machine\&. "
+.RI "Toggle auto mode\&. "
 .ti -1c
 .RI "void \fBindicatorsManagement\fP ()"
 .br
+.RI "Toggle auto indicator\&. "
 .ti -1c
 .RI "void \fBmodeManagement\fP ()"
 .br
+.RI "Indicators management\&. "
 .ti -1c
 .RI "void \fBupdateOutputsWeb\fP ()"
 .br
-.RI "Output variables image\&. "
+.RI "Mode management\&. "
 .ti -1c
 .RI "void \fBtoggleAutoModeWeb\fP ()"
 .br
-.RI "TOGGLES BLOCK\&. "
+.RI "Update outputs for the web interface\&. "
 .ti -1c
 .RI "void \fBtogglePumpWeb\fP ()"
 .br
-.RI "Toggle Pump Web\&. "
+.RI "Toggle auto mode\&. "
 .ti -1c
 .RI "void \fBtoggleValveWaterInWeb\fP ()"
 .br
-.RI "Toggle Valve Water In Web\&. "
+.RI "Toggle pump state\&. "
 .ti -1c
 .RI "void \fBtoggleValveWaterOutWeb\fP ()"
 .br
-.RI "Toggle Valve Water Out Web\&. "
+.RI "Toggle valve water in\&. "
 .ti -1c
 .RI "void \fBtoggleResistorWeb\fP ()"
 .br
-.RI "Toggle Resistor Web\&. "
+.RI "Toggle valve water out\&. "
 .ti -1c
 .RI "void \fBsetAutoModeWeb\fP (bool state)"
 .br
-.RI "SETS BLOCK\&. "
+.RI "Toggle resistor\&. "
 .ti -1c
 .RI "void \fBsetPumpWeb\fP (bool state)"
 .br
-.RI "Set the Pump object\&. "
+.RI "Set auto mode\&. "
 .ti -1c
 .RI "void \fBsetValveWaterInWeb\fP (bool state)"
 .br
-.RI "Set the Valve Water In object\&. "
+.RI "Set pump state\&. "
 .ti -1c
 .RI "void \fBsetValveWaterOutWeb\fP (bool state)"
 .br
-.RI "Set the Valve Water Out object\&. "
+.RI "Set valve water in\&. "
 .ti -1c
 .RI "void \fBsetResistorWeb\fP (bool state)"
 .br
-.RI "Set the Resistor object\&. "
+.RI "Set valve water out\&. "
 .ti -1c
 .RI "bool \fBgetAutoModeWeb\fP ()"
 .br
-.RI "GETS BLOCK\&. "
+.RI "Set resistor\&. "
 .ti -1c
 .RI "bool \fBgetPumpWeb\fP ()"
 .br
-.RI "Get the Pump object\&. "
+.RI "Get auto mode\&. "
 .ti -1c
 .RI "bool \fBgetValv_Water_InWeb\fP ()"
 .br
-.RI "Get the Ind Alarm object\&. "
+.RI "Get pump state\&. "
 .ti -1c
 .RI "bool \fBgetValv_Water_OutWeb\fP ()"
 .br
-.RI "Get the Valv Water Out object\&. "
+.RI "Get valve water in\&. "
 .ti -1c
 .RI "bool \fBgetResistorWeb\fP ()"
 .br
-.RI "Get the Ind Min object\&. "
+.RI "Get valve water out\&. "
 .ti -1c
 .RI "String \fBhandleTimer\fP ()"
 .br
-.RI "Handlers\&. "
+.RI "Get resistor\&. "
 .ti -1c
 .RI "String \fBhandleHour\fP ()"
 .br
-.RI "Handle Hour\&. "
+.RI "Handle timer\&. "
 .ti -1c
 .RI "String \fBhandleMinute\fP ()"
 .br
-.RI "Handle Minute\&. "
+.RI "Handle hour\&. "
 .ti -1c
 .RI "String \fBhandleSecound\fP ()"
 .br
-.RI "Handle Secound\&. "
+.RI "Handle minute\&. "
 .ti -1c
 .RI "String \fBhandleWifiQuality\fP ()"
 .br
-.RI "Handlers for Wifi Quality, SSID, TX and IP\&. "
+.RI "Handle secound\&. "
 .ti -1c
 .RI "String \fBhandleWifiSSID\fP ()"
 .br
-.RI "Handle Wifi SSID\&. "
+.RI "Handle wifi quality\&. "
 .ti -1c
 .RI "String \fBhandleWifiTX\fP ()"
 .br
-.RI "Handle Wifi TX\&. "
+.RI "Handle wifi SSID\&. "
 .ti -1c
 .RI "String \fBhandleWifiIP\fP ()"
 .br
-.RI "Handle Wifi IP\&. "
+.RI "Handle wifi TX\&. "
 .ti -1c
 .RI "String \fBhandleTimeAdjust\fP (const String &adjustment)"
 .br
-.RI "Timer Add/Remove Time\&. "
+.RI "Handle wifi IP\&. "
 .ti -1c
 .RI "String \fBhandleTimerControl\fP (const String &control)"
 .br
-.RI "Timer Start/Stop/Reset\&. "
+.RI "Handle time adjustment\&. "
 .ti -1c
 .RI "String \fBhandleState\fP (const String &state)"
 .br
-.RI "Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response\&. "
+.RI "Handle timer control\&. "
 .ti -1c
 .RI "String \fBhandleToggle\fP (const String &toggle)"
 .br
-.RI "Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax\&. "
+.RI "Handle state\&. "
 .ti -1c
 .RI "String \fBprocessor\fP (const String &var)"
 .br
-.RI "Function to handle the HTTP requests for the variables\&. "
+.RI "Handle toggle\&. "
 .ti -1c
 .RI "long \fBwebTimer\fP (String op, int16_t amount)"
 .br
@@ -303,11 +301,11 @@ Sérgio Carmo
 .SS "#define ALARM_TIME_ON   600"
 
 .PP
-TIMERS\&. Defining timers for the alarm indicator blinking 
-.SS "#define WIFI_MODE_OPTIONS   1"
+Processor\&. TIMERS Defining timers for the alarm indicator blinking 
+.SS "#define WIFI_MODE_OPTIONS   3"
 
 .PP
-WIFI SERVICE\&. WIFI Functions calls 
+Testa as entradas e saidas\&. WIFI SERVICE WIFI Functions calls 
 .SH "Function Documentation"
 .PP 
 .SS "void add10m ()"
@@ -337,7 +335,10 @@ Add 1 secound to timer\&. Add 1 secound to timer\&.
 .SS "bool getAutoModeWeb ()"
 
 .PP
-GETS BLOCK\&. Get the Ind Max object
+Set resistor\&. Set resistor\&.
+
+.PP
+Get the Ind Max object
 
 .PP
 This function returns the state of the max indicator\&.
@@ -355,7 +356,10 @@ false
 .SS "bool getPumpWeb ()"
 
 .PP
-Get the Pump object\&. This function returns the state of the water pump\&.
+Get auto mode\&. Get auto mode\&.
+
+.PP
+This function returns the state of the water pump\&.
 
 .PP
 \fBReturns\fP
@@ -370,7 +374,10 @@ false
 .SS "bool getResistorWeb ()"
 
 .PP
-Get the Ind Min object\&. This function returns the state of the min indicator\&.
+Get valve water out\&. Get valve water out\&.
+
+.PP
+This function returns the state of the min indicator\&.
 
 .PP
 \fBReturns\fP
@@ -443,7 +450,10 @@ Return the timer status (ON/OFF)
 .SS "bool getValv_Water_InWeb ()"
 
 .PP
-Get the Ind Alarm object\&. This function returns the state of the alarm indicator\&.
+Get pump state\&. Get pump state\&.
+
+.PP
+This function returns the state of the alarm indicator\&.
 
 .PP
 \fBReturns\fP
@@ -458,7 +468,10 @@ false
 .SS "bool getValv_Water_OutWeb ()"
 
 .PP
-Get the Valv Water Out object\&. This function returns the state of the water out valve\&.
+Get valve water in\&. Get valve water in\&.
+
+.PP
+This function returns the state of the water out valve\&.
 
 .PP
 \fBReturns\fP
@@ -473,7 +486,8 @@ false
 .SS "String handleHour ()"
 
 .PP
-Handle Hour\&. 
+Handle timer\&. Handle timer\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -489,7 +503,8 @@ This function returns the timer hour
 .SS "String handleMinute ()"
 
 .PP
-Handle Minute\&. 
+Handle hour\&. Handle hour\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -505,7 +520,8 @@ This function returns the timer minute
 .SS "String handleSecound ()"
 
 .PP
-Handle Secound\&. 
+Handle minute\&. Handle minute\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -521,7 +537,10 @@ This function returns the timer secound
 .SS "String handleState (const String & state)"
 
 .PP
-Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response\&. Handle State 
+Handle timer control\&. Handle timer control\&.
+
+.PP
+Handle State 
 .PP
 \fBParameters\fP
 .RS 4
@@ -575,7 +594,10 @@ Return nothing if the state is not found
 .SS "String handleTimeAdjust (const String & adjustment)"
 
 .PP
-Timer Add/Remove Time\&. Handle Time Adjust 
+Handle wifi IP\&. Handle wifi IP\&.
+
+.PP
+Handle Time Adjust 
 .PP
 \fBParameters\fP
 .RS 4
@@ -638,7 +660,10 @@ Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m,
 .SS "String handleTimer ()"
 
 .PP
-Handlers\&. Handlers\&.
+Get resistor\&. ROUTES AND HANDLERS ///////////////////////////////////////////////////////////////////////////////////// Handlers
+
+.PP
+Get resistor\&.
 
 .PP
 Timer handlers
@@ -663,7 +688,10 @@ This function returns the timer in the format HH:MM:SS
 .SS "String handleTimerControl (const String & control)"
 
 .PP
-Timer Start/Stop/Reset\&. Handle Timer Control 
+Handle time adjustment\&. Handle time adjustment\&.
+
+.PP
+Handle Timer Control 
 .PP
 \fBParameters\fP
 .RS 4
@@ -699,7 +727,10 @@ Return the control message for the timer (start, stop, reset)
 .SS "String handleToggle (const String & toggle)"
 
 .PP
-Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax\&. Handle Toggle 
+Handle state\&. Handle state\&.
+
+.PP
+Handle Toggle 
 .PP
 \fBParameters\fP
 .RS 4
@@ -741,7 +772,8 @@ Return the toggle message for the variable (auto, pump, waterOut, resistor, wate
 .SS "String handleWifiIP ()"
 
 .PP
-Handle Wifi IP\&. 
+Handle wifi TX\&. Handle wifi TX\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -757,7 +789,10 @@ This function returns the WiFi IP address
 .SS "String handleWifiQuality ()"
 
 .PP
-Handlers for Wifi Quality, SSID, TX and IP\&. Handle Wifi Quality 
+Handle secound\&. Handle secound\&.
+
+.PP
+Handle Wifi Quality 
 .PP
 \fBReturns\fP
 .RS 4
@@ -773,7 +808,8 @@ This function returns the WiFi quality in percentage
 .SS "String handleWifiSSID ()"
 
 .PP
-Handle Wifi SSID\&. 
+Handle wifi quality\&. Handle wifi quality\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -789,7 +825,8 @@ This function returns the WiFi SSID
 .SS "String handleWifiTX ()"
 
 .PP
-Handle Wifi TX\&. 
+Handle wifi SSID\&. Handle wifi SSID\&.
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -803,7 +840,9 @@ This function returns the WiFi TX power
 .PP
 
 .SS "void indicatorsManagement ()"
-INDICATORS BLOCK
+
+.PP
+Toggle auto indicator\&. INDICATORS BLOCK
 
 .PP
 Set the maximum water level indicator
@@ -881,7 +920,9 @@ Initiate WiFi
 .PP
 Initiate WiFi in AP mode
 .SS "void modeManagement ()"
-MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator
+
+.PP
+Indicators management\&. MACHINE MODE MANAGEMENT BLOCK ///////////////////////////////////////////////////////////////////////////////////// If the machine is in manual mode, turn off the auto mode indicator
 
 .PP
 Toggle the auto mode
@@ -903,7 +944,10 @@ Turn off the timer
 .SS "String processor (const String & var)"
 
 .PP
-Function to handle the HTTP requests for the variables\&. Processor 
+Handle toggle\&. Handle toggle\&.
+
+.PP
+Processor 
 .PP
 \fBParameters\fP
 .RS 4
@@ -1060,14 +1104,13 @@ Remove 1 secound from timer\&. Remove 1 secound from timer\&.
 
 .PP
 Remove 10 minutes from timer\&. Remove 10 minutes from timer\&. 
-.SS "void sendWiFiQuality ()"
-
-.PP
-MiddleWare Header\&. Function prototypes 
 .SS "void setAutoModeWeb (bool state)"
 
 .PP
-SETS BLOCK\&. Set the Auto Mode object
+Toggle resistor\&. Toggle resistor\&.
+
+.PP
+Set the Auto Mode object
 
 .PP
 This function sets the state of the auto mode\&.
@@ -1099,7 +1142,10 @@ Set the old state to the current state
 .SS "void setPumpWeb (bool state)"
 
 .PP
-Set the Pump object\&. This function sets the state of the pump\&.
+Set auto mode\&. Set auto mode\&.
+
+.PP
+This function sets the state of the pump\&.
 
 .PP
 \fBParameters\fP
@@ -1128,7 +1174,10 @@ Set the old state to the current state
 .SS "void setResistorWeb (bool state)"
 
 .PP
-Set the Resistor object\&. This function sets the state of the resistor\&.
+Set valve water out\&. Set valve water out\&.
+
+.PP
+This function sets the state of the resistor\&.
 
 .PP
 \fBParameters\fP
@@ -1169,7 +1218,10 @@ Set the timer status (ON/OFF)
 .SS "void setValveWaterInWeb (bool state)"
 
 .PP
-Set the Valve Water In object\&. This function sets the state of the water in valve\&.
+Set pump state\&. Set pump state\&.
+
+.PP
+This function sets the state of the water in valve\&.
 
 .PP
 \fBParameters\fP
@@ -1198,7 +1250,10 @@ Set the old state to the current state
 .SS "void setValveWaterOutWeb (bool state)"
 
 .PP
-Set the Valve Water Out object\&. This function sets the state of the water out valve\&.
+Set valve water in\&. Set valve water in\&.
+
+.PP
+This function sets the state of the water out valve\&.
 
 .PP
 \fBParameters\fP
@@ -1367,7 +1422,11 @@ Test I/O Indicador Resistor
 .SS "void toggleAutoMode ()"
 
 .PP
-Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) 
+MiddleWare Header\&. I/O Map Header Function prototypes
+
+.PP
+MiddleWare Header\&.
+
 .PP
 \fBNote\fP
 .RS 4
@@ -1417,7 +1476,10 @@ save the current state as the last state, for next time through the loop
 .SS "void toggleAutoModeWeb ()"
 
 .PP
-TOGGLES BLOCK\&. Toggle Auto Mode Web
+Update outputs for the web interface\&. Update outputs for the web interface\&.
+
+.PP
+Toggle Auto Mode Web
 
 .PP
 This function toggles the auto mode\&.
@@ -1444,7 +1506,8 @@ Set the auto indicator state
 .SS "void toggleIndAuto ()"
 
 .PP
-Toggle the Auto Mode of the Machine\&. 
+Toggle auto mode\&. Toggle auto mode\&.
+
 .PP
 \fBNote\fP
 .RS 4
@@ -1455,7 +1518,10 @@ This function is used to toggle the Auto Mode of the Machine
 .SS "void togglePumpWeb ()"
 
 .PP
-Toggle Pump Web\&. This function toggles the pump\&.
+Toggle auto mode\&. Toggle auto mode\&.
+
+.PP
+This function toggles the pump\&.
 
 .PP
 \fBReturns\fP
@@ -1491,7 +1557,10 @@ Print the pump state
 .SS "void toggleResistorWeb ()"
 
 .PP
-Toggle Resistor Web\&. This function toggles the resistor\&.
+Toggle valve water out\&. Toggle valve water out\&.
+
+.PP
+This function toggles the resistor\&.
 
 .PP
 \fBReturns\fP
@@ -1515,7 +1584,10 @@ Set the resistor state
 .SS "void toggleValveWaterInWeb ()"
 
 .PP
-Toggle Valve Water In Web\&. This function toggles the water in valve\&.
+Toggle pump state\&. Toggle pump state\&.
+
+.PP
+This function toggles the water in valve\&.
 
 .PP
 \fBReturns\fP
@@ -1539,7 +1611,10 @@ Set the water in valve state
 .SS "void toggleValveWaterOutWeb ()"
 
 .PP
-Toggle Valve Water Out Web\&. This function toggles the water out valve\&.
+Toggle valve water in\&. Toggle valve water in\&.
+
+.PP
+This function toggles the water out valve\&.
 
 .PP
 \fBReturns\fP
@@ -1566,7 +1641,10 @@ Set the water out valve state
 .SS "void updateOutputsWeb ()"
 
 .PP
-Output variables image\&. FUNCTIONS BLOCK
+Mode management\&. Mode management\&.
+
+.PP
+FUNCTIONS BLOCK
 
 .PP
 Update Outputs Web
@@ -1712,6 +1790,36 @@ Quality in percentage
 Quality in string format
 
 .PP
+Last quality in percentage
+
+.PP
+Last RSSI in dBm
+
+.PP
+If the last RSSI is equal to the current RSSI
+
+.PP
+Return the quality in string format with RSSI and quality in percentage values
+
+.PP
+Calculate the quality in percentage
+
+.PP
+If the RSSI is less than or equal to -100 dBm
+
+.PP
+Set the quality to 0%
+
+.PP
+If the RSSI is greater than or equal to -5 dBm
+
+.PP
+Set the quality to 100%
+
+.PP
+If the RSSI is between -100 dBm and -5 dBm
+
+.PP
 Calculate the quality in percentage
 
 .PP
@@ -1722,6 +1830,9 @@ Send the quality in percentage to the web server as a JSON object
 
 .PP
 Return the quality in string format with RSSI and quality in percentage values
+
+.PP
+Update the last RSSI with the current RSSI
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for IntelligentDestiller from the source code\&.

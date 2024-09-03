@@ -19,23 +19,28 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/MD_IO.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp</label>
         <link refid="_m_d___i_o_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>SPIFFS.h</label>
       </node>
       <node id="4">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="5">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="func">
@@ -48,15 +53,16 @@
 <para>Toggle the Auto Mode of the Machine. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle auto mode.</para>
 <para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_IO.cpp" line="17" column="6" bodyfile="src/MD_IO.cpp" bodystart="17" bodyend="37"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" line="17" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="17" bodyend="37"/>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
         <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
         <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
@@ -71,6 +77,7 @@
 <para>Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
         </briefdescription>
         <detaileddescription>
+<para>MiddleWare Header.</para>
 <para><simplesect kind="note"><para>This function is used to toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4) </para>
 </simplesect>
 </para>
@@ -91,9 +98,9 @@
 <para>Toggle Auto Mode</para>
 <para>save the current state as the last state, for next time through the loop</para>
         </inbodydescription>
-        <location file="src/MD_IO.cpp" line="44" column="6" bodyfile="src/MD_IO.cpp" bodystart="44" bodyend="72"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" line="44" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="44" bodyend="72"/>
         <references refid="_o_s_8h_1a601560973c681265f62316a3f68e2ac3" compoundref="_o_s___g_p_i_o_8cpp" startline="165" endline="168">getAutoModeSW</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
         <references refid="_m_d___i_o_8cpp_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
       </memberdef>
@@ -103,6 +110,7 @@
         <argsstring>()</argsstring>
         <name>indicatorsManagement</name>
         <briefdescription>
+<para>Toggle auto indicator. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -113,7 +121,7 @@
 <para>Set the alarm indicator</para>
 <para>Set the manual mode indicator</para>
         </inbodydescription>
-        <location file="src/MD_IO.cpp" line="74" column="6" bodyfile="src/MD_IO.cpp" bodystart="74" bodyend="83"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" line="74" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="74" bodyend="83"/>
         <references refid="_o_s_8h_1a364e39356237485f2ee12f8bf224683b" compoundref="_o_s___g_p_i_o_8cpp" startline="152" endline="155">getAlarmIND</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a2b0449e42db71938062564c4f643c215" compoundref="_o_s___g_p_i_o_8cpp" startline="113" endline="116">getWaterMax</references>
@@ -130,6 +138,7 @@
         <argsstring>()</argsstring>
         <name>modeManagement</name>
         <briefdescription>
+<para>Indicators management. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -142,11 +151,11 @@
 <para>If the machine is in manual mode, turn off the timer</para>
 <para>Turn off the timer</para>
         </inbodydescription>
-        <location file="src/MD_IO.cpp" line="85" column="6" bodyfile="src/MD_IO.cpp" bodystart="85" bodyend="107"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" line="85" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp" bodystart="85" bodyend="107"/>
         <references refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="46" endline="49">getAutoModeWeb</references>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
         <references refid="_m_d_8h_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
         <references refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</references>
         <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
@@ -246,6 +255,6 @@
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/MD_IO.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_IO.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_p_8h_source" xml:lang="en-US">
 <title>AP.h</title>
-<indexterm><primary>include/AP.h</primary></indexterm>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/include/AP.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
 11 
 12 <emphasis role="preprocessor">#ifndef&#32;_AP_h</emphasis>

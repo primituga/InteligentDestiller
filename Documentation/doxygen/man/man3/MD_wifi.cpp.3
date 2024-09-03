@@ -1,8 +1,8 @@
-.TH "src/MD_wifi.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
+.TH "C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp" 3 "IntelligentDestiller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-src/MD_wifi.cpp
+C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp
 .SH SYNOPSIS
 .br
 .PP
@@ -63,19 +63,28 @@ This function creates a Soft Access Point
 The IP Address of the ESP32 Soft Access Point is set to: 192\&.168\&.100\&.100 
 .RE
 .PP
-Set hostname
+Set the hostname for the Soft Access Point
 
 .PP
-Set event handler for WiFi events
+Set the WiFi event handler
 
 .PP
-Enable auto reconnect
+Enable auto reconnect to the WiFi network
 
 .PP
 Set to Station + Access Point mode
 
 .PP
-Set IP Address of the ESP32 Soft Access Point
+Start the Soft Access Point with the SSID and password
+
+.PP
+Get the handle for the Soft Access Point interface
+
+.PP
+Define IP configuration structure and set desired IPs
+
+.PP
+IP configuration structure
 
 .PP
 AP IP
@@ -85,6 +94,27 @@ Gateway IP
 
 .PP
 Subnet Mask
+
+.PP
+Set the IP configuration to the soft AP interface
+
+.PP
+Stop DHCP server to change settings
+
+.PP
+Apply new IP settings
+
+.PP
+Restart DHCP server with new settings
+
+.PP
+Print the hostname
+
+.PP
+Print the IP address of the ESP32 Soft Access Point
+
+.PP
+Print the IP address of the ESP32 Soft Access Point
 .SS "void connectToWIFI ()"
 
 .PP
@@ -127,7 +157,19 @@ Set the WiFiManager parameters and connect to the WiFi network with the SSID and
 Get the SSID and password from the WiFiManager and connect to the WiFi network
 
 .PP
+Get the SSID from the WiFiManager
+
+.PP
+Get the password from the WiFiManager
+
+.PP
 Connect to the WiFi network with the SSID and password
+
+.PP
+Connect to the WiFi network with the SSID and password
+
+.PP
+Delay for 10 ms
 
 .PP
 Wait for the ESP32 to connect to the WiFi network and print the connection status
@@ -229,6 +271,36 @@ Quality in percentage
 Quality in string format
 
 .PP
+Last quality in percentage
+
+.PP
+Last RSSI in dBm
+
+.PP
+If the last RSSI is equal to the current RSSI
+
+.PP
+Return the quality in string format with RSSI and quality in percentage values
+
+.PP
+Calculate the quality in percentage
+
+.PP
+If the RSSI is less than or equal to -100 dBm
+
+.PP
+Set the quality to 0%
+
+.PP
+If the RSSI is greater than or equal to -5 dBm
+
+.PP
+Set the quality to 100%
+
+.PP
+If the RSSI is between -100 dBm and -5 dBm
+
+.PP
 Calculate the quality in percentage
 
 .PP
@@ -239,6 +311,9 @@ Send the quality in percentage to the web server as a JSON object
 
 .PP
 Return the quality in string format with RSSI and quality in percentage values
+
+.PP
+Update the last RSSI with the current RSSI
 .SH "Variable Documentation"
 .PP 
 .SS "const char* soft_ap_password = 'Destiller\-AP'"

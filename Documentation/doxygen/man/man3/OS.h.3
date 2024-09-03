@@ -1,13 +1,15 @@
-.TH "include/OS.h" 3 "IntelligentDestiller" \" -*- nroff -*-
+.TH "C:/workspace/Projeto/InteligentDestiller/include/OS.h" 3 "IntelligentDestiller" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/OS.h \- Header file for the OS project\&.  
+C:/workspace/Projeto/InteligentDestiller/include/OS.h \- Header file for the OS project\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 \fR#include 'WiFiManager\&.h'\fP
+.br
+\fR#include 'esp_netif\&.h'\fP
 .br
 \fR#include 'ESPAsyncWebServer\&.h'\fP
 .br
@@ -137,7 +139,7 @@ include/OS.h \- Header file for the OS project\&.
 .ti -1c
 .RI "void \fBinitFS\fP ()"
 .br
-.RI "LittleFS\&. "
+.RI "Inicia o segundo core\&. "
 .ti -1c
 .RI "void \fBinitPinsOutputs\fP ()"
 .br
@@ -233,7 +235,7 @@ include/OS.h \- Header file for the OS project\&.
 .ti -1c
 .RI "void \fBreadInputs\fP ()"
 .br
-.RI "Alarm state\&. "
+.RI "Atualiza as saidas\&. "
 .in -1c
 .SS "Variables"
 
@@ -245,7 +247,7 @@ include/OS.h \- Header file for the OS project\&.
 .ti -1c
 .RI "AsyncWebServer \fBserver\fP"
 .br
-.RI "WebSocket\&. "
+.RI "WebSocket Server\&. "
 .ti -1c
 .RI "bool \fBDEBUG\fP"
 .br
@@ -550,7 +552,10 @@ false
 .SS "void initFS ()"
 
 .PP
-LittleFS\&. LittleFS\&.
+Inicia o segundo core\&. LittleFS
+
+.PP
+Inicia o segundo core\&.
 
 .PP
 Initialize File System (SPIFFS)
@@ -711,7 +716,10 @@ WebTimer function
 .SS "void readInputs ()"
 
 .PP
-Alarm state\&. Read ESP32 GPIOs and stores in the image array
+Atualiza as saidas\&. Atualiza as saidas\&.
+
+.PP
+Read ESP32 GPIOs and stores in the image array
 
 .PP
 Read all inputs and store in the image array
@@ -956,11 +964,13 @@ WebServer\&.
 .SS "AsyncWebServer server\fR [extern]\fP"
 
 .PP
-WebSocket\&. 
+WebSocket Server\&. 
 .SS "AsyncWebSocket ws\fR [extern]\fP"
 
 .PP
-Libraries\&. Wifi Libraries Async Libraries SPIFFS Libraries 
+Libraries\&. Wifi Libraries WiFi Manager 
+.br
+ ESP32 Network Interface Async Libraries Async Web Server SPIFFS Libraries SPI Flash File System MD Header 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for IntelligentDestiller from the source code\&.

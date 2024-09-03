@@ -25,23 +25,28 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/AP_Destiler.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_Destiler.cpp</label>
         <link refid="_a_p___destiler_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>SPIFFS.h</label>
       </node>
       <node id="5">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="6">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="func">
@@ -107,8 +112,8 @@ Set the Valve Water Out object Set the Valve Water Out object to the V_OUT varia
 </simplesect>
 </para>
         </inbodydescription>
-        <location file="src/AP_Destiler.cpp" line="16" column="6" bodyfile="src/AP_Destiler.cpp" bodystart="16" bodyend="157"/>
-        <references refid="_o_s_8h_1a285977f0ffd4b45d30c3d459b39a878f" compoundref="_o_s_8h" startline="30">DEBUGlog</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_Destiler.cpp" line="16" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_Destiler.cpp" bodystart="16" bodyend="157"/>
+        <references refid="_o_s_8h_1a285977f0ffd4b45d30c3d459b39a878f" compoundref="_o_s_8h" startline="31">DEBUGlog</references>
         <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
@@ -128,8 +133,8 @@ Set the Valve Water Out object Set the Valve Water Out object to the V_OUT varia
         <references refid="_o_s_8h_1a166177fea9ace421d96924d83286abfc" compoundref="_o_s___g_p_i_o_8cpp" startline="126" endline="129">getWaterMin</references>
         <references refid="_m_d_8h_1a747c973d9633421336e8d59a78faf49f" compoundref="_m_d___i_o_8cpp" startline="74" endline="83">indicatorsManagement</references>
         <references refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_o_s_8h_1adbfc39d1df02e4404b08e9573d1fd404" compoundref="_o_s___g_p_i_o_8cpp" startline="465" endline="484">setPump</references>
         <references refid="_m_d_8h_1a79d7f2ee79816b8a1c7d71f4887df8c6" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="140" endline="153">setPumpWeb</references>
         <references refid="_o_s_8h_1a2a90701c1f779b95de3a3770a5425f3c" compoundref="_o_s___g_p_i_o_8cpp" startline="555" endline="574">setResistor</references>
@@ -139,7 +144,7 @@ Set the Valve Water Out object Set the Valve Water Out object to the V_OUT varia
         <references refid="_m_d_8h_1aaaf82364eff15ff055f45914b62051ab" compoundref="_m_d___serial_8cpp" startline="77" endline="80">sPrintLnStr</references>
         <references refid="_m_d_8h_1aef2f197956cfc5cbd5dae5c7bacf263e" compoundref="_m_d___serial_8cpp" startline="87" endline="90">sPrintNbr</references>
         <references refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" compoundref="_m_d___serial_8cpp" startline="67" endline="70">sPrintStr</references>
-        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="70">wifiQuality</references>
+        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="81">wifiQuality</references>
         <referencedby refid="_a_p__main_8cpp_1a0b33edabd7f1c4e4a0bf32c67269be2f" compoundref="_a_p__main_8cpp" startline="67" endline="73">loop</referencedby>
       </memberdef>
     </sectiondef>
@@ -237,6 +242,6 @@ Set the Valve Water Out object Set the Valve Water Out object to the V_OUT varia
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_o_s_8h_1abfda791029a2af9523cc59ff44b6c52e" kindref="member">setValveWaterOut</ref>(V_OUT);</highlight></codeline>
 <codeline lineno="157"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/AP_Destiler.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_Destiler.cpp"/>
   </compounddef>
 </doxygen>

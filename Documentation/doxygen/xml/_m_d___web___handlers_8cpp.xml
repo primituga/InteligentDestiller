@@ -19,23 +19,28 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/MD_Web_Handlers.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp</label>
         <link refid="_m_d___web___handlers_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>SPIFFS.h</label>
       </node>
       <node id="4">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="5">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="func">
@@ -48,7 +53,7 @@
 <para>Definitions. </para>
         </briefdescription>
         <detaileddescription>
-<para>Handlers.</para>
+<para>Get resistor.</para>
 <para>Timer handlers</para>
 <para>Handle Timer <simplesect kind="return"><para>String </para>
 </simplesect>
@@ -60,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="18" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="18" bodyend="21"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="18" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="18" bodyend="21"/>
         <references refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
         <references refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
         <references refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
@@ -76,6 +81,7 @@
 <para>Handle Hour. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle timer.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the timer hour </para>
@@ -84,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="27" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="27" bodyend="27"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="27" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="27" bodyend="27"/>
         <references refid="_m_d_8h_1a7497ed4b5f459145ba576e35a34b2f68" compoundref="_m_d___timer_8cpp" startline="177" endline="180">getTimerHour</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -98,6 +104,7 @@
 <para>Handle Minute. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle hour.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the timer minute </para>
@@ -106,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="33" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="33" bodyend="33"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="33" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="33" bodyend="33"/>
         <references refid="_m_d_8h_1ae8ad20dbd759f4fb98dabba7876428f4" compoundref="_m_d___timer_8cpp" startline="167" endline="170">getTimerMinute</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -120,6 +127,7 @@
 <para>Handle Secound. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle minute.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the timer secound </para>
@@ -128,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="39" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="39" bodyend="39"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="39" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="39" bodyend="39"/>
         <references refid="_m_d_8h_1a71f3ffe6a2e0fca30bca87a87fc92354" compoundref="_m_d___timer_8cpp" startline="157" endline="160">getTimerSecound</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -142,6 +150,7 @@
 <para>Handlers for Wifi Quality, SSID, TX and IP. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle secound.</para>
 <para>Handle Wifi Quality <simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi quality in percentage </para>
@@ -150,8 +159,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="49" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="49" bodyend="49"/>
-        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="70">wifiQuality</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="49" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="49" bodyend="49"/>
+        <references refid="_m_d_8h_1abb46cda72435678d0ea2a5881f4349e7" compoundref="_m_d__wifi_8cpp" startline="46" endline="81">wifiQuality</references>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -164,6 +173,7 @@
 <para>Handle Wifi SSID. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi quality.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi SSID </para>
@@ -172,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="55" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="55" bodyend="55"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="55" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="55" bodyend="55"/>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -185,6 +195,7 @@
 <para>Handle Wifi TX. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi SSID.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi TX power </para>
@@ -193,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="61" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="61" bodyend="61"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="61" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="61" bodyend="61"/>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -206,6 +217,7 @@
 <para>Handle Wifi IP. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi TX.</para>
 <para><simplesect kind="return"><para>String </para>
 </simplesect>
 <simplesect kind="note"><para>This function returns the WiFi IP address </para>
@@ -214,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="67" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="67" bodyend="67"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="67" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="67" bodyend="67"/>
         <referencedby refid="_m_d_8h_1a0c021f9721c3b479757f8e1b40624b6c" compoundref="_m_d___web___handlers_8cpp" startline="202" endline="240">processor</referencedby>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
       </memberdef>
@@ -231,6 +243,7 @@
 <para>Timer Add/Remove Time. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle wifi IP.</para>
 <para>Handle Time Adjust <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>adjustment</parametername>
@@ -264,7 +277,7 @@
 <para>Remove 10 minutes from timer</para>
 <para>Return the adjustment message for the timer (add1s, add5s, add10s, add1m, add5m, add10m, rem1s, rem5s, rem10s, rem1m, rem5m, rem10m)</para>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="79" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="79" bodyend="107"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="79" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="79" bodyend="107"/>
         <references refid="_m_d_8h_1a2345c47ec0c5b7a61a02281c2174df89" compoundref="_m_d___timer_8cpp" startline="223" endline="223">add10m</references>
         <references refid="_m_d_8h_1aecf5a85e72e116087f5917d708e37f64" compoundref="_m_d___timer_8cpp" startline="211" endline="211">add10s</references>
         <references refid="_m_d_8h_1a4e34974421187d65e1cb2db63585549d" compoundref="_m_d___timer_8cpp" startline="215" endline="215">add1m</references>
@@ -292,6 +305,7 @@
 <para>Timer Start/Stop/Reset. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle time adjustment.</para>
 <para>Handle Timer Control <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>control</parametername>
@@ -316,9 +330,9 @@
 <para>Reset the timer</para>
 <para>Return the control message for the timer (start, stop, reset)</para>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="119" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="119" bodyend="129"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="119" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="119" bodyend="129"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d_8h_1ad43a02209687d9c1e04dddd167f32c45" compoundref="_m_d___timer_8cpp" startline="251" endline="251">resetTimer</references>
         <references refid="_m_d_8h_1a75d67ecc1e985e54d2701c06a6aaa3a1" compoundref="_m_d___timer_8cpp" startline="187" endline="198">setTimer</references>
         <referencedby refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</referencedby>
@@ -336,6 +350,7 @@
 <para>Handlers for Auto, Pump, WaterOut, Resistor, WaterIn and WaterMax With Response. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle timer control.</para>
 <para>Handle State <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>state</parametername>
@@ -366,7 +381,7 @@
 <para>Get the water alarm state</para>
 <para>Return nothing if the state is not found</para>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="141" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="141" bodyend="163"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="141" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="141" bodyend="163"/>
         <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
@@ -392,6 +407,7 @@
 <para>Handlers for Toggle Auto, Pump, waterOut, Resistor, WaterIn and WaterMax. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle state.</para>
 <para>Handle Toggle <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>toggle</parametername>
@@ -418,7 +434,7 @@
 <para>Toggle the resistor state</para>
 <para>Return the toggle message for the variable (auto, pump, waterOut, resistor, waterIn)</para>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="175" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="175" bodyend="189"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="175" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="175" bodyend="189"/>
         <references refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="238" endline="251">toggleAutoModeWeb</references>
         <references refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</references>
         <references refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="330" endline="344">toggleResistorWeb</references>
@@ -439,6 +455,7 @@
 <para>Function to handle the HTTP requests for the variables. </para>
         </briefdescription>
         <detaileddescription>
+<para>Handle toggle.</para>
 <para>Processor <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>var</parametername>
@@ -496,7 +513,7 @@
 <para>Return the timerSecound value</para>
 <para>Return nothing if the variable is not found</para>
         </inbodydescription>
-        <location file="src/MD_Web_Handlers.cpp" line="202" column="8" bodyfile="src/MD_Web_Handlers.cpp" bodystart="202" bodyend="240"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" line="202" column="8" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp" bodystart="202" bodyend="240"/>
         <references refid="_m_d___web___handlers_8cpp_1af5d26a4c3ed9e05f2b2d04935793447f" compoundref="_m_d___web___handlers_8cpp" startline="27" endline="27">handleHour</references>
         <references refid="_m_d___web___handlers_8cpp_1ac109e287eeaaac772d362b9192d186d8" compoundref="_m_d___web___handlers_8cpp" startline="33" endline="33">handleMinute</references>
         <references refid="_m_d___web___handlers_8cpp_1a06bda99cade1494aaaafff873d92ded3" compoundref="_m_d___web___handlers_8cpp" startline="39" endline="39">handleSecound</references>
@@ -660,6 +677,6 @@
 <codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="240"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/MD_Web_Handlers.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_Handlers.cpp"/>
   </compounddef>
 </doxygen>

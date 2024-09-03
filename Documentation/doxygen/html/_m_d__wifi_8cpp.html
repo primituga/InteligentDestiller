@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IntelligentDestiller: src/MD_wifi.cpp File Reference</title>
-<link rel="icon" href="icon.png" type="image/x-icon" />
+<title>IntelligentDestiller: C:/workspace/Projeto/InteligentDestiller/src/MD_wifi.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign">
    <div id="projectname">IntelligentDestiller
    </div>
@@ -108,7 +106,7 @@ $(function(){initNavTree('_m_d__wifi_8cpp.html',''); initResizable(true); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MD_wifi.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_m_d__wifi_8cpp__incl.png" border="0" usemap="#asrc_2_m_d__wifi_8cpp" alt=""/></div>
+<div class="center"><img src="_m_d__wifi_8cpp__incl.png" border="0" usemap="#a_c_1_2workspace_2_projeto_2_inteligent_destiller_2src_2_m_d__wifi_8cpp" alt=""/></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -157,14 +155,24 @@ Variables</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This function creates a Soft Access Point </dd>
 <dd>
 The IP Address of the ESP32 Soft Access Point is set to: 192.168.100.100 </dd></dl>
-<p>Set hostname</p>
-<p>Set event handler for WiFi events</p>
-<p>Enable auto reconnect</p>
+<p>Set the hostname for the Soft Access Point</p>
+<p>Set the WiFi event handler</p>
+<p>Enable auto reconnect to the WiFi network</p>
 <p>Set to Station + Access Point mode</p>
-<p>Set IP Address of the ESP32 Soft Access Point</p>
+<p>Start the Soft Access Point with the SSID and password</p>
+<p>Get the handle for the Soft Access Point interface</p>
+<p>Define IP configuration structure and set desired IPs</p>
+<p>IP configuration structure</p>
 <p>AP IP</p>
 <p>Gateway IP</p>
 <p>Subnet Mask</p>
+<p>Set the IP configuration to the soft AP interface</p>
+<p>Stop DHCP server to change settings</p>
+<p>Apply new IP settings</p>
+<p>Restart DHCP server with new settings</p>
+<p>Print the hostname</p>
+<p>Print the IP address of the ESP32 Soft Access Point</p>
+<p>Print the IP address of the ESP32 Soft Access Point</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -205,7 +213,11 @@ Here is the caller graph for this function:</div>
 <p>Hostname</p>
 <p>Set the WiFiManager parameters and connect to the WiFi network with the SSID and password stored in the EEPROM memory</p>
 <p>Get the SSID and password from the WiFiManager and connect to the WiFi network</p>
+<p>Get the SSID from the WiFiManager</p>
+<p>Get the password from the WiFiManager</p>
 <p>Connect to the WiFi network with the SSID and password</p>
+<p>Connect to the WiFi network with the SSID and password</p>
+<p>Delay for 10 ms</p>
 <p>Wait for the ESP32 to connect to the WiFi network and print the connection status</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
@@ -324,10 +336,21 @@ Here is the caller graph for this function:</div>
 <p>Get the Received Signal Strength Indicator (RSSI) in dBm</p>
 <p>Quality in percentage</p>
 <p>Quality in string format</p>
+<p>Last quality in percentage</p>
+<p>Last RSSI in dBm</p>
+<p>If the last RSSI is equal to the current RSSI</p>
+<p>Return the quality in string format with RSSI and quality in percentage values</p>
+<p>Calculate the quality in percentage</p>
+<p>If the RSSI is less than or equal to -100 dBm</p>
+<p>Set the quality to 0%</p>
+<p>If the RSSI is greater than or equal to -5 dBm</p>
+<p>Set the quality to 100%</p>
+<p>If the RSSI is between -100 dBm and -5 dBm</p>
 <p>Calculate the quality in percentage</p>
 <p>Return the quality in string format with RSSI and quality in percentage values</p>
 <p>Send the quality in percentage to the web server as a JSON object</p>
 <p>Return the quality in string format with RSSI and quality in percentage values</p>
+<p>Update the last RSSI with the current RSSI</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s_8h" xml:lang="en-US">
-<title>include/OS.h File Reference</title>
-<indexterm><primary>include/OS.h</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/include/OS.h File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/include/OS.h</primary></indexterm>
 <para>
 
 <para>Header file for the OS project. </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;WiFiManager.h&quot;<?linebreak?>#include &quot;ESPAsyncWebServer.h&quot;<?linebreak?>#include &quot;SPIFFS.h&quot;<?linebreak?>#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for OS.h:<para>
+<programlisting linenumbering="unnumbered">#include &quot;WiFiManager.h&quot;<?linebreak?>#include &quot;esp_netif.h&quot;<?linebreak?>#include &quot;ESPAsyncWebServer.h&quot;<?linebreak?>#include &quot;SPIFFS.h&quot;<?linebreak?>#include &quot;MD.h&quot;<?linebreak?></programlisting>Include dependency graph for OS.h:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -117,7 +117,7 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>void <link linkend="__o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997">initFS</link> ()</para>
 
-<para>LittleFS. </para>
+<para>Inicia o segundo core. </para>
 </listitem>
             <listitem><para>void <link linkend="__o_s_8h_1a034848835eb2ce8872c4da77568895fc">initPinsOutputs</link> ()</para>
 
@@ -213,7 +213,7 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>void <link linkend="__o_s_8h_1acfc1d4a44c5d7039701b596a3df6eae3">readInputs</link> ()</para>
 
-<para>Alarm state. </para>
+<para>Atualiza as saidas. </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -226,7 +226,7 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>AsyncWebServer <link linkend="__o_s_8h_1a56916c67f21f332014c1c19b200d45f3">server</link></para>
 
-<para>WebSocket. </para>
+<para>WebSocket Server. </para>
 </listitem>
             <listitem><para>bool <link linkend="__o_s_8h_1a117352cc494cc62c6b2f1882786a332c">DEBUG</link></para>
 
@@ -775,10 +775,12 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>OS.h</primary><secondary>initFS</secondary></indexterm>
 <para><computeroutput>void initFS ( )</computeroutput></para><para>
 
-<para>LittleFS. </para>
+<para>Inicia o segundo core. </para>
 </para>
 
-<para>LittleFS.</para>
+<para>LittleFS</para>
+
+<para>Inicia o segundo core.</para>
 
 <para>Initialize File System (SPIFFS)</para>
 
@@ -1023,8 +1025,10 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>OS.h</primary><secondary>readInputs</secondary></indexterm>
 <para><computeroutput>void readInputs ( )</computeroutput></para><para>
 
-<para>Alarm state. </para>
+<para>Atualiza as saidas. </para>
 </para>
+
+<para>Atualiza as saidas.</para>
 
 <para>Read ESP32 GPIOs and stores in the image array</para>
 
@@ -1614,7 +1618,7 @@ Here is the caller graph for this function:<para>
 <indexterm><primary>OS.h</primary><secondary>server</secondary></indexterm>
 <para><computeroutput>AsyncWebServer server<computeroutput>[extern]</computeroutput></computeroutput></para><para>
 
-<para>WebSocket. </para>
+<para>WebSocket Server. </para>
 </para>
 </section>
 <anchor xml:id="__o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd"/><section>
@@ -1626,7 +1630,7 @@ Here is the caller graph for this function:<para>
 <para>Libraries. </para>
 </para>
 
-<para>Wifi Libraries Async Libraries SPIFFS Libraries </para>
+<para>Wifi Libraries WiFi Manager <?linebreak?> ESP32 Network Interface Async Libraries Async Web Server SPIFFS Libraries SPI Flash File System MD Header </para>
 </section>
 </section>
 </section>

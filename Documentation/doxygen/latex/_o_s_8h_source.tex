@@ -1,5 +1,5 @@
 \doxysection{OS.\+h}
-\hypertarget{_o_s_8h_source}{}\label{_o_s_8h_source}\index{include/OS.h@{include/OS.h}}
+\hypertarget{_o_s_8h_source}{}\label{_o_s_8h_source}\index{C:/workspace/Projeto/InteligentDestiller/include/OS.h@{C:/workspace/Projeto/InteligentDestiller/include/OS.h}}
 \mbox{\hyperlink{_o_s_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
@@ -7,91 +7,92 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_OS\_h}}
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}WiFiManager.h"{}}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}ESPAsyncWebServer.h"{}}}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}SPIFFS.h"{}}}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_m_d_8h}{MD.h}}"{}}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ AsyncWebSocket\ \mbox{\hyperlink{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd}{ws}};\ \ \ \ \ }
-\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ AsyncWebServer\ \mbox{\hyperlink{_o_s_8h_a56916c67f21f332014c1c19b200d45f3}{server}};\ }
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a117352cc494cc62c6b2f1882786a332c}{DEBUG}};\ }
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ DEBUGlog\ 0\ }}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ PIN\_SW\_AUTO\ 32\ }}
-\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ PIN\_SALARM\ 25\ \ }}
-\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ PIN\_SW\_MAN\ 26\ \ }}
-\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ PIN\_SMIN\ 27\ \ \ \ }}
-\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ PIN\_SMAX\ 14\ \ \ \ }}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ PIN\_INPUT\_COUNT\ 5}}
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ POS\_SW\_MAN\ 0}}
-\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ POS\_SMIN\ 1}}
-\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ POS\_SMAX\ 2}}
-\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ POS\_SW\_AUTO\ 3}}
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ POS\_SALARM\ 4}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ PIN\_RAQ\ 23\ \ \ \ \ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ PIN\_BMB\ 22\ \ \ \ \ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ PIN\_VALV\_WATER\_OUT\ 21\ }}
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ PIN\_VALV\_WATER\_IN\ 19\ \ }}
-\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ PIN\_IND\_ALARM\ 18\ \ \ \ \ \ }}
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ PIN\_IND\_MIN\ 05\ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ PIN\_IND\_MAX\ 04\ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ PIN\_IND\_AUTO\ 15\ \ \ \ \ \ \ }}
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ PIN\_IND\_MAN\ 33\ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ PIN\_OUTPUT\_COUNT\ 9}}
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ POS\_RAQ\ 0}}
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ POS\_BMB\ 1}}
-\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ POS\_VALV\_WATER\_OUT\ 2}}
-\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ POS\_VALV\_WATER\_IN\ 3}}
-\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ POS\_IND\_ALARM\ 4}}
-\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ POS\_IND\_MIN\ 5}}
-\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ POS\_IND\_MAX\ 6}}
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ POS\_IND\_AUTO\ 7}}
-\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ POS\_IND\_MAN\ 8}}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ ON\ HIGH\ }}
-\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ OFF\ LOW\ }}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a8b626fb41c6433470c66289ad702ba87}{loop2}}(\textcolor{keywordtype}{void}\ *pvParameters);\ }
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a02ef1114b2c4e173a5ddafb425f38cc5}{initMultiCore}}();}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997}{initFS}}();\ }
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a034848835eb2ce8872c4da77568895fc}{initPinsOutputs}}();\ \ \ }
-\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a96f4f5e9c32d277c8b5f45b1b0c068fc}{initPinsInputs}}();\ \ \ \ }
-\DoxyCodeLine{00098\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a2b0449e42db71938062564c4f643c215}{getWaterMax}}();\ \ \ \ \ \ \ }
-\DoxyCodeLine{00099\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a166177fea9ace421d96924d83286abfc}{getWaterMin}}();\ \ \ \ \ \ \ }
-\DoxyCodeLine{00100\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a36575ea4abf90b10ef86ad50f0b9fad0}{getAlarm}}();\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00101\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a364e39356237485f2ee12f8bf224683b}{getAlarmIND}}();\ \ \ \ \ \ \ }
-\DoxyCodeLine{00102\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_abbca1cc0d29f545e9a39778288a12071}{getIndAuto}}();\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00103\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a601560973c681265f62316a3f68e2ac3}{getAutoModeSW}}();\ \ \ \ \ }
-\DoxyCodeLine{00104\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a20a8e677a695003ed8259fc2e32b6462}{getManualMode}}();\ \ \ \ \ }
-\DoxyCodeLine{00105\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a56feb35df23b1452f2695b6469042ec2}{getResistor}}();\ \ \ \ \ \ \ }
-\DoxyCodeLine{00106\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a2e1179e338420a43f95be0b8a7ed885d}{getValv\_Water\_In}}();\ \ }
-\DoxyCodeLine{00107\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a8b22aea595b0457364230c92779ae37a}{getValv\_Water\_Out}}();\ }
-\DoxyCodeLine{00108\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a796c21f2a4c37ce17a1f14d80b54ed66}{getPump}}();\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a87a31bccb377b0b9f859242b0635052c}{setIndMax}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_afd12f5c7d9986ada0226426896ee09c7}{setIndMin}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a76b46044c939e363a3e761d515af2e1a}{setIndAlarm}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ }
-\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a86fca9908335532b4c89bca82aaa9346}{setIndMan}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_adbfc39d1df02e4404b08e9573d1fd404}{setPump}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a0d4efaa2bfb0fa53aa24405940a7a66c}{setValveWaterIn}}(\textcolor{keywordtype}{bool}\ state);\ \ }
-\DoxyCodeLine{00116\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_abfda791029a2af9523cc59ff44b6c52e}{setValveWaterOut}}(\textcolor{keywordtype}{bool}\ state);\ }
-\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a2a90701c1f779b95de3a3770a5425f3c}{setResistor}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ }
-\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_aa879192b15484f1d9112d2b91ef5cea9}{setIndAuto}}(\textcolor{keywordtype}{bool}\ state1);\ \ \ \ \ \ }
-\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a4be402fa1ac7049ed1671c31572e0f75}{writeOutputs}}();}
-\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3}{readInputs}}();}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}WiFiManager.h"{}}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}esp\_netif.h"{}}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}ESPAsyncWebServer.h"{}}\ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}SPIFFS.h"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_m_d_8h}{MD.h}}"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ AsyncWebSocket\ \mbox{\hyperlink{_o_s_8h_acbecb4e4203752ebd4b2d57ee6e376fd}{ws}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ AsyncWebServer\ \mbox{\hyperlink{_o_s_8h_a56916c67f21f332014c1c19b200d45f3}{server}};\ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a117352cc494cc62c6b2f1882786a332c}{DEBUG}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ DEBUGlog\ 0\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ PIN\_SW\_AUTO\ 32\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ PIN\_SALARM\ 25\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ PIN\_SW\_MAN\ 26\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ PIN\_SMIN\ 27\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ PIN\_SMAX\ 14\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ PIN\_INPUT\_COUNT\ 5\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ POS\_SW\_MAN\ 0\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ POS\_SMIN\ 1\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ POS\_SMAX\ 2\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ POS\_SW\_AUTO\ 3\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ POS\_SALARM\ 4\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ PIN\_RAQ\ 23\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ PIN\_BMB\ 22\ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ PIN\_VALV\_WATER\_OUT\ 21\ \ \ }}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ PIN\_VALV\_WATER\_IN\ 19\ \ \ \ }}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ PIN\_IND\_ALARM\ 18\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ PIN\_IND\_MIN\ 05\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ PIN\_IND\_MAX\ 04\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ PIN\_IND\_AUTO\ 15\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ PIN\_IND\_MAN\ 33\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ PIN\_OUTPUT\_COUNT\ 9\ \ \ \ \ \ }}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ POS\_RAQ\ 0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ POS\_BMB\ 1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ POS\_VALV\_WATER\_OUT\ 2\ \ \ \ }}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ POS\_VALV\_WATER\_IN\ 3\ \ \ \ \ }}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ POS\_IND\_ALARM\ 4\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ POS\_IND\_MIN\ 5\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ POS\_IND\_MAX\ 6\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ POS\_IND\_AUTO\ 7\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ POS\_IND\_MAN\ 8\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ ON\ HIGH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ OFF\ LOW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a8b626fb41c6433470c66289ad702ba87}{loop2}}(\textcolor{keywordtype}{void}\ *pvParameters);\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a02ef1114b2c4e173a5ddafb425f38cc5}{initMultiCore}}();\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a71502ea2a2f3c2ba9d3caaeb1655c997}{initFS}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a034848835eb2ce8872c4da77568895fc}{initPinsOutputs}}();\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a96f4f5e9c32d277c8b5f45b1b0c068fc}{initPinsInputs}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a2b0449e42db71938062564c4f643c215}{getWaterMax}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a166177fea9ace421d96924d83286abfc}{getWaterMin}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a36575ea4abf90b10ef86ad50f0b9fad0}{getAlarm}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a364e39356237485f2ee12f8bf224683b}{getAlarmIND}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_abbca1cc0d29f545e9a39778288a12071}{getIndAuto}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a601560973c681265f62316a3f68e2ac3}{getAutoModeSW}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a20a8e677a695003ed8259fc2e32b6462}{getManualMode}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a56feb35df23b1452f2695b6469042ec2}{getResistor}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a2e1179e338420a43f95be0b8a7ed885d}{getValv\_Water\_In}}();\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a8b22aea595b0457364230c92779ae37a}{getValv\_Water\_Out}}();\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_o_s_8h_a796c21f2a4c37ce17a1f14d80b54ed66}{getPump}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a87a31bccb377b0b9f859242b0635052c}{setIndMax}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_afd12f5c7d9986ada0226426896ee09c7}{setIndMin}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a76b46044c939e363a3e761d515af2e1a}{setIndAlarm}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a86fca9908335532b4c89bca82aaa9346}{setIndMan}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_adbfc39d1df02e4404b08e9573d1fd404}{setPump}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a0d4efaa2bfb0fa53aa24405940a7a66c}{setValveWaterIn}}(\textcolor{keywordtype}{bool}\ state);\ \ \ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_abfda791029a2af9523cc59ff44b6c52e}{setValveWaterOut}}(\textcolor{keywordtype}{bool}\ state);\ \ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a2a90701c1f779b95de3a3770a5425f3c}{setResistor}}(\textcolor{keywordtype}{bool}\ state);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_aa879192b15484f1d9112d2b91ef5cea9}{setIndAuto}}(\textcolor{keywordtype}{bool}\ state1);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_a4be402fa1ac7049ed1671c31572e0f75}{writeOutputs}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_o_s_8h_acfc1d4a44c5d7039701b596a3df6eae3}{readInputs}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ \ }}
 
 \end{DoxyCode}

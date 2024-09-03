@@ -20,7 +20,7 @@ digraph "sPrintLnStr"
   Node6 -> Node7 [id="edge145_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node7 [id="Node000007",label="loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_a_p__main_8cpp.html#a0b33edabd7f1c4e4a0bf32c67269be2f",tooltip="Loop function to run the machine operation."];
   Node1 -> Node8 [id="edge146_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node8 [id="Node000008",label="initFS",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___f_s_8cpp.html#a71502ea2a2f3c2ba9d3caaeb1655c997",tooltip="LittleFS."];
+  Node8 [id="Node000008",label="initFS",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___f_s_8cpp.html#a71502ea2a2f3c2ba9d3caaeb1655c997",tooltip="Inicia o segundo core."];
   Node8 -> Node4 [id="edge147_Node000008_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node9 [id="edge148_Node000001_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node9 [id="Node000009",label="initSerial",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___serial_8cpp.html#a2531a428197475f184bd61c0b412396a",tooltip="Set timer status."];
@@ -32,7 +32,7 @@ digraph "sPrintLnStr"
   Node1 -> Node11 [id="edge153_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node11 [id="Node000011",label="setIndAlarm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a76b46044c939e363a3e761d515af2e1a",tooltip="Liga/desliga o indicador luminoso nivel agua minimo."];
   Node11 -> Node12 [id="edge154_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node12 [id="Node000012",label="indicatorsManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a747c973d9633421336e8d59a78faf49f",tooltip=" "];
+  Node12 [id="Node000012",label="indicatorsManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a747c973d9633421336e8d59a78faf49f",tooltip="Toggle auto indicator."];
   Node12 -> Node6 [id="edge155_Node000012_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node11 -> Node13 [id="edge156_Node000011_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node13 [id="Node000013",label="test_IO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___test___i_os_8cpp.html#a9e210ff652f1bccff9bb78912bd121c1",tooltip="Print number with new line."];
@@ -40,13 +40,13 @@ digraph "sPrintLnStr"
   Node1 -> Node14 [id="edge158_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node14 [id="Node000014",label="setIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#ad606ba53b3e713efe768dd0e380c97a2",tooltip="Liga/desliga o indicador luminoso da resistencia."];
   Node14 -> Node15 [id="edge159_Node000014_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node15 [id="Node000015",label="modeManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a27162a64461db61f83b3752bd0b6d125",tooltip=" "];
+  Node15 [id="Node000015",label="modeManagement",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#a27162a64461db61f83b3752bd0b6d125",tooltip="Indicators management."];
   Node15 -> Node6 [id="edge160_Node000015_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node13 [id="edge161_Node000014_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node14 -> Node16 [id="edge162_Node000014_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node16 [id="Node000016",label="toggleIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#ae48dc2d309ef711693328c6300ad5e80",tooltip="Toggle the Auto Mode of the Machine."];
+  Node16 [id="Node000016",label="toggleIndAuto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#ae48dc2d309ef711693328c6300ad5e80",tooltip="Toggle auto mode."];
   Node16 -> Node17 [id="edge163_Node000016_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node17 [id="Node000017",label="toggleAutoMode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#aa8b96a74409fec0e22a5ee8451114a7f",tooltip="Toggle the Auto Mode of the Machine using a switch connected to the ESP32 GPIO 4 (D4)"];
+  Node17 [id="Node000017",label="toggleAutoMode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_m_d___i_o_8cpp.html#aa8b96a74409fec0e22a5ee8451114a7f",tooltip="MiddleWare Header."];
   Node17 -> Node15 [id="edge164_Node000017_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node18 [id="edge165_Node000001_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node18 [id="Node000018",label="setIndMan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_o_s___g_p_i_o_8cpp.html#a86fca9908335532b4c89bca82aaa9346",tooltip="Liga/desliga o indicador luminoso alarme."];

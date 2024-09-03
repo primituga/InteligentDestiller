@@ -74,7 +74,7 @@ PROJECT_ICON           = C:/workspace/InteligentDestiller/data/img/icon.png
 # entered, it will be relative to the location where Doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = C:/workspace/InteligentDestiller/out
+OUTPUT_DIRECTORY       = C:\workspace\Projeto\InteligentDestiller\Documentation\doxygen
 
 # If the CREATE_SUBDIRS tag is set to YES then Doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
@@ -965,7 +965,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = C:/workspace/InteligentDestiller/
+INPUT                  = C:\workspace\Projeto\InteligentDestiller\
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1070,7 +1070,7 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which Doxygen is
 # run.
 
-EXCLUDE                = C:/workspace/InteligentDestiller/lib
+EXCLUDE                = C:\workspace\Projeto\InteligentDestiller\lib
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded

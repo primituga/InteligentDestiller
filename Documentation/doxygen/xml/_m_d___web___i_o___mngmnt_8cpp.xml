@@ -19,23 +19,28 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/MD_Web_IO_Mngmnt.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp</label>
         <link refid="_m_d___web___i_o___mngmnt_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>SPIFFS.h</label>
       </node>
       <node id="4">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="5">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="var">
@@ -50,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="9" column="9" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="9" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="9" column="9" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="9" bodyend="-1"/>
         <referencedby refid="_m_d_8h_1a47a030b4b82d5d1b1a73e1c2dfdc36ea" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="46" endline="49">getAutoModeWeb</referencedby>
         <referencedby refid="_m_d_8h_1a47fd66708aa0f427cd949f639cebc0df" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="98" endline="101">getPumpWeb</referencedby>
         <referencedby refid="_m_d_8h_1a12a9a8e5c80ace6e8643360f7603c280" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="59" endline="62">getResistorWeb</referencedby>
@@ -74,6 +79,7 @@
 <para>Output variables image. </para>
         </briefdescription>
         <detaileddescription>
+<para>Mode management.</para>
 <para>FUNCTIONS BLOCK</para>
 <para>Update Outputs Web</para>
 <para>This function updates the outputs for the web interface.</para>
@@ -92,7 +98,7 @@
 <para>Update the manual mode state</para>
 <para>outputVarsImageWeb[7] = <ref refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" kindref="member">getIndAuto()</ref>; /// Update the auto indicator state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="21" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="21" bodyend="32"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="21" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="21" bodyend="32"/>
         <references refid="_o_s_8h_1a36575ea4abf90b10ef86ad50f0b9fad0" compoundref="_o_s___g_p_i_o_8cpp" startline="139" endline="142">getAlarm</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a796c21f2a4c37ce17a1f14d80b54ed66" compoundref="_o_s___g_p_i_o_8cpp" startline="243" endline="246">getPump</references>
@@ -113,6 +119,7 @@
 <para>GETS BLOCK. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set resistor.</para>
 <para>Get the Ind Max object</para>
 <para>This function returns the state of the max indicator.</para>
 <para><simplesect kind="return"><para>true </para>
@@ -123,9 +130,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="46" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="46" bodyend="49"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="46" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="46" bodyend="49"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="70">POS_IND_AUTO</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1a12a9a8e5c80ace6e8643360f7603c280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -137,6 +144,7 @@
 <para>Get the Ind Min object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get valve water out.</para>
 <para>This function returns the state of the min indicator.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -146,9 +154,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="59" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="59" bodyend="62"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="59" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="59" bodyend="62"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="63">POS_RAQ</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1a99fa4a4b0ba168d3daeb40ee65452bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -160,6 +168,7 @@
 <para>Get the Ind Alarm object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get pump state.</para>
 <para>This function returns the state of the alarm indicator.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -169,9 +178,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="72" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="72" bodyend="75"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="72" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="72" bodyend="75"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="66">POS_VALV_WATER_IN</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1a1f7f13061ad706f397dd2ddfb581d417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -183,6 +192,7 @@
 <para>Get the Valv Water Out object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get valve water in.</para>
 <para>This function returns the state of the water out valve.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -192,9 +202,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="85" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="85" bodyend="88"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="85" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="85" bodyend="88"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_OUT</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1a47fd66708aa0f427cd949f639cebc0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -206,6 +216,7 @@
 <para>Get the Pump object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Get auto mode.</para>
 <para>This function returns the state of the water pump.</para>
 <para><simplesect kind="return"><para>true </para>
 </simplesect>
@@ -215,9 +226,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="98" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="98" bodyend="101"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="98" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="98" bodyend="101"/>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="64">POS_BMB</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
       </memberdef>
@@ -234,6 +245,7 @@
 <para>SETS BLOCK. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle resistor.</para>
 <para>Set the Auto Mode object</para>
 <para>This function sets the state of the auto mode.</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -255,11 +267,11 @@
 <para>Set the auto indicator to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="116" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="116" bodyend="129"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="116" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="116" bodyend="129"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="69">POS_IND_AUTO</references>
+        <references refid="_o_s_8h_1a09b9fae0461ba906d04f583fb165225d" compoundref="_o_s_8h" startline="70">POS_IND_AUTO</references>
         <referencedby refid="_m_d_8h_1a27162a64461db61f83b3752bd0b6d125" compoundref="_m_d___i_o_8cpp" startline="85" endline="107">modeManagement</referencedby>
         <referencedby refid="_m_d_8h_1a1ab8fa34a60a7d71e2e1269469623451" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="238" endline="251">toggleAutoModeWeb</referencedby>
         <referencedby refid="_m_d_8h_1ae48dc2d309ef711693328c6300ad5e80" compoundref="_m_d___i_o_8cpp" startline="17" endline="37">toggleIndAuto</referencedby>
@@ -277,6 +289,7 @@
 <para>Set the Pump object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set auto mode.</para>
 <para>This function sets the state of the pump.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -297,11 +310,11 @@
 <para>Set the pump to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="140" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="140" bodyend="153"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="140" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="140" bodyend="153"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="63">POS_BMB</references>
+        <references refid="_o_s_8h_1a30022858a28fa578366b3b18125ca945" compoundref="_o_s_8h" startline="64">POS_BMB</references>
         <referencedby refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</referencedby>
         <referencedby refid="_m_d_8h_1aa5b521b0b413a137701f7e2f630f4fdc" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="260" endline="277">togglePumpWeb</referencedby>
       </memberdef>
@@ -318,6 +331,7 @@
 <para>Set the Valve Water In object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set pump state.</para>
 <para>This function sets the state of the water in valve.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -338,11 +352,11 @@
 <para>Set the water in valve to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="164" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="164" bodyend="177"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="164" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="164" bodyend="177"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_IN</references>
+        <references refid="_o_s_8h_1ae99920ff82b3c80822e2bc1c7b365ec0" compoundref="_o_s_8h" startline="66">POS_VALV_WATER_IN</references>
         <referencedby refid="_m_d_8h_1a757ebfbdd26d049507dd4662ff9edba9" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="286" endline="299">toggleValveWaterInWeb</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1a922a642ffb3645f0271b481309cdb133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -358,6 +372,7 @@
 <para>Set the Valve Water Out object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set valve water in.</para>
 <para>This function sets the state of the water out valve.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -378,11 +393,11 @@
 <para>Set the water out valve to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="188" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="188" bodyend="201"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="188" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="188" bodyend="201"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="64">POS_VALV_WATER_OUT</references>
+        <references refid="_o_s_8h_1a965705c26a5cada30cae9f36c10bb393" compoundref="_o_s_8h" startline="65">POS_VALV_WATER_OUT</references>
         <referencedby refid="_m_d_8h_1aed9cbec3cbb71c6f6fec13b36223efa3" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="308" endline="321">toggleValveWaterOutWeb</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1afc81a927862b27a260c9a12ae7773739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -398,6 +413,7 @@
 <para>Set the Resistor object. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set valve water out.</para>
 <para>This function sets the state of the resistor.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -418,11 +434,11 @@
 <para>Set the resistor to OFF</para>
 <para>Set the old state to the current state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="212" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="212" bodyend="225"/>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="212" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="212" bodyend="225"/>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1af8502996cfa586918ea71820165fe389" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="9">outputVarsImageWeb</references>
-        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="62">POS_RAQ</references>
+        <references refid="_o_s_8h_1a9472a8b9e2b8d90752761a9a6ca08298" compoundref="_o_s_8h" startline="63">POS_RAQ</references>
         <referencedby refid="_m_d_8h_1aece7bc529bc15d8753086021a9810637" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="330" endline="344">toggleResistorWeb</referencedby>
       </memberdef>
       <memberdef kind="function" id="_m_d___web___i_o___mngmnt_8cpp_1a1ab8fa34a60a7d71e2e1269469623451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -434,6 +450,7 @@
 <para>TOGGLES BLOCK. </para>
         </briefdescription>
         <detaileddescription>
+<para>Update outputs for the web interface.</para>
 <para>Toggle Auto Mode Web</para>
 <para>This function toggles the auto mode.</para>
 <para><simplesect kind="return"><para>void </para>
@@ -447,11 +464,11 @@
 <para>Toggle the auto indicator state</para>
 <para>Set the auto indicator state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="238" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="238" bodyend="251"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="238" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="238" bodyend="251"/>
         <references refid="_o_s_8h_1abbca1cc0d29f545e9a39778288a12071" compoundref="_o_s___g_p_i_o_8cpp" startline="191" endline="194">getIndAuto</references>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a4f59623372f8c8c8d704f0f004f7d955" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="116" endline="129">setAutoModeWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -464,6 +481,7 @@
 <para>Toggle Pump Web. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle auto mode.</para>
 <para>This function toggles the pump.</para>
 <para><simplesect kind="return"><para>void Toggle Pump </para>
 </simplesect>
@@ -480,11 +498,11 @@
 <para>Print the pump state</para>
 <para>Print the pump state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="260" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="260" bodyend="277"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="260" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="260" bodyend="277"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a47fd66708aa0f427cd949f639cebc0df" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="98" endline="101">getPumpWeb</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a79d7f2ee79816b8a1c7d71f4887df8c6" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="140" endline="153">setPumpWeb</references>
         <references refid="_m_d_8h_1ac26aedfdce8cea151106030a2ae286b9" compoundref="_m_d___serial_8cpp" startline="67" endline="70">sPrintStr</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
@@ -498,6 +516,7 @@
 <para>Toggle Valve Water In Web. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle pump state.</para>
 <para>This function toggles the water in valve.</para>
 <para><simplesect kind="return"><para>void Toggle Valve Water In </para>
 </simplesect>
@@ -510,11 +529,11 @@
 <para>Toggle the water in valve state</para>
 <para>Set the water in valve state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="286" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="286" bodyend="299"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="286" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="286" bodyend="299"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a2e1179e338420a43f95be0b8a7ed885d" compoundref="_o_s___g_p_i_o_8cpp" startline="217" endline="220">getValv_Water_In</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1abe554b3a794b4000aa2d251a3d63a54f" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="164" endline="177">setValveWaterInWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -527,6 +546,7 @@
 <para>Toggle Valve Water Out Web. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle valve water in.</para>
 <para>This function toggles the water out valve.</para>
 <para><simplesect kind="return"><para>void Toggle Valve Water Out </para>
 </simplesect>
@@ -540,11 +560,11 @@
 <para>Toggle the water out valve state</para>
 <para>Set the water out valve state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="308" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="308" bodyend="321"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="308" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="308" bodyend="321"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a8b22aea595b0457364230c92779ae37a" compoundref="_o_s___g_p_i_o_8cpp" startline="230" endline="233">getValv_Water_Out</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1a922a642ffb3645f0271b481309cdb133" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="188" endline="201">setValveWaterOutWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -557,6 +577,7 @@
 <para>Toggle Resistor Web. </para>
         </briefdescription>
         <detaileddescription>
+<para>Toggle valve water out.</para>
 <para>This function toggles the resistor.</para>
 <para><simplesect kind="return"><para>void Toggle Resistor </para>
 </simplesect>
@@ -569,11 +590,11 @@
 <para>Toggle the resistor state</para>
 <para>Set the resistor state</para>
         </inbodydescription>
-        <location file="src/MD_Web_IO_Mngmnt.cpp" line="330" column="6" bodyfile="src/MD_Web_IO_Mngmnt.cpp" bodystart="330" bodyend="344"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" line="330" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp" bodystart="330" bodyend="344"/>
         <references refid="_o_s_8h_1a20a8e677a695003ed8259fc2e32b6462" compoundref="_o_s___g_p_i_o_8cpp" startline="178" endline="181">getManualMode</references>
         <references refid="_o_s_8h_1a56feb35df23b1452f2695b6469042ec2" compoundref="_o_s___g_p_i_o_8cpp" startline="204" endline="207">getResistor</references>
-        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="74">OFF</references>
-        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="73">ON</references>
+        <references refid="_o_s_8h_1a29e413f6725b2ba32d165ffaa35b01e5" compoundref="_o_s_8h" startline="75">OFF</references>
+        <references refid="_o_s_8h_1ad76d1750a6cdeebd506bfcd6752554d2" compoundref="_o_s_8h" startline="74">ON</references>
         <references refid="_m_d___web___i_o___mngmnt_8cpp_1afc81a927862b27a260c9a12ae7773739" compoundref="_m_d___web___i_o___mngmnt_8cpp" startline="212" endline="225">setResistorWeb</references>
         <referencedby refid="_m_d_8h_1ade79ba305a284591f94d9eb3c89718bd" compoundref="_m_d___web___handlers_8cpp" startline="175" endline="189">handleToggle</referencedby>
       </memberdef>
@@ -789,6 +810,6 @@
 <codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="344"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/MD_Web_IO_Mngmnt.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/MD_Web_IO_Mngmnt.cpp"/>
   </compounddef>
 </doxygen>

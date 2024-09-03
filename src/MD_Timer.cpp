@@ -199,52 +199,65 @@ void setTimer(bool stat)
 
 /**
  * @brief Add 1 secound to timer
+ * 
  */
 void add1s() { webTimer("+", 1); }
+
 /**
  * @brief Add 5 secounds to timer
  */
 void add5s() { webTimer("+", 5); }
+
 /**
  * @brief Add 10 secounds to timer
  */
 void add10s() { webTimer("+", 10); }
+
 /**
  * @brief Add 1 minute to timer
  */
 void add1m() { webTimer("+", 60); }
+
 /**
  * @brief Add 5 minutes to timer
  */
 void add5m() { webTimer("+", 300); }
+
 /**
  * @brief Add 10 minutes to timer
  */
 void add10m() { webTimer("+", 600); }
+
 /**
  * @brief Remove 1 secound from timer
  */
 void rem1s() { webTimer("-", 1); }
+
 /**
  * @brief Remove 5 secounds from timer
  */
 void rem5s() { webTimer("-", 5); }
+
 /**
  * @brief Remove 10 secounds from timer
  */
 void rem10s() { webTimer("-", 10); }
+
 /**
  * @brief Remove 1 minute from timer
  */
 void rem1m() { webTimer("-", 60); }
+
 /**
  * @brief Remove 5 minutes from timer
  */
 void rem5m() { webTimer("-", 300); }
+
 /**
  * @brief Remove 10 minutes from timer
  */
 void rem10m() { webTimer("-", 600); }
+
 /**
  * @brief Reset timer
  */

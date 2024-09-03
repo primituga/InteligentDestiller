@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_s___g_p_i_o_8cpp" xml:lang="en-US">
-<title>src/OS_GPIO.cpp File Reference</title>
-<indexterm><primary>src/OS_GPIO.cpp</primary></indexterm>
+<title>C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp File Reference</title>
+<indexterm><primary>C:/workspace/Projeto/InteligentDestiller/src/OS_GPIO.cpp</primary></indexterm>
 <para>
 
 <para>GPIO functions. </para>
@@ -575,6 +575,8 @@ Here is the caller graph for this function:<para>
 
 <para>Alarm state. </para>
 </para>
+
+<para>Atualiza as saidas.</para>
 
 <para>Read ESP32 GPIOs and stores in the image array</para>
 

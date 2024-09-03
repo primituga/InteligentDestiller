@@ -25,23 +25,28 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>src/AP_main.cpp</label>
+        <label>C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp</label>
         <link refid="_a_p__main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>ESPAsyncWebServer.h</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>SPIFFS.h</label>
       </node>
       <node id="5">
         <label>WiFiManager.h</label>
+      </node>
+      <node id="6">
+        <label>esp_netif.h</label>
       </node>
     </incdepgraph>
     <sectiondef kind="var">
@@ -58,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AP_main.cpp" line="10" column="6" bodyfile="src/AP_main.cpp" bodystart="10" bodyend="-1"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" line="10" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" bodystart="10" bodyend="-1"/>
         <referencedby refid="_o_s_8h_1a76b46044c939e363a3e761d515af2e1a" compoundref="_o_s___g_p_i_o_8cpp" startline="334" endline="374">setIndAlarm</referencedby>
         <referencedby refid="_o_s_8h_1aa879192b15484f1d9112d2b91ef5cea9" compoundref="_o_s___g_p_i_o_8cpp" startline="435" endline="454">setIndAuto</referencedby>
         <referencedby refid="_o_s_8h_1a86fca9908335532b4c89bca82aaa9346" compoundref="_o_s___g_p_i_o_8cpp" startline="386" endline="424">setIndMan</referencedby>
@@ -88,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AP_main.cpp" line="15" column="16" declfile="src/AP_main.cpp" declline="15" declcolumn="16"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" line="15" column="16" declfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" declline="15" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_a_p__main_8cpp_1a85f30d66aa1231313c8553fd485b22b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>AsyncWebServer</type>
@@ -105,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/AP_main.cpp" line="20" column="16" declfile="src/AP_main.cpp" declline="20" declcolumn="16"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" line="20" column="16" declfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" declline="20" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_a_p__main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -151,13 +156,13 @@
 <para>Setup Routes</para>
 <para>Add handler to the server (Websocket)</para>
         </inbodydescription>
-        <location file="src/AP_main.cpp" line="38" column="6" bodyfile="src/AP_main.cpp" bodystart="38" bodyend="51"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" line="38" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" bodystart="38" bodyend="51"/>
         <references refid="_o_s_8h_1a71502ea2a2f3c2ba9d3caaeb1655c997" compoundref="_o_s___f_s_8cpp" startline="29" endline="37">initFS</references>
         <references refid="_o_s_8h_1a02ef1114b2c4e173a5ddafb425f38cc5" compoundref="_o_s__multi__core_8cpp" startline="12" endline="24">initMultiCore</references>
         <references refid="_o_s_8h_1a96f4f5e9c32d277c8b5f45b1b0c068fc" compoundref="_o_s___g_p_i_o_8cpp" startline="69" endline="76">initPinsInputs</references>
         <references refid="_o_s_8h_1a034848835eb2ce8872c4da77568895fc" compoundref="_o_s___g_p_i_o_8cpp" startline="88" endline="99">initPinsOutputs</references>
         <references refid="_m_d_8h_1a2531a428197475f184bd61c0b412396a" compoundref="_m_d___serial_8cpp" startline="21" endline="37">initSerial</references>
-        <references refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="144" endline="181">initWIFI</references>
+        <references refid="_m_d_8h_1a6a4f6edd72eb1d80a65dea86d761f744" compoundref="_m_d__wifi_8cpp" startline="163" endline="200">initWIFI</references>
         <references refid="_o_s_8h_1acfc1d4a44c5d7039701b596a3df6eae3" compoundref="_o_s___g_p_i_o_8cpp" startline="33" endline="39">readInputs</references>
         <references refid="_o_s_8h_1a56916c67f21f332014c1c19b200d45f3">server</references>
         <references refid="_a_p_8h_1a553ce9cca044d40931e5cbe9deb407e4" compoundref="_a_p___web_8cpp" startline="84" endline="322">setupRoutes</references>
@@ -196,7 +201,7 @@
 <para>Destiler function to operate the machine</para>
 <para>Update outputs</para>
         </inbodydescription>
-        <location file="src/AP_main.cpp" line="67" column="6" bodyfile="src/AP_main.cpp" bodystart="67" bodyend="73"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" line="67" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" bodystart="67" bodyend="73"/>
         <references refid="_a_p_8h_1a59b4c2612675374aa0a9445d2f49d009" compoundref="_a_p___destiler_8cpp" startline="16" endline="157">destiler</references>
         <references refid="_o_s_8h_1acfc1d4a44c5d7039701b596a3df6eae3" compoundref="_o_s___g_p_i_o_8cpp" startline="33" endline="39">readInputs</references>
         <references refid="_o_s_8h_1a4be402fa1ac7049ed1671c31572e0f75" compoundref="_o_s___g_p_i_o_8cpp" startline="51" endline="57">writeOutputs</references>
@@ -244,7 +249,7 @@
 <para>Cleanup clients</para>
 <para>WebTimer function</para>
         </inbodydescription>
-        <location file="src/AP_main.cpp" line="90" column="6" bodyfile="src/AP_main.cpp" bodystart="90" bodyend="97"/>
+        <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" line="90" column="6" bodyfile="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp" bodystart="90" bodyend="97"/>
         <references refid="_m_d_8h_1a504723789792b242f59e8f9adfb48009" compoundref="_m_d___timer_8cpp" startline="53" endline="139">webTimer</references>
         <references refid="_o_s_8h_1acbecb4e4203752ebd4b2d57ee6e376fd">ws</references>
         <referencedby refid="_o_s_8h_1a02ef1114b2c4e173a5ddafb425f38cc5" compoundref="_o_s__multi__core_8cpp" startline="12" endline="24">initMultiCore</referencedby>
@@ -302,6 +307,6 @@
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="97"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/AP_main.cpp"/>
+    <location file="C:/workspace/Projeto/InteligentDestiller/src/AP_main.cpp"/>
   </compounddef>
 </doxygen>
