@@ -1,3 +1,9 @@
+/**
+* @author Sérgio Carmo
+* @file style.css
+* @brief CSS file for the web interface
+*/
+
 html {
     font-family: Helvetica;
     display: inline-block;

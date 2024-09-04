@@ -1,3 +1,9 @@
+/**
+ * @author Sérgio Carmo
+ * @file style_Img.css
+ * @brief CSS file for the web interface
+ */
+
 .card {
     float: center;
     margin-left: 20px;
@@ -14,7 +20,7 @@
     left: 10%;*/
     top: 48%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -5%);
 }
 
 .pump {

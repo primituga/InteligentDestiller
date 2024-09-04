@@ -1,29 +1,54 @@
+/**
+ * @author Sérgio Carmo
+ * @file data/script_actions.js
+ * @brief Javascript for the webpage
+ * @version 1.0
+ * @details Javascript for the webpage
+ * @see data/script_actions.js
+ */
+
 /*************************************************************************/
 /*  Webpage Javascript                                                   */
 /*************************************************************************/
-
+/**
+ * @brief Javascript for the webpage 
+ * @details Javascript for the webpage 
+ * @see data/script_actions.js
+ */
 //***********************************************************************
 //  show/hide IOsDiv when IOsButton is clicked                          *
 //***********************************************************************
-var button = document.getElementById('IOsButton');
-button.onclick = function () {
-    var div = document.getElementById('IOsDiv');
-    if (div.style.display !== 'block') {
-        div.style.display = 'block';
-    } else {
-        div.style.display = 'none';
+/**
+ * @brief show/hide IOsDiv when IOsButton is clicked
+ * @details show/hide IOsDiv when IOsButton is clicked
+ * @see data/script_actions.js
+ * 
+ * @param {string} action
+ * @returns {Promise<void>}
+ */
+var button = document.getElementById('IOsButton'); /// Assumes element with id='button' exists in the DOM 
+button.onclick = function () {                   /// When button is clicked 
+    var div = document.getElementById('IOsDiv');    /// Assumes element with id='div' exists in the DOM
+    if (div.style.display !== 'block') {       /// If div is not visible, then make it visible
+        div.style.display = 'block';       /// Make div visible
+    } else {                                    /// Otherwise, make it invisible
+        div.style.display = 'none';       /// Make div invisible
     }
 };
 
 //***********************************************************************
 // Get for Start/Stop/Reset                                             *
 //***********************************************************************
-async function startTimer() {
-    try {
-        await fetch('/startTimer');
-        //updateStatus();
-    } catch (error) {
-        console.error('Error:', error);
+
+/**
+ * 
+ */
+async function startTimer() {           /// Start timer button 
+    try {                               /// Try to do the following 
+        await fetch('/startTimer');     /// Fetch the URL '/startTimer' 
+        //updateStatus();               /// Update the status
+    } catch (error) {                   /// If there is an error, then do the following
+        console.error('Error:', error); /// Log the error to the console
     }
 }
 

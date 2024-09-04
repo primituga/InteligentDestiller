@@ -93,5 +93,6 @@ void loop2(void *pvParameters)
 	{
 		ws.cleanupClients(); /// Cleanup clients
 		webTimer("*", 0);	 /// WebTimer function
+		resetWiFi(); 		 /// Reset WiFi
 	}
 }
