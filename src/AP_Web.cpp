@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-#include "AP.h" /// Definitions
+#include "AP.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// Variables and Constants for Web Server and WebSocket Server

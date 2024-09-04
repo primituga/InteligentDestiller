@@ -6,6 +6,7 @@
  */
 
 #include "MD.h"
+#include <ESPmDNS.h>
 
 const char *soft_ap_ssid = "Destiller-AP";
 const char *soft_ap_password = "Destiller-AP";
@@ -74,10 +75,20 @@ String wifiQuality()
     /// Return the quality in string format with RSSI and quality in percentage values
     qualityStr = "RSSI " + String(rssi) + " dBm (" + String(quality) + " %)";
     /// Send the quality in percentage to the web server as a JSON object
-    //ws.textAll("{\"type\": \"wifiQuality\", \"value\": " + String(quality) + "}");
+    // ws.textAll("{\"type\": \"wifiQuality\", \"value\": " + String(quality) + "}");
     return qualityStr; /// Return the quality in string format with RSSI and quality in percentage values
   }
   lastRSSI = rssi; /// Update the last RSSI with the current RSSI
+}
+
+/**
+ * @brief WiFi Connect Callback
+ * @return void 
+ */
+void onWiFiConnect() {
+  Serial.println("WiFi connected successfully! Rebooting...");
+  delay(1000); // Optional delay for stability
+  ESP.restart(); // Reboot the ESP32
 }
 
 /**
@@ -85,41 +96,63 @@ String wifiQuality()
  * @return void
  * @note This function connects the ESP32 to a WiFi network
  */
+WiFiManager wifiManager;
 void connectToWIFI()
 {
-  WiFiManager wifiManager;
+  // Stop any server that might be running (adjust this according to your server type, if used)
+  server.end();
 
-  server.end();                           /// End the server
-  wifiManager.setClass("invert");         /// Dark theme
-  wifiManager.setConfigPortalTimeout(60); /// Timeout to web server
-  wifiManager.setConnectTimeout(20);      /// Timeout to connect
-  wifiManager.setDebugOutput(true);       /// Debug output
-  wifiManager.setHostname("Destiler");    /// Hostname
-  WiFi.setHostname("Destiler");           /// Hostname
+  // Configure WiFiManager settings
+  wifiManager.setClass("invert");             // Set dark theme
+  wifiManager.setConfigPortalTimeout(60);     // Set config portal timeout to 60 seconds
+  wifiManager.setConnectTimeout(20);          // Set Wi-Fi connection timeout to 20 seconds
+  wifiManager.setDebugOutput(true);           // Enable debug output
+  wifiManager.setHostname("destiller.local"); // Set the hostname
+  WiFi.setHostname("destiller.local");        // Set hostname for ESP32
+  wifiManager.setSaveConfigCallback(onWiFiConnect);
 
-  /// Set the WiFiManager parameters and connect to the WiFi network with the SSID and password stored in the EEPROM memory
+  // Attempt to auto-connect using WiFiManager with SSID "Conf Destiler AP"
   if (!wifiManager.autoConnect("Conf Destiler AP"))
   {
-    sPrintLnStr("Failed to connect");
-    return;
+    sPrintLnStr("Failed to connect"); // Print failure message
+    return;                           // Exit if connection fails
   }
 
-  /// Get the SSID and password from the WiFiManager and connect to the WiFi network
-  String ssid = wifiManager.getWiFiSSID();     /// Get the SSID from the WiFiManager
-  String password = wifiManager.getWiFiPass(); /// Get the password from the WiFiManager
+  // Attempt to start mDNS service with the desired hostname
+  if (!MDNS.begin("Destiler"))
+  {                                                  // Start mDNS with hostname "Destiler"
+    sPrintLnStr("Error setting up MDNS responder!"); // Log error if mDNS fails to start
+    return;
+  }
+  Serial.println("MDNS responder started");
 
-  /// Connect to the WiFi network with the SSID and password
-  WiFi.begin(ssid.c_str(), password.c_str()); /// Connect to the WiFi network with the SSID and password
-  delay(10);                                  /// Delay for 10 ms
-  /// Wait for the ESP32 to connect to the WiFi network and print the connection status
-  sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));
-  sPrintLnStr("--wmHostname: " + wifiManager.getWiFiHostname());
+  // Add a service to mDNS for demonstration (optional, but can help check if mDNS is working)
+  MDNS.addService("http", "tcp", 80); // Add a service type (HTTP)
+
+  // Display connection information
+  sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));      // Display ESP32 hostname
+  sPrintLnStr("--wmHostname: " + wifiManager.getWiFiHostname()); // Display WiFiManager hostname
   sPrintStr("--SSID: ");
-  sPrintLnStr(WiFi.SSID());
+  sPrintLnStr(WiFi.SSID()); // Display connected SSID
   sPrintStr("--TxPower: ");
-  sPrintStr(String(WiFi.getTxPower()));
+  sPrintStr(String(WiFi.getTxPower())); // Display Tx power in dBm
   sPrintLnStr(" dBm");
-  sPrintLnStr("--" + wifiQuality());
+  sPrintLnStr("--" + wifiQuality()); // Display WiFi quality (assuming wifiQuality() is defined)
+}
+
+void resetWiFi()
+{
+  pinMode(0, INPUT_PULLUP); // GPIO 0 is the BOOT button
+
+  delay(3000); // Small delay to ensure settings are reset
+  // Check if the BOOT button is pressed at startup
+  if (digitalRead(0) == LOW)
+  { // BOOT button is pressed when GPIO 0 reads LOW
+    Serial.println("BOOT button pressed - Resetting WiFi settings...");
+    wifiManager.resetSettings(); // Clear saved WiFi credentials
+    delay(1000);                 // Small delay to ensure settings are reset
+    ESP.restart();               // Restart the ESP32 to apply changes
+  }
 }
 
 /**
@@ -130,10 +163,10 @@ void connectToWIFI()
  */
 void connectToSoftAP()
 {
-  WiFi.setHostname("DestilerSoft"); /// Set the hostname for the Soft Access Point
-  WiFi.onEvent(OnWiFiEvent);        /// Set the WiFi event handler
-  WiFi.setAutoReconnect(true);      /// Enable auto reconnect to the WiFi network
-  WiFi.mode(WIFI_MODE_APSTA);       /// Set to Station + Access Point mode
+  WiFi.setHostname("DestilerSoftAP"); /// Set the hostname for the Soft Access Point
+  WiFi.onEvent(OnWiFiEvent);          /// Set the WiFi event handler
+  WiFi.setAutoReconnect(true);        /// Enable auto reconnect to the WiFi network
+  WiFi.mode(WIFI_MODE_APSTA);         /// Set to Station + Access Point mode
 
   WiFi.softAP(soft_ap_ssid, soft_ap_password); /// Start the Soft Access Point with the SSID and password
 

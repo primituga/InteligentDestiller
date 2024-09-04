@@ -15,6 +15,7 @@
 /// Wifi Libraries
 #include "WiFiManager.h"        /// WiFi Manager 
 #include "esp_netif.h"          /// ESP32 Network Interface
+#include <ESPmDNS.h>            /// Include mDNS library
 
 /// Async Libraries
 #include "ESPAsyncWebServer.h"  /// Async Web Server
@@ -34,7 +35,12 @@ extern bool DEBUG;              /// Debug mode
 /// I/O Map Header
 ////////////////////////////////////////////////////////////////////////////////////////
 
-/// Input Pins Definitions
+/**
+ * @brief Define the pins for the Inputs
+ * 
+ * Define the pins for the Inputs
+ * 
+ */
 #define PIN_SW_AUTO 32          /// Botão  de modo auto
 #define PIN_SALARM 25           /// Botão  de modo alarme
 #define PIN_SW_MAN 26           /// Interruptor  de modo manual
@@ -48,7 +54,11 @@ extern bool DEBUG;              /// Debug mode
 #define POS_SW_AUTO 3           /// Posicao do botao de modo auto
 #define POS_SALARM 4            /// Posicao do botao de modo alarme
 
-/// Output Pins Definitions
+/**
+ * @brief Define the pins for the Outputs
+ * 
+ * Define the pins for the Outputs 
+ */
 #define PIN_RAQ 23              /// Resistencia aquecimento
 #define PIN_BMB 22              /// Bomba agua
 #define PIN_VALV_WATER_OUT 21   /// Valvula descarga vapor
@@ -70,30 +80,45 @@ extern bool DEBUG;              /// Debug mode
 #define POS_IND_AUTO 7          /// Posicao do indicador de modo auto
 #define POS_IND_MAN 8           /// Posicao do indicador de modo manual
 
-/// ON/OFF Definitions for I/O pins (HIGH/LOW)
+/**
+ * @brief Define the ON/OFF states for the I/O pins
+ * 
+ * Define the ON/OFF states for the I/O pins
+ * 
+ */
 #define ON HIGH                 /// Define ON as HIGH
 #define OFF LOW                 /// Define OFF as LOW
 
-////////////////////////////////////////////////////////////////////////////////////////
-/// MAIN
-////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Main function
+ * 
+ * Main function to start the loop2 in core 1
+ * 
+ * @return void
+ */
 void loop2(void *pvParameters); /// Main loop to run in core 1
 
-////////////////////////////////////////////////////////////////////////////////////////
-/// Multicore
-////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Init MultiCore function
+ * 
+ * Init MultiCore function to start the second core
+ * 
+ * @return void
+ */
 void initMultiCore();           /// Inicia o segundo core
 
-////////////////////////////////////////////////////////////////////////////////////////
-/// LittleFS
-////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @brief Init FS function
+ * 
+ * Init FS function to start the file system
+ * 
+ * @return void
+ */
 void initFS();                  /// Inicia o sistema de arquivos
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /// I/O
 ////////////////////////////////////////////////////////////////////////////////////////
-
-/// I/O Functions calls
 void initPinsOutputs();             /// Inicia os outputs
 void initPinsInputs();              /// Inicia os inputs
 bool getWaterMax();                 /// Retorna estado do sensor de agua de maximo

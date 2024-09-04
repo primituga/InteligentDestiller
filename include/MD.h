@@ -116,5 +116,6 @@ void test_IO();               /// Testa as entradas e saidas
 #define WIFI_MODE_OPTIONS 3     /// 1 - Connect to local WiFi, 2 - Create a local AP, 3 - Both
 bool initWIFI();                /// Inicia o wifi
 String wifiQuality();           /// Retorna a qualidade do wifi
+void resetWiFi();               /// Reseta o wifi
 
 #endif

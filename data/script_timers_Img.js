@@ -1,3 +1,9 @@
+/**
+ * @author Sérgio Carmo
+ * @file data/script_timers_Img.js
+ * @brief Javascript for the webpage
+ */
+
 /*************************************************************************/
 /*  Webpage Javascript for Timers (Img page)                             */
 /*************************************************************************/
@@ -5,8 +11,17 @@
 /*************************************************************************/
 /* Timer to update water levels indicators                               */
 /*************************************************************************/
-window.addEventListener('load', (event) => {
-    setInterval(async function () {
+/**
+ * @brief Timer to update water levels indicators
+ * @details Timer to update water levels indicators
+ * @see data/script_timers_Img.js
+ * 
+ * @param {function} function
+ * @param {number} delay
+ * @returns {void}
+ */
+window.addEventListener('load', (event) => {    /// When the window is loaded
+    setInterval(async function () {             /// Set interval to update the water levels indicators
         try {
             const pumpStatus = document.getElementById("pump").innerHTML;
             document.getElementById("BMB_img").src = pumpStatus === "1" ? "BMB_ON.png" : "BMB_OFF.png";

@@ -1,3 +1,10 @@
+/**
+ * @author Sérgio Carmo
+ * @file data/script_timers.js
+ * @brief Javascript for the webpage
+ * @version 1.0
+ */
+
 /*************************************************************************/
 /*  Webpage Javascript for Timers                                        */
 /*************************************************************************/
@@ -6,6 +13,15 @@
 /* Timer for the wifi                                                    */
 /*************************************************************************/
 
+/**
+ * @brief Timer to update the wifi data
+ * @details Timer to update the wifi data
+ * @see data/script_timers.js
+ * 
+ * @param {function} function
+ * @param {number} delay
+ * @returns {void}
+ */
 setInterval(async function () {
     try {
         await getWifiSSIDData();
@@ -18,6 +34,15 @@ setInterval(async function () {
 /*************************************************************************/
 /* Timer for EN/Disable buttons                                          */
 /*************************************************************************/
+/**
+ * @brief Timer to update the buttons
+ * @details Timer to update the buttons
+ * @see data/script_timers.js
+ * 
+ * @param {function} function
+ * @param {number} delay
+ * @returns {void}
+ */
 window.addEventListener('load', (event) => {
     setInterval(function () {
         const timerStat = document.getElementById("timerStat").innerHTML;
