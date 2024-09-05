@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
   <diagram name="Página-1" id="O3JyGVQpDG3Lo8o7kQD4">
-    <mxGraphModel dx="1350" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -21,10 +21,10 @@
         <mxCell id="xve0XWHkX6E9ICd-36VI-6" value="Option to Change&amp;nbsp;V2" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1090" y="720" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xve0XWHkX6E9ICd-36VI-7" value="Option to Change&amp;nbsp;Pump" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="xve0XWHkX6E9ICd-36VI-7" value="Option to Change&amp;nbsp;Pump (BMB)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="590" y="720" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xve0XWHkX6E9ICd-36VI-8" value="Option to Change&amp;nbsp;Resistor" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="xve0XWHkX6E9ICd-36VI-8" value="Option to Change&amp;nbsp;Resistor (RAQ)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="755" y="720" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xve0XWHkX6E9ICd-36VI-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryDx=0;entryDy=0;" parent="1" source="xve0XWHkX6E9ICd-36VI-9" target="xve0XWHkX6E9ICd-36VI-7" edge="1">
