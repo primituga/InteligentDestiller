@@ -5,11 +5,12 @@
  * @version 1.0
  */
 
-#include "MD.h"
-#include <ESPmDNS.h>
+#include "MD.h"       /// Include MD header
 
-const char *soft_ap_ssid = "Destiller-AP";
-const char *soft_ap_password = "Destiller-AP";
+const char *soft_ap_ssid = "Destiller-AP";      /// Soft Access Point SSID
+const char *soft_ap_password = "Destiller-AP";  /// Soft Access Point password
+
+WiFiManager wifiManager;      // Create an instance of the WiFiManager library
 
 /**
  * @brief WiFi Event Handler
@@ -116,7 +117,6 @@ void initmDNSService(String dnsName)
  * @return void
  * @note This function connects the ESP32 to a WiFi network
  */
-WiFiManager wifiManager;
 void connectToWIFI()
 {
   const char* theHostName = "Destiler"; // Set the hostname for the ESP32
