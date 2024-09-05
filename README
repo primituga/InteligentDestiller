@@ -24,14 +24,15 @@ The firmware uses the EEPROM to save the wifi credentials, so the ESP32 can conn
 
 ------------------------------------------------
 Libs:
-/// Wifi Libraries
-#include "WiFiManager.h"
+#include "WiFiManager.h"        /// WiFi Manager 
+#include "esp_netif.h"          /// ESP32 Network Interface
+#include "ESPmDNS.h"            /// Include mDNS library
 
 /// Async Libraries
-#include "ESPAsyncWebServer.h"
+#include "ESPAsyncWebServer.h"  /// Async Web Server
 
 /// SPIFFS Libraries
-#include "SPIFFS.h"
+#include "SPIFFS.h"             /// SPI Flash File System
 
 Addicional board manager URL:
 https://dl.espressif.com/dl/package_esp32_index.json,https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
