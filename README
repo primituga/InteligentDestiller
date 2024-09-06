@@ -1,5 +1,3 @@
-![alt text](https://github.com/primisc/InteligentDestiller/blob/main/Documentation/etc/Pictures/20240806_191158.jpg)
-
 # Intelligent Distiller Project
 
 This project involves the modernization of an old analog distiller machine by removing most of its outdated components and integrating an ESP32 microcontroller to control all its functions. The ESP32 also includes a built-in web server, enabling remote control and monitoring of the machine through a web interface.
