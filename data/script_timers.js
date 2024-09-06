@@ -123,5 +123,5 @@ window.addEventListener('load', (event) => {
             document.getElementById("content").style.border = "3px solid #00ffff";
 
 
-    }, 931);
+    }, 211);
 });
