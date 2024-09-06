@@ -1,0 +1,285 @@
+\doxysection{C\+:/workspace/\+Projeto/\+Inteligent\+Destiller/include/\+AP.h File Reference}
+\hypertarget{_a_p_8h}{}\label{_a_p_8h}\index{C:/workspace/Projeto/InteligentDestiller/include/AP.h@{C:/workspace/Projeto/InteligentDestiller/include/AP.h}}
+
+
+Header file for the AP project.  
+
+
+{\ttfamily \#include "{}MD.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_p_8h_a59b4c2612675374aa0a9445d2f49d009}{destiler}} ()
+\begin{DoxyCompactList}\small\item\em APP Header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_p_8h_a553ce9cca044d40931e5cbe9deb407e4}{setup\+Routes}} ()
+\begin{DoxyCompactList}\small\item\em Setup Calls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the AP project. 
+
+\begin{DoxyAuthor}{Author}
+Sérgio Carmo
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_a_p_8h_a59b4c2612675374aa0a9445d2f49d009}\index{AP.h@{AP.h}!destiler@{destiler}}
+\index{destiler@{destiler}!AP.h@{AP.h}}
+\doxysubsubsection{\texorpdfstring{destiler()}{destiler()}}
+{\footnotesize\ttfamily \label{_a_p_8h_a59b4c2612675374aa0a9445d2f49d009} 
+void destiler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+APP Header. 
+
+Function prototypes ~\newline
+
+
+APP Header.
+
+This function is responsible for managing the operation of the machine. BMB\+\_\+\+FLAG, RAQ\+\_\+\+FLAG BMB\+\_\+\+FLAG and RAQ\+\_\+\+FLAG are flags that are used to control the operation of the machine. BMB\+\_\+\+FLAG is used to control the operation of the water pump. RAQ\+\_\+\+FLAG is used to control the operation of the water heater resistor. \begin{DoxyNote}{Note}
+BMB\+\_\+\+FLAG and RAQ\+\_\+\+FLAG are used to control the operation of the machine. 
+
+BMB\+\_\+\+FLAG is used to control the operation of the water pump. 
+
+RAQ\+\_\+\+FLAG is used to control the operation of the water heater resistor.
+\end{DoxyNote}
+\texorpdfstring{$<$}{<} Debug information logging
+
+Call the indicators\+Management function to manage the indicators of the machine
+
+Call the mode\+Management function to manage the different modes of the machine (Auto and Manual)
+
+WORKING BLOCK
+
+Flag to control the operation of the water pump
+
+If the water level is at the maximum, the water pump is turned off. If the water level is at the minimum or there is an alarm, the water pump is turned on. \begin{DoxyNote}{Note}
+If the water level is at the maximum, the water pump is turned off. 
+
+If the water level is at the minimum or there is an alarm, the water pump is turned on.
+\end{DoxyNote}
+If the water level is at the maximum turn off the water pump
+
+Turn off the water pump
+
+Set the water pump to OFF in the web interface
+
+If the water level is at the minimum or at the alarm level, turn on the water pump
+
+Turn on the water pump
+
+Control of the operation of the water heater resistor
+
+If the water level is at the maximum, the water heater resistor is turned off. If the water level is at the minimum or there is an alarm, the water heater resistor is turned on. \begin{DoxyNote}{Note}
+If the water level is at the maximum, the water heater resistor is turned off. 
+
+If the water level is at the minimum or there is an alarm, the water heater resistor is turned on. \texorpdfstring{$\ast$}{*}
+\end{DoxyNote}
+If the water level is at the maximum or min or is not at alarm lvl, turn ON the water heater resistor
+
+If the water level is at the alarmlvl, turn OFF the water heater resistor
+
+BMB, RAQ, V\+\_\+\+IN, V\+\_\+\+OUT BMB, RAQ, V\+\_\+\+IN, V\+\_\+\+OUT are variables that are used to control the operation of the machine. BMB is used to control the operation of the water pump. RAQ is used to control the operation of the water heater resistor. V\+\_\+\+IN is used to control the operation of the water inlet valve. V\+\_\+\+OUT is used to control the operation of the water outlet valve. \begin{DoxyNote}{Note}
+BMB is used to control the operation of the water pump. 
+
+RAQ is used to control the operation of the water heater resistor. 
+
+V\+\_\+\+IN is used to control the operation of the water inlet valve. 
+
+V\+\_\+\+OUT is used to control the operation of the water outlet valve.
+\end{DoxyNote}
+If the water pump is on and the machine is in auto mode or the water pump is on in manual mode and the water level is not at the maximum, turn on the water pump
+
+If the water heater resistor is on and the machine is in auto mode or the water heater resistor is on in manual mode and the alarm is not on, turn on the water heater resistor
+
+If the water inlet valve is on and the machine is in auto mode or the water inlet valve is on in manual mode and the alarm is not on, turn on the water inlet valve
+
+If the water outlet valve is on and the machine is in auto mode or the water outlet valve is on in manual mode and the alarm is not on, turn on the water outlet valve
+
+Set the Pump object to the BMB variable value Set the Pump object to the BMB variable value. \begin{DoxyNote}{Note}
+Set the Pump object to the BMB variable value.
+\end{DoxyNote}
+Set the Resistor object to the RAQ variable value Set the Resistor object to the RAQ variable value. \begin{DoxyNote}{Note}
+Set the Resistor object to the RAQ variable value.
+\end{DoxyNote}
+Set the Valve Water In object Set the Valve Water In object to the V\+\_\+\+IN variable value. \begin{DoxyNote}{Note}
+Set the Valve Water In object to the V\+\_\+\+IN variable value.
+\end{DoxyNote}
+Set the Valve Water Out object Set the Valve Water Out object to the V\+\_\+\+OUT variable value. \begin{DoxyNote}{Note}
+Set the Valve Water Out object to the V\+\_\+\+OUT variable value.
+\end{DoxyNote}
+\Hypertarget{_a_p_8h_a553ce9cca044d40931e5cbe9deb407e4}\index{AP.h@{AP.h}!setupRoutes@{setupRoutes}}
+\index{setupRoutes@{setupRoutes}!AP.h@{AP.h}}
+\doxysubsubsection{\texorpdfstring{setupRoutes()}{setupRoutes()}}
+{\footnotesize\ttfamily \label{_a_p_8h_a553ce9cca044d40931e5cbe9deb407e4} 
+void setup\+Routes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Setup Calls. 
+
+Setup the routes for the web server.
+
+This function defines the routes for handling HTTP GET requests for various resources such as HTML pages, CSS files, JS files, images, time adjustments, timer control, toggle actions, state actions, Wi\+Fi handlers, and timer handlers. Set the Web\+Socket event handler function for the Web\+Socket Server (ws)
+
+Add the Web\+Socket handler to the server (server) ///////////////////////////////////////////////////////////////////////////////////// Route for root / and index\+\_\+web\+Buttons.\+html
+
+Send the index.\+html file to the client when the root / is requested
+
+Send the index.\+html file to the client when the root / is requested
+
+Route for CSS files
+
+Send the style.\+css file to the client when requested
+
+Send the style.\+css file to the client when requested
+
+Send the style.\+css file to the client when requested
+
+Route JS files
+
+Send the script\+\_\+actions.\+js file to the client when requested
+
+Send the script\+\_\+get\+\_\+\+Data.\+js file to the client when requested
+
+Send the script\+\_\+timers.\+js file to the client when requested
+
+Send the script\+\_\+timers\+\_\+\+Img.\+js file to the client when requested
+
+Send the script\+\_\+timers\+\_\+2.\+js file to the client when requested
+
+Route for image files
+
+Send the icon.\+png file to the client when requested
+
+Send the estg\+\_\+logo.\+png file to the client when requested
+
+Send the bg.\+png file to the client when requested
+
+Send the destiller.\+png file to the client when requested
+
+Send the BMB\+\_\+\+ON.\+png file to the client when requested
+
+Send the BMB\+\_\+\+OFF.\+png file to the client when requested
+
+Send the RAQ\+\_\+\+ON.\+png file to the client when requested
+
+Send the RAQ\+\_\+\+OFF.\+png file to the client when requested
+
+Send the Valve\+\_\+\+ON.\+png file to the client when requested
+
+Send the Valve\+\_\+\+OFF.\+png file to the client when requested
+
+Send the Auto\+\_\+\+ON.\+png file to the client when requested
+
+Send the Auto\+\_\+\+OFF.\+png file to the client when requested
+
+Send the Man\+\_\+\+ON.\+png file to the client when requested
+
+Send the Man\+\_\+\+OFF.\+png file to the client when requested
+
+Send the s\+Min.\+png file to the client when requested
+
+Send the s\+Max.\+png file to the client when requested
+
+Send the s\+Alarm.\+png file to the client when requested
+
+Send the button\+\_\+\+ON.\+png file to the client when requested
+
+Send the button\+\_\+\+OFF.\+png file to the client when requested
+
+Routes for handling time adjustments
+
+Send the response to the client when the /add1s route is requested
+
+Send the response to the client when the /add5s route is requested
+
+Send the response to the client when the /add10s route is requested
+
+Send the response to the client when the /add1m route is requested
+
+Send the response to the client when the /add5m route is requested
+
+Send the response to the client when the /add10m route is requested
+
+Send the response to the client when the /rem1s route is requested
+
+Send the response to the client when the /rem5s route is requested
+
+Send the response to the client when the /rem10s route is requested
+
+Send the response to the client when the /rem1m route is requested
+
+Send the response to the client when the /rem5m route is requested
+
+Send the response to the client when the /rem10m route is requested
+
+Routes for handling timer control
+
+Send the response to the client when the /start\+Timer route is requested
+
+Send the response to the client when the /stop\+Timer route is requested
+
+Send the response to the client when the /reset\+Timer route is requested
+
+Routes for handling toggle actions
+
+Send the response to the client when the /toggle\+Auto\+Mode route is requested
+
+Send the response to the client when the /toggle\+Pump route is requested
+
+Send the response to the client when the /toggle\+Water\+Out route is requested
+
+Send the response to the client when the /toggle\+Water\+In route is requested
+
+Send the response to the client when the /toggle\+Resistor route is requested
+
+Routes for handling read actions
+
+Send the response to the client when the /read\+Auto\+Mode route is requested
+
+Send the response to the client when the /read\+Manual\+Mode route is requested
+
+Send the response to the client when the /read\+Pump route is requested
+
+Send the response to the client when the /read\+Water\+Out route is requested
+
+Send the response to the client when the /read\+Resistor route is requested
+
+Send the response to the client when the /read\+Water\+In route is requested
+
+Send the response to the client when the /read\+Water\+Max route is requested
+
+Send the response to the client when the /read\+Water\+Min route is requested
+
+Send the response to the client when the /read\+Water\+Alarm route is requested
+
+Route for Wi\+Fi Handlers
+
+Send the response to the client when the /read\+Wifi\+Quality route is requested
+
+Send the response to the client when the /read\+Wifi\+SSID route is requested
+
+Send the response to the client when the /read\+Wifi\+TX route is requested
+
+Send the response to the client when the /read\+Wifi\+IP route is requested
+
+Route for Timer Handlers
+
+Send the response to the client when the /read\+Timer route is requested
+
+Send the response to the client when the /read\+Hour route is requested
+
+Send the response to the client when the /read\+Minute route is requested
+
+Send the response to the client when the /read\+Secound route is requested
+
+Start Server
+
+Start the server
