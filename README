@@ -56,7 +56,7 @@ The software runs on the ESP32's dual-core processor:
 #include "SPIFFS.h"             // SPI Flash File System
 ```
 
-Addicional board manager URL:
+## Addicional board manager URL:
 https://dl.espressif.com/dl/package_esp32_index.json,https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 
 ## Board Configuration
