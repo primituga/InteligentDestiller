@@ -5,12 +5,12 @@
  * @version 1.0
  */
 
-#include "MD.h"       /// Include MD header
+#include "MD.h" /// Include MD header
 
-const char *soft_ap_ssid = "Destiller-AP";      /// Soft Access Point SSID
-const char *soft_ap_password = "Destiller-AP";  /// Soft Access Point password
+const char *soft_ap_ssid = "Destiller-AP";     /// Soft Access Point SSID
+const char *soft_ap_password = "Destiller-AP"; /// Soft Access Point password
 
-WiFiManager wifiManager;      // Create an instance of the WiFiManager library
+WiFiManager wifiManager; // Create an instance of the WiFiManager library
 
 /**
  * @brief WiFi Event Handler
@@ -84,11 +84,12 @@ String wifiQuality()
 
 /**
  * @brief WiFi Connect Callback
- * @return void 
+ * @return void
  */
-void onWiFiConnect() {
+void onWiFiConnect()
+{
   Serial.println("WiFi connected successfully! Rebooting...");
-  delay(1000); // Optional delay for stability
+  delay(1000);   // Optional delay for stability
   ESP.restart(); // Reboot the ESP32
 }
 
@@ -119,18 +120,18 @@ void initmDNSService(String dnsName)
  */
 void connectToWIFI()
 {
-  const char* theHostName = "Destiler"; // Set the hostname for the ESP32
+  const char *theHostName = "Destiler"; // Set the hostname for the ESP32
 
   // Stop any server that might be running (adjust this according to your server type, if used)
   server.end();
 
   // Configure WiFiManager settings
-  wifiManager.setClass("invert");             // Set dark theme
-  wifiManager.setConfigPortalTimeout(60);     // Set config portal timeout to 60 seconds
-  wifiManager.setConnectTimeout(20);          // Set Wi-Fi connection timeout to 20 seconds
-  wifiManager.setDebugOutput(true);           // Enable debug output
-  wifiManager.setHostname(theHostName); // Set the hostname
-  WiFi.setHostname(theHostName);        // Set hostname for ESP32
+  wifiManager.setClass("invert");         // Set dark theme
+  wifiManager.setConfigPortalTimeout(60); // Set config portal timeout to 60 seconds
+  wifiManager.setConnectTimeout(20);      // Set Wi-Fi connection timeout to 20 seconds
+  wifiManager.setDebugOutput(true);       // Enable debug output
+  wifiManager.setHostname(theHostName);   // Set the hostname
+  WiFi.setHostname(theHostName);          // Set hostname for ESP32
   wifiManager.setSaveConfigCallback(onWiFiConnect);
 
   // Attempt to auto-connect using WiFiManager with SSID "Conf Destiler AP"
@@ -140,7 +141,7 @@ void connectToWIFI()
     return;                           // Exit if connection fails
   }
 
-  initmDNSService(theHostName);   // Start mDNS service with the desired hostname
+  initmDNSService(theHostName); // Start mDNS service with the desired hostname
 
   // Display connection information
   sPrintLnStr("--Hostname: " + String(WiFi.getHostname()));      // Display ESP32 hostname
@@ -155,25 +156,37 @@ void connectToWIFI()
 
 /**
  * @brief Reset WiFi settings if BOOT button is pressed
- * 
+ *
  * @return void
  * @note This function resets the WiFi settings if the BOOT button is pressed
  * @note The BOOT button is connected to GPIO 0
  * @note The ESP32 will restart after the settings are reset
- * 
+ *
  */
-void resetWiFi()
-{
-  pinMode(0, INPUT_PULLUP); // GPIO 0 is the BOOT button
+void resetWiFi() {
+  static unsigned long pressStartTime = 0; // Time when the button press started
+  static bool buttonPressed = false;      // Flag to track the button press state
 
-  delay(3000); // Small delay to ensure settings are reset
-  // Check if the BOOT button is pressed at startup
-  if (digitalRead(0) == LOW)
-  { // BOOT button is pressed when GPIO 0 reads LOW
-    Serial.println("BOOT button pressed - Resetting WiFi settings...");
-    wifiManager.resetSettings(); // Clear saved WiFi credentials
-    delay(1000);                 // Small delay to ensure settings are reset
-    ESP.restart();               // Restart the ESP32 to apply changes
+  pinMode(0, INPUT_PULLUP); // Set GPIO 0 as input with an internal pull-up resistor (connected to BOOT button)
+
+  // Check if the BOOT button is pressed (LOW state)
+  if (digitalRead(0) == LOW) {
+    // Button is pressed, check if this is the start of the press
+    if (!buttonPressed) {
+      pressStartTime = millis();  // Record the time when the button is first pressed
+      buttonPressed = true;       // Set the button pressed flag
+    }
+
+    // Check if the button has been held down for more than 3 seconds
+    if (buttonPressed && (millis() - pressStartTime >= 3000)) {
+      Serial.println("BOOT button held for 3 seconds - Resetting WiFi settings...");
+      wifiManager.resetSettings(); // Clear saved WiFi credentials
+      delay(1000);                 // Small delay to ensure settings are reset
+      ESP.restart();               // Restart the ESP32 to apply changes
+    }
+  } else {
+    // Button is not pressed, reset the press state
+    buttonPressed = false; // Reset the flag
   }
 }
 
@@ -185,12 +198,12 @@ void resetWiFi()
  */
 void connectToSoftAP()
 {
-  const char* theHostName = "DestilerAP"; // Set the hostname for the ESP32
+  const char *theHostName = "DestilerAP"; // Set the hostname for the ESP32
 
   WiFi.setHostname(theHostName); /// Set the hostname for the Soft Access Point
-  WiFi.onEvent(OnWiFiEvent);          /// Set the WiFi event handler
-  WiFi.setAutoReconnect(true);        /// Enable auto reconnect to the WiFi network
-  WiFi.mode(WIFI_MODE_APSTA);         /// Set to Station + Access Point mode
+  WiFi.onEvent(OnWiFiEvent);     /// Set the WiFi event handler
+  WiFi.setAutoReconnect(true);   /// Enable auto reconnect to the WiFi network
+  WiFi.mode(WIFI_MODE_APSTA);    /// Set to Station + Access Point mode
 
   WiFi.softAP(soft_ap_ssid, soft_ap_password); /// Start the Soft Access Point with the SSID and password
 
@@ -207,7 +220,7 @@ void connectToSoftAP()
   esp_netif_set_ip_info(netif_ap, &ipInfo); /// Apply new IP settings
   esp_netif_dhcps_start(netif_ap);          /// Restart DHCP server with new settings
 
-  initmDNSService(theHostName);   // Start mDNS service with the desired hostname
+  initmDNSService(theHostName); // Start mDNS service with the desired hostname
 
   sPrintLnStr("Hostname: " + String(WiFi.getHostname())); /// Print the hostname
   sPrintStr("ESP32 IP as soft AP: ");                     /// Print the IP address of the ESP32 Soft Access Point
