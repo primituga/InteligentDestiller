@@ -1,49 +1,73 @@
 ![alt text](https://github.com/primisc/InteligentDestiller/blob/main/Documentation/etc/Pictures/20240806_191158.jpg)
 
-This is a project that uses a old analogic destiller machine, that machine got most of the old parts removed and got installed one ESP32 that controlls all its functions, it have also one web server built-in to controll all the machine. 
+# Intelligent Distiller Project
 
-The machine have:
-1 water tank, 1 water pump, 1 water heater, 2 valves, 1st to control the water flow to cool the destiller coil, and a 2nd one to control the steam exit, 3 water level sensors, 1 switch to switch between manual and another one switch to toggle automatic mode.
+This project involves the modernization of an old analog distiller machine by removing most of its outdated components and integrating an ESP32 microcontroller to control all its functions. The ESP32 also includes a built-in web server, enabling remote control and monitoring of the machine through a web interface.
 
-The software run in dualcore, core 0 run the webserver, core 1 run the firmware
-The firmware is responsible to control all the machine functions, like, turn on/off the water pump, turn on/off the water heater, open/close the valves, and also, the firmware send the water level status to the webserver, so the webserver can show the water level status in real time.
+## Machine Components
 
-The webserver is responsible to show the machine status, and also to control the machine, like, turn on/off the water pump, turn on/off the water heater, open/close the valves, and also, the webserver can show the water level status in real time.
+The modernized distiller machine includes:
 
-The firmware uses the AsyncWebServer to create the webserver, and the WiFiManager to connect to the wifi network.
-To comunicate with the webserver, the firmware uses websockets, so the webserver can send commands to the firmware, like, turn on/off the water pump, turn on/off the water heater, open/close the valves, and also, the firmware send the water level status to the webserver, so the webserver can show the water level status in real time.
-Also uses fetch and promises to get data from the firmware, when webpage is loaded or refreshed so always have the last status of the machine.
+- **1 Water Tank**: Stores water for the distillation process.
+- **1 Water Pump (BMB)**: Circulates water within the system.
+- **1 Water Heater (RAQ)**: Heats the water to produce steam.
+- **2 Valves (V1 and V2)**: 
+  - **V1**: Controls the flow of water to cool the distiller coil.
+  - **V2**: Controls the release of steam from the system.
+- **3 Water Level Sensors (SMAX, SMIN, and ALARM)**:
+  - **SMAX**: Detects when the water tank is full and stops the water pump.
+  - **SMIN**: Detects when the water level is low and starts the water pump.
+  - **ALARM**: Shuts down the distillation process if the water level is critically low.
+- **Manual/Automatic Mode Switches**: Allows switching between manual and automatic operation modes.
 
-The firmware uses the SPIFFS to store the webserver files, like html, css, js, images, etc in the ESP32, so the webserver can serve the files to the client.
+## Software and Control
 
-The firmware uses WiFiManager to connect to the wifi network, so the user can connect the ESP32 to the wifi network, without the need to hardcode the wifi credentials in the firmware. The user can connect the ESP32 to the wifi network using a smartphone, tablet or computer, and the ESP32 will save the wifi credentials in the EEPROM, so the ESP32 can connect to the wifi network automatically when it is powered on. 
-The firmware also allow so create a softAP, so the user can connect to the ESP32 using a smartphone, tablet or computer, and set the wifi credentials, if the ESP32 is not connected to the wifi network.
+The software runs on the ESP32's dual-core processor:
 
-The firmware uses the EEPROM to save the wifi credentials, so the ESP32 can connect to the wifi network automatically when it is powered on.
+- **Core 0**: Runs the firmware responsible for controlling all machine functions, including the pump, heater, and valves. It also sends water level data to the web server in real-time.
+- **Core 1**: Runs the web server, providing a user-friendly interface for monitoring and controlling the machine remotely.
 
+### Firmware and Web Server
 
-------------------------------------------------
-Libs:
-#include "WiFiManager.h"        /// WiFi Manager 
-#include "esp_netif.h"          /// ESP32 Network Interface
-#include "ESPmDNS.h"            /// Include mDNS library
+- The **firmware** controls the machine's functions, such as turning the water pump and heater on or off and opening/closing the valves. It communicates with the web server using WebSockets to ensure real-time updates and control.
+  
+- The **web server** displays the machine status and allows users to control the machine's functions. It updates the interface in real-time to reflect the current status of the water level, pump, heater, and valves.
 
-/// Async Libraries
-#include "ESPAsyncWebServer.h"  /// Async Web Server
+### Key Features
 
-/// SPIFFS Libraries
-#include "SPIFFS.h"             /// SPI Flash File System
+- **AsyncWebServer**: Used to create the web server on the ESP32.
+- **WiFiManager**: Facilitates connecting the ESP32 to a Wi-Fi network without hardcoding credentials. Users can set up Wi-Fi credentials via smartphone, tablet, or computer.
+- **SPIFFS (SPI Flash File System)**: Used to store web server files (HTML, CSS, JavaScript, images) directly on the ESP32.
+- **WebSockets**: Enables communication between the firmware and the web server, allowing real-time command execution and status updates.
+- **EEPROM**: Saves Wi-Fi credentials, allowing the ESP32 to automatically reconnect to the Wi-Fi network on startup.
+- **SoftAP Mode**: If the ESP32 is not connected to a Wi-Fi network, it creates a Soft Access Point (AP) for users to connect and set up the network credentials.
+
+## Libraries Used
+
+```cpp
+#include "WiFiManager.h"        // WiFi Manager 
+#include "esp_netif.h"          // ESP32 Network Interface
+#include "ESPmDNS.h"            // mDNS library
+
+// Async Libraries
+#include "ESPAsyncWebServer.h"  // Async Web Server
+
+// SPIFFS Libraries
+#include "SPIFFS.h"             // SPI Flash File System
+```
 
 Addicional board manager URL:
 https://dl.espressif.com/dl/package_esp32_index.json,https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 
-Board: ESP32 Dev Module  (ESP32-WROOM-32) 
-ESP32 Dev Module (38 pins) 
-Flash Frequency: 80MHz
-Flash Mode: QIO
-Upload Speed: 921600
-CPU Frequency: 240MHz (WiFi/BT)
-Flash Size: 4MB (32Mb)
-Partition Scheme: Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
-Core Debug Level: None
-PSRAM: Disabled
+## Board Configuration
+
+- **Board**: ESP32 Dev Module (ESP32-WROOM-32)
+- **Pins**: ESP32 Dev Module (38 pins)
+- **Flash Frequency**: 80MHz
+- **Flash Mode**: QIO
+- **Upload Speed**: 921600
+- **CPU Frequency**: 240MHz (WiFi/BT)
+- **Flash Size**: 4MB (32Mb)
+- **Partition Scheme**: Default 4MB with SPIFFS (1.2MB APP / 1.5MB SPIFFS)
+- **Core Debug Level**: None
+- **PSRAM**: Disabled
