@@ -136,22 +136,26 @@ void destiler()
      * @note Set the Pump object to the BMB variable value.
      */
     setPump(BMB);
+    delay(10);
     /**
      * @brief Set the Resistor object to the RAQ variable value
      * Set the Resistor object to the RAQ variable value.
      * @note Set the Resistor object to the RAQ variable value.
      */
     setResistor(RAQ);
+    delay(10);
     /**
      * @brief Set the Valve Water In object
      * Set the Valve Water In object to the V_IN variable value.
      * @note Set the Valve Water In object to the V_IN variable value.
      */
     setValveWaterIn(V_IN);
+    delay(10);
     /**
      * @brief Set the Valve Water Out object
      * Set the Valve Water Out object to the V_OUT variable value.
      * @note Set the Valve Water Out object to the V_OUT variable value.
      */
     setValveWaterOut(V_OUT);
+    delay(10);
 }
