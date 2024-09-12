@@ -53,6 +53,7 @@ extern bool DEBUG;              /// Debug mode
 #define POS_SMAX 2              /// Posicao do sensor de nivel agua maximo
 #define POS_SW_AUTO 3           /// Posicao do botao de modo auto
 #define POS_SALARM 4            /// Posicao do botao de modo alarme
+#define INTERNAL_BUTTON_BOOT 0  /// Botão interno de boot
 
 /**
  * @brief Define the pins for the Outputs
