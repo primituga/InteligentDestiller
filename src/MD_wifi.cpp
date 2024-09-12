@@ -167,10 +167,8 @@ void resetWiFi() {
   static unsigned long pressStartTime = 0; // Time when the button press started
   static bool buttonPressed = false;      // Flag to track the button press state
 
-  pinMode(0, INPUT_PULLUP); // Set GPIO 0 as input with an internal pull-up resistor (connected to BOOT button)
-
   // Check if the BOOT button is pressed (LOW state)
-  if (digitalRead(0) == LOW) {
+  if (digitalRead(INTERNAL_BUTTON_BOOT) == LOW) {
     // Button is pressed, check if this is the start of the press
     if (!buttonPressed) {
       pressStartTime = millis();  // Record the time when the button is first pressed

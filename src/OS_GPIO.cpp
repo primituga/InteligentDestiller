@@ -68,11 +68,12 @@ void writeOutputs()
  */
 void initPinsInputs()
 {
-    pinMode(PIN_SW_MAN, INPUT);  /// on/off sw
-    pinMode(PIN_SMIN, INPUT);    /// min sensor
-    pinMode(PIN_SMAX, INPUT);    /// max sensor
-    pinMode(PIN_SW_AUTO, INPUT); /// push sw
-    pinMode(PIN_SALARM, INPUT);  /// alarm
+    pinMode(PIN_SW_MAN, INPUT);                  /// on/off sw
+    pinMode(PIN_SMIN, INPUT);                    /// min sensor
+    pinMode(PIN_SMAX, INPUT);                    /// max sensor
+    pinMode(PIN_SW_AUTO, INPUT);                 /// push sw
+    pinMode(PIN_SALARM, INPUT);                  /// alarm
+    pinMode(INTERNAL_BUTTON_BOOT, INPUT_PULLUP); /// Set GPIO 0 as input with an internal pull-up resistor (connected to BOOT button)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
