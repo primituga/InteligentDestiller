@@ -128,7 +128,7 @@ void destiler()
     /// If the water inlet valve is on and the machine is in auto mode or the water inlet valve is on in manual mode and the alarm is not on, turn on the water inlet valve
     bool V_IN = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_InWeb() && getManualMode()) && !getAlarm();
     /// If the water outlet valve is on and the machine is in auto mode or the water outlet valve is on in manual mode and the alarm is not on, turn on the water outlet valve
-    bool V_OUT = (RAQ_FLAG && getIndAuto() && getTimerStatus() || getValv_Water_OutWeb() && getManualMode()) && !getAlarm();
+    bool V_OUT = (RAQ_FLAG && getIndAuto() && getTimerStatus() || !getValv_Water_OutWeb() && getManualMode()) && !getAlarm();
 
     /**
      * @brief Set the Pump object to the BMB variable value
@@ -156,6 +156,6 @@ void destiler()
      * Set the Valve Water Out object to the V_OUT variable value.
      * @note Set the Valve Water Out object to the V_OUT variable value.
      */
-    setValveWaterOut(V_OUT);
+    setValveWaterOut(!V_OUT);
     delay(10);
 }
